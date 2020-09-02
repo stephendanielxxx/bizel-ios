@@ -1,0 +1,6 @@
+framework module Pods_Digilearn_001Tests {
+  umbrella header "Pods-Digilearn_001Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
