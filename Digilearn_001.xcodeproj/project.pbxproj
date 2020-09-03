@@ -125,8 +125,6 @@
 		B92A727F250087220010D52D /* model */ = {
 			isa = PBXGroup;
 			children = (
-				B934AFDE24FFA88D000FCEB3 /* LoginViewController.swift */,
-				B934AFDF24FFA88D000FCEB3 /* LoginViewController.xib */,
 				B92A7280250087470010D52D /* LoginModel.swift */,
 			);
 			path = model;
@@ -191,6 +189,8 @@
 		B934AFC324FF7988000FCEB3 /* login */ = {
 			isa = PBXGroup;
 			children = (
+				B934AFDE24FFA88D000FCEB3 /* LoginViewController.swift */,
+				B934AFDF24FFA88D000FCEB3 /* LoginViewController.xib */,
 				B92A727F250087220010D52D /* model */,
 			);
 			path = login;
