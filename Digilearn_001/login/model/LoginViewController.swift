@@ -42,7 +42,6 @@ class LoginViewController: UIViewController {
         
         var pass = password.text
         var phone = phoneLogin.getFormattedPhoneNumber(format: .E164)
-        debugPrint(phone)
         phone = phone?.replacingOccurrences(of: "+", with: "", options: NSString.CompareOptions.literal, range:nil)
     
         let headers: HTTPHeaders = [
@@ -53,15 +52,27 @@ class LoginViewController: UIViewController {
             "id_number": "\(phone!)",
             "password" : "\(pass!)"
         ]
-
-        debugPrint(parameters)
         
         AF.request(URL,
                    method: .post,
                    parameters: parameters,
-                   encoding: URLEncoding.httpBody).responseJSON { response in
-                    debugPrint(response.request)
-                    debugPrint(response)
+                   encoding: URLEncoding.httpBody).responseData { response in
+                    switch response.result {
+                    case .success(let data):
+                       let decoder = JSONDecoder()
+                       do{
+                            let loginModel = try decoder.decode(LoginModel.self, from:data)
+                        if(loginModel.code == "200"){
+                            print(loginModel.message)
+                        }else{
+                            print(loginModel.message)
+                        }
+                       }catch{
+                            print(error.localizedDescription)
+                        }
+                    case .failure(let error):
+                        print(error)
+                    }
         }
         
     }
@@ -77,8 +88,3 @@ class LoginViewController: UIViewController {
     
 
 }
-
-struct Login: Encodable {
-           let id_number: String
-           let password: String
-       }

@@ -10,8 +10,6 @@
 		2D14958080302DD66FC054E3 /* Pods_Digilearn_001.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE24FEA383FD1DA25B5B206F /* Pods_Digilearn_001.framework */; };
 		64FDDDC222BC3AAEA3AD9E90 /* Pods_Digilearn_001Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C13A768FA10A24EE2EC74FE9 /* Pods_Digilearn_001Tests.framework */; };
 		B92A7281250087470010D52D /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92A7280250087470010D52D /* LoginModel.swift */; };
-		B92A72842500883F0010D52D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92A72832500883F0010D52D /* LoginViewModel.swift */; };
-		B92A7286250088CB0010D52D /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92A7285250088CB0010D52D /* Post.swift */; };
 		B934AF4524FF4B82000FCEB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B934AF4424FF4B82000FCEB3 /* AppDelegate.swift */; };
 		B934AF4724FF4B82000FCEB3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B934AF4624FF4B82000FCEB3 /* SceneDelegate.swift */; };
 		B934AF4924FF4B82000FCEB3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B934AF4824FF4B82000FCEB3 /* ViewController.swift */; };
@@ -21,12 +19,6 @@
 		B934AF5F24FF4B85000FCEB3 /* Digilearn_001Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B934AF5E24FF4B85000FCEB3 /* Digilearn_001Tests.swift */; };
 		B934AF6A24FF4B85000FCEB3 /* Digilearn_001UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B934AF6924FF4B85000FCEB3 /* Digilearn_001UITests.swift */; };
 		B934AFC924FF8380000FCEB3 /* color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B934AFC824FF8380000FCEB3 /* color.xcassets */; };
-		B934AFCB24FF904E000FCEB3 /* BottomLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B934AFCA24FF904E000FCEB3 /* BottomLoginView.swift */; };
-		B934AFCD24FF9058000FCEB3 /* BottomLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B934AFCC24FF9058000FCEB3 /* BottomLoginView.xib */; };
-		B934AFCF24FF99C6000FCEB3 /* PhoneLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B934AFCE24FF99C6000FCEB3 /* PhoneLoginView.swift */; };
-		B934AFD124FF99D0000FCEB3 /* PhoneLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B934AFD024FF99D0000FCEB3 /* PhoneLoginView.xib */; };
-		B934AFDB24FFA46E000FCEB3 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B934AFDA24FFA46E000FCEB3 /* LoginView.swift */; };
-		B934AFDD24FFA478000FCEB3 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B934AFDC24FFA478000FCEB3 /* LoginView.xib */; };
 		B934AFE024FFA88D000FCEB3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B934AFDE24FFA88D000FCEB3 /* LoginViewController.swift */; };
 		B934AFE124FFA88D000FCEB3 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B934AFDF24FFA88D000FCEB3 /* LoginViewController.xib */; };
 		EFC7323794321BEB69C47BCE /* Pods_Digilearn_001_Digilearn_001UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45CD92DF232C349F46A9A8DF /* Pods_Digilearn_001_Digilearn_001UITests.framework */; };
@@ -57,8 +49,6 @@
 		5D64FDB60A9BBFC9B4C1B9F6 /* Pods-Digilearn_001-Digilearn_001UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Digilearn_001-Digilearn_001UITests.release.xcconfig"; path = "Target Support Files/Pods-Digilearn_001-Digilearn_001UITests/Pods-Digilearn_001-Digilearn_001UITests.release.xcconfig"; sourceTree = "<group>"; };
 		8C6B55D88B707C87B25641EC /* Pods-Digilearn_001.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Digilearn_001.release.xcconfig"; path = "Target Support Files/Pods-Digilearn_001/Pods-Digilearn_001.release.xcconfig"; sourceTree = "<group>"; };
 		B92A7280250087470010D52D /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
-		B92A72832500883F0010D52D /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
-		B92A7285250088CB0010D52D /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		B934AF4124FF4B82000FCEB3 /* Digilearn_001.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Digilearn_001.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B934AF4424FF4B82000FCEB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B934AF4624FF4B82000FCEB3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,12 +64,6 @@
 		B934AF6924FF4B85000FCEB3 /* Digilearn_001UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Digilearn_001UITests.swift; sourceTree = "<group>"; };
 		B934AF6B24FF4B85000FCEB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B934AFC824FF8380000FCEB3 /* color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = color.xcassets; sourceTree = "<group>"; };
-		B934AFCA24FF904E000FCEB3 /* BottomLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomLoginView.swift; sourceTree = "<group>"; };
-		B934AFCC24FF9058000FCEB3 /* BottomLoginView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomLoginView.xib; sourceTree = "<group>"; };
-		B934AFCE24FF99C6000FCEB3 /* PhoneLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneLoginView.swift; sourceTree = "<group>"; };
-		B934AFD024FF99D0000FCEB3 /* PhoneLoginView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhoneLoginView.xib; sourceTree = "<group>"; };
-		B934AFDA24FFA46E000FCEB3 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		B934AFDC24FFA478000FCEB3 /* LoginView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
 		B934AFDE24FFA88D000FCEB3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B934AFDF24FFA88D000FCEB3 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		BC42425861CC009612B8FC89 /* Pods-Digilearn_001Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Digilearn_001Tests.release.xcconfig"; path = "Target Support Files/Pods-Digilearn_001Tests/Pods-Digilearn_001Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -141,18 +125,11 @@
 		B92A727F250087220010D52D /* model */ = {
 			isa = PBXGroup;
 			children = (
+				B934AFDE24FFA88D000FCEB3 /* LoginViewController.swift */,
+				B934AFDF24FFA88D000FCEB3 /* LoginViewController.xib */,
 				B92A7280250087470010D52D /* LoginModel.swift */,
-				B92A7285250088CB0010D52D /* Post.swift */,
 			);
 			path = model;
-			sourceTree = "<group>";
-		};
-		B92A7282250088270010D52D /* viewModel */ = {
-			isa = PBXGroup;
-			children = (
-				B92A72832500883F0010D52D /* LoginViewModel.swift */,
-			);
-			path = viewModel;
 			sourceTree = "<group>";
 		};
 		B934AF3824FF4B82000FCEB3 = {
@@ -214,16 +191,7 @@
 		B934AFC324FF7988000FCEB3 /* login */ = {
 			isa = PBXGroup;
 			children = (
-				B92A7282250088270010D52D /* viewModel */,
 				B92A727F250087220010D52D /* model */,
-				B934AFCA24FF904E000FCEB3 /* BottomLoginView.swift */,
-				B934AFCC24FF9058000FCEB3 /* BottomLoginView.xib */,
-				B934AFCE24FF99C6000FCEB3 /* PhoneLoginView.swift */,
-				B934AFD024FF99D0000FCEB3 /* PhoneLoginView.xib */,
-				B934AFDA24FFA46E000FCEB3 /* LoginView.swift */,
-				B934AFDC24FFA478000FCEB3 /* LoginView.xib */,
-				B934AFDE24FFA88D000FCEB3 /* LoginViewController.swift */,
-				B934AFDF24FFA88D000FCEB3 /* LoginViewController.xib */,
 			);
 			path = login;
 			sourceTree = "<group>";
@@ -339,11 +307,8 @@
 			files = (
 				B934AFE124FFA88D000FCEB3 /* LoginViewController.xib in Resources */,
 				B934AF5424FF4B85000FCEB3 /* LaunchScreen.storyboard in Resources */,
-				B934AFD124FF99D0000FCEB3 /* PhoneLoginView.xib in Resources */,
-				B934AFDD24FFA478000FCEB3 /* LoginView.xib in Resources */,
 				B934AF5124FF4B85000FCEB3 /* Assets.xcassets in Resources */,
 				B934AFC924FF8380000FCEB3 /* color.xcassets in Resources */,
-				B934AFCD24FF9058000FCEB3 /* BottomLoginView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,17 +436,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B934AFCF24FF99C6000FCEB3 /* PhoneLoginView.swift in Sources */,
-				B92A7286250088CB0010D52D /* Post.swift in Sources */,
 				B934AF4924FF4B82000FCEB3 /* ViewController.swift in Sources */,
 				B934AF4F24FF4B82000FCEB3 /* Digilearn_001.xcdatamodeld in Sources */,
 				B934AF4524FF4B82000FCEB3 /* AppDelegate.swift in Sources */,
 				B92A7281250087470010D52D /* LoginModel.swift in Sources */,
 				B934AFE024FFA88D000FCEB3 /* LoginViewController.swift in Sources */,
-				B934AFCB24FF904E000FCEB3 /* BottomLoginView.swift in Sources */,
 				B934AF4724FF4B82000FCEB3 /* SceneDelegate.swift in Sources */,
-				B92A72842500883F0010D52D /* LoginViewModel.swift in Sources */,
-				B934AFDB24FFA46E000FCEB3 /* LoginView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
