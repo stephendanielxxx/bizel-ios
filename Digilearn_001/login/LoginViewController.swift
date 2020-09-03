@@ -28,6 +28,7 @@ class LoginViewController: UIViewController {
         
         Reqres.register()
         // Do any additional setup after loading the view.
+        phoneLogin.delegate = self
         
         loginImage.image = UIImage(named: "login_image")
         
@@ -42,6 +43,7 @@ class LoginViewController: UIViewController {
         
         var pass = password.text
         var phone = phoneLogin.getFormattedPhoneNumber(format: .E164)
+        
         phone = phone?.replacingOccurrences(of: "+", with: "", options: NSString.CompareOptions.literal, range:nil)
     
         let headers: HTTPHeaders = [
@@ -65,7 +67,10 @@ class LoginViewController: UIViewController {
                         if(loginModel.code == "200"){
                             print(loginModel.message)
                         }else{
-                            print(loginModel.message)
+                            let alert = UIAlertController(title: "Login Failed", message: "\(loginModel.message)", preferredStyle: .alert)
+                            alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
+                            self.present(alert, animated: true)
+
                         }
                        }catch{
                             print(error.localizedDescription)
@@ -85,6 +90,30 @@ class LoginViewController: UIViewController {
 //         Pass the selected object to the new view controller.
         
     }
-    
+ 
+}
 
+extension LoginViewController: FPNTextFieldDelegate{
+    func fpnDidSelectCountry(name: String, dialCode: String, code: String) {
+        
+    }
+    
+    func fpnDidValidatePhoneNumber(textField: FPNTextField, isValid: Bool) {
+        
+    }
+    
+    func fpnDisplayCountryList() {
+        
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        // I try this one
+        if string == "0" {
+            if textField.text!.count == 0 {
+                return false
+            }
+        }
+        return true
+    }
 }
