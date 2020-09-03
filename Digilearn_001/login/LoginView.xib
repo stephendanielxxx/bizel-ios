@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginView" customModule="Digilearn_001" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="ouK-lz-MTT"/>
+                <outlet property="loginImage" destination="8Lt-cT-BxM" id="4J9-NG-oou"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="349"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8Lt-cT-BxM">
+                    <rect key="frame" x="20" y="14" width="374" height="245.5"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wohooo!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jni-Wq-nyR">
+                    <rect key="frame" x="131" y="274.5" width="152" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <color key="textColor" name="red_1"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Can't wait to collaborate with my teammate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iPR-5j-Zdu">
+                    <rect key="frame" x="23" y="312" width="372" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="cq3-8S-z3h"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="8Lt-cT-BxM" firstAttribute="centerX" secondItem="jni-Wq-nyR" secondAttribute="centerX" id="6uj-Be-efQ"/>
+                <constraint firstItem="jni-Wq-nyR" firstAttribute="top" secondItem="8Lt-cT-BxM" secondAttribute="bottom" constant="15" id="EWo-Hy-drs"/>
+                <constraint firstItem="8Lt-cT-BxM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="Lx0-ws-eMe"/>
+                <constraint firstItem="jni-Wq-nyR" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="131" id="UYg-Dx-tNt"/>
+                <constraint firstItem="8Lt-cT-BxM" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailingMargin" id="Vo5-T5-Blg"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="iPR-5j-Zdu" secondAttribute="bottom" constant="17" id="WN7-QG-qtW"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="iPR-5j-Zdu" secondAttribute="trailing" constant="19" id="ZZk-Lu-fAa"/>
+                <constraint firstItem="iPR-5j-Zdu" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="23" id="fLi-P0-hzZ"/>
+                <constraint firstItem="iPR-5j-Zdu" firstAttribute="top" secondItem="jni-Wq-nyR" secondAttribute="bottom" constant="13.5" id="kud-Th-VHk"/>
+                <constraint firstItem="8Lt-cT-BxM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="14" id="qUU-e0-IVj"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="137.68115942028987" y="146.31696428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="red_1">
+            <color red="0.60500001907348633" green="0.27099999785423279" blue="0.23499999940395355" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>

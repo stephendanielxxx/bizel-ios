@@ -1,5 +1,6 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
+source 'https://github.com/CocoaPods/Specs.git'
 
 target 'Digilearn_001' do
   # Comment the next line if you don't want to use dynamic frameworks
@@ -7,6 +8,10 @@ target 'Digilearn_001' do
   pod 'FlagPhoneNumber'
   pod 'RxSwift', '~> 5'
   pod 'RxCocoa', '~> 5' 
+  pod 'Reqres'
+  pod 'Alamofire', '~> 5.2'
+  pod 'AlamofireNetworkActivityLogger', '~> 3.0'
+
   # Pods for Digilearn_001
 
   target 'Digilearn_001Tests' do
