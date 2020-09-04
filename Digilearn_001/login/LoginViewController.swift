@@ -92,6 +92,8 @@ class LoginViewController: UIViewController {
             self.present(alert, animated: true)
         }else{
 
+            self.showSpinner(onView: self.view)
+            
             let parameters: [String:Any] = [
                 "id_number": "\(phone!)",
                 "password" : "\(pass!)"
@@ -103,6 +105,7 @@ class LoginViewController: UIViewController {
                        encoding: URLEncoding.httpBody).responseData { response in
                         switch response.result {
                         case .success(let data):
+                            self.removeSpinner()
                            let decoder = JSONDecoder()
                            do{
                                 let loginModel = try decoder.decode(LoginModel.self, from:data)
@@ -118,7 +121,7 @@ class LoginViewController: UIViewController {
                                 print(error.localizedDescription)
                             }
                         case .failure(let error):
-                            print(error)
+                            self.removeSpinner()
                         }
             }
             
@@ -172,5 +175,31 @@ extension LoginViewController: FPNTextFieldDelegate{
             }
         }
         return true
+    }
+}
+
+var vSpinner : UIView?
+
+extension UIViewController {
+    func showSpinner(onView : UIView) {
+        let spinnerView = UIView.init(frame: onView.bounds)
+        spinnerView.backgroundColor = UIColor.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.5)
+        let ai = UIActivityIndicatorView.init(style: .whiteLarge)
+        ai.startAnimating()
+        ai.center = spinnerView.center
+        
+        DispatchQueue.main.async {
+            spinnerView.addSubview(ai)
+            onView.addSubview(spinnerView)
+        }
+        
+        vSpinner = spinnerView
+    }
+    
+    func removeSpinner() {
+        DispatchQueue.main.async {
+            vSpinner?.removeFromSuperview()
+            vSpinner = nil
+        }
     }
 }

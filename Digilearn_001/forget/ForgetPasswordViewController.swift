@@ -41,6 +41,8 @@ class ForgetPasswordViewController: UIViewController {
             self.present(alert, animated: true)
         }else{
             
+            self.showSpinner(onView: self.view)
+            
             let parameters: [String:Any] = [
                 "user_email": "\(emailValue!)"
             ]
@@ -51,6 +53,7 @@ class ForgetPasswordViewController: UIViewController {
                        encoding: URLEncoding.httpBody).responseData { response in
                         switch response.result {
                         case .success(let data):
+                            self.removeSpinner()
                            let decoder = JSONDecoder()
                            do{
                             
@@ -71,7 +74,7 @@ class ForgetPasswordViewController: UIViewController {
                                 print(error.localizedDescription)
                             }
                         case .failure(let error):
-                            print(error)
+                            self.removeSpinner()
                         }
             }
             

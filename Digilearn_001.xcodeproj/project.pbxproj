@@ -164,6 +164,7 @@
 		B934AF4324FF4B82000FCEB3 /* Digilearn_001 */ = {
 			isa = PBXGroup;
 			children = (
+				B9D053552502216D00F1AC03 /* register */,
 				B9D0534E2501FEB200F1AC03 /* forget */,
 				B9D0534B2501E04100F1AC03 /* utils */,
 				B934AFC324FF7988000FCEB3 /* login */,
@@ -222,6 +223,13 @@
 				B9D053502501FF0500F1AC03 /* ForgetPasswordViewController.xib */,
 			);
 			path = forget;
+			sourceTree = "<group>";
+		};
+		B9D053552502216D00F1AC03 /* register */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = register;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
