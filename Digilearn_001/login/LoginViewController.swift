@@ -23,6 +23,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var signIn: UIButton!
     @IBOutlet weak var passwordIcon: UIButton!
     @IBOutlet weak var forgetPassword: UILabel!
+    @IBOutlet weak var registerButton: UIView!
     
     var iconClick = true
     var phoneValid = false;
@@ -43,17 +44,14 @@ class LoginViewController: UIViewController {
         password.font = .systemFont(ofSize: 14)
         
         phoneLogin.placeholder = "Input phone number"
-                
-//        let borderColor = UIColor.lightGray
-//        phoneLogin.layer.borderColor = borderColor.cgColor
-//        phoneLogin.layer.borderWidth = 1
-//        phoneLogin.layer.cornerRadius = 5
-       
-//        phoneLogin.text = "82117836220"
         
-        let tap = UITapGestureRecognizer(target: self, action: #selector(LoginViewController.tapFunction))
+        let forget = UITapGestureRecognizer(target: self, action: #selector(LoginViewController.tapFunction))
         forgetPassword.isUserInteractionEnabled = true
-        forgetPassword.addGestureRecognizer(tap)
+        forgetPassword.addGestureRecognizer(forget)
+        
+        let register = UITapGestureRecognizer(target: self, action: #selector(LoginViewController.registerFunction))
+        registerButton.isUserInteractionEnabled = true
+        registerButton.addGestureRecognizer(register)
         
     }
     
@@ -109,14 +107,13 @@ class LoginViewController: UIViewController {
                            let decoder = JSONDecoder()
                            do{
                                 let loginModel = try decoder.decode(LoginModel.self, from:data)
-                            if(loginModel.code == "200"){
-                                print(loginModel.message)
-                            }else{
-                                let alert = UIAlertController(title: "Login Failed", message: "\(loginModel.message)", preferredStyle: .alert)
-                                alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
-                                self.present(alert, animated: true)
-
-                            }
+                                if(loginModel.code == "200"){
+                                    self.saveStringPreference(value: (loginModel.user?[0].id)!, key: DigilearnsKeys.USER_ID)
+                                }else{
+                                    let alert = UIAlertController(title: "Login Failed", message: "\(loginModel.message)", preferredStyle: .alert)
+                                    alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
+                                    self.present(alert, animated: true)
+                                }
                            }catch{
                                 print(error.localizedDescription)
                             }
@@ -129,15 +126,6 @@ class LoginViewController: UIViewController {
         
     }
     
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//         Get the new view controller using segue.destination.
-//         Pass the selected object to the new view controller.
-        
-    }
-    
     @objc func tapFunction(sender:UITapGestureRecognizer) {
 
         let forgetPassword = ForgetPasswordViewController()
@@ -145,6 +133,14 @@ class LoginViewController: UIViewController {
         forgetPassword.modalPresentationStyle = .fullScreen
         
         self.present(forgetPassword, animated: true, completion: nil)
+    }
+    
+    @objc func registerFunction(sender:UITapGestureRecognizer) {
+        let register = RegisterViewController()
+
+        register.modalPresentationStyle = .fullScreen
+         
+        self.present(register, animated: true, completion: nil)
     }
  
 }
@@ -203,3 +199,17 @@ extension UIViewController {
         }
     }
 }
+
+extension UIViewController {
+    func saveStringPreference(value: String, key: String){
+        let preferences = UserDefaults.standard
+        preferences.set(value, forKey: key)
+        preferences.synchronize()
+    }
+    
+    func readStringPreference(key: String) -> String {
+        let preferences = UserDefaults.standard
+        return preferences.string(forKey: key) ?? ""
+    }
+}
+

@@ -15,6 +15,7 @@
                 <outlet property="password" destination="9eA-1Q-ZOn" id="o10-on-fjF"/>
                 <outlet property="passwordIcon" destination="POM-xD-RH1" id="9P5-ob-qhH"/>
                 <outlet property="phoneLogin" destination="HHB-TU-F2y" id="0sx-JN-LFu"/>
+                <outlet property="registerButton" destination="cvr-xk-RhB" id="9hN-V9-nqE"/>
                 <outlet property="signIn" destination="pLr-Ds-2Vx" id="sQC-In-5Wc"/>
                 <outlet property="testlabel" destination="MqA-OJ-Vni" id="Y9g-rZ-Mfd"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

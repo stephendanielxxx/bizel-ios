@@ -25,6 +25,10 @@
 		B9D053512501FF0500F1AC03 /* ForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D0534F2501FF0500F1AC03 /* ForgetPasswordViewController.swift */; };
 		B9D053522501FF0500F1AC03 /* ForgetPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9D053502501FF0500F1AC03 /* ForgetPasswordViewController.xib */; };
 		B9D053542502185600F1AC03 /* ForgetPasswordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D053532502185600F1AC03 /* ForgetPasswordModel.swift */; };
+		B9D05357250225A600F1AC03 /* DigilearnKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D05356250225A600F1AC03 /* DigilearnKeys.swift */; };
+		B9D0535A2502278F00F1AC03 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D053582502278F00F1AC03 /* RegisterViewController.swift */; };
+		B9D0535B2502278F00F1AC03 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9D053592502278F00F1AC03 /* RegisterViewController.xib */; };
+		B9D0535D2502369500F1AC03 /* BottomBorderTF.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D0535C2502369500F1AC03 /* BottomBorderTF.swift */; };
 		EFC7323794321BEB69C47BCE /* Pods_Digilearn_001_Digilearn_001UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45CD92DF232C349F46A9A8DF /* Pods_Digilearn_001_Digilearn_001UITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +78,10 @@
 		B9D0534F2501FF0500F1AC03 /* ForgetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewController.swift; sourceTree = "<group>"; };
 		B9D053502501FF0500F1AC03 /* ForgetPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgetPasswordViewController.xib; sourceTree = "<group>"; };
 		B9D053532502185600F1AC03 /* ForgetPasswordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordModel.swift; sourceTree = "<group>"; };
+		B9D05356250225A600F1AC03 /* DigilearnKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigilearnKeys.swift; sourceTree = "<group>"; };
+		B9D053582502278F00F1AC03 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		B9D053592502278F00F1AC03 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		B9D0535C2502369500F1AC03 /* BottomBorderTF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBorderTF.swift; sourceTree = "<group>"; };
 		BC42425861CC009612B8FC89 /* Pods-Digilearn_001Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Digilearn_001Tests.release.xcconfig"; path = "Target Support Files/Pods-Digilearn_001Tests/Pods-Digilearn_001Tests.release.xcconfig"; sourceTree = "<group>"; };
 		C13A768FA10A24EE2EC74FE9 /* Pods_Digilearn_001Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Digilearn_001Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE24FEA383FD1DA25B5B206F /* Pods_Digilearn_001.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Digilearn_001.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -212,6 +220,8 @@
 			isa = PBXGroup;
 			children = (
 				B9D0534C2501E06B00F1AC03 /* DigilearnParams.swift */,
+				B9D05356250225A600F1AC03 /* DigilearnKeys.swift */,
+				B9D0535C2502369500F1AC03 /* BottomBorderTF.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -228,6 +238,8 @@
 		B9D053552502216D00F1AC03 /* register */ = {
 			isa = PBXGroup;
 			children = (
+				B9D053582502278F00F1AC03 /* RegisterViewController.swift */,
+				B9D053592502278F00F1AC03 /* RegisterViewController.xib */,
 			);
 			path = register;
 			sourceTree = "<group>";
@@ -346,6 +358,7 @@
 				B934AF5424FF4B85000FCEB3 /* LaunchScreen.storyboard in Resources */,
 				B934AF5124FF4B85000FCEB3 /* Assets.xcassets in Resources */,
 				B934AFC924FF8380000FCEB3 /* color.xcassets in Resources */,
+				B9D0535B2502278F00F1AC03 /* RegisterViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,7 +486,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9D0535D2502369500F1AC03 /* BottomBorderTF.swift in Sources */,
 				B934AF4924FF4B82000FCEB3 /* ViewController.swift in Sources */,
+				B9D0535A2502278F00F1AC03 /* RegisterViewController.swift in Sources */,
 				B9D0534D2501E06B00F1AC03 /* DigilearnParams.swift in Sources */,
 				B934AF4F24FF4B82000FCEB3 /* Digilearn_001.xcdatamodeld in Sources */,
 				B934AF4524FF4B82000FCEB3 /* AppDelegate.swift in Sources */,
@@ -482,6 +497,7 @@
 				B9D053512501FF0500F1AC03 /* ForgetPasswordViewController.swift in Sources */,
 				B934AF4724FF4B82000FCEB3 /* SceneDelegate.swift in Sources */,
 				B9D053542502185600F1AC03 /* ForgetPasswordModel.swift in Sources */,
+				B9D05357250225A600F1AC03 /* DigilearnKeys.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
