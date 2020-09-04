@@ -36,7 +36,7 @@ class ForgetPasswordViewController: UIViewController {
             alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
             self.present(alert, animated: true)
         }else if(!(emailValue?.isValidEmail() ?? false)){
-            let alert = UIAlertController(title: nil, message: "Email not valid", preferredStyle: .alert)
+            let alert = UIAlertController(title: nil, message: "The email you entered is INCORRECT. Please try again", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
             self.present(alert, animated: true)
         }else{
