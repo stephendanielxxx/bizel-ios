@@ -22,6 +22,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var testlabel: UILabel!
     @IBOutlet weak var signIn: UIButton!
     @IBOutlet weak var passwordIcon: UIButton!
+    @IBOutlet weak var forgetPassword: UILabel!
     
     var iconClick = true
     var phoneValid = false;
@@ -49,6 +50,10 @@ class LoginViewController: UIViewController {
 //        phoneLogin.layer.cornerRadius = 5
        
 //        phoneLogin.text = "82117836220"
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(LoginViewController.tapFunction))
+        forgetPassword.isUserInteractionEnabled = true
+        forgetPassword.addGestureRecognizer(tap)
         
     }
     
@@ -86,10 +91,6 @@ class LoginViewController: UIViewController {
             alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
             self.present(alert, animated: true)
         }else{
-         
-            let headers: HTTPHeaders = [
-                "Content-Type": "application/x-www-form-urlencoded"
-            ]
 
             let parameters: [String:Any] = [
                 "id_number": "\(phone!)",
@@ -132,6 +133,15 @@ class LoginViewController: UIViewController {
 //         Get the new view controller using segue.destination.
 //         Pass the selected object to the new view controller.
         
+    }
+    
+    @objc func tapFunction(sender:UITapGestureRecognizer) {
+
+        let forgetPassword = ForgetPasswordViewController()
+
+        forgetPassword.modalPresentationStyle = .fullScreen
+        
+        self.present(forgetPassword, animated: true, completion: nil)
     }
  
 }

@@ -22,6 +22,9 @@
 		B934AFE024FFA88D000FCEB3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B934AFDE24FFA88D000FCEB3 /* LoginViewController.swift */; };
 		B934AFE124FFA88D000FCEB3 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B934AFDF24FFA88D000FCEB3 /* LoginViewController.xib */; };
 		B9D0534D2501E06B00F1AC03 /* DigilearnParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D0534C2501E06B00F1AC03 /* DigilearnParams.swift */; };
+		B9D053512501FF0500F1AC03 /* ForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D0534F2501FF0500F1AC03 /* ForgetPasswordViewController.swift */; };
+		B9D053522501FF0500F1AC03 /* ForgetPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9D053502501FF0500F1AC03 /* ForgetPasswordViewController.xib */; };
+		B9D053542502185600F1AC03 /* ForgetPasswordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D053532502185600F1AC03 /* ForgetPasswordModel.swift */; };
 		EFC7323794321BEB69C47BCE /* Pods_Digilearn_001_Digilearn_001UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45CD92DF232C349F46A9A8DF /* Pods_Digilearn_001_Digilearn_001UITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +71,9 @@
 		B934AFDE24FFA88D000FCEB3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B934AFDF24FFA88D000FCEB3 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		B9D0534C2501E06B00F1AC03 /* DigilearnParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigilearnParams.swift; sourceTree = "<group>"; };
+		B9D0534F2501FF0500F1AC03 /* ForgetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewController.swift; sourceTree = "<group>"; };
+		B9D053502501FF0500F1AC03 /* ForgetPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgetPasswordViewController.xib; sourceTree = "<group>"; };
+		B9D053532502185600F1AC03 /* ForgetPasswordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordModel.swift; sourceTree = "<group>"; };
 		BC42425861CC009612B8FC89 /* Pods-Digilearn_001Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Digilearn_001Tests.release.xcconfig"; path = "Target Support Files/Pods-Digilearn_001Tests/Pods-Digilearn_001Tests.release.xcconfig"; sourceTree = "<group>"; };
 		C13A768FA10A24EE2EC74FE9 /* Pods_Digilearn_001Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Digilearn_001Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE24FEA383FD1DA25B5B206F /* Pods_Digilearn_001.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Digilearn_001.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				B92A7280250087470010D52D /* LoginModel.swift */,
+				B9D053532502185600F1AC03 /* ForgetPasswordModel.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -157,6 +164,7 @@
 		B934AF4324FF4B82000FCEB3 /* Digilearn_001 */ = {
 			isa = PBXGroup;
 			children = (
+				B9D0534E2501FEB200F1AC03 /* forget */,
 				B9D0534B2501E04100F1AC03 /* utils */,
 				B934AFC324FF7988000FCEB3 /* login */,
 				B934AF4424FF4B82000FCEB3 /* AppDelegate.swift */,
@@ -205,6 +213,15 @@
 				B9D0534C2501E06B00F1AC03 /* DigilearnParams.swift */,
 			);
 			path = utils;
+			sourceTree = "<group>";
+		};
+		B9D0534E2501FEB200F1AC03 /* forget */ = {
+			isa = PBXGroup;
+			children = (
+				B9D0534F2501FF0500F1AC03 /* ForgetPasswordViewController.swift */,
+				B9D053502501FF0500F1AC03 /* ForgetPasswordViewController.xib */,
+			);
+			path = forget;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,6 +334,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B934AFE124FFA88D000FCEB3 /* LoginViewController.xib in Resources */,
+				B9D053522501FF0500F1AC03 /* ForgetPasswordViewController.xib in Resources */,
 				B934AF5424FF4B85000FCEB3 /* LaunchScreen.storyboard in Resources */,
 				B934AF5124FF4B85000FCEB3 /* Assets.xcassets in Resources */,
 				B934AFC924FF8380000FCEB3 /* color.xcassets in Resources */,
@@ -453,7 +471,9 @@
 				B934AF4524FF4B82000FCEB3 /* AppDelegate.swift in Sources */,
 				B92A7281250087470010D52D /* LoginModel.swift in Sources */,
 				B934AFE024FFA88D000FCEB3 /* LoginViewController.swift in Sources */,
+				B9D053512501FF0500F1AC03 /* ForgetPasswordViewController.swift in Sources */,
 				B934AF4724FF4B82000FCEB3 /* SceneDelegate.swift in Sources */,
+				B9D053542502185600F1AC03 /* ForgetPasswordModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,5 +1,5 @@
 //
-//  DigilearnParams.swift
+//  ForgetPasswordModel.swift
 //  Digilearn_001
 //
 //  Created by Teke on 04/09/20.
@@ -7,9 +7,8 @@
 //
 
 import Foundation
-import Alamofire
 
-struct DigilearnParams {
-    static let ApiUrl = "https://digicourse.id/api_digilearn"
+struct ForgetPasswordModel: Decodable {
+    let code: String
+    let message: String
 }
-

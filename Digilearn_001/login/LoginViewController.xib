@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="Digilearn_001" customModuleProvider="target">
             <connections>
+                <outlet property="forgetPassword" destination="Nvy-GH-vIK" id="Ug2-As-HU2"/>
                 <outlet property="loginImage" destination="ihY-lA-des" id="tuc-cX-lSA"/>
                 <outlet property="password" destination="9eA-1Q-ZOn" id="o10-on-fjF"/>
                 <outlet property="passwordIcon" destination="POM-xD-RH1" id="9P5-ob-qhH"/>
