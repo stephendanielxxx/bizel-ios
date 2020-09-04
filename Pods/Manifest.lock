@@ -10,6 +10,7 @@ PODS:
   - RxRelay (5.1.1):
     - RxSwift (~> 5)
   - RxSwift (5.1.1)
+  - SimpleCheckbox (2.1.0)
 
 DEPENDENCIES:
   - Alamofire (~> 5.2)
@@ -17,6 +18,7 @@ DEPENDENCIES:
   - Reqres
   - RxCocoa (~> 5)
   - RxSwift (~> 5)
+  - SimpleCheckbox
 
 SPEC REPOS:
   trunk:
@@ -26,6 +28,7 @@ SPEC REPOS:
     - RxCocoa
     - RxRelay
     - RxSwift
+    - SimpleCheckbox
 
 SPEC CHECKSUMS:
   Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
@@ -34,7 +37,8 @@ SPEC CHECKSUMS:
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+  SimpleCheckbox: ddcd433ab8c3a8f57300bebda13151a8f302c7f9
 
-PODFILE CHECKSUM: fdc47cdfdbad1eef1d7830c1cbdb698ba8543cdd
+PODFILE CHECKSUM: 010bdc8d55f73c87f00a64cb9e53e47da1c641c6
 
 COCOAPODS: 1.9.3

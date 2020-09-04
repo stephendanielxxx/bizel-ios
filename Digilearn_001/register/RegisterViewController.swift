@@ -8,6 +8,7 @@
 
 import UIKit
 import FlagPhoneNumber
+import SimpleCheckbox
 
 class RegisterViewController: UIViewController {
 
@@ -18,6 +19,8 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var emailTF: BottomBorderTF!
     @IBOutlet weak var passwordTF: BottomBorderTF!
     @IBOutlet weak var confirmPasswordTF: BottomBorderTF!
+    @IBOutlet weak var tosCheckBox: Checkbox!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +43,14 @@ class RegisterViewController: UIViewController {
         confirmPasswordTF.font = .systemFont(ofSize: 14)
         
         phoneTF.setFlag(key: .ID)
+        
+        tosCheckBox.borderStyle = .square
+        tosCheckBox.uncheckedBorderColor = UIColor.lightGray
+        tosCheckBox.checkedBorderColor = UIColor.lightGray
+        tosCheckBox.checkmarkColor = UIColor.lightGray
+        tosCheckBox.checkmarkStyle = .tick
+        
+        
        
     }
 
