@@ -21,6 +21,7 @@
 		B934AFC924FF8380000FCEB3 /* color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B934AFC824FF8380000FCEB3 /* color.xcassets */; };
 		B934AFE024FFA88D000FCEB3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B934AFDE24FFA88D000FCEB3 /* LoginViewController.swift */; };
 		B934AFE124FFA88D000FCEB3 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B934AFDF24FFA88D000FCEB3 /* LoginViewController.xib */; };
+		B9D0534D2501E06B00F1AC03 /* DigilearnParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D0534C2501E06B00F1AC03 /* DigilearnParams.swift */; };
 		EFC7323794321BEB69C47BCE /* Pods_Digilearn_001_Digilearn_001UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45CD92DF232C349F46A9A8DF /* Pods_Digilearn_001_Digilearn_001UITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +67,7 @@
 		B934AFC824FF8380000FCEB3 /* color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = color.xcassets; sourceTree = "<group>"; };
 		B934AFDE24FFA88D000FCEB3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B934AFDF24FFA88D000FCEB3 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		B9D0534C2501E06B00F1AC03 /* DigilearnParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigilearnParams.swift; sourceTree = "<group>"; };
 		BC42425861CC009612B8FC89 /* Pods-Digilearn_001Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Digilearn_001Tests.release.xcconfig"; path = "Target Support Files/Pods-Digilearn_001Tests/Pods-Digilearn_001Tests.release.xcconfig"; sourceTree = "<group>"; };
 		C13A768FA10A24EE2EC74FE9 /* Pods_Digilearn_001Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Digilearn_001Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE24FEA383FD1DA25B5B206F /* Pods_Digilearn_001.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Digilearn_001.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -155,6 +157,7 @@
 		B934AF4324FF4B82000FCEB3 /* Digilearn_001 */ = {
 			isa = PBXGroup;
 			children = (
+				B9D0534B2501E04100F1AC03 /* utils */,
 				B934AFC324FF7988000FCEB3 /* login */,
 				B934AF4424FF4B82000FCEB3 /* AppDelegate.swift */,
 				B934AF4624FF4B82000FCEB3 /* SceneDelegate.swift */,
@@ -194,6 +197,14 @@
 				B92A727F250087220010D52D /* model */,
 			);
 			path = login;
+			sourceTree = "<group>";
+		};
+		B9D0534B2501E04100F1AC03 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				B9D0534C2501E06B00F1AC03 /* DigilearnParams.swift */,
+			);
+			path = utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -437,6 +448,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B934AF4924FF4B82000FCEB3 /* ViewController.swift in Sources */,
+				B9D0534D2501E06B00F1AC03 /* DigilearnParams.swift in Sources */,
 				B934AF4F24FF4B82000FCEB3 /* Digilearn_001.xcdatamodeld in Sources */,
 				B934AF4524FF4B82000FCEB3 /* AppDelegate.swift in Sources */,
 				B92A7281250087470010D52D /* LoginModel.swift in Sources */,

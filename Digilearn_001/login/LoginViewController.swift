@@ -21,7 +21,12 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var testlabel: UILabel!
     @IBOutlet weak var signIn: UIButton!
-    let URL = "https://digicourse.id/api_digilearn/user/auth/login_sementara_kaya_cinta_ku_padanya"
+    @IBOutlet weak var passwordIcon: UIButton!
+    
+    var iconClick = true
+    var phoneValid = false;
+    
+    let URL = "\(DigilearnParams.ApiUrl)/user/auth/login_sementara_kaya_cinta_ku_padanya"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,10 +38,31 @@ class LoginViewController: UIViewController {
         loginImage.image = UIImage(named: "login_image")
         
         phoneLogin.setFlag(key: .ID)
+        phoneLogin.font = .systemFont(ofSize: 14)
+        password.font = .systemFont(ofSize: 14)
         
-        password.text = "teketampan"
+        phoneLogin.placeholder = "Input phone number"
+                
+//        let borderColor = UIColor.lightGray
+//        phoneLogin.layer.borderColor = borderColor.cgColor
+//        phoneLogin.layer.borderWidth = 1
+//        phoneLogin.layer.cornerRadius = 5
+       
 //        phoneLogin.text = "82117836220"
         
+    }
+    
+    @IBAction func passwordIconClick(_ sender: UIButton) {
+        if(iconClick == true) {
+            password.isSecureTextEntry = false
+            passwordIcon.setImage(UIImage(systemName: "eye.slash.fill"), for: .normal)
+
+        } else {
+            password.isSecureTextEntry = true
+            passwordIcon.setImage(UIImage(systemName: "eye.fill"), for: .normal)
+        }
+
+        iconClick = !iconClick
     }
     
     @IBAction func login(_ sender: UIButton) {
@@ -45,39 +71,56 @@ class LoginViewController: UIViewController {
         var phone = phoneLogin.getFormattedPhoneNumber(format: .E164)
         
         phone = phone?.replacingOccurrences(of: "+", with: "", options: NSString.CompareOptions.literal, range:nil)
-    
-        let headers: HTTPHeaders = [
-            "Content-Type": "application/x-www-form-urlencoded"
-        ]
-
-        let parameters: [String:Any] = [
-            "id_number": "\(phone!)",
-            "password" : "\(pass!)"
-        ]
         
-        AF.request(URL,
-                   method: .post,
-                   parameters: parameters,
-                   encoding: URLEncoding.httpBody).responseData { response in
-                    switch response.result {
-                    case .success(let data):
-                       let decoder = JSONDecoder()
-                       do{
-                            let loginModel = try decoder.decode(LoginModel.self, from:data)
-                        if(loginModel.code == "200"){
-                            print(loginModel.message)
-                        }else{
-                            let alert = UIAlertController(title: "Login Failed", message: "\(loginModel.message)", preferredStyle: .alert)
-                            alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
-                            self.present(alert, animated: true)
+        var passCounter = pass?.count ?? 0
+        var phoneCounter = phoneLogin.text?.count ?? 1
+        
+        debugPrint(phoneValid)
+        
+        if(!phoneValid){
+            let alert = UIAlertController(title: "Login Failed", message: "Invalid phone number", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
+            self.present(alert, animated: true)
+        }else if(passCounter < 6){
+            let alert = UIAlertController(title: "Login Failed", message: "Minimum password is 6 character", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
+            self.present(alert, animated: true)
+        }else{
+         
+            let headers: HTTPHeaders = [
+                "Content-Type": "application/x-www-form-urlencoded"
+            ]
 
+            let parameters: [String:Any] = [
+                "id_number": "\(phone!)",
+                "password" : "\(pass!)"
+            ]
+            
+            AF.request(URL,
+                       method: .post,
+                       parameters: parameters,
+                       encoding: URLEncoding.httpBody).responseData { response in
+                        switch response.result {
+                        case .success(let data):
+                           let decoder = JSONDecoder()
+                           do{
+                                let loginModel = try decoder.decode(LoginModel.self, from:data)
+                            if(loginModel.code == "200"){
+                                print(loginModel.message)
+                            }else{
+                                let alert = UIAlertController(title: "Login Failed", message: "\(loginModel.message)", preferredStyle: .alert)
+                                alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
+                                self.present(alert, animated: true)
+
+                            }
+                           }catch{
+                                print(error.localizedDescription)
+                            }
+                        case .failure(let error):
+                            print(error)
                         }
-                       }catch{
-                            print(error.localizedDescription)
-                        }
-                    case .failure(let error):
-                        print(error)
-                    }
+            }
+            
         }
         
     }
@@ -99,7 +142,11 @@ extension LoginViewController: FPNTextFieldDelegate{
     }
     
     func fpnDidValidatePhoneNumber(textField: FPNTextField, isValid: Bool) {
-        
+        if(!isValid){
+            phoneValid = false
+        }else{
+            phoneValid = true
+        }
     }
     
     func fpnDisplayCountryList() {
