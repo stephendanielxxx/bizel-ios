@@ -78,8 +78,6 @@ class LoginViewController: UIViewController {
         var passCounter = pass?.count ?? 0
         var phoneCounter = phoneLogin.text?.count ?? 1
         
-        debugPrint(phoneValid)
-        
         if(!phoneValid){
             let alert = UIAlertController(title: "Login Failed", message: "Invalid phone number", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))

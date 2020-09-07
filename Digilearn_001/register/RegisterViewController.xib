@@ -11,12 +11,15 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterViewController" customModule="Digilearn_001" customModuleProvider="target">
             <connections>
                 <outlet property="confirmPasswordTF" destination="IPI-VB-DkG" id="uye-Nq-mPB"/>
+                <outlet property="confirmPasswordToggle" destination="8KT-GL-g2w" id="N8S-Jt-bIC"/>
                 <outlet property="emailTF" destination="lqR-hN-u3a" id="44U-Ww-Yrq"/>
                 <outlet property="firstNameTF" destination="9eY-ma-Wy2" id="3Wm-L7-f8i"/>
                 <outlet property="lastNameTF" destination="SAD-Rn-kTe" id="efj-dR-UIL"/>
                 <outlet property="nickNameTF" destination="Nym-vE-IzV" id="5yl-EN-LTF"/>
                 <outlet property="passwordTF" destination="N9l-bl-80f" id="F9D-rN-CJS"/>
+                <outlet property="passwordToggle" destination="2yF-gi-nXd" id="Qwy-4W-hcp"/>
                 <outlet property="phoneTF" destination="A8C-zG-EyB" id="Q17-AN-meM"/>
+                <outlet property="privacyLbl" destination="0mF-VG-VxE" id="qLL-sD-klt"/>
                 <outlet property="tosCheckBox" destination="ygv-4K-YWf" id="fZY-3A-WjR"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -98,12 +101,20 @@
                                     <rect key="frame" x="36" y="567" width="342" height="42"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 </view>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2yF-gi-nXd">
+                                    <rect key="frame" x="351" y="639" width="27" height="22"/>
+                                    <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" image="eye.fill" catalog="system"/>
+                                    <connections>
+                                        <action selector="passwordToggleClick:" destination="-1" eventType="touchUpInside" id="eYA-WI-2ba"/>
+                                    </connections>
+                                </button>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N9l-bl-80f" customClass="BottomBorderTF" customModule="Digilearn_001" customModuleProvider="target">
-                                    <rect key="frame" x="36" y="629" width="342" height="42"/>
+                                    <rect key="frame" x="36" y="629" width="306" height="42"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IPI-VB-DkG" customClass="BottomBorderTF" customModule="Digilearn_001" customModuleProvider="target">
-                                    <rect key="frame" x="36" y="691" width="342" height="42"/>
+                                    <rect key="frame" x="36" y="691" width="306" height="42"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="42" id="0XC-cO-TAd"/>
@@ -152,17 +163,29 @@
                                     </attributedString>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8KT-GL-g2w">
+                                    <rect key="frame" x="351" y="701" width="27" height="22"/>
+                                    <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" image="eye.fill" catalog="system"/>
+                                    <connections>
+                                        <action selector="confirmPasswordToggleClick:" destination="-1" eventType="touchUpInside" id="LOm-2W-nur"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
                                 <constraint firstItem="IPI-VB-DkG" firstAttribute="top" secondItem="N9l-bl-80f" secondAttribute="bottom" constant="20" id="0jX-CV-Sch"/>
                                 <constraint firstItem="kmZ-Lh-N4b" firstAttribute="leading" secondItem="Nym-vE-IzV" secondAttribute="leading" id="1Iy-3z-Gzr"/>
+                                <constraint firstAttribute="trailing" secondItem="8KT-GL-g2w" secondAttribute="trailing" constant="36" id="1Sw-Nh-jMz"/>
                                 <constraint firstItem="YAd-Ko-J9J" firstAttribute="trailing" secondItem="lqR-hN-u3a" secondAttribute="trailing" id="3OB-L1-5MA"/>
+                                <constraint firstItem="2yF-gi-nXd" firstAttribute="centerY" secondItem="N9l-bl-80f" secondAttribute="centerY" id="3yz-1s-HXU"/>
                                 <constraint firstItem="kmZ-Lh-N4b" firstAttribute="leading" secondItem="Poa-sd-wCs" secondAttribute="leading" constant="36" id="AWg-FK-qf0"/>
                                 <constraint firstItem="lqR-hN-u3a" firstAttribute="top" secondItem="YAd-Ko-J9J" secondAttribute="bottom" constant="20" id="Auj-YG-dTW"/>
+                                <constraint firstAttribute="trailing" secondItem="2yF-gi-nXd" secondAttribute="trailing" constant="36" id="Cg1-FT-iw4"/>
                                 <constraint firstItem="IPI-VB-DkG" firstAttribute="top" secondItem="Poa-sd-wCs" secondAttribute="top" constant="691" id="Cjz-tB-ECs"/>
                                 <constraint firstItem="yfw-RZ-rQU" firstAttribute="centerX" secondItem="p20-UB-3jI" secondAttribute="centerX" id="DFw-4f-vqa"/>
                                 <constraint firstItem="Nym-vE-IzV" firstAttribute="top" secondItem="Poa-sd-wCs" secondAttribute="top" constant="423" id="EVB-kL-Hpz"/>
+                                <constraint firstItem="8KT-GL-g2w" firstAttribute="centerY" secondItem="IPI-VB-DkG" secondAttribute="centerY" id="HE1-M8-sZ5"/>
                                 <constraint firstItem="A8C-zG-EyB" firstAttribute="trailing" secondItem="YAd-Ko-J9J" secondAttribute="trailing" id="IQu-fn-Qk9"/>
                                 <constraint firstItem="yfw-RZ-rQU" firstAttribute="top" secondItem="Poa-sd-wCs" secondAttribute="top" constant="90" id="IuF-Y0-Evj"/>
                                 <constraint firstItem="p20-UB-3jI" firstAttribute="centerX" secondItem="Nym-vE-IzV" secondAttribute="centerX" id="LKm-l2-oTk"/>
@@ -176,7 +199,7 @@
                                 <constraint firstItem="ygv-4K-YWf" firstAttribute="leading" secondItem="Poa-sd-wCs" secondAttribute="leading" constant="36" id="WxA-1f-4h1"/>
                                 <constraint firstItem="yfw-RZ-rQU" firstAttribute="centerX" secondItem="Poa-sd-wCs" secondAttribute="centerX" id="YPo-Bw-Prw"/>
                                 <constraint firstItem="A8C-zG-EyB" firstAttribute="top" secondItem="Nym-vE-IzV" secondAttribute="bottom" constant="20" id="Zw2-yr-hbO"/>
-                                <constraint firstItem="lqR-hN-u3a" firstAttribute="trailing" secondItem="N9l-bl-80f" secondAttribute="trailing" id="d8I-86-uFW"/>
+                                <constraint firstItem="lqR-hN-u3a" firstAttribute="trailing" secondItem="N9l-bl-80f" secondAttribute="trailing" constant="36" id="d8I-86-uFW"/>
                                 <constraint firstAttribute="trailing" secondItem="cYX-2a-Wwc" secondAttribute="trailing" constant="26" id="dPY-ii-Vj9"/>
                                 <constraint firstItem="YAd-Ko-J9J" firstAttribute="leading" secondItem="lqR-hN-u3a" secondAttribute="leading" id="dho-nR-KKe"/>
                                 <constraint firstAttribute="trailing" secondItem="0mF-VG-VxE" secondAttribute="trailing" constant="36" id="dio-d4-SYM"/>
@@ -239,7 +262,7 @@
                     </constraints>
                 </scrollView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQs-Q7-hYu">
-                    <rect key="frame" x="157" y="871" width="100" height="42"/>
+                    <rect key="frame" x="157" y="868" width="100" height="42"/>
                     <color key="backgroundColor" name="red_1"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="42" id="BWz-cn-ELC"/>
@@ -253,6 +276,9 @@
                             <integer key="value" value="18"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="register:" destination="-1" eventType="touchUpInside" id="rLh-t9-b5Q"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -271,6 +297,7 @@
         </view>
     </objects>
     <resources>
+        <image name="eye.fill" catalog="system" width="64" height="38"/>
         <image name="register_image" width="218" height="241"/>
         <namedColor name="red_1">
             <color red="0.60500001907348633" green="0.27099999785423279" blue="0.23499999940395355" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

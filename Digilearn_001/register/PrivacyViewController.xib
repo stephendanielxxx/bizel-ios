@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PrivacyViewController" customModule="Digilearn_001" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="1064"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j9X-rI-ep2">
+                    <rect key="frame" x="0.0" y="44" width="414" height="986"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HXc-Sj-YIA">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="986"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EOK-dW-ftV" userLabel="Header">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo_bizel" translatesAutoresizingMaskIntoConstraints="NO" id="f41-VU-asH">
+                                            <rect key="frame" x="17" y="0.0" width="90" height="80"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Privacy Policy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JgU-kH-gWi" userLabel="Title">
+                                            <rect key="frame" x="119" y="28" width="176" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="20"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" name="red_1"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="80" id="k14-zW-end"/>
+                                    </constraints>
+                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3t1-sq-k24" userLabel="Privacy">
+                                    <rect key="frame" x="-2982.5" y="100" width="6379" height="886"/>
+                                    <mutableString key="text">This privacy policy (“Privacy Policy”) explains how information is collected, used, and disclosed by BIZEL  ("Bizel,” “we,” or “our”) and applies to information we collect when you use or access our online or mobile websites (www.gnowbe.com) and use our products, service or applications (collectively, the “Service”), or when you otherwise interact with us. We respect the privacy rights of users and recognize the importance of protecting information collected about you.
+
+Changes to This Policy
+
+We may change this Privacy Policy from time to time. If we make any changes, we will notify you by revising the “Last Updated” date at the top of this Privacy Policy and, in some cases, we may provide you with additional notice (such as adding a statement to our homepage or sending you an email notification). We encourage you to review our Privacy Policy whenever you access the Service to stay informed about our information practices and the ways you can help protect your privacy. Your use of the Service after the posting of such changes will constitute your consent to such changes.
+
+Information Collected
+
+Information You Provide To Us
+
+We collect information you provide directly to us.  For example, we collect information when you register with Bizel for an account, create or modify your profile and online account, access and use the Service (including but not limited to when you upload, download, collaborate on or share files or other information), participate in any interactive features of the Service, participate in a survey, contest, promotion, sweepstakes, activity or event, make a purchase, apply for a job, request customer support, or otherwise communicate with us. 
+
+The types of information we may collect directly from you include your name, username, email address, your picture, postal address, phone number, employer’s name, job title, transactional information (including Service purchased or subscribed to and billing address) as well as any contact or other information you choose to provide. Please be aware that the information you choose to provide in your profile may reveal or identify information that is not expressly stated. We also store the files, materials, or other information that you upload or provide in connection with the Service (“User Content”) in order to be able to provide you with the features and functionality of the Service.
+
+You agree not to provide to us with any information requiring us to treat in any special manner or in a manner inconsistent with the terms of this Privacy Policy.  For example, certain personal medical information may require special confidentiality treatment inconsistent with the terms of this Privacy Policy, and you should not provide any such information to us. BIzel disclaims all liability for such information that you provide to us, and you agree to indemnify and defend Bizel for any cost and action resulting from any such information that you provide to us. Also do not provide to us information about racial or ethnic origin, political opinions, religious or philosophical beliefs, trade union membership or information specifying about your sex life.
+
+Information We Collect Automatically
+
+When You Use the Service. When you access or use the Service, we may automatically collect information about you, including: 
+
+Usage Information. We may monitor user activity in connection with the Service and may collect information about the applications and features you use, the Gnowbe websites you visit, the User Content you upload, download, share or access while using the Service, and any actions taken in connection with the access and use of your User Content in the Service. 
+
+Log Information. We may log information about you when you access and use the Service including your Internet Protocol (“IP”) address, access times, browser type and language, Internet Service Provider (“ISP”), the Gnowbe websites that you visit, the User Content you use and the URL of the Web page you visited before navigating to the Service.
+
+Device Information. If you access the Service from a mobile device, we may collect information about the device, including the hardware model, operating system and version, unique device identifiers, mobile network information (as allowed by the mobile network) or platform information (as allowed by the specific platform type)
+
+Information Collected by Cookies and Other Tracking Technologies
+
+We may use various technologies to collect information, which may include saving cookies to your computer or mobile device. Cookies are small data files stored on your hard drive or in device memory that help us to improve the Service and your experience, customize your experience and preferences, allow you to access and use the Service without re-­entering your user identification and/or password, understand which areas and features of the Service are most popular and count visits. We may also collect information using web beacons (also known as “tracking pixels”). Web beacons are electronic images (also called “gifs”) that may be used in the Service or in emails that help us to deliver cookies, count visits, understand usage and campaign effectiveness and determine whether an email has been opened and acted upon.   
+
+Information We Collect From Other Sources
+
+We may also obtain information from third parties and combine that with information we collect through the Service. For example, we may have access to certain information from third party services like Facebook or Linkedin if you create or log into your online account through that service or otherwise provide us with access to information from the service. Any access that we may have to such information from a third party service is in accordance with the authorization procedures determined by that third party service. ...
+.  
+
+</mutableString>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="3t1-sq-k24" secondAttribute="bottom" id="7gc-gY-91M"/>
+                                <constraint firstItem="EOK-dW-ftV" firstAttribute="top" secondItem="HXc-Sj-YIA" secondAttribute="top" id="Dah-wb-g1T"/>
+                                <constraint firstItem="3t1-sq-k24" firstAttribute="top" secondItem="EOK-dW-ftV" secondAttribute="bottom" constant="20" id="KLI-hb-sMx"/>
+                                <constraint firstItem="3t1-sq-k24" firstAttribute="centerX" secondItem="EOK-dW-ftV" secondAttribute="centerX" id="MZv-jH-vdW"/>
+                                <constraint firstAttribute="trailing" secondItem="EOK-dW-ftV" secondAttribute="trailing" id="TJb-8m-mk2"/>
+                                <constraint firstItem="EOK-dW-ftV" firstAttribute="leading" secondItem="HXc-Sj-YIA" secondAttribute="leading" id="oPf-ok-2Iv"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="HXc-Sj-YIA" firstAttribute="centerY" secondItem="j9X-rI-ep2" secondAttribute="centerY" id="1yn-3V-Zkg"/>
+                        <constraint firstItem="HXc-Sj-YIA" firstAttribute="top" secondItem="j9X-rI-ep2" secondAttribute="top" id="Qmu-6r-b1l"/>
+                        <constraint firstItem="HXc-Sj-YIA" firstAttribute="leading" secondItem="j9X-rI-ep2" secondAttribute="leading" id="VB0-Pa-aB9"/>
+                        <constraint firstAttribute="trailing" secondItem="HXc-Sj-YIA" secondAttribute="trailing" id="moY-Q6-98g"/>
+                        <constraint firstAttribute="bottom" secondItem="HXc-Sj-YIA" secondAttribute="bottom" id="qy0-Xa-U0l"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="j9X-rI-ep2" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="AmZ-aR-Ic1"/>
+                <constraint firstItem="j9X-rI-ep2" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="TqJ-og-zD1"/>
+                <constraint firstItem="EOK-dW-ftV" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="bfe-vE-zE0"/>
+                <constraint firstItem="j9X-rI-ep2" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="ePq-po-Cft"/>
+                <constraint firstItem="j9X-rI-ep2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="jcN-Vu-g8k"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="208.92857142857142"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="logo_bizel" width="360" height="202"/>
+        <namedColor name="red_1">
+            <color red="0.60500001907348633" green="0.27099999785423279" blue="0.23499999940395355" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>
