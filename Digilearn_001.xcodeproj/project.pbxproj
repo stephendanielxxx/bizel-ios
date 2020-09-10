@@ -21,6 +21,16 @@
 		B934AFC924FF8380000FCEB3 /* color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B934AFC824FF8380000FCEB3 /* color.xcassets */; };
 		B934AFE024FFA88D000FCEB3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B934AFDE24FFA88D000FCEB3 /* LoginViewController.swift */; };
 		B934AFE124FFA88D000FCEB3 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B934AFDF24FFA88D000FCEB3 /* LoginViewController.xib */; };
+		B94585DB2509C6DA00330DAC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94585D12509C6D900330DAC /* HomeViewController.swift */; };
+		B94585DC2509C6DA00330DAC /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B94585D32509C6D900330DAC /* MenuTableViewCell.xib */; };
+		B94585DD2509C6DA00330DAC /* SliderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94585D42509C6D900330DAC /* SliderTableViewCell.swift */; };
+		B94585DE2509C6DA00330DAC /* EventTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B94585D52509C6D900330DAC /* EventTableViewCell.xib */; };
+		B94585DF2509C6DA00330DAC /* SliderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B94585D62509C6D900330DAC /* SliderTableViewCell.xib */; };
+		B94585E02509C6DA00330DAC /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94585D72509C6D900330DAC /* EventTableViewCell.swift */; };
+		B94585E12509C6DA00330DAC /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94585D82509C6D900330DAC /* MenuTableViewCell.swift */; };
+		B94585E22509C6DA00330DAC /* BannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94585D92509C6D900330DAC /* BannerCollectionViewCell.swift */; };
+		B94585E32509C6DA00330DAC /* BannerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B94585DA2509C6D900330DAC /* BannerCollectionViewCell.xib */; };
+		B94585E72509CB1700330DAC /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B94585E52509CB1700330DAC /* HomeViewController.xib */; };
 		B99FA3102505CC7400A59C59 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99FA30E2505CC7400A59C59 /* SplashViewController.swift */; };
 		B99FA3112505CC7400A59C59 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B99FA30F2505CC7400A59C59 /* SplashViewController.xib */; };
 		B99FA3142505D2E600A59C59 /* PrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99FA3122505D2E600A59C59 /* PrivacyViewController.swift */; };
@@ -31,7 +41,6 @@
 		B99FA32025060A0B00A59C59 /* MyEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99FA31E25060A0B00A59C59 /* MyEventViewController.swift */; };
 		B99FA32125060A0B00A59C59 /* MyEventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B99FA31F25060A0B00A59C59 /* MyEventViewController.xib */; };
 		B99FA32625060C0B00A59C59 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99FA32525060C0B00A59C59 /* EventModel.swift */; };
-		B9B84763250638E200229F5E /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B84762250638E200229F5E /* EventTableViewCell.swift */; };
 		B9D0534D2501E06B00F1AC03 /* DigilearnParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D0534C2501E06B00F1AC03 /* DigilearnParams.swift */; };
 		B9D053512501FF0500F1AC03 /* ForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D0534F2501FF0500F1AC03 /* ForgetPasswordViewController.swift */; };
 		B9D053522501FF0500F1AC03 /* ForgetPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9D053502501FF0500F1AC03 /* ForgetPasswordViewController.xib */; };
@@ -85,6 +94,16 @@
 		B934AFC824FF8380000FCEB3 /* color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = color.xcassets; sourceTree = "<group>"; };
 		B934AFDE24FFA88D000FCEB3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B934AFDF24FFA88D000FCEB3 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		B94585D12509C6D900330DAC /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B94585D32509C6D900330DAC /* MenuTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
+		B94585D42509C6D900330DAC /* SliderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderTableViewCell.swift; sourceTree = "<group>"; };
+		B94585D52509C6D900330DAC /* EventTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventTableViewCell.xib; sourceTree = "<group>"; };
+		B94585D62509C6D900330DAC /* SliderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SliderTableViewCell.xib; sourceTree = "<group>"; };
+		B94585D72509C6D900330DAC /* EventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
+		B94585D82509C6D900330DAC /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		B94585D92509C6D900330DAC /* BannerCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerCollectionViewCell.swift; sourceTree = "<group>"; };
+		B94585DA2509C6D900330DAC /* BannerCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BannerCollectionViewCell.xib; sourceTree = "<group>"; };
+		B94585E52509CB1700330DAC /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		B99FA30E2505CC7400A59C59 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		B99FA30F2505CC7400A59C59 /* SplashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
 		B99FA3122505D2E600A59C59 /* PrivacyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyViewController.swift; sourceTree = "<group>"; };
@@ -95,7 +114,6 @@
 		B99FA31E25060A0B00A59C59 /* MyEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventViewController.swift; sourceTree = "<group>"; };
 		B99FA31F25060A0B00A59C59 /* MyEventViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyEventViewController.xib; sourceTree = "<group>"; };
 		B99FA32525060C0B00A59C59 /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
-		B9B84762250638E200229F5E /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 		B9D0534C2501E06B00F1AC03 /* DigilearnParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigilearnParams.swift; sourceTree = "<group>"; };
 		B9D0534F2501FF0500F1AC03 /* ForgetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewController.swift; sourceTree = "<group>"; };
 		B9D053502501FF0500F1AC03 /* ForgetPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgetPasswordViewController.xib; sourceTree = "<group>"; };
@@ -193,6 +211,7 @@
 		B934AF4324FF4B82000FCEB3 /* Digilearn_001 */ = {
 			isa = PBXGroup;
 			children = (
+				B94585CF2509C6D900330DAC /* Home */,
 				B99FA31D250609E300A59C59 /* events */,
 				B99FA3182505E64300A59C59 /* faq */,
 				B99FA30D2505CC5A00A59C59 /* splash */,
@@ -240,6 +259,39 @@
 			path = login;
 			sourceTree = "<group>";
 		};
+		B94585CF2509C6D900330DAC /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B94585D02509C6D900330DAC /* ViewController */,
+				B94585D22509C6D900330DAC /* Views */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		B94585D02509C6D900330DAC /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B94585D12509C6D900330DAC /* HomeViewController.swift */,
+				B94585E52509CB1700330DAC /* HomeViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B94585D22509C6D900330DAC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B94585D82509C6D900330DAC /* MenuTableViewCell.swift */,
+				B94585D32509C6D900330DAC /* MenuTableViewCell.xib */,
+				B94585D72509C6D900330DAC /* EventTableViewCell.swift */,
+				B94585D52509C6D900330DAC /* EventTableViewCell.xib */,
+				B94585D42509C6D900330DAC /* SliderTableViewCell.swift */,
+				B94585D62509C6D900330DAC /* SliderTableViewCell.xib */,
+				B94585D92509C6D900330DAC /* BannerCollectionViewCell.swift */,
+				B94585DA2509C6D900330DAC /* BannerCollectionViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		B99FA30D2505CC5A00A59C59 /* splash */ = {
 			isa = PBXGroup;
 			children = (
@@ -264,7 +316,6 @@
 				B99FA32425060BFE00A59C59 /* model */,
 				B99FA31E25060A0B00A59C59 /* MyEventViewController.swift */,
 				B99FA31F25060A0B00A59C59 /* MyEventViewController.xib */,
-				B9B84762250638E200229F5E /* EventTableViewCell.swift */,
 			);
 			path = events;
 			sourceTree = "<group>";
@@ -434,6 +485,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B94585DE2509C6DA00330DAC /* EventTableViewCell.xib in Resources */,
 				B934AFE124FFA88D000FCEB3 /* LoginViewController.xib in Resources */,
 				B9D053522501FF0500F1AC03 /* ForgetPasswordViewController.xib in Resources */,
 				B934AF5424FF4B85000FCEB3 /* LaunchScreen.storyboard in Resources */,
@@ -441,8 +493,12 @@
 				B934AF5124FF4B85000FCEB3 /* Assets.xcassets in Resources */,
 				B99FA32125060A0B00A59C59 /* MyEventViewController.xib in Resources */,
 				B934AFC924FF8380000FCEB3 /* color.xcassets in Resources */,
+				B94585DF2509C6DA00330DAC /* SliderTableViewCell.xib in Resources */,
 				B9D0535B2502278F00F1AC03 /* RegisterViewController.xib in Resources */,
+				B94585DC2509C6DA00330DAC /* MenuTableViewCell.xib in Resources */,
 				B99FA31C2505E65D00A59C59 /* FAQViewController.xib in Resources */,
+				B94585E72509CB1700330DAC /* HomeViewController.xib in Resources */,
+				B94585E32509C6DA00330DAC /* BannerCollectionViewCell.xib in Resources */,
 				B99FA3152505D2E600A59C59 /* PrivacyViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -575,17 +631,21 @@
 				B934AF4924FF4B82000FCEB3 /* ViewController.swift in Sources */,
 				B9D0535A2502278F00F1AC03 /* RegisterViewController.swift in Sources */,
 				B99FA3142505D2E600A59C59 /* PrivacyViewController.swift in Sources */,
+				B94585DD2509C6DA00330DAC /* SliderTableViewCell.swift in Sources */,
 				B9D0534D2501E06B00F1AC03 /* DigilearnParams.swift in Sources */,
+				B94585E22509C6DA00330DAC /* BannerCollectionViewCell.swift in Sources */,
 				B99FA32025060A0B00A59C59 /* MyEventViewController.swift in Sources */,
 				B934AF4F24FF4B82000FCEB3 /* Digilearn_001.xcdatamodeld in Sources */,
 				B934AF4524FF4B82000FCEB3 /* AppDelegate.swift in Sources */,
+				B94585E12509C6DA00330DAC /* MenuTableViewCell.swift in Sources */,
 				B99FA3102505CC7400A59C59 /* SplashViewController.swift in Sources */,
 				B92A7281250087470010D52D /* LoginModel.swift in Sources */,
 				B99FA32625060C0B00A59C59 /* EventModel.swift in Sources */,
-				B9B84763250638E200229F5E /* EventTableViewCell.swift in Sources */,
+				B94585E02509C6DA00330DAC /* EventTableViewCell.swift in Sources */,
 				B99FA31B2505E65D00A59C59 /* FAQViewController.swift in Sources */,
 				B934AFE024FFA88D000FCEB3 /* LoginViewController.swift in Sources */,
 				B9D053512501FF0500F1AC03 /* ForgetPasswordViewController.swift in Sources */,
+				B94585DB2509C6DA00330DAC /* HomeViewController.swift in Sources */,
 				B99FA3172505E07100A59C59 /* RegisterModel.swift in Sources */,
 				B934AF4724FF4B82000FCEB3 /* SceneDelegate.swift in Sources */,
 				B9D053542502185600F1AC03 /* ForgetPasswordModel.swift in Sources */,

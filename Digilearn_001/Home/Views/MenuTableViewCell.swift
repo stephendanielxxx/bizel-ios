@@ -1,14 +1,14 @@
 //
-//  EventTableViewCell.swift
-//  Digilearn_001
+//  MenuTableViewCell.swift
+//  bizelcoba1
 //
-//  Created by Teke on 07/09/20.
-//  Copyright © 2020 Digimaster. All rights reserved.
+//  Created by Seraphina Tatiana   on 08/08/20.
+//  Copyright © 2020 Alcestfini. All rights reserved.
 //
 
 import UIKit
 
-class EventTableViewCell: UITableViewCell {
+class MenuTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,5 +20,5 @@ class EventTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
 }

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MenuTableViewCell" customModule="Digilearn_001" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MenuIdentifier" rowHeight="203" id="KGk-i7-Jjw" customClass="MenuTableViewCell" customModule="Digilearn_001" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="203"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="390" height="203"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mp8-ff-7Ia">
+                        <rect key="frame" x="98" y="18" width="40" height="39"/>
+                        <state key="normal" image="Group 844"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GLA-U2-WPu">
+                        <rect key="frame" x="181" y="18" width="53" height="51"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <state key="normal" image="announce"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="blv-k4-US9">
+                        <rect key="frame" x="268" y="18" width="52" height="51"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <state key="normal" image="events"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zDw-Ku-BNZ">
+                        <rect key="frame" x="142" y="98" width="54" height="51"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="54" id="c7s-X3-73J"/>
+                            <constraint firstAttribute="height" constant="51" id="txd-Rz-ibw"/>
+                        </constraints>
+                        <state key="normal" image="achievement"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yP7-SK-tYg">
+                        <rect key="frame" x="223" y="98" width="40" height="46"/>
+                        <state key="normal" image="faq"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Group" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wEu-ec-aVF">
+                        <rect key="frame" x="88" y="71" width="60" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Events" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="meb-8M-Sgq">
+                        <rect key="frame" x="273" y="71" width="41" height="16"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Announcement" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xOS-pq-uAA">
+                        <rect key="frame" x="161" y="71" width="92" height="16"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Achievement" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ISa-cw-T2R">
+                        <rect key="frame" x="123" y="157" width="79" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FAQ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZsM-Tj-BYs">
+                        <rect key="frame" x="230" y="157" width="26" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="ZsM-Tj-BYs" secondAttribute="trailing" constant="134" id="11a-mq-Crv"/>
+                    <constraint firstAttribute="bottom" secondItem="ZsM-Tj-BYs" secondAttribute="bottom" constant="30" id="442-He-OfW"/>
+                    <constraint firstItem="ZsM-Tj-BYs" firstAttribute="centerX" secondItem="yP7-SK-tYg" secondAttribute="centerX" id="7nr-rF-Tw8"/>
+                    <constraint firstItem="ZsM-Tj-BYs" firstAttribute="leading" secondItem="ISa-cw-T2R" secondAttribute="trailing" constant="28" id="8mg-TP-Pc3"/>
+                    <constraint firstItem="wEu-ec-aVF" firstAttribute="top" secondItem="mp8-ff-7Ia" secondAttribute="bottom" constant="14" id="9RK-Of-5CT"/>
+                    <constraint firstItem="mp8-ff-7Ia" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="18" id="Ck7-PO-Mgf"/>
+                    <constraint firstItem="yP7-SK-tYg" firstAttribute="leading" secondItem="zDw-Ku-BNZ" secondAttribute="trailing" constant="27" id="RBY-vc-9Wg"/>
+                    <constraint firstItem="ZsM-Tj-BYs" firstAttribute="top" secondItem="yP7-SK-tYg" secondAttribute="bottom" constant="13" id="RzP-NP-mQC"/>
+                    <constraint firstItem="zDw-Ku-BNZ" firstAttribute="top" secondItem="wEu-ec-aVF" secondAttribute="bottom" constant="11" id="Ui0-Og-vVd"/>
+                    <constraint firstItem="yP7-SK-tYg" firstAttribute="top" secondItem="zDw-Ku-BNZ" secondAttribute="top" id="fOJ-1Z-lvF"/>
+                    <constraint firstItem="wEu-ec-aVF" firstAttribute="centerX" secondItem="mp8-ff-7Ia" secondAttribute="centerX" id="jJQ-4g-AuH"/>
+                    <constraint firstItem="ZsM-Tj-BYs" firstAttribute="baseline" secondItem="ISa-cw-T2R" secondAttribute="baseline" id="pYn-8Z-ulj"/>
+                    <constraint firstItem="mp8-ff-7Ia" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="98" id="yH1-rU-H8A"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="10" y="65"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Group 844" width="40" height="39"/>
+        <image name="achievement" width="40" height="40"/>
+        <image name="announce" width="39" height="39"/>
+        <image name="events" width="40" height="39"/>
+        <image name="faq" width="40" height="43"/>
+    </resources>
+</document>
