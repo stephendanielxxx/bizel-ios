@@ -7,12 +7,24 @@
 //
 
 import UIKit
+import Alamofire
+import Reqres
+import MaterialComponents.MaterialCards
 
 class EventDetailViewController: UIViewController {
 
+    @IBOutlet weak var navigationBar: UINavigationBar!
+    @IBOutlet weak var descriptionText: UITextView!
+    @IBOutlet weak var addressLabel: UILabel!
+    
+    var eventId:String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        Reqres.register()
+        loadData(var: eventId)
+        
         // Do any additional setup after loading the view.
     }
     
@@ -20,15 +32,54 @@ class EventDetailViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    func loadData(var eventId: String){
+         let URL = "\(DigilearnParams.ApiUrl)/onsite/get_detail/\(eventId)"
+           
+         AF.request(URL,
+                      method: .get,
+                      parameters: nil,
+                      encoding: JSONEncoding.default).responseData { response in
+                        
+                        debugPrint(response)
+                       
+                       switch response.result {
+                       case .success(let data):
+                          let decoder = JSONDecoder()
+                          do{
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+                           let eventDetailModel = try decoder.decode(EventDetailModel.self, from:data)
+                            
+                            let eventDetail: OnsiteDetail = eventDetailModel.onsite[0]
+                            
+                            self.navigationBar.topItem?.title = eventDetail.title
+                            
+                            self.descriptionText.attributedText = eventDetail.desc.htmlToAttributedString
+                            
+                            self.addressLabel.text = eventDetail.place
+                        
+                           }catch{
+                               print(error.localizedDescription)
+                           }
+                           break
+                       case .failure(let error):
+                           debugPrint("Error")
+                           break
+                       }
+           }
     }
-    */
 
+}
+
+extension String {
+    var htmlToAttributedString: NSAttributedString? {
+        guard let data = data(using: .utf8) else { return nil }
+        do {
+            return try NSAttributedString(data: data, options: [.documentType: NSAttributedString.DocumentType.html, .characterEncoding:String.Encoding.utf8.rawValue], documentAttributes: nil)
+        } catch {
+            return nil
+        }
+    }
+    var htmlToString: String {
+        return htmlToAttributedString?.string ?? ""
+    }
 }
