@@ -24,16 +24,27 @@
                                 <rect key="frame" x="12" y="12" width="461" height="126"/>
                                 <color key="backgroundColor" name="color_ D44444"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQD-mh-YF9" userLabel="New Label">
+                                <rect key="frame" x="24" y="22" width="26" height="14.5"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WwL-J8-xC4">
-                                <rect key="frame" x="24" y="24" width="437" height="17"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <rect key="frame" x="24" y="40" width="437" height="21.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WaV-2b-Qn0">
-                                <rect key="frame" x="357" y="94" width="92" height="32"/>
-                                <color key="backgroundColor" name="color_ D44444"/>
+                                <rect key="frame" x="329" y="94" width="120" height="32"/>
+                                <color key="backgroundColor" name="color_ B63532"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="RTn-8H-nLp"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <inset key="titleEdgeInsets" minX="8" minY="4" maxX="8" maxY="4"/>
                                 <state key="normal" title="Register Now">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -46,11 +57,13 @@
                             <constraint firstAttribute="trailing" secondItem="WwL-J8-xC4" secondAttribute="trailing" constant="24" id="9MN-nh-HyK"/>
                             <constraint firstAttribute="bottom" secondItem="fr0-IN-dLz" secondAttribute="bottom" constant="12" id="TAV-LC-mzh"/>
                             <constraint firstItem="fr0-IN-dLz" firstAttribute="leading" secondItem="SQW-s5-S6C" secondAttribute="leading" constant="12" id="XOd-tq-XOK"/>
+                            <constraint firstItem="SQD-mh-YF9" firstAttribute="top" secondItem="SQW-s5-S6C" secondAttribute="top" constant="22" id="fH1-7F-9bw"/>
                             <constraint firstAttribute="trailing" secondItem="fr0-IN-dLz" secondAttribute="trailing" constant="12" id="muB-7U-onu"/>
-                            <constraint firstItem="WwL-J8-xC4" firstAttribute="top" secondItem="SQW-s5-S6C" secondAttribute="top" constant="24" id="oTt-AR-LNN"/>
+                            <constraint firstItem="WwL-J8-xC4" firstAttribute="top" secondItem="SQW-s5-S6C" secondAttribute="top" constant="40" id="oTt-AR-LNN"/>
                             <constraint firstAttribute="bottom" secondItem="WaV-2b-Qn0" secondAttribute="bottom" constant="24" id="r9k-ii-IAp"/>
                             <constraint firstAttribute="trailing" secondItem="WaV-2b-Qn0" secondAttribute="trailing" constant="36" id="uTk-Gk-WML"/>
                             <constraint firstItem="WwL-J8-xC4" firstAttribute="leading" secondItem="SQW-s5-S6C" secondAttribute="leading" constant="24" id="xdb-Fp-icQ"/>
+                            <constraint firstItem="SQD-mh-YF9" firstAttribute="leading" secondItem="SQW-s5-S6C" secondAttribute="leading" constant="24" id="zv3-N0-LSc"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -66,6 +79,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="eventImage" destination="fr0-IN-dLz" id="ojz-Lb-ayR"/>
+                <outlet property="newLabel" destination="SQD-mh-YF9" id="nxH-wk-316"/>
                 <outlet property="registerButton" destination="WaV-2b-Qn0" id="4mx-WB-xWH"/>
                 <outlet property="titleLabel" destination="WwL-J8-xC4" id="wkA-Dg-gBe"/>
             </connections>
@@ -73,6 +87,9 @@
         </tableViewCell>
     </objects>
     <resources>
+        <namedColor name="color_ B63532">
+            <color red="0.71399998664855957" green="0.20800000429153442" blue="0.19599999487400055" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="color_ D44444">
             <color red="0.83099997043609619" green="0.2669999897480011" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

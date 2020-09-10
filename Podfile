@@ -13,6 +13,7 @@ target 'Digilearn_001' do
   #pod 'AlamofireNetworkActivityLogger', '~> 3.0'
   pod 'SimpleCheckbox'
   pod 'PINRemoteImage'
+  pod 'MaterialComponents/Cards'
   # Pods for Digilearn_001
 
   target 'Digilearn_001Tests' do

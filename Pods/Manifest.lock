@@ -3,6 +3,42 @@ PODS:
   - FlagPhoneNumber (0.8.0):
     - FlagPhoneNumber/libPhoneNumberiOS (= 0.8.0)
   - FlagPhoneNumber/libPhoneNumberiOS (0.8.0)
+  - MaterialComponents/AnimationTiming (115.0.0)
+  - MaterialComponents/Availability (115.0.0)
+  - MaterialComponents/Cards (115.0.0):
+    - MaterialComponents/Elevation
+    - MaterialComponents/Ink
+    - MaterialComponents/private/Icons/ic_check_circle
+    - MaterialComponents/private/Math
+    - MaterialComponents/Ripple
+    - MaterialComponents/ShadowLayer
+    - MaterialComponents/Shapes
+  - MaterialComponents/Elevation (115.0.0):
+    - MaterialComponents/Availability
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+  - MaterialComponents/Ink (115.0.0):
+    - MaterialComponents/Availability
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+  - MaterialComponents/private/Color (115.0.0):
+    - MaterialComponents/Availability
+  - MaterialComponents/private/Icons/Base (115.0.0)
+  - MaterialComponents/private/Icons/ic_check_circle (115.0.0):
+    - MaterialComponents/private/Icons/Base
+  - MaterialComponents/private/Math (115.0.0)
+  - MaterialComponents/Ripple (115.0.0):
+    - MaterialComponents/AnimationTiming
+    - MaterialComponents/Availability
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+  - MaterialComponents/ShadowElevations (115.0.0)
+  - MaterialComponents/ShadowLayer (115.0.0):
+    - MaterialComponents/ShadowElevations
+  - MaterialComponents/Shapes (115.0.0):
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+    - MaterialComponents/ShadowLayer
   - PINCache (3.0.1-beta.8):
     - PINCache/Arc-exception-safe (= 3.0.1-beta.8)
     - PINCache/Core (= 3.0.1-beta.8)
@@ -30,6 +66,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 5.2)
   - FlagPhoneNumber
+  - MaterialComponents/Cards
   - PINRemoteImage
   - Reqres
   - RxCocoa (~> 5)
@@ -40,6 +77,7 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - FlagPhoneNumber
+    - MaterialComponents
     - PINCache
     - PINOperation
     - PINRemoteImage
@@ -52,6 +90,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
   FlagPhoneNumber: 3712455b95f66cb0f2016fef7d9e34cddf8c7f9a
+  MaterialComponents: 0048689c8afeaae0b83f2ae26057fa1433c4e02f
   PINCache: 534fd41d358d828dfdf227a0d327f3673a65e20b
   PINOperation: 24b774353ca248fcf87d67b2d61eef42087c125a
   PINRemoteImage: e2b89e19fb6e77ffc099f9d9f3b3fe1745e3f9f9
@@ -61,6 +100,6 @@ SPEC CHECKSUMS:
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   SimpleCheckbox: ddcd433ab8c3a8f57300bebda13151a8f302c7f9
 
-PODFILE CHECKSUM: 33f5109168feb6646816cff5d1e989a658674604
+PODFILE CHECKSUM: b956703d20e71628675efbfddeb995acff83c880
 
 COCOAPODS: 1.9.3

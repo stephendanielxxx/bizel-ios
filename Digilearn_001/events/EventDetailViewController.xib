@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EventDetailViewController" customModule="Digilearn_001" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tqq-zA-pSh">
+                    <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <color key="barTintColor" name="red_1"/>
+                    <textAttributes key="titleTextAttributes">
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </textAttributes>
+                    <items>
+                        <navigationItem title="Event Title" id="LpH-kK-zmi">
+                            <barButtonItem key="leftBarButtonItem" image="arrow.left" catalog="system" id="df4-Hv-jmc" userLabel="back">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="backAction:" destination="-1" id="VFj-YB-1uK"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T4y-zp-mEt">
+                    <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uAi-S2-hcC" userLabel="Content View">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="uAi-S2-hcC" secondAttribute="bottom" id="Bkw-eu-4Wv"/>
+                        <constraint firstItem="uAi-S2-hcC" firstAttribute="top" secondItem="T4y-zp-mEt" secondAttribute="top" id="f6h-zy-0C7"/>
+                        <constraint firstItem="uAi-S2-hcC" firstAttribute="leading" secondItem="T4y-zp-mEt" secondAttribute="leading" id="fHu-Cd-VC1"/>
+                        <constraint firstItem="uAi-S2-hcC" firstAttribute="height" secondItem="T4y-zp-mEt" secondAttribute="height" id="fTj-W8-oFO"/>
+                        <constraint firstAttribute="trailing" secondItem="uAi-S2-hcC" secondAttribute="trailing" id="nXX-nK-MWj"/>
+                        <constraint firstItem="uAi-S2-hcC" firstAttribute="width" secondItem="T4y-zp-mEt" secondAttribute="width" id="zaO-4g-fsC"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="tqq-zA-pSh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="0VE-Lm-f3b"/>
+                <constraint firstItem="T4y-zp-mEt" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="6UH-td-w8q"/>
+                <constraint firstItem="T4y-zp-mEt" firstAttribute="top" secondItem="tqq-zA-pSh" secondAttribute="bottom" id="AiD-po-Rbq"/>
+                <constraint firstItem="tqq-zA-pSh" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Lni-Pf-pcX"/>
+                <constraint firstItem="tqq-zA-pSh" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="N32-1E-Mhr"/>
+                <constraint firstItem="T4y-zp-mEt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="OTQ-0I-82T"/>
+                <constraint firstItem="T4y-zp-mEt" firstAttribute="top" secondItem="tqq-zA-pSh" secondAttribute="bottom" id="g1L-Cm-l37"/>
+                <constraint firstItem="T4y-zp-mEt" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="mtu-x7-U7H"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="145.98214285714286"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrow.left" catalog="system" width="128" height="98"/>
+        <namedColor name="red_1">
+            <color red="0.60399997234344482" green="0.27099999785423279" blue="0.23499999940395355" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>
