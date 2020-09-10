@@ -36,6 +36,7 @@
 		B94585EE2509FDDF00330DAC /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94585EC2509FDDF00330DAC /* EventDetailViewController.swift */; };
 		B94585EF2509FDDF00330DAC /* EventDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B94585ED2509FDDF00330DAC /* EventDetailViewController.xib */; };
 		B94585F1250A0D7D00330DAC /* EventDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94585F0250A0D7D00330DAC /* EventDetailModel.swift */; };
+		B94585F3250A2FFE00330DAC /* RegisterEventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94585F2250A2FFE00330DAC /* RegisterEventModel.swift */; };
 		B99FA3102505CC7400A59C59 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99FA30E2505CC7400A59C59 /* SplashViewController.swift */; };
 		B99FA3112505CC7400A59C59 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B99FA30F2505CC7400A59C59 /* SplashViewController.xib */; };
 		B99FA3142505D2E600A59C59 /* PrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99FA3122505D2E600A59C59 /* PrivacyViewController.swift */; };
@@ -114,6 +115,7 @@
 		B94585EC2509FDDF00330DAC /* EventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
 		B94585ED2509FDDF00330DAC /* EventDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventDetailViewController.xib; sourceTree = "<group>"; };
 		B94585F0250A0D7D00330DAC /* EventDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailModel.swift; sourceTree = "<group>"; };
+		B94585F2250A2FFE00330DAC /* RegisterEventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEventModel.swift; sourceTree = "<group>"; };
 		B99FA30E2505CC7400A59C59 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		B99FA30F2505CC7400A59C59 /* SplashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
 		B99FA3122505D2E600A59C59 /* PrivacyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyViewController.swift; sourceTree = "<group>"; };
@@ -355,6 +357,7 @@
 			children = (
 				B99FA32525060C0B00A59C59 /* EventModel.swift */,
 				B94585F0250A0D7D00330DAC /* EventDetailModel.swift */,
+				B94585F2250A2FFE00330DAC /* RegisterEventModel.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -670,6 +673,7 @@
 				B94585F1250A0D7D00330DAC /* EventDetailModel.swift in Sources */,
 				B9D053542502185600F1AC03 /* ForgetPasswordModel.swift in Sources */,
 				B9D05357250225A600F1AC03 /* DigilearnKeys.swift in Sources */,
+				B94585F3250A2FFE00330DAC /* RegisterEventModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
