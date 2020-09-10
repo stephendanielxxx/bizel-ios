@@ -11,5 +11,6 @@ import Alamofire
 
 struct DigilearnParams {
     static let ApiUrl = "https://digicourse.id/api_digilearn"
+    static let ImageEventUrl = "https://digicourse.id/digilearn/admin-master/assets.admin_master/event/image/"
 }
 

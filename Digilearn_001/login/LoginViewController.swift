@@ -108,7 +108,7 @@ class LoginViewController: UIViewController {
                                 if(loginModel.code == "200"){
                                     self.saveStringPreference(value: (loginModel.user?[0].id)!, key: DigilearnsKeys.USER_ID)
                                     
-                                    let event = HomeViewController()
+                                    let event = MyEventViewController()
 
                                     event.modalPresentationStyle = .fullScreen
                                     

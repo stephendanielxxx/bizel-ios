@@ -31,6 +31,8 @@
 		B94585E22509C6DA00330DAC /* BannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94585D92509C6D900330DAC /* BannerCollectionViewCell.swift */; };
 		B94585E32509C6DA00330DAC /* BannerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B94585DA2509C6D900330DAC /* BannerCollectionViewCell.xib */; };
 		B94585E72509CB1700330DAC /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B94585E52509CB1700330DAC /* HomeViewController.xib */; };
+		B94585EA2509D1D800330DAC /* MyEventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94585E82509D1D800330DAC /* MyEventTableViewCell.swift */; };
+		B94585EB2509D1D800330DAC /* MyEventTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B94585E92509D1D800330DAC /* MyEventTableViewCell.xib */; };
 		B99FA3102505CC7400A59C59 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99FA30E2505CC7400A59C59 /* SplashViewController.swift */; };
 		B99FA3112505CC7400A59C59 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B99FA30F2505CC7400A59C59 /* SplashViewController.xib */; };
 		B99FA3142505D2E600A59C59 /* PrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99FA3122505D2E600A59C59 /* PrivacyViewController.swift */; };
@@ -104,6 +106,8 @@
 		B94585D92509C6D900330DAC /* BannerCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerCollectionViewCell.swift; sourceTree = "<group>"; };
 		B94585DA2509C6D900330DAC /* BannerCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BannerCollectionViewCell.xib; sourceTree = "<group>"; };
 		B94585E52509CB1700330DAC /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		B94585E82509D1D800330DAC /* MyEventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventTableViewCell.swift; sourceTree = "<group>"; };
+		B94585E92509D1D800330DAC /* MyEventTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyEventTableViewCell.xib; sourceTree = "<group>"; };
 		B99FA30E2505CC7400A59C59 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		B99FA30F2505CC7400A59C59 /* SplashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
 		B99FA3122505D2E600A59C59 /* PrivacyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyViewController.swift; sourceTree = "<group>"; };
@@ -316,6 +320,8 @@
 				B99FA32425060BFE00A59C59 /* model */,
 				B99FA31E25060A0B00A59C59 /* MyEventViewController.swift */,
 				B99FA31F25060A0B00A59C59 /* MyEventViewController.xib */,
+				B94585E82509D1D800330DAC /* MyEventTableViewCell.swift */,
+				B94585E92509D1D800330DAC /* MyEventTableViewCell.xib */,
 			);
 			path = events;
 			sourceTree = "<group>";
@@ -489,6 +495,7 @@
 				B934AFE124FFA88D000FCEB3 /* LoginViewController.xib in Resources */,
 				B9D053522501FF0500F1AC03 /* ForgetPasswordViewController.xib in Resources */,
 				B934AF5424FF4B85000FCEB3 /* LaunchScreen.storyboard in Resources */,
+				B94585EB2509D1D800330DAC /* MyEventTableViewCell.xib in Resources */,
 				B99FA3112505CC7400A59C59 /* SplashViewController.xib in Resources */,
 				B934AF5124FF4B85000FCEB3 /* Assets.xcassets in Resources */,
 				B99FA32125060A0B00A59C59 /* MyEventViewController.xib in Resources */,
@@ -635,6 +642,7 @@
 				B9D0534D2501E06B00F1AC03 /* DigilearnParams.swift in Sources */,
 				B94585E22509C6DA00330DAC /* BannerCollectionViewCell.swift in Sources */,
 				B99FA32025060A0B00A59C59 /* MyEventViewController.swift in Sources */,
+				B94585EA2509D1D800330DAC /* MyEventTableViewCell.swift in Sources */,
 				B934AF4F24FF4B82000FCEB3 /* Digilearn_001.xcdatamodeld in Sources */,
 				B934AF4524FF4B82000FCEB3 /* AppDelegate.swift in Sources */,
 				B94585E12509C6DA00330DAC /* MenuTableViewCell.swift in Sources */,

@@ -9,11 +9,13 @@
 import UIKit
 import Alamofire
 import Reqres
+import PINRemoteImage
 
 class MyEventViewController: UIViewController {
     let URL = "\(DigilearnParams.ApiUrl)/home/get_onsite_course"
     
     @IBOutlet weak var tableView: UITableView!
+    var eventModel: EventModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,8 +23,9 @@ class MyEventViewController: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(EventTableViewCell.self, forCellReuseIdentifier: "eventTableViewCell")
-
+       
+        let nib = UINib(nibName: "MyEventTableViewCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "myEventIdentifier")
 
         // Do any additional setup after loading the view.
         loadData()
@@ -45,10 +48,12 @@ class MyEventViewController: UIViewController {
                        let decoder = JSONDecoder()
                        do{
 
-                            let eventModel = try decoder.decode(EventModel.self, from:data)
+                        self.eventModel = try decoder.decode(EventModel.self, from:data)
 
-                            if(eventModel.onsite.count ?? 0 > 0){
-                                debugPrint(eventModel)
+                        if(self.eventModel?.onsite.count ?? 0 > 0){
+                            
+                            self.tableView.reloadData()
+                            
                             }else{
 
                             }
@@ -67,11 +72,29 @@ class MyEventViewController: UIViewController {
 
 extension MyEventViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return eventModel?.onsite.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 150
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "eventTableViewCell") as! EventTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "myEventIdentifier") as! MyEventTableViewCell
+        
+        let event: Onsite = (eventModel?.onsite[indexPath.row])!
+        cell.titleLabel.text = event.title
+        cell.eventImage.pin_updateWithProgress = true
+        cell.eventImage.layer.cornerRadius = 15
+        cell.eventImage.contentMode = .scaleToFill
+        cell.eventImage.clipsToBounds = true
+        
+        cell.registerButton.layer.cornerRadius = 15
+        
+        let url = Foundation.URL(string: "https://digicourse.id/digilearn/admin-master/assets.admin_master/event/image/\(event.image)")!
+//
+        cell.eventImage.pin_setImage(from: url)
+    
         return cell
     }
 

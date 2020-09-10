@@ -3,6 +3,21 @@ PODS:
   - FlagPhoneNumber (0.8.0):
     - FlagPhoneNumber/libPhoneNumberiOS (= 0.8.0)
   - FlagPhoneNumber/libPhoneNumberiOS (0.8.0)
+  - PINCache (3.0.1-beta.8):
+    - PINCache/Arc-exception-safe (= 3.0.1-beta.8)
+    - PINCache/Core (= 3.0.1-beta.8)
+  - PINCache/Arc-exception-safe (3.0.1-beta.8):
+    - PINCache/Core
+  - PINCache/Core (3.0.1-beta.8):
+    - PINOperation (~> 1.1.1)
+  - PINOperation (1.1.2)
+  - PINRemoteImage (3.0.0):
+    - PINRemoteImage/PINCache (= 3.0.0)
+  - PINRemoteImage/Core (3.0.0):
+    - PINOperation
+  - PINRemoteImage/PINCache (3.0.0):
+    - PINCache (= 3.0.1-beta.8)
+    - PINRemoteImage/Core
   - Reqres (3.1.1)
   - RxCocoa (5.1.1):
     - RxRelay (~> 5)
@@ -15,6 +30,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 5.2)
   - FlagPhoneNumber
+  - PINRemoteImage
   - Reqres
   - RxCocoa (~> 5)
   - RxSwift (~> 5)
@@ -24,6 +40,9 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - FlagPhoneNumber
+    - PINCache
+    - PINOperation
+    - PINRemoteImage
     - Reqres
     - RxCocoa
     - RxRelay
@@ -33,12 +52,15 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
   FlagPhoneNumber: 3712455b95f66cb0f2016fef7d9e34cddf8c7f9a
+  PINCache: 534fd41d358d828dfdf227a0d327f3673a65e20b
+  PINOperation: 24b774353ca248fcf87d67b2d61eef42087c125a
+  PINRemoteImage: e2b89e19fb6e77ffc099f9d9f3b3fe1745e3f9f9
   Reqres: 4ebafc15b75c65fdf67edcec14520d43b836d4da
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   SimpleCheckbox: ddcd433ab8c3a8f57300bebda13151a8f302c7f9
 
-PODFILE CHECKSUM: 010bdc8d55f73c87f00a64cb9e53e47da1c641c6
+PODFILE CHECKSUM: 33f5109168feb6646816cff5d1e989a658674604
 
 COCOAPODS: 1.9.3
