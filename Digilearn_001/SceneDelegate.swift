@@ -18,6 +18,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.windowScene = windowScene
         window?.rootViewController = LoginViewController()
         window?.makeKeyAndVisible()
+        
+        let preferences = UserDefaults.standard
+        let userId = preferences.string(forKey: DigilearnsKeys.USER_ID)
+        if(userId != nil){
+//            window?.rootViewController = HomeViewController()
+            window?.rootViewController = LoginViewController()
+            window?.makeKeyAndVisible()
+        }else{
+            window?.rootViewController = LoginViewController()
+            window?.makeKeyAndVisible()
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
