@@ -1,5 +1,5 @@
 //
-//  PrivacyViewController.swift
+//  FAQViewController.swift
 //  Digilearn_001
 //
 //  Created by Teke on 07/09/20.
@@ -8,17 +8,18 @@
 
 import UIKit
 
-class PrivacyViewController: UIViewController {
+class FAQViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    
-    @IBAction func closeScreen(_ sender: UIBarButtonItem) {
+
+    @IBAction func closeFaq(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
+    
     /*
     // MARK: - Navigation
 

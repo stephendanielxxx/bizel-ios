@@ -18,35 +18,13 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="1064"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j9X-rI-ep2">
-                    <rect key="frame" x="0.0" y="44" width="414" height="986"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HXc-Sj-YIA">
+                    <rect key="frame" x="0.0" y="54" width="414" height="986"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HXc-Sj-YIA">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="986"/>
-                            <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EOK-dW-ftV" userLabel="Header">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
-                                    <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo_bizel" translatesAutoresizingMaskIntoConstraints="NO" id="f41-VU-asH">
-                                            <rect key="frame" x="17" y="0.0" width="90" height="80"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Privacy Policy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JgU-kH-gWi" userLabel="Title">
-                                            <rect key="frame" x="119" y="28" width="176" height="24"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="20"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <color key="backgroundColor" name="red_1"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="80" id="k14-zW-end"/>
-                                    </constraints>
-                                </view>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3t1-sq-k24" userLabel="Privacy">
-                                    <rect key="frame" x="-2982.5" y="100" width="6379" height="886"/>
-                                    <mutableString key="text">This privacy policy (“Privacy Policy”) explains how information is collected, used, and disclosed by BIZEL  ("Bizel,” “we,” or “our”) and applies to information we collect when you use or access our online or mobile websites (www.gnowbe.com) and use our products, service or applications (collectively, the “Service”), or when you otherwise interact with us. We respect the privacy rights of users and recognize the importance of protecting information collected about you.
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HYA-Ha-Hbw">
+                            <rect key="frame" x="8" y="52" width="398" height="926"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <string key="text">This privacy policy (“Privacy Policy”) explains how information is collected, used, and disclosed by BIZEL  ("Bizel,” “we,” or “our”) and applies to information we collect when you use or access our online or mobile websites (www.gnowbe.com) and use our products, service or applications (collectively, the “Service”), or when you otherwise interact with us. We respect the privacy rights of users and recognize the importance of protecting information collected about you.
 
 Changes to This Policy
 
@@ -81,39 +59,60 @@ Information We Collect From Other Sources
 We may also obtain information from third parties and combine that with information we collect through the Service. For example, we may have access to certain information from third party services like Facebook or Linkedin if you create or log into your online account through that service or otherwise provide us with access to information from the service. Any access that we may have to such information from a third party service is in accordance with the authorization procedures determined by that third party service. ...
 .  
 
-</mutableString>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                            </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+</string>
+                            <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                        <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="37c-hK-rgt">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                             <constraints>
-                                <constraint firstAttribute="bottom" secondItem="3t1-sq-k24" secondAttribute="bottom" id="7gc-gY-91M"/>
-                                <constraint firstItem="EOK-dW-ftV" firstAttribute="top" secondItem="HXc-Sj-YIA" secondAttribute="top" id="Dah-wb-g1T"/>
-                                <constraint firstItem="3t1-sq-k24" firstAttribute="top" secondItem="EOK-dW-ftV" secondAttribute="bottom" constant="20" id="KLI-hb-sMx"/>
-                                <constraint firstItem="3t1-sq-k24" firstAttribute="centerX" secondItem="EOK-dW-ftV" secondAttribute="centerX" id="MZv-jH-vdW"/>
-                                <constraint firstAttribute="trailing" secondItem="EOK-dW-ftV" secondAttribute="trailing" id="TJb-8m-mk2"/>
-                                <constraint firstItem="EOK-dW-ftV" firstAttribute="leading" secondItem="HXc-Sj-YIA" secondAttribute="leading" id="oPf-ok-2Iv"/>
+                                <constraint firstAttribute="height" constant="44" id="jJU-Mt-R5f"/>
                             </constraints>
-                        </view>
+                            <color key="barTintColor" name="color_ D44444"/>
+                            <textAttributes key="titleTextAttributes">
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </textAttributes>
+                            <items>
+                                <navigationItem title="Privacy Policy" id="Dat-Cu-BeN">
+                                    <barButtonItem key="leftBarButtonItem" title="Back" image="arrow.left" catalog="system" id="8pq-8Q-G3p">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="closeScreen:" destination="-1" id="uwc-9J-k6D"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </navigationItem>
+                            </items>
+                        </navigationBar>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_bizel" translatesAutoresizingMaskIntoConstraints="NO" id="5L1-ys-aAh">
+                            <rect key="frame" x="65" y="0.0" width="50" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="GKp-Xg-vew"/>
+                                <constraint firstAttribute="height" constant="44" id="v4a-I1-GS3"/>
+                            </constraints>
+                        </imageView>
                     </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
-                        <constraint firstItem="HXc-Sj-YIA" firstAttribute="centerY" secondItem="j9X-rI-ep2" secondAttribute="centerY" id="1yn-3V-Zkg"/>
-                        <constraint firstItem="HXc-Sj-YIA" firstAttribute="top" secondItem="j9X-rI-ep2" secondAttribute="top" id="Qmu-6r-b1l"/>
-                        <constraint firstItem="HXc-Sj-YIA" firstAttribute="leading" secondItem="j9X-rI-ep2" secondAttribute="leading" id="VB0-Pa-aB9"/>
-                        <constraint firstAttribute="trailing" secondItem="HXc-Sj-YIA" secondAttribute="trailing" id="moY-Q6-98g"/>
-                        <constraint firstAttribute="bottom" secondItem="HXc-Sj-YIA" secondAttribute="bottom" id="qy0-Xa-U0l"/>
+                        <constraint firstAttribute="bottom" secondItem="HYA-Ha-Hbw" secondAttribute="bottom" constant="8" id="JI3-xT-pnm"/>
+                        <constraint firstItem="37c-hK-rgt" firstAttribute="leading" secondItem="HXc-Sj-YIA" secondAttribute="leading" id="VOT-og-gq6"/>
+                        <constraint firstItem="5L1-ys-aAh" firstAttribute="top" secondItem="HXc-Sj-YIA" secondAttribute="top" id="ZYi-1T-Fo2"/>
+                        <constraint firstAttribute="trailing" secondItem="HYA-Ha-Hbw" secondAttribute="trailing" constant="8" id="cdR-8p-u9v"/>
+                        <constraint firstItem="HYA-Ha-Hbw" firstAttribute="top" secondItem="37c-hK-rgt" secondAttribute="bottom" constant="8" id="dTC-HP-Vih"/>
+                        <constraint firstItem="5L1-ys-aAh" firstAttribute="centerY" secondItem="37c-hK-rgt" secondAttribute="centerY" id="jlp-sZ-SSx"/>
+                        <constraint firstItem="HYA-Ha-Hbw" firstAttribute="leading" secondItem="HXc-Sj-YIA" secondAttribute="leading" constant="8" id="n0W-ur-zA1"/>
+                        <constraint firstItem="5L1-ys-aAh" firstAttribute="leading" secondItem="HXc-Sj-YIA" secondAttribute="leading" constant="65" id="ong-GT-dqc"/>
+                        <constraint firstItem="37c-hK-rgt" firstAttribute="top" secondItem="HXc-Sj-YIA" secondAttribute="top" id="v5x-r0-3II"/>
+                        <constraint firstAttribute="trailing" secondItem="37c-hK-rgt" secondAttribute="trailing" id="vYK-34-kWq"/>
                     </constraints>
-                </scrollView>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="j9X-rI-ep2" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="AmZ-aR-Ic1"/>
-                <constraint firstItem="j9X-rI-ep2" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="TqJ-og-zD1"/>
-                <constraint firstItem="EOK-dW-ftV" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="bfe-vE-zE0"/>
-                <constraint firstItem="j9X-rI-ep2" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="ePq-po-Cft"/>
-                <constraint firstItem="j9X-rI-ep2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="jcN-Vu-g8k"/>
+                <constraint firstItem="HXc-Sj-YIA" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="15" id="FAA-N5-eUs"/>
+                <constraint firstAttribute="trailing" secondItem="HXc-Sj-YIA" secondAttribute="trailing" id="FcL-C5-e2u"/>
+                <constraint firstItem="HXc-Sj-YIA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="KYX-CP-3j5"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="HXc-Sj-YIA" secondAttribute="bottom" constant="-10" id="US5-A1-bg7"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
@@ -121,9 +120,10 @@ We may also obtain information from third parties and combine that with informat
         </view>
     </objects>
     <resources>
+        <image name="arrow.left" catalog="system" width="64" height="48"/>
         <image name="logo_bizel" width="360" height="202"/>
-        <namedColor name="red_1">
-            <color red="0.60500001907348633" green="0.27099999785423279" blue="0.23499999940395355" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        <namedColor name="color_ D44444">
+            <color red="0.83099997043609619" green="0.2669999897480011" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

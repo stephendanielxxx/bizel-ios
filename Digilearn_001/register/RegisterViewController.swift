@@ -104,6 +104,18 @@ class RegisterViewController: UIViewController {
                confirmPassClick = !confirmPassClick
     }
     
+    @IBAction func openHelp(_ sender: UIButton) {
+          let faq = FAQViewController()
+
+          faq.modalPresentationStyle = .fullScreen
+        
+          self.present(faq, animated: true, completion: nil)
+    }
+    
+    @IBAction func backToLogin(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func register(_ sender: UIButton) {
         var pass = passwordTF.text
         var confirmPass = confirmPasswordTF.text

@@ -26,6 +26,12 @@
 		B99FA3142505D2E600A59C59 /* PrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99FA3122505D2E600A59C59 /* PrivacyViewController.swift */; };
 		B99FA3152505D2E600A59C59 /* PrivacyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B99FA3132505D2E600A59C59 /* PrivacyViewController.xib */; };
 		B99FA3172505E07100A59C59 /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99FA3162505E07100A59C59 /* RegisterModel.swift */; };
+		B99FA31B2505E65D00A59C59 /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99FA3192505E65D00A59C59 /* FAQViewController.swift */; };
+		B99FA31C2505E65D00A59C59 /* FAQViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B99FA31A2505E65D00A59C59 /* FAQViewController.xib */; };
+		B99FA32025060A0B00A59C59 /* MyEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99FA31E25060A0B00A59C59 /* MyEventViewController.swift */; };
+		B99FA32125060A0B00A59C59 /* MyEventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B99FA31F25060A0B00A59C59 /* MyEventViewController.xib */; };
+		B99FA32625060C0B00A59C59 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99FA32525060C0B00A59C59 /* EventModel.swift */; };
+		B9B84763250638E200229F5E /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B84762250638E200229F5E /* EventTableViewCell.swift */; };
 		B9D0534D2501E06B00F1AC03 /* DigilearnParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D0534C2501E06B00F1AC03 /* DigilearnParams.swift */; };
 		B9D053512501FF0500F1AC03 /* ForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D0534F2501FF0500F1AC03 /* ForgetPasswordViewController.swift */; };
 		B9D053522501FF0500F1AC03 /* ForgetPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9D053502501FF0500F1AC03 /* ForgetPasswordViewController.xib */; };
@@ -84,6 +90,12 @@
 		B99FA3122505D2E600A59C59 /* PrivacyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyViewController.swift; sourceTree = "<group>"; };
 		B99FA3132505D2E600A59C59 /* PrivacyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrivacyViewController.xib; sourceTree = "<group>"; };
 		B99FA3162505E07100A59C59 /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
+		B99FA3192505E65D00A59C59 /* FAQViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
+		B99FA31A2505E65D00A59C59 /* FAQViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FAQViewController.xib; sourceTree = "<group>"; };
+		B99FA31E25060A0B00A59C59 /* MyEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventViewController.swift; sourceTree = "<group>"; };
+		B99FA31F25060A0B00A59C59 /* MyEventViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyEventViewController.xib; sourceTree = "<group>"; };
+		B99FA32525060C0B00A59C59 /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
+		B9B84762250638E200229F5E /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 		B9D0534C2501E06B00F1AC03 /* DigilearnParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigilearnParams.swift; sourceTree = "<group>"; };
 		B9D0534F2501FF0500F1AC03 /* ForgetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewController.swift; sourceTree = "<group>"; };
 		B9D053502501FF0500F1AC03 /* ForgetPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgetPasswordViewController.xib; sourceTree = "<group>"; };
@@ -152,8 +164,6 @@
 			isa = PBXGroup;
 			children = (
 				B92A7280250087470010D52D /* LoginModel.swift */,
-				B9D053532502185600F1AC03 /* ForgetPasswordModel.swift */,
-				B99FA3162505E07100A59C59 /* RegisterModel.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -183,6 +193,8 @@
 		B934AF4324FF4B82000FCEB3 /* Digilearn_001 */ = {
 			isa = PBXGroup;
 			children = (
+				B99FA31D250609E300A59C59 /* events */,
+				B99FA3182505E64300A59C59 /* faq */,
 				B99FA30D2505CC5A00A59C59 /* splash */,
 				B9D053552502216D00F1AC03 /* register */,
 				B9D0534E2501FEB200F1AC03 /* forget */,
@@ -237,6 +249,50 @@
 			path = splash;
 			sourceTree = "<group>";
 		};
+		B99FA3182505E64300A59C59 /* faq */ = {
+			isa = PBXGroup;
+			children = (
+				B99FA3192505E65D00A59C59 /* FAQViewController.swift */,
+				B99FA31A2505E65D00A59C59 /* FAQViewController.xib */,
+			);
+			path = faq;
+			sourceTree = "<group>";
+		};
+		B99FA31D250609E300A59C59 /* events */ = {
+			isa = PBXGroup;
+			children = (
+				B99FA32425060BFE00A59C59 /* model */,
+				B99FA31E25060A0B00A59C59 /* MyEventViewController.swift */,
+				B99FA31F25060A0B00A59C59 /* MyEventViewController.xib */,
+				B9B84762250638E200229F5E /* EventTableViewCell.swift */,
+			);
+			path = events;
+			sourceTree = "<group>";
+		};
+		B99FA32225060BEC00A59C59 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				B9D053532502185600F1AC03 /* ForgetPasswordModel.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		B99FA32325060BF500A59C59 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				B99FA3162505E07100A59C59 /* RegisterModel.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		B99FA32425060BFE00A59C59 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				B99FA32525060C0B00A59C59 /* EventModel.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 		B9D0534B2501E04100F1AC03 /* utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -250,6 +306,7 @@
 		B9D0534E2501FEB200F1AC03 /* forget */ = {
 			isa = PBXGroup;
 			children = (
+				B99FA32225060BEC00A59C59 /* model */,
 				B9D0534F2501FF0500F1AC03 /* ForgetPasswordViewController.swift */,
 				B9D053502501FF0500F1AC03 /* ForgetPasswordViewController.xib */,
 			);
@@ -259,6 +316,7 @@
 		B9D053552502216D00F1AC03 /* register */ = {
 			isa = PBXGroup;
 			children = (
+				B99FA32325060BF500A59C59 /* model */,
 				B9D053582502278F00F1AC03 /* RegisterViewController.swift */,
 				B9D053592502278F00F1AC03 /* RegisterViewController.xib */,
 				B99FA3122505D2E600A59C59 /* PrivacyViewController.swift */,
@@ -381,8 +439,10 @@
 				B934AF5424FF4B85000FCEB3 /* LaunchScreen.storyboard in Resources */,
 				B99FA3112505CC7400A59C59 /* SplashViewController.xib in Resources */,
 				B934AF5124FF4B85000FCEB3 /* Assets.xcassets in Resources */,
+				B99FA32125060A0B00A59C59 /* MyEventViewController.xib in Resources */,
 				B934AFC924FF8380000FCEB3 /* color.xcassets in Resources */,
 				B9D0535B2502278F00F1AC03 /* RegisterViewController.xib in Resources */,
+				B99FA31C2505E65D00A59C59 /* FAQViewController.xib in Resources */,
 				B99FA3152505D2E600A59C59 /* PrivacyViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -516,10 +576,14 @@
 				B9D0535A2502278F00F1AC03 /* RegisterViewController.swift in Sources */,
 				B99FA3142505D2E600A59C59 /* PrivacyViewController.swift in Sources */,
 				B9D0534D2501E06B00F1AC03 /* DigilearnParams.swift in Sources */,
+				B99FA32025060A0B00A59C59 /* MyEventViewController.swift in Sources */,
 				B934AF4F24FF4B82000FCEB3 /* Digilearn_001.xcdatamodeld in Sources */,
 				B934AF4524FF4B82000FCEB3 /* AppDelegate.swift in Sources */,
 				B99FA3102505CC7400A59C59 /* SplashViewController.swift in Sources */,
 				B92A7281250087470010D52D /* LoginModel.swift in Sources */,
+				B99FA32625060C0B00A59C59 /* EventModel.swift in Sources */,
+				B9B84763250638E200229F5E /* EventTableViewCell.swift in Sources */,
+				B99FA31B2505E65D00A59C59 /* FAQViewController.swift in Sources */,
 				B934AFE024FFA88D000FCEB3 /* LoginViewController.swift in Sources */,
 				B9D053512501FF0500F1AC03 /* ForgetPasswordViewController.swift in Sources */,
 				B99FA3172505E07100A59C59 /* RegisterModel.swift in Sources */,
@@ -692,6 +756,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LYF5M37FJ9;
 				INFOPLIST_FILE = Digilearn_001/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -710,6 +775,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LYF5M37FJ9;
 				INFOPLIST_FILE = Digilearn_001/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

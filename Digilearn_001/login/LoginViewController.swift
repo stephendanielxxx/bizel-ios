@@ -107,6 +107,12 @@ class LoginViewController: UIViewController {
                                 let loginModel = try decoder.decode(LoginModel.self, from:data)
                                 if(loginModel.code == "200"){
                                     self.saveStringPreference(value: (loginModel.user?[0].id)!, key: DigilearnsKeys.USER_ID)
+                                    
+                                    let event = MyEventViewController()
+
+                                    event.modalPresentationStyle = .fullScreen
+                                    
+                                    self.present(event, animated: true, completion: nil)
                                 }else{
                                     let alert = UIAlertController(title: "Login Failed", message: "\(loginModel.message)", preferredStyle: .alert)
                                     alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
