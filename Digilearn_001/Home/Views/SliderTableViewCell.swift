@@ -65,15 +65,3 @@ extension SliderTableViewCell: UICollectionViewDataSource {
     }
 }
 
-extension UITableViewCell {
-    func saveStringPreference(value: String, key: String){
-        let preferences = UserDefaults.standard
-        preferences.set(value, forKey: key)
-        preferences.synchronize()
-    }
-    
-    func readStringPreference(key: String) -> String {
-        let preferences = UserDefaults.standard
-        return preferences.string(forKey: key) ?? ""
-    }
-}

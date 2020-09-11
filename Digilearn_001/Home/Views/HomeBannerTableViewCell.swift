@@ -15,6 +15,8 @@ class HomeBannerTableViewCell: UITableViewCell {
 
     @IBOutlet weak var slideShow: ImageSlideshow!
     @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var nameLabel: UILabel!
+    
     let URL = "\(DigilearnParams.ApiUrl)/home/get_home_banner"
     var bannerModel: BannerModel!
     
@@ -29,6 +31,24 @@ class HomeBannerTableViewCell: UITableViewCell {
         slideShow.pageIndicatorPosition = PageIndicatorPosition(horizontal: .center, vertical: .under)
 
         loadData()
+        
+        var greeting = ""
+        
+        let hour = Calendar.current.component(.hour, from: Date())
+        let hourInt = Int(hour)
+        
+         if hourInt >= 12 && hourInt <= 16 {
+               greeting = "Good Afternoon"
+           }
+           else if hourInt >= 5 && hourInt <= 12 {
+               greeting = "Good Morning"
+           }
+           else if hourInt >= 16 && hourInt <= 5 {
+               greeting = "Good Evening"
+           }
+        
+        let userNickName = readStringPreference(key: DigilearnsKeys.USER_NICK)
+        nameLabel.text = "\(greeting) \(userNickName)"
     
     }
     
@@ -75,4 +95,17 @@ class HomeBannerTableViewCell: UITableViewCell {
     }
     
 
+}
+
+extension UITableViewCell {
+    func saveStringPreference(value: String, key: String){
+        let preferences = UserDefaults.standard
+        preferences.set(value, forKey: key)
+        preferences.synchronize()
+    }
+    
+    func readStringPreference(key: String) -> String {
+        let preferences = UserDefaults.standard
+        return preferences.string(forKey: key) ?? ""
+    }
 }
