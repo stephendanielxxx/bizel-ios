@@ -42,17 +42,6 @@ extension HomeViewController: UITableViewDataSource {
         1
     }
     
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        debugPrint(indexPath.row)
-//        if(indexPath.row == 0){
-//            return 250
-//        }else if(indexPath.row == 1){
-//            return 10
-//        }else{
-//            return 100
-//        }
-//    }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
 //            let cell: SliderTableViewCell = tableView.dequeueReusableCell(withIdentifier: "SliderIdentifier") as! SliderTableViewCell
@@ -65,6 +54,8 @@ extension HomeViewController: UITableViewDataSource {
             let cell: MenuTableViewCell = tableView.dequeueReusableCell(withIdentifier: "MenuIdentifier") as! MenuTableViewCell
             
             cell.eventIcon.addTarget(self, action: #selector(HomeViewController.openEvent(_:)), for: .touchUpInside)
+            
+             cell.groupIcon.addTarget(self, action: #selector(HomeViewController.openGroup), for: .touchUpInside)
             
             return cell
         } else {
@@ -79,6 +70,14 @@ extension HomeViewController: UITableViewDataSource {
         event.modalPresentationStyle = .fullScreen
     
         self.present(event, animated: true, completion: nil)
+    }
+    
+    @objc func openGroup(_ sender: UIButton?) {
+        let group = MyGroupViewController()
+
+        group.modalPresentationStyle = .fullScreen
+    
+        self.present(group, animated: true, completion: nil)
     }
     
 }
