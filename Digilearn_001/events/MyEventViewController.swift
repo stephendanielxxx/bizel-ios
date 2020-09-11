@@ -16,6 +16,7 @@ class MyEventViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     var eventModel: EventModel?
+    var eventId:String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,9 +55,9 @@ class MyEventViewController: UIViewController {
                             
                             self.tableView.reloadData()
                             
-                            }else{
+                        }else{
 
-                            }
+                        }
                        }catch{
                             print(error.localizedDescription)
                         }
@@ -82,7 +83,8 @@ extension MyEventViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "myEventIdentifier") as! MyEventTableViewCell
         
-        let event: Onsite = (eventModel?.onsite[indexPath.row])!
+        let event: OnsiteList = (eventModel?.onsite[indexPath.row])!
+        
         cell.titleLabel.text = event.title
         cell.eventImage.pin_updateWithProgress = true
         cell.eventImage.layer.cornerRadius = 15
@@ -94,9 +96,30 @@ extension MyEventViewController: UITableViewDelegate, UITableViewDataSource{
         let url = Foundation.URL(string: "https://digicourse.id/digilearn/admin-master/assets.admin_master/event/image/\(event.image)")!
 //
         cell.eventImage.pin_setImage(from: url)
-    
+        
+        cell.registerButton.tag = indexPath.row
+        
+        cell.registerButton.addTarget(self, action: #selector(MyEventViewController.openDetail(_:)), for: .touchUpInside)
+        
+        if(indexPath.row == 0){
+            cell.newLabel.isHidden = false
+        }else{
+            cell.newLabel.isHidden = true
+        }
+        
         return cell
     }
 
+    @objc func openDetail(_ sender: UIButton?) {
+        let eventDetail = EventDetailViewController()
+
+        eventDetail.modalPresentationStyle = .fullScreen
+        
+        let event: OnsiteList = (eventModel?.onsite[sender!.tag])!
+        
+        eventDetail.eventId = event.id
+        
+        self.present(eventDetail, animated: true, completion: nil)
+    }
 
 }
