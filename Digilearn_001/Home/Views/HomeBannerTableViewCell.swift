@@ -37,14 +37,14 @@ class HomeBannerTableViewCell: UITableViewCell {
         let hour = Calendar.current.component(.hour, from: Date())
         let hourInt = Int(hour)
         
-         if hourInt >= 12 && hourInt <= 16 {
-               greeting = "Good Afternoon"
-           }
-           else if hourInt >= 5 && hourInt <= 12 {
+         if hourInt >= 0 && hourInt < 12 {
                greeting = "Good Morning"
-           }
-           else if hourInt >= 16 && hourInt <= 5 {
+           }else if hourInt >= 12 && hourInt < 16 {
+               greeting = "Good Afternoon"
+           }else if hourInt >= 16 && hourInt < 21 {
                greeting = "Good Evening"
+           }else if hourInt >= 21 && hourInt < 24 {
+               greeting = "Good Night"
            }
         
         let userNickName = readStringPreference(key: DigilearnsKeys.USER_NICK)

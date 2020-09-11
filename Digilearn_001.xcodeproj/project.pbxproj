@@ -23,9 +23,7 @@
 		B934AFE124FFA88D000FCEB3 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B934AFDF24FFA88D000FCEB3 /* LoginViewController.xib */; };
 		B94585DB2509C6DA00330DAC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94585D12509C6D900330DAC /* HomeViewController.swift */; };
 		B94585DC2509C6DA00330DAC /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B94585D32509C6D900330DAC /* MenuTableViewCell.xib */; };
-		B94585DD2509C6DA00330DAC /* SliderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94585D42509C6D900330DAC /* SliderTableViewCell.swift */; };
 		B94585DE2509C6DA00330DAC /* EventTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B94585D52509C6D900330DAC /* EventTableViewCell.xib */; };
-		B94585DF2509C6DA00330DAC /* SliderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B94585D62509C6D900330DAC /* SliderTableViewCell.xib */; };
 		B94585E02509C6DA00330DAC /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94585D72509C6D900330DAC /* EventTableViewCell.swift */; };
 		B94585E12509C6DA00330DAC /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94585D82509C6D900330DAC /* MenuTableViewCell.swift */; };
 		B94585E22509C6DA00330DAC /* BannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94585D92509C6D900330DAC /* BannerCollectionViewCell.swift */; };
@@ -106,9 +104,7 @@
 		B934AFDF24FFA88D000FCEB3 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		B94585D12509C6D900330DAC /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B94585D32509C6D900330DAC /* MenuTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
-		B94585D42509C6D900330DAC /* SliderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderTableViewCell.swift; sourceTree = "<group>"; };
 		B94585D52509C6D900330DAC /* EventTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventTableViewCell.xib; sourceTree = "<group>"; };
-		B94585D62509C6D900330DAC /* SliderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SliderTableViewCell.xib; sourceTree = "<group>"; };
 		B94585D72509C6D900330DAC /* EventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 		B94585D82509C6D900330DAC /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		B94585D92509C6D900330DAC /* BannerCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -306,8 +302,6 @@
 				B94585D32509C6D900330DAC /* MenuTableViewCell.xib */,
 				B94585D72509C6D900330DAC /* EventTableViewCell.swift */,
 				B94585D52509C6D900330DAC /* EventTableViewCell.xib */,
-				B94585D42509C6D900330DAC /* SliderTableViewCell.swift */,
-				B94585D62509C6D900330DAC /* SliderTableViewCell.xib */,
 				B94585D92509C6D900330DAC /* BannerCollectionViewCell.swift */,
 				B94585DA2509C6D900330DAC /* BannerCollectionViewCell.xib */,
 				B98C4499250B452B00363F8C /* HomeBannerTableViewCell.swift */,
@@ -533,7 +527,6 @@
 				B99FA32125060A0B00A59C59 /* MyEventViewController.xib in Resources */,
 				B98C449C250B452B00363F8C /* HomeBannerTableViewCell.xib in Resources */,
 				B934AFC924FF8380000FCEB3 /* color.xcassets in Resources */,
-				B94585DF2509C6DA00330DAC /* SliderTableViewCell.xib in Resources */,
 				B9D0535B2502278F00F1AC03 /* RegisterViewController.xib in Resources */,
 				B94585EF2509FDDF00330DAC /* EventDetailViewController.xib in Resources */,
 				B94585DC2509C6DA00330DAC /* MenuTableViewCell.xib in Resources */,
@@ -674,7 +667,6 @@
 				B934AF4924FF4B82000FCEB3 /* ViewController.swift in Sources */,
 				B9D0535A2502278F00F1AC03 /* RegisterViewController.swift in Sources */,
 				B99FA3142505D2E600A59C59 /* PrivacyViewController.swift in Sources */,
-				B94585DD2509C6DA00330DAC /* SliderTableViewCell.swift in Sources */,
 				B9D0534D2501E06B00F1AC03 /* DigilearnParams.swift in Sources */,
 				B94585E22509C6DA00330DAC /* BannerCollectionViewCell.swift in Sources */,
 				B98C449F250B4DCA00363F8C /* BannerModel.swift in Sources */,

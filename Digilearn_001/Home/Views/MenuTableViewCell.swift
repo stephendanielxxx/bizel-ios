@@ -10,6 +10,12 @@ import UIKit
 
 class MenuTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var groupIcon: UIButton!
+    @IBOutlet weak var announcementicon: UIButton!
+    @IBOutlet weak var eventIcon: UIButton!
+    @IBOutlet weak var achivementIcon: UIButton!
+    @IBOutlet weak var faqIcon: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
