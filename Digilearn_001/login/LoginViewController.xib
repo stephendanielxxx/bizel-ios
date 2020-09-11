@@ -26,7 +26,7 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="826"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ihY-lA-des">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_image" translatesAutoresizingMaskIntoConstraints="NO" id="ihY-lA-des">
                     <rect key="frame" x="20" y="60" width="374" height="245"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="245" id="Oww-ab-Z2b"/>
@@ -160,6 +160,7 @@
     </objects>
     <resources>
         <image name="eye.fill" catalog="system" width="128" height="78"/>
+        <image name="login_image" width="289" height="222.5"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <namedColor name="red_1">
             <color red="0.60399997234344482" green="0.27099999785423279" blue="0.23499999940395355" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

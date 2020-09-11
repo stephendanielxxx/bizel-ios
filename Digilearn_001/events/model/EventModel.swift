@@ -9,17 +9,17 @@
 import Foundation
 
 struct EventModel: Decodable {
-    let onsite: [Onsite]
+    let onsite: [OnsiteList]
 }
 
 // MARK: - Onsite
-struct Onsite: Decodable {
+struct OnsiteList: Decodable {
     let id, title, image, date: String
-    let place: String
-    let createdAt: String?
+    let place: String?
+    let created_at: String?
 
     enum CodingKeys: String, CodingKey {
         case id, title, image, date, place
-        case createdAt
+        case created_at
     }
 }
