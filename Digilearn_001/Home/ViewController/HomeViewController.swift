@@ -20,7 +20,8 @@ class HomeViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        tableView.register(UINib(nibName: "SliderTableViewCell", bundle: nil), forCellReuseIdentifier: "SliderIdentifier")
+//        tableView.register(UINib(nibName: "SliderTableViewCell", bundle: nil), forCellReuseIdentifier: "SliderIdentifier")
+         tableView.register(UINib(nibName: "HomeBannerTableViewCell", bundle: nil), forCellReuseIdentifier: "homeBannerIdentifier")
         tableView.register(UINib(nibName: "MenuTableViewCell", bundle: nil), forCellReuseIdentifier: "MenuIdentifier")
         tableView.register(UINib(nibName: "EventTableViewCell", bundle: nil), forCellReuseIdentifier: "EventIdentifier")
     }
@@ -38,9 +39,20 @@ extension HomeViewController: UITableViewDataSource {
         1
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if(indexPath.row == 0){
+            return 220
+        }else{
+            return 220
+        }
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
-            let cell: SliderTableViewCell = tableView.dequeueReusableCell(withIdentifier: "SliderIdentifier") as! SliderTableViewCell
+//            let cell: SliderTableViewCell = tableView.dequeueReusableCell(withIdentifier: "SliderIdentifier") as! SliderTableViewCell
+//
+//            return cell
+            let cell: HomeBannerTableViewCell = tableView.dequeueReusableCell(withIdentifier: "homeBannerIdentifier") as! HomeBannerTableViewCell
             
             return cell
         } else if indexPath.section == 1 {

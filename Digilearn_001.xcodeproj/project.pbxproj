@@ -38,6 +38,9 @@
 		B94585F1250A0D7D00330DAC /* EventDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94585F0250A0D7D00330DAC /* EventDetailModel.swift */; };
 		B94585F3250A2FFE00330DAC /* RegisterEventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94585F2250A2FFE00330DAC /* RegisterEventModel.swift */; };
 		B98C4490250B1AD900363F8C /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98C448F250B1AD900363F8C /* HomeTabBarController.swift */; };
+		B98C449B250B452B00363F8C /* HomeBannerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98C4499250B452B00363F8C /* HomeBannerTableViewCell.swift */; };
+		B98C449C250B452B00363F8C /* HomeBannerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B98C449A250B452B00363F8C /* HomeBannerTableViewCell.xib */; };
+		B98C449F250B4DCA00363F8C /* BannerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98C449E250B4DCA00363F8C /* BannerModel.swift */; };
 		B99FA3102505CC7400A59C59 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99FA30E2505CC7400A59C59 /* SplashViewController.swift */; };
 		B99FA3112505CC7400A59C59 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B99FA30F2505CC7400A59C59 /* SplashViewController.xib */; };
 		B99FA3142505D2E600A59C59 /* PrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99FA3122505D2E600A59C59 /* PrivacyViewController.swift */; };
@@ -118,6 +121,9 @@
 		B94585F0250A0D7D00330DAC /* EventDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailModel.swift; sourceTree = "<group>"; };
 		B94585F2250A2FFE00330DAC /* RegisterEventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEventModel.swift; sourceTree = "<group>"; };
 		B98C448F250B1AD900363F8C /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
+		B98C4499250B452B00363F8C /* HomeBannerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBannerTableViewCell.swift; sourceTree = "<group>"; };
+		B98C449A250B452B00363F8C /* HomeBannerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeBannerTableViewCell.xib; sourceTree = "<group>"; };
+		B98C449E250B4DCA00363F8C /* BannerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerModel.swift; sourceTree = "<group>"; };
 		B99FA30E2505CC7400A59C59 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		B99FA30F2505CC7400A59C59 /* SplashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
 		B99FA3122505D2E600A59C59 /* PrivacyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyViewController.swift; sourceTree = "<group>"; };
@@ -277,6 +283,7 @@
 		B94585CF2509C6D900330DAC /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				B98C449D250B4DC100363F8C /* model */,
 				B94585D02509C6D900330DAC /* ViewController */,
 				B94585D22509C6D900330DAC /* Views */,
 			);
@@ -303,8 +310,18 @@
 				B94585D62509C6D900330DAC /* SliderTableViewCell.xib */,
 				B94585D92509C6D900330DAC /* BannerCollectionViewCell.swift */,
 				B94585DA2509C6D900330DAC /* BannerCollectionViewCell.xib */,
+				B98C4499250B452B00363F8C /* HomeBannerTableViewCell.swift */,
+				B98C449A250B452B00363F8C /* HomeBannerTableViewCell.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		B98C449D250B4DC100363F8C /* model */ = {
+			isa = PBXGroup;
+			children = (
+				B98C449E250B4DCA00363F8C /* BannerModel.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 		B99FA30D2505CC5A00A59C59 /* splash */ = {
@@ -514,6 +531,7 @@
 				B99FA3112505CC7400A59C59 /* SplashViewController.xib in Resources */,
 				B934AF5124FF4B85000FCEB3 /* Assets.xcassets in Resources */,
 				B99FA32125060A0B00A59C59 /* MyEventViewController.xib in Resources */,
+				B98C449C250B452B00363F8C /* HomeBannerTableViewCell.xib in Resources */,
 				B934AFC924FF8380000FCEB3 /* color.xcassets in Resources */,
 				B94585DF2509C6DA00330DAC /* SliderTableViewCell.xib in Resources */,
 				B9D0535B2502278F00F1AC03 /* RegisterViewController.xib in Resources */,
@@ -659,8 +677,10 @@
 				B94585DD2509C6DA00330DAC /* SliderTableViewCell.swift in Sources */,
 				B9D0534D2501E06B00F1AC03 /* DigilearnParams.swift in Sources */,
 				B94585E22509C6DA00330DAC /* BannerCollectionViewCell.swift in Sources */,
+				B98C449F250B4DCA00363F8C /* BannerModel.swift in Sources */,
 				B99FA32025060A0B00A59C59 /* MyEventViewController.swift in Sources */,
 				B94585EA2509D1D800330DAC /* MyEventTableViewCell.swift in Sources */,
+				B98C449B250B452B00363F8C /* HomeBannerTableViewCell.swift in Sources */,
 				B934AF4F24FF4B82000FCEB3 /* Digilearn_001.xcdatamodeld in Sources */,
 				B934AF4524FF4B82000FCEB3 /* AppDelegate.swift in Sources */,
 				B94585E12509C6DA00330DAC /* MenuTableViewCell.swift in Sources */,

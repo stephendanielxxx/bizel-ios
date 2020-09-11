@@ -25,7 +25,7 @@ class HomeTabBarController: UITabBarController {
         let libraryItem = UITabBarItem(title: "Library", image: UIImage(named: "ic_library"), tag: 2)
         let profileItem = UITabBarItem(title: "Profile", image: UIImage(named: "ic_profile"), tag: 3)
         
-        bottomNavBar.items = [homeItem, taskItem]
+        bottomNavBar.items = [homeItem, taskItem, libraryItem, profileItem]
         
         bottomNavBar.selectedItem = homeItem
         
@@ -33,11 +33,15 @@ class HomeTabBarController: UITabBarController {
         
         let homeViewController = HomeViewController()
         let eventViewController = MyEventViewController()
+        let test1 = MyEventViewController()
+        let test2 = MyEventViewController()
         
         homeViewController.tabBarItem = homeItem
         eventViewController.tabBarItem = taskItem
+        test1.tabBarItem = libraryItem
+        test2.tabBarItem = profileItem
         
-        viewControllers = [homeViewController, eventViewController]
+        viewControllers = [homeViewController, eventViewController, test1, test2]
     }
 
 }

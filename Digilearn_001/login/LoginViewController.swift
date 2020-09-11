@@ -107,6 +107,7 @@ class LoginViewController: UIViewController {
                                 let loginModel = try decoder.decode(LoginModel.self, from:data)
                                 if(loginModel.code == "200"){
                                     self.saveStringPreference(value: (loginModel.user?[0].id)!, key: DigilearnsKeys.USER_ID)
+                                    self.saveStringPreference(value: (loginModel.user?[0].nickname)!, key: DigilearnsKeys.USER_NICK)
                                     
                                     let event = MyEventViewController()
 
