@@ -14,6 +14,7 @@ target 'Digilearn_001' do
   pod 'SimpleCheckbox'
   pod 'PINRemoteImage'
   pod 'MaterialComponents/Cards'
+  pod 'MaterialComponents/BottomNavigation'
   # Pods for Digilearn_001
 
   target 'Digilearn_001Tests' do

@@ -37,6 +37,7 @@
 		B94585EF2509FDDF00330DAC /* EventDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B94585ED2509FDDF00330DAC /* EventDetailViewController.xib */; };
 		B94585F1250A0D7D00330DAC /* EventDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94585F0250A0D7D00330DAC /* EventDetailModel.swift */; };
 		B94585F3250A2FFE00330DAC /* RegisterEventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94585F2250A2FFE00330DAC /* RegisterEventModel.swift */; };
+		B98C4490250B1AD900363F8C /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98C448F250B1AD900363F8C /* HomeTabBarController.swift */; };
 		B99FA3102505CC7400A59C59 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99FA30E2505CC7400A59C59 /* SplashViewController.swift */; };
 		B99FA3112505CC7400A59C59 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B99FA30F2505CC7400A59C59 /* SplashViewController.xib */; };
 		B99FA3142505D2E600A59C59 /* PrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99FA3122505D2E600A59C59 /* PrivacyViewController.swift */; };
@@ -116,6 +117,7 @@
 		B94585ED2509FDDF00330DAC /* EventDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventDetailViewController.xib; sourceTree = "<group>"; };
 		B94585F0250A0D7D00330DAC /* EventDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailModel.swift; sourceTree = "<group>"; };
 		B94585F2250A2FFE00330DAC /* RegisterEventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEventModel.swift; sourceTree = "<group>"; };
+		B98C448F250B1AD900363F8C /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
 		B99FA30E2505CC7400A59C59 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		B99FA30F2505CC7400A59C59 /* SplashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
 		B99FA3122505D2E600A59C59 /* PrivacyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyViewController.swift; sourceTree = "<group>"; };
@@ -267,6 +269,7 @@
 				B934AFDE24FFA88D000FCEB3 /* LoginViewController.swift */,
 				B934AFDF24FFA88D000FCEB3 /* LoginViewController.xib */,
 				B92A727F250087220010D52D /* model */,
+				B98C448F250B1AD900363F8C /* HomeTabBarController.swift */,
 			);
 			path = login;
 			sourceTree = "<group>";
@@ -649,6 +652,7 @@
 			files = (
 				B9D0535D2502369500F1AC03 /* BottomBorderTF.swift in Sources */,
 				B94585EE2509FDDF00330DAC /* EventDetailViewController.swift in Sources */,
+				B98C4490250B1AD900363F8C /* HomeTabBarController.swift in Sources */,
 				B934AF4924FF4B82000FCEB3 /* ViewController.swift in Sources */,
 				B9D0535A2502278F00F1AC03 /* RegisterViewController.swift in Sources */,
 				B99FA3142505D2E600A59C59 /* PrivacyViewController.swift in Sources */,

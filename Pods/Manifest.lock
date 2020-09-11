@@ -5,6 +5,17 @@ PODS:
   - FlagPhoneNumber/libPhoneNumberiOS (0.8.0)
   - MaterialComponents/AnimationTiming (115.0.0)
   - MaterialComponents/Availability (115.0.0)
+  - MaterialComponents/BottomNavigation (115.0.0):
+    - MaterialComponents/Availability
+    - MaterialComponents/Elevation
+    - MaterialComponents/Ink
+    - MaterialComponents/Palettes
+    - MaterialComponents/private/Math
+    - MaterialComponents/Ripple
+    - MaterialComponents/ShadowElevations
+    - MaterialComponents/ShadowLayer
+    - MaterialComponents/Typography
+    - MDFInternationalization
   - MaterialComponents/Cards (115.0.0):
     - MaterialComponents/Elevation
     - MaterialComponents/Ink
@@ -21,6 +32,8 @@ PODS:
     - MaterialComponents/Availability
     - MaterialComponents/private/Color
     - MaterialComponents/private/Math
+  - MaterialComponents/Palettes (115.0.0)
+  - MaterialComponents/private/Application (115.0.0)
   - MaterialComponents/private/Color (115.0.0):
     - MaterialComponents/Availability
   - MaterialComponents/private/Icons/Base (115.0.0)
@@ -39,6 +52,12 @@ PODS:
     - MaterialComponents/private/Color
     - MaterialComponents/private/Math
     - MaterialComponents/ShadowLayer
+  - MaterialComponents/Typography (115.0.0):
+    - MaterialComponents/private/Application
+    - MaterialComponents/private/Math
+    - MDFTextAccessibility
+  - MDFInternationalization (2.0.0)
+  - MDFTextAccessibility (2.0.0)
   - PINCache (3.0.1-beta.8):
     - PINCache/Arc-exception-safe (= 3.0.1-beta.8)
     - PINCache/Core (= 3.0.1-beta.8)
@@ -66,6 +85,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 5.2)
   - FlagPhoneNumber
+  - MaterialComponents/BottomNavigation
   - MaterialComponents/Cards
   - PINRemoteImage
   - Reqres
@@ -78,6 +98,8 @@ SPEC REPOS:
     - Alamofire
     - FlagPhoneNumber
     - MaterialComponents
+    - MDFInternationalization
+    - MDFTextAccessibility
     - PINCache
     - PINOperation
     - PINRemoteImage
@@ -91,6 +113,8 @@ SPEC CHECKSUMS:
   Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
   FlagPhoneNumber: 3712455b95f66cb0f2016fef7d9e34cddf8c7f9a
   MaterialComponents: 0048689c8afeaae0b83f2ae26057fa1433c4e02f
+  MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
+  MDFTextAccessibility: 85c09a1bd9c321f494348e632a25063bcda35a53
   PINCache: 534fd41d358d828dfdf227a0d327f3673a65e20b
   PINOperation: 24b774353ca248fcf87d67b2d61eef42087c125a
   PINRemoteImage: e2b89e19fb6e77ffc099f9d9f3b3fe1745e3f9f9
@@ -100,6 +124,6 @@ SPEC CHECKSUMS:
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   SimpleCheckbox: ddcd433ab8c3a8f57300bebda13151a8f302c7f9
 
-PODFILE CHECKSUM: b956703d20e71628675efbfddeb995acff83c880
+PODFILE CHECKSUM: 837bd5fecad4b00f2ff4da954f1744cc3827aa8b
 
 COCOAPODS: 1.9.3

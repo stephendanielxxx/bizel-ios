@@ -23,12 +23,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let userId = preferences.string(forKey: DigilearnsKeys.USER_ID)
         if(userId != nil){
 //            window?.rootViewController = HomeViewController()
-            window?.rootViewController = LoginViewController()
+//            window?.rootViewController = LoginViewController()
+            window?.rootViewController = UINavigationController(rootViewController: HomeTabBarController())
+
             window?.makeKeyAndVisible()
         }else{
             window?.rootViewController = LoginViewController()
             window?.makeKeyAndVisible()
         }
+        
+        UITabBar.appearance().tintColor = UIColor(named: "color_ B63532")
+
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
