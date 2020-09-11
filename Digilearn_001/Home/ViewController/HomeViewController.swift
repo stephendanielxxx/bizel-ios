@@ -23,7 +23,7 @@ class HomeViewController: UIViewController {
 //        tableView.register(UINib(nibName: "SliderTableViewCell", bundle: nil), forCellReuseIdentifier: "SliderIdentifier")
          tableView.register(UINib(nibName: "HomeBannerTableViewCell", bundle: nil), forCellReuseIdentifier: "homeBannerIdentifier")
         tableView.register(UINib(nibName: "MenuTableViewCell", bundle: nil), forCellReuseIdentifier: "MenuIdentifier")
-        tableView.register(UINib(nibName: "EventTableViewCell", bundle: nil), forCellReuseIdentifier: "EventIdentifier")
+        tableView.register(UINib(nibName: "HomeEventTableViewCell", bundle: nil), forCellReuseIdentifier: "homeEventIdentifier")
         
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 180
@@ -68,7 +68,7 @@ extension HomeViewController: UITableViewDataSource {
             
             return cell
         } else {
-            let cell: EventTableViewCell = tableView.dequeueReusableCell(withIdentifier: "EventIdentifier") as! EventTableViewCell
+            let cell: HomeEventTableViewCell = tableView.dequeueReusableCell(withIdentifier: "homeEventIdentifier") as! HomeEventTableViewCell
             return cell
         }
     }

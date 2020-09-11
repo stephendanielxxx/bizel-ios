@@ -39,6 +39,8 @@
 		B98C449B250B452B00363F8C /* HomeBannerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98C4499250B452B00363F8C /* HomeBannerTableViewCell.swift */; };
 		B98C449C250B452B00363F8C /* HomeBannerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B98C449A250B452B00363F8C /* HomeBannerTableViewCell.xib */; };
 		B98C449F250B4DCA00363F8C /* BannerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98C449E250B4DCA00363F8C /* BannerModel.swift */; };
+		B98C44A2250B689600363F8C /* HomeEventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98C44A0250B689600363F8C /* HomeEventTableViewCell.swift */; };
+		B98C44A3250B689600363F8C /* HomeEventTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B98C44A1250B689600363F8C /* HomeEventTableViewCell.xib */; };
 		B99FA3102505CC7400A59C59 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99FA30E2505CC7400A59C59 /* SplashViewController.swift */; };
 		B99FA3112505CC7400A59C59 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B99FA30F2505CC7400A59C59 /* SplashViewController.xib */; };
 		B99FA3142505D2E600A59C59 /* PrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99FA3122505D2E600A59C59 /* PrivacyViewController.swift */; };
@@ -120,6 +122,8 @@
 		B98C4499250B452B00363F8C /* HomeBannerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBannerTableViewCell.swift; sourceTree = "<group>"; };
 		B98C449A250B452B00363F8C /* HomeBannerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeBannerTableViewCell.xib; sourceTree = "<group>"; };
 		B98C449E250B4DCA00363F8C /* BannerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerModel.swift; sourceTree = "<group>"; };
+		B98C44A0250B689600363F8C /* HomeEventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEventTableViewCell.swift; sourceTree = "<group>"; };
+		B98C44A1250B689600363F8C /* HomeEventTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeEventTableViewCell.xib; sourceTree = "<group>"; };
 		B99FA30E2505CC7400A59C59 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		B99FA30F2505CC7400A59C59 /* SplashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
 		B99FA3122505D2E600A59C59 /* PrivacyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyViewController.swift; sourceTree = "<group>"; };
@@ -306,6 +310,8 @@
 				B94585DA2509C6D900330DAC /* BannerCollectionViewCell.xib */,
 				B98C4499250B452B00363F8C /* HomeBannerTableViewCell.swift */,
 				B98C449A250B452B00363F8C /* HomeBannerTableViewCell.xib */,
+				B98C44A0250B689600363F8C /* HomeEventTableViewCell.swift */,
+				B98C44A1250B689600363F8C /* HomeEventTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -526,6 +532,7 @@
 				B934AF5124FF4B85000FCEB3 /* Assets.xcassets in Resources */,
 				B99FA32125060A0B00A59C59 /* MyEventViewController.xib in Resources */,
 				B98C449C250B452B00363F8C /* HomeBannerTableViewCell.xib in Resources */,
+				B98C44A3250B689600363F8C /* HomeEventTableViewCell.xib in Resources */,
 				B934AFC924FF8380000FCEB3 /* color.xcassets in Resources */,
 				B9D0535B2502278F00F1AC03 /* RegisterViewController.xib in Resources */,
 				B94585EF2509FDDF00330DAC /* EventDetailViewController.xib in Resources */,
@@ -680,6 +687,7 @@
 				B92A7281250087470010D52D /* LoginModel.swift in Sources */,
 				B99FA32625060C0B00A59C59 /* EventModel.swift in Sources */,
 				B94585E02509C6DA00330DAC /* EventTableViewCell.swift in Sources */,
+				B98C44A2250B689600363F8C /* HomeEventTableViewCell.swift in Sources */,
 				B99FA31B2505E65D00A59C59 /* FAQViewController.swift in Sources */,
 				B934AFE024FFA88D000FCEB3 /* LoginViewController.swift in Sources */,
 				B9D053512501FF0500F1AC03 /* ForgetPasswordViewController.swift in Sources */,
