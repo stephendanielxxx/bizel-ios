@@ -9,6 +9,16 @@
 /* Begin PBXBuildFile section */
 		2D14958080302DD66FC054E3 /* Pods_Digilearn_001.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE24FEA383FD1DA25B5B206F /* Pods_Digilearn_001.framework */; };
 		64FDDDC222BC3AAEA3AD9E90 /* Pods_Digilearn_001Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C13A768FA10A24EE2EC74FE9 /* Pods_Digilearn_001Tests.framework */; };
+		6ADC3B102509FA6500E88D7C /* MyGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADC3B0E2509FA6500E88D7C /* MyGroupViewController.swift */; };
+		6ADC3B112509FA6500E88D7C /* MyGroupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6ADC3B0F2509FA6500E88D7C /* MyGroupViewController.xib */; };
+		6ADC3B142509FB1800E88D7C /* GroupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADC3B132509FB1800E88D7C /* GroupModel.swift */; };
+		6ADC3B1C250A142E00E88D7C /* MyGroupTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6ADC3B1A250A142E00E88D7C /* MyGroupTableViewCell.xib */; };
+		6ADC3B1E250A1C4A00E88D7C /* MyGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADC3B1D250A1C4A00E88D7C /* MyGroupTableViewCell.swift */; };
+		6ADC3B22250A2ECA00E88D7C /* AnnounceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADC3B21250A2ECA00E88D7C /* AnnounceModel.swift */; };
+		6ADC3B25250A2EFE00E88D7C /* AnnounceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADC3B23250A2EFE00E88D7C /* AnnounceViewController.swift */; };
+		6ADC3B26250A2EFE00E88D7C /* AnnounceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6ADC3B24250A2EFE00E88D7C /* AnnounceViewController.xib */; };
+		6ADC3B29250B28C200E88D7C /* AnnounceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADC3B27250B28C200E88D7C /* AnnounceTableViewCell.swift */; };
+		6ADC3B2A250B28C200E88D7C /* AnnounceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6ADC3B28250B28C200E88D7C /* AnnounceTableViewCell.xib */; };
 		B92A7281250087470010D52D /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92A7280250087470010D52D /* LoginModel.swift */; };
 		B934AF4524FF4B82000FCEB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B934AF4424FF4B82000FCEB3 /* AppDelegate.swift */; };
 		B934AF4724FF4B82000FCEB3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B934AF4624FF4B82000FCEB3 /* SceneDelegate.swift */; };
@@ -83,6 +93,16 @@
 		45CD92DF232C349F46A9A8DF /* Pods_Digilearn_001_Digilearn_001UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Digilearn_001_Digilearn_001UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		472D2387F0542EC167DCF5C4 /* Pods-Digilearn_001-Digilearn_001UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Digilearn_001-Digilearn_001UITests.debug.xcconfig"; path = "Target Support Files/Pods-Digilearn_001-Digilearn_001UITests/Pods-Digilearn_001-Digilearn_001UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5D64FDB60A9BBFC9B4C1B9F6 /* Pods-Digilearn_001-Digilearn_001UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Digilearn_001-Digilearn_001UITests.release.xcconfig"; path = "Target Support Files/Pods-Digilearn_001-Digilearn_001UITests/Pods-Digilearn_001-Digilearn_001UITests.release.xcconfig"; sourceTree = "<group>"; };
+		6ADC3B0E2509FA6500E88D7C /* MyGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupViewController.swift; sourceTree = "<group>"; };
+		6ADC3B0F2509FA6500E88D7C /* MyGroupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyGroupViewController.xib; sourceTree = "<group>"; };
+		6ADC3B132509FB1800E88D7C /* GroupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupModel.swift; sourceTree = "<group>"; };
+		6ADC3B1A250A142E00E88D7C /* MyGroupTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyGroupTableViewCell.xib; sourceTree = "<group>"; };
+		6ADC3B1D250A1C4A00E88D7C /* MyGroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupTableViewCell.swift; sourceTree = "<group>"; };
+		6ADC3B21250A2ECA00E88D7C /* AnnounceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnounceModel.swift; sourceTree = "<group>"; };
+		6ADC3B23250A2EFE00E88D7C /* AnnounceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnounceViewController.swift; sourceTree = "<group>"; };
+		6ADC3B24250A2EFE00E88D7C /* AnnounceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnnounceViewController.xib; sourceTree = "<group>"; };
+		6ADC3B27250B28C200E88D7C /* AnnounceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnounceTableViewCell.swift; sourceTree = "<group>"; };
+		6ADC3B28250B28C200E88D7C /* AnnounceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnnounceTableViewCell.xib; sourceTree = "<group>"; };
 		8C6B55D88B707C87B25641EC /* Pods-Digilearn_001.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Digilearn_001.release.xcconfig"; path = "Target Support Files/Pods-Digilearn_001/Pods-Digilearn_001.release.xcconfig"; sourceTree = "<group>"; };
 		B92A7280250087470010D52D /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		B934AF4124FF4B82000FCEB3 /* Digilearn_001.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Digilearn_001.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -194,6 +214,46 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6ADC3B0D2509FA2B00E88D7C /* MyGroup */ = {
+			isa = PBXGroup;
+			children = (
+				6ADC3B122509FAEF00E88D7C /* model */,
+				6ADC3B0E2509FA6500E88D7C /* MyGroupViewController.swift */,
+				6ADC3B0F2509FA6500E88D7C /* MyGroupViewController.xib */,
+				6ADC3B1D250A1C4A00E88D7C /* MyGroupTableViewCell.swift */,
+				6ADC3B1A250A142E00E88D7C /* MyGroupTableViewCell.xib */,
+			);
+			path = MyGroup;
+			sourceTree = "<group>";
+		};
+		6ADC3B122509FAEF00E88D7C /* model */ = {
+			isa = PBXGroup;
+			children = (
+				6ADC3B132509FB1800E88D7C /* GroupModel.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		6ADC3B1F250A2E7E00E88D7C /* Announcement */ = {
+			isa = PBXGroup;
+			children = (
+				6ADC3B20250A2E8F00E88D7C /* model */,
+				6ADC3B23250A2EFE00E88D7C /* AnnounceViewController.swift */,
+				6ADC3B24250A2EFE00E88D7C /* AnnounceViewController.xib */,
+				6ADC3B27250B28C200E88D7C /* AnnounceTableViewCell.swift */,
+				6ADC3B28250B28C200E88D7C /* AnnounceTableViewCell.xib */,
+			);
+			path = Announcement;
+			sourceTree = "<group>";
+		};
+		6ADC3B20250A2E8F00E88D7C /* model */ = {
+			isa = PBXGroup;
+			children = (
+				6ADC3B21250A2ECA00E88D7C /* AnnounceModel.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 		B92A727F250087220010D52D /* model */ = {
 			isa = PBXGroup;
 			children = (
@@ -227,6 +287,8 @@
 		B934AF4324FF4B82000FCEB3 /* Digilearn_001 */ = {
 			isa = PBXGroup;
 			children = (
+				6ADC3B1F250A2E7E00E88D7C /* Announcement */,
+				6ADC3B0D2509FA2B00E88D7C /* MyGroup */,
 				B94585CF2509C6D900330DAC /* Home */,
 				B99FA31D250609E300A59C59 /* events */,
 				B99FA3182505E64300A59C59 /* faq */,
@@ -517,6 +579,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6ADC3B2A250B28C200E88D7C /* AnnounceTableViewCell.xib in Resources */,
 				B94585DE2509C6DA00330DAC /* EventTableViewCell.xib in Resources */,
 				B934AFE124FFA88D000FCEB3 /* LoginViewController.xib in Resources */,
 				B9D053522501FF0500F1AC03 /* ForgetPasswordViewController.xib in Resources */,
@@ -524,10 +587,13 @@
 				B94585EB2509D1D800330DAC /* MyEventTableViewCell.xib in Resources */,
 				B99FA3112505CC7400A59C59 /* SplashViewController.xib in Resources */,
 				B934AF5124FF4B85000FCEB3 /* Assets.xcassets in Resources */,
+				6ADC3B112509FA6500E88D7C /* MyGroupViewController.xib in Resources */,
 				B99FA32125060A0B00A59C59 /* MyEventViewController.xib in Resources */,
+				6ADC3B1C250A142E00E88D7C /* MyGroupTableViewCell.xib in Resources */,
 				B98C449C250B452B00363F8C /* HomeBannerTableViewCell.xib in Resources */,
 				B934AFC924FF8380000FCEB3 /* color.xcassets in Resources */,
 				B9D0535B2502278F00F1AC03 /* RegisterViewController.xib in Resources */,
+				6ADC3B26250A2EFE00E88D7C /* AnnounceViewController.xib in Resources */,
 				B94585EF2509FDDF00330DAC /* EventDetailViewController.xib in Resources */,
 				B94585DC2509C6DA00330DAC /* MenuTableViewCell.xib in Resources */,
 				B99FA31C2505E65D00A59C59 /* FAQViewController.xib in Resources */,
@@ -671,21 +737,27 @@
 				B94585E22509C6DA00330DAC /* BannerCollectionViewCell.swift in Sources */,
 				B98C449F250B4DCA00363F8C /* BannerModel.swift in Sources */,
 				B99FA32025060A0B00A59C59 /* MyEventViewController.swift in Sources */,
+				6ADC3B22250A2ECA00E88D7C /* AnnounceModel.swift in Sources */,
 				B94585EA2509D1D800330DAC /* MyEventTableViewCell.swift in Sources */,
+				6ADC3B29250B28C200E88D7C /* AnnounceTableViewCell.swift in Sources */,
+				6ADC3B142509FB1800E88D7C /* GroupModel.swift in Sources */,
 				B98C449B250B452B00363F8C /* HomeBannerTableViewCell.swift in Sources */,
 				B934AF4F24FF4B82000FCEB3 /* Digilearn_001.xcdatamodeld in Sources */,
 				B934AF4524FF4B82000FCEB3 /* AppDelegate.swift in Sources */,
 				B94585E12509C6DA00330DAC /* MenuTableViewCell.swift in Sources */,
+				6ADC3B25250A2EFE00E88D7C /* AnnounceViewController.swift in Sources */,
 				B99FA3102505CC7400A59C59 /* SplashViewController.swift in Sources */,
 				B92A7281250087470010D52D /* LoginModel.swift in Sources */,
 				B99FA32625060C0B00A59C59 /* EventModel.swift in Sources */,
 				B94585E02509C6DA00330DAC /* EventTableViewCell.swift in Sources */,
 				B99FA31B2505E65D00A59C59 /* FAQViewController.swift in Sources */,
 				B934AFE024FFA88D000FCEB3 /* LoginViewController.swift in Sources */,
+				6ADC3B102509FA6500E88D7C /* MyGroupViewController.swift in Sources */,
 				B9D053512501FF0500F1AC03 /* ForgetPasswordViewController.swift in Sources */,
 				B94585DB2509C6DA00330DAC /* HomeViewController.swift in Sources */,
 				B99FA3172505E07100A59C59 /* RegisterModel.swift in Sources */,
 				B934AF4724FF4B82000FCEB3 /* SceneDelegate.swift in Sources */,
+				6ADC3B1E250A1C4A00E88D7C /* MyGroupTableViewCell.swift in Sources */,
 				B94585F1250A0D7D00330DAC /* EventDetailModel.swift in Sources */,
 				B9D053542502185600F1AC03 /* ForgetPasswordModel.swift in Sources */,
 				B9D05357250225A600F1AC03 /* DigilearnKeys.swift in Sources */,

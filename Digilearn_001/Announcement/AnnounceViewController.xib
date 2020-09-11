@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AnnounViewController" customModule="Digilearn_001" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" backIndicatorImage="arrow.left" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="jg4-lF-wZU">
+                    <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <color key="barTintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <textAttributes key="titleTextAttributes">
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="textShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <offsetWrapper key="textShadowOffset" horizontal="190" vertical="0.0"/>
+                    </textAttributes>
+                    <items>
+                        <navigationItem title="Announcement" leftItemsSupplementBackButton="YES" id="95z-WK-t2I"/>
+                    </items>
+                </navigationBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="drl-Ce-gyB">
+                    <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="jg4-lF-wZU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="NaS-Am-Jz2"/>
+                <constraint firstItem="drl-Ce-gyB" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Or3-qQ-pun"/>
+                <constraint firstItem="drl-Ce-gyB" firstAttribute="top" secondItem="jg4-lF-wZU" secondAttribute="bottom" id="atg-uH-VcT"/>
+                <constraint firstItem="jg4-lF-wZU" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="f7H-Rv-dRY"/>
+                <constraint firstItem="drl-Ce-gyB" firstAttribute="top" secondItem="jg4-lF-wZU" secondAttribute="bottom" id="mqk-OC-CRJ"/>
+                <constraint firstItem="jg4-lF-wZU" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="oJq-m1-1EV"/>
+                <constraint firstItem="drl-Ce-gyB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="uUQ-Vm-i2M"/>
+                <constraint firstAttribute="bottom" secondItem="drl-Ce-gyB" secondAttribute="bottom" id="yjg-4j-tKY"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="79.6875"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrow.left" catalog="system" width="128" height="98"/>
+    </resources>
+</document>

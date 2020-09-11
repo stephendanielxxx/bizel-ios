@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyGroupTableViewCell" customModule="Digilearn_001" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyGroupIdentifier" rowHeight="89" id="KGk-i7-Jjw" customClass="MyGroupTableViewCell" customModule="Digilearn_001" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="338" height="89"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM" customClass="MyGroupTableViewCell" customModule="Digilearn_001" customModuleProvider="target">
+                <rect key="frame" x="0.0" y="0.0" width="338" height="89"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2zU-9Z-gzf">
+                        <rect key="frame" x="0.0" y="0.0" width="338" height="89"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gOd-yH-QaZ" userLabel="Image Group">
+                                <rect key="frame" x="70" y="19.5" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="Iti-WT-FyI"/>
+                                    <constraint firstAttribute="width" constant="50" id="Iuh-7Q-yg4"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="VYs-6M-D0v"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WhatsApp Image 2020-09-10 at 16.09.18" translatesAutoresizingMaskIntoConstraints="NO" id="xQT-qd-3jt">
+                                <rect key="frame" x="22" y="1.5" width="37" height="86"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vG3-bx-KiO">
+                                <rect key="frame" x="137" y="28" width="189" height="33"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Title">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <font key="NSFont" metaFont="menu" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="xQT-qd-3jt" firstAttribute="leading" secondItem="2zU-9Z-gzf" secondAttribute="leading" constant="22" id="0l5-tf-W64"/>
+                            <constraint firstAttribute="trailing" secondItem="vG3-bx-KiO" secondAttribute="trailing" constant="12" id="0we-JU-YAx"/>
+                            <constraint firstItem="vG3-bx-KiO" firstAttribute="centerY" secondItem="2zU-9Z-gzf" secondAttribute="centerY" id="52J-Jw-7DT"/>
+                            <constraint firstItem="gOd-yH-QaZ" firstAttribute="leading" secondItem="xQT-qd-3jt" secondAttribute="trailing" constant="11" id="56s-2e-Z5u"/>
+                            <constraint firstItem="vG3-bx-KiO" firstAttribute="leading" secondItem="gOd-yH-QaZ" secondAttribute="trailing" constant="17" id="RdU-ZA-Pc4"/>
+                            <constraint firstItem="gOd-yH-QaZ" firstAttribute="centerY" secondItem="2zU-9Z-gzf" secondAttribute="centerY" id="Yow-IN-5uh"/>
+                            <constraint firstItem="xQT-qd-3jt" firstAttribute="centerY" secondItem="2zU-9Z-gzf" secondAttribute="centerY" id="cKL-N5-Zah"/>
+                            <constraint firstAttribute="height" constant="89" id="ndB-rf-5h4"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="2zU-9Z-gzf" secondAttribute="trailing" id="BBQ-1N-Gg6"/>
+                    <constraint firstAttribute="bottom" secondItem="2zU-9Z-gzf" secondAttribute="bottom" id="ITf-r9-ml2"/>
+                    <constraint firstItem="2zU-9Z-gzf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="wuV-8T-f9O"/>
+                    <constraint firstItem="2zU-9Z-gzf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="xDg-tW-2E7"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="imageDefault" destination="xQT-qd-3jt" id="mPQ-WC-Zqa"/>
+                <outlet property="imageGroup" destination="gOd-yH-QaZ" id="3Ng-GS-vou"/>
+                <outlet property="titleGroup" destination="vG3-bx-KiO" id="B8F-G0-ghO"/>
+            </connections>
+            <point key="canvasLocation" x="85.507246376811594" y="138.28125"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="WhatsApp Image 2020-09-10 at 16.09.18" width="37" height="86"/>
+    </resources>
+</document>
