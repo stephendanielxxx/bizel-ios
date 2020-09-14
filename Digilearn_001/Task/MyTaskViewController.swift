@@ -17,6 +17,7 @@ class MyTaskViewController: UIViewController {
     var listTaskModel: ListTaskModel!
     var showTaskModel: ListTaskModel!
     let date = Date()
+    var tabShowed: Int = 0; // 0 for active, 1 for expired
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +44,7 @@ class MyTaskViewController: UIViewController {
     }
     
     func loadActiveData(){
+        tabShowed = 0
         activeButton.backgroundColor = UIColor(named: "color_ B63532")
         expiredButton.backgroundColor = UIColor(named: "color_ D44444")
         
@@ -91,6 +93,7 @@ class MyTaskViewController: UIViewController {
     }
     
     func loadExpiredData(){
+        tabShowed = 1
         expiredButton.backgroundColor = UIColor(named: "color_ B63532")
         activeButton.backgroundColor = UIColor(named: "color_ D44444")
         
@@ -172,6 +175,13 @@ extension MyTaskViewController: UITableViewDelegate, UITableViewDataSource{
         let total = (taskModel.totalAction as NSString).floatValue
         let progress = finished/total
         cell.progressView.setProgress(progress, animated: true)
+        if tabShowed == 0 {
+            cell.expiredLabel.isHidden = true
+            cell.startTaskButton.isHidden = false
+        }else{
+            cell.expiredLabel.isHidden = false
+            cell.startTaskButton.isHidden = true
+        }
         
         return cell
     }

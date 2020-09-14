@@ -19,6 +19,7 @@ class MyTaskTableViewCell: UITableViewCell {
     @IBOutlet weak var progressView: UIProgressView!
     @IBOutlet weak var startTaskButton: UIButton!
     @IBOutlet weak var totalLabel: UILabel!
+    @IBOutlet weak var expiredLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
