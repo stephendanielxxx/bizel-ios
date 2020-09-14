@@ -15,6 +15,8 @@ class MyTaskViewController: UIViewController {
     @IBOutlet weak var expiredButton: UIButton!
     @IBOutlet weak var taskView: UITableView!
     var listTaskModel: ListTaskModel!
+    var showTaskModel: ListTaskModel!
+    let date = Date()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +31,7 @@ class MyTaskViewController: UIViewController {
         expiredButton.layer.cornerRadius = 15
         
         loadActiveData()
-        
+
     }
     
     @IBAction func activeAction(_ sender: UIButton) {
@@ -44,10 +46,10 @@ class MyTaskViewController: UIViewController {
         activeButton.backgroundColor = UIColor(named: "color_ B63532")
         expiredButton.backgroundColor = UIColor(named: "color_ D44444")
         
+        listTaskModel = nil
+        
         let user_id = readStringPreference(key: DigilearnsKeys.USER_ID)
-        
-        debugPrint(user_id)
-        
+                
         let URL = "\(DigilearnParams.ApiUrl)/course/get_assigned_course_byId"
         
         let parameters: [String:Any] = [
@@ -63,6 +65,19 @@ class MyTaskViewController: UIViewController {
                         let decoder = JSONDecoder()
                         do{
                             self.listTaskModel = try decoder.decode(ListTaskModel.self, from:data)
+                            
+                            let taskModel: [TaskModel] = self.listTaskModel.courseByUid
+                        
+                            var index: Int = 0
+                            for task in taskModel{
+                                if task.courseEnd != nil{
+                                    if task.courseEnd?.toDate()?.compare(self.date) == .orderedAscending{
+                                        self.listTaskModel.courseByUid.remove(at: index)
+                                    }
+                                }
+                                
+                                index = index + 1
+                            }
                             
                             self.taskView.reloadData()
                             
@@ -81,7 +96,47 @@ class MyTaskViewController: UIViewController {
         
         listTaskModel = nil
         
-        taskView.reloadData()
+        let user_id = readStringPreference(key: DigilearnsKeys.USER_ID)
+                
+        let URL = "\(DigilearnParams.ApiUrl)/course/get_assigned_course_byId"
+        
+        let parameters: [String:Any] = [
+            "uid": "\(user_id)"
+        ]
+        AF.request(URL,
+                   method: .post,
+                   parameters: parameters,
+                   encoding: URLEncoding.httpBody).responseData { response in
+                    switch response.result {
+                    case .success(let data):
+                        self.removeSpinner()
+                        let decoder = JSONDecoder()
+                        do{
+                            self.listTaskModel = try decoder.decode(ListTaskModel.self, from:data)
+                            
+                            var taskModel: [TaskModel] = self.listTaskModel.courseByUid
+                        
+                            var index: Int = 0
+                            for task in taskModel{
+                                
+                                if task.courseEnd == nil{
+                                    self.listTaskModel.courseByUid.remove(at: index)
+                                }else if task.courseEnd?.toDate()?.compare(self.date) == .orderedDescending{
+                                    self.listTaskModel.courseByUid.remove(at: index)
+                                }
+                                
+                                index = index + 1
+                            }
+                            
+                            self.taskView.reloadData()
+                            
+                        }catch{
+                            print(error.localizedDescription)
+                        }
+                    case .failure(let error):
+                        self.removeSpinner()
+                    }
+        }
     }
 }
 
@@ -113,8 +168,19 @@ extension MyTaskViewController: UITableViewDelegate, UITableViewDataSource{
              cell.startTaskButton.titleLabel?.text = "Start"
         }
        
-//        cell.progressView.progress = taskModel.totalFinished/taskModel.totalAction
+        let finished = (taskModel.totalFinished as NSString).floatValue
+        let total = (taskModel.totalAction as NSString).floatValue
+        let progress = finished/total
+        cell.progressView.setProgress(progress, animated: true)
         
         return cell
+    }
+}
+
+extension String {
+    func toDate() -> Date? {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        return formatter.date(from: self)
     }
 }

@@ -9,7 +9,7 @@
 import Foundation
 
 struct ListTaskModel: Decodable {
-    let courseByUid: [TaskModel]
+    var courseByUid: [TaskModel]
 
     enum CodingKeys: String, CodingKey {
         case courseByUid = "course_by_uid"
@@ -17,10 +17,10 @@ struct ListTaskModel: Decodable {
 }
 
 struct TaskModel: Decodable {
-   let id, title, detail, author: String
-   let image, totalModule, totalTopic, totalAction: String
-   let totalFinished, createdAt, groupName, courseStart: String
-   let courseEnd: String?
+   var id, title, detail, author: String
+   var image, totalModule, totalTopic, totalAction: String
+   var totalFinished, createdAt, groupName, courseStart: String
+   var courseEnd: String?
 
        enum CodingKeys: String, CodingKey {
            case id, title, detail, author, image
