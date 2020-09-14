@@ -15,7 +15,6 @@ class MyTaskViewController: UIViewController {
     @IBOutlet weak var expiredButton: UIButton!
     @IBOutlet weak var taskView: UITableView!
     var listTaskModel: ListTaskModel!
-    var showTaskModel: ListTaskModel!
     let date = Date()
     var tabShowed: Int = 0; // 0 for active, 1 for expired
     
@@ -57,6 +56,7 @@ class MyTaskViewController: UIViewController {
         let parameters: [String:Any] = [
             "uid": "\(user_id)"
         ]
+        self.showSpinner(onView: self.view)
         AF.request(URL,
                    method: .post,
                    parameters: parameters,
@@ -106,6 +106,7 @@ class MyTaskViewController: UIViewController {
         let parameters: [String:Any] = [
             "uid": "\(user_id)"
         ]
+        self.showSpinner(onView: self.view)
         AF.request(URL,
                    method: .post,
                    parameters: parameters,
@@ -165,6 +166,7 @@ extension MyTaskViewController: UITableViewDelegate, UITableViewDataSource{
         cell.topicsLabel.text = "\(taskModel.totalTopic) Topics|"
         cell.activitiesLabel.text = "\(taskModel.totalAction) Activities"
         cell.totalLabel.text = "\(taskModel.totalFinished)/\(taskModel.totalAction)"
+        
         if(Int(taskModel.totalFinished) ?? 0 > 0){
              cell.startTaskButton.titleLabel?.text = "Continue"
         }else{
@@ -175,6 +177,7 @@ extension MyTaskViewController: UITableViewDelegate, UITableViewDataSource{
         let total = (taskModel.totalAction as NSString).floatValue
         let progress = finished/total
         cell.progressView.setProgress(progress, animated: true)
+        
         if tabShowed == 0 {
             cell.expiredLabel.isHidden = true
             cell.startTaskButton.isHidden = false
@@ -183,9 +186,30 @@ extension MyTaskViewController: UITableViewDelegate, UITableViewDataSource{
             cell.startTaskButton.isHidden = true
         }
         
+        cell.startTaskButton.tag = indexPath.row
+        
+        cell.startTaskButton.addTarget(self, action: #selector(MyTaskViewController.openDetail(_:)), for: .touchUpInside)
+        
         return cell
     }
+    
+    @objc func openDetail(_ sender: UIButton?) {
+        let course = CourseViewController()
+
+        course.modalPresentationStyle = .fullScreen
+        
+        let task = listTaskModel.courseByUid[sender!.tag]
+    
+        course.course_id = task.id
+        course.course_name = task.title
+        course.created_by = task.author
+        course.course_about = task.detail
+        
+        self.present(course, animated: true, completion: nil)
+    }
 }
+
+
 
 extension String {
     func toDate() -> Date? {

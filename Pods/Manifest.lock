@@ -60,6 +60,11 @@ PODS:
     - MaterialComponents/private/Color
     - MaterialComponents/private/Math
     - MaterialComponents/ShadowLayer
+  - "MaterialComponents/Tabs+TabBarView (115.0.0)":
+    - MaterialComponents/AnimationTiming
+    - MaterialComponents/private/Math
+    - MaterialComponents/Ripple
+    - MDFInternationalization
   - MaterialComponents/Typography (115.0.0):
     - MaterialComponents/private/Application
     - MaterialComponents/private/Math
@@ -97,6 +102,7 @@ DEPENDENCIES:
   - ImageSlideshow/Alamofire
   - MaterialComponents/BottomNavigation
   - MaterialComponents/Cards
+  - "MaterialComponents/Tabs+TabBarView"
   - PINRemoteImage
   - Reqres
   - RxCocoa (~> 5)
@@ -138,6 +144,6 @@ SPEC CHECKSUMS:
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   SimpleCheckbox: ddcd433ab8c3a8f57300bebda13151a8f302c7f9
 
-PODFILE CHECKSUM: f3a3fe528b84eec4f0b0aaf348e73b51d56d05e1
+PODFILE CHECKSUM: b259083da5e62d07677adf48f8172193b7e16bcb
 
 COCOAPODS: 1.9.3

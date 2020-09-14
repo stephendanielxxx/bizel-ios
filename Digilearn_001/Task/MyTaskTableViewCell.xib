@@ -61,10 +61,10 @@
                                 <color key="tintColor" name="red_1"/>
                             </progressView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TKt-c4-Cjz" userLabel="Start Button">
-                                <rect key="frame" x="215" y="110" width="60" height="28"/>
+                                <rect key="frame" x="195" y="110" width="80" height="28"/>
                                 <color key="backgroundColor" name="red_1"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="LPu-pF-flP"/>
+                                    <constraint firstAttribute="width" constant="80" id="LPu-pF-flP"/>
                                     <constraint firstAttribute="height" constant="28" id="TAH-IQ-plK"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
