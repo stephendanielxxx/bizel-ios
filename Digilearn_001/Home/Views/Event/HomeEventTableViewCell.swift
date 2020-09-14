@@ -90,8 +90,24 @@ extension HomeEventTableViewCell: UICollectionViewDataSource{
     
             cell.imageEvent.pin_setImage(from: url)
         
+            cell.registerEvent.tag = indexPath.row
+        
+            cell.registerEvent.addTarget(self, action: #selector(HomeEventTableViewCell.openDetail(_:)), for: .touchUpInside)
            return cell
     }
+    
+    @objc func openDetail(_ sender: UIButton?) {
+          let eventDetail = EventDetailViewController()
+
+          eventDetail.modalPresentationStyle = .fullScreen
+          
+          let event: OnsiteList = (eventModel?.onsite[sender!.tag])!
+          
+          eventDetail.eventId = event.id
+          
+        self.window?.rootViewController?.present(eventDetail, animated: true, completion: nil)
+          
+      }
 }
 
 extension HomeEventTableViewCell: UICollectionViewDelegateFlowLayout {
