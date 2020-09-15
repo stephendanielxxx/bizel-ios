@@ -109,11 +109,11 @@ class LoginViewController: UIViewController {
                                     self.saveStringPreference(value: (loginModel.user?[0].id)!, key: DigilearnsKeys.USER_ID)
                                     self.saveStringPreference(value: (loginModel.user?[0].nickname)!, key: DigilearnsKeys.USER_NICK)
                                     
-                                    let event = MyEventViewController()
+                                    let home = HomeViewController()
 
-                                    event.modalPresentationStyle = .fullScreen
+                                    home.modalPresentationStyle = .fullScreen
                                     
-                                    self.present(event, animated: true, completion: nil)
+                                    self.present(home, animated: true, completion: nil)
                                 }else{
                                     let alert = UIAlertController(title: "Login Failed", message: "\(loginModel.message)", preferredStyle: .alert)
                                     alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))

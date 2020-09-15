@@ -37,11 +37,7 @@
 		B934AFE124FFA88D000FCEB3 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B934AFDF24FFA88D000FCEB3 /* LoginViewController.xib */; };
 		B94585DB2509C6DA00330DAC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94585D12509C6D900330DAC /* HomeViewController.swift */; };
 		B94585DC2509C6DA00330DAC /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B94585D32509C6D900330DAC /* MenuTableViewCell.xib */; };
-		B94585DE2509C6DA00330DAC /* EventTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B94585D52509C6D900330DAC /* EventTableViewCell.xib */; };
-		B94585E02509C6DA00330DAC /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94585D72509C6D900330DAC /* EventTableViewCell.swift */; };
 		B94585E12509C6DA00330DAC /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94585D82509C6D900330DAC /* MenuTableViewCell.swift */; };
-		B94585E22509C6DA00330DAC /* BannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94585D92509C6D900330DAC /* BannerCollectionViewCell.swift */; };
-		B94585E32509C6DA00330DAC /* BannerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B94585DA2509C6D900330DAC /* BannerCollectionViewCell.xib */; };
 		B94585E72509CB1700330DAC /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B94585E52509CB1700330DAC /* HomeViewController.xib */; };
 		B94585EA2509D1D800330DAC /* MyEventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94585E82509D1D800330DAC /* MyEventTableViewCell.swift */; };
 		B94585EB2509D1D800330DAC /* MyEventTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B94585E92509D1D800330DAC /* MyEventTableViewCell.xib */; };
@@ -49,10 +45,28 @@
 		B94585EF2509FDDF00330DAC /* EventDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B94585ED2509FDDF00330DAC /* EventDetailViewController.xib */; };
 		B94585F1250A0D7D00330DAC /* EventDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94585F0250A0D7D00330DAC /* EventDetailModel.swift */; };
 		B94585F3250A2FFE00330DAC /* RegisterEventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94585F2250A2FFE00330DAC /* RegisterEventModel.swift */; };
+		B9673DF7250F23F1005E6BB8 /* ListTaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9673DF6250F23F1005E6BB8 /* ListTaskModel.swift */; };
+		B9673DFA250F251C005E6BB8 /* MyTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9673DF8250F251C005E6BB8 /* MyTaskViewController.swift */; };
+		B9673DFB250F251C005E6BB8 /* MyTaskViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9673DF9250F251C005E6BB8 /* MyTaskViewController.xib */; };
+		B9673E00250F2B8C005E6BB8 /* MyTaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9673DFE250F2B8C005E6BB8 /* MyTaskTableViewCell.swift */; };
+		B9673E01250F2B8C005E6BB8 /* MyTaskTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9673DFF250F2B8C005E6BB8 /* MyTaskTableViewCell.xib */; };
+		B9673E06250F561D005E6BB8 /* CourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9673E04250F561D005E6BB8 /* CourseViewController.swift */; };
+		B9673E07250F561D005E6BB8 /* CourseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9673E05250F561D005E6BB8 /* CourseViewController.xib */; };
+		B9673E09250F5F74005E6BB8 /* ListCourseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9673E08250F5F74005E6BB8 /* ListCourseModel.swift */; };
+		B9673E0C250F7039005E6BB8 /* AboutCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9673E0A250F7039005E6BB8 /* AboutCourseViewController.swift */; };
+		B9673E0D250F7039005E6BB8 /* AboutCourseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9673E0B250F7039005E6BB8 /* AboutCourseViewController.xib */; };
+		B9673E10250F748F005E6BB8 /* ModulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9673E0E250F748F005E6BB8 /* ModulesViewController.swift */; };
+		B9673E11250F748F005E6BB8 /* ModulesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9673E0F250F748F005E6BB8 /* ModulesViewController.xib */; };
+		B9673E14250F7AE1005E6BB8 /* ModulesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9673E12250F7AE1005E6BB8 /* ModulesTableViewCell.swift */; };
+		B9673E15250F7AE1005E6BB8 /* ModulesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9673E13250F7AE1005E6BB8 /* ModulesTableViewCell.xib */; };
 		B98C4490250B1AD900363F8C /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98C448F250B1AD900363F8C /* HomeTabBarController.swift */; };
 		B98C449B250B452B00363F8C /* HomeBannerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98C4499250B452B00363F8C /* HomeBannerTableViewCell.swift */; };
 		B98C449C250B452B00363F8C /* HomeBannerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B98C449A250B452B00363F8C /* HomeBannerTableViewCell.xib */; };
 		B98C449F250B4DCA00363F8C /* BannerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98C449E250B4DCA00363F8C /* BannerModel.swift */; };
+		B98C44A2250B689600363F8C /* HomeEventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98C44A0250B689600363F8C /* HomeEventTableViewCell.swift */; };
+		B98C44A3250B689600363F8C /* HomeEventTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B98C44A1250B689600363F8C /* HomeEventTableViewCell.xib */; };
+		B98C44AB250B7B3100363F8C /* EventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98C44A9250B7B3100363F8C /* EventCollectionViewCell.swift */; };
+		B98C44AC250B7B3100363F8C /* EventCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B98C44AA250B7B3100363F8C /* EventCollectionViewCell.xib */; };
 		B99FA3102505CC7400A59C59 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99FA30E2505CC7400A59C59 /* SplashViewController.swift */; };
 		B99FA3112505CC7400A59C59 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B99FA30F2505CC7400A59C59 /* SplashViewController.xib */; };
 		B99FA3142505D2E600A59C59 /* PrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99FA3122505D2E600A59C59 /* PrivacyViewController.swift */; };
@@ -63,6 +77,10 @@
 		B99FA32025060A0B00A59C59 /* MyEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99FA31E25060A0B00A59C59 /* MyEventViewController.swift */; };
 		B99FA32125060A0B00A59C59 /* MyEventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B99FA31F25060A0B00A59C59 /* MyEventViewController.xib */; };
 		B99FA32625060C0B00A59C59 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99FA32525060C0B00A59C59 /* EventModel.swift */; };
+		B9A115FB2510746800852131 /* TopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A115F92510746800852131 /* TopicViewController.swift */; };
+		B9A115FC2510746800852131 /* TopicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9A115FA2510746800852131 /* TopicViewController.xib */; };
+		B9A116002510864200852131 /* AbousTopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A115FE2510864200852131 /* AbousTopicViewController.swift */; };
+		B9A116012510864200852131 /* AbousTopicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9A115FF2510864200852131 /* AbousTopicViewController.xib */; };
 		B9D0534D2501E06B00F1AC03 /* DigilearnParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D0534C2501E06B00F1AC03 /* DigilearnParams.swift */; };
 		B9D053512501FF0500F1AC03 /* ForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D0534F2501FF0500F1AC03 /* ForgetPasswordViewController.swift */; };
 		B9D053522501FF0500F1AC03 /* ForgetPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9D053502501FF0500F1AC03 /* ForgetPasswordViewController.xib */; };
@@ -132,11 +150,7 @@
 		B934AFDF24FFA88D000FCEB3 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		B94585D12509C6D900330DAC /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B94585D32509C6D900330DAC /* MenuTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
-		B94585D52509C6D900330DAC /* EventTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventTableViewCell.xib; sourceTree = "<group>"; };
-		B94585D72509C6D900330DAC /* EventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 		B94585D82509C6D900330DAC /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
-		B94585D92509C6D900330DAC /* BannerCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerCollectionViewCell.swift; sourceTree = "<group>"; };
-		B94585DA2509C6D900330DAC /* BannerCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BannerCollectionViewCell.xib; sourceTree = "<group>"; };
 		B94585E52509CB1700330DAC /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		B94585E82509D1D800330DAC /* MyEventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventTableViewCell.swift; sourceTree = "<group>"; };
 		B94585E92509D1D800330DAC /* MyEventTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyEventTableViewCell.xib; sourceTree = "<group>"; };
@@ -144,10 +158,28 @@
 		B94585ED2509FDDF00330DAC /* EventDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventDetailViewController.xib; sourceTree = "<group>"; };
 		B94585F0250A0D7D00330DAC /* EventDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailModel.swift; sourceTree = "<group>"; };
 		B94585F2250A2FFE00330DAC /* RegisterEventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEventModel.swift; sourceTree = "<group>"; };
+		B9673DF6250F23F1005E6BB8 /* ListTaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTaskModel.swift; sourceTree = "<group>"; };
+		B9673DF8250F251C005E6BB8 /* MyTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTaskViewController.swift; sourceTree = "<group>"; };
+		B9673DF9250F251C005E6BB8 /* MyTaskViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTaskViewController.xib; sourceTree = "<group>"; };
+		B9673DFE250F2B8C005E6BB8 /* MyTaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTaskTableViewCell.swift; sourceTree = "<group>"; };
+		B9673DFF250F2B8C005E6BB8 /* MyTaskTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTaskTableViewCell.xib; sourceTree = "<group>"; };
+		B9673E04250F561D005E6BB8 /* CourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewController.swift; sourceTree = "<group>"; };
+		B9673E05250F561D005E6BB8 /* CourseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CourseViewController.xib; sourceTree = "<group>"; };
+		B9673E08250F5F74005E6BB8 /* ListCourseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCourseModel.swift; sourceTree = "<group>"; };
+		B9673E0A250F7039005E6BB8 /* AboutCourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCourseViewController.swift; sourceTree = "<group>"; };
+		B9673E0B250F7039005E6BB8 /* AboutCourseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutCourseViewController.xib; sourceTree = "<group>"; };
+		B9673E0E250F748F005E6BB8 /* ModulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModulesViewController.swift; sourceTree = "<group>"; };
+		B9673E0F250F748F005E6BB8 /* ModulesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModulesViewController.xib; sourceTree = "<group>"; };
+		B9673E12250F7AE1005E6BB8 /* ModulesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModulesTableViewCell.swift; sourceTree = "<group>"; };
+		B9673E13250F7AE1005E6BB8 /* ModulesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModulesTableViewCell.xib; sourceTree = "<group>"; };
 		B98C448F250B1AD900363F8C /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
 		B98C4499250B452B00363F8C /* HomeBannerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBannerTableViewCell.swift; sourceTree = "<group>"; };
 		B98C449A250B452B00363F8C /* HomeBannerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeBannerTableViewCell.xib; sourceTree = "<group>"; };
 		B98C449E250B4DCA00363F8C /* BannerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerModel.swift; sourceTree = "<group>"; };
+		B98C44A0250B689600363F8C /* HomeEventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEventTableViewCell.swift; sourceTree = "<group>"; };
+		B98C44A1250B689600363F8C /* HomeEventTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeEventTableViewCell.xib; sourceTree = "<group>"; };
+		B98C44A9250B7B3100363F8C /* EventCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCollectionViewCell.swift; sourceTree = "<group>"; };
+		B98C44AA250B7B3100363F8C /* EventCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventCollectionViewCell.xib; sourceTree = "<group>"; };
 		B99FA30E2505CC7400A59C59 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		B99FA30F2505CC7400A59C59 /* SplashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
 		B99FA3122505D2E600A59C59 /* PrivacyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyViewController.swift; sourceTree = "<group>"; };
@@ -158,6 +190,10 @@
 		B99FA31E25060A0B00A59C59 /* MyEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventViewController.swift; sourceTree = "<group>"; };
 		B99FA31F25060A0B00A59C59 /* MyEventViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyEventViewController.xib; sourceTree = "<group>"; };
 		B99FA32525060C0B00A59C59 /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
+		B9A115F92510746800852131 /* TopicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicViewController.swift; sourceTree = "<group>"; };
+		B9A115FA2510746800852131 /* TopicViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopicViewController.xib; sourceTree = "<group>"; };
+		B9A115FE2510864200852131 /* AbousTopicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbousTopicViewController.swift; sourceTree = "<group>"; };
+		B9A115FF2510864200852131 /* AbousTopicViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AbousTopicViewController.xib; sourceTree = "<group>"; };
 		B9D0534C2501E06B00F1AC03 /* DigilearnParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigilearnParams.swift; sourceTree = "<group>"; };
 		B9D0534F2501FF0500F1AC03 /* ForgetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewController.swift; sourceTree = "<group>"; };
 		B9D053502501FF0500F1AC03 /* ForgetPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgetPasswordViewController.xib; sourceTree = "<group>"; };
@@ -299,6 +335,7 @@
 		B934AF4324FF4B82000FCEB3 /* Digilearn_001 */ = {
 			isa = PBXGroup;
 			children = (
+				B9673DF4250F237D005E6BB8 /* Task */,
 				6ADC3B1F250A2E7E00E88D7C /* Announcement */,
 				6ADC3B0D2509FA2B00E88D7C /* MyGroup */,
 				B94585CF2509C6D900330DAC /* Home */,
@@ -372,16 +409,62 @@
 		B94585D22509C6D900330DAC /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B94585D82509C6D900330DAC /* MenuTableViewCell.swift */,
-				B94585D32509C6D900330DAC /* MenuTableViewCell.xib */,
-				B94585D72509C6D900330DAC /* EventTableViewCell.swift */,
-				B94585D52509C6D900330DAC /* EventTableViewCell.xib */,
-				B94585D92509C6D900330DAC /* BannerCollectionViewCell.swift */,
-				B94585DA2509C6D900330DAC /* BannerCollectionViewCell.xib */,
+				B9673DFD250F2581005E6BB8 /* Menu */,
+				B9673DFC250F2578005E6BB8 /* Banner */,
+				B98C44A4250B730C00363F8C /* Event */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B9673DF4250F237D005E6BB8 /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				B9673E02250F55BD005E6BB8 /* Course */,
+				B9673DF5250F2398005E6BB8 /* model */,
+				B9673DF8250F251C005E6BB8 /* MyTaskViewController.swift */,
+				B9673DF9250F251C005E6BB8 /* MyTaskViewController.xib */,
+				B9673DFE250F2B8C005E6BB8 /* MyTaskTableViewCell.swift */,
+				B9673DFF250F2B8C005E6BB8 /* MyTaskTableViewCell.xib */,
+			);
+			path = Task;
+			sourceTree = "<group>";
+		};
+		B9673DF5250F2398005E6BB8 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				B9673DF6250F23F1005E6BB8 /* ListTaskModel.swift */,
+				B9673E08250F5F74005E6BB8 /* ListCourseModel.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		B9673DFC250F2578005E6BB8 /* Banner */ = {
+			isa = PBXGroup;
+			children = (
 				B98C4499250B452B00363F8C /* HomeBannerTableViewCell.swift */,
 				B98C449A250B452B00363F8C /* HomeBannerTableViewCell.xib */,
 			);
-			path = Views;
+			path = Banner;
+			sourceTree = "<group>";
+		};
+		B9673DFD250F2581005E6BB8 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				B94585D82509C6D900330DAC /* MenuTableViewCell.swift */,
+				B94585D32509C6D900330DAC /* MenuTableViewCell.xib */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		B9673E02250F55BD005E6BB8 /* Course */ = {
+			isa = PBXGroup;
+			children = (
+				B9A115FD2510861D00852131 /* Module */,
+				B9A115F82510743E00852131 /* Topic */,
+				B9673E04250F561D005E6BB8 /* CourseViewController.swift */,
+				B9673E05250F561D005E6BB8 /* CourseViewController.xib */,
+			);
+			path = Course;
 			sourceTree = "<group>";
 		};
 		B98C449D250B4DC100363F8C /* model */ = {
@@ -390,6 +473,17 @@
 				B98C449E250B4DCA00363F8C /* BannerModel.swift */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		B98C44A4250B730C00363F8C /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				B98C44A0250B689600363F8C /* HomeEventTableViewCell.swift */,
+				B98C44A1250B689600363F8C /* HomeEventTableViewCell.xib */,
+				B98C44A9250B7B3100363F8C /* EventCollectionViewCell.swift */,
+				B98C44AA250B7B3100363F8C /* EventCollectionViewCell.xib */,
+			);
+			path = Event;
 			sourceTree = "<group>";
 		};
 		B99FA30D2505CC5A00A59C59 /* splash */ = {
@@ -448,6 +542,30 @@
 				B94585F2250A2FFE00330DAC /* RegisterEventModel.swift */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		B9A115F82510743E00852131 /* Topic */ = {
+			isa = PBXGroup;
+			children = (
+				B9A115F92510746800852131 /* TopicViewController.swift */,
+				B9A115FA2510746800852131 /* TopicViewController.xib */,
+				B9A115FE2510864200852131 /* AbousTopicViewController.swift */,
+				B9A115FF2510864200852131 /* AbousTopicViewController.xib */,
+			);
+			path = Topic;
+			sourceTree = "<group>";
+		};
+		B9A115FD2510861D00852131 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				B9673E0A250F7039005E6BB8 /* AboutCourseViewController.swift */,
+				B9673E0B250F7039005E6BB8 /* AboutCourseViewController.xib */,
+				B9673E0E250F748F005E6BB8 /* ModulesViewController.swift */,
+				B9673E0F250F748F005E6BB8 /* ModulesViewController.xib */,
+				B9673E12250F7AE1005E6BB8 /* ModulesTableViewCell.swift */,
+				B9673E13250F7AE1005E6BB8 /* ModulesTableViewCell.xib */,
+			);
+			path = Module;
 			sourceTree = "<group>";
 		};
 		B9D0534B2501E04100F1AC03 /* utils */ = {
@@ -592,27 +710,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				6ADC3B2A250B28C200E88D7C /* AnnounceTableViewCell.xib in Resources */,
-				B94585DE2509C6DA00330DAC /* EventTableViewCell.xib in Resources */,
+				B9673E07250F561D005E6BB8 /* CourseViewController.xib in Resources */,
 				B934AFE124FFA88D000FCEB3 /* LoginViewController.xib in Resources */,
 				B9D053522501FF0500F1AC03 /* ForgetPasswordViewController.xib in Resources */,
+				B9673E15250F7AE1005E6BB8 /* ModulesTableViewCell.xib in Resources */,
 				B934AF5424FF4B85000FCEB3 /* LaunchScreen.storyboard in Resources */,
 				B94585EB2509D1D800330DAC /* MyEventTableViewCell.xib in Resources */,
 				B99FA3112505CC7400A59C59 /* SplashViewController.xib in Resources */,
 				6A8D5E6B250F219A0069967C /* MyGroupDetailViewController.xib in Resources */,
+				B9673E01250F2B8C005E6BB8 /* MyTaskTableViewCell.xib in Resources */,
+				B9673E0D250F7039005E6BB8 /* AboutCourseViewController.xib in Resources */,
 				B934AF5124FF4B85000FCEB3 /* Assets.xcassets in Resources */,
+				B9673E11250F748F005E6BB8 /* ModulesViewController.xib in Resources */,
+				B9673DFB250F251C005E6BB8 /* MyTaskViewController.xib in Resources */,
 				6ADC3B112509FA6500E88D7C /* MyGroupViewController.xib in Resources */,
 				B99FA32125060A0B00A59C59 /* MyEventViewController.xib in Resources */,
 				6ADC3B1C250A142E00E88D7C /* MyGroupTableViewCell.xib in Resources */,
 				B98C449C250B452B00363F8C /* HomeBannerTableViewCell.xib in Resources */,
 				6AAEEC2F250F522200A129A6 /* AnnounceDetailViewController.xib in Resources */,
+				B98C44A3250B689600363F8C /* HomeEventTableViewCell.xib in Resources */,
+				B9A116012510864200852131 /* AbousTopicViewController.xib in Resources */,
 				B934AFC924FF8380000FCEB3 /* color.xcassets in Resources */,
+				B98C44AC250B7B3100363F8C /* EventCollectionViewCell.xib in Resources */,
 				B9D0535B2502278F00F1AC03 /* RegisterViewController.xib in Resources */,
 				6ADC3B26250A2EFE00E88D7C /* AnnounceViewController.xib in Resources */,
 				B94585EF2509FDDF00330DAC /* EventDetailViewController.xib in Resources */,
 				B94585DC2509C6DA00330DAC /* MenuTableViewCell.xib in Resources */,
 				B99FA31C2505E65D00A59C59 /* FAQViewController.xib in Resources */,
 				B94585E72509CB1700330DAC /* HomeViewController.xib in Resources */,
-				B94585E32509C6DA00330DAC /* BannerCollectionViewCell.xib in Resources */,
+				B9A115FC2510746800852131 /* TopicViewController.xib in Resources */,
 				B99FA3152505D2E600A59C59 /* PrivacyViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -745,11 +871,14 @@
 				6AAEEC2E250F522200A129A6 /* AnnounceDetailViewController.swift in Sources */,
 				B94585EE2509FDDF00330DAC /* EventDetailViewController.swift in Sources */,
 				B98C4490250B1AD900363F8C /* HomeTabBarController.swift in Sources */,
+				B9673DFA250F251C005E6BB8 /* MyTaskViewController.swift in Sources */,
 				B934AF4924FF4B82000FCEB3 /* ViewController.swift in Sources */,
 				B9D0535A2502278F00F1AC03 /* RegisterViewController.swift in Sources */,
 				B99FA3142505D2E600A59C59 /* PrivacyViewController.swift in Sources */,
+				B9673DF7250F23F1005E6BB8 /* ListTaskModel.swift in Sources */,
+				B98C44AB250B7B3100363F8C /* EventCollectionViewCell.swift in Sources */,
 				B9D0534D2501E06B00F1AC03 /* DigilearnParams.swift in Sources */,
-				B94585E22509C6DA00330DAC /* BannerCollectionViewCell.swift in Sources */,
+				B9A115FB2510746800852131 /* TopicViewController.swift in Sources */,
 				B98C449F250B4DCA00363F8C /* BannerModel.swift in Sources */,
 				B99FA32025060A0B00A59C59 /* MyEventViewController.swift in Sources */,
 				B94585EA2509D1D800330DAC /* MyEventTableViewCell.swift in Sources */,
@@ -757,25 +886,32 @@
 				6ADC3B29250B28C200E88D7C /* AnnounceTableViewCell.swift in Sources */,
 				6ADC3B142509FB1800E88D7C /* GroupModel.swift in Sources */,
 				B98C449B250B452B00363F8C /* HomeBannerTableViewCell.swift in Sources */,
+				B9A116002510864200852131 /* AbousTopicViewController.swift in Sources */,
 				B934AF4F24FF4B82000FCEB3 /* Digilearn_001.xcdatamodeld in Sources */,
 				B934AF4524FF4B82000FCEB3 /* AppDelegate.swift in Sources */,
 				B94585E12509C6DA00330DAC /* MenuTableViewCell.swift in Sources */,
+				B9673E10250F748F005E6BB8 /* ModulesViewController.swift in Sources */,
 				6ADC3B25250A2EFE00E88D7C /* AnnounceViewController.swift in Sources */,
 				B99FA3102505CC7400A59C59 /* SplashViewController.swift in Sources */,
 				B92A7281250087470010D52D /* LoginModel.swift in Sources */,
 				B99FA32625060C0B00A59C59 /* EventModel.swift in Sources */,
-				B94585E02509C6DA00330DAC /* EventTableViewCell.swift in Sources */,
+				B98C44A2250B689600363F8C /* HomeEventTableViewCell.swift in Sources */,
+				B9673E0C250F7039005E6BB8 /* AboutCourseViewController.swift in Sources */,
 				B99FA31B2505E65D00A59C59 /* FAQViewController.swift in Sources */,
+				B9673E06250F561D005E6BB8 /* CourseViewController.swift in Sources */,
 				B934AFE024FFA88D000FCEB3 /* LoginViewController.swift in Sources */,
 				6ADC3B102509FA6500E88D7C /* MyGroupViewController.swift in Sources */,
+				B9673E00250F2B8C005E6BB8 /* MyTaskTableViewCell.swift in Sources */,
 				B9D053512501FF0500F1AC03 /* ForgetPasswordViewController.swift in Sources */,
 				B94585DB2509C6DA00330DAC /* HomeViewController.swift in Sources */,
 				B99FA3172505E07100A59C59 /* RegisterModel.swift in Sources */,
 				B934AF4724FF4B82000FCEB3 /* SceneDelegate.swift in Sources */,
+				B9673E14250F7AE1005E6BB8 /* ModulesTableViewCell.swift in Sources */,
 				6ADC3B1E250A1C4A00E88D7C /* MyGroupTableViewCell.swift in Sources */,
 				B94585F1250A0D7D00330DAC /* EventDetailModel.swift in Sources */,
 				B9D053542502185600F1AC03 /* ForgetPasswordModel.swift in Sources */,
 				B9D05357250225A600F1AC03 /* DigilearnKeys.swift in Sources */,
+				B9673E09250F5F74005E6BB8 /* ListCourseModel.swift in Sources */,
 				B94585F3250A2FFE00330DAC /* RegisterEventModel.swift in Sources */,
 				6A8D5E6A250F219A0069967C /* MyGroupDetailViewController.swift in Sources */,
 			);

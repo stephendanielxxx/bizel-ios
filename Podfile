@@ -17,6 +17,7 @@ target 'Digilearn_001' do
   pod 'MaterialComponents/BottomNavigation'
   pod 'ImageSlideshow', '~> 1.9.0'
   pod 'ImageSlideshow/Alamofire'
+  pod 'MaterialComponents/Tabs+TabBarView'
   # Pods for Digilearn_001
 
   target 'Digilearn_001Tests' do

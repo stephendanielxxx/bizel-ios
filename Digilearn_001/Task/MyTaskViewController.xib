@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyTaskViewController" customModule="Digilearn_001" customModuleProvider="target">
+            <connections>
+                <outlet property="activeButton" destination="40D-4q-tD9" id="TXB-du-Vqf"/>
+                <outlet property="expiredButton" destination="avL-1y-O0K" id="HRZ-kQ-UmN"/>
+                <outlet property="taskView" destination="FWg-wQ-E0M" id="MOf-Wf-ULI"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="40i-Un-Iik" userLabel="Content View">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QZX-u8-0ho">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <color key="barTintColor" name="color_ D44444"/>
+                            <textAttributes key="titleTextAttributes">
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </textAttributes>
+                            <items>
+                                <navigationItem id="Xyi-lh-qqr">
+                                    <barButtonItem key="leftBarButtonItem" title="Task" id="uWv-pg-2YQ">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="backAction:" destination="-1" id="PoG-X7-lQM"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </navigationItem>
+                            </items>
+                        </navigationBar>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bqb-W3-Yok" userLabel="Header">
+                            <rect key="frame" x="0.0" y="44" width="414" height="70"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40D-4q-tD9">
+                                    <rect key="frame" x="55" y="18" width="125" height="34"/>
+                                    <color key="backgroundColor" name="color_ B63532"/>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <inset key="contentEdgeInsets" minX="6" minY="6" maxX="6" maxY="6"/>
+                                    <inset key="titleEdgeInsets" minX="12" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <state key="normal" title="Active" image="checkmark.circle" catalog="system"/>
+                                    <connections>
+                                        <action selector="activeAction:" destination="-1" eventType="touchUpInside" id="arp-2i-V76"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="avL-1y-O0K">
+                                    <rect key="frame" x="238" y="18" width="125" height="34"/>
+                                    <color key="backgroundColor" name="color_ D44444"/>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <inset key="contentEdgeInsets" minX="6" minY="6" maxX="6" maxY="6"/>
+                                    <inset key="titleEdgeInsets" minX="12" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <state key="normal" title="Expired" image="xmark.circle" catalog="system"/>
+                                    <connections>
+                                        <action selector="expiredAction:" destination="-1" eventType="touchUpInside" id="qm0-ne-dRk"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" name="color_ D44444"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="avL-1y-O0K" secondAttribute="trailing" constant="51" id="Ahm-ms-d0Y"/>
+                                <constraint firstItem="avL-1y-O0K" firstAttribute="leading" secondItem="40D-4q-tD9" secondAttribute="trailing" constant="58" id="LoT-p6-U5C"/>
+                                <constraint firstItem="avL-1y-O0K" firstAttribute="width" secondItem="40D-4q-tD9" secondAttribute="width" id="O5j-el-15t"/>
+                                <constraint firstItem="40D-4q-tD9" firstAttribute="centerY" secondItem="Bqb-W3-Yok" secondAttribute="centerY" id="Orj-5T-JIR"/>
+                                <constraint firstItem="avL-1y-O0K" firstAttribute="centerY" secondItem="Bqb-W3-Yok" secondAttribute="centerY" id="S1j-zZ-tu2"/>
+                                <constraint firstAttribute="height" constant="70" id="hRf-1i-pqo"/>
+                                <constraint firstItem="40D-4q-tD9" firstAttribute="leading" secondItem="Bqb-W3-Yok" secondAttribute="leading" constant="55" id="l1A-7t-zk4"/>
+                                <constraint firstItem="avL-1y-O0K" firstAttribute="centerY" secondItem="40D-4q-tD9" secondAttribute="centerY" id="xQn-71-uma"/>
+                            </constraints>
+                        </view>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FWg-wQ-E0M" userLabel="List Task">
+                            <rect key="frame" x="0.0" y="112" width="414" height="706"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemGray4Color" red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="QZX-u8-0ho" secondAttribute="trailing" id="2mb-0G-XBn"/>
+                        <constraint firstItem="Bqb-W3-Yok" firstAttribute="width" secondItem="QZX-u8-0ho" secondAttribute="width" id="CKx-kP-43B"/>
+                        <constraint firstItem="FWg-wQ-E0M" firstAttribute="leading" secondItem="Bqb-W3-Yok" secondAttribute="leading" id="CNh-kd-qsh"/>
+                        <constraint firstItem="FWg-wQ-E0M" firstAttribute="trailing" secondItem="Bqb-W3-Yok" secondAttribute="trailing" id="Iju-hh-QcT"/>
+                        <constraint firstAttribute="bottom" secondItem="FWg-wQ-E0M" secondAttribute="bottom" id="MHm-Jg-fdP"/>
+                        <constraint firstItem="QZX-u8-0ho" firstAttribute="width" secondItem="40i-Un-Iik" secondAttribute="width" id="Owo-EC-QW9"/>
+                        <constraint firstItem="QZX-u8-0ho" firstAttribute="top" secondItem="40i-Un-Iik" secondAttribute="top" id="Twh-vh-9Qm"/>
+                        <constraint firstItem="Bqb-W3-Yok" firstAttribute="trailing" secondItem="QZX-u8-0ho" secondAttribute="trailing" id="idt-At-vBd"/>
+                        <constraint firstItem="QZX-u8-0ho" firstAttribute="leading" secondItem="40i-Un-Iik" secondAttribute="leading" id="mHM-pC-Lhb"/>
+                        <constraint firstItem="Bqb-W3-Yok" firstAttribute="leading" secondItem="QZX-u8-0ho" secondAttribute="leading" id="s5m-3i-rnA"/>
+                        <constraint firstItem="Bqb-W3-Yok" firstAttribute="top" secondItem="QZX-u8-0ho" secondAttribute="bottom" id="sSY-9Y-dcG"/>
+                        <constraint firstItem="FWg-wQ-E0M" firstAttribute="top" secondItem="Bqb-W3-Yok" secondAttribute="bottom" constant="-2" id="u5B-Sb-Jnj"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="40i-Un-Iik" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="9TS-wc-p9v"/>
+                <constraint firstItem="40i-Un-Iik" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" id="FyU-Gm-HQI"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="40i-Un-Iik" secondAttribute="bottom" id="MdC-9Z-ceR"/>
+                <constraint firstItem="40i-Un-Iik" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" id="SZH-3E-Rju"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="40i-Un-Iik" secondAttribute="trailing" id="myx-lP-NgR"/>
+                <constraint firstItem="40i-Un-Iik" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ujK-wo-wPZ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="145.98214285714286"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="checkmark.circle" catalog="system" width="128" height="121"/>
+        <image name="xmark.circle" catalog="system" width="128" height="121"/>
+        <namedColor name="color_ B63532">
+            <color red="0.71399998664855957" green="0.20800000429153442" blue="0.19599999487400055" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="color_ D44444">
+            <color red="0.83099997043609619" green="0.2669999897480011" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

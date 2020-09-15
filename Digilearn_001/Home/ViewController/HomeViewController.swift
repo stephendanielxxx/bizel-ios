@@ -23,7 +23,7 @@ class HomeViewController: UIViewController {
 //        tableView.register(UINib(nibName: "SliderTableViewCell", bundle: nil), forCellReuseIdentifier: "SliderIdentifier")
          tableView.register(UINib(nibName: "HomeBannerTableViewCell", bundle: nil), forCellReuseIdentifier: "homeBannerIdentifier")
         tableView.register(UINib(nibName: "MenuTableViewCell", bundle: nil), forCellReuseIdentifier: "MenuIdentifier")
-        tableView.register(UINib(nibName: "EventTableViewCell", bundle: nil), forCellReuseIdentifier: "EventIdentifier")
+        tableView.register(UINib(nibName: "HomeEventTableViewCell", bundle: nil), forCellReuseIdentifier: "homeEventIdentifier")
         
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 180
@@ -42,17 +42,6 @@ extension HomeViewController: UITableViewDataSource {
         1
     }
     
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        debugPrint(indexPath.row)
-//        if(indexPath.row == 0){
-//            return 250
-//        }else if(indexPath.row == 1){
-//            return 10
-//        }else{
-//            return 100
-//        }
-//    }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
 //            let cell: SliderTableViewCell = tableView.dequeueReusableCell(withIdentifier: "SliderIdentifier") as! SliderTableViewCell
@@ -67,9 +56,11 @@ extension HomeViewController: UITableViewDataSource {
             cell.eventIcon.addTarget(self, action: #selector(HomeViewController.openEvent(_:)), for: .touchUpInside)
             cell.announcementicon.addTarget(self, action: #selector(HomeViewController.openAnnouncement(_:)), for: .touchUpInside)
             
+             cell.groupIcon.addTarget(self, action: #selector(HomeViewController.openGroup), for: .touchUpInside)
+            
             return cell
         } else {
-            let cell: EventTableViewCell = tableView.dequeueReusableCell(withIdentifier: "EventIdentifier") as! EventTableViewCell
+            let cell: HomeEventTableViewCell = tableView.dequeueReusableCell(withIdentifier: "homeEventIdentifier") as! HomeEventTableViewCell
             return cell
         }
     }
@@ -87,6 +78,14 @@ extension HomeViewController: UITableViewDataSource {
         event.modalPresentationStyle = .fullScreen
     
         self.present(event, animated: true, completion: nil)
+    }
+    
+    @objc func openGroup(_ sender: UIButton?) {
+        let group = MyGroupViewController()
+
+        group.modalPresentationStyle = .fullScreen
+    
+        self.present(group, animated: true, completion: nil)
     }
     
 }

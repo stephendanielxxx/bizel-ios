@@ -28,6 +28,8 @@ class HomeBannerTableViewCell: UITableViewCell {
         slideShow.contentScaleMode = .scaleToFill
         slideShow.clipsToBounds = true
         
+        slideShow.scrollView.layer.cornerRadius = 15
+        
         slideShow.pageIndicatorPosition = PageIndicatorPosition(horizontal: .center, vertical: .under)
 
         loadData()
