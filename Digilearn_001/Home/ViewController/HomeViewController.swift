@@ -54,6 +54,7 @@ extension HomeViewController: UITableViewDataSource {
             let cell: MenuTableViewCell = tableView.dequeueReusableCell(withIdentifier: "MenuIdentifier") as! MenuTableViewCell
             
             cell.eventIcon.addTarget(self, action: #selector(HomeViewController.openEvent(_:)), for: .touchUpInside)
+            cell.announcementicon.addTarget(self, action: #selector(HomeViewController.openAnnouncement(_:)), for: .touchUpInside)
             
              cell.groupIcon.addTarget(self, action: #selector(HomeViewController.openGroup), for: .touchUpInside)
             
@@ -66,6 +67,13 @@ extension HomeViewController: UITableViewDataSource {
     
     @objc func openEvent(_ sender: UIButton?) {
         let event = MyEventViewController()
+
+        event.modalPresentationStyle = .fullScreen
+    
+        self.present(event, animated: true, completion: nil)
+    }
+    @objc func openAnnouncement(_ sender: UIButton?) {
+        let event = AnnounceViewController()
 
         event.modalPresentationStyle = .fullScreen
     
