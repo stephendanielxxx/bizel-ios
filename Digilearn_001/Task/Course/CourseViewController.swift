@@ -108,7 +108,10 @@ class CourseViewController: UIViewController {
         modules.course_id = course_id
         embed(modules, inParent: self, inView: tabContent)
     }
-    
+
+}
+
+extension UIViewController{
     func embed(_ viewController:UIViewController, inParent controller:UIViewController, inView view:UIView){
        viewController.willMove(toParent: controller)
        viewController.view.frame = view.bounds
@@ -117,3 +120,4 @@ class CourseViewController: UIViewController {
        viewController.didMove(toParent: controller)
     }
 }
+

@@ -75,6 +75,8 @@
 		B99FA32625060C0B00A59C59 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99FA32525060C0B00A59C59 /* EventModel.swift */; };
 		B9A115FB2510746800852131 /* TopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A115F92510746800852131 /* TopicViewController.swift */; };
 		B9A115FC2510746800852131 /* TopicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9A115FA2510746800852131 /* TopicViewController.xib */; };
+		B9A116002510864200852131 /* AbousTopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A115FE2510864200852131 /* AbousTopicViewController.swift */; };
+		B9A116012510864200852131 /* AbousTopicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9A115FF2510864200852131 /* AbousTopicViewController.xib */; };
 		B9D0534D2501E06B00F1AC03 /* DigilearnParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D0534C2501E06B00F1AC03 /* DigilearnParams.swift */; };
 		B9D053512501FF0500F1AC03 /* ForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D0534F2501FF0500F1AC03 /* ForgetPasswordViewController.swift */; };
 		B9D053522501FF0500F1AC03 /* ForgetPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9D053502501FF0500F1AC03 /* ForgetPasswordViewController.xib */; };
@@ -182,6 +184,8 @@
 		B99FA32525060C0B00A59C59 /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
 		B9A115F92510746800852131 /* TopicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicViewController.swift; sourceTree = "<group>"; };
 		B9A115FA2510746800852131 /* TopicViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopicViewController.xib; sourceTree = "<group>"; };
+		B9A115FE2510864200852131 /* AbousTopicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbousTopicViewController.swift; sourceTree = "<group>"; };
+		B9A115FF2510864200852131 /* AbousTopicViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AbousTopicViewController.xib; sourceTree = "<group>"; };
 		B9D0534C2501E06B00F1AC03 /* DigilearnParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigilearnParams.swift; sourceTree = "<group>"; };
 		B9D0534F2501FF0500F1AC03 /* ForgetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewController.swift; sourceTree = "<group>"; };
 		B9D053502501FF0500F1AC03 /* ForgetPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgetPasswordViewController.xib; sourceTree = "<group>"; };
@@ -443,15 +447,10 @@
 		B9673E02250F55BD005E6BB8 /* Course */ = {
 			isa = PBXGroup;
 			children = (
+				B9A115FD2510861D00852131 /* Module */,
 				B9A115F82510743E00852131 /* Topic */,
 				B9673E04250F561D005E6BB8 /* CourseViewController.swift */,
 				B9673E05250F561D005E6BB8 /* CourseViewController.xib */,
-				B9673E0A250F7039005E6BB8 /* AboutCourseViewController.swift */,
-				B9673E0B250F7039005E6BB8 /* AboutCourseViewController.xib */,
-				B9673E0E250F748F005E6BB8 /* ModulesViewController.swift */,
-				B9673E0F250F748F005E6BB8 /* ModulesViewController.xib */,
-				B9673E12250F7AE1005E6BB8 /* ModulesTableViewCell.swift */,
-				B9673E13250F7AE1005E6BB8 /* ModulesTableViewCell.xib */,
 			);
 			path = Course;
 			sourceTree = "<group>";
@@ -538,8 +537,23 @@
 			children = (
 				B9A115F92510746800852131 /* TopicViewController.swift */,
 				B9A115FA2510746800852131 /* TopicViewController.xib */,
+				B9A115FE2510864200852131 /* AbousTopicViewController.swift */,
+				B9A115FF2510864200852131 /* AbousTopicViewController.xib */,
 			);
 			path = Topic;
+			sourceTree = "<group>";
+		};
+		B9A115FD2510861D00852131 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				B9673E0A250F7039005E6BB8 /* AboutCourseViewController.swift */,
+				B9673E0B250F7039005E6BB8 /* AboutCourseViewController.xib */,
+				B9673E0E250F748F005E6BB8 /* ModulesViewController.swift */,
+				B9673E0F250F748F005E6BB8 /* ModulesViewController.xib */,
+				B9673E12250F7AE1005E6BB8 /* ModulesTableViewCell.swift */,
+				B9673E13250F7AE1005E6BB8 /* ModulesTableViewCell.xib */,
+			);
+			path = Module;
 			sourceTree = "<group>";
 		};
 		B9D0534B2501E04100F1AC03 /* utils */ = {
@@ -701,6 +715,7 @@
 				6ADC3B1C250A142E00E88D7C /* MyGroupTableViewCell.xib in Resources */,
 				B98C449C250B452B00363F8C /* HomeBannerTableViewCell.xib in Resources */,
 				B98C44A3250B689600363F8C /* HomeEventTableViewCell.xib in Resources */,
+				B9A116012510864200852131 /* AbousTopicViewController.xib in Resources */,
 				B934AFC924FF8380000FCEB3 /* color.xcassets in Resources */,
 				B98C44AC250B7B3100363F8C /* EventCollectionViewCell.xib in Resources */,
 				B9D0535B2502278F00F1AC03 /* RegisterViewController.xib in Resources */,
@@ -856,6 +871,7 @@
 				6ADC3B29250B28C200E88D7C /* AnnounceTableViewCell.swift in Sources */,
 				6ADC3B142509FB1800E88D7C /* GroupModel.swift in Sources */,
 				B98C449B250B452B00363F8C /* HomeBannerTableViewCell.swift in Sources */,
+				B9A116002510864200852131 /* AbousTopicViewController.swift in Sources */,
 				B934AF4F24FF4B82000FCEB3 /* Digilearn_001.xcdatamodeld in Sources */,
 				B934AF4524FF4B82000FCEB3 /* AppDelegate.swift in Sources */,
 				B94585E12509C6DA00330DAC /* MenuTableViewCell.swift in Sources */,

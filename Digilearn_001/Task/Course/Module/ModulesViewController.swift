@@ -94,11 +94,17 @@ extension ModulesViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     @objc func openDetail(_ sender: UIButton?) {
-        let topic = TopicViewController()
-        topic.modalPresentationStyle = .fullScreen
-        
         let index = sender!.tag
         let task = listCourseModel.moduleDetail[index]
+        
+        let topic = TopicViewController()
+        
+        topic.moduleImage = task.moduleImage
+        topic.moduleAuthor = task.courseAuthor
+        topic.moduleTitle = task.moduleName
+        topic.moduleDesc = task.moduleDesc
+        
+        topic.modalPresentationStyle = .fullScreen
         
         if task.courseAccess.caseInsensitiveCompare("Random") == .orderedSame{
             self.present(topic, animated: true, completion: nil)
