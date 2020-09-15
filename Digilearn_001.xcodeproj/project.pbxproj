@@ -73,6 +73,8 @@
 		B99FA32025060A0B00A59C59 /* MyEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99FA31E25060A0B00A59C59 /* MyEventViewController.swift */; };
 		B99FA32125060A0B00A59C59 /* MyEventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B99FA31F25060A0B00A59C59 /* MyEventViewController.xib */; };
 		B99FA32625060C0B00A59C59 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99FA32525060C0B00A59C59 /* EventModel.swift */; };
+		B9A115FB2510746800852131 /* TopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A115F92510746800852131 /* TopicViewController.swift */; };
+		B9A115FC2510746800852131 /* TopicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9A115FA2510746800852131 /* TopicViewController.xib */; };
 		B9D0534D2501E06B00F1AC03 /* DigilearnParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D0534C2501E06B00F1AC03 /* DigilearnParams.swift */; };
 		B9D053512501FF0500F1AC03 /* ForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D0534F2501FF0500F1AC03 /* ForgetPasswordViewController.swift */; };
 		B9D053522501FF0500F1AC03 /* ForgetPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9D053502501FF0500F1AC03 /* ForgetPasswordViewController.xib */; };
@@ -178,6 +180,8 @@
 		B99FA31E25060A0B00A59C59 /* MyEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventViewController.swift; sourceTree = "<group>"; };
 		B99FA31F25060A0B00A59C59 /* MyEventViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyEventViewController.xib; sourceTree = "<group>"; };
 		B99FA32525060C0B00A59C59 /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
+		B9A115F92510746800852131 /* TopicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicViewController.swift; sourceTree = "<group>"; };
+		B9A115FA2510746800852131 /* TopicViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopicViewController.xib; sourceTree = "<group>"; };
 		B9D0534C2501E06B00F1AC03 /* DigilearnParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigilearnParams.swift; sourceTree = "<group>"; };
 		B9D0534F2501FF0500F1AC03 /* ForgetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewController.swift; sourceTree = "<group>"; };
 		B9D053502501FF0500F1AC03 /* ForgetPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgetPasswordViewController.xib; sourceTree = "<group>"; };
@@ -439,6 +443,7 @@
 		B9673E02250F55BD005E6BB8 /* Course */ = {
 			isa = PBXGroup;
 			children = (
+				B9A115F82510743E00852131 /* Topic */,
 				B9673E04250F561D005E6BB8 /* CourseViewController.swift */,
 				B9673E05250F561D005E6BB8 /* CourseViewController.xib */,
 				B9673E0A250F7039005E6BB8 /* AboutCourseViewController.swift */,
@@ -526,6 +531,15 @@
 				B94585F2250A2FFE00330DAC /* RegisterEventModel.swift */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		B9A115F82510743E00852131 /* Topic */ = {
+			isa = PBXGroup;
+			children = (
+				B9A115F92510746800852131 /* TopicViewController.swift */,
+				B9A115FA2510746800852131 /* TopicViewController.xib */,
+			);
+			path = Topic;
 			sourceTree = "<group>";
 		};
 		B9D0534B2501E04100F1AC03 /* utils */ = {
@@ -695,6 +709,7 @@
 				B94585DC2509C6DA00330DAC /* MenuTableViewCell.xib in Resources */,
 				B99FA31C2505E65D00A59C59 /* FAQViewController.xib in Resources */,
 				B94585E72509CB1700330DAC /* HomeViewController.xib in Resources */,
+				B9A115FC2510746800852131 /* TopicViewController.xib in Resources */,
 				B99FA3152505D2E600A59C59 /* PrivacyViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -833,6 +848,7 @@
 				B9673DF7250F23F1005E6BB8 /* ListTaskModel.swift in Sources */,
 				B98C44AB250B7B3100363F8C /* EventCollectionViewCell.swift in Sources */,
 				B9D0534D2501E06B00F1AC03 /* DigilearnParams.swift in Sources */,
+				B9A115FB2510746800852131 /* TopicViewController.swift in Sources */,
 				B98C449F250B4DCA00363F8C /* BannerModel.swift in Sources */,
 				B99FA32025060A0B00A59C59 /* MyEventViewController.swift in Sources */,
 				6ADC3B22250A2ECA00E88D7C /* AnnounceModel.swift in Sources */,

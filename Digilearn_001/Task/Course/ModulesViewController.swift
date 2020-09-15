@@ -86,6 +86,37 @@ extension ModulesViewController: UITableViewDelegate, UITableViewDataSource{
         
         cell.moduleLabel.text = moduleDetail.moduleName
         
+        cell.cardView.tag = indexPath.row
+        
+        cell.cardView.addTarget(self, action: #selector(ModulesViewController.openDetail(_:)), for: .touchUpInside)
+        
         return cell
+    }
+    
+    @objc func openDetail(_ sender: UIButton?) {
+        let topic = TopicViewController()
+        topic.modalPresentationStyle = .fullScreen
+        
+        let index = sender!.tag
+        let task = listCourseModel.moduleDetail[index]
+        
+        if task.courseAccess.caseInsensitiveCompare("Random") == .orderedSame{
+            self.present(topic, animated: true, completion: nil)
+        }else{
+            if index > 0 {
+                let taskBefore =
+                    listCourseModel.moduleDetail[sender!.tag - 1]
+                
+                if(taskBefore.moduleFinish.caseInsensitiveCompare("Finish") == .orderedSame){
+                    self.present(topic, animated: true, completion: nil)
+                }else{
+                    let alert = UIAlertController(title: "", message: "Oops, you can't open this module. Please finish the previous module in order!", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
+                    self.present(alert, animated: true)
+                }
+            }else{
+                self.present(topic, animated: true, completion: nil)
+            }
+        }
     }
 }
