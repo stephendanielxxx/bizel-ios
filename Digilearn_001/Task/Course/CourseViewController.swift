@@ -25,11 +25,19 @@ class CourseViewController: UIViewController {
     @IBOutlet weak var tabContent: UIView!
     @IBOutlet weak var modulesButton: UIButton!
     @IBOutlet weak var aboutButton: UIButton!
+    @IBOutlet weak var modulesLine: UIView!
+    @IBOutlet weak var aboutLine: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        setInitial()
         loadData()
+    }
+    
+    func setInitial(){
+        let modules = ModulesViewController()
+        modules.course_id = course_id
+        embed(modules, inParent: self, inView: tabContent)
     }
     
     @IBAction func backAction(_ sender: UIBarButtonItem) {
@@ -76,12 +84,26 @@ class CourseViewController: UIViewController {
     }
     
     @IBAction func aboutAction(_ sender: UIButton) {
+        
+        aboutLine.backgroundColor = UIColor(named: "red_1")
+        modulesLine.backgroundColor = UIColor.white
+        
+        aboutButton.setTitleColor(UIColor(named: "red_1"), for: .normal)
+        modulesButton.setTitleColor(UIColor.lightGray, for: .normal)
+        
         let about = AboutCourseViewController()
         about.course_about = course_about
         embed(about, inParent: self, inView: tabContent)
     }
     
     @IBAction func moduleAction(_ sender: UIButton) {
+        
+        modulesLine.backgroundColor = UIColor(named: "red_1")
+        aboutLine.backgroundColor = UIColor.white
+        
+        modulesButton.setTitleColor(UIColor(named: "red_1"), for: .normal)
+        aboutButton.setTitleColor(UIColor.lightGray, for: .normal)
+        
         let modules = ModulesViewController()
         modules.course_id = course_id
         embed(modules, inParent: self, inView: tabContent)

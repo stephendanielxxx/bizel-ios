@@ -75,7 +75,14 @@ extension ModulesViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = moduleView.dequeueReusableCell(withIdentifier: "moduleIdentifier") as! ModulesTableViewCell
+        
         let moduleDetail: ModuleDetail = listCourseModel.moduleDetail[indexPath.row]
+        
+        if moduleDetail.moduleFinish == "finish"{
+            cell.moduleLabel.textColor = UIColor.black
+        }else{
+            cell.moduleLabel.textColor = UIColor.lightGray
+        }
         
         cell.moduleLabel.text = moduleDetail.moduleName
         

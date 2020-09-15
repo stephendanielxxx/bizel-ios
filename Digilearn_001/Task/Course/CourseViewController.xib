@@ -11,10 +11,12 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CourseViewController" customModule="Digilearn_001" customModuleProvider="target">
             <connections>
                 <outlet property="aboutButton" destination="DOE-t9-MIv" id="XMh-aR-0jK"/>
+                <outlet property="aboutLine" destination="TDX-1x-ijb" id="hft-al-5Av"/>
                 <outlet property="courseCreatedBy" destination="62o-8F-crI" id="KzY-xm-t4b"/>
                 <outlet property="courseImage" destination="pNS-Fh-sV5" id="GIP-PD-R1C"/>
                 <outlet property="courseTitle" destination="4e6-HR-Qb8" id="CZv-4i-3JS"/>
                 <outlet property="modulesButton" destination="Sj3-64-oBT" id="zvr-yX-IN4"/>
+                <outlet property="modulesLine" destination="4dt-SO-LV7" id="0xt-gw-cY3"/>
                 <outlet property="tabContent" destination="DKc-kt-dEt" id="lee-Yg-wyC"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -65,26 +67,55 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4cS-c8-UIO" userLabel="Tab View">
                             <rect key="frame" x="0.0" y="228" width="414" height="50"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sj3-64-oBT">
-                                    <rect key="frame" x="0.0" y="0.0" width="207" height="50"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" title="Modules"/>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sj3-64-oBT">
+                                    <rect key="frame" x="0.0" y="10" width="207" height="30"/>
+                                    <state key="normal" title="Modules">
+                                        <color key="titleColor" name="red_1"/>
+                                    </state>
                                     <connections>
                                         <action selector="moduleAction:" destination="-1" eventType="touchUpInside" id="Kp5-eb-Gf1"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DOE-t9-MIv">
-                                    <rect key="frame" x="207" y="0.0" width="207" height="50"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" title="About The Course"/>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DOE-t9-MIv">
+                                    <rect key="frame" x="207" y="10" width="207" height="30"/>
+                                    <state key="normal" title="About The Course">
+                                        <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
                                     <connections>
                                         <action selector="aboutAction:" destination="-1" eventType="touchUpInside" id="YPQ-yK-K9t"/>
                                     </connections>
                                 </button>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4dt-SO-LV7" userLabel="Module Line">
+                                    <rect key="frame" x="0.0" y="45" width="207" height="5"/>
+                                    <color key="backgroundColor" name="red_1"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="5" id="5JZ-Ji-2KG"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TDX-1x-ijb" userLabel="About Line">
+                                    <rect key="frame" x="207" y="45" width="207" height="5"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="5" id="qoD-MY-Eec"/>
+                                    </constraints>
+                                </view>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
+                                <constraint firstItem="Sj3-64-oBT" firstAttribute="leading" secondItem="4cS-c8-UIO" secondAttribute="leading" id="4d9-wl-CIp"/>
+                                <constraint firstItem="TDX-1x-ijb" firstAttribute="width" secondItem="4dt-SO-LV7" secondAttribute="width" id="51H-vE-Z9z"/>
+                                <constraint firstItem="TDX-1x-ijb" firstAttribute="leading" secondItem="4dt-SO-LV7" secondAttribute="trailing" id="5lb-Ss-27m"/>
+                                <constraint firstAttribute="trailing" secondItem="TDX-1x-ijb" secondAttribute="trailing" id="7dJ-aG-WQM"/>
                                 <constraint firstAttribute="height" constant="50" id="CMG-kN-D6A"/>
+                                <constraint firstItem="Sj3-64-oBT" firstAttribute="width" secondItem="DOE-t9-MIv" secondAttribute="width" id="Hy8-2z-kYP"/>
+                                <constraint firstAttribute="bottom" secondItem="TDX-1x-ijb" secondAttribute="bottom" id="SQp-Ko-lyE"/>
+                                <constraint firstItem="4dt-SO-LV7" firstAttribute="leading" secondItem="4cS-c8-UIO" secondAttribute="leading" id="WSv-7Q-Sdd"/>
+                                <constraint firstItem="DOE-t9-MIv" firstAttribute="centerY" secondItem="Sj3-64-oBT" secondAttribute="centerY" id="Xyu-cH-z2E"/>
+                                <constraint firstItem="DOE-t9-MIv" firstAttribute="leading" secondItem="Sj3-64-oBT" secondAttribute="trailing" id="dxw-9G-E0u"/>
+                                <constraint firstAttribute="trailing" secondItem="DOE-t9-MIv" secondAttribute="trailing" id="hkK-br-3bE"/>
+                                <constraint firstItem="Sj3-64-oBT" firstAttribute="centerY" secondItem="4cS-c8-UIO" secondAttribute="centerY" id="jCo-KP-b0E"/>
+                                <constraint firstItem="Sj3-64-oBT" firstAttribute="height" secondItem="DOE-t9-MIv" secondAttribute="height" id="pQ1-Sr-pRO"/>
+                                <constraint firstAttribute="bottom" secondItem="4dt-SO-LV7" secondAttribute="bottom" id="pyT-TH-cGs"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DKc-kt-dEt" userLabel="Tab Content">
@@ -132,6 +163,9 @@
         <image name="arrow.left" catalog="system" width="128" height="98"/>
         <namedColor name="color_ D44444">
             <color red="0.83099997043609619" green="0.2669999897480011" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="red_1">
+            <color red="0.60399997234344482" green="0.27099999785423279" blue="0.23499999940395355" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>

@@ -168,9 +168,9 @@ extension MyTaskViewController: UITableViewDelegate, UITableViewDataSource{
         cell.totalLabel.text = "\(taskModel.totalFinished)/\(taskModel.totalAction)"
         
         if(Int(taskModel.totalFinished) ?? 0 > 0){
-             cell.startTaskButton.titleLabel?.text = "Continue"
+             cell.startTaskButton.setTitle("Continue", for: .normal)
         }else{
-             cell.startTaskButton.titleLabel?.text = "Start"
+             cell.startTaskButton.setTitle("Start", for: .normal)
         }
        
         let finished = (taskModel.totalFinished as NSString).floatValue
