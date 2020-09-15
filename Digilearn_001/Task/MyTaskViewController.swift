@@ -75,6 +75,7 @@ class MyTaskViewController: UIViewController {
                                 if task.courseEnd != nil{
                                     if task.courseEnd?.toDate()?.compare(self.date) == .orderedAscending{
                                         self.listTaskModel.courseByUid.remove(at: index)
+                                        index = index - 1
                                     }
                                 }
                                 
@@ -125,8 +126,10 @@ class MyTaskViewController: UIViewController {
                                 
                                 if task.courseEnd == nil{
                                     self.listTaskModel.courseByUid.remove(at: index)
+                                    index = index - 1
                                 }else if task.courseEnd?.toDate()?.compare(self.date) == .orderedDescending{
                                     self.listTaskModel.courseByUid.remove(at: index)
+                                    index = index - 1
                                 }
                                 
                                 index = index + 1
