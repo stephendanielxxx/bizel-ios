@@ -32,16 +32,16 @@ class HomeTabBarController: UITabBarController {
         view.addSubview(bottomNavBar)
         
         let homeViewController = HomeViewController()
-        let eventViewController = MyEventViewController()
+        let taskViewController = MyTaskViewController()
         let test1 = MyEventViewController()
         let test2 = MyEventViewController()
         
         homeViewController.tabBarItem = homeItem
-        eventViewController.tabBarItem = taskItem
+        taskViewController.tabBarItem = taskItem
         test1.tabBarItem = libraryItem
         test2.tabBarItem = profileItem
         
-        viewControllers = [homeViewController, eventViewController, test1, test2]
+        viewControllers = [homeViewController, taskViewController, test1, test2]
     }
 
 }
