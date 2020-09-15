@@ -24,8 +24,12 @@ class ModulesViewController: UIViewController {
         moduleView.delegate = self
         moduleView.dataSource = self
         
-        loadData()
+        
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        loadData()
     }
     
     func loadData(){

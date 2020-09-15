@@ -20,18 +20,27 @@
                         <rect key="frame" x="16" y="4" width="288" height="42"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9q-3A-25r">
-                                <rect key="frame" x="24" y="11" width="240" height="18"/>
+                                <rect key="frame" x="24" y="11" width="218" height="18"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_module" translatesAutoresizingMaskIntoConstraints="NO" id="8Hy-uF-zdx">
+                                <rect key="frame" x="250" y="8.5" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="g2V-4z-CKB"/>
+                                    <constraint firstAttribute="width" constant="25" id="nCc-mE-hET"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="X9q-3A-25r" firstAttribute="top" secondItem="lCg-y5-C4Q" secondAttribute="top" constant="11" id="9TV-0U-Dcs"/>
+                            <constraint firstAttribute="trailing" secondItem="8Hy-uF-zdx" secondAttribute="trailing" constant="13" id="DYn-4b-0Cv"/>
+                            <constraint firstItem="8Hy-uF-zdx" firstAttribute="leading" secondItem="X9q-3A-25r" secondAttribute="trailing" constant="8" id="RtX-6L-pNK"/>
                             <constraint firstAttribute="bottom" secondItem="X9q-3A-25r" secondAttribute="bottom" constant="13" id="Z9n-gG-wjN"/>
                             <constraint firstItem="X9q-3A-25r" firstAttribute="leading" secondItem="lCg-y5-C4Q" secondAttribute="leading" constant="24" id="i7H-Ql-MgO"/>
-                            <constraint firstAttribute="trailing" secondItem="X9q-3A-25r" secondAttribute="trailing" constant="24" id="j21-hP-Bhr"/>
+                            <constraint firstItem="8Hy-uF-zdx" firstAttribute="centerY" secondItem="lCg-y5-C4Q" secondAttribute="centerY" id="n6L-Gp-4OF"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -50,4 +59,7 @@
             <point key="canvasLocation" x="137.68115942028987" y="147.99107142857142"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="ic_module" width="29" height="29"/>
+    </resources>
 </document>
