@@ -12,7 +12,7 @@ import Reqres
 import MaterialComponents.MaterialCards
 
 class EventDetailViewController: UIViewController {
-
+    
     @IBOutlet weak var navigationBar: UINavigationBar!
     @IBOutlet weak var descriptionText: UITextView!
     @IBOutlet weak var addressLabel: UILabel!
@@ -25,7 +25,7 @@ class EventDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         Reqres.register()
         loadData(var: eventId)
         
@@ -38,20 +38,20 @@ class EventDetailViewController: UIViewController {
     }
     
     func loadData(var eventId: String){
-         let URL = "\(DigilearnParams.ApiUrl)/onsite/get_detail/\(eventId)"
-           
-         AF.request(URL,
-                      method: .get,
-                      parameters: nil,
-                      encoding: JSONEncoding.default).responseData { response in
-                        
-                        debugPrint(response)
-                       
-                       switch response.result {
-                       case .success(let data):
-                          let decoder = JSONDecoder()
-                          do{
-
+        let URL = "\(DigilearnParams.ApiUrl)/onsite/get_detail/\(eventId)"
+        
+        AF.request(URL,
+                   method: .get,
+                   parameters: nil,
+                   encoding: JSONEncoding.default).responseData { response in
+                    
+                    debugPrint(response)
+                    
+                    switch response.result {
+                    case .success(let data):
+                        let decoder = JSONDecoder()
+                        do{
+                            
                             self.eventDetailModel = try decoder.decode(EventDetailModel.self, from:data)
                             
                             let eventDetail: OnsiteDetail =  self.eventDetailModel.onsite[0]
@@ -61,16 +61,16 @@ class EventDetailViewController: UIViewController {
                             self.descriptionText.attributedText = eventDetail.desc.htmlToAttributedString
                             
                             self.addressLabel.text = eventDetail.place
-                        
-                           }catch{
-                               print(error.localizedDescription)
-                           }
-                           break
-                       case .failure(let error):
-                           debugPrint("Error")
-                           break
-                       }
-           }
+                            
+                        }catch{
+                            print(error.localizedDescription)
+                        }
+                        break
+                    case .failure(let error):
+                        debugPrint("Error")
+                        break
+                    }
+        }
     }
     
     @IBAction func registerAction(_ sender: UIButton) {
@@ -91,20 +91,20 @@ class EventDetailViewController: UIViewController {
                     switch response.result {
                     case .success(let data):
                         self.removeSpinner()
-                       let decoder = JSONDecoder()
-                       do{
+                        let decoder = JSONDecoder()
+                        do{
                             let registerEventModel = try decoder.decode(RegisterEventModel.self, from:data)
-                        
+                            
                             if(registerEventModel.code == "200"){
                                 let alert = UIAlertController(title: "Event Register Success", message: "\(registerEventModel.message)", preferredStyle: .alert)
-                                   alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-                                   self.present(alert, animated: true)
+                                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                                self.present(alert, animated: true)
                             }else{
                                 let alert = UIAlertController(title: "Event Register Failed", message: "\(registerEventModel.message)", preferredStyle: .alert)
                                 alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
                                 self.present(alert, animated: true)
                             }
-                       }catch{
+                        }catch{
                             print(error.localizedDescription)
                         }
                     case .failure(let error):

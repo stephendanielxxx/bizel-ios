@@ -103,6 +103,8 @@ extension ModulesViewController: UITableViewDelegate, UITableViewDataSource{
         topic.moduleAuthor = task.courseAuthor
         topic.moduleTitle = task.moduleName
         topic.moduleDesc = task.moduleDesc
+        topic.moduleId = task.moduleID
+        topic.courseId = course_id
         
         topic.modalPresentationStyle = .fullScreen
         

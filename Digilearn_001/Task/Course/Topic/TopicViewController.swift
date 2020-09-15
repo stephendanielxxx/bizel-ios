@@ -24,6 +24,8 @@ class TopicViewController: UIViewController {
     var moduleTitle = ""
     var moduleAuthor = ""
     var moduleDesc = ""
+    var courseId = ""
+    var moduleId = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +52,13 @@ class TopicViewController: UIViewController {
         
         topicLine.backgroundColor = UIColor(named: "red_1")
         aboutLine.backgroundColor = UIColor.white
+        
+        let topics = TopicActionViewController()
+        
+        topics.courseId = courseId
+        topics.moduleId = moduleId
+        
+        embed(topics, inParent: self, inView: tabContent)
     }
     
     @IBAction func aboutAction(_ sender: UIButton) {

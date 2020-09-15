@@ -18,6 +18,7 @@ target 'Digilearn_001' do
   pod 'ImageSlideshow', '~> 1.9.0'
   pod 'ImageSlideshow/Alamofire'
   pod 'MaterialComponents/Tabs+TabBarView'
+  pod 'ExpandableCell'
   # Pods for Digilearn_001
 
   target 'Digilearn_001Tests' do
