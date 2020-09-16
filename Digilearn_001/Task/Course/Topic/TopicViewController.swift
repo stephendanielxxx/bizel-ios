@@ -40,6 +40,17 @@ class TopicViewController: UIViewController {
         let url = Foundation.URL(string: "https://digicourse.id/digilearn/admin-master/assets.admin_master/module/image/\(self.moduleImage)")!
 
         self.imageModule.pin_setImage(from: url)
+        
+        setInitial()
+    }
+    
+    func setInitial(){
+        let topics = TopicActionViewController()
+        
+        topics.courseId = courseId
+        topics.moduleId = moduleId
+        
+        embed(topics, inParent: self, inView: tabContent)
     }
     
     @IBAction func backAction(_ sender: UIBarButtonItem) {

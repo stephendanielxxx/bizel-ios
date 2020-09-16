@@ -27,16 +27,15 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yb7-NL-AgI">
-                                <rect key="frame" x="42" y="22" width="199" height="17"/>
+                                <rect key="frame" x="42" y="22" width="201" height="17"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_default_quiz" translatesAutoresizingMaskIntoConstraints="NO" id="MNX-rl-oFe">
-                                <rect key="frame" x="255" y="7" width="45" height="45"/>
+                                <rect key="frame" x="255" y="7" width="45" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="aQr-iV-fUm"/>
-                                    <constraint firstAttribute="width" constant="45" id="f8b-M4-Qu8"/>
+                                    <constraint firstAttribute="width" secondItem="MNX-rl-oFe" secondAttribute="height" multiplier="1:1" constant="5" id="Kcp-rT-DQy"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -44,12 +43,12 @@
                         <constraints>
                             <constraint firstItem="Yb7-NL-AgI" firstAttribute="top" secondItem="feh-vY-gOj" secondAttribute="top" constant="22" id="4xv-5V-AKu"/>
                             <constraint firstItem="vEi-UP-6wJ" firstAttribute="top" secondItem="feh-vY-gOj" secondAttribute="top" constant="19" id="8nj-MV-AYD"/>
-                            <constraint firstAttribute="bottom" secondItem="MNX-rl-oFe" secondAttribute="bottom" constant="7" id="GW5-UG-ynF"/>
+                            <constraint firstAttribute="bottom" secondItem="MNX-rl-oFe" secondAttribute="bottom" constant="12" id="GW5-UG-ynF"/>
                             <constraint firstItem="Yb7-NL-AgI" firstAttribute="leading" secondItem="vEi-UP-6wJ" secondAttribute="trailing" constant="8" id="PcW-eb-wmM"/>
                             <constraint firstItem="vEi-UP-6wJ" firstAttribute="leading" secondItem="feh-vY-gOj" secondAttribute="leading" constant="12" id="SPH-9r-sjh"/>
                             <constraint firstAttribute="bottom" secondItem="vEi-UP-6wJ" secondAttribute="bottom" constant="18" id="ZXe-QZ-UXi"/>
                             <constraint firstAttribute="bottom" secondItem="Yb7-NL-AgI" secondAttribute="bottom" constant="20" id="geq-UN-aP7"/>
-                            <constraint firstItem="MNX-rl-oFe" firstAttribute="leading" secondItem="Yb7-NL-AgI" secondAttribute="trailing" constant="14" id="mJs-6G-FEY"/>
+                            <constraint firstItem="MNX-rl-oFe" firstAttribute="leading" secondItem="Yb7-NL-AgI" secondAttribute="trailing" constant="12" id="mJs-6G-FEY"/>
                             <constraint firstItem="MNX-rl-oFe" firstAttribute="top" secondItem="feh-vY-gOj" secondAttribute="top" constant="7" id="y5x-Ly-oSd"/>
                         </constraints>
                     </view>

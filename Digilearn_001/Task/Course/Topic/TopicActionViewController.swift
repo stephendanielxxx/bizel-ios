@@ -63,8 +63,6 @@ class TopicActionViewController: UIViewController {
                             
                             self.sectionCount = self.topicActionModel.topicDetail.count
                             
-                            debugPrint(self.topicActionModel)
-                                
                             self.topicView.reloadData()
                         }catch{
                             print(error.localizedDescription)
@@ -88,7 +86,7 @@ extension TopicActionViewController: ExpandableDelegate{
     }
     func expandableTableView(_ expandableTableView: ExpandableTableView, numberOfRowsInSection section: Int) -> Int {
         
-//        return self.topicActionModel?.topicDetail[section].topicDetailAction?.count ?? 0
+        //        return self.topicActionModel?.topicDetail[section].topicDetailAction?.count ?? 0
         return sectionCount
     }
     
@@ -123,7 +121,7 @@ extension TopicActionViewController: ExpandableDelegate{
         var cells = [UITableViewCell]()
         let expandedCount: Int = self.topicActionModel?.topicDetail[indexPath.row].topicDetailAction?.count ?? 0
         
-//        let count = self.topicActionModel?.topicDetail[indexPath.row].topicDetailAction.count ?? 0
+        //        let count = self.topicActionModel?.topicDetail[indexPath.row].topicDetailAction.count ?? 0
         
         for n in 0...expandedCount-1{
             
@@ -138,6 +136,24 @@ extension TopicActionViewController: ExpandableDelegate{
             }
             
             cell.quizTitle.text = topicDetailAction.actionName
+            
+            cell.quizImage.pin_updateWithProgress = true
+            cell.quizImage.contentMode = .scaleToFill
+            cell.quizImage.clipsToBounds = true
+            
+            if topicDetailAction.actionTipe?.caseInsensitiveCompare("Quiz") == .orderedSame{
+                
+                let url = Foundation.URL(string: "https://digicourse.id/digilearn/admin-master/assets.admin_master/action/quiz/image/\(topicDetailAction.actionQuizImage!)")
+                cell.quizImage.pin_setImage(from: url)
+                
+            }else if topicDetailAction.actionTipe?.caseInsensitiveCompare("Material") == .orderedSame{
+                if let iamgeUrl = topicDetailAction.actionMaterialImage {
+                    let url = Foundation.URL(string: "https://digicourse.id/digilearn/admin-master/assets.admin_master/action/material/image/\(iamgeUrl)")
+                    cell.quizImage.pin_setImage(from: url)
+                }
+            }else{
+                cell.quizImage.image = UIImage(named: "ic_default_quiz")
+            }
             
             cells.append(cell)
         }
