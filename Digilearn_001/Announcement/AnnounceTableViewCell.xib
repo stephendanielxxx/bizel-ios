@@ -19,7 +19,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VTP-5n-hEb" customClass="MDCCard">
                         <rect key="frame" x="0.0" y="0.0" width="360" height="111"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Title Annouce" translatesAutoresizingMaskIntoConstraints="NO" id="tsu-sN-lNY">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Title Annouce" translatesAutoresizingMaskIntoConstraints="NO" id="tsu-sN-lNY">
                                 <rect key="frame" x="70" y="11" width="277" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
