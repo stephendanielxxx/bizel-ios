@@ -16,6 +16,7 @@ class EventDetailViewController: UIViewController {
     @IBOutlet weak var navigationBar: UINavigationBar!
     @IBOutlet weak var descriptionText: UITextView!
     @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet weak var registerButton: UIButton!
     
     var eventId:String = ""
     var userId:String = ""
@@ -30,6 +31,8 @@ class EventDetailViewController: UIViewController {
         loadData(var: eventId)
         
         userId = readStringPreference(key: DigilearnsKeys.USER_ID)
+        
+        registerButton.layer.cornerRadius = 15
         // Do any additional setup after loading the view.
     }
     
