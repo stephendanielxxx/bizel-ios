@@ -11,9 +11,12 @@ import UIKit
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var greetingLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureView()
+        
     }
     
     func configureView() {
@@ -27,6 +30,24 @@ class HomeViewController: UIViewController {
         
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 180
+        
+        var greeting = ""
+        
+        let hour = Calendar.current.component(.hour, from: Date())
+        let hourInt = Int(hour)
+        
+         if hourInt >= 0 && hourInt < 12 {
+               greeting = "Good Morning"
+           }else if hourInt >= 12 && hourInt < 16 {
+               greeting = "Good Afternoon"
+           }else if hourInt >= 16 && hourInt < 21 {
+               greeting = "Good Evening"
+           }else if hourInt >= 21 && hourInt < 24 {
+               greeting = "Good Night"
+           }
+        
+        let userNickName = readStringPreference(key: DigilearnsKeys.USER_NICK)
+        greetingLabel.text = "\(greeting) \(userNickName)"
     }
 }
 
@@ -38,15 +59,21 @@ extension HomeViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         3
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         1
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.row == 1 {
+            return 250
+        }else{
+            return 200
+        }
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
-//            let cell: SliderTableViewCell = tableView.dequeueReusableCell(withIdentifier: "SliderIdentifier") as! SliderTableViewCell
-//
-//            return cell
             let cell: HomeBannerTableViewCell = tableView.dequeueReusableCell(withIdentifier: "homeBannerIdentifier") as! HomeBannerTableViewCell
             
             return cell
