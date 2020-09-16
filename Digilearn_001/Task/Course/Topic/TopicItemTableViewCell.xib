@@ -16,7 +16,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="75"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="feh-vY-gOj" customClass="MDCCard">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="feh-vY-gOj" customClass="BizelCardview" customModule="Digilearn_001" customModuleProvider="target">
                         <rect key="frame" x="8" y="8" width="304" height="59"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_quiz_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="vEi-UP-6wJ">
@@ -63,7 +63,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="cardView" destination="feh-vY-gOj" id="3Qp-b7-iUj"/>
+                <outlet property="cardView" destination="feh-vY-gOj" id="ciu-Sy-Kfe"/>
                 <outlet property="quizArrow" destination="vEi-UP-6wJ" id="Fdx-ka-EZD"/>
                 <outlet property="quizImage" destination="MNX-rl-oFe" id="pRa-Qz-5gS"/>
                 <outlet property="quizTitle" destination="Yb7-NL-AgI" id="UpM-Iu-c7l"/>

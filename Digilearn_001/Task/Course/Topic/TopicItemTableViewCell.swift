@@ -11,7 +11,7 @@ import MaterialComponents.MaterialCards
 
 class TopicItemTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var cardView: MDCCard!
+    @IBOutlet weak var cardView: BizelCardview!
     @IBOutlet weak var quizArrow: UIImageView!
     @IBOutlet weak var quizImage: UIImageView!
     @IBOutlet weak var quizTitle: UILabel!

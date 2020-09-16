@@ -26,9 +26,17 @@ class TopicActionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        loadData()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        loadData()
+    }
+    
+    func loadData(){
+        
         topicView.expandableDelegate = self
         topicView.expansionStyle = .single
-        topicView.closeAll()
         
         let nib = UINib(nibName: "TopicActionTableViewCell", bundle: nil)
         topicView.register(nib, forCellReuseIdentifier: "topicActionIdentifier")
@@ -36,10 +44,6 @@ class TopicActionViewController: UIViewController {
         let nibChild = UINib(nibName: "TopicItemTableViewCell", bundle: nil)
         topicView.register(nibChild, forCellReuseIdentifier: "topicItemIdentifier")
         
-        loadData()
-    }
-    
-    func loadData(){
         let user_id = readStringPreference(key: DigilearnsKeys.USER_ID)
         debugPrint(user_id)
         debugPrint(self.courseId)
@@ -54,6 +58,7 @@ class TopicActionViewController: UIViewController {
                    method: .post,
                    parameters: parameters,
                    encoding: URLEncoding.httpBody).responseData { response in
+                    
                     switch response.result {
                     case .success(let data):
                         self.removeSpinner()
@@ -68,6 +73,8 @@ class TopicActionViewController: UIViewController {
                             print(error.localizedDescription)
                         }
                     case .failure(let error):
+                        self.removeSpinner()
+                    default:
                         self.removeSpinner()
                     }
         }
@@ -85,8 +92,6 @@ extension TopicActionViewController: ExpandableDelegate{
         return 1
     }
     func expandableTableView(_ expandableTableView: ExpandableTableView, numberOfRowsInSection section: Int) -> Int {
-        
-        //        return self.topicActionModel?.topicDetail[section].topicDetailAction?.count ?? 0
         return sectionCount
     }
     
@@ -112,6 +117,12 @@ extension TopicActionViewController: ExpandableDelegate{
         let cell = expandableTableView.dequeueReusableCell(withIdentifier: "topicActionIdentifier") as! TopicActionTableViewCell
         
         let topicAction: TopicDetail = self.topicActionModel.topicDetail[indexPath.row]
+        
+        if topicAction.topicFinish?.caseInsensitiveCompare("finish") == .orderedSame{
+            cell.topicName.textColor = UIColor(named: "color_2F5597")
+        }else{
+            cell.topicName.textColor = UIColor(named: "color_7698D4")
+        }
         
         cell.topicName.text = topicAction.topicName
         return cell
@@ -155,10 +166,57 @@ extension TopicActionViewController: ExpandableDelegate{
                 cell.quizImage.image = UIImage(named: "ic_default_quiz")
             }
             
+            cell.cardView.indexRow = indexPath.row
+            cell.cardView.indexCell = n
+            
+            cell.cardView.addTarget(self, action: #selector(TopicActionViewController.openDetail(_:)), for: .touchUpInside)
+            
             cells.append(cell)
         }
         
         return cells
+    }
+    
+    @objc func openDetail(_ sender: BizelCardview?) {
+        let indexRow = sender?.indexRow ?? 0
+        let indexCell = sender?.indexCell ?? 0
+        
+        let topicDetail = topicActionModel.topicDetail[indexRow]
+        let topicAction = topicDetail.topicDetailAction?[indexCell]
+        
+        let action = ActionViewController()
+        action.modalPresentationStyle = .fullScreen
+        
+        if topicAction?.topicAccess?.caseInsensitiveCompare("random") == .orderedSame{
+            self.present(action, animated: true, completion: nil)
+        }else{
+            if indexRow == 0 && indexCell == 0 {
+                self.present(action, animated: true, completion: nil)
+            }else{
+                if indexCell > 0{
+                    let topicActionBefore = topicDetail.topicDetailAction?[indexCell-1]
+                    if topicActionBefore?.finished?.caseInsensitiveCompare("finish") == .orderedSame {
+                        self.present(action, animated: true, completion: nil)
+                    }else{
+                        let alert = UIAlertController(title: "", message: "Oops, you must read and solve the activities in order!", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
+                        self.present(alert, animated: true)
+                    }
+                }else{
+                    let topicDetailBefore = topicActionModel.topicDetail[indexRow-1]
+                    let topicCount = topicDetailBefore.topicDetailAction
+                    let topicActionBefore = topicDetailBefore.topicDetailAction?[topicCount!.count-1]
+                    
+                    if topicActionBefore?.finished?.caseInsensitiveCompare("finish") == .orderedSame {
+                        self.present(action, animated: true, completion: nil)
+                    }else{
+                        let alert = UIAlertController(title: "", message: "Oops, you must read and solve the activities in order!", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
+                        self.present(alert, animated: true)
+                    }
+                }
+            }
+        }
     }
     
     func expandableTableView(_ expandableTableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {

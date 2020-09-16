@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ActionViewController" customModule="Digilearn_001" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="15Z-M8-plg" userLabel="Content View">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G4L-3s-gdX">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <color key="barTintColor" name="color_ D44444"/>
+                            <items>
+                                <navigationItem id="dN5-nl-zbI">
+                                    <barButtonItem key="leftBarButtonItem" image="arrow.left" catalog="system" id="wOS-cz-ZgO">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="backAction:" destination="-1" id="jjp-xM-1Th"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </navigationItem>
+                            </items>
+                        </navigationBar>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jbS-7y-g0e" userLabel="Embed View">
+                            <rect key="frame" x="0.0" y="44" width="414" height="774"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="jbS-7y-g0e" secondAttribute="bottom" id="4It-dN-zkR"/>
+                        <constraint firstItem="jbS-7y-g0e" firstAttribute="top" secondItem="G4L-3s-gdX" secondAttribute="bottom" id="9u5-Qu-ZOW"/>
+                        <constraint firstItem="jbS-7y-g0e" firstAttribute="leading" secondItem="15Z-M8-plg" secondAttribute="leading" id="Iwt-Z9-ZMA"/>
+                        <constraint firstAttribute="trailing" secondItem="jbS-7y-g0e" secondAttribute="trailing" id="UmN-xg-qo3"/>
+                        <constraint firstItem="G4L-3s-gdX" firstAttribute="leading" secondItem="15Z-M8-plg" secondAttribute="leading" id="a8W-8g-cch"/>
+                        <constraint firstAttribute="trailing" secondItem="G4L-3s-gdX" secondAttribute="trailing" id="eOS-Dr-TBI"/>
+                        <constraint firstItem="G4L-3s-gdX" firstAttribute="top" secondItem="15Z-M8-plg" secondAttribute="top" id="wH1-ct-blu"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="15Z-M8-plg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="5sf-7o-7mE"/>
+                <constraint firstItem="15Z-M8-plg" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="6v2-YS-dXG"/>
+                <constraint firstItem="15Z-M8-plg" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" id="RBn-Xa-yOH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="15Z-M8-plg" secondAttribute="bottom" id="ew7-Jt-lW0"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="15Z-M8-plg" secondAttribute="trailing" id="n4R-0X-ren"/>
+                <constraint firstItem="15Z-M8-plg" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" id="ncC-TU-mK0"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="145.98214285714286"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrow.left" catalog="system" width="128" height="98"/>
+        <namedColor name="color_ D44444">
+            <color red="0.83099997043609619" green="0.2669999897480011" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
