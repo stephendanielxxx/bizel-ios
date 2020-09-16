@@ -109,7 +109,7 @@ class LoginViewController: UIViewController {
                                     self.saveStringPreference(value: (loginModel.user?[0].id)!, key: DigilearnsKeys.USER_ID)
                                     self.saveStringPreference(value: (loginModel.user?[0].nickname)!, key: DigilearnsKeys.USER_NICK)
                                     
-                                    let home = HomeViewController()
+                                    let home = HomeTabBarController()
 
                                     home.modalPresentationStyle = .fullScreen
                                     

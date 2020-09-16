@@ -7,9 +7,14 @@
 //
 
 import UIKit
+import MaterialComponents.MaterialCards
 
 class TopicItemTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var cardView: MDCCard!
+    @IBOutlet weak var quizArrow: UIImageView!
+    @IBOutlet weak var quizImage: UIImageView!
+    @IBOutlet weak var quizTitle: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

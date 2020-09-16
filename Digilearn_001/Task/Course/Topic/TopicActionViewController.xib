@@ -32,18 +32,18 @@
                             </connections>
                         </button>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bT6-fG-1IY" customClass="ExpandableTableView" customModule="ExpandableCell">
-                            <rect key="frame" x="0.0" y="38" width="414" height="772"/>
+                            <rect key="frame" x="16" y="38" width="382" height="780"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         </tableView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
-                        <constraint firstAttribute="bottom" secondItem="bT6-fG-1IY" secondAttribute="bottom" constant="8" id="CsX-Ng-KTK"/>
+                        <constraint firstAttribute="bottom" secondItem="bT6-fG-1IY" secondAttribute="bottom" id="CsX-Ng-KTK"/>
                         <constraint firstAttribute="trailing" secondItem="yr5-zt-JJD" secondAttribute="trailing" constant="12" id="UZB-OB-xV7"/>
                         <constraint firstItem="bT6-fG-1IY" firstAttribute="top" secondItem="yr5-zt-JJD" secondAttribute="bottom" constant="8" id="Vn9-Mw-elx"/>
                         <constraint firstItem="yr5-zt-JJD" firstAttribute="top" secondItem="ENr-3U-GTT" secondAttribute="top" id="g2K-cK-Wvm"/>
-                        <constraint firstItem="bT6-fG-1IY" firstAttribute="leading" secondItem="ENr-3U-GTT" secondAttribute="leading" id="joq-gP-yAS"/>
-                        <constraint firstAttribute="trailing" secondItem="bT6-fG-1IY" secondAttribute="trailing" id="qjd-7z-QtF"/>
+                        <constraint firstItem="bT6-fG-1IY" firstAttribute="leading" secondItem="ENr-3U-GTT" secondAttribute="leading" constant="16" id="joq-gP-yAS"/>
+                        <constraint firstAttribute="trailing" secondItem="bT6-fG-1IY" secondAttribute="trailing" constant="16" id="qjd-7z-QtF"/>
                     </constraints>
                 </view>
             </subviews>

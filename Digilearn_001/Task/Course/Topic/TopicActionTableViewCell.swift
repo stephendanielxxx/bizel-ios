@@ -7,11 +7,15 @@
 //
 
 import UIKit
+import ExpandableCell
 
-class TopicActionTableViewCell: UITableViewCell {
+class TopicActionTableViewCell: ExpandableCell {
 
+    @IBOutlet weak var topicName: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
+        rightMargin = 32
+        
         // Initialization code
     }
 

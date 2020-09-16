@@ -17,6 +17,8 @@ class TopicActionViewController: UIViewController {
     
     var topicActionModel: TopicActionModel!
     
+    var sectionCount: Int = 0
+    
     @IBOutlet weak var topicView: ExpandableTableView!
     
     let URL = "\(DigilearnParams.ApiUrl)/course/get_detail_module"
@@ -59,7 +61,11 @@ class TopicActionViewController: UIViewController {
                         do{
                             self.topicActionModel = try decoder.decode(TopicActionModel.self, from:data)
                             
+                            self.sectionCount = self.topicActionModel.topicDetail.count
+                            
                             debugPrint(self.topicActionModel)
+                                
+                            self.topicView.reloadData()
                         }catch{
                             print(error.localizedDescription)
                         }
@@ -78,12 +84,12 @@ class TopicActionViewController: UIViewController {
 extension TopicActionViewController: ExpandableDelegate{
     
     func numberOfSections(in expandableTableView: ExpandableTableView) -> Int {
-        //        return self.topicActionModel?.topicDetail.count ?? 0
-        return 2
+        return 1
     }
     func expandableTableView(_ expandableTableView: ExpandableTableView, numberOfRowsInSection section: Int) -> Int {
-        //        return self.topicActionModel?.topicDetail[section].topicDetailAction.count ?? 0
-        return 3
+        
+//        return self.topicActionModel?.topicDetail[section].topicDetailAction?.count ?? 0
+        return sectionCount
     }
     
     func expandableTableView(_ expandableTableView: ExpandableTableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -91,19 +97,52 @@ extension TopicActionViewController: ExpandableDelegate{
     }
     
     func expandableTableView(_ expandableTableView: ExpandableTableView, heightsForExpandedRowAt indexPath: IndexPath) -> [CGFloat]? {
-        return [50]
+        var count = [CGFloat]()
+        let expandedCount: Int = self.topicActionModel?.topicDetail[indexPath.row].topicDetailAction?.count ?? 0
+        for _ in 1...expandedCount {
+            let height: CGFloat = 75
+            count.append(height)
+        }
+        return count
+    }
+    
+    func expandableTableView(_ expandableTableView: ExpandableTableView, titleForFooterInSection section: Int) -> String? {
+        return "Section:\(section)"
     }
     
     func expandableTableView(_ expandableTableView: ExpandableTableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = expandableTableView.dequeueReusableCell(withIdentifier: "topicActionIdentifier") as! TopicActionTableViewCell
+        
+        let topicAction: TopicDetail = self.topicActionModel.topicDetail[indexPath.row]
+        
+        cell.topicName.text = topicAction.topicName
         return cell
     }
     
     func expandableTableView(_ expandableTableView: ExpandableTableView, expandedCellsForRowAt indexPath: IndexPath) -> [UITableViewCell]? {
-        let cell = topicView.dequeueReusableCell(withIdentifier: "topicItemIdentifier") as! TopicItemTableViewCell
-        let cell2 = topicView.dequeueReusableCell(withIdentifier: "topicItemIdentifier") as! TopicItemTableViewCell
-        let cell3 = topicView.dequeueReusableCell(withIdentifier: "topicItemIdentifier") as! TopicItemTableViewCell
-        return [cell, cell2, cell3]
+        var cells = [UITableViewCell]()
+        let expandedCount: Int = self.topicActionModel?.topicDetail[indexPath.row].topicDetailAction?.count ?? 0
+        
+//        let count = self.topicActionModel?.topicDetail[indexPath.row].topicDetailAction.count ?? 0
+        
+        for n in 0...expandedCount-1{
+            
+            let topicDetailAction: TopicDetailAction = self.topicActionModel.topicDetail[indexPath.row].topicDetailAction![n]
+            
+            let cell = topicView.dequeueReusableCell(withIdentifier: "topicItemIdentifier") as! TopicItemTableViewCell
+            
+            if topicDetailAction.finished?.caseInsensitiveCompare("finish") == .orderedSame {
+                cell.quizArrow.image = UIImage(named: "ic_quiz_done")
+            }else{
+                cell.quizArrow.image = UIImage(named: "ic_quiz_arrow")
+            }
+            
+            cell.quizTitle.text = topicDetailAction.actionName
+            
+            cells.append(cell)
+        }
+        
+        return cells
     }
     
     func expandableTableView(_ expandableTableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
