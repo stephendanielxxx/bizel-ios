@@ -153,14 +153,18 @@ extension TopicActionViewController: ExpandableDelegate{
             cell.quizImage.clipsToBounds = true
             
             if topicDetailAction.actionTipe?.caseInsensitiveCompare("Quiz") == .orderedSame{
-                
-                let url = Foundation.URL(string: "https://digicourse.id/digilearn/admin-master/assets.admin_master/action/quiz/image/\(topicDetailAction.actionQuizImage!)")
-                cell.quizImage.pin_setImage(from: url)
-                
+                if topicDetailAction.actionQuizImage != nil {
+                    let url = Foundation.URL(string: "https://digicourse.id/digilearn/admin-master/assets.admin_master/action/quiz/image/\(topicDetailAction.actionQuizImage!)")
+                    cell.quizImage.pin_setImage(from: url)
+                }else{
+                     cell.quizImage.image = UIImage(named: "ic_default_quiz")
+                }
             }else if topicDetailAction.actionTipe?.caseInsensitiveCompare("Material") == .orderedSame{
                 if let iamgeUrl = topicDetailAction.actionMaterialImage {
                     let url = Foundation.URL(string: "https://digicourse.id/digilearn/admin-master/assets.admin_master/action/material/image/\(iamgeUrl)")
                     cell.quizImage.pin_setImage(from: url)
+                }else{
+                     cell.quizImage.image = UIImage(named: "ic_default_quiz")
                 }
             }else{
                 cell.quizImage.image = UIImage(named: "ic_default_quiz")
