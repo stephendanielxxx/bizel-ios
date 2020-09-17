@@ -9,7 +9,7 @@
 import UIKit
 import MaterialComponents.MaterialCards
 
-class QuizViewController: UIViewController {
+class QuizViewController: BaseActionViewController {
     
     var delegate: QuizDelegate?
     var topicId = ""
@@ -23,6 +23,18 @@ class QuizViewController: UIViewController {
     @IBOutlet weak var quizText: UITextView!
     @IBOutlet weak var prevButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var buttonA: MDCCard!
+    @IBOutlet weak var lineA: UIView!
+    @IBOutlet weak var buttonB: MDCCard!
+    @IBOutlet weak var lineB: UIView!
+    @IBOutlet weak var buttonC: MDCCard!
+    @IBOutlet weak var lineC: UIView!
+    @IBOutlet weak var buttonD: MDCCard!
+    @IBOutlet weak var lineD: UIView!
+    @IBOutlet weak var optionA: UILabel!
+    @IBOutlet weak var optionB: UILabel!
+    @IBOutlet weak var optionC: UILabel!
+    @IBOutlet weak var optionD: UILabel!
     // single, essay
     // read,watch, link, audio
     override func viewDidLoad() {
@@ -35,26 +47,23 @@ class QuizViewController: UIViewController {
         quizImage.contentMode = .scaleToFill
         quizImage.clipsToBounds = true
         
+        quizImage.enableZoom()
+        
         quizTitle.text = quiz?.title
         
-        if quiz?.quizType != nil && quiz?.quizType?.caseInsensitiveCompare("single") == .orderedSame{
-            quizText.attributedText = quiz?.question?.htmlToAttributedString
+        let content = replaceNickname(text: (quiz?.question)!)
+        quizText.attributedText = content.htmlToAttributedString
+        
+        if quiz?.quizImage != nil{
+            let url = Foundation.URL(string: "https://digicourse.id/digilearn/admin-master/assets.admin_master/action/quiz/image/\(quiz!.quizImage!)")!
             
-            if quiz?.quizImage != nil{
-                let url = Foundation.URL(string: "https://digicourse.id/digilearn/admin-master/assets.admin_master/action/quiz/image/\(quiz!.quizImage!)")!
-                
-                quizImage.pin_setImage(from: url)
-            }
-            
-        }else{
-            quizText.attributedText = quiz?.content?.htmlToAttributedString
-            
-            if quiz?.quizImage != nil{
-                let url = Foundation.URL(string: "https://digicourse.id/digilearn/admin-master/assets.admin_master/action/material/image/\(quiz!.contentImage!)")!
-                
-                quizImage.pin_setImage(from: url)
-            }
+            quizImage.pin_setImage(from: url)
         }
+        
+        optionA.attributedText = quiz?.pil1!.htmlStringAnswerQuiz
+        optionB.attributedText = quiz?.pil2!.htmlStringAnswerQuiz
+        optionC.attributedText = quiz?.pil3!.htmlStringAnswerQuiz
+        optionD.attributedText = quiz?.pil4!.htmlStringAnswerQuiz
         
         if index == 0 {
             prevButton.isHidden = true

@@ -9,7 +9,7 @@
 import UIKit
 import MaterialComponents.MaterialCards
 
-class QuizEssayViewController: UIViewController {
+class QuizEssayViewController: BaseActionViewController {
     var delegate: QuizDelegate?
     var topicId = ""
     var actionId = ""
@@ -36,9 +36,11 @@ class QuizEssayViewController: UIViewController {
         
         quizTitle.text = quiz?.title
         
-        quizText.attributedText = quiz?.question?.htmlToAttributedString
+        let content = replaceNickname(text: (quiz?.question)!)
+        quizText.attributedText = content.htmlToAttributedString
         
         if quiz?.quizImage != nil{
+            
             let url = Foundation.URL(string: "https://digicourse.id/digilearn/admin-master/assets.admin_master/action/quiz/image/\(quiz!.quizImage!)")!
             
             quizImage.pin_setImage(from: url)

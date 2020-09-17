@@ -79,6 +79,7 @@
 		B97C0D1F251337AA005E36B4 /* AssesmentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97C0D1E251337AA005E36B4 /* AssesmentModel.swift */; };
 		B97C0D2225134E69005E36B4 /* QuizEssayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97C0D2025134E69005E36B4 /* QuizEssayViewController.swift */; };
 		B97C0D2325134E69005E36B4 /* QuizEssayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B97C0D2125134E69005E36B4 /* QuizEssayViewController.xib */; };
+		B97C0D2825135920005E36B4 /* BaseActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97C0D2725135920005E36B4 /* BaseActionViewController.swift */; };
 		B98C4490250B1AD900363F8C /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98C448F250B1AD900363F8C /* HomeTabBarController.swift */; };
 		B98C449B250B452B00363F8C /* HomeBannerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98C4499250B452B00363F8C /* HomeBannerTableViewCell.swift */; };
 		B98C449C250B452B00363F8C /* HomeBannerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B98C449A250B452B00363F8C /* HomeBannerTableViewCell.xib */; };
@@ -219,6 +220,7 @@
 		B97C0D1E251337AA005E36B4 /* AssesmentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssesmentModel.swift; sourceTree = "<group>"; };
 		B97C0D2025134E69005E36B4 /* QuizEssayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizEssayViewController.swift; sourceTree = "<group>"; };
 		B97C0D2125134E69005E36B4 /* QuizEssayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuizEssayViewController.xib; sourceTree = "<group>"; };
+		B97C0D2725135920005E36B4 /* BaseActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseActionViewController.swift; sourceTree = "<group>"; };
 		B98C448F250B1AD900363F8C /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
 		B98C4499250B452B00363F8C /* HomeBannerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBannerTableViewCell.swift; sourceTree = "<group>"; };
 		B98C449A250B452B00363F8C /* HomeBannerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeBannerTableViewCell.xib; sourceTree = "<group>"; };
@@ -536,6 +538,7 @@
 		B96F5BDD2511F258006AB070 /* Action */ = {
 			isa = PBXGroup;
 			children = (
+				B97C0D26251358AE005E36B4 /* Base */,
 				B96F5BDE2511F272006AB070 /* ActionViewController.swift */,
 				B96F5BDF2511F272006AB070 /* ActionViewController.xib */,
 				B97C0D1625131779005E36B4 /* QuizViewController.swift */,
@@ -563,6 +566,14 @@
 				B97C0D0F2512FEA0005E36B4 /* ThirdBoardViewController.xib */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		B97C0D26251358AE005E36B4 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				B97C0D2725135920005E36B4 /* BaseActionViewController.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 		B98C449D250B4DC100363F8C /* model */ = {
@@ -997,6 +1008,7 @@
 				B97C0D1825131779005E36B4 /* QuizViewController.swift in Sources */,
 				B9673DF7250F23F1005E6BB8 /* ListTaskModel.swift in Sources */,
 				B98C44AB250B7B3100363F8C /* EventCollectionViewCell.swift in Sources */,
+				B97C0D2825135920005E36B4 /* BaseActionViewController.swift in Sources */,
 				B96F5BE925121DFA006AB070 /* IntroductionViewController.swift in Sources */,
 				B9D0534D2501E06B00F1AC03 /* DigilearnParams.swift in Sources */,
 				B96F5BDB2511EEDD006AB070 /* BizelCardView.swift in Sources */,
