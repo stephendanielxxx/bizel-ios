@@ -10,6 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ActionViewController" customModule="Digilearn_001" customModuleProvider="target">
             <connections>
+                <outlet property="embedView" destination="jbS-7y-g0e" id="unS-ak-j2Y"/>
+                <outlet property="titleLabel" destination="dN5-nl-zbI" id="zYK-FD-R97"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -24,8 +26,11 @@
                         <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G4L-3s-gdX">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                             <color key="barTintColor" name="color_ D44444"/>
+                            <textAttributes key="titleTextAttributes">
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </textAttributes>
                             <items>
-                                <navigationItem id="dN5-nl-zbI">
+                                <navigationItem title="Title" id="dN5-nl-zbI">
                                     <barButtonItem key="leftBarButtonItem" image="arrow.left" catalog="system" id="wOS-cz-ZgO">
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>

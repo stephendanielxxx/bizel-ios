@@ -45,9 +45,6 @@ class TopicActionViewController: UIViewController {
         topicView.register(nibChild, forCellReuseIdentifier: "topicItemIdentifier")
         
         let user_id = readStringPreference(key: DigilearnsKeys.USER_ID)
-        debugPrint(user_id)
-        debugPrint(self.courseId)
-        debugPrint(self.moduleId)
         let parameters: [String:Any] = [
             "course_id": "\(self.courseId)",
             "module_id" : "\(self.moduleId)",
@@ -189,6 +186,9 @@ extension TopicActionViewController: ExpandableDelegate{
         let topicAction = topicDetail.topicDetailAction?[indexCell]
         
         let action = ActionViewController()
+        action.moduleTitle = topicAction?.moduleName as! String
+        action.topicId = topicAction?.topicID as! String
+        action.actionId = topicAction?.actionID as! String
         action.modalPresentationStyle = .fullScreen
         
         if topicAction?.topicAccess?.caseInsensitiveCompare("random") == .orderedSame{
