@@ -60,6 +60,8 @@
 		B9673E14250F7AE1005E6BB8 /* ModulesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9673E12250F7AE1005E6BB8 /* ModulesTableViewCell.swift */; };
 		B9673E15250F7AE1005E6BB8 /* ModulesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9673E13250F7AE1005E6BB8 /* ModulesTableViewCell.xib */; };
 		B969665725145A5F00A3561E /* CustomChoiceCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B969665625145A5F00A3561E /* CustomChoiceCardView.swift */; };
+		B9696659251487A800A3561E /* EssayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9696658251487A800A3561E /* EssayModel.swift */; };
+		B969665B2514909500A3561E /* SubmitProgressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B969665A2514909500A3561E /* SubmitProgressModel.swift */; };
 		B96F5BDB2511EEDD006AB070 /* BizelCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96F5BDA2511EEDD006AB070 /* BizelCardView.swift */; };
 		B96F5BE02511F272006AB070 /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96F5BDE2511F272006AB070 /* ActionViewController.swift */; };
 		B96F5BE12511F272006AB070 /* ActionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B96F5BDF2511F272006AB070 /* ActionViewController.xib */; };
@@ -202,6 +204,8 @@
 		B9673E12250F7AE1005E6BB8 /* ModulesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModulesTableViewCell.swift; sourceTree = "<group>"; };
 		B9673E13250F7AE1005E6BB8 /* ModulesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModulesTableViewCell.xib; sourceTree = "<group>"; };
 		B969665625145A5F00A3561E /* CustomChoiceCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomChoiceCardView.swift; sourceTree = "<group>"; };
+		B9696658251487A800A3561E /* EssayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssayModel.swift; sourceTree = "<group>"; };
+		B969665A2514909500A3561E /* SubmitProgressModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitProgressModel.swift; sourceTree = "<group>"; };
 		B96F5BDA2511EEDD006AB070 /* BizelCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BizelCardView.swift; sourceTree = "<group>"; };
 		B96F5BDE2511F272006AB070 /* ActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionViewController.swift; sourceTree = "<group>"; };
 		B96F5BDF2511F272006AB070 /* ActionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActionViewController.xib; sourceTree = "<group>"; };
@@ -495,6 +499,8 @@
 				B9673E08250F5F74005E6BB8 /* ListCourseModel.swift */,
 				B9A1160A2510A3CE00852131 /* TopicActionModel.swift */,
 				B97C0D1E251337AA005E36B4 /* AssesmentModel.swift */,
+				B9696658251487A800A3561E /* EssayModel.swift */,
+				B969665A2514909500A3561E /* SubmitProgressModel.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -1034,6 +1040,7 @@
 				6ADC3B142509FB1800E88D7C /* GroupModel.swift in Sources */,
 				B98C449B250B452B00363F8C /* HomeBannerTableViewCell.swift in Sources */,
 				B9A116002510864200852131 /* AbousTopicViewController.swift in Sources */,
+				B969665B2514909500A3561E /* SubmitProgressModel.swift in Sources */,
 				B934AF4F24FF4B82000FCEB3 /* Digilearn_001.xcdatamodeld in Sources */,
 				B934AF4524FF4B82000FCEB3 /* AppDelegate.swift in Sources */,
 				B94585E12509C6DA00330DAC /* MenuTableViewCell.swift in Sources */,
@@ -1048,6 +1055,7 @@
 				B98C44A2250B689600363F8C /* HomeEventTableViewCell.swift in Sources */,
 				B9673E0C250F7039005E6BB8 /* AboutCourseViewController.swift in Sources */,
 				B99FA31B2505E65D00A59C59 /* FAQViewController.swift in Sources */,
+				B9696659251487A800A3561E /* EssayModel.swift in Sources */,
 				B9673E06250F561D005E6BB8 /* CourseViewController.swift in Sources */,
 				B934AFE024FFA88D000FCEB3 /* LoginViewController.swift in Sources */,
 				6ADC3B102509FA6500E88D7C /* MyGroupViewController.swift in Sources */,

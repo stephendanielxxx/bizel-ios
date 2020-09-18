@@ -187,8 +187,11 @@ extension TopicActionViewController: ExpandableDelegate{
         
         let action = ActionViewController()
         action.moduleTitle = topicAction?.moduleName as! String
+        action.courseId = courseId
+        action.moduleId = topicAction?.moduleID as! String
         action.topicId = topicAction?.topicID as! String
         action.actionId = topicAction?.actionID as! String
+        action.indexPage = indexCell
         action.modalPresentationStyle = .fullScreen
         
         if topicAction?.topicAccess?.caseInsensitiveCompare("random") == .orderedSame{

@@ -10,11 +10,9 @@ import UIKit
 import MaterialComponents.MaterialCards
 import Toast_Swift
 
-class QuizViewController: BaseActionViewController {
+class QuizViewController: BaseActionViewController, ActionDelegate {
     
     var delegate: QuizDelegate?
-    var topicId = ""
-    var actionId = ""
     var quiz: AssessmentQuizModel?
     var index: Int?
     var isCorrect = false
@@ -42,7 +40,7 @@ class QuizViewController: BaseActionViewController {
     // read,watch, link, audio
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        actionDelegate = self
         cardView.cornerRadius = 15
         prevButton.layer.cornerRadius = 15
         nextButton.layer.cornerRadius = 15
@@ -107,6 +105,15 @@ class QuizViewController: BaseActionViewController {
         ToastManager.shared.style = style
         
         self.view.makeToast("Incorrect Answer. Please try again!")
+    }
+    
+    fileprivate func showToast(message: String) {
+        var style = ToastStyle()
+        style.backgroundColor = UIColor.black
+        style.messageColor = UIColor.white
+        ToastManager.shared.style = style
+        
+        self.view.makeToast(message)
     }
     
     @objc func checkAnswerA(_ sender: CustomChoiceCardView?) {
@@ -176,6 +183,7 @@ class QuizViewController: BaseActionViewController {
     
     @IBAction func nextAction(_ sender: UIButton) {
         if isCorrect {
+            submitProgress(courseId: courseId, moduleId: moduleId, topicId: (quiz?.topicID)!, actionId: (quiz?.actionID)!, answer: (quiz?.answer)!)
             delegate?.nextAction(index: index!)
         }else{
             showFalseToast()
@@ -185,9 +193,14 @@ class QuizViewController: BaseActionViewController {
     @IBAction func prevAction(_ sender: UIButton) {
         delegate?.prevAction(index: index!)
     }
+    
+    func onSubmitProgress(message: String) {
+      
+    }
 }
 
 protocol QuizDelegate {
     func nextAction(index: Int)
     func prevAction(index: Int)
 }
+

@@ -8,13 +8,15 @@
 
 import UIKit
 import MaterialComponents.MaterialCards
+import Alamofire
 
-class QuizEssayViewController: BaseActionViewController {
+class QuizEssayViewController: BaseActionViewController, ActionDelegate {
     var delegate: QuizDelegate?
-    var topicId = ""
-    var actionId = ""
+    
     var quiz: AssessmentQuizModel?
     var index: Int?
+    
+    var essayModel: EssayModel!
     
     @IBOutlet weak var cardView: MDCCard!
     @IBOutlet weak var quizTitle: UILabel!
@@ -23,9 +25,12 @@ class QuizEssayViewController: BaseActionViewController {
     @IBOutlet weak var prevButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var answerField: UITextField!
+    let URL = "\(DigilearnParams.ApiUrl)/score/get_essayById"
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        actionDelegate = self
         
         cardView.cornerRadius = 15
         prevButton.layer.cornerRadius = 15
@@ -51,9 +56,15 @@ class QuizEssayViewController: BaseActionViewController {
         }else{
             prevButton.isHidden = false
         }
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        loadAnswer()
     }
     
     @IBAction func nextAction(_ sender: UIButton) {
+        submitProgress(courseId: courseId, moduleId: moduleId, topicId: (quiz?.topicID)!, actionId: (quiz?.actionID)!, answer: answerField.text ?? "")
         delegate?.nextAction(index: index!)
     }
     
@@ -61,4 +72,42 @@ class QuizEssayViewController: BaseActionViewController {
         delegate?.prevAction(index: index!)
     }
     
+    func loadAnswer(){
+        let user_id = readStringPreference(key: DigilearnsKeys.USER_ID)
+        let parameters: [String:Any] = [
+            "user_id": "\(user_id)",
+            "course_id": "\(self.courseId)",
+            "module_id": "\(self.moduleId)",
+            "topic_id": "\(self.topicId)",
+            "action_id" : "\(self.actionId)"
+        ]
+        
+        AF.request(URL,
+                   method: .post,
+                   parameters: parameters,
+                   encoding: URLEncoding.httpBody).responseData { response in
+                    switch response.result {
+                    case .success(let data):
+                        self.removeSpinner()
+                        let decoder = JSONDecoder()
+                        do{
+                            self.essayModel = try decoder.decode(EssayModel.self, from:data)
+                            if self.essayModel.responseStatus {
+                                self.answerField.attributedText = self.essayModel.responseData.htmlToAttributedString
+                            }
+                            
+                        }catch{
+                            print(error.localizedDescription)
+                        }
+                    case .failure(let error):
+                        self.removeSpinner()
+                    default:
+                        self.removeSpinner()
+                    }
+        }
+    }
+    
+    func onSubmitProgress(message: String) {
+        
+    }
 }

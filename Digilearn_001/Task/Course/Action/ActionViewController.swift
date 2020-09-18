@@ -8,10 +8,13 @@
 
 import UIKit
 import Alamofire
+import Toast_Swift
 
 class ActionViewController: UIViewController {
     
     var moduleTitle = ""
+    var courseId = ""
+    var moduleId = ""
     var topicId = ""
     var actionId = ""
     let URL = "\(DigilearnParams.ApiUrl)/quiz/get_quiz_course"
@@ -53,41 +56,8 @@ class ActionViewController: UIViewController {
                             self.assesmentModel = try decoder.decode(AssesmentModel.self, from:data)
                             
                             self.totalPage = self.assesmentModel.assessmentQuiz?.count as! Int
-                            let assesmentQuiz = self.assesmentModel.assessmentQuiz![0]
                             
-                            if assesmentQuiz.category?.caseInsensitiveCompare("quiz") == .orderedSame {
-                                if assesmentQuiz.quizType?.caseInsensitiveCompare("single") == .orderedSame {
-                                    let quiz = QuizViewController()
-                                    quiz.delegate = self
-                                    quiz.topicId = self.topicId
-                                    quiz.actionId = self.actionId
-                                    quiz.index = self.indexPage
-                                    quiz.quiz = assesmentQuiz
-                                    quiz.modalPresentationStyle = .fullScreen
-                                    
-                                    self.embed(quiz, inParent: self, inView: self.embedView)
-                                }else if assesmentQuiz.quizType?.caseInsensitiveCompare("essay") == .orderedSame {
-                                    let quiz = QuizEssayViewController()
-                                    quiz.delegate = self
-                                    quiz.topicId = self.topicId
-                                    quiz.actionId = self.actionId
-                                    quiz.index = self.indexPage
-                                    quiz.quiz = assesmentQuiz
-                                    quiz.modalPresentationStyle = .fullScreen
-                                    
-                                    self.embed(quiz, inParent: self, inView: self.embedView)
-                                }
-                            }else if assesmentQuiz.category?.caseInsensitiveCompare("material") == .orderedSame{
-                                let material = MaterialViewController()
-                                material.delegate = self
-                                material.topicId = self.topicId
-                                material.actionId = self.actionId
-                                material.index = self.indexPage
-                                material.quiz = assesmentQuiz
-                                material.modalPresentationStyle = .fullScreen
-                                
-                                self.embed(material, inParent: self, inView: self.embedView)
-                            }
+                            self.openAction(index: self.indexPage)
                             
                         }catch{
                             print(error.localizedDescription)
@@ -109,8 +79,10 @@ extension ActionViewController: QuizDelegate{
             if assesmentQuiz.quizType?.caseInsensitiveCompare("single") == .orderedSame {
                 let quiz = QuizViewController()
                 quiz.delegate = self
-                quiz.topicId = self.topicId
-                quiz.actionId = self.actionId
+                quiz.courseId = self.courseId
+                quiz.moduleId = self.moduleId
+                quiz.topicId = assesmentQuiz.topicID!
+                quiz.actionId = assesmentQuiz.actionID!
                 quiz.index = self.indexPage
                 quiz.quiz = assesmentQuiz
                 quiz.modalPresentationStyle = .fullScreen
@@ -119,8 +91,10 @@ extension ActionViewController: QuizDelegate{
             }else if assesmentQuiz.quizType?.caseInsensitiveCompare("essay") == .orderedSame {
                 let quiz = QuizEssayViewController()
                 quiz.delegate = self
-                quiz.topicId = self.topicId
-                quiz.actionId = self.actionId
+                quiz.courseId = self.courseId
+                quiz.moduleId = self.moduleId
+                quiz.topicId = assesmentQuiz.topicID!
+                quiz.actionId = assesmentQuiz.actionID!
                 quiz.index = self.indexPage
                 quiz.quiz = assesmentQuiz
                 quiz.modalPresentationStyle = .fullScreen
@@ -130,8 +104,10 @@ extension ActionViewController: QuizDelegate{
         }else if assesmentQuiz.category?.caseInsensitiveCompare("material") == .orderedSame{
             let material = MaterialViewController()
             material.delegate = self
-            material.topicId = self.topicId
-            material.actionId = self.actionId
+            material.courseId = self.courseId
+            material.moduleId = self.moduleId
+            material.topicId = assesmentQuiz.topicID!
+            material.actionId = assesmentQuiz.actionID!
             material.index = self.indexPage
             material.quiz = assesmentQuiz
             material.modalPresentationStyle = .fullScreen
@@ -147,6 +123,7 @@ extension ActionViewController: QuizDelegate{
             self.dismiss(animated: true, completion: nil)
         }else{
             openAction(index: self.indexPage)
+            
         }
     }
     

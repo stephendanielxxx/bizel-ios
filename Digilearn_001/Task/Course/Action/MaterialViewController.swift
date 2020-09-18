@@ -8,12 +8,11 @@
 
 import UIKit
 import MaterialComponents.MaterialCards
+import Alamofire
 
-class MaterialViewController: BaseActionViewController {
+class MaterialViewController: BaseActionViewController, ActionDelegate {
     
     var delegate: QuizDelegate?
-    var topicId = ""
-    var actionId = ""
     var quiz: AssessmentQuizModel?
     var index: Int?
     
@@ -28,6 +27,8 @@ class MaterialViewController: BaseActionViewController {
     // read,watch, link, audio
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        actionDelegate = self
         
         cardView.cornerRadius = 15
         prevButton.layer.cornerRadius = 15
@@ -59,11 +60,16 @@ class MaterialViewController: BaseActionViewController {
     }
     
     @IBAction func nextAction(_ sender: UIButton) {
+        submitProgress(courseId: courseId, moduleId: moduleId, topicId: (quiz?.topicID)!, actionId: (quiz?.actionID)!, answer: "")
         delegate?.nextAction(index: index!)
     }
     
     @IBAction func prevAction(_ sender: UIButton) {
         delegate?.prevAction(index: index!)
+    }
+    
+    func onSubmitProgress(message: String) {
+        
     }
     
 }
