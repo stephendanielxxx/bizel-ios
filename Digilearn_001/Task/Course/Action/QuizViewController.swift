@@ -36,6 +36,7 @@ class QuizViewController: BaseActionViewController, ActionDelegate {
     @IBOutlet weak var optionC: UILabel!
     @IBOutlet weak var optionD: UILabel!
     @IBOutlet weak var imageHeight: NSLayoutConstraint!
+    @IBOutlet weak var scrollview: UIScrollView!
     // single, essay
     // read,watch, link, audio
     override func viewDidLoad() {
@@ -87,6 +88,8 @@ class QuizViewController: BaseActionViewController, ActionDelegate {
         buttonC.addTarget(self, action: #selector(QuizViewController.checkAnswerC(_:)), for: .touchUpInside)
         
         buttonD.addTarget(self, action: #selector(QuizViewController.checkAnswerD(_:)), for: .touchUpInside)
+        
+        scrollview.bounces = (scrollview.contentOffset.y > 100);
     }
     
     fileprivate func showCorrectToast() {

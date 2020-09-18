@@ -17,6 +17,7 @@
                 <outlet property="materialTitle" destination="5oc-Gf-MQ0" id="ueP-y0-s7l"/>
                 <outlet property="nextButton" destination="5fm-jU-2sB" id="NOP-lv-MHc"/>
                 <outlet property="prevButton" destination="yPu-zJ-iKZ" id="WcW-NV-rPp"/>
+                <outlet property="scrollview" destination="tr7-es-1zz" id="9Ir-5r-jOU"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

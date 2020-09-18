@@ -29,6 +29,7 @@
                 <outlet property="quizImage" destination="UO4-nD-5V8" id="Cek-Hg-nM5"/>
                 <outlet property="quizText" destination="XUc-v7-AJI" id="Go9-ZY-QEE"/>
                 <outlet property="quizTitle" destination="j7V-7t-12h" id="9Gv-C6-LFN"/>
+                <outlet property="scrollview" destination="hOS-9i-DVs" id="Sas-3a-mlx"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -56,7 +57,6 @@
                                     <color key="backgroundColor" name="color_ D44444"/>
                                     <constraints>
                                         <constraint firstItem="LV4-1Z-xg1" firstAttribute="centerX" secondItem="huc-cX-kzb" secondAttribute="centerX" id="QNq-dY-1fb"/>
-                                        <constraint firstAttribute="width" secondItem="huc-cX-kzb" secondAttribute="height" multiplier="207:100" id="deb-Fx-hlF"/>
                                         <constraint firstAttribute="height" constant="200" id="e5I-9M-5Nn"/>
                                     </constraints>
                                 </view>
@@ -267,7 +267,6 @@
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="818" id="0YC-hv-JbY"/>
                                 <constraint firstAttribute="trailing" secondItem="rgC-9q-9dE" secondAttribute="trailing" constant="16" id="1Ws-Lp-omL"/>
                                 <constraint firstItem="8dG-oM-Jhk" firstAttribute="leading" secondItem="dHQ-qm-jib" secondAttribute="trailing" constant="23" id="3Dq-iI-ih4"/>
                                 <constraint firstItem="nJh-kB-wgT" firstAttribute="centerX" secondItem="bD1-7F-Ce2" secondAttribute="centerX" id="5P7-ta-7aj"/>
@@ -290,6 +289,8 @@
                                 <constraint firstItem="rgC-9q-9dE" firstAttribute="centerY" secondItem="bD1-7F-Ce2" secondAttribute="centerY" id="bQi-ou-cl7"/>
                                 <constraint firstItem="GDj-oM-Vhd" firstAttribute="leading" secondItem="3Es-uQ-Msu" secondAttribute="trailing" constant="23" id="c69-84-Dge"/>
                                 <constraint firstItem="8dG-oM-Jhk" firstAttribute="centerY" secondItem="dHQ-qm-jib" secondAttribute="centerY" id="cBW-kX-uIR"/>
+                                <constraint firstAttribute="bottom" secondItem="4v2-8e-qH0" secondAttribute="bottom" constant="42" id="dDl-ev-cAc"/>
+                                <constraint firstAttribute="bottom" secondItem="Aex-3s-nXY" secondAttribute="bottom" constant="42" id="eyB-Z6-p6l"/>
                                 <constraint firstItem="LV4-1Z-xg1" firstAttribute="top" secondItem="KEx-ml-yNT" secondAttribute="top" constant="16" id="fyu-Vl-Vie"/>
                                 <constraint firstItem="dam-A9-NX9" firstAttribute="leading" secondItem="KEx-ml-yNT" secondAttribute="leading" constant="16" id="gK3-hx-xOn"/>
                                 <constraint firstItem="huc-cX-kzb" firstAttribute="leading" secondItem="KEx-ml-yNT" secondAttribute="leading" id="i4b-Vu-c2r"/>

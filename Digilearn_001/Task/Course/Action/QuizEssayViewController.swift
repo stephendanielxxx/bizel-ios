@@ -25,6 +25,7 @@ class QuizEssayViewController: BaseActionViewController, ActionDelegate {
     @IBOutlet weak var prevButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var answerField: UITextField!
+    @IBOutlet weak var scrollView: UIScrollView!
     let URL = "\(DigilearnParams.ApiUrl)/score/get_essayById"
     
     override func viewDidLoad() {
@@ -56,6 +57,7 @@ class QuizEssayViewController: BaseActionViewController, ActionDelegate {
         }else{
             prevButton.isHidden = false
         }
+        scrollView.bounces = (scrollView.contentOffset.y > 100);
         
     }
     

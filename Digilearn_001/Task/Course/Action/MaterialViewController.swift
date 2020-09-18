@@ -23,6 +23,7 @@ class MaterialViewController: BaseActionViewController, ActionDelegate {
     @IBOutlet weak var prevButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var imageHeight: NSLayoutConstraint!
+    @IBOutlet weak var scrollview: UIScrollView!
     // single, essay
     // read,watch, link, audio
     override func viewDidLoad() {
@@ -57,6 +58,8 @@ class MaterialViewController: BaseActionViewController, ActionDelegate {
         }else{
             prevButton.isHidden = false
         }
+        
+        scrollview.bounces = (scrollview.contentOffset.y > 100);
     }
     
     @IBAction func nextAction(_ sender: UIButton) {
