@@ -26,6 +26,8 @@ class QuizEssayViewController: BaseActionViewController, ActionDelegate {
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var answerField: UITextField!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var undoButton: UIButton!
+    @IBOutlet weak var redoButton: UIButton!
     let URL = "\(DigilearnParams.ApiUrl)/score/get_essayById"
     
     override func viewDidLoad() {
@@ -58,7 +60,7 @@ class QuizEssayViewController: BaseActionViewController, ActionDelegate {
             prevButton.isHidden = false
         }
         scrollView.bounces = (scrollView.contentOffset.y > 100);
-        
+        updateUndoButtons()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -66,8 +68,12 @@ class QuizEssayViewController: BaseActionViewController, ActionDelegate {
     }
     
     @IBAction func nextAction(_ sender: UIButton) {
-        submitProgress(courseId: courseId, moduleId: moduleId, topicId: (quiz?.topicID)!, actionId: (quiz?.actionID)!, answer: answerField.text ?? "")
-        delegate?.nextAction(index: index!)
+        if answerField.text!.isEmpty {
+            showFalseToast(message: "Please input your answer")
+        }else{
+            submitProgress(courseId: courseId, moduleId: moduleId, topicId: (quiz?.topicID)!, actionId: (quiz?.actionID)!, answer: answerField.text ?? "")
+            delegate?.nextAction(index: index!)
+        }
     }
     
     @IBAction func prevAction(_ sender: UIButton) {
@@ -96,6 +102,8 @@ class QuizEssayViewController: BaseActionViewController, ActionDelegate {
                             self.essayModel = try decoder.decode(EssayModel.self, from:data)
                             if self.essayModel.responseStatus {
                                 self.answerField.attributedText = self.essayModel.responseData.htmlToAttributedString
+                                self.undoButton.isHidden = true
+                                self.redoButton.isHidden = true
                             }
                         }catch{
                             print(error.localizedDescription)
@@ -108,7 +116,28 @@ class QuizEssayViewController: BaseActionViewController, ActionDelegate {
         }
     }
     
+    @IBAction func undoAction(_ sender: UIButton) {
+        answerField.undoManager?.undo()
+        updateUndoButtons()
+    }
+    
+    @IBAction func redoAction(_ sender: UIButton) {
+        answerField.undoManager?.redo()
+        updateUndoButtons()
+    }
+
+    func updateUndoButtons() {
+//        undoButton.isEnabled = answerField.undoManager?.canUndo ?? false
+//        redoButton.isEnabled = answerField.undoManager?.canRedo ?? false
+    }
+    
     func onSubmitProgress(message: String) {
         
+    }
+}
+
+extension QuizEssayViewController: UITextFieldDelegate{
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        updateUndoButtons()
     }
 }

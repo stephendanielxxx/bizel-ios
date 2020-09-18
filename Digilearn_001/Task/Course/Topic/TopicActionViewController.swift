@@ -205,7 +205,7 @@ extension TopicActionViewController: ExpandableDelegate{
                     if topicActionBefore?.finished?.caseInsensitiveCompare("finish") == .orderedSame {
                         self.present(action, animated: true, completion: nil)
                     }else{
-                        let alert = UIAlertController(title: "", message: "Oops, you must read and solve the activities in order!", preferredStyle: .alert)
+                        let alert = UIAlertController(title: "", message: "Please go through the activity in order sequentially", preferredStyle: .alert)
                         alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
                         self.present(alert, animated: true)
                     }
@@ -217,7 +217,7 @@ extension TopicActionViewController: ExpandableDelegate{
                     if topicActionBefore?.finished?.caseInsensitiveCompare("finish") == .orderedSame {
                         self.present(action, animated: true, completion: nil)
                     }else{
-                        let alert = UIAlertController(title: "", message: "Oops, you must read and solve the activities in order!", preferredStyle: .alert)
+                        let alert = UIAlertController(title: "", message: "Please go through the activity in order sequentially", preferredStyle: .alert)
                         alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
                         self.present(alert, animated: true)
                     }

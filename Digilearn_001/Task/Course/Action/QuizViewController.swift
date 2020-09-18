@@ -92,33 +92,6 @@ class QuizViewController: BaseActionViewController, ActionDelegate {
         scrollview.bounces = (scrollview.contentOffset.y > 100);
     }
     
-    fileprivate func showCorrectToast() {
-        var style = ToastStyle()
-        style.backgroundColor = UIColor(named: "color_0CA422")!
-        style.messageColor = UIColor.white
-        ToastManager.shared.style = style
-        
-        self.view.makeToast("CORRECT. Great!")
-    }
-    
-    fileprivate func showFalseToast() {
-        var style = ToastStyle()
-        style.backgroundColor = UIColor.red
-        style.messageColor = UIColor.white
-        ToastManager.shared.style = style
-        
-        self.view.makeToast("Incorrect Answer. Please try again!")
-    }
-    
-    fileprivate func showToast(message: String) {
-        var style = ToastStyle()
-        style.backgroundColor = UIColor.black
-        style.messageColor = UIColor.white
-        ToastManager.shared.style = style
-        
-        self.view.makeToast(message)
-    }
-    
     @objc func checkAnswerA(_ sender: CustomChoiceCardView?) {
         debugPrint(sender!.answer!)
         debugPrint(quiz!.answer!)
@@ -128,10 +101,10 @@ class QuizViewController: BaseActionViewController, ActionDelegate {
         lineD.backgroundColor = UIColor.darkGray
         
         if sender!.answer!.caseInsensitiveCompare(String(describing: quiz!.answer!)) == .orderedSame {
-            showCorrectToast()
+            showCorrectToast(message: "CORRECT. Great!")
             isCorrect = true
         }else{
-            showFalseToast()
+            showFalseToast(message: "Incorrect Answer. Please try again!")
         }
         
     }
@@ -145,10 +118,10 @@ class QuizViewController: BaseActionViewController, ActionDelegate {
         lineD.backgroundColor = UIColor.darkGray
         
         if sender!.answer!.caseInsensitiveCompare(String(describing: quiz!.answer!)) == .orderedSame {
-            showCorrectToast()
+            showCorrectToast(message: "CORRECT. Great!")
             isCorrect = true
         }else{
-            showFalseToast()
+            showFalseToast(message: "Incorrect Answer. Please try again!")
         }
     }
     
@@ -161,10 +134,10 @@ class QuizViewController: BaseActionViewController, ActionDelegate {
         lineD.backgroundColor = UIColor.darkGray
         
         if sender!.answer!.caseInsensitiveCompare(String(describing: quiz!.answer!)) == .orderedSame {
-            showCorrectToast()
+            showCorrectToast(message: "CORRECT. Great!")
             isCorrect = true
         }else{
-            showFalseToast()
+            showFalseToast(message: "Incorrect Answer. Please try again!")
         }
     }
     
@@ -177,10 +150,10 @@ class QuizViewController: BaseActionViewController, ActionDelegate {
         lineD.backgroundColor = UIColor(named: "color_EFB8CB")
         
         if sender!.answer!.caseInsensitiveCompare(String(describing: quiz!.answer!)) == .orderedSame {
-            showCorrectToast()
+            showCorrectToast(message: "CORRECT. Great!")
             isCorrect = true
         }else{
-            showFalseToast()
+            showFalseToast(message: "Incorrect Answer. Please try again!")
         }
     }
     
@@ -189,7 +162,7 @@ class QuizViewController: BaseActionViewController, ActionDelegate {
             submitProgress(courseId: courseId, moduleId: moduleId, topicId: (quiz?.topicID)!, actionId: (quiz?.actionID)!, answer: (quiz?.answer)!)
             delegate?.nextAction(index: index!)
         }else{
-            showFalseToast()
+            showFalseToast(message: "Incorrect Answer. Please try again!")
         }
     }
     

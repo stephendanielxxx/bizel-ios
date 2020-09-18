@@ -28,6 +28,24 @@ class BaseActionViewController: UIViewController {
         nickName = readStringPreference(key: DigilearnsKeys.USER_NICK)
     }
     
+    func showCorrectToast(message: String) {
+        var style = ToastStyle()
+        style.backgroundColor = UIColor(named: "color_0CA422")!
+        style.messageColor = UIColor.white
+        ToastManager.shared.style = style
+        
+        self.view.makeToast(message)
+    }
+    
+    func showFalseToast(message: String) {
+        var style = ToastStyle()
+        style.backgroundColor = UIColor.red
+        style.messageColor = UIColor.white
+        ToastManager.shared.style = style
+        
+        self.view.makeToast(message)
+    }
+    
     func replaceNickname(text: String) -> String {
         var result = text.replacingOccurrences(of: "{{nickname}}", with: nickName!)
         result = result.replacingOccurrences(of: "{{Nickname}}", with: nickName!)
