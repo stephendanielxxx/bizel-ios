@@ -95,7 +95,6 @@ class QuizEssayViewController: BaseActionViewController, ActionDelegate {
                             if self.essayModel.responseStatus {
                                 self.answerField.attributedText = self.essayModel.responseData.htmlToAttributedString
                             }
-                            
                         }catch{
                             print(error.localizedDescription)
                         }
