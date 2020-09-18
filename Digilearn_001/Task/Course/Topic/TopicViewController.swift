@@ -9,8 +9,8 @@
 import UIKit
 import PINRemoteImage
 
-class TopicViewController: UIViewController {
-
+class TopicViewController: UIViewController, TopicActionDelegate {
+    
     @IBOutlet weak var imageModule: UIImageView!
     @IBOutlet weak var titleModule: UILabel!
     @IBOutlet weak var createdModule: UILabel!
@@ -47,7 +47,7 @@ class TopicViewController: UIViewController {
     
     func setInitial(){
         let topics = TopicActionViewController()
-        
+        topics.topicActionDelegate = self
         topics.courseId = courseId
         topics.moduleId = moduleId
         topics.nextModuleName = nextModuleName
@@ -85,5 +85,11 @@ class TopicViewController: UIViewController {
         about.topicDesc = moduleDesc
         
         embed(about, inParent: self, inView: tabContent)
+    }
+    
+    func onDismissScreen() {
+       
+        self.dismiss(animated: true, completion: nil)
+         debugPrint("TestTTTTTT")
     }
 }

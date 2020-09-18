@@ -24,6 +24,8 @@ class ActionViewController: UIViewController {
     var indexPage = 0
     var totalPage = 0
     
+    var actionViewDelegate: ActionViewDelegate!
+    
     @IBOutlet weak var titleLabel: UINavigationItem!
     @IBOutlet weak var embedView: UIView!
     
@@ -73,7 +75,8 @@ class ActionViewController: UIViewController {
     }
 }
 
-extension ActionViewController: QuizDelegate{
+extension ActionViewController: QuizDelegate, ModuleFinishDelegate{
+    
     fileprivate func openAction(index: Int) {
         let assesmentQuiz = self.assesmentModel.assessmentQuiz![indexPage]
         
@@ -124,14 +127,12 @@ extension ActionViewController: QuizDelegate{
         if indexPage == totalPage {
             if nextTopicId.caseInsensitiveCompare("buntu") == .orderedSame{
                 let moduleFinish = ModuleFinishViewController()
+                moduleFinish.moduleFinishDelegate = self
                 moduleFinish.currentModule = moduleTitle
                 moduleFinish.nextModule = nextModuleName
                 moduleFinish.modalPresentationStyle = .fullScreen
-                weak var pvc = self.presentingViewController
-                self.dismiss(animated: true, completion: {
-                    pvc?.present(moduleFinish, animated: true, completion: nil)
-                })
                 
+                self.present(moduleFinish, animated: true, completion: nil)
                 
             }else{
                 self.dismiss(animated: true, completion: nil)
@@ -147,4 +148,13 @@ extension ActionViewController: QuizDelegate{
         
         openAction(index: self.indexPage)
     }
+    
+    func onBackToModule() {
+        self.actionViewDelegate.onModuleFinish()
+    }
+    
+}
+
+protocol ActionViewDelegate {
+    func onModuleFinish()
 }

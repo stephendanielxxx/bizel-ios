@@ -12,6 +12,7 @@ class ModuleFinishViewController: UIViewController {
 
     var currentModule = ""
     var nextModule = ""
+    var moduleFinishDelegate: ModuleFinishDelegate!
     
     @IBOutlet weak var moduleTitle: UILabel!
     @IBOutlet weak var nextModuleTitle: UILabel!
@@ -27,6 +28,12 @@ class ModuleFinishViewController: UIViewController {
     }
 
     @IBAction func backAction(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true, completion: {
+            self.moduleFinishDelegate.onBackToModule()
+        })
     }
+}
+
+protocol ModuleFinishDelegate{
+    func onBackToModule()
 }

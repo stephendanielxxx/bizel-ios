@@ -18,6 +18,8 @@ class TopicActionViewController: UIViewController {
     
     var topicActionModel: TopicActionModel!
     
+    var topicActionDelegate: TopicActionDelegate!
+    
     var sectionCount: Int = 0
     
     @IBOutlet weak var topicView: ExpandableTableView!
@@ -84,7 +86,7 @@ class TopicActionViewController: UIViewController {
     
 }
 
-extension TopicActionViewController: ExpandableDelegate{
+extension TopicActionViewController: ExpandableDelegate, ActionViewDelegate{
     
     func numberOfSections(in expandableTableView: ExpandableTableView) -> Int {
         return 1
@@ -187,6 +189,7 @@ extension TopicActionViewController: ExpandableDelegate{
         let topicAction = topicDetail.topicDetailAction?[indexCell]
         
         let action = ActionViewController()
+        action.actionViewDelegate = self
         action.moduleTitle = topicAction?.moduleName as! String
         action.nextModuleName = nextModuleName
         action.courseId = courseId
@@ -233,4 +236,11 @@ extension TopicActionViewController: ExpandableDelegate{
         return true
     }
     
+    func onModuleFinish() {
+        topicActionDelegate.onDismissScreen()
+    }
+}
+
+protocol TopicActionDelegate {
+    func onDismissScreen()
 }
