@@ -59,6 +59,7 @@
 		B9673E11250F748F005E6BB8 /* ModulesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9673E0F250F748F005E6BB8 /* ModulesViewController.xib */; };
 		B9673E14250F7AE1005E6BB8 /* ModulesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9673E12250F7AE1005E6BB8 /* ModulesTableViewCell.swift */; };
 		B9673E15250F7AE1005E6BB8 /* ModulesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9673E13250F7AE1005E6BB8 /* ModulesTableViewCell.xib */; };
+		B969665725145A5F00A3561E /* CustomChoiceCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B969665625145A5F00A3561E /* CustomChoiceCardView.swift */; };
 		B96F5BDB2511EEDD006AB070 /* BizelCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96F5BDA2511EEDD006AB070 /* BizelCardView.swift */; };
 		B96F5BE02511F272006AB070 /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96F5BDE2511F272006AB070 /* ActionViewController.swift */; };
 		B96F5BE12511F272006AB070 /* ActionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B96F5BDF2511F272006AB070 /* ActionViewController.xib */; };
@@ -200,6 +201,7 @@
 		B9673E0F250F748F005E6BB8 /* ModulesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModulesViewController.xib; sourceTree = "<group>"; };
 		B9673E12250F7AE1005E6BB8 /* ModulesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModulesTableViewCell.swift; sourceTree = "<group>"; };
 		B9673E13250F7AE1005E6BB8 /* ModulesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModulesTableViewCell.xib; sourceTree = "<group>"; };
+		B969665625145A5F00A3561E /* CustomChoiceCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomChoiceCardView.swift; sourceTree = "<group>"; };
 		B96F5BDA2511EEDD006AB070 /* BizelCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BizelCardView.swift; sourceTree = "<group>"; };
 		B96F5BDE2511F272006AB070 /* ActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionViewController.swift; sourceTree = "<group>"; };
 		B96F5BDF2511F272006AB070 /* ActionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActionViewController.xib; sourceTree = "<group>"; };
@@ -527,6 +529,14 @@
 			path = Course;
 			sourceTree = "<group>";
 		};
+		B969665525145A2700A3561E /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				B969665625145A5F00A3561E /* CustomChoiceCardView.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
 		B96F5BDC2511F170006AB070 /* Custom */ = {
 			isa = PBXGroup;
 			children = (
@@ -538,6 +548,7 @@
 		B96F5BDD2511F258006AB070 /* Action */ = {
 			isa = PBXGroup;
 			children = (
+				B969665525145A2700A3561E /* Custom */,
 				B97C0D26251358AE005E36B4 /* Base */,
 				B96F5BDE2511F272006AB070 /* ActionViewController.swift */,
 				B96F5BDF2511F272006AB070 /* ActionViewController.xib */,
@@ -1011,6 +1022,7 @@
 				B97C0D2825135920005E36B4 /* BaseActionViewController.swift in Sources */,
 				B96F5BE925121DFA006AB070 /* IntroductionViewController.swift in Sources */,
 				B9D0534D2501E06B00F1AC03 /* DigilearnParams.swift in Sources */,
+				B969665725145A5F00A3561E /* CustomChoiceCardView.swift in Sources */,
 				B96F5BDB2511EEDD006AB070 /* BizelCardView.swift in Sources */,
 				B9A115FB2510746800852131 /* TopicViewController.swift in Sources */,
 				B98C449F250B4DCA00363F8C /* BannerModel.swift in Sources */,
