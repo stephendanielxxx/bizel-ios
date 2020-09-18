@@ -17,6 +17,8 @@ class ActionViewController: UIViewController {
     var moduleId = ""
     var topicId = ""
     var actionId = ""
+    var nextTopicId = ""
+    var nextModuleName = ""
     let URL = "\(DigilearnParams.ApiUrl)/quiz/get_quiz_course"
     var assesmentModel: AssesmentModel!
     var indexPage = 0
@@ -120,7 +122,20 @@ extension ActionViewController: QuizDelegate{
         self.indexPage = index + 1
         
         if indexPage == totalPage {
-            self.dismiss(animated: true, completion: nil)
+            if nextTopicId.caseInsensitiveCompare("buntu") == .orderedSame{
+                let moduleFinish = ModuleFinishViewController()
+                moduleFinish.currentModule = moduleTitle
+                moduleFinish.nextModule = nextModuleName
+                moduleFinish.modalPresentationStyle = .fullScreen
+                weak var pvc = self.presentingViewController
+                self.dismiss(animated: true, completion: {
+                    pvc?.present(moduleFinish, animated: true, completion: nil)
+                })
+                
+                
+            }else{
+                self.dismiss(animated: true, completion: nil)
+            }
         }else{
             openAction(index: self.indexPage)
             

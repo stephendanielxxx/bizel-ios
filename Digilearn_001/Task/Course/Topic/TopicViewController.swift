@@ -26,6 +26,7 @@ class TopicViewController: UIViewController {
     var moduleDesc = ""
     var courseId = ""
     var moduleId = ""
+    var nextModuleName = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +50,7 @@ class TopicViewController: UIViewController {
         
         topics.courseId = courseId
         topics.moduleId = moduleId
+        topics.nextModuleName = nextModuleName
         
         embed(topics, inParent: self, inView: tabContent)
     }

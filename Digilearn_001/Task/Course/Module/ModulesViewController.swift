@@ -96,6 +96,7 @@ extension ModulesViewController: UITableViewDelegate, UITableViewDataSource{
     @objc func openDetail(_ sender: UIButton?) {
         let index = sender!.tag
         let task = listCourseModel.moduleDetail[index]
+        let count = listCourseModel.moduleDetail.count
         
         let topic = TopicViewController()
         
@@ -105,6 +106,12 @@ extension ModulesViewController: UITableViewDelegate, UITableViewDataSource{
         topic.moduleDesc = task.moduleDesc
         topic.moduleId = task.moduleID
         topic.courseId = course_id
+        
+        if index < count {
+            topic.nextModuleName = listCourseModel.moduleDetail[index+1].moduleName
+        }else{
+            topic.nextModuleName = ""
+        }
         
         topic.modalPresentationStyle = .fullScreen
         

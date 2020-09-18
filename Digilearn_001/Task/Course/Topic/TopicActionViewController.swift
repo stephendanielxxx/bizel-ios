@@ -14,6 +14,7 @@ class TopicActionViewController: UIViewController {
     
     var courseId = ""
     var moduleId = ""
+    var nextModuleName = ""
     
     var topicActionModel: TopicActionModel!
     
@@ -187,11 +188,13 @@ extension TopicActionViewController: ExpandableDelegate{
         
         let action = ActionViewController()
         action.moduleTitle = topicAction?.moduleName as! String
+        action.nextModuleName = nextModuleName
         action.courseId = courseId
         action.moduleId = topicAction?.moduleID as! String
         action.topicId = topicAction?.topicID as! String
         action.actionId = topicAction?.actionID as! String
         action.indexPage = indexCell
+        action.nextTopicId = topicAction?.nextTopicID as! String
         action.modalPresentationStyle = .fullScreen
         
         if topicAction?.topicAccess?.caseInsensitiveCompare("random") == .orderedSame{

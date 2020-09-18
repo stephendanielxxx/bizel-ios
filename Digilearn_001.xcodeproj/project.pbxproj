@@ -62,6 +62,8 @@
 		B969665725145A5F00A3561E /* CustomChoiceCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B969665625145A5F00A3561E /* CustomChoiceCardView.swift */; };
 		B9696659251487A800A3561E /* EssayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9696658251487A800A3561E /* EssayModel.swift */; };
 		B969665B2514909500A3561E /* SubmitProgressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B969665A2514909500A3561E /* SubmitProgressModel.swift */; };
+		B969665E2514A99100A3561E /* ModuleFinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B969665C2514A99100A3561E /* ModuleFinishViewController.swift */; };
+		B969665F2514A99100A3561E /* ModuleFinishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B969665D2514A99100A3561E /* ModuleFinishViewController.xib */; };
 		B96F5BDB2511EEDD006AB070 /* BizelCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96F5BDA2511EEDD006AB070 /* BizelCardView.swift */; };
 		B96F5BE02511F272006AB070 /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96F5BDE2511F272006AB070 /* ActionViewController.swift */; };
 		B96F5BE12511F272006AB070 /* ActionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B96F5BDF2511F272006AB070 /* ActionViewController.xib */; };
@@ -206,6 +208,8 @@
 		B969665625145A5F00A3561E /* CustomChoiceCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomChoiceCardView.swift; sourceTree = "<group>"; };
 		B9696658251487A800A3561E /* EssayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssayModel.swift; sourceTree = "<group>"; };
 		B969665A2514909500A3561E /* SubmitProgressModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitProgressModel.swift; sourceTree = "<group>"; };
+		B969665C2514A99100A3561E /* ModuleFinishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleFinishViewController.swift; sourceTree = "<group>"; };
+		B969665D2514A99100A3561E /* ModuleFinishViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModuleFinishViewController.xib; sourceTree = "<group>"; };
 		B96F5BDA2511EEDD006AB070 /* BizelCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BizelCardView.swift; sourceTree = "<group>"; };
 		B96F5BDE2511F272006AB070 /* ActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionViewController.swift; sourceTree = "<group>"; };
 		B96F5BDF2511F272006AB070 /* ActionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActionViewController.xib; sourceTree = "<group>"; };
@@ -564,6 +568,8 @@
 				B97C0D2125134E69005E36B4 /* QuizEssayViewController.xib */,
 				B97C0D1A2513178E005E36B4 /* MaterialViewController.swift */,
 				B97C0D1B2513178E005E36B4 /* MaterialViewController.xib */,
+				B969665C2514A99100A3561E /* ModuleFinishViewController.swift */,
+				B969665D2514A99100A3561E /* ModuleFinishViewController.xib */,
 			);
 			path = Action;
 			sourceTree = "<group>";
@@ -879,6 +885,7 @@
 				B97C0D112512FEA0005E36B4 /* ThirdBoardViewController.xib in Resources */,
 				6ADC3B26250A2EFE00E88D7C /* AnnounceViewController.xib in Resources */,
 				B94585EF2509FDDF00330DAC /* EventDetailViewController.xib in Resources */,
+				B969665F2514A99100A3561E /* ModuleFinishViewController.xib in Resources */,
 				B94585DC2509C6DA00330DAC /* MenuTableViewCell.xib in Resources */,
 				B99FA31C2505E65D00A59C59 /* FAQViewController.xib in Resources */,
 				B94585E72509CB1700330DAC /* HomeViewController.xib in Resources */,
@@ -1017,6 +1024,7 @@
 				B9A116122510C1FD00852131 /* TopicItemTableViewCell.swift in Sources */,
 				B94585EE2509FDDF00330DAC /* EventDetailViewController.swift in Sources */,
 				B98C4490250B1AD900363F8C /* HomeTabBarController.swift in Sources */,
+				B969665E2514A99100A3561E /* ModuleFinishViewController.swift in Sources */,
 				B9673DFA250F251C005E6BB8 /* MyTaskViewController.swift in Sources */,
 				B934AF4924FF4B82000FCEB3 /* ViewController.swift in Sources */,
 				B9D0535A2502278F00F1AC03 /* RegisterViewController.swift in Sources */,
