@@ -16,7 +16,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="338" height="89"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2zU-9Z-gzf">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2zU-9Z-gzf" customClass="MDCCard">
                         <rect key="frame" x="0.0" y="0.0" width="338" height="89"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gOd-yH-QaZ" userLabel="Image Group">
@@ -30,7 +30,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WhatsApp Image 2020-09-10 at 16.09.18" translatesAutoresizingMaskIntoConstraints="NO" id="xQT-qd-3jt">
                                 <rect key="frame" x="22" y="1.5" width="37" height="86"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vG3-bx-KiO">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vG3-bx-KiO">
                                 <rect key="frame" x="137" y="28" width="189" height="33"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <attributedString key="attributedText">
@@ -59,6 +59,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="2zU-9Z-gzf" secondAttribute="trailing" id="BBQ-1N-Gg6"/>
+                    <constraint firstItem="2zU-9Z-gzf" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Cjj-l0-uom"/>
                     <constraint firstAttribute="bottom" secondItem="2zU-9Z-gzf" secondAttribute="bottom" id="ITf-r9-ml2"/>
                     <constraint firstItem="2zU-9Z-gzf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="wuV-8T-f9O"/>
                     <constraint firstItem="2zU-9Z-gzf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="xDg-tW-2E7"/>
@@ -66,6 +67,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="groupDetail" destination="2zU-9Z-gzf" id="jGG-AT-mSY"/>
                 <outlet property="imageDefault" destination="xQT-qd-3jt" id="mPQ-WC-Zqa"/>
                 <outlet property="imageGroup" destination="gOd-yH-QaZ" id="3Ng-GS-vou"/>
                 <outlet property="titleGroup" destination="vG3-bx-KiO" id="B8F-G0-ghO"/>
