@@ -132,7 +132,17 @@ extension ActionViewController: QuizDelegate, ModuleFinishDelegate{
                 
                 self.embed(material, inParent: self, inView: self.embedView)
             }else if assesmentQuiz.materialType?.caseInsensitiveCompare("Watch") == .orderedSame{
+                let material = MaterialVideoViewController()
+                material.delegate = self
+                material.courseId = self.courseId
+                material.moduleId = self.moduleId
+                material.topicId = assesmentQuiz.topicID!
+                material.actionId = assesmentQuiz.actionID!
+                material.index = self.indexPage
+                material.quiz = assesmentQuiz
+                material.modalPresentationStyle = .fullScreen
                 
+                self.embed(material, inParent: self, inView: self.embedView)
             }
             
         }

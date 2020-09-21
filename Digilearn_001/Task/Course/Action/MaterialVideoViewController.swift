@@ -7,62 +7,56 @@
 //
 
 import UIKit
-import BMPlayer
+import MaterialComponents.MaterialCards
+import ASPVideoPlayer
+import AVFoundation
 
-class MaterialVideoViewController: UIViewController {
+class MaterialVideoViewController: BaseActionViewController, ActionDelegate {
+
+    var delegate: QuizDelegate!
+    var quiz: AssessmentQuizModel?
+    var index: Int?
+    @IBOutlet weak var cardView: MDCCard!
+    @IBOutlet weak var prevButton: UIButton!
+    @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var materialTitle: UILabel!
     
-    @IBOutlet weak var playerView: UIView!
-    var player: BMPlayer!
+    @IBOutlet weak var videoPlayer: ASPVideoPlayer!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+         actionDelegate = self
         
-        var videoURL = URL.init(string: "https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4")
+        cardView.cornerRadius = 15
+        prevButton.layer.cornerRadius = 15
+        nextButton.layer.cornerRadius = 15
         
-//        let playerViewController = AVPlayerViewController()
-//        playerViewController.player = AVPlayer(url: videoURL!)
-//        playerViewController.view.frame = playerView.bounds
-//
-//        playerView.addSubview(playerViewController.view)
-//        playerViewController.player?.play()
+        materialTitle.text = quiz?.title
         
-        //        let player = AVPlayer(url: videoURL!)
-        //        let playerLayer = AVPlayerLayer(player: player)
-        //        playerLayer.frame = playerView.bounds
-        //        playerView.layer.addSublayer(playerLayer)
-        //        player.play()
-        
-//        self.player = Player()
-////        self.player.playerDelegate = self
-////        self.player.playbackDelegate = self
-//        self.player.view.frame = playerView.bounds
-//
-////        self.addChild(self.player)
-//        playerView.addSubview(self.player.view)
-////        self.player.didMove(toParent: self)
-//
-//        self.player.url = videoURL
-//
-//        self.player.playFromBeginning()
-        player = BMPlayer()
-        player.frame = playerView.bounds
-        playerView.addSubview(player)
-        player.snp.makeConstraints { (make) in
-            make.top.equalTo(self.view).offset(20)
-            make.left.right.equalTo(self.view)
-            // Note here, the aspect ratio 16:9 priority is lower than 1000 on the line, because the 4S iPhone aspect ratio is not 16:9
-            make.height.equalTo(player.snp.width).multipliedBy(9.0/16.0).priority(750)
+        if index == 0 {
+            prevButton.isHidden = true
+        }else{
+            prevButton.isHidden = false
         }
         
-        let asset = BMPlayerResource(url: URL(string: "https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4")!,
-        name: "Test")
+        scrollView.bounces = (scrollView.contentOffset.y > 100);
+        let secondNetworkURL = URL(string: "https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4")
+        let secondAsset = AVURLAsset(url: secondNetworkURL!)
+        videoPlayer.videoAssets = [secondAsset]
+        videoPlayer.videoPlayerControls.tintColor = UIColor(named: "red_1")
+    }
+    
+    @IBAction func prevAction(_ sender: UIButton) {
+         delegate?.prevAction(index: index!)
+    }
+    
+    @IBAction func nextAction(_ sender: UIButton) {
+        submitProgress(courseId: courseId, moduleId: moduleId, topicId: (quiz?.topicID)!, actionId: (quiz?.actionID)!, answer: "")
+               delegate?.nextAction(index: index!)
+    }
+    
+    func onSubmitProgress(message: String) {
         
-        player.setVideo(resource: asset)
-        
-        
-        // Back button event
-        player.backBlock = { [unowned self] (isFullScreen) in
-            if isFullScreen == true { return }
-            let _ = self.navigationController?.popViewController(animated: true)
-        }
     }
 }

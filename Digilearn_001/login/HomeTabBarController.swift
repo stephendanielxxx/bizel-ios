@@ -33,7 +33,7 @@ class HomeTabBarController: UITabBarController {
         
         let homeViewController = HomeViewController()
         let taskViewController = MyTaskViewController()
-        let test1 = MaterialVideoViewController()
+        let test1 = MyEventViewController()
         let test2 = MyEventViewController()
         
         homeViewController.tabBarItem = homeItem
