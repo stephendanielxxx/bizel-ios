@@ -41,10 +41,15 @@ class MaterialVideoViewController: BaseActionViewController, ActionDelegate {
         }
         
         scrollView.bounces = (scrollView.contentOffset.y > 100);
-        let secondNetworkURL = URL(string: "https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4")
+        
+        var videoUrl = "https://digicourse.id/digilearn/admin-master/assets.admin_master/action/material/video/\(quiz!.file!)"
+        let secondNetworkURL = URL(string: videoUrl)
         let secondAsset = AVURLAsset(url: secondNetworkURL!)
+        videoPlayer.backgroundColor = UIColor.white
+        
         videoPlayer.videoAssets = [secondAsset]
         videoPlayer.videoPlayerControls.tintColor = UIColor(named: "red_1")
+    
     }
     
     @IBAction func prevAction(_ sender: UIButton) {
