@@ -30,8 +30,13 @@ class MyTaskViewController: UIViewController {
         activeButton.layer.cornerRadius = 15
         expiredButton.layer.cornerRadius = 15
         
-        loadActiveData()
+        
 
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden( true, animated: animated )
+        loadActiveData()
     }
     
     @IBAction func activeAction(_ sender: UIButton) {

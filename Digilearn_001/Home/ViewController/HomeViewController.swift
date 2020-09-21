@@ -19,6 +19,10 @@ class HomeViewController: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden( true, animated: animated )
+    }
+    
     func configureView() {
         tableView.delegate = self
         tableView.dataSource = self

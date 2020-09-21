@@ -32,7 +32,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             window?.makeKeyAndVisible()
             
         }else if(userId != nil){
-            window?.rootViewController = UINavigationController(rootViewController: HomeTabBarController())
+            let homeScreen: UINavigationController = UINavigationController(rootViewController: HomeTabBarController())
+            homeScreen.view.frame = UIScreen.main.bounds
+            window?.rootViewController = homeScreen
             window?.makeKeyAndVisible()
         }else{
             window?.rootViewController = LoginViewController()

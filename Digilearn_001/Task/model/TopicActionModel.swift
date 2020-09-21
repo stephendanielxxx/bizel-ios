@@ -9,7 +9,7 @@
 import Foundation
 
 struct TopicActionModel: Decodable {
-    let topicDetail: [TopicDetail]
+    var topicDetail: [TopicDetail]
 
     enum CodingKeys: String, CodingKey {
         case topicDetail = "topic_detail"

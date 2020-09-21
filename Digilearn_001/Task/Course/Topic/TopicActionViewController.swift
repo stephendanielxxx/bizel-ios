@@ -29,15 +29,6 @@ class TopicActionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        loadData()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        loadData()
-    }
-    
-    func loadData(){
-        
         topicView.expandableDelegate = self
         topicView.expansionStyle = .single
         
@@ -46,6 +37,22 @@ class TopicActionViewController: UIViewController {
         
         let nibChild = UINib(nibName: "TopicItemTableViewCell", bundle: nil)
         topicView.register(nibChild, forCellReuseIdentifier: "topicItemIdentifier")
+        loadData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        topicView.expandableDelegate = self
+        
+        let nib = UINib(nibName: "TopicActionTableViewCell", bundle: nil)
+        topicView.register(nib, forCellReuseIdentifier: "topicActionIdentifier")
+        
+        let nibChild = UINib(nibName: "TopicItemTableViewCell", bundle: nil)
+        topicView.register(nibChild, forCellReuseIdentifier: "topicItemIdentifier")
+    }
+    
+    func loadData(){
         
         let user_id = readStringPreference(key: DigilearnsKeys.USER_ID)
         let parameters: [String:Any] = [
@@ -67,8 +74,8 @@ class TopicActionViewController: UIViewController {
                             self.topicActionModel = try decoder.decode(TopicActionModel.self, from:data)
                             
                             self.sectionCount = self.topicActionModel.topicDetail.count
-                            
                             self.topicView.reloadData()
+                            
                         }catch{
                             print(error.localizedDescription)
                         }
@@ -81,6 +88,7 @@ class TopicActionViewController: UIViewController {
     }
     
     @IBAction func refreshAction(_ sender: UIButton) {
+        super.viewWillAppear(true)
         loadData()
     }
     
@@ -157,14 +165,14 @@ extension TopicActionViewController: ExpandableDelegate, ActionViewDelegate{
                     let url = Foundation.URL(string: "https://digicourse.id/digilearn/admin-master/assets.admin_master/action/quiz/image/\(topicDetailAction.actionQuizImage!)")
                     cell.quizImage.pin_setImage(from: url)
                 }else{
-                     cell.quizImage.image = UIImage(named: "ic_default_quiz")
+                    cell.quizImage.image = UIImage(named: "ic_default_quiz")
                 }
             }else if topicDetailAction.actionTipe?.caseInsensitiveCompare("Material") == .orderedSame{
                 if let iamgeUrl = topicDetailAction.actionMaterialImage {
                     let url = Foundation.URL(string: "https://digicourse.id/digilearn/admin-master/assets.admin_master/action/material/image/\(iamgeUrl)")
                     cell.quizImage.pin_setImage(from: url)
                 }else{
-                     cell.quizImage.image = UIImage(named: "ic_default_quiz")
+                    cell.quizImage.image = UIImage(named: "ic_default_quiz")
                 }
             }else{
                 cell.quizImage.image = UIImage(named: "ic_default_quiz")
