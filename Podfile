@@ -20,6 +20,8 @@ target 'Digilearn_001' do
   pod 'MaterialComponents/Tabs+TabBarView'
   pod 'ExpandableCell'
   pod 'Toast-Swift', '~> 5.0.1'
+  pod 'Player', '~> 0.13.2'
+  pod 'BMPlayer', '~> 1.3.0'
   #pod 'Toaster'
   # Pods for Digilearn_001
 

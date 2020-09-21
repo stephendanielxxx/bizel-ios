@@ -107,17 +107,34 @@ extension ActionViewController: QuizDelegate, ModuleFinishDelegate{
                 self.embed(quiz, inParent: self, inView: self.embedView)
             }
         }else if assesmentQuiz.category?.caseInsensitiveCompare("material") == .orderedSame{
-            let material = MaterialViewController()
-            material.delegate = self
-            material.courseId = self.courseId
-            material.moduleId = self.moduleId
-            material.topicId = assesmentQuiz.topicID!
-            material.actionId = assesmentQuiz.actionID!
-            material.index = self.indexPage
-            material.quiz = assesmentQuiz
-            material.modalPresentationStyle = .fullScreen
+            if assesmentQuiz.materialType?.caseInsensitiveCompare("Read") == .orderedSame{
+                let material = MaterialViewController()
+                material.delegate = self
+                material.courseId = self.courseId
+                material.moduleId = self.moduleId
+                material.topicId = assesmentQuiz.topicID!
+                material.actionId = assesmentQuiz.actionID!
+                material.index = self.indexPage
+                material.quiz = assesmentQuiz
+                material.modalPresentationStyle = .fullScreen
+                
+                self.embed(material, inParent: self, inView: self.embedView)
+            }else if assesmentQuiz.materialType?.caseInsensitiveCompare("Watch Link") == .orderedSame{
+                let material = MaterialLinkViewController()
+                material.delegate = self
+                material.courseId = self.courseId
+                material.moduleId = self.moduleId
+                material.topicId = assesmentQuiz.topicID!
+                material.actionId = assesmentQuiz.actionID!
+                material.index = self.indexPage
+                material.quiz = assesmentQuiz
+                material.modalPresentationStyle = .fullScreen
+                
+                self.embed(material, inParent: self, inView: self.embedView)
+            }else if assesmentQuiz.materialType?.caseInsensitiveCompare("Watch") == .orderedSame{
+                
+            }
             
-            self.embed(material, inParent: self, inView: self.embedView)
         }
     }
     

@@ -2,6 +2,13 @@ PODS:
   - Alamofire (5.2.2)
   - AlamofireImage (4.1.0):
     - Alamofire (~> 5.1)
+  - BMPlayer (1.3.2):
+    - BMPlayer/Full (= 1.3.2)
+  - BMPlayer/Core (1.3.2)
+  - BMPlayer/Full (1.3.2):
+    - BMPlayer/Core
+    - NVActivityIndicatorView (~> 4.7.0)
+    - SnapKit (~> 5.0.0)
   - ExpandableCell (1.3.0)
   - FlagPhoneNumber (0.8.0):
     - FlagPhoneNumber/libPhoneNumberiOS (= 0.8.0)
@@ -72,6 +79,9 @@ PODS:
     - MDFTextAccessibility
   - MDFInternationalization (2.0.0)
   - MDFTextAccessibility (2.0.0)
+  - NVActivityIndicatorView (4.7.0):
+    - NVActivityIndicatorView/Presenter (= 4.7.0)
+  - NVActivityIndicatorView/Presenter (4.7.0)
   - PINCache (3.0.1-beta.8):
     - PINCache/Arc-exception-safe (= 3.0.1-beta.8)
     - PINCache/Core (= 3.0.1-beta.8)
@@ -87,6 +97,7 @@ PODS:
   - PINRemoteImage/PINCache (3.0.0):
     - PINCache (= 3.0.1-beta.8)
     - PINRemoteImage/Core
+  - Player (0.13.2)
   - Reqres (3.1.1)
   - RxCocoa (5.1.1):
     - RxRelay (~> 5)
@@ -95,10 +106,12 @@ PODS:
     - RxSwift (~> 5)
   - RxSwift (5.1.1)
   - SimpleCheckbox (2.1.0)
+  - SnapKit (5.0.1)
   - Toast-Swift (5.0.1)
 
 DEPENDENCIES:
   - Alamofire (~> 5.2)
+  - BMPlayer (~> 1.3.0)
   - ExpandableCell
   - FlagPhoneNumber
   - ImageSlideshow (~> 1.9.0)
@@ -107,6 +120,7 @@ DEPENDENCIES:
   - MaterialComponents/Cards
   - "MaterialComponents/Tabs+TabBarView"
   - PINRemoteImage
+  - Player (~> 0.13.2)
   - Reqres
   - RxCocoa (~> 5)
   - RxSwift (~> 5)
@@ -117,41 +131,49 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - AlamofireImage
+    - BMPlayer
     - ExpandableCell
     - FlagPhoneNumber
     - ImageSlideshow
     - MaterialComponents
     - MDFInternationalization
     - MDFTextAccessibility
+    - NVActivityIndicatorView
     - PINCache
     - PINOperation
     - PINRemoteImage
+    - Player
     - Reqres
     - RxCocoa
     - RxRelay
     - RxSwift
     - SimpleCheckbox
+    - SnapKit
     - Toast-Swift
 
 SPEC CHECKSUMS:
   Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
   AlamofireImage: c4a2ba349885fb3064feb74d2e547bd42ce9be10
+  BMPlayer: e4b241bd088644d7b89d991a1a65d1b1615d19b3
   ExpandableCell: 69ca7d71971c171473a7a30964d2127f4c6ceaf6
   FlagPhoneNumber: 3712455b95f66cb0f2016fef7d9e34cddf8c7f9a
   ImageSlideshow: 67184be896a28472bd3b906c33ce4e0734aa3d22
   MaterialComponents: 0048689c8afeaae0b83f2ae26057fa1433c4e02f
   MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
   MDFTextAccessibility: 85c09a1bd9c321f494348e632a25063bcda35a53
+  NVActivityIndicatorView: b19ddab2576f805cbe0fb2306cba3476e09a1dea
   PINCache: 534fd41d358d828dfdf227a0d327f3673a65e20b
   PINOperation: 24b774353ca248fcf87d67b2d61eef42087c125a
   PINRemoteImage: e2b89e19fb6e77ffc099f9d9f3b3fe1745e3f9f9
+  Player: 7a2bcad3631034fa47d4b6fdedf7c4075fc236fe
   Reqres: 4ebafc15b75c65fdf67edcec14520d43b836d4da
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   SimpleCheckbox: ddcd433ab8c3a8f57300bebda13151a8f302c7f9
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: eb8ce17ca6503294dc3d347773724b97854fae92
+PODFILE CHECKSUM: 949ceaa9d98fe531bc04f4ce655c66d925f8e834
 
 COCOAPODS: 1.9.3

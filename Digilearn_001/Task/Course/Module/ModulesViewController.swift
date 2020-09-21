@@ -107,7 +107,11 @@ extension ModulesViewController: UITableViewDelegate, UITableViewDataSource{
         topic.moduleId = task.moduleID
         topic.courseId = course_id
         
-        if index < count {
+        if count == 1 {
+            topic.nextModuleName = ""
+        }else if index < count {
+            debugPrint(index)
+            debugPrint(count)
             topic.nextModuleName = listCourseModel.moduleDetail[index+1].moduleName
         }else{
             topic.nextModuleName = ""
