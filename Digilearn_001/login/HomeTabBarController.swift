@@ -33,29 +33,19 @@ class HomeTabBarController: UITabBarController {
         
         let homeViewController = HomeViewController()
         let taskViewController = MyTaskViewController()
-        let test1 = MyEventViewController()
+        let library = LibraryViewController()
         let test2 = MyEventViewController()
         
         homeViewController.tabBarItem = homeItem
         taskViewController.tabBarItem = taskItem
-        test1.tabBarItem = libraryItem
+        library.tabBarItem = libraryItem
         test2.tabBarItem = profileItem
         
-        viewControllers = [homeViewController, taskViewController, test1, test2]
-        
-//        self.navigationController?.isNavigationBarHidden = true;
-//        self.tabBarController?.tabBar.isHidden = true
-//
-//        self.navigationItem.title = "Test"
+        viewControllers = [homeViewController, taskViewController, library, test2]
+
         self.navigationController?.navigationBar.backgroundColor = UIColor.red
-//
+
         self.tabBarController?.navigationController?.navigationBar.backgroundColor = UIColor(named: "red_1")
-//        self.tabBarController?.navigationController?.navigationBar.tintColor = UIColor.white
-//        self.tabBarController?.navigationController?.navigationItem.title = "Test"
-//
-//        self.tabBarController?.tabBar.isHidden = true
-        
-//        self.navigationController?.navigationBar.barTintColor = UIColor.red
 
     }
 

@@ -45,6 +45,11 @@
 		B94585EF2509FDDF00330DAC /* EventDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B94585ED2509FDDF00330DAC /* EventDetailViewController.xib */; };
 		B94585F1250A0D7D00330DAC /* EventDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94585F0250A0D7D00330DAC /* EventDetailModel.swift */; };
 		B94585F3250A2FFE00330DAC /* RegisterEventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94585F2250A2FFE00330DAC /* RegisterEventModel.swift */; };
+		B9608B39251AF9B10082B3A3 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9608B37251AF9B10082B3A3 /* LibraryViewController.swift */; };
+		B9608B3A251AF9B10082B3A3 /* LibraryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9608B38251AF9B10082B3A3 /* LibraryViewController.xib */; };
+		B9608B3D251AFEE10082B3A3 /* NewLibraryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9608B3B251AFEE10082B3A3 /* NewLibraryTableViewCell.swift */; };
+		B9608B3E251AFEE10082B3A3 /* NewLibraryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9608B3C251AFEE10082B3A3 /* NewLibraryTableViewCell.xib */; };
+		B9608B41251B1D9C0082B3A3 /* GetLibraryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9608B40251B1D9C0082B3A3 /* GetLibraryModel.swift */; };
 		B9673DF7250F23F1005E6BB8 /* ListTaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9673DF6250F23F1005E6BB8 /* ListTaskModel.swift */; };
 		B9673DFA250F251C005E6BB8 /* MyTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9673DF8250F251C005E6BB8 /* MyTaskViewController.swift */; };
 		B9673DFB250F251C005E6BB8 /* MyTaskViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9673DF9250F251C005E6BB8 /* MyTaskViewController.xib */; };
@@ -195,6 +200,11 @@
 		B94585ED2509FDDF00330DAC /* EventDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventDetailViewController.xib; sourceTree = "<group>"; };
 		B94585F0250A0D7D00330DAC /* EventDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailModel.swift; sourceTree = "<group>"; };
 		B94585F2250A2FFE00330DAC /* RegisterEventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEventModel.swift; sourceTree = "<group>"; };
+		B9608B37251AF9B10082B3A3 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
+		B9608B38251AF9B10082B3A3 /* LibraryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LibraryViewController.xib; sourceTree = "<group>"; };
+		B9608B3B251AFEE10082B3A3 /* NewLibraryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLibraryTableViewCell.swift; sourceTree = "<group>"; };
+		B9608B3C251AFEE10082B3A3 /* NewLibraryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewLibraryTableViewCell.xib; sourceTree = "<group>"; };
+		B9608B40251B1D9C0082B3A3 /* GetLibraryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLibraryModel.swift; sourceTree = "<group>"; };
 		B9673DF6250F23F1005E6BB8 /* ListTaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTaskModel.swift; sourceTree = "<group>"; };
 		B9673DF8250F251C005E6BB8 /* MyTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTaskViewController.swift; sourceTree = "<group>"; };
 		B9673DF9250F251C005E6BB8 /* MyTaskViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTaskViewController.xib; sourceTree = "<group>"; };
@@ -409,6 +419,7 @@
 		B934AF4324FF4B82000FCEB3 /* Digilearn_001 */ = {
 			isa = PBXGroup;
 			children = (
+				B9608B36251AF9640082B3A3 /* Library */,
 				B96F5BE225121AC5006AB070 /* Onboarding */,
 				B9673DF4250F237D005E6BB8 /* Task */,
 				6ADC3B1F250A2E7E00E88D7C /* Announcement */,
@@ -489,6 +500,26 @@
 				B98C44A4250B730C00363F8C /* Event */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		B9608B36251AF9640082B3A3 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				B9608B3F251B1D850082B3A3 /* Model */,
+				B9608B37251AF9B10082B3A3 /* LibraryViewController.swift */,
+				B9608B38251AF9B10082B3A3 /* LibraryViewController.xib */,
+				B9608B3B251AFEE10082B3A3 /* NewLibraryTableViewCell.swift */,
+				B9608B3C251AFEE10082B3A3 /* NewLibraryTableViewCell.xib */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		B9608B3F251B1D850082B3A3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B9608B40251B1D9C0082B3A3 /* GetLibraryModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		B9673DF4250F237D005E6BB8 /* Task */ = {
@@ -890,8 +921,10 @@
 				B96F5BE625121AE7006AB070 /* OnboardingViewController.xib in Resources */,
 				B96F5BEA25121DFA006AB070 /* IntroductionViewController.xib in Resources */,
 				B9D74BDB25185E0B00133208 /* MaterialVideoViewController.xib in Resources */,
+				B9608B3E251AFEE10082B3A3 /* NewLibraryTableViewCell.xib in Resources */,
 				B9A116012510864200852131 /* AbousTopicViewController.xib in Resources */,
 				B934AFC924FF8380000FCEB3 /* color.xcassets in Resources */,
+				B9608B3A251AF9B10082B3A3 /* LibraryViewController.xib in Resources */,
 				B97C0D0D2512FE6D005E36B4 /* SecondBoardViewController.xib in Resources */,
 				B98C44AC250B7B3100363F8C /* EventCollectionViewCell.xib in Resources */,
 				B9D0535B2502278F00F1AC03 /* RegisterViewController.xib in Resources */,
@@ -1061,6 +1094,7 @@
 				B96F5BE02511F272006AB070 /* ActionViewController.swift in Sources */,
 				6ADC3B29250B28C200E88D7C /* AnnounceTableViewCell.swift in Sources */,
 				6ADC3B142509FB1800E88D7C /* GroupModel.swift in Sources */,
+				B9608B3D251AFEE10082B3A3 /* NewLibraryTableViewCell.swift in Sources */,
 				B98C449B250B452B00363F8C /* HomeBannerTableViewCell.swift in Sources */,
 				B9A116002510864200852131 /* AbousTopicViewController.swift in Sources */,
 				B969665B2514909500A3561E /* SubmitProgressModel.swift in Sources */,
@@ -1079,12 +1113,14 @@
 				B9673E0C250F7039005E6BB8 /* AboutCourseViewController.swift in Sources */,
 				B99FA31B2505E65D00A59C59 /* FAQViewController.swift in Sources */,
 				B9696659251487A800A3561E /* EssayModel.swift in Sources */,
+				B9608B39251AF9B10082B3A3 /* LibraryViewController.swift in Sources */,
 				B9673E06250F561D005E6BB8 /* CourseViewController.swift in Sources */,
 				B934AFE024FFA88D000FCEB3 /* LoginViewController.swift in Sources */,
 				6ADC3B102509FA6500E88D7C /* MyGroupViewController.swift in Sources */,
 				B9673E00250F2B8C005E6BB8 /* MyTaskTableViewCell.swift in Sources */,
 				B9D053512501FF0500F1AC03 /* ForgetPasswordViewController.swift in Sources */,
 				B94585DB2509C6DA00330DAC /* HomeViewController.swift in Sources */,
+				B9608B41251B1D9C0082B3A3 /* GetLibraryModel.swift in Sources */,
 				B99FA3172505E07100A59C59 /* RegisterModel.swift in Sources */,
 				B9A1160425109B2700852131 /* TopicActionViewController.swift in Sources */,
 				B934AF4724FF4B82000FCEB3 /* SceneDelegate.swift in Sources */,
