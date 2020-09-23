@@ -91,6 +91,7 @@ extension ActionViewController: QuizDelegate, ModuleFinishDelegate{
                 quiz.actionId = assesmentQuiz.actionID!
                 quiz.index = self.indexPage
                 quiz.quiz = assesmentQuiz
+                quiz.isLibrary = self.isLibrary
                 quiz.modalPresentationStyle = .fullScreen
                 
                 self.embed(quiz, inParent: self, inView: self.embedView)
@@ -103,6 +104,7 @@ extension ActionViewController: QuizDelegate, ModuleFinishDelegate{
                 quiz.actionId = assesmentQuiz.actionID!
                 quiz.index = self.indexPage
                 quiz.quiz = assesmentQuiz
+                quiz.isLibrary = self.isLibrary
                 quiz.modalPresentationStyle = .fullScreen
                 
                 self.embed(quiz, inParent: self, inView: self.embedView)
@@ -117,6 +119,7 @@ extension ActionViewController: QuizDelegate, ModuleFinishDelegate{
                 material.actionId = assesmentQuiz.actionID!
                 material.index = self.indexPage
                 material.quiz = assesmentQuiz
+                material.isLibrary = self.isLibrary
                 material.modalPresentationStyle = .fullScreen
                 
                 self.embed(material, inParent: self, inView: self.embedView)
@@ -129,6 +132,7 @@ extension ActionViewController: QuizDelegate, ModuleFinishDelegate{
                 material.actionId = assesmentQuiz.actionID!
                 material.index = self.indexPage
                 material.quiz = assesmentQuiz
+                material.isLibrary = self.isLibrary
                 material.modalPresentationStyle = .fullScreen
                 
                 self.embed(material, inParent: self, inView: self.embedView)
@@ -141,6 +145,7 @@ extension ActionViewController: QuizDelegate, ModuleFinishDelegate{
                 material.actionId = assesmentQuiz.actionID!
                 material.index = self.indexPage
                 material.quiz = assesmentQuiz
+                material.isLibrary = self.isLibrary
                 material.modalPresentationStyle = .fullScreen
                 
                 self.embed(material, inParent: self, inView: self.embedView)

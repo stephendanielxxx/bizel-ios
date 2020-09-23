@@ -11,6 +11,7 @@ import Alamofire
 import Toast_Swift
 
 class BaseActionViewController: UIViewController {
+    var isLibrary = false
     var actionDelegate: ActionDelegate!
     var courseId = ""
     var moduleId = ""
@@ -54,38 +55,41 @@ class BaseActionViewController: UIViewController {
     }
     
     func submitProgress(courseId: String, moduleId: String, topicId: String, actionId: String, answer: String){
-        let user_id = readStringPreference(key: DigilearnsKeys.USER_ID)
-        let parameters: [String:Any] = [
-            "uid": "\(user_id)",
-            "course_id": "\(courseId)",
-            "module_id": "\(moduleId)",
-            "topic_id": "\(topicId)",
-            "action_id" : "\(actionId)",
-            "answer" : "\(answer)"
-        ]
         
-        AF.request(submitURL,
-                   method: .post,
-                   parameters: parameters,
-                   encoding: URLEncoding.httpBody).responseData { response in
-                    switch response.result {
-                    case .success(let data):
-                        self.removeSpinner()
-                        let decoder = JSONDecoder()
-                        do{
-                            
-                            self.submitProgressModel = try decoder.decode(SubmitProgressModel.self, from:data)
-                            debugPrint(self.submitProgressModel)
-                            self.actionDelegate.onSubmitProgress(message: (self.submitProgressModel?.message)!)
-                            
-                        }catch{
-                            print(error.localizedDescription)
+        if !isLibrary {
+            let user_id = readStringPreference(key: DigilearnsKeys.USER_ID)
+            let parameters: [String:Any] = [
+                "uid": "\(user_id)",
+                "course_id": "\(courseId)",
+                "module_id": "\(moduleId)",
+                "topic_id": "\(topicId)",
+                "action_id" : "\(actionId)",
+                "answer" : "\(answer)"
+            ]
+            
+            AF.request(submitURL,
+                       method: .post,
+                       parameters: parameters,
+                       encoding: URLEncoding.httpBody).responseData { response in
+                        switch response.result {
+                        case .success(let data):
+                            self.removeSpinner()
+                            let decoder = JSONDecoder()
+                            do{
+                                
+                                self.submitProgressModel = try decoder.decode(SubmitProgressModel.self, from:data)
+                                debugPrint(self.submitProgressModel)
+                                self.actionDelegate.onSubmitProgress(message: (self.submitProgressModel?.message)!)
+                                
+                            }catch{
+                                print(error.localizedDescription)
+                            }
+                        case .failure(let error):
+                            self.removeSpinner()
+                        default:
+                            self.removeSpinner()
                         }
-                    case .failure(let error):
-                        self.removeSpinner()
-                    default:
-                        self.removeSpinner()
-                    }
+            }
         }
     }
     
