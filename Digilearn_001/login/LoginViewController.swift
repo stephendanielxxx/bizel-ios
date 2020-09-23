@@ -33,6 +33,9 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
+        view.addGestureRecognizer(tap)
+        
         Reqres.register()
         // Do any additional setup after loading the view.
         phoneLogin.delegate = self
@@ -109,7 +112,7 @@ class LoginViewController: UIViewController {
                                     self.saveStringPreference(value: (loginModel.user?[0].id)!, key: DigilearnsKeys.USER_ID)
                                     self.saveStringPreference(value: (loginModel.user?[0].nickname)!, key: DigilearnsKeys.USER_NICK)
                                     
-                                    let home = HomeViewController()
+                                    let home = HomeTabBarController()
 
                                     home.modalPresentationStyle = .fullScreen
                                     

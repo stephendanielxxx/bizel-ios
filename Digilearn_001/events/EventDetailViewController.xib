@@ -13,6 +13,7 @@
                 <outlet property="addressLabel" destination="zg1-jl-6lS" id="fIB-Z1-niN"/>
                 <outlet property="descriptionText" destination="WF6-bb-Djh" id="uYO-wx-STp"/>
                 <outlet property="navigationBar" destination="tqq-zA-pSh" id="fxu-aG-v5d"/>
+                <outlet property="registerButton" destination="YQu-gv-IbZ" id="EEe-9L-ItF"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,7 +22,7 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tqq-zA-pSh">
+                <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tqq-zA-pSh">
                     <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                     <color key="barTintColor" name="color_ D44444"/>
                     <textAttributes key="titleTextAttributes">
@@ -73,7 +74,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WF6-bb-Djh" userLabel="Description Text">
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WF6-bb-Djh" userLabel="Description Text">
                                             <rect key="frame" x="18" y="42" width="362" height="50"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                             <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -151,16 +152,19 @@
                                         <constraint firstItem="z48-vU-dim" firstAttribute="centerY" secondItem="xVC-xA-odC" secondAttribute="centerY" id="xKi-ij-bBG"/>
                                     </constraints>
                                 </view>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Fts-4c-u1R">
-                                    <rect key="frame" x="95.083219645292957" y="435" width="222.99999999999997" height="44.999999999999943"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" name="red_1"/>
-                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                    <state key="normal" title="REGISTER">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YQu-gv-IbZ">
+                                    <rect key="frame" x="122" y="452" width="171" height="40"/>
+                                    <color key="backgroundColor" name="color_ B63532"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="Jej-Kn-wqP"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                    <inset key="contentEdgeInsets" minX="0.0" minY="4" maxX="0.0" maxY="4"/>
+                                    <state key="normal" title="Register Now">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
                                     <connections>
-                                        <action selector="registerAction:" destination="-1" eventType="touchUpInside" id="eRi-Ae-Z6x"/>
+                                        <action selector="registerAction:" destination="-1" eventType="touchUpInside" id="Wg8-Dz-HMP"/>
                                     </connections>
                                 </button>
                             </subviews>
@@ -177,8 +181,11 @@
                                 <constraint firstItem="iUA-Ds-KBd" firstAttribute="top" secondItem="uAi-S2-hcC" secondAttribute="top" constant="203" id="ddo-5X-fLd"/>
                                 <constraint firstItem="zRx-Xw-9dJ" firstAttribute="trailing" secondItem="uAi-S2-hcC" secondAttribute="trailingMargin" id="jba-fO-2wW"/>
                                 <constraint firstItem="zRx-Xw-9dJ" firstAttribute="trailing" secondItem="9I4-aD-HGh" secondAttribute="trailing" id="oIF-wJ-QC1"/>
+                                <constraint firstItem="YQu-gv-IbZ" firstAttribute="leading" secondItem="uAi-S2-hcC" secondAttribute="leading" constant="122" id="q3a-nH-mVp"/>
                                 <constraint firstItem="9I4-aD-HGh" firstAttribute="trailing" secondItem="iUA-Ds-KBd" secondAttribute="trailing" id="qbF-BW-2Ws"/>
                                 <constraint firstItem="9I4-aD-HGh" firstAttribute="leading" secondItem="iUA-Ds-KBd" secondAttribute="leading" id="vU0-qf-WAy"/>
+                                <constraint firstAttribute="trailing" secondItem="YQu-gv-IbZ" secondAttribute="trailing" constant="121" id="zL0-KU-c3y"/>
+                                <constraint firstItem="YQu-gv-IbZ" firstAttribute="top" secondItem="xVC-xA-odC" secondAttribute="bottom" constant="50" id="zTu-07-IgU"/>
                                 <constraint firstItem="zRx-Xw-9dJ" firstAttribute="leading" secondItem="uAi-S2-hcC" secondAttribute="leadingMargin" id="zpE-ac-9kZ"/>
                             </constraints>
                         </view>
@@ -211,11 +218,11 @@
     <resources>
         <image name="arrow.left" catalog="system" width="128" height="98"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
+        <namedColor name="color_ B63532">
+            <color red="0.71399998664855957" green="0.20800000429153442" blue="0.19599999487400055" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="color_ D44444">
             <color red="0.83099997043609619" green="0.2669999897480011" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="red_1">
-            <color red="0.60399997234344482" green="0.27099999785423279" blue="0.23499999940395355" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>

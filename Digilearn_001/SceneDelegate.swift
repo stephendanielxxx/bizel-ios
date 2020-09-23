@@ -21,11 +21,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let preferences = UserDefaults.standard
         let userId = preferences.string(forKey: DigilearnsKeys.USER_ID)
-        if(userId != nil){
-//            window?.rootViewController = HomeViewController()
-//            window?.rootViewController = LoginViewController()
-            window?.rootViewController = UINavigationController(rootViewController: HomeTabBarController())
-
+        let firstInstall = preferences.string(forKey: DigilearnsKeys.FIRST_INSTALL)
+        
+        if firstInstall == nil {
+            
+            preferences.set("done", forKey: DigilearnsKeys.FIRST_INSTALL)
+            preferences.synchronize()
+            
+            window?.rootViewController = OnboardingViewController()
+            window?.makeKeyAndVisible()
+            
+        }else if(userId != nil){
+            let homeScreen: UINavigationController = UINavigationController(rootViewController: HomeTabBarController())
+            homeScreen.view.frame = UIScreen.main.bounds
+            window?.rootViewController = homeScreen
             window?.makeKeyAndVisible()
         }else{
             window?.rootViewController = LoginViewController()

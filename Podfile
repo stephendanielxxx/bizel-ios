@@ -18,6 +18,13 @@ target 'Digilearn_001' do
   pod 'ImageSlideshow', '~> 1.9.0'
   pod 'ImageSlideshow/Alamofire'
   pod 'MaterialComponents/Tabs+TabBarView'
+  pod 'ExpandableCell'
+  pod 'Toast-Swift', '~> 5.0.1'
+  pod 'ASPVideoPlayer'
+  #pod 'Player', '~> 0.13.2'
+  #pod 'BMPlayer', '~> 1.3.0'
+  #pod 'VersaPlayer'
+  #pod 'Toaster'
   # Pods for Digilearn_001
 
   target 'Digilearn_001Tests' do

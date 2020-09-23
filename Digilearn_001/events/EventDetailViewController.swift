@@ -12,10 +12,11 @@ import Reqres
 import MaterialComponents.MaterialCards
 
 class EventDetailViewController: UIViewController {
-
+    
     @IBOutlet weak var navigationBar: UINavigationBar!
     @IBOutlet weak var descriptionText: UITextView!
     @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet weak var registerButton: UIButton!
     
     var eventId:String = ""
     var userId:String = ""
@@ -25,11 +26,13 @@ class EventDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         Reqres.register()
         loadData(var: eventId)
         
         userId = readStringPreference(key: DigilearnsKeys.USER_ID)
+        
+        registerButton.layer.cornerRadius = 15
         // Do any additional setup after loading the view.
     }
     
@@ -38,20 +41,20 @@ class EventDetailViewController: UIViewController {
     }
     
     func loadData(var eventId: String){
-         let URL = "\(DigilearnParams.ApiUrl)/onsite/get_detail/\(eventId)"
-           
-         AF.request(URL,
-                      method: .get,
-                      parameters: nil,
-                      encoding: JSONEncoding.default).responseData { response in
-                        
-                        debugPrint(response)
-                       
-                       switch response.result {
-                       case .success(let data):
-                          let decoder = JSONDecoder()
-                          do{
-
+        let URL = "\(DigilearnParams.ApiUrl)/onsite/get_detail/\(eventId)"
+        
+        AF.request(URL,
+                   method: .get,
+                   parameters: nil,
+                   encoding: JSONEncoding.default).responseData { response in
+                    
+                    debugPrint(response)
+                    
+                    switch response.result {
+                    case .success(let data):
+                        let decoder = JSONDecoder()
+                        do{
+                            
                             self.eventDetailModel = try decoder.decode(EventDetailModel.self, from:data)
                             
                             let eventDetail: OnsiteDetail =  self.eventDetailModel.onsite[0]
@@ -61,16 +64,16 @@ class EventDetailViewController: UIViewController {
                             self.descriptionText.attributedText = eventDetail.desc.htmlToAttributedString
                             
                             self.addressLabel.text = eventDetail.place
-                        
-                           }catch{
-                               print(error.localizedDescription)
-                           }
-                           break
-                       case .failure(let error):
-                           debugPrint("Error")
-                           break
-                       }
-           }
+                            
+                        }catch{
+                            print(error.localizedDescription)
+                        }
+                        break
+                    case .failure(let error):
+                        debugPrint("Error")
+                        break
+                    }
+        }
     }
     
     @IBAction func registerAction(_ sender: UIButton) {
@@ -91,20 +94,20 @@ class EventDetailViewController: UIViewController {
                     switch response.result {
                     case .success(let data):
                         self.removeSpinner()
-                       let decoder = JSONDecoder()
-                       do{
+                        let decoder = JSONDecoder()
+                        do{
                             let registerEventModel = try decoder.decode(RegisterEventModel.self, from:data)
-                        
+                            
                             if(registerEventModel.code == "200"){
                                 let alert = UIAlertController(title: "Event Register Success", message: "\(registerEventModel.message)", preferredStyle: .alert)
-                                   alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-                                   self.present(alert, animated: true)
+                                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                                self.present(alert, animated: true)
                             }else{
                                 let alert = UIAlertController(title: "Event Register Failed", message: "\(registerEventModel.message)", preferredStyle: .alert)
                                 alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
                                 self.present(alert, animated: true)
                             }
-                       }catch{
+                        }catch{
                             print(error.localizedDescription)
                         }
                     case .failure(let error):
@@ -117,9 +120,25 @@ class EventDetailViewController: UIViewController {
 
 extension String {
     var htmlToAttributedString: NSAttributedString? {
-        guard let data = data(using: .utf8) else { return nil }
+        let htmlTemplate = """
+           <!doctype html>
+           <html>
+             <head>
+               <style>
+                 body {
+                   font-family: -apple-system;
+                   font-size: 14px;
+                 }
+               </style>
+             </head>
+             <body>
+               \(self)
+             </body>
+           </html>
+           """
+        guard let data = htmlTemplate.data(using: .utf8) else { return nil }
         do {
-            let font = UIFont.systemFont(ofSize: 72)
+            let font = UIFont.systemFont(ofSize: 100)
             let attributes = [NSAttributedString.Key.font: font]
             return try NSAttributedString(data: data, options: [.documentType: NSAttributedString.DocumentType.html, .characterEncoding:String.Encoding.utf8.rawValue, .defaultAttributes: attributes], documentAttributes: nil)
         } catch {

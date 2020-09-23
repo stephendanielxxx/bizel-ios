@@ -79,8 +79,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expired" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oDY-qO-itd">
-                                <rect key="frame" x="8" y="118" width="37" height="12"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expired" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oDY-qO-itd">
+                                <rect key="frame" x="8" y="118" width="179" height="12"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <color key="textColor" name="red_1"/>
                                 <nil key="highlightedColor"/>
@@ -108,6 +108,7 @@
                             <constraint firstItem="QcO-PW-gQc" firstAttribute="centerY" secondItem="zg4-mJ-ip4" secondAttribute="centerY" id="bNV-Bi-VxF"/>
                             <constraint firstItem="T95-by-Vh8" firstAttribute="leading" secondItem="Uzk-Vb-Zcm" secondAttribute="leading" constant="8" id="cc8-Qz-QhQ"/>
                             <constraint firstAttribute="trailing" secondItem="T95-by-Vh8" secondAttribute="trailing" constant="8" id="h8Y-jJ-mq2"/>
+                            <constraint firstItem="TKt-c4-Cjz" firstAttribute="leading" secondItem="oDY-qO-itd" secondAttribute="trailing" constant="8" id="lg0-2h-vW1"/>
                             <constraint firstItem="oDY-qO-itd" firstAttribute="centerY" secondItem="TKt-c4-Cjz" secondAttribute="centerY" id="p53-Eg-O5K"/>
                             <constraint firstItem="hmS-JW-deO" firstAttribute="centerX" secondItem="Uzk-Vb-Zcm" secondAttribute="centerX" id="sYO-fh-BGk"/>
                             <constraint firstItem="T95-by-Vh8" firstAttribute="top" secondItem="sTU-Tu-WYg" secondAttribute="bottom" constant="3" id="uDf-r7-CJ5"/>
