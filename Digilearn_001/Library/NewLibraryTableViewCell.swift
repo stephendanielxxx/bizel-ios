@@ -19,5 +19,17 @@ class NewLibraryTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         startCourse.layer.cornerRadius = 15
+        imageCourse.pin_updateWithProgress = true
+        imageCourse.makeRounded()
+    }
+}
+
+extension UIImageView {
+
+    func makeRounded() {
+        self.layer.masksToBounds = false
+        self.layer.cornerRadius = self.frame.height / 2
+        self.clipsToBounds = true
+        self.contentMode = .scaleToFill
     }
 }

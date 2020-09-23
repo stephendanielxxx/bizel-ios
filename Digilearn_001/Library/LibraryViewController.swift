@@ -116,17 +116,21 @@ extension LibraryViewController: UITableViewDelegate, UITableViewDataSource{
             cell.titleCourse.text = libraryModel!.courseName
             cell.authorCourse.text = "Created By : \(libraryModel!.institutName)"
             
+            let url = Foundation.URL(string: "https://digicourse.id/digilearn/admin-master/assets.admin_master/course/image/\(libraryModel!.courseImage)")!
+            cell.imageCourse.pin_setImage(from: url)
+            
+            cell.modulesCourse.text = "Modules | Topics | Actions"
+            
             return cell
         }else{
             let cell = allLibrary.dequeueReusableCell(withIdentifier: "newLibraryIdentifier") as! NewLibraryTableViewCell
             let libraryModel = allLibraryModel?.library[indexPath.row]
             cell.titleCourse.text = libraryModel!.courseName
             cell.authorCourse.text = "Created By : \(libraryModel!.institutName)"
-            
+            let url = Foundation.URL(string: "https://digicourse.id/digilearn/admin-master/assets.admin_master/course/image/\(libraryModel!.courseImage)")!
+            cell.imageCourse.pin_setImage(from: url)
             return cell
         }
     }
-    
-    
-    
 }
+
