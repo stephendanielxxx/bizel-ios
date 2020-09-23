@@ -8,7 +8,7 @@
 
 import UIKit
 import Alamofire
-import MaterialComponents.MaterialTabs_TabBarView
+
 
 class CourseViewController: UIViewController {
 
@@ -120,4 +120,3 @@ extension UIViewController{
        viewController.didMove(toParent: controller)
     }
 }
-

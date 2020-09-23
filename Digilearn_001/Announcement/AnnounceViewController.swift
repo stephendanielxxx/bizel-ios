@@ -83,7 +83,6 @@ extension AnnounceViewController: UITableViewDelegate, UITableViewDataSource
         }
         
         cell.detailAnnounce.tag = indexPath.row
-        
         cell.detailAnnounce.addTarget(self, action: #selector(AnnounceViewController.openDetail(_:)), for: .touchUpInside)
         return cell
     }

@@ -75,9 +75,26 @@ extension MyGroupViewController: UITableViewDelegate, UITableViewDataSource
             let url = Foundation.URL(string: "https://digicourse.id/digilearn/admin-master/assets.admin_master/group/profile/\(group.groupImage)")
              debugPrint("https://digicourse.id/digilearn/admin-master/assets.admin_master/group/profile/\(group.groupImage)")
             cell.imageGroup.pin_setImage(from: url)
+            
+            
         }
+        cell.groupDetail.tag = indexPath.row
+        cell.groupDetail.addTarget(self,action: #selector(MyGroupViewController.openDetail(_:)),for: .touchUpInside)
                 return cell
     }
+    @objc func openDetail(_ sender: UIButton?) {
+        let groupDetail = MyGroupDetailViewController()
+        groupDetail.modalPresentationStyle = .fullScreen
+        let listgroup: ListGroup = groupModel.listGroup[sender!.tag]
+        groupDetail.titlegroup = listgroup.groupName
+        groupDetail.image = listgroup.groupImage
+        groupDetail.titlegroupisi = listgroup.groupAbout
+        groupDetail.groupid = listgroup.groupID 
+        self.present(groupDetail, animated: true, completion: nil)
+        
+    }
+    
+
 }
 
 

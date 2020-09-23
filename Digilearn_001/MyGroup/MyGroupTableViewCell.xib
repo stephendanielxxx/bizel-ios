@@ -12,12 +12,12 @@
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyGroupIdentifier" rowHeight="89" id="KGk-i7-Jjw" customClass="MyGroupTableViewCell" customModule="Digilearn_001" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="338" height="89"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM" customClass="MyGroupTableViewCell" customModule="Digilearn_001" customModuleProvider="target">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM" customClass="MyGroupTableViewCell" customModule="Digilearn_001" customModuleProvider="target">
                 <rect key="frame" x="0.0" y="0.0" width="338" height="89"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2zU-9Z-gzf">
-                        <rect key="frame" x="0.0" y="0.0" width="338" height="89"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2zU-9Z-gzf" customClass="MDCCard">
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="89"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gOd-yH-QaZ" userLabel="Image Group">
                                 <rect key="frame" x="70" y="19.5" width="50" height="50"/>
@@ -30,8 +30,8 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WhatsApp Image 2020-09-10 at 16.09.18" translatesAutoresizingMaskIntoConstraints="NO" id="xQT-qd-3jt">
                                 <rect key="frame" x="22" y="1.5" width="37" height="86"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vG3-bx-KiO">
-                                <rect key="frame" x="137" y="28" width="189" height="33"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vG3-bx-KiO">
+                                <rect key="frame" x="137" y="28" width="251" height="33"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Title">
@@ -52,6 +52,7 @@
                             <constraint firstItem="gOd-yH-QaZ" firstAttribute="leading" secondItem="xQT-qd-3jt" secondAttribute="trailing" constant="11" id="56s-2e-Z5u"/>
                             <constraint firstItem="vG3-bx-KiO" firstAttribute="leading" secondItem="gOd-yH-QaZ" secondAttribute="trailing" constant="17" id="RdU-ZA-Pc4"/>
                             <constraint firstItem="gOd-yH-QaZ" firstAttribute="centerY" secondItem="2zU-9Z-gzf" secondAttribute="centerY" id="Yow-IN-5uh"/>
+                            <constraint firstAttribute="width" constant="400" id="aTa-gu-Qbi"/>
                             <constraint firstItem="xQT-qd-3jt" firstAttribute="centerY" secondItem="2zU-9Z-gzf" secondAttribute="centerY" id="cKL-N5-Zah"/>
                             <constraint firstAttribute="height" constant="89" id="ndB-rf-5h4"/>
                         </constraints>
@@ -59,6 +60,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="2zU-9Z-gzf" secondAttribute="trailing" id="BBQ-1N-Gg6"/>
+                    <constraint firstItem="2zU-9Z-gzf" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Cjj-l0-uom"/>
                     <constraint firstAttribute="bottom" secondItem="2zU-9Z-gzf" secondAttribute="bottom" id="ITf-r9-ml2"/>
                     <constraint firstItem="2zU-9Z-gzf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="wuV-8T-f9O"/>
                     <constraint firstItem="2zU-9Z-gzf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="xDg-tW-2E7"/>
@@ -66,11 +68,12 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="groupDetail" destination="2zU-9Z-gzf" id="jGG-AT-mSY"/>
                 <outlet property="imageDefault" destination="xQT-qd-3jt" id="mPQ-WC-Zqa"/>
                 <outlet property="imageGroup" destination="gOd-yH-QaZ" id="3Ng-GS-vou"/>
                 <outlet property="titleGroup" destination="vG3-bx-KiO" id="B8F-G0-ghO"/>
             </connections>
-            <point key="canvasLocation" x="85.507246376811594" y="138.28125"/>
+            <point key="canvasLocation" x="106" y="137"/>
         </tableViewCell>
     </objects>
     <resources>

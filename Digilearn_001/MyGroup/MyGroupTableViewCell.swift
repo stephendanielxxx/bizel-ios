@@ -7,15 +7,19 @@
 //
 
 import UIKit
+import MaterialComponents.MaterialCards
 
 class MyGroupTableViewCell: UITableViewCell {
     
     @IBOutlet weak var imageDefault: UIImageView!
     @IBOutlet weak var imageGroup: UIImageView!
     @IBOutlet weak var titleGroup: UITextView!
+    @IBOutlet weak var groupDetail: MDCCard!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        //imageGroup.layer.cornerRadius = imageGroup.frame.height/2
+       // imageGroup.clipsToBounds = true
         // Initialization code
     }
 
