@@ -12,6 +12,7 @@ import Toast_Swift
 
 class ActionViewController: UIViewController {
     
+    var isLibrary = false
     var moduleTitle = ""
     var courseId = ""
     var moduleId = ""

@@ -155,6 +155,7 @@ extension LibraryViewController: UITableViewDelegate, UITableViewDataSource{
         course.course_name = task.courseName
         course.created_by = task.institutName
         course.course_about = ""
+        course.isLibrary = true
         
         self.present(course, animated: true, completion: nil)
     }
@@ -170,6 +171,7 @@ extension LibraryViewController: UITableViewDelegate, UITableViewDataSource{
         course.course_name = task.courseName
         course.created_by = task.institutName
         course.course_about = ""
+        course.isLibrary = true
         
         self.present(course, animated: true, completion: nil)
     }
