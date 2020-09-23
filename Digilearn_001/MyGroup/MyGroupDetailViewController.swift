@@ -14,11 +14,10 @@ class MyGroupDetailViewController: UIViewController {
     @IBOutlet weak var detailImageGroup: UIImageView!
     @IBOutlet weak var detailTitle: UINavigationItem!
     @IBOutlet weak var detailTitleIsi: UILabel!
-    @IBOutlet weak var isiMember: UIView!
     @IBOutlet weak var isiActive: UIButton!
     @IBOutlet weak var isiExpired: UIButton!
-    @IBOutlet weak var isiActiveTask: UIView!
-    @IBOutlet weak var isiExpiredTask: UIView!
+    @IBOutlet weak var isiMember: UIButton!
+    @IBOutlet weak var contentView: UIView!
     
     var image = ""
     var titlegroup = ""
@@ -43,16 +42,26 @@ class MyGroupDetailViewController: UIViewController {
     }
     @IBAction func memberButton(_ sender: UIButton) {
         
+        isiMember.backgroundColor = UIColor(named: "red_1")
+        isiActive.backgroundColor = UIColor.lightGray
+        isiExpired.backgroundColor = UIColor.lightGray
+        
         let member = MemberGroupViewController()
         member.group_id = groupid
-        embed(member,inParent: self,inView: isiMember)
+        embed(member,inParent: self,inView: contentView)
         
         
     }
     @IBAction func activeButton(_ sender: Any) {
+        isiActive.backgroundColor = UIColor(named: "red_1")
+        isiMember.backgroundColor = UIColor.lightGray
+        isiExpired.backgroundColor = UIColor.lightGray
     }
     
     @IBAction func expiredButton(_ sender: Any) {
+        isiExpired.backgroundColor = UIColor(named: "red_1")
+        isiActive.backgroundColor = UIColor.lightGray
+        isiMember.backgroundColor = UIColor.lightGray
     }
     
 }
