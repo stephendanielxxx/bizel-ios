@@ -71,27 +71,27 @@ class LibraryViewController: UIViewController {
     }
     
     func loadAllData(){
-           
-           AF.request(allURL,
-                      method: .get,
-                      parameters: nil,
-                      encoding: JSONEncoding.default).responseData { response in
-                       switch response.result {
-                       case .success(let data):
-                           self.removeSpinner()
-                           let decoder = JSONDecoder()
-                           do{
-                               self.allLibraryModel = try decoder.decode(GetLibraryModel.self, from:data)
-                               self.allLibrary.reloadData()
-                               
-                           }catch{
-                               print(error.localizedDescription)
-                           }
-                       case .failure(let error):
-                           self.removeSpinner()
-                       }
-           }
-       }
+        
+        AF.request(allURL,
+                   method: .get,
+                   parameters: nil,
+                   encoding: JSONEncoding.default).responseData { response in
+                    switch response.result {
+                    case .success(let data):
+                        self.removeSpinner()
+                        let decoder = JSONDecoder()
+                        do{
+                            self.allLibraryModel = try decoder.decode(GetLibraryModel.self, from:data)
+                            self.allLibrary.reloadData()
+                            
+                        }catch{
+                            print(error.localizedDescription)
+                        }
+                    case .failure(let error):
+                        self.removeSpinner()
+                    }
+        }
+    }
     
 }
 
@@ -119,7 +119,11 @@ extension LibraryViewController: UITableViewDelegate, UITableViewDataSource{
             let url = Foundation.URL(string: "https://digicourse.id/digilearn/admin-master/assets.admin_master/course/image/\(libraryModel!.courseImage)")!
             cell.imageCourse.pin_setImage(from: url)
             
-            cell.modulesCourse.text = "Modules | Topics | Actions"
+            cell.modulesCourse.text = "\(libraryModel!.totalModule) Modules | \(libraryModel!.totalTopic) Topics | \(libraryModel!.totalAction) Actions"
+            
+            cell.startCourse.tag = indexPath.row
+            
+            cell.startCourse.addTarget(self, action: #selector(LibraryViewController.openNewDetail), for: .touchUpInside)
             
             return cell
         }else{
@@ -129,8 +133,45 @@ extension LibraryViewController: UITableViewDelegate, UITableViewDataSource{
             cell.authorCourse.text = "Created By : \(libraryModel!.institutName)"
             let url = Foundation.URL(string: "https://digicourse.id/digilearn/admin-master/assets.admin_master/course/image/\(libraryModel!.courseImage)")!
             cell.imageCourse.pin_setImage(from: url)
+            
+            cell.modulesCourse.text = "\(libraryModel!.totalModule) Modules | \(libraryModel!.totalTopic) Topics | \(libraryModel!.totalAction) Actions"
+            
+            cell.startCourse.tag = indexPath.row
+            
+            cell.startCourse.addTarget(self, action: #selector(LibraryViewController.openAllDetail), for: .touchUpInside)
+            
             return cell
         }
+    }
+    
+    @objc func openNewDetail(_ sender: UIButton?) {
+        let course = CourseViewController()
+        
+        course.modalPresentationStyle = .fullScreen
+        
+        let task = newLibraryModel.library[sender!.tag]
+        
+        course.course_id = task.courseID
+        course.course_name = task.courseName
+        course.created_by = task.institutName
+        course.course_about = ""
+        
+        self.present(course, animated: true, completion: nil)
+    }
+    
+    @objc func openAllDetail(_ sender: UIButton?) {
+        let course = CourseViewController()
+        
+        course.modalPresentationStyle = .fullScreen
+        
+        let task = allLibraryModel.library[sender!.tag]
+        
+        course.course_id = task.courseID
+        course.course_name = task.courseName
+        course.created_by = task.institutName
+        course.course_about = ""
+        
+        self.present(course, animated: true, completion: nil)
     }
 }
 
