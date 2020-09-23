@@ -4,4 +4,7 @@
    <FileRef
       location = "group:Digilearn_001.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
 </Workspace>
