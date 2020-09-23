@@ -9,8 +9,8 @@
 import UIKit
 import PINRemoteImage
 
-class TopicViewController: UIViewController {
-
+class TopicViewController: UIViewController, TopicActionDelegate {
+    
     @IBOutlet weak var imageModule: UIImageView!
     @IBOutlet weak var titleModule: UILabel!
     @IBOutlet weak var createdModule: UILabel!
@@ -24,6 +24,9 @@ class TopicViewController: UIViewController {
     var moduleTitle = ""
     var moduleAuthor = ""
     var moduleDesc = ""
+    var courseId = ""
+    var moduleId = ""
+    var nextModuleName = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +41,18 @@ class TopicViewController: UIViewController {
         let url = Foundation.URL(string: "https://digicourse.id/digilearn/admin-master/assets.admin_master/module/image/\(self.moduleImage)")!
 
         self.imageModule.pin_setImage(from: url)
+        
+        setInitial()
+    }
+    
+    func setInitial(){
+        let topics = TopicActionViewController()
+        topics.topicActionDelegate = self
+        topics.courseId = courseId
+        topics.moduleId = moduleId
+        topics.nextModuleName = nextModuleName
+        
+        embed(topics, inParent: self, inView: tabContent)
     }
     
     @IBAction func backAction(_ sender: UIBarButtonItem) {
@@ -50,6 +65,13 @@ class TopicViewController: UIViewController {
         
         topicLine.backgroundColor = UIColor(named: "red_1")
         aboutLine.backgroundColor = UIColor.white
+        
+        let topics = TopicActionViewController()
+        
+        topics.courseId = courseId
+        topics.moduleId = moduleId
+        
+        embed(topics, inParent: self, inView: tabContent)
     }
     
     @IBAction func aboutAction(_ sender: UIButton) {
@@ -63,5 +85,11 @@ class TopicViewController: UIViewController {
         about.topicDesc = moduleDesc
         
         embed(about, inParent: self, inView: tabContent)
+    }
+    
+    func onDismissScreen() {
+       
+        self.dismiss(animated: true, completion: nil)
+         debugPrint("TestTTTTTT")
     }
 }

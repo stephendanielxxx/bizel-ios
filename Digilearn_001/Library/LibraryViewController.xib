@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LibraryViewController" customModule="Digilearn_001" customModuleProvider="target">
+            <connections>
+                <outlet property="allLibrary" destination="se2-kk-S5R" id="R5A-Tz-bd7"/>
+                <outlet property="newLibrary" destination="zPw-Yd-iwZ" id="cHB-CY-QMC"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bMY-uF-uYT" userLabel="Parent View">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="plN-Zu-Urf">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="barTintColor" name="color_ D44444"/>
+                            <textAttributes key="titleTextAttributes">
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </textAttributes>
+                            <items>
+                                <navigationItem id="C71-Y4-uZq">
+                                    <barButtonItem key="leftBarButtonItem" title="Library" id="90m-F4-wca">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </barButtonItem>
+                                </navigationItem>
+                            </items>
+                        </navigationBar>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bam-SE-9ra" userLabel="Content View">
+                            <rect key="frame" x="0.0" y="44" width="414" height="774"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_library" translatesAutoresizingMaskIntoConstraints="NO" id="WWl-kD-VsU">
+                                    <rect key="frame" x="8" y="8" width="398" height="200"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="200" id="ugV-Od-Lc1"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gWw-LK-gNb">
+                                    <rect key="frame" x="16" y="216" width="37" height="21"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zPw-Yd-iwZ" userLabel="New Library">
+                                    <rect key="frame" x="16" y="245" width="378" height="160"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="160" id="a8G-zd-WVu"/>
+                                    </constraints>
+                                </tableView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qfr-rv-nze">
+                                    <rect key="frame" x="16" y="410" width="22" height="21"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="se2-kk-S5R" userLabel="All Library">
+                                    <rect key="frame" x="16" y="439" width="378" height="315"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                </tableView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="se2-kk-S5R" secondAttribute="bottom" constant="20" id="299-pd-H9T"/>
+                                <constraint firstItem="WWl-kD-VsU" firstAttribute="top" secondItem="Bam-SE-9ra" secondAttribute="top" constant="8" id="3mm-Uc-bBB"/>
+                                <constraint firstItem="se2-kk-S5R" firstAttribute="leading" secondItem="Bam-SE-9ra" secondAttribute="leading" constant="16" id="3zN-dE-e9c"/>
+                                <constraint firstItem="WWl-kD-VsU" firstAttribute="leading" secondItem="Bam-SE-9ra" secondAttribute="leading" constant="8" id="8gi-En-sxq"/>
+                                <constraint firstItem="zPw-Yd-iwZ" firstAttribute="leading" secondItem="Bam-SE-9ra" secondAttribute="leading" constant="16" id="CuB-SS-iEj"/>
+                                <constraint firstItem="zPw-Yd-iwZ" firstAttribute="top" secondItem="gWw-LK-gNb" secondAttribute="bottom" constant="8" id="FdG-II-5AA"/>
+                                <constraint firstAttribute="trailing" secondItem="zPw-Yd-iwZ" secondAttribute="trailing" constant="20" id="KNT-BL-8vX"/>
+                                <constraint firstAttribute="trailing" secondItem="WWl-kD-VsU" secondAttribute="trailing" constant="8" id="LbV-j6-yLO"/>
+                                <constraint firstItem="gWw-LK-gNb" firstAttribute="top" secondItem="WWl-kD-VsU" secondAttribute="bottom" constant="8" id="NUy-uK-wTt"/>
+                                <constraint firstAttribute="trailing" secondItem="se2-kk-S5R" secondAttribute="trailing" constant="20" id="Q7z-ad-VcC"/>
+                                <constraint firstItem="Qfr-rv-nze" firstAttribute="top" secondItem="zPw-Yd-iwZ" secondAttribute="bottom" constant="5" id="XBf-Kt-Kmc"/>
+                                <constraint firstItem="Qfr-rv-nze" firstAttribute="leading" secondItem="Bam-SE-9ra" secondAttribute="leading" constant="16" id="YSU-bY-7n1"/>
+                                <constraint firstItem="gWw-LK-gNb" firstAttribute="leading" secondItem="Bam-SE-9ra" secondAttribute="leading" constant="16" id="mEh-yh-OMw"/>
+                                <constraint firstItem="se2-kk-S5R" firstAttribute="top" secondItem="Qfr-rv-nze" secondAttribute="bottom" constant="8" id="yzo-7X-iNF"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="plN-Zu-Urf" firstAttribute="leading" secondItem="bMY-uF-uYT" secondAttribute="leading" id="H8d-YZ-bpO"/>
+                        <constraint firstAttribute="trailing" secondItem="Bam-SE-9ra" secondAttribute="trailing" id="Mwj-2f-cbP"/>
+                        <constraint firstAttribute="trailing" secondItem="plN-Zu-Urf" secondAttribute="trailing" id="W8K-sK-cZx"/>
+                        <constraint firstItem="plN-Zu-Urf" firstAttribute="top" secondItem="bMY-uF-uYT" secondAttribute="top" id="eO1-hN-lEe"/>
+                        <constraint firstAttribute="bottom" secondItem="Bam-SE-9ra" secondAttribute="bottom" id="iBy-vP-uH4"/>
+                        <constraint firstItem="Bam-SE-9ra" firstAttribute="top" secondItem="plN-Zu-Urf" secondAttribute="bottom" id="tWc-93-f6n"/>
+                        <constraint firstItem="Bam-SE-9ra" firstAttribute="leading" secondItem="bMY-uF-uYT" secondAttribute="leading" id="yKk-hJ-qW4"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="bMY-uF-uYT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="GOq-aF-KFw"/>
+                <constraint firstItem="bMY-uF-uYT" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" id="aKn-sn-xnP"/>
+                <constraint firstItem="bMY-uF-uYT" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="gec-cu-vJi"/>
+                <constraint firstItem="bMY-uF-uYT" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" id="o0o-54-VjU"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="145.98214285714286"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="img_library" width="344.5" height="152"/>
+        <namedColor name="color_ D44444">
+            <color red="0.83099997043609619" green="0.2669999897480011" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

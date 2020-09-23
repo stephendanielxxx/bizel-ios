@@ -11,4 +11,5 @@ import Foundation
 struct DigilearnsKeys {
     static let USER_ID = "USER_ID"
     static let USER_NICK = "USER_NICK"
+    static let FIRST_INSTALL = "FIRST_INSTALL"
 }

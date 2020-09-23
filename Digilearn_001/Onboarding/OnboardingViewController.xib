@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OnboardingViewController" customModule="Digilearn_001" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G9b-uV-awU">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_onboarding" translatesAutoresizingMaskIntoConstraints="NO" id="EUt-LA-RVj">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ul-L5-mJa">
+                            <rect key="frame" x="321" y="735" width="43" height="36"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <state key="normal" title="Start">
+                                <color key="titleColor" name="color_F3DE35"/>
+                            </state>
+                            <connections>
+                                <action selector="startAction:" destination="-1" eventType="touchUpInside" id="LGh-RJ-aAq"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" name="red_1"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="EUt-LA-RVj" secondAttribute="trailing" id="1M2-GY-Ror"/>
+                        <constraint firstItem="EUt-LA-RVj" firstAttribute="top" secondItem="G9b-uV-awU" secondAttribute="top" id="2nC-yo-I7l"/>
+                        <constraint firstItem="EUt-LA-RVj" firstAttribute="width" secondItem="G9b-uV-awU" secondAttribute="width" id="AZ8-Jg-jgr"/>
+                        <constraint firstAttribute="bottom" secondItem="EUt-LA-RVj" secondAttribute="bottom" id="B8B-yF-BHQ"/>
+                        <constraint firstItem="EUt-LA-RVj" firstAttribute="height" secondItem="G9b-uV-awU" secondAttribute="height" id="VC5-qc-VBn"/>
+                        <constraint firstItem="EUt-LA-RVj" firstAttribute="leading" secondItem="G9b-uV-awU" secondAttribute="leading" id="Y9J-5n-lyS"/>
+                        <constraint firstAttribute="trailing" secondItem="3Ul-L5-mJa" secondAttribute="trailing" constant="50" id="bif-1d-yF9"/>
+                        <constraint firstAttribute="bottom" secondItem="3Ul-L5-mJa" secondAttribute="bottom" constant="47" id="e2r-Lm-EI3"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="G9b-uV-awU" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" id="31y-G4-ixM"/>
+                <constraint firstItem="G9b-uV-awU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Mjl-7D-0u0"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="G9b-uV-awU" secondAttribute="trailing" id="YvQ-OD-DbS"/>
+                <constraint firstItem="G9b-uV-awU" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" id="a9E-w1-SC3"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="G9b-uV-awU" secondAttribute="bottom" id="ahY-dV-PA2"/>
+                <constraint firstItem="G9b-uV-awU" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="vuQ-sU-xTy"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="143.97321428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="image_onboarding" width="360.5" height="640"/>
+        <namedColor name="color_F3DE35">
+            <color red="0.95300000905990601" green="0.87099999189376831" blue="0.20800000429153442" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="red_1">
+            <color red="0.60399997234344482" green="0.27099999785423279" blue="0.23499999940395355" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>

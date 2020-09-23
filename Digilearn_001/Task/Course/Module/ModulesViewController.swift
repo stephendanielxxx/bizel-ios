@@ -96,6 +96,7 @@ extension ModulesViewController: UITableViewDelegate, UITableViewDataSource{
     @objc func openDetail(_ sender: UIButton?) {
         let index = sender!.tag
         let task = listCourseModel.moduleDetail[index]
+        let count = listCourseModel.moduleDetail.count
         
         let topic = TopicViewController()
         
@@ -103,6 +104,18 @@ extension ModulesViewController: UITableViewDelegate, UITableViewDataSource{
         topic.moduleAuthor = task.courseAuthor
         topic.moduleTitle = task.moduleName
         topic.moduleDesc = task.moduleDesc
+        topic.moduleId = task.moduleID
+        topic.courseId = course_id
+        
+        if count == 1 {
+            topic.nextModuleName = ""
+        }else if index < count {
+            debugPrint(index)
+            debugPrint(count)
+            topic.nextModuleName = listCourseModel.moduleDetail[index+1].moduleName
+        }else{
+            topic.nextModuleName = ""
+        }
         
         topic.modalPresentationStyle = .fullScreen
         
@@ -116,7 +129,7 @@ extension ModulesViewController: UITableViewDelegate, UITableViewDataSource{
                 if(taskBefore.moduleFinish.caseInsensitiveCompare("Finish") == .orderedSame){
                     self.present(topic, animated: true, completion: nil)
                 }else{
-                    let alert = UIAlertController(title: "", message: "Oops, you can't open this module. Please finish the previous module in order!", preferredStyle: .alert)
+                    let alert = UIAlertController(title: "", message: "You can't open this module. Please finish the previous module in order.", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
                     self.present(alert, animated: true)
                 }

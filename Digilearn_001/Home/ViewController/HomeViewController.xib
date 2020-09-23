@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="Digilearn_001" customModuleProvider="target">
             <connections>
+                <outlet property="greetingLabel" destination="QHI-eU-ZHx" id="sDG-Im-fKY"/>
                 <outlet property="tableView" destination="hmX-Mb-wbv" id="7uW-aA-wxL"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -19,34 +20,56 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hmX-Mb-wbv">
-                    <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pEv-0I-Zaj">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a9h-vq-eZV">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <color key="barTintColor" name="color_ D44444"/>
+                            <items>
+                                <navigationItem largeTitleDisplayMode="always" id="qKl-oz-fln">
+                                    <barButtonItem key="leftBarButtonItem" title="Bizel" id="rHA-l4-Rhb">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </barButtonItem>
+                                    <barButtonItem key="rightBarButtonItem" image="message.fill" catalog="system" id="AJ8-WO-KDb">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </barButtonItem>
+                                </navigationItem>
+                            </items>
+                        </navigationBar>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good Morning" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QHI-eU-ZHx">
+                            <rect key="frame" x="149" y="59" width="116" height="21"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <color key="textColor" name="red_1"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hmX-Mb-wbv">
+                            <rect key="frame" x="0.0" y="98" width="414" height="712"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        </tableView>
+                    </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                </tableView>
-                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a9h-vq-eZV">
-                    <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                    <color key="barTintColor" name="color_ D44444"/>
-                    <items>
-                        <navigationItem largeTitleDisplayMode="always" id="qKl-oz-fln">
-                            <barButtonItem key="leftBarButtonItem" title="Bizel" id="rHA-l4-Rhb">
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </barButtonItem>
-                            <barButtonItem key="rightBarButtonItem" image="message.fill" catalog="system" id="AJ8-WO-KDb">
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </barButtonItem>
-                        </navigationItem>
-                    </items>
-                </navigationBar>
+                    <constraints>
+                        <constraint firstItem="a9h-vq-eZV" firstAttribute="leading" secondItem="pEv-0I-Zaj" secondAttribute="leading" id="1e2-6u-frX"/>
+                        <constraint firstItem="a9h-vq-eZV" firstAttribute="top" secondItem="pEv-0I-Zaj" secondAttribute="top" id="F09-qj-sgT"/>
+                        <constraint firstAttribute="bottom" secondItem="hmX-Mb-wbv" secondAttribute="bottom" constant="8" id="Lb5-Er-BAY"/>
+                        <constraint firstItem="hmX-Mb-wbv" firstAttribute="top" secondItem="QHI-eU-ZHx" secondAttribute="bottom" constant="18" id="StZ-Bq-FSf"/>
+                        <constraint firstAttribute="trailing" secondItem="a9h-vq-eZV" secondAttribute="trailing" id="aFA-EV-bmo"/>
+                        <constraint firstItem="QHI-eU-ZHx" firstAttribute="top" secondItem="a9h-vq-eZV" secondAttribute="bottom" constant="15" id="aMI-oE-pP4"/>
+                        <constraint firstAttribute="trailing" secondItem="hmX-Mb-wbv" secondAttribute="trailing" id="bSL-06-PfO"/>
+                        <constraint firstItem="QHI-eU-ZHx" firstAttribute="centerX" secondItem="pEv-0I-Zaj" secondAttribute="centerX" id="e2I-js-WuQ"/>
+                        <constraint firstItem="hmX-Mb-wbv" firstAttribute="leading" secondItem="pEv-0I-Zaj" secondAttribute="leading" id="xmu-T7-S1D"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="hmX-Mb-wbv" firstAttribute="top" secondItem="a9h-vq-eZV" secondAttribute="bottom" id="4KS-6W-tNx"/>
-                <constraint firstItem="hmX-Mb-wbv" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Qdu-Rg-B8j"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="a9h-vq-eZV" secondAttribute="trailing" id="WmX-LP-8Oa"/>
-                <constraint firstItem="a9h-vq-eZV" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="cqv-rp-Ie5"/>
-                <constraint firstItem="hmX-Mb-wbv" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="vfu-uI-PiE"/>
-                <constraint firstItem="hmX-Mb-wbv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="wLW-Kl-ds8"/>
-                <constraint firstItem="a9h-vq-eZV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="xUf-Ip-gzR"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pEv-0I-Zaj" secondAttribute="trailing" id="0Pj-E9-fm8"/>
+                <constraint firstItem="pEv-0I-Zaj" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="0tc-Og-0M5"/>
+                <constraint firstItem="pEv-0I-Zaj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="40W-n6-B74"/>
+                <constraint firstItem="pEv-0I-Zaj" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" id="WgN-NS-J3h"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="pEv-0I-Zaj" secondAttribute="bottom" id="n1W-EC-Lyo"/>
+                <constraint firstItem="pEv-0I-Zaj" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" id="o8A-S7-S8y"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
@@ -57,6 +80,9 @@
         <image name="message.fill" catalog="system" width="128" height="113"/>
         <namedColor name="color_ D44444">
             <color red="0.83099997043609619" green="0.2669999897480011" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="red_1">
+            <color red="0.60399997234344482" green="0.27099999785423279" blue="0.23499999940395355" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>

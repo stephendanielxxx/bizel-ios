@@ -30,8 +30,13 @@ class MyTaskViewController: UIViewController {
         activeButton.layer.cornerRadius = 15
         expiredButton.layer.cornerRadius = 15
         
-        loadActiveData()
+        
 
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden( true, animated: animated )
+        loadActiveData()
     }
     
     @IBAction func activeAction(_ sender: UIButton) {
@@ -182,10 +187,15 @@ extension MyTaskViewController: UITableViewDelegate, UITableViewDataSource{
         cell.progressView.setProgress(progress, animated: true)
         
         if tabShowed == 0 {
-            cell.expiredLabel.isHidden = true
             cell.startTaskButton.isHidden = false
+            
+            if taskModel.courseEnd != nil {
+                cell.expiredLabel.text = "Until : \(taskModel.courseEnd!)"
+            }else{
+                cell.expiredLabel.text = ""
+            }
         }else{
-            cell.expiredLabel.isHidden = false
+            cell.expiredLabel.text = "Expired"
             cell.startTaskButton.isHidden = true
         }
         
