@@ -58,6 +58,8 @@ extension HomeViewController: UITableViewDataSource {
             
              cell.groupIcon.addTarget(self, action: #selector(HomeViewController.openGroup), for: .touchUpInside)
             
+            cell.achivementIcon.addTarget(self, action: #selector(HomeViewController.openAchievement), for: .touchUpInside)
+            
             return cell
         } else {
             let cell: HomeEventTableViewCell = tableView.dequeueReusableCell(withIdentifier: "homeEventIdentifier") as! HomeEventTableViewCell
@@ -87,7 +89,13 @@ extension HomeViewController: UITableViewDataSource {
     
         self.present(group, animated: true, completion: nil)
     }
+    @objc func openAchievement(_ sender: UIButton?) {
+        let group = AchievementViewController()
+
+        group.modalPresentationStyle = .fullScreen
     
+        self.present(group, animated: true, completion: nil)
+    }
 }
 
 

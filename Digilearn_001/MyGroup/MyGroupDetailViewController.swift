@@ -17,6 +17,8 @@ class MyGroupDetailViewController: UIViewController {
     @IBOutlet weak var isiMember: UIView!
     @IBOutlet weak var isiActive: UIButton!
     @IBOutlet weak var isiExpired: UIButton!
+    @IBOutlet weak var isiActiveTask: UIView!
+    @IBOutlet weak var isiExpiredTask: UIView!
     
     var image = ""
     var titlegroup = ""

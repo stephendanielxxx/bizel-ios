@@ -12,12 +12,12 @@
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyGroupIdentifier" rowHeight="89" id="KGk-i7-Jjw" customClass="MyGroupTableViewCell" customModule="Digilearn_001" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="338" height="89"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM" customClass="MyGroupTableViewCell" customModule="Digilearn_001" customModuleProvider="target">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM" customClass="MyGroupTableViewCell" customModule="Digilearn_001" customModuleProvider="target">
                 <rect key="frame" x="0.0" y="0.0" width="338" height="89"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2zU-9Z-gzf" customClass="MDCCard">
-                        <rect key="frame" x="0.0" y="0.0" width="338" height="89"/>
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="89"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gOd-yH-QaZ" userLabel="Image Group">
                                 <rect key="frame" x="70" y="19.5" width="50" height="50"/>
@@ -31,7 +31,7 @@
                                 <rect key="frame" x="22" y="1.5" width="37" height="86"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vG3-bx-KiO">
-                                <rect key="frame" x="137" y="28" width="189" height="33"/>
+                                <rect key="frame" x="137" y="28" width="251" height="33"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Title">
@@ -52,6 +52,7 @@
                             <constraint firstItem="gOd-yH-QaZ" firstAttribute="leading" secondItem="xQT-qd-3jt" secondAttribute="trailing" constant="11" id="56s-2e-Z5u"/>
                             <constraint firstItem="vG3-bx-KiO" firstAttribute="leading" secondItem="gOd-yH-QaZ" secondAttribute="trailing" constant="17" id="RdU-ZA-Pc4"/>
                             <constraint firstItem="gOd-yH-QaZ" firstAttribute="centerY" secondItem="2zU-9Z-gzf" secondAttribute="centerY" id="Yow-IN-5uh"/>
+                            <constraint firstAttribute="width" constant="400" id="aTa-gu-Qbi"/>
                             <constraint firstItem="xQT-qd-3jt" firstAttribute="centerY" secondItem="2zU-9Z-gzf" secondAttribute="centerY" id="cKL-N5-Zah"/>
                             <constraint firstAttribute="height" constant="89" id="ndB-rf-5h4"/>
                         </constraints>
@@ -72,7 +73,7 @@
                 <outlet property="imageGroup" destination="gOd-yH-QaZ" id="3Ng-GS-vou"/>
                 <outlet property="titleGroup" destination="vG3-bx-KiO" id="B8F-G0-ghO"/>
             </connections>
-            <point key="canvasLocation" x="85.507246376811594" y="138.28125"/>
+            <point key="canvasLocation" x="106" y="137"/>
         </tableViewCell>
     </objects>
     <resources>

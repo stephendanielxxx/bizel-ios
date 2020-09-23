@@ -54,12 +54,12 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NEW" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sfi-Yk-fwr">
-                                <rect key="frame" x="13" y="69" width="35" height="25"/>
+                                <rect key="frame" x="13" y="69" width="30" height="25"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="35" id="20x-We-0PG"/>
+                                    <constraint firstAttribute="width" constant="30" id="20x-We-0PG"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="12"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="8"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -76,7 +76,6 @@
                     <constraint firstItem="VTP-5n-hEb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="6Hx-uZ-GL7"/>
                     <constraint firstItem="VTP-5n-hEb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ATz-Rf-3Aa"/>
                     <constraint firstItem="Sfi-Yk-fwr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="13" id="I3W-z0-u2u"/>
-                    <constraint firstAttribute="trailing" secondItem="Sfi-Yk-fwr" secondAttribute="trailing" constant="318" id="IFD-1r-rFL"/>
                     <constraint firstAttribute="trailingMargin" secondItem="VTP-5n-hEb" secondAttribute="trailing" constant="-14" id="O2j-YH-wX0"/>
                     <constraint firstAttribute="bottom" secondItem="Sfi-Yk-fwr" secondAttribute="bottom" constant="20" id="in7-tQ-wOg"/>
                     <constraint firstAttribute="bottomMargin" secondItem="VTP-5n-hEb" secondAttribute="bottom" constant="-8" id="jzR-13-8jN"/>
