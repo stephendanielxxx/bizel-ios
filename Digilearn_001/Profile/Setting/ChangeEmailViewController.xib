@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChangeEmailViewController" customModule="Digilearn_001" customModuleProvider="target">
+            <connections>
+                <outlet property="saveButton" destination="Uub-b0-XI0" id="aOi-CG-27m"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WdE-4d-wk4">
+                    <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <color key="barTintColor" name="color_ D44444"/>
+                    <textAttributes key="titleTextAttributes">
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </textAttributes>
+                    <items>
+                        <navigationItem title="Change Email" id="r5k-Jx-puu">
+                            <barButtonItem key="leftBarButtonItem" image="arrow.left" catalog="system" id="0wP-t3-nSe">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="backAction:" destination="-1" id="oBl-vZ-uj6"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SZj-37-cMm">
+                    <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Silahkan ubah alamat email anda di sini." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7y-6O-vCu">
+                            <rect key="frame" x="41" y="44" width="256" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhg-U2-Iqo">
+                            <rect key="frame" x="41" y="76" width="45" height="21"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zHx-oP-pfb">
+                            <rect key="frame" x="41" y="105" width="282" height="34"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="34" id="om5-x5-mIa"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" textContentType="email"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fwq-0i-8ff">
+                            <rect key="frame" x="323" y="105" width="50" height="34"/>
+                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="7sR-ct-bdm"/>
+                                <constraint firstAttribute="height" constant="34" id="rZP-SO-j8G"/>
+                            </constraints>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" image="pencil" catalog="system"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uub-b0-XI0">
+                            <rect key="frame" x="122" y="176" width="170" height="40"/>
+                            <color key="backgroundColor" name="red_1"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="170" id="0tx-Yp-oA5"/>
+                                <constraint firstAttribute="height" constant="40" id="dVR-Qe-EFA"/>
+                            </constraints>
+                            <state key="normal" title="Save Changes">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="dhg-U2-Iqo" firstAttribute="top" secondItem="h7y-6O-vCu" secondAttribute="bottom" constant="15" id="7SO-NE-PN5"/>
+                        <constraint firstItem="dhg-U2-Iqo" firstAttribute="leading" secondItem="SZj-37-cMm" secondAttribute="leading" constant="41" id="91z-dn-APP"/>
+                        <constraint firstAttribute="trailing" secondItem="Fwq-0i-8ff" secondAttribute="trailing" constant="41" id="Bhf-gF-RpI"/>
+                        <constraint firstItem="Uub-b0-XI0" firstAttribute="top" secondItem="zHx-oP-pfb" secondAttribute="bottom" constant="37" id="FE1-0d-a03"/>
+                        <constraint firstItem="Fwq-0i-8ff" firstAttribute="centerY" secondItem="zHx-oP-pfb" secondAttribute="centerY" id="J5r-SM-ET5"/>
+                        <constraint firstItem="zHx-oP-pfb" firstAttribute="top" secondItem="dhg-U2-Iqo" secondAttribute="bottom" constant="8" id="JI0-86-uKk"/>
+                        <constraint firstItem="h7y-6O-vCu" firstAttribute="leading" secondItem="SZj-37-cMm" secondAttribute="leading" constant="41" id="SxI-cL-dMM"/>
+                        <constraint firstItem="zHx-oP-pfb" firstAttribute="leading" secondItem="SZj-37-cMm" secondAttribute="leading" constant="41" id="bzp-11-NgX"/>
+                        <constraint firstItem="Fwq-0i-8ff" firstAttribute="leading" secondItem="zHx-oP-pfb" secondAttribute="trailing" id="iwW-YJ-9y9"/>
+                        <constraint firstItem="Uub-b0-XI0" firstAttribute="centerX" secondItem="SZj-37-cMm" secondAttribute="centerX" id="pDF-CX-aIM"/>
+                        <constraint firstItem="h7y-6O-vCu" firstAttribute="top" secondItem="SZj-37-cMm" secondAttribute="top" constant="44" id="v4U-dG-qyV"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="WdE-4d-wk4" secondAttribute="trailing" id="5t5-8a-H1K"/>
+                <constraint firstItem="WdE-4d-wk4" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="AFe-kx-YPB"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="SZj-37-cMm" secondAttribute="bottom" id="FdD-6z-48i"/>
+                <constraint firstItem="SZj-37-cMm" firstAttribute="top" secondItem="WdE-4d-wk4" secondAttribute="bottom" id="iGc-1N-IrK"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="SZj-37-cMm" secondAttribute="trailing" id="kju-rs-a6Z"/>
+                <constraint firstItem="WdE-4d-wk4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="lIb-K6-0V9"/>
+                <constraint firstItem="SZj-37-cMm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="syI-M7-B3C"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="145.98214285714286"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrow.left" catalog="system" width="128" height="98"/>
+        <image name="pencil" catalog="system" width="128" height="113"/>
+        <namedColor name="color_ D44444">
+            <color red="0.83099997043609619" green="0.2669999897480011" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="red_1">
+            <color red="0.60399997234344482" green="0.27099999785423279" blue="0.23499999940395355" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>

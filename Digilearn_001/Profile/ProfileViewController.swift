@@ -21,7 +21,9 @@ class ProfileViewController: UIViewController {
         
         discardButton.layer.cornerRadius = 18
         saveButton.layer.cornerRadius = 18
-        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         dropDown = DropDown()
         
         // The view to which the drop down will appear on
