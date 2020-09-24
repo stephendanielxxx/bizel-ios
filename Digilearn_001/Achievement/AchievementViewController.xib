@@ -79,15 +79,19 @@
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="L52-Ly-Ypd">
-                            <rect key="frame" x="0.0" y="255" width="414" height="563"/>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="L52-Ly-Ypd">
+                            <rect key="frame" x="0.0" y="266" width="414" height="552"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="sectionIndexColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </tableView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
                         <constraint firstItem="eqd-Oc-Uc9" firstAttribute="centerY" secondItem="fSA-xA-VHF" secondAttribute="centerY" id="5ZH-QN-Xaa"/>
-                        <constraint firstItem="L52-Ly-Ypd" firstAttribute="top" secondItem="SVD-KU-mAc" secondAttribute="bottom" constant="9" id="FPi-0g-PHZ"/>
+                        <constraint firstItem="L52-Ly-Ypd" firstAttribute="top" secondItem="SVD-KU-mAc" secondAttribute="bottom" constant="20" id="FPi-0g-PHZ"/>
                         <constraint firstAttribute="trailing" secondItem="fSA-xA-VHF" secondAttribute="trailing" id="Mct-u3-3th"/>
                         <constraint firstItem="FO9-hn-8qS" firstAttribute="top" secondItem="eqd-Oc-Uc9" secondAttribute="bottom" constant="4" id="NFy-51-Eqa"/>
                         <constraint firstItem="FO9-hn-8qS" firstAttribute="leading" secondItem="gMc-aC-c9n" secondAttribute="leading" constant="77" id="NGD-3l-zrq"/>

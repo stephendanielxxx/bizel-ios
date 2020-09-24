@@ -11,6 +11,7 @@ import Alamofire
 import Reqres
 import PINRemoteImage
 
+
 class AchievementViewController: UIViewController {
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var profileImage: UIImageView!
@@ -30,17 +31,27 @@ class AchievementViewController: UIViewController {
         achievementView.register(nib, forCellReuseIdentifier: "achievementIdentifier")
         
         let user_id = readStringPreference(key: DigilearnsKeys.USER_ID)
-        let username = readStringPreference(key: DigilearnsKeys.USER_NICK)
+        let firstname = readStringPreference(key: DigilearnsKeys.FIRST_NAME)
+        let lastname = readStringPreference(key: DigilearnsKeys.LAST_NAME)
+        let username = "\(firstname) \(lastname)"
         let institut = readStringPreference(key: DigilearnsKeys.INSTITUT_NAME)
         let position = readStringPreference(key: DigilearnsKeys.USER_POSITION)
+        let photo = readStringPreference(key: DigilearnsKeys.USER_PHOTO)
         
         usernameLabel.text = username
         institutLabel.text = institut
         statusLabel.text = position
+        profileImage.pin_updateWithProgress = true
+        profileImage.contentMode = .scaleToFill
+        profileImage.clipsToBounds = true
+        let url = Foundation.URL(string: "https://digicourse.id/digilearn/member/assets.digilearn/profile/\(photo)")
+        profileImage.pin_setImage(from: url)
+        debugPrint(url)
+        
         
         let URL = "\(DigilearnParams.ApiUrl)/api/apicourseach"
         let parameters: [String:Any] = [
-            "uid": "\(user_id)"
+            "user_id": "\(user_id)"
         ]
         AF.request(URL,
                    method: .post,
@@ -52,6 +63,7 @@ class AchievementViewController: UIViewController {
                         let decoder = JSONDecoder()
                         do{
                             self.achieveModel = try decoder.decode(AchieveModel.self, from:data)
+                            debugPrint(self.achieveModel)
                             self.achievementView.reloadData()
                         }catch{
                             print(error.localizedDescription)
