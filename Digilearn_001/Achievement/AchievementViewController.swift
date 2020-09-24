@@ -19,7 +19,7 @@ class AchievementViewController: UIViewController {
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var achievementView: UITableView!
     
-    var achievementModel: AchievementModel!
+    var achieveModel: AchieveModel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,6 +30,14 @@ class AchievementViewController: UIViewController {
         achievementView.register(nib, forCellReuseIdentifier: "achievementIdentifier")
         
         let user_id = readStringPreference(key: DigilearnsKeys.USER_ID)
+        let username = readStringPreference(key: DigilearnsKeys.USER_NICK)
+        let institut = readStringPreference(key: DigilearnsKeys.INSTITUT_NAME)
+        let position = readStringPreference(key: DigilearnsKeys.USER_POSITION)
+        
+        usernameLabel.text = username
+        institutLabel.text = institut
+        statusLabel.text = position
+        
         let URL = "\(DigilearnParams.ApiUrl)/api/apicourseach"
         let parameters: [String:Any] = [
             "uid": "\(user_id)"
@@ -43,7 +51,7 @@ class AchievementViewController: UIViewController {
                         self.removeSpinner()
                         let decoder = JSONDecoder()
                         do{
-                            self.achievementModel = try decoder.decode(AchievementModel.self, from:data)
+                            self.achieveModel = try decoder.decode(AchieveModel.self, from:data)
                             self.achievementView.reloadData()
                         }catch{
                             print(error.localizedDescription)
@@ -63,7 +71,7 @@ class AchievementViewController: UIViewController {
 extension AchievementViewController: UITableViewDelegate, UITableViewDataSource
 {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return achievementModel?.achievement.count ?? 0
+        return achieveModel?.library.count ?? 0
         
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -72,9 +80,9 @@ extension AchievementViewController: UITableViewDelegate, UITableViewDataSource
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = achievementView.dequeueReusableCell(withIdentifier: "achievementIdentifier") as! AchievementTableViewCell
-        let achievement: Achievement = (achievementModel?.achievement[indexPath.row])!
-        cell.titleTask.text = achievement.courseName
-        
+        let achieve: Library = (achieveModel?.library[indexPath.row])!
+        cell.titleTask.text = achieve.courseName
+        cell.namaInstitut.text = achieve.institutName
         
         return cell
     }

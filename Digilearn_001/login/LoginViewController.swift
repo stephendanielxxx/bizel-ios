@@ -108,6 +108,9 @@ class LoginViewController: UIViewController {
                                 if(loginModel.code == "200"){
                                     self.saveStringPreference(value: (loginModel.user?[0].id)!, key: DigilearnsKeys.USER_ID)
                                     self.saveStringPreference(value: (loginModel.user?[0].nickname)!, key: DigilearnsKeys.USER_NICK)
+                                    self.saveStringPreference(value: (loginModel.user?[0].institution)!, key: DigilearnsKeys.INSTITUT_NAME)
+                                    self.saveStringPreference(value: (loginModel.user?[0].position)!, key: DigilearnsKeys.USER_POSITION)
+                                    
                                     
                                     let home = HomeViewController()
 
