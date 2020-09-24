@@ -19,8 +19,8 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        discardButton.layer.cornerRadius = 15
-        saveButton.layer.cornerRadius = 15
+        discardButton.layer.cornerRadius = 18
+        saveButton.layer.cornerRadius = 18
         
         dropDown = DropDown()
         
@@ -33,6 +33,9 @@ class ProfileViewController: UIViewController {
         dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
             switch index {
             case 0:
+                let contact = ContactUsViewController()
+                contact.modalPresentationStyle = .fullScreen
+                self.present(contact, animated: true, completion: nil)
                 break
             case 1:
                 let privacy = PrivacyViewController()

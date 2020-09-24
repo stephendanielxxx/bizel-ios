@@ -82,6 +82,8 @@
 		B9643A3D251C500600438DA3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9643A3B251C500600438DA3 /* ProfileViewController.swift */; };
 		B9643A3E251C500600438DA3 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9643A3C251C500600438DA3 /* ProfileViewController.xib */; };
 		B9643A45251C720900438DA3 /* LogoutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9643A44251C720900438DA3 /* LogoutModel.swift */; };
+		B9643A4A251C737200438DA3 /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9643A48251C737100438DA3 /* ContactUsViewController.swift */; };
+		B9643A4B251C737200438DA3 /* ContactUsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9643A49251C737200438DA3 /* ContactUsViewController.xib */; };
 		B9673DF7250F23F1005E6BB8 /* ListTaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9673DF6250F23F1005E6BB8 /* ListTaskModel.swift */; };
 		B9673DFA250F251C005E6BB8 /* MyTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9673DF8250F251C005E6BB8 /* MyTaskViewController.swift */; };
 		B9673DFB250F251C005E6BB8 /* MyTaskViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9673DF9250F251C005E6BB8 /* MyTaskViewController.xib */; };
@@ -269,6 +271,8 @@
 		B9643A3B251C500600438DA3 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		B9643A3C251C500600438DA3 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		B9643A44251C720900438DA3 /* LogoutModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutModel.swift; sourceTree = "<group>"; };
+		B9643A48251C737100438DA3 /* ContactUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
+		B9643A49251C737200438DA3 /* ContactUsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactUsViewController.xib; sourceTree = "<group>"; };
 		B9673DF6250F23F1005E6BB8 /* ListTaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTaskModel.swift; sourceTree = "<group>"; };
 		B9673DF8250F251C005E6BB8 /* MyTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTaskViewController.swift; sourceTree = "<group>"; };
 		B9673DF9250F251C005E6BB8 /* MyTaskViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTaskViewController.xib; sourceTree = "<group>"; };
@@ -715,11 +719,29 @@
 		B9643A3A251C4EE300438DA3 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				B9643A47251C736300438DA3 /* Model */,
+				B9643A46251C735700438DA3 /* Contact Us */,
 				B9643A3B251C500600438DA3 /* ProfileViewController.swift */,
 				B9643A3C251C500600438DA3 /* ProfileViewController.xib */,
-				B9643A44251C720900438DA3 /* LogoutModel.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		B9643A46251C735700438DA3 /* Contact Us */ = {
+			isa = PBXGroup;
+			children = (
+				B9643A48251C737100438DA3 /* ContactUsViewController.swift */,
+				B9643A49251C737200438DA3 /* ContactUsViewController.xib */,
+			);
+			path = "Contact Us";
+			sourceTree = "<group>";
+		};
+		B9643A47251C736300438DA3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B9643A44251C720900438DA3 /* LogoutModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		B9673DF4250F237D005E6BB8 /* Task */ = {
@@ -1094,6 +1116,7 @@
 				6AF6D8032518B22300947520 /* AchievementTableViewCell.xib in Resources */,
 				6ADC3B2A250B28C200E88D7C /* AnnounceTableViewCell.xib in Resources */,
 				B9673E07250F561D005E6BB8 /* CourseViewController.xib in Resources */,
+				B9643A4B251C737200438DA3 /* ContactUsViewController.xib in Resources */,
 				B934AFE124FFA88D000FCEB3 /* LoginViewController.xib in Resources */,
 				6A1333FC25186D340032F3A0 /* ActiveTaskViewController.xib in Resources */,
 				B9A116132510C1FD00852131 /* TopicItemTableViewCell.xib in Resources */,
@@ -1317,6 +1340,7 @@
 				6AF6D8022518B22200947520 /* AchievementTableViewCell.swift in Sources */,
 				B96F5BE02511F272006AB070 /* ActionViewController.swift in Sources */,
 				6ADC3B29250B28C200E88D7C /* AnnounceTableViewCell.swift in Sources */,
+				B9643A4A251C737200438DA3 /* ContactUsViewController.swift in Sources */,
 				6ADC3B142509FB1800E88D7C /* GroupModel.swift in Sources */,
 				B9608B3D251AFEE10082B3A3 /* NewLibraryTableViewCell.swift in Sources */,
 				B9643A45251C720900438DA3 /* LogoutModel.swift in Sources */,
