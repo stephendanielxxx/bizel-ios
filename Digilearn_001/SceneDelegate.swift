@@ -31,7 +31,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             window?.rootViewController = OnboardingViewController()
             window?.makeKeyAndVisible()
             
-        }else if(userId != nil){
+        }else if userId != nil && !userId!.isEmpty{
             let homeScreen: UINavigationController = UINavigationController(rootViewController: HomeTabBarController())
             homeScreen.view.frame = UIScreen.main.bounds
             window?.rootViewController = homeScreen

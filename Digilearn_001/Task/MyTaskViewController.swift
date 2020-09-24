@@ -163,7 +163,7 @@ extension MyTaskViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = taskView.dequeueReusableCell(withIdentifier: "taskIdentifier") as! MyTaskTableViewCell
         
-        let taskModel: TaskModel = listTaskModel.courseByUid[indexPath.row]
+        let taskModel: TaskModel = (listTaskModel?.courseByUid[indexPath.row])!
         
         cell.titleLabel.text = taskModel.title
         cell.createdLabel.text = "Created By: \(taskModel.author)"
