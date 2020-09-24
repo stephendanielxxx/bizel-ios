@@ -41,9 +41,11 @@ class ProfileViewController: UIViewController {
                 let privacy = PrivacyViewController()
                 privacy.modalPresentationStyle = .fullScreen
                 self.present(privacy, animated: true, completion: nil)
-                
                 break
             case 2:
+                let setting = SettingViewController()
+                setting.modalPresentationStyle = .fullScreen
+                self.present(setting, animated: true, completion: nil)
                 break
             case 3:
                 self.logout()

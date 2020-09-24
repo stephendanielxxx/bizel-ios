@@ -84,6 +84,8 @@
 		B9643A45251C720900438DA3 /* LogoutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9643A44251C720900438DA3 /* LogoutModel.swift */; };
 		B9643A4A251C737200438DA3 /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9643A48251C737100438DA3 /* ContactUsViewController.swift */; };
 		B9643A4B251C737200438DA3 /* ContactUsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9643A49251C737200438DA3 /* ContactUsViewController.xib */; };
+		B9643A4F251C788F00438DA3 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9643A4D251C788F00438DA3 /* SettingViewController.swift */; };
+		B9643A50251C788F00438DA3 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9643A4E251C788F00438DA3 /* SettingViewController.xib */; };
 		B9673DF7250F23F1005E6BB8 /* ListTaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9673DF6250F23F1005E6BB8 /* ListTaskModel.swift */; };
 		B9673DFA250F251C005E6BB8 /* MyTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9673DF8250F251C005E6BB8 /* MyTaskViewController.swift */; };
 		B9673DFB250F251C005E6BB8 /* MyTaskViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9673DF9250F251C005E6BB8 /* MyTaskViewController.xib */; };
@@ -273,6 +275,8 @@
 		B9643A44251C720900438DA3 /* LogoutModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutModel.swift; sourceTree = "<group>"; };
 		B9643A48251C737100438DA3 /* ContactUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
 		B9643A49251C737200438DA3 /* ContactUsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactUsViewController.xib; sourceTree = "<group>"; };
+		B9643A4D251C788F00438DA3 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		B9643A4E251C788F00438DA3 /* SettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
 		B9673DF6250F23F1005E6BB8 /* ListTaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTaskModel.swift; sourceTree = "<group>"; };
 		B9673DF8250F251C005E6BB8 /* MyTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTaskViewController.swift; sourceTree = "<group>"; };
 		B9673DF9250F251C005E6BB8 /* MyTaskViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTaskViewController.xib; sourceTree = "<group>"; };
@@ -719,6 +723,7 @@
 		B9643A3A251C4EE300438DA3 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				B9643A4C251C788000438DA3 /* Setting */,
 				B9643A47251C736300438DA3 /* Model */,
 				B9643A46251C735700438DA3 /* Contact Us */,
 				B9643A3B251C500600438DA3 /* ProfileViewController.swift */,
@@ -742,6 +747,15 @@
 				B9643A44251C720900438DA3 /* LogoutModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		B9643A4C251C788000438DA3 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				B9643A4D251C788F00438DA3 /* SettingViewController.swift */,
+				B9643A4E251C788F00438DA3 /* SettingViewController.xib */,
+			);
+			path = Setting;
 			sourceTree = "<group>";
 		};
 		B9673DF4250F237D005E6BB8 /* Task */ = {
@@ -1120,6 +1134,7 @@
 				B934AFE124FFA88D000FCEB3 /* LoginViewController.xib in Resources */,
 				6A1333FC25186D340032F3A0 /* ActiveTaskViewController.xib in Resources */,
 				B9A116132510C1FD00852131 /* TopicItemTableViewCell.xib in Resources */,
+				B9643A50251C788F00438DA3 /* SettingViewController.xib in Resources */,
 				B97C0D1D2513178E005E36B4 /* MaterialViewController.xib in Resources */,
 				6ADC3B2A250B28C200E88D7C /* AnnounceTableViewCell.xib in Resources */,
 				B9673E07250F561D005E6BB8 /* CourseViewController.xib in Resources */,
@@ -1331,6 +1346,7 @@
 				B96F5BDB2511EEDD006AB070 /* BizelCardView.swift in Sources */,
 				B9A115FB2510746800852131 /* TopicViewController.swift in Sources */,
 				B98C449F250B4DCA00363F8C /* BannerModel.swift in Sources */,
+				B9643A4F251C788F00438DA3 /* SettingViewController.swift in Sources */,
 				B99FA32025060A0B00A59C59 /* MyEventViewController.swift in Sources */,
 				B9B908BA2518868600620ADD /* MaterialLinkViewController.swift in Sources */,
 				B94585EA2509D1D800330DAC /* MyEventTableViewCell.swift in Sources */,
