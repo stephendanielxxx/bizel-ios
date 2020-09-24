@@ -21,6 +21,7 @@ target 'Digilearn_001' do
   pod 'ExpandableCell'
   pod 'Toast-Swift', '~> 5.0.1'
   pod 'ASPVideoPlayer'
+  pod 'DropDown'
   #pod 'Player', '~> 0.13.2'
   #pod 'BMPlayer', '~> 1.3.0'
   #pod 'VersaPlayer'

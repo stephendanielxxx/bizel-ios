@@ -3,6 +3,7 @@ PODS:
   - AlamofireImage (4.1.0):
     - Alamofire (~> 5.1)
   - ASPVideoPlayer (6.1.1)
+  - DropDown (2.3.13)
   - ExpandableCell (1.3.0)
   - FlagPhoneNumber (0.8.0):
     - FlagPhoneNumber/libPhoneNumberiOS (= 0.8.0)
@@ -101,6 +102,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 5.2)
   - ASPVideoPlayer
+  - DropDown
   - ExpandableCell
   - FlagPhoneNumber
   - ImageSlideshow (~> 1.9.0)
@@ -120,6 +122,7 @@ SPEC REPOS:
     - Alamofire
     - AlamofireImage
     - ASPVideoPlayer
+    - DropDown
     - ExpandableCell
     - FlagPhoneNumber
     - ImageSlideshow
@@ -140,6 +143,7 @@ SPEC CHECKSUMS:
   Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
   AlamofireImage: c4a2ba349885fb3064feb74d2e547bd42ce9be10
   ASPVideoPlayer: 7a92fafe62d7b0615520f2ec33a9fbd05483a999
+  DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
   ExpandableCell: 69ca7d71971c171473a7a30964d2127f4c6ceaf6
   FlagPhoneNumber: 3712455b95f66cb0f2016fef7d9e34cddf8c7f9a
   ImageSlideshow: 67184be896a28472bd3b906c33ce4e0734aa3d22
@@ -156,6 +160,6 @@ SPEC CHECKSUMS:
   SimpleCheckbox: ddcd433ab8c3a8f57300bebda13151a8f302c7f9
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: 095640e79ecf9960b38593f29ec55ba2701e6b09
+PODFILE CHECKSUM: f67aedc6a2a7b3972ca1472035fa3ffe45833791
 
 COCOAPODS: 1.9.3

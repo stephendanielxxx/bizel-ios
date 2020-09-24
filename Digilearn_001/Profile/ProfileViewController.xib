@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController" customModule="Digilearn_001" customModuleProvider="target">
             <connections>
                 <outlet property="discardButton" destination="T1x-lO-NUl" id="zNv-7d-clM"/>
+                <outlet property="optionMenu" destination="yjL-vd-dQY" id="GN8-u2-k71"/>
                 <outlet property="saveButton" destination="lVf-1X-veU" id="Z3v-Xd-E1R"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -33,11 +34,14 @@
                             </barButtonItem>
                             <barButtonItem key="rightBarButtonItem" image="ic_more_option" id="yjL-vd-dQY">
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="optionAction:" destination="-1" id="yNN-FJ-F5q"/>
+                                </connections>
                             </barButtonItem>
                         </navigationItem>
                     </items>
                 </navigationBar>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cU7-Q2-nlb">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cU7-Q2-nlb">
                     <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qjv-bn-wEY">
@@ -69,7 +73,7 @@
                                     </state>
                                 </button>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cx1-LI-TnO" customClass="MDCCard">
-                                    <rect key="frame" x="37" y="197" width="340" height="317.5"/>
+                                    <rect key="frame" x="37" y="197" width="340" height="324.5"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iyx-Li-Hxu" userLabel="Change Profile">
                                             <rect key="frame" x="300" y="8" width="32" height="32"/>
@@ -81,38 +85,38 @@
                                             <state key="normal" image="square.and.pencil" catalog="system"/>
                                         </button>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FeI-XK-ZNO" customClass="BottomBorderTF" customModule="Digilearn_001" customModuleProvider="target">
-                                            <rect key="frame" x="32" y="48" width="276" height="18.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <rect key="frame" x="32" y="48" width="276" height="19.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <textInputTraits key="textInputTraits" textContentType="name"/>
                                         </textField>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UeK-yI-n0x" customClass="BottomBorderTF" customModule="Digilearn_001" customModuleProvider="target">
-                                            <rect key="frame" x="32" y="86.5" width="276" height="18.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <rect key="frame" x="32" y="87.5" width="276" height="19.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <textInputTraits key="textInputTraits" textContentType="family-name"/>
                                         </textField>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nickname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IIG-rs-SKT" customClass="BottomBorderTF" customModule="Digilearn_001" customModuleProvider="target">
-                                            <rect key="frame" x="32" y="125" width="276" height="18.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <rect key="frame" x="32" y="127" width="276" height="19.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <textInputTraits key="textInputTraits" textContentType="nickname"/>
                                         </textField>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rEF-Es-5Pq" customClass="BottomBorderTF" customModule="Digilearn_001" customModuleProvider="target">
-                                            <rect key="frame" x="32" y="163.5" width="276" height="18.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <rect key="frame" x="32" y="166.5" width="276" height="19.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <textInputTraits key="textInputTraits" textContentType="email"/>
                                         </textField>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LTD-QD-vyy" customClass="BottomBorderTF" customModule="Digilearn_001" customModuleProvider="target">
-                                            <rect key="frame" x="32" y="202" width="276" height="18.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <rect key="frame" x="32" y="206" width="276" height="19.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <textInputTraits key="textInputTraits" textContentType="tel"/>
                                         </textField>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Institution" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AYP-VN-dzg" customClass="BottomBorderTF" customModule="Digilearn_001" customModuleProvider="target">
-                                            <rect key="frame" x="32" y="240.5" width="276" height="18.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <rect key="frame" x="32" y="245.5" width="276" height="19.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <textInputTraits key="textInputTraits" textContentType="email"/>
                                         </textField>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Position" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0dn-x0-Vvn" customClass="BottomBorderTF" customModule="Digilearn_001" customModuleProvider="target">
-                                            <rect key="frame" x="32" y="279" width="276" height="18.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <rect key="frame" x="32" y="285" width="276" height="19.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <textInputTraits key="textInputTraits" textContentType="email"/>
                                         </textField>
                                     </subviews>
@@ -144,8 +148,22 @@
                                         <constraint firstItem="IIG-rs-SKT" firstAttribute="top" secondItem="UeK-yI-n0x" secondAttribute="bottom" constant="20" id="zJ0-2D-9LP"/>
                                     </constraints>
                                 </view>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVf-1X-veU">
+                                    <rect key="frame" x="247" y="551" width="130" height="40"/>
+                                    <color key="backgroundColor" name="red_1"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="130" id="Kmj-ZV-uSd"/>
+                                        <constraint firstAttribute="height" constant="40" id="yJC-13-fTA"/>
+                                    </constraints>
+                                    <state key="normal" title="Save Changes">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="saveAction:" destination="-1" eventType="touchUpInside" id="o0Y-8N-Hpy"/>
+                                    </connections>
+                                </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1x-lO-NUl">
-                                    <rect key="frame" x="37" y="544" width="130" height="40"/>
+                                    <rect key="frame" x="37" y="551" width="130" height="40"/>
                                     <color key="backgroundColor" name="red_1"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="40" id="9Q4-bR-uoM"/>
@@ -155,23 +173,20 @@
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVf-1X-veU">
-                                    <rect key="frame" x="247" y="544" width="130" height="40"/>
-                                    <color key="backgroundColor" name="red_1"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="130" id="Kmj-ZV-uSd"/>
-                                        <constraint firstAttribute="height" constant="40" id="yJC-13-fTA"/>
-                                    </constraints>
-                                    <state key="normal" title="Save Changes">
-                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </state>
-                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone number and password can be changed in Settings. Click the icon in the upper right corner" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1BF-Ao-iU9">
+                                    <rect key="frame" x="37" y="614" width="340" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                    <color key="textColor" name="red_1"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
                                 <constraint firstItem="T1x-lO-NUl" firstAttribute="top" secondItem="cx1-LI-TnO" secondAttribute="bottom" constant="29.5" id="0O7-Vz-xYR"/>
                                 <constraint firstAttribute="trailing" secondItem="Ae4-QR-Jx6" secondAttribute="trailing" constant="-10" id="0Sw-yF-40V"/>
+                                <constraint firstItem="1BF-Ao-iU9" firstAttribute="leading" secondItem="Qjv-bn-wEY" secondAttribute="leading" constant="37" id="1Ug-E4-H89"/>
                                 <constraint firstItem="SWz-xg-yGD" firstAttribute="top" secondItem="Qjv-bn-wEY" secondAttribute="top" constant="55" id="37Z-oI-YsN"/>
+                                <constraint firstItem="1BF-Ao-iU9" firstAttribute="top" secondItem="T1x-lO-NUl" secondAttribute="bottom" constant="23" id="3PQ-gV-Hto"/>
                                 <constraint firstAttribute="trailing" secondItem="cx1-LI-TnO" secondAttribute="trailing" constant="37" id="4S1-vm-pjL"/>
                                 <constraint firstAttribute="trailing" secondItem="lVf-1X-veU" secondAttribute="trailing" constant="37" id="903-UO-h7j"/>
                                 <constraint firstItem="Ae4-QR-Jx6" firstAttribute="top" secondItem="Qjv-bn-wEY" secondAttribute="top" constant="-7" id="9ah-hq-X8M"/>
@@ -181,6 +196,7 @@
                                 <constraint firstItem="cx1-LI-TnO" firstAttribute="top" secondItem="SWz-xg-yGD" secondAttribute="bottom" constant="22" id="hPa-DC-gKM"/>
                                 <constraint firstItem="lVf-1X-veU" firstAttribute="top" secondItem="cx1-LI-TnO" secondAttribute="bottom" constant="29.5" id="ktu-wP-Ofg"/>
                                 <constraint firstItem="SWz-xg-yGD" firstAttribute="centerX" secondItem="Qjv-bn-wEY" secondAttribute="centerX" id="r2g-d9-Rss"/>
+                                <constraint firstAttribute="trailing" secondItem="1BF-Ao-iU9" secondAttribute="trailing" constant="37" id="spI-LQ-m7B"/>
                                 <constraint firstItem="yz2-P9-tiu" firstAttribute="top" secondItem="SWz-xg-yGD" secondAttribute="bottom" constant="-48" id="tXh-5f-NcC"/>
                                 <constraint firstAttribute="height" constant="774" id="vd8-uP-ZjE"/>
                                 <constraint firstItem="yz2-P9-tiu" firstAttribute="leading" secondItem="SWz-xg-yGD" secondAttribute="trailing" constant="-48" id="xBz-tZ-iTy"/>
