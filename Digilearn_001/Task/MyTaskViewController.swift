@@ -30,8 +30,6 @@ class MyTaskViewController: UIViewController {
         activeButton.layer.cornerRadius = 15
         expiredButton.layer.cornerRadius = 15
         
-        
-
     }
     
     override func viewWillAppear(_ animated: Bool) {

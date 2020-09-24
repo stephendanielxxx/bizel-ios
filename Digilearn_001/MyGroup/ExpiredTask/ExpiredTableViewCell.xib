@@ -110,20 +110,12 @@
             <viewLayoutGuide key="safeArea" id="IIQ-9F-a07"/>
             <connections>
                 <outlet property="activitiesExpired" destination="juW-s6-9pl" id="XFp-Np-L2U"/>
-                <outlet property="activitiesLabel" destination="juW-s6-9pl" id="fwi-Ia-ZsE"/>
                 <outlet property="assignBy" destination="Myv-CJ-2Zv" id="uo7-rP-7py"/>
-                <outlet property="assignedLabel" destination="Myv-CJ-2Zv" id="hko-BU-bQ9"/>
                 <outlet property="createdBy" destination="FYT-3j-Vte" id="JZB-T3-8Z8"/>
-                <outlet property="createdLabel" destination="FYT-3j-Vte" id="Vn5-Dn-krU"/>
-                <outlet property="expiredLabel" destination="qGI-Dt-epj" id="gxa-Wp-zpM"/>
                 <outlet property="modulExpired" destination="2Ty-DA-f6E" id="EMN-8j-z1w"/>
-                <outlet property="modulesLabel" destination="2Ty-DA-f6E" id="9QM-Yx-QwY"/>
-                <outlet property="progressView" destination="8V5-hC-oNa" id="WPx-w4-dMw"/>
-                <outlet property="titleLabel" destination="mSJ-GO-3b9" id="JuA-p9-Giy"/>
+                <outlet property="progressExpired" destination="8V5-hC-oNa" id="Spa-mW-Fvb"/>
                 <outlet property="titleTask" destination="mSJ-GO-3b9" id="a5h-fX-dqV"/>
                 <outlet property="topicExpired" destination="RQ9-fh-1Jh" id="7ng-ef-IaE"/>
-                <outlet property="topicsLabel" destination="RQ9-fh-1Jh" id="iyc-F4-85E"/>
-                <outlet property="totalLabel" destination="btv-mj-wPK" id="ffw-rM-HFw"/>
                 <outlet property="totalTask" destination="btv-mj-wPK" id="fQc-Zj-635"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="188.16964285714286"/>
