@@ -4,6 +4,7 @@ PODS:
     - Alamofire (~> 5.1)
   - ASPVideoPlayer (6.1.1)
   - DropDown (2.3.13)
+  - DynamicBlurView (4.1.0)
   - ExpandableCell (1.3.0)
   - FlagPhoneNumber (0.8.0):
     - FlagPhoneNumber/libPhoneNumberiOS (= 0.8.0)
@@ -89,6 +90,8 @@ PODS:
   - PINRemoteImage/PINCache (3.0.0):
     - PINCache (= 3.0.1-beta.8)
     - PINRemoteImage/Core
+  - PopupDialog (1.1.1):
+    - DynamicBlurView (~> 4.0)
   - Reqres (3.1.1)
   - RxCocoa (5.1.1):
     - RxRelay (~> 5)
@@ -111,6 +114,7 @@ DEPENDENCIES:
   - MaterialComponents/Cards
   - "MaterialComponents/Tabs+TabBarView"
   - PINRemoteImage
+  - PopupDialog (~> 1.1)
   - Reqres
   - RxCocoa (~> 5)
   - RxSwift (~> 5)
@@ -123,6 +127,7 @@ SPEC REPOS:
     - AlamofireImage
     - ASPVideoPlayer
     - DropDown
+    - DynamicBlurView
     - ExpandableCell
     - FlagPhoneNumber
     - ImageSlideshow
@@ -132,6 +137,7 @@ SPEC REPOS:
     - PINCache
     - PINOperation
     - PINRemoteImage
+    - PopupDialog
     - Reqres
     - RxCocoa
     - RxRelay
@@ -144,6 +150,7 @@ SPEC CHECKSUMS:
   AlamofireImage: c4a2ba349885fb3064feb74d2e547bd42ce9be10
   ASPVideoPlayer: 7a92fafe62d7b0615520f2ec33a9fbd05483a999
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
+  DynamicBlurView: 58e18fae80bb614e34681a4486870e7d257b62e8
   ExpandableCell: 69ca7d71971c171473a7a30964d2127f4c6ceaf6
   FlagPhoneNumber: 3712455b95f66cb0f2016fef7d9e34cddf8c7f9a
   ImageSlideshow: 67184be896a28472bd3b906c33ce4e0734aa3d22
@@ -153,6 +160,7 @@ SPEC CHECKSUMS:
   PINCache: 534fd41d358d828dfdf227a0d327f3673a65e20b
   PINOperation: 24b774353ca248fcf87d67b2d61eef42087c125a
   PINRemoteImage: e2b89e19fb6e77ffc099f9d9f3b3fe1745e3f9f9
+  PopupDialog: 720c92befd8bc23c13442254945213db5612f149
   Reqres: 4ebafc15b75c65fdf67edcec14520d43b836d4da
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
@@ -160,6 +168,6 @@ SPEC CHECKSUMS:
   SimpleCheckbox: ddcd433ab8c3a8f57300bebda13151a8f302c7f9
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: f67aedc6a2a7b3972ca1472035fa3ffe45833791
+PODFILE CHECKSUM: ca85af29e275b96895a8b80aaa39d38b7bb3605b
 
 COCOAPODS: 1.9.3

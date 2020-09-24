@@ -82,6 +82,9 @@ class ProfileViewController: UIViewController {
                             let logoutModel = try decoder.decode(LogoutModel.self, from:data)
                             
                             self.saveStringPreference(value: "", key: DigilearnsKeys.USER_ID)
+                            
+                            self.resetDefaults()
+                            
                             self.dismiss(animated: true, completion: {
                                 let login = LoginViewController()
                                 login.modalPresentationStyle = .fullScreen
@@ -107,6 +110,14 @@ class ProfileViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden( true, animated: animated )
+    }
+    
+    func resetDefaults() {
+        let defaults = UserDefaults.standard
+        let dictionary = defaults.dictionaryRepresentation()
+        dictionary.keys.forEach { key in
+            defaults.removeObject(forKey: key)
+        }
     }
     
 }
