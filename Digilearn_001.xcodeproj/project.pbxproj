@@ -79,6 +79,8 @@
 		B9608B46251B3CB50082B3A3 /* LibraryModulesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9608B44251B3CB50082B3A3 /* LibraryModulesViewController.xib */; };
 		B9608B4A251B3CD80082B3A3 /* LibraryTopicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9608B48251B3CD80082B3A3 /* LibraryTopicsViewController.swift */; };
 		B9608B4B251B3CD80082B3A3 /* LibraryTopicsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9608B49251B3CD80082B3A3 /* LibraryTopicsViewController.xib */; };
+		B9643A3D251C500600438DA3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9643A3B251C500600438DA3 /* ProfileViewController.swift */; };
+		B9643A3E251C500600438DA3 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9643A3C251C500600438DA3 /* ProfileViewController.xib */; };
 		B9673DF7250F23F1005E6BB8 /* ListTaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9673DF6250F23F1005E6BB8 /* ListTaskModel.swift */; };
 		B9673DFA250F251C005E6BB8 /* MyTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9673DF8250F251C005E6BB8 /* MyTaskViewController.swift */; };
 		B9673DFB250F251C005E6BB8 /* MyTaskViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9673DF9250F251C005E6BB8 /* MyTaskViewController.xib */; };
@@ -263,6 +265,8 @@
 		B9608B44251B3CB50082B3A3 /* LibraryModulesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LibraryModulesViewController.xib; sourceTree = "<group>"; };
 		B9608B48251B3CD80082B3A3 /* LibraryTopicsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryTopicsViewController.swift; sourceTree = "<group>"; };
 		B9608B49251B3CD80082B3A3 /* LibraryTopicsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LibraryTopicsViewController.xib; sourceTree = "<group>"; };
+		B9643A3B251C500600438DA3 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		B9643A3C251C500600438DA3 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		B9673DF6250F23F1005E6BB8 /* ListTaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTaskModel.swift; sourceTree = "<group>"; };
 		B9673DF8250F251C005E6BB8 /* MyTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTaskViewController.swift; sourceTree = "<group>"; };
 		B9673DF9250F251C005E6BB8 /* MyTaskViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTaskViewController.xib; sourceTree = "<group>"; };
@@ -580,6 +584,7 @@
 		B934AF4324FF4B82000FCEB3 /* Digilearn_001 */ = {
 			isa = PBXGroup;
 			children = (
+				B9643A3A251C4EE300438DA3 /* Profile */,
 				6AF6D8052519EC7E00947520 /* FAQnew */,
 				6A13340D2518A9A90032F3A0 /* Achievement */,
 				B9608B36251AF9640082B3A3 /* Library */,
@@ -703,6 +708,15 @@
 				B9608B49251B3CD80082B3A3 /* LibraryTopicsViewController.xib */,
 			);
 			path = Topic;
+			sourceTree = "<group>";
+		};
+		B9643A3A251C4EE300438DA3 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				B9643A3B251C500600438DA3 /* ProfileViewController.swift */,
+				B9643A3C251C500600438DA3 /* ProfileViewController.xib */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		B9673DF4250F237D005E6BB8 /* Task */ = {
@@ -1100,6 +1114,7 @@
 				B9673E11250F748F005E6BB8 /* ModulesViewController.xib in Resources */,
 				B9673DFB250F251C005E6BB8 /* MyTaskViewController.xib in Resources */,
 				B9608B46251B3CB50082B3A3 /* LibraryModulesViewController.xib in Resources */,
+				B9643A3E251C500600438DA3 /* ProfileViewController.xib in Resources */,
 				6ADC3B112509FA6500E88D7C /* MyGroupViewController.xib in Resources */,
 				6A1333ED251465BD0032F3A0 /* MemberGroupViewController.xib in Resources */,
 				B99FA32125060A0B00A59C59 /* MyEventViewController.xib in Resources */,
@@ -1306,6 +1321,7 @@
 				B969665B2514909500A3561E /* SubmitProgressModel.swift in Sources */,
 				B934AF4F24FF4B82000FCEB3 /* Digilearn_001.xcdatamodeld in Sources */,
 				B934AF4524FF4B82000FCEB3 /* AppDelegate.swift in Sources */,
+				B9643A3D251C500600438DA3 /* ProfileViewController.swift in Sources */,
 				B94585E12509C6DA00330DAC /* MenuTableViewCell.swift in Sources */,
 				B97C0D2225134E69005E36B4 /* QuizEssayViewController.swift in Sources */,
 				B97C0D1C2513178E005E36B4 /* MaterialViewController.swift in Sources */,
