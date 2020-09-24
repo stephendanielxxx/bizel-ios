@@ -78,6 +78,9 @@ to us by filling this form.</string>
                                     <state key="normal" title="Send">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
+                                    <connections>
+                                        <action selector="sendEmailAction:" destination="-1" eventType="touchUpInside" id="foS-Gt-L9J"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
