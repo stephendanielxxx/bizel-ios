@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>752342982385-63jmpl6fnltupcmuskfk8kdsd1asaieb.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.752342982385-63jmpl6fnltupcmuskfk8kdsd1asaieb</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>752342982385-7neh52g81ccp7khe6ltmi54nri6ggttu.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDew5KhV3PRndck39c0sW5QnBL3ArOTBeg</string>
+	<key>GCM_SENDER_ID</key>
+	<string>752342982385</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>digimaster.Digilearn-001</string>
+	<key>PROJECT_ID</key>
+	<string>bizel-5e679</string>
+	<key>STORAGE_BUCKET</key>
+	<string>bizel-5e679.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:752342982385:ios:e77b486c40f9f2a85c1350</string>
+	<key>DATABASE_URL</key>
+	<string>https://bizel-5e679.firebaseio.com</string>
+</dict>
+</plist>
