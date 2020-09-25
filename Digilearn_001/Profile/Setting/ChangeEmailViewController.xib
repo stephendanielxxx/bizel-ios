@@ -10,6 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChangeEmailViewController" customModule="Digilearn_001" customModuleProvider="target">
             <connections>
+                <outlet property="changeButton" destination="Fwq-0i-8ff" id="W4q-aV-TpM"/>
+                <outlet property="emailField" destination="zHx-oP-pfb" id="RIy-is-BSU"/>
                 <outlet property="saveButton" destination="Uub-b0-XI0" id="aOi-CG-27m"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -51,11 +53,12 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zHx-oP-pfb">
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="your_email_address@email.com" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zHx-oP-pfb">
                             <rect key="frame" x="41" y="105" width="282" height="34"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="34" id="om5-x5-mIa"/>
                             </constraints>
+                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" textContentType="email"/>
                         </textField>
@@ -68,6 +71,9 @@
                             </constraints>
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <state key="normal" image="pencil" catalog="system"/>
+                            <connections>
+                                <action selector="changeAction:" destination="-1" eventType="touchUpInside" id="WZl-vj-u2a"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uub-b0-XI0">
                             <rect key="frame" x="122" y="176" width="170" height="40"/>
@@ -79,6 +85,9 @@
                             <state key="normal" title="Save Changes">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
+                            <connections>
+                                <action selector="saveAction:" destination="-1" eventType="touchUpInside" id="n9p-Bx-obn"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
