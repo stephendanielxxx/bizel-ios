@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -22,19 +22,19 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MgG-HL-Iea" userLabel="Content View">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4gC-6W-TJ3" userLabel="Intro View">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="724"/>
-                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <rect key="frame" x="0.0" y="100" width="414" height="640"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
                         <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Hb0-mU-E63">
-                            <rect key="frame" x="187.5" y="762" width="39" height="37"/>
+                            <rect key="frame" x="187.5" y="840" width="39" height="37"/>
                             <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <color key="currentPageIndicatorTintColor" name="red_1"/>
                         </pageControl>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="By8-WM-Jln">
-                            <rect key="frame" x="22" y="764" width="34" height="33"/>
+                            <rect key="frame" x="22" y="842" width="34" height="33"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <state key="normal" title="Skip">
                                 <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -44,7 +44,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdl-nx-zQG">
-                            <rect key="frame" x="308" y="762" width="85" height="35"/>
+                            <rect key="frame" x="308" y="840" width="85" height="35"/>
                             <color key="backgroundColor" name="color_ B63532"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="85" id="TLe-hM-aPE"/>
@@ -65,10 +65,10 @@
                         <constraint firstAttribute="bottom" secondItem="Hb0-mU-E63" secondAttribute="bottom" constant="19" id="2Kj-1O-T1Y"/>
                         <constraint firstAttribute="bottom" secondItem="By8-WM-Jln" secondAttribute="bottom" constant="21" id="8ZG-ti-vce"/>
                         <constraint firstItem="Hb0-mU-E63" firstAttribute="centerX" secondItem="MgG-HL-Iea" secondAttribute="centerX" id="FVH-Fe-1uO"/>
-                        <constraint firstItem="4gC-6W-TJ3" firstAttribute="top" secondItem="MgG-HL-Iea" secondAttribute="top" id="J5V-FW-2xH"/>
+                        <constraint firstItem="4gC-6W-TJ3" firstAttribute="top" secondItem="MgG-HL-Iea" secondAttribute="top" constant="100" id="J5V-FW-2xH"/>
                         <constraint firstItem="4gC-6W-TJ3" firstAttribute="leading" secondItem="MgG-HL-Iea" secondAttribute="leading" id="NI0-qs-hte"/>
                         <constraint firstItem="By8-WM-Jln" firstAttribute="leading" secondItem="MgG-HL-Iea" secondAttribute="leading" constant="22" id="diu-aS-d74"/>
-                        <constraint firstItem="Hb0-mU-E63" firstAttribute="top" secondItem="4gC-6W-TJ3" secondAttribute="bottom" constant="38" id="ise-zO-BVV"/>
+                        <constraint firstItem="Hb0-mU-E63" firstAttribute="top" secondItem="4gC-6W-TJ3" secondAttribute="bottom" constant="100" id="ise-zO-BVV"/>
                         <constraint firstAttribute="trailing" secondItem="4gC-6W-TJ3" secondAttribute="trailing" id="mkJ-9Z-yV4"/>
                         <constraint firstAttribute="trailing" secondItem="bdl-nx-zQG" secondAttribute="trailing" constant="21" id="oVS-Mj-P0M"/>
                         <constraint firstAttribute="bottom" secondItem="bdl-nx-zQG" secondAttribute="bottom" constant="21" id="qfK-xG-c92"/>
