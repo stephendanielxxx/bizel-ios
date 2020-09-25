@@ -183,6 +183,7 @@
 		B9B39ABC251DEA6100AA9CE9 /* Montserrat-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9B39AAA251DEA6000AA9CE9 /* Montserrat-Italic.ttf */; };
 		B9B39ABD251DEA6100AA9CE9 /* Montserrat-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9B39AAB251DEA6100AA9CE9 /* Montserrat-Black.ttf */; };
 		B9B39ABF251DF14000AA9CE9 /* ChangeProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B39ABE251DF14000AA9CE9 /* ChangeProfileModel.swift */; };
+		B9B39AC1251DF48E00AA9CE9 /* BaseSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B39AC0251DF48E00AA9CE9 /* BaseSettingViewController.swift */; };
 		B9B908BA2518868600620ADD /* MaterialLinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B908B82518868600620ADD /* MaterialLinkViewController.swift */; };
 		B9B908BB2518868600620ADD /* MaterialLinkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9B908B92518868600620ADD /* MaterialLinkViewController.xib */; };
 		B9D0534D2501E06B00F1AC03 /* DigilearnParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D0534C2501E06B00F1AC03 /* DigilearnParams.swift */; };
@@ -402,6 +403,7 @@
 		B9B39AAA251DEA6000AA9CE9 /* Montserrat-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Italic.ttf"; sourceTree = "<group>"; };
 		B9B39AAB251DEA6100AA9CE9 /* Montserrat-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Black.ttf"; sourceTree = "<group>"; };
 		B9B39ABE251DF14000AA9CE9 /* ChangeProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeProfileModel.swift; sourceTree = "<group>"; };
+		B9B39AC0251DF48E00AA9CE9 /* BaseSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSettingViewController.swift; sourceTree = "<group>"; };
 		B9B908B82518868600620ADD /* MaterialLinkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialLinkViewController.swift; sourceTree = "<group>"; };
 		B9B908B92518868600620ADD /* MaterialLinkViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MaterialLinkViewController.xib; sourceTree = "<group>"; };
 		B9D0534C2501E06B00F1AC03 /* DigilearnParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigilearnParams.swift; sourceTree = "<group>"; };
@@ -821,6 +823,7 @@
 				B9643A5A251C828A00438DA3 /* ChangeEmailViewController.xib */,
 				B9643A61251C91AD00438DA3 /* DeleteDialogViewController.swift */,
 				B9643A62251C91AD00438DA3 /* DeleteDialogViewController.xib */,
+				B9B39AC0251DF48E00AA9CE9 /* BaseSettingViewController.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -1481,6 +1484,7 @@
 				B9A116002510864200852131 /* AbousTopicViewController.swift in Sources */,
 				B969665B2514909500A3561E /* SubmitProgressModel.swift in Sources */,
 				B934AF4F24FF4B82000FCEB3 /* Digilearn_001.xcdatamodeld in Sources */,
+				B9B39AC1251DF48E00AA9CE9 /* BaseSettingViewController.swift in Sources */,
 				B934AF4524FF4B82000FCEB3 /* AppDelegate.swift in Sources */,
 				B9643A3D251C500600438DA3 /* ProfileViewController.swift in Sources */,
 				B94585E12509C6DA00330DAC /* MenuTableViewCell.swift in Sources */,

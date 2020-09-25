@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 
-class ChangeEmailViewController: UIViewController {
+class ChangeEmailViewController: BaseSettingViewController {
     
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var emailField: UITextField!
@@ -74,12 +74,6 @@ class ChangeEmailViewController: UIViewController {
         }else{
             changeEmail(email: emailField.text!)
         }
-    }
-    
-    func showErrorAlert(title: String, errorMessage: String){
-        let alert = UIAlertController(title: title, message: errorMessage, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
-        self.present(alert, animated: true)
     }
     
     @IBAction func backAction(_ sender: UIBarButtonItem) {

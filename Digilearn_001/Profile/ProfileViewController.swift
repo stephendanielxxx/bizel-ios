@@ -10,7 +10,7 @@ import UIKit
 import DropDown
 import Alamofire
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: BaseSettingViewController {
     
     @IBOutlet weak var discardButton: UIButton!
     @IBOutlet weak var saveButton: UIButton!
@@ -60,45 +60,7 @@ class ProfileViewController: UIViewController {
         dropDown.width = 200
     }
     
-    func logout(){
-        let user_email = readStringPreference(key: DigilearnsKeys.USER_ID)
-        
-        let URL = "\(DigilearnParams.ApiUrl)/user/auth/logout"
-        
-        let parameters: [String:Any] = [
-            "email": "\(user_email)"
-        ]
-        
-        self.showSpinner(onView: self.view)
-        AF.request(URL,
-                   method: .post,
-                   parameters: parameters,
-                   encoding: URLEncoding.httpBody).responseData { response in
-                    switch response.result {
-                    case .success(let data):
-                        self.removeSpinner()
-                        let decoder = JSONDecoder()
-                        do{
-                            let logoutModel = try decoder.decode(LogoutModel.self, from:data)
-                            
-                            self.saveStringPreference(value: "", key: DigilearnsKeys.USER_ID)
-                            
-                            self.resetDefaults()
-                            
-                            self.dismiss(animated: true, completion: {
-                                let login = LoginViewController()
-                                login.modalPresentationStyle = .fullScreen
-                                self.present(login, animated: true, completion: nil)
-                            })
-                            
-                        }catch{
-                            print(error.localizedDescription)
-                        }
-                    case .failure(let error):
-                        self.removeSpinner()
-                    }
-        }
-    }
+    
     
     @IBAction func optionAction(_ sender: UIBarButtonItem) {
         dropDown.show()
@@ -111,13 +73,5 @@ class ProfileViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden( true, animated: animated )
     }
-    
-    func resetDefaults() {
-        let defaults = UserDefaults.standard
-        let dictionary = defaults.dictionaryRepresentation()
-        dictionary.keys.forEach { key in
-            defaults.removeObject(forKey: key)
-        }
-    }
-    
+     
 }
