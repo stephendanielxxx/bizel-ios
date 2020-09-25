@@ -164,7 +164,6 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
                 <constraint firstItem="aAU-gs-3iC" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="6AY-ju-uxh"/>
-                <constraint firstItem="nsB-UD-BX5" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" multiplier="0.94621" id="7Hp-J8-3qs"/>
                 <constraint firstItem="nsB-UD-BX5" firstAttribute="top" secondItem="aAU-gs-3iC" secondAttribute="bottom" id="E8T-8q-B1b"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="nsB-UD-BX5" secondAttribute="bottom" id="Kk7-rs-b31"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="aAU-gs-3iC" secondAttribute="trailing" id="Ouv-nQ-1LI"/>

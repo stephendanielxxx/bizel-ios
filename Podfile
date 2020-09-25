@@ -23,6 +23,8 @@ target 'Digilearn_001' do
   pod 'ASPVideoPlayer'
   pod 'DropDown'
   pod 'PopupDialog', '~> 1.1'
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Database'
   #pod 'Player', '~> 0.13.2'
   #pod 'BMPlayer', '~> 1.3.0'
   #pod 'VersaPlayer'
