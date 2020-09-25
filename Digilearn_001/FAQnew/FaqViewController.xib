@@ -10,6 +10,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FaqViewController" customModule="Digilearn_001" customModuleProvider="target">
             <connections>
+                <outlet property="accountButton" destination="Yja-7T-ihU" id="wWF-qz-7B7"/>
+                <outlet property="loginButton" destination="6Dr-k4-qFb" id="jPr-eI-3QZ"/>
+                <outlet property="registerButton" destination="nPe-PG-LEp" id="Egg-rV-pPn"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -34,6 +37,9 @@
                                 <navigationItem title="FAQ" id="F8h-xI-tH1">
                                     <barButtonItem key="leftBarButtonItem" image="arrow.left" catalog="system" id="ms2-L1-1YI">
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="backButton:" destination="-1" id="OP2-9C-wxV"/>
+                                        </connections>
                                     </barButtonItem>
                                 </navigationItem>
                             </items>

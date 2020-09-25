@@ -8,23 +8,22 @@
 
 import UIKit
 
-class FaqViewController: UIViewController {
 
+class FaqViewController: UIViewController {
+    @IBOutlet weak var registerButton: UIButton!
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var accountButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        registerButton.layer.cornerRadius = 15
+        loginButton.layer.cornerRadius = 15
+        accountButton.layer.cornerRadius = 15
+    }
 
-        // Do any additional setup after loading the view.
+    @IBAction func backButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+           }
     }
 
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-}
