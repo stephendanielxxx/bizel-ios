@@ -27,6 +27,7 @@ class TopicViewController: UIViewController, TopicActionDelegate {
     var courseId = ""
     var moduleId = ""
     var nextModuleName = ""
+    var isLibrary = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,17 +47,21 @@ class TopicViewController: UIViewController, TopicActionDelegate {
     }
     
     func setInitial(){
+       showTopicAction()
+    }
+    
+    @IBAction func backAction(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    fileprivate func showTopicAction() {
         let topics = TopicActionViewController()
         topics.topicActionDelegate = self
         topics.courseId = courseId
         topics.moduleId = moduleId
         topics.nextModuleName = nextModuleName
-        
+        topics.isLibrary = self.isLibrary
         embed(topics, inParent: self, inView: tabContent)
-    }
-    
-    @IBAction func backAction(_ sender: UIBarButtonItem) {
-        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func topicAction(_ sender: UIButton) {
@@ -66,12 +71,7 @@ class TopicViewController: UIViewController, TopicActionDelegate {
         topicLine.backgroundColor = UIColor(named: "red_1")
         aboutLine.backgroundColor = UIColor.white
         
-        let topics = TopicActionViewController()
-        
-        topics.courseId = courseId
-        topics.moduleId = moduleId
-        
-        embed(topics, inParent: self, inView: tabContent)
+        showTopicAction()
     }
     
     @IBAction func aboutAction(_ sender: UIButton) {

@@ -206,6 +206,12 @@ extension UIViewController {
             vSpinner = nil
         }
     }
+    
+    func validate(emailAddress: String) -> Bool {
+        let REGEX: String
+        REGEX = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}"
+        return NSPredicate(format: "SELF MATCHES %@", REGEX).evaluate(with: emailAddress)
+    }
 }
 
 extension UIViewController {

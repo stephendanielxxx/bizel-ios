@@ -10,6 +10,7 @@ import UIKit
 
 class ActiveTaskTableViewCell: UITableViewCell {
     
+    
     @IBOutlet weak var titleTask: UILabel!
     @IBOutlet weak var createdBy: UILabel!
     @IBOutlet weak var assignBy: UILabel!

@@ -10,14 +10,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyGroupDetailViewController" customModule="Digilearn_001" customModuleProvider="target">
             <connections>
+                <outlet property="contentView" destination="shV-SW-Ezb" id="YRH-JS-iH1"/>
                 <outlet property="detailImageGroup" destination="ri8-xW-pyt" id="tzz-9u-YdW"/>
                 <outlet property="detailTitle" destination="7J2-FO-6Ww" id="O4t-6X-Qtx"/>
                 <outlet property="detailTitleIsi" destination="a0v-37-Kg6" id="I6X-uG-mBq"/>
                 <outlet property="isiActive" destination="vRb-U2-BAw" id="clz-St-klo"/>
-                <outlet property="isiActiveTask" destination="shV-SW-Ezb" id="JaE-xX-aWX"/>
                 <outlet property="isiExpired" destination="5IQ-b6-Qdo" id="koN-iX-ZlB"/>
-                <outlet property="isiExpiredTask" destination="shV-SW-Ezb" id="Pmb-fE-lrq"/>
-                <outlet property="isiMember" destination="shV-SW-Ezb" id="OXC-rR-6bf"/>
+                <outlet property="isiMember" destination="Kkb-0m-s7y" id="Heo-oc-82S"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

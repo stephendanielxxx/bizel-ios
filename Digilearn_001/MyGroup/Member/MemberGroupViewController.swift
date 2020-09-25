@@ -79,7 +79,7 @@ class MemberGroupViewController: UIViewController {
         
         if member.memberStatus == "1" {
             cell.statusMember.text = "Learner"
-            cell.statusMember.textColor = UIColor.blue
+            cell.statusMember.textColor = UIColor(named: "color_4283B8")
         }
         else {
             cell.statusMember.text = "Admin"

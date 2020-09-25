@@ -12,6 +12,7 @@ import ExpandableCell
 
 class TopicActionViewController: UIViewController {
     
+    var isLibrary = false
     var courseId = ""
     var moduleId = ""
     var nextModuleName = ""
@@ -42,7 +43,7 @@ class TopicActionViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
+        
         topicView.expandableDelegate = self
         
         let nib = UINib(nibName: "TopicActionTableViewCell", bundle: nil)
@@ -126,11 +127,16 @@ extension TopicActionViewController: ExpandableDelegate, ActionViewDelegate{
         
         let topicAction: TopicDetail = self.topicActionModel.topicDetail[indexPath.row]
         
-        if topicAction.topicFinish?.caseInsensitiveCompare("finish") == .orderedSame{
+        if isLibrary {
             cell.topicName.textColor = UIColor(named: "color_2F5597")
         }else{
-            cell.topicName.textColor = UIColor(named: "color_7698D4")
+            if topicAction.topicFinish?.caseInsensitiveCompare("finish") == .orderedSame{
+                cell.topicName.textColor = UIColor(named: "color_2F5597")
+            }else{
+                cell.topicName.textColor = UIColor(named: "color_7698D4")
+            }
         }
+        
         
         cell.topicName.text = topicAction.topicName
         return cell
@@ -148,10 +154,14 @@ extension TopicActionViewController: ExpandableDelegate, ActionViewDelegate{
             
             let cell = topicView.dequeueReusableCell(withIdentifier: "topicItemIdentifier") as! TopicItemTableViewCell
             
-            if topicDetailAction.finished?.caseInsensitiveCompare("finish") == .orderedSame {
-                cell.quizArrow.image = UIImage(named: "ic_quiz_done")
-            }else{
+            if isLibrary {
                 cell.quizArrow.image = UIImage(named: "ic_quiz_arrow")
+            }else{
+                if topicDetailAction.finished?.caseInsensitiveCompare("finish") == .orderedSame {
+                    cell.quizArrow.image = UIImage(named: "ic_quiz_done")
+                }else{
+                    cell.quizArrow.image = UIImage(named: "ic_quiz_arrow")
+                }
             }
             
             cell.quizTitle.text = topicDetailAction.actionName
@@ -197,6 +207,7 @@ extension TopicActionViewController: ExpandableDelegate, ActionViewDelegate{
         let topicAction = topicDetail.topicDetailAction?[indexCell]
         
         let action = ActionViewController()
+        action.isLibrary = self.isLibrary
         action.actionViewDelegate = self
         action.moduleTitle = topicAction?.moduleName as! String
         action.nextModuleName = nextModuleName
@@ -208,36 +219,41 @@ extension TopicActionViewController: ExpandableDelegate, ActionViewDelegate{
         action.nextTopicId = topicAction?.nextTopicID as! String
         action.modalPresentationStyle = .fullScreen
         
-        if topicAction?.topicAccess?.caseInsensitiveCompare("random") == .orderedSame{
+        if isLibrary {
             self.present(action, animated: true, completion: nil)
         }else{
-            if indexRow == 0 && indexCell == 0 {
+            if topicAction?.topicAccess?.caseInsensitiveCompare("random") == .orderedSame{
                 self.present(action, animated: true, completion: nil)
             }else{
-                if indexCell > 0{
-                    let topicActionBefore = topicDetail.topicDetailAction?[indexCell-1]
-                    if topicActionBefore?.finished?.caseInsensitiveCompare("finish") == .orderedSame {
-                        self.present(action, animated: true, completion: nil)
-                    }else{
-                        let alert = UIAlertController(title: "", message: "Please go through the activity in order sequentially", preferredStyle: .alert)
-                        alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
-                        self.present(alert, animated: true)
-                    }
+                if indexRow == 0 && indexCell == 0 {
+                    self.present(action, animated: true, completion: nil)
                 }else{
-                    let topicDetailBefore = topicActionModel.topicDetail[indexRow-1]
-                    let topicCount = topicDetailBefore.topicDetailAction
-                    let topicActionBefore = topicDetailBefore.topicDetailAction?[topicCount!.count-1]
-                    
-                    if topicActionBefore?.finished?.caseInsensitiveCompare("finish") == .orderedSame {
-                        self.present(action, animated: true, completion: nil)
+                    if indexCell > 0{
+                        let topicActionBefore = topicDetail.topicDetailAction?[indexCell-1]
+                        if topicActionBefore?.finished?.caseInsensitiveCompare("finish") == .orderedSame {
+                            self.present(action, animated: true, completion: nil)
+                        }else{
+                            let alert = UIAlertController(title: "", message: "Please go through the activity in order sequentially", preferredStyle: .alert)
+                            alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
+                            self.present(alert, animated: true)
+                        }
                     }else{
-                        let alert = UIAlertController(title: "", message: "Please go through the activity in order sequentially", preferredStyle: .alert)
-                        alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
-                        self.present(alert, animated: true)
+                        let topicDetailBefore = topicActionModel.topicDetail[indexRow-1]
+                        let topicCount = topicDetailBefore.topicDetailAction
+                        let topicActionBefore = topicDetailBefore.topicDetailAction?[topicCount!.count-1]
+                        
+                        if topicActionBefore?.finished?.caseInsensitiveCompare("finish") == .orderedSame {
+                            self.present(action, animated: true, completion: nil)
+                        }else{
+                            let alert = UIAlertController(title: "", message: "Please go through the activity in order sequentially", preferredStyle: .alert)
+                            alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
+                            self.present(alert, animated: true)
+                        }
                     }
                 }
             }
         }
+        
     }
     
     func expandableTableView(_ expandableTableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {

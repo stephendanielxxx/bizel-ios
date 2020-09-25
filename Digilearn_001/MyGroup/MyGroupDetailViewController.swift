@@ -14,11 +14,10 @@ class MyGroupDetailViewController: UIViewController {
     @IBOutlet weak var detailImageGroup: UIImageView!
     @IBOutlet weak var detailTitle: UINavigationItem!
     @IBOutlet weak var detailTitleIsi: UILabel!
-    @IBOutlet weak var isiMember: UIView!
     @IBOutlet weak var isiActive: UIButton!
     @IBOutlet weak var isiExpired: UIButton!
-    @IBOutlet weak var isiActiveTask: UIView!
-    @IBOutlet weak var isiExpiredTask: UIView!
+    @IBOutlet weak var isiMember: UIButton!
+    @IBOutlet weak var contentView: UIView!
     
     var image = ""
     var titlegroup = ""
@@ -36,23 +35,54 @@ class MyGroupDetailViewController: UIViewController {
         detailImageGroup.clipsToBounds = true
         let url = Foundation.URL(string: "https://digicourse.id/digilearn/admin-master/assets.admin_master/group/profile/\(image)")
         detailImageGroup.pin_setImage(from: url)
+        
+        setActiveView()
     }
     
     @IBAction func backButton(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
     }
-    @IBAction func memberButton(_ sender: UIButton) {
+    
+    fileprivate func setMemberView() {
+        isiMember.backgroundColor = UIColor(named: "red_1")
+        isiActive.backgroundColor = UIColor.lightGray
+        isiExpired.backgroundColor = UIColor.lightGray
         
         let member = MemberGroupViewController()
         member.group_id = groupid
-        embed(member,inParent: self,inView: isiMember)
-        
-        
+        embed(member,inParent: self,inView: contentView)
     }
+    
+    fileprivate func setActiveView() {
+        isiActive.backgroundColor = UIColor(named: "red_1")
+        isiMember.backgroundColor = UIColor.lightGray
+        isiExpired.backgroundColor = UIColor.lightGray
+        
+        let active = ActiveTaskViewController()
+        active.group_id = groupid
+        embed(active,inParent: self,inView: contentView)
+    }
+    
+    fileprivate func setExpiredView() {
+           isiExpired.backgroundColor = UIColor(named: "red_1")
+           isiActive.backgroundColor = UIColor.lightGray
+           isiMember.backgroundColor = UIColor.lightGray
+           
+           let expired = ExpiredTaskViewController()
+           expired.group_id = groupid
+           embed(expired,inParent: self,inView: contentView)
+       }
+    
+    @IBAction func memberButton(_ sender: UIButton) {
+        setMemberView()
+    }
+    
     @IBAction func activeButton(_ sender: Any) {
+        setActiveView()
     }
     
     @IBAction func expiredButton(_ sender: Any) {
+        setExpiredView()
     }
     
 }

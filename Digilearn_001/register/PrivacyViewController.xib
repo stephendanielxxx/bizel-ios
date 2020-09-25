@@ -64,7 +64,7 @@ We may also obtain information from third parties and combine that with informat
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                         </textView>
-                        <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="37c-hK-rgt">
+                        <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="37c-hK-rgt">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="44" id="jJU-Mt-R5f"/>

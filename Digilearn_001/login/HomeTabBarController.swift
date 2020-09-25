@@ -34,14 +34,14 @@ class HomeTabBarController: UITabBarController {
         let homeViewController = HomeViewController()
         let taskViewController = MyTaskViewController()
         let library = LibraryViewController()
-        let test2 = MyEventViewController()
+        let profile = ProfileViewController()
         
         homeViewController.tabBarItem = homeItem
         taskViewController.tabBarItem = taskItem
         library.tabBarItem = libraryItem
-        test2.tabBarItem = profileItem
+        profile.tabBarItem = profileItem
         
-        viewControllers = [homeViewController, taskViewController, library, test2]
+        viewControllers = [homeViewController, taskViewController, library, profile]
 
         self.navigationController?.navigationBar.backgroundColor = UIColor.red
 
