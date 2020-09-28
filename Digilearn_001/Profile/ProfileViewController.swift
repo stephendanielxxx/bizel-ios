@@ -140,7 +140,7 @@ class ProfileViewController: BaseSettingViewController, UIImagePickerControllerD
     }
     
     @IBAction func saveAction(_ sender: UIButton) {
-        
+        imagupload()
     }
     
     @IBAction func openImagePicker(_ sender: UIButton) {
@@ -162,6 +162,90 @@ class ProfileViewController: BaseSettingViewController, UIImagePickerControllerD
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             profileImage.image = image
         }
-
+        
+    }
+    
+    func imagupload(){
+        
+        self.showSpinner(onView: self.view)
+        
+        let firstName = firstNameField.text
+        let lastName = lastNameField.text
+        let nickName = nickNameField.text
+        let phone = phoneField.text
+        let uid = readStringPreference(key: DigilearnsKeys.USER_ID)
+        let upload_file = profileImage.image
+        
+        var parameters = [String:AnyObject]()
+        parameters = ["uid":uid,
+                      "phone":phone!,
+                      "firstName":firstName!,
+                      "lastName":lastName!,
+                      "nickname":nickName!,
+                      "image": upload_file!] as [String : AnyObject]
+        
+        let URL = "\(DigilearnParams.ApiUrl)/user/auth/uploadPic"
+        
+        uploadImage(endUrl: URL, imageData: profileImage.image!.jpegData(compressionQuality: 1.0), parameters: parameters)
+    }
+    
+    
+    func uploadImage(endUrl: String, imageData: Data?, parameters: [String : Any], onCompletion: ((_ isSuccess:Bool) -> Void)? = nil, onError: ((Error?) -> Void)? = nil){
+        
+        let headers: HTTPHeaders = [
+            
+            "Content-type": "multipart/form-data"
+        ]
+        
+        AF.upload(multipartFormData: { multipartFormData in
+            
+            for (key, value) in parameters {
+                if let temp = value as? String {
+                    multipartFormData.append(temp.data(using: .utf8)!, withName: key)
+                }
+                if let temp = value as? Int {
+                    multipartFormData.append("\(temp)".data(using: .utf8)!, withName: key)
+                }
+                if let temp = value as? NSArray {
+                    temp.forEach({ element in
+                        let keyObj = key + "[]"
+                        if let string = element as? String {
+                            multipartFormData.append(string.data(using: .utf8)!, withName: keyObj)
+                        } else
+                            if let num = element as? Int {
+                                let value = "\(num)"
+                                multipartFormData.append(value.data(using: .utf8)!, withName: keyObj)
+                        }
+                    })
+                }
+            }
+            
+            if let data = imageData{
+                multipartFormData.append(data, withName: "image", fileName: "\(Date.init().timeIntervalSince1970).jpg", mimeType: "image/jpg")
+            }
+        },
+                  to: endUrl, method: .post , headers: headers)
+            .responseData { response in
+                
+                debugPrint(response)
+                
+                switch response.result {
+                case .success(let data):
+                    self.removeSpinner()
+                    let decoder = JSONDecoder()
+                    do{
+                        let uploadImageModel = try decoder.decode(UploadImageModel.self, from:data)
+                        debugPrint(uploadImageModel)
+                        self.saveStringPreference(value: uploadImageModel.new_image, key: DigilearnsKeys.USER_PHOTO)
+                        self.saveStringPreference(value: self.firstNameField.text!, key: DigilearnsKeys.FIRST_NAME)
+                        self.saveStringPreference(value: self.lastNameField.text!, key: DigilearnsKeys.LAST_NAME)
+                        self.saveStringPreference(value: self.nickNameField.text!, key: DigilearnsKeys.USER_NICK)
+                    }catch{
+                        print(error.localizedDescription)
+                    }
+                case .failure(let error):
+                    self.removeSpinner()
+                }
+        }
     }
 }

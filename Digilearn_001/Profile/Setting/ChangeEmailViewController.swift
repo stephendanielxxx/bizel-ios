@@ -51,6 +51,8 @@ class ChangeEmailViewController: BaseSettingViewController {
                             
                             self.showErrorAlert(title: response.info, errorMessage: response.message)
                             
+                            self.saveStringPreference(value: self.emailField.text!, key: DigilearnsKeys.EMAIL)
+                            
                         }catch{
                             print(error.localizedDescription)
                         }
