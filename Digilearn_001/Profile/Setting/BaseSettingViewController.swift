@@ -61,6 +61,8 @@ class BaseSettingViewController: UIViewController {
 //                            self.resetDefaults()
                             
                             self.dismiss(animated: true, completion: {
+                                let topViewController = UIApplication.shared.keyWindow?.rootViewController
+
                                 let login = LoginViewController()
                                 login.modalPresentationStyle = .fullScreen
                                 self.present(login, animated: true, completion: nil)

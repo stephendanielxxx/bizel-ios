@@ -9,12 +9,14 @@
 import UIKit
 import PopupDialog
 
-class SettingViewController: UIViewController {
+class SettingViewController: BaseSettingViewController {
     
     @IBOutlet weak var changePassword: UILabel!
     @IBOutlet weak var changePhone: UILabel!
     @IBOutlet weak var changeEmail: UILabel!
     @IBOutlet weak var deleteAccount: UILabel!
+    
+    var delegate: SettingDelegate!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,15 +75,25 @@ class SettingViewController: UIViewController {
 
         // Create a custom view controller
         let ratingVC = DeleteDialogViewController(nibName: "DeleteDialogViewController", bundle: nil)
-
+        ratingVC.delegate = self
         // Create the dialog
         let popup = PopupDialog(viewController: ratingVC,
                                 buttonAlignment: .horizontal,
                                 transitionStyle: .bounceDown,
-                                tapGestureDismissal: true,
+                                tapGestureDismissal: false,
                                 panGestureDismissal: false)
         
         present(popup, animated: animated, completion: nil)
     }
     
+}
+
+extension SettingViewController: DeleteDialogDelegate{
+    func onDeleteAccount(){
+        delegate.onLogout()
+    }
+}
+
+protocol SettingDelegate {
+    func onLogout()
 }

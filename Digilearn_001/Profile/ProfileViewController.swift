@@ -95,6 +95,7 @@ class ProfileViewController: BaseSettingViewController, UIImagePickerControllerD
                 break
             case 2:
                 let setting = SettingViewController()
+                setting.delegate = self
                 setting.modalPresentationStyle = .fullScreen
                 self.present(setting, animated: true, completion: nil)
                 break
@@ -248,4 +249,42 @@ class ProfileViewController: BaseSettingViewController, UIImagePickerControllerD
                 }
         }
     }
+}
+
+extension ProfileViewController: SettingDelegate{
+    func onLogout(){
+    
+        deleteAccount()
+        
+    }
+    
+    func deleteAccount(){
+            let user_id = readStringPreference(key: DigilearnsKeys.USER_ID)
+            
+            let URL = "\(DigilearnParams.ApiUrl)/api/apidelete"
+            
+            let parameters: [String:Any] = [
+                "user_id": "\(user_id)"
+            ]
+            
+            self.showSpinner(onView: self.view)
+            AF.request(URL,
+                       method: .post,
+                       parameters: parameters,
+                       encoding: URLEncoding.httpBody).responseData { response in
+                        switch response.result {
+                        case .success(let data):
+                            self.removeSpinner()
+                            let decoder = JSONDecoder()
+                            do{
+                                let response = try decoder.decode(ChangeProfileModel.self, from:data)
+                                self.logout()
+                            }catch{
+                                print(error.localizedDescription)
+                            }
+                        case .failure(let error):
+                            self.removeSpinner()
+                        }
+            }
+        }
 }

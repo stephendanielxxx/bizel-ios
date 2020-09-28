@@ -22,9 +22,9 @@ class ChangeEmailViewController: BaseSettingViewController {
         
         emailField.isEnabled = false
         
-//        let email = readStringPreference(key: DigilearnsKeys.EMAIL)
-//        
-//        emailField.text = email
+        let email = readStringPreference(key: DigilearnsKeys.EMAIL)
+        
+        emailField.text = email
         
     }
     
