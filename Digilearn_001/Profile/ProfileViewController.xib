@@ -10,8 +10,18 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController" customModule="Digilearn_001" customModuleProvider="target">
             <connections>
+                <outlet property="changeImageButton" destination="yz2-P9-tiu" id="G3D-Cz-s5E"/>
+                <outlet property="changeProfile" destination="Iyx-Li-Hxu" id="DSR-fR-x7W"/>
                 <outlet property="discardButton" destination="T1x-lO-NUl" id="zNv-7d-clM"/>
+                <outlet property="emailField" destination="rEF-Es-5Pq" id="xkg-eq-hZg"/>
+                <outlet property="firstNameField" destination="FeI-XK-ZNO" id="PQO-g7-zk9"/>
+                <outlet property="institutionField" destination="AYP-VN-dzg" id="ELg-5L-aum"/>
+                <outlet property="lastNameField" destination="UeK-yI-n0x" id="edp-NO-iYr"/>
+                <outlet property="nickNameField" destination="IIG-rs-SKT" id="nwd-MY-IFY"/>
                 <outlet property="optionMenu" destination="yjL-vd-dQY" id="GN8-u2-k71"/>
+                <outlet property="phoneField" destination="LTD-QD-vyy" id="ZRV-BO-91C"/>
+                <outlet property="positionField" destination="0dn-x0-Vvn" id="CXC-oS-Vji"/>
+                <outlet property="profileImage" destination="SWz-xg-yGD" id="zNE-ed-rRD"/>
                 <outlet property="saveButton" destination="lVf-1X-veU" id="Z3v-Xd-E1R"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -61,7 +71,7 @@
                                         <constraint firstAttribute="height" constant="120" id="DaL-c2-HQk"/>
                                     </constraints>
                                 </imageView>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yz2-P9-tiu" userLabel="Change Profile Image">
+                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yz2-P9-tiu" userLabel="Change Profile Image">
                                     <rect key="frame" x="219" y="127" width="48" height="48"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="48" id="PLo-0l-Uyr"/>
@@ -83,39 +93,49 @@
                                             </constraints>
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <state key="normal" image="square.and.pencil" catalog="system"/>
+                                            <connections>
+                                                <action selector="changeAction:" destination="-1" eventType="touchUpInside" id="9K3-3I-8fK"/>
+                                            </connections>
                                         </button>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FeI-XK-ZNO" customClass="BottomBorderTF" customModule="Digilearn_001" customModuleProvider="target">
                                             <rect key="frame" x="32" y="48" width="276" height="19.5"/>
+                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <textInputTraits key="textInputTraits" textContentType="name"/>
                                         </textField>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UeK-yI-n0x" customClass="BottomBorderTF" customModule="Digilearn_001" customModuleProvider="target">
                                             <rect key="frame" x="32" y="87.5" width="276" height="19.5"/>
+                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <textInputTraits key="textInputTraits" textContentType="family-name"/>
                                         </textField>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nickname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IIG-rs-SKT" customClass="BottomBorderTF" customModule="Digilearn_001" customModuleProvider="target">
                                             <rect key="frame" x="32" y="127" width="276" height="19.5"/>
+                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <textInputTraits key="textInputTraits" textContentType="nickname"/>
                                         </textField>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rEF-Es-5Pq" customClass="BottomBorderTF" customModule="Digilearn_001" customModuleProvider="target">
                                             <rect key="frame" x="32" y="166.5" width="276" height="19.5"/>
+                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <textInputTraits key="textInputTraits" textContentType="email"/>
                                         </textField>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LTD-QD-vyy" customClass="BottomBorderTF" customModule="Digilearn_001" customModuleProvider="target">
                                             <rect key="frame" x="32" y="206" width="276" height="19.5"/>
+                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <textInputTraits key="textInputTraits" textContentType="tel"/>
                                         </textField>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Institution" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AYP-VN-dzg" customClass="BottomBorderTF" customModule="Digilearn_001" customModuleProvider="target">
                                             <rect key="frame" x="32" y="245.5" width="276" height="19.5"/>
+                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <textInputTraits key="textInputTraits" textContentType="email"/>
                                         </textField>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Position" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0dn-x0-Vvn" customClass="BottomBorderTF" customModule="Digilearn_001" customModuleProvider="target">
                                             <rect key="frame" x="32" y="285" width="276" height="19.5"/>
+                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <textInputTraits key="textInputTraits" textContentType="email"/>
                                         </textField>
@@ -172,6 +192,9 @@
                                     <state key="normal" title="Discard">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
+                                    <connections>
+                                        <action selector="discardAction:" destination="-1" eventType="touchUpInside" id="4kR-3Z-Rg3"/>
+                                    </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone number and password can be changed in Settings. Click the icon in the upper right corner" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1BF-Ao-iU9">
                                     <rect key="frame" x="37" y="614" width="340" height="24"/>
