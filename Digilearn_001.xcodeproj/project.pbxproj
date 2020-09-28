@@ -199,6 +199,7 @@
 		B9D74BDA25185E0B00133208 /* MaterialVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D74BD825185E0B00133208 /* MaterialVideoViewController.swift */; };
 		B9D74BDB25185E0B00133208 /* MaterialVideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9D74BD925185E0B00133208 /* MaterialVideoViewController.xib */; };
 		B9DD45782521CD5F0043B210 /* UploadImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DD45772521CD5F0043B210 /* UploadImageModel.swift */; };
+		B9DD457A2521E14F0043B210 /* NotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DD45792521E14F0043B210 /* NotificationModel.swift */; };
 		EFC7323794321BEB69C47BCE /* Pods_Digilearn_001_Digilearn_001UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45CD92DF232C349F46A9A8DF /* Pods_Digilearn_001_Digilearn_001UITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -422,6 +423,7 @@
 		B9D74BD825185E0B00133208 /* MaterialVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialVideoViewController.swift; sourceTree = "<group>"; };
 		B9D74BD925185E0B00133208 /* MaterialVideoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MaterialVideoViewController.xib; sourceTree = "<group>"; };
 		B9DD45772521CD5F0043B210 /* UploadImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImageModel.swift; sourceTree = "<group>"; };
+		B9DD45792521E14F0043B210 /* NotificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationModel.swift; sourceTree = "<group>"; };
 		BC42425861CC009612B8FC89 /* Pods-Digilearn_001Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Digilearn_001Tests.release.xcconfig"; path = "Target Support Files/Pods-Digilearn_001Tests/Pods-Digilearn_001Tests.release.xcconfig"; sourceTree = "<group>"; };
 		C13A768FA10A24EE2EC74FE9 /* Pods_Digilearn_001Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Digilearn_001Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE24FEA383FD1DA25B5B206F /* Pods_Digilearn_001.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Digilearn_001.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -815,6 +817,7 @@
 				B9643A44251C720900438DA3 /* LogoutModel.swift */,
 				B9B39ABE251DF14000AA9CE9 /* ChangeProfileModel.swift */,
 				B9DD45772521CD5F0043B210 /* UploadImageModel.swift */,
+				B9DD45792521E14F0043B210 /* NotificationModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1514,6 +1517,7 @@
 				6A3C9D38251B296A0044A6FB /* AchieveModel.swift in Sources */,
 				B9608B4A251B3CD80082B3A3 /* LibraryTopicsViewController.swift in Sources */,
 				B9696659251487A800A3561E /* EssayModel.swift in Sources */,
+				B9DD457A2521E14F0043B210 /* NotificationModel.swift in Sources */,
 				B9608B39251AF9B10082B3A3 /* LibraryViewController.swift in Sources */,
 				B9673E06250F561D005E6BB8 /* CourseViewController.swift in Sources */,
 				B934AFE024FFA88D000FCEB3 /* LoginViewController.swift in Sources */,
