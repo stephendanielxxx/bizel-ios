@@ -22,8 +22,13 @@ class ChangePasswordViewController: BaseSettingViewController {
     }
     
     @IBAction func saveAction(_ sender: UIButton) {
+        let oldPass = readStringPreference(key: DigilearnsKeys.USER_PASSWORD)
         if oldPassField.text?.count ?? 0 == 0 {
             let alert = UIAlertController(title: "Change Password Failed", message: "Please filled your password", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
+            self.present(alert, animated: true)
+        }else if oldPassField.text != oldPass {
+            let alert = UIAlertController(title: "Change Password Failed", message: "Your old password is INCORRECT. Pelase try again", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
             self.present(alert, animated: true)
         }else if newPassField.text?.count ?? 0 < 6{
@@ -46,12 +51,11 @@ class ChangePasswordViewController: BaseSettingViewController {
     func changePassword(oldPassword: String, newPassword: String){
         let user_id = readStringPreference(key: DigilearnsKeys.USER_ID)
         
-        let URL = "\(DigilearnParams.ApiUrl)/api/apiupdateemail"
+        let URL = "\(DigilearnParams.ApiUrl)/api/apiupdatepassword"
         
         let parameters: [String:Any] = [
             "user_id": "\(user_id)",
-            "old_password": "\(oldPassword)",
-            "new_password": "\(newPassword)"
+            "user_password": "\(newPassword)"
         ]
         self.showSpinner(onView: self.view)
         AF.request(URL,
@@ -66,6 +70,10 @@ class ChangePasswordViewController: BaseSettingViewController {
                             let response = try decoder.decode(ChangeProfileModel.self, from:data)
                             
                             self.showErrorAlert(title: response.info, errorMessage: response.message)
+                            
+                            if response.info.caseInsensitiveCompare("Updated Failed") != .orderedSame {
+                                self.logout()
+                            }
                             
                         }catch{
                             print(error.localizedDescription)
