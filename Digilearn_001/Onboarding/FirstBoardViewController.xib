@@ -22,22 +22,22 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="556"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" image="image_onboarding_1" translatesAutoresizingMaskIntoConstraints="NO" id="pQk-xH-Tp3">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="390.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="390.5" id="sx6-iW-V7S"/>
+                                <constraint firstAttribute="height" constant="300" id="sx6-iW-V7S"/>
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Think" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FKh-YY-K5N">
-                            <rect key="frame" x="174" y="408.5" width="66" height="30"/>
+                            <rect key="frame" x="174" y="318" width="66" height="30"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                             <color key="textColor" name="red_1"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nah-b6-3Rv">
-                            <rect key="frame" x="33" y="450.5" width="348" height="78"/>
+                            <rect key="frame" x="33" y="360" width="348" height="55"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="78" id="mLc-ae-64X"/>
+                                <constraint firstAttribute="height" constant="55" id="7Rq-fc-fY5"/>
                             </constraints>
                             <string key="text">Let's start with a brilliant idea about the work
 that you are going to be doing.</string>

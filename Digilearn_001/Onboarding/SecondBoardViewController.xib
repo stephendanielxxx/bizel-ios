@@ -22,22 +22,22 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="600"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" image="image_onboarding_2" translatesAutoresizingMaskIntoConstraints="NO" id="GVG-83-Wrh">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="390"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="390" id="4Q5-Jh-b1w"/>
+                                <constraint firstAttribute="height" constant="300" id="lnY-pt-YrC"/>
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Collaborate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fHw-wd-YSL">
-                            <rect key="frame" x="138.5" y="425.5" width="137" height="30"/>
+                            <rect key="frame" x="138.5" y="318" width="137" height="30"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                             <color key="textColor" name="red_1"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dSB-6w-dPi">
-                            <rect key="frame" x="33" y="461.5" width="348" height="78"/>
+                            <rect key="frame" x="33" y="360" width="348" height="75"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="78" id="CmL-Cl-EjB"/>
+                                <constraint firstAttribute="height" constant="75" id="q5m-tb-ack"/>
                             </constraints>
                             <string key="text">A brilliant idea is never going to be the best idea
 without sharing it with your teammate. </string>
@@ -48,30 +48,28 @@ without sharing it with your teammate. </string>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
-                        <constraint firstItem="GVG-83-Wrh" firstAttribute="leading" secondItem="k19-Aq-PwO" secondAttribute="leading" id="8M9-bi-U6m"/>
-                        <constraint firstItem="fHw-wd-YSL" firstAttribute="top" secondItem="GVG-83-Wrh" secondAttribute="bottom" constant="35.5" id="9Iz-eK-u1e"/>
-                        <constraint firstItem="dSB-6w-dPi" firstAttribute="leading" secondItem="k19-Aq-PwO" secondAttribute="leading" constant="33" id="Sca-g8-8OJ"/>
-                        <constraint firstAttribute="height" constant="556" id="TLA-FV-zLC"/>
-                        <constraint firstAttribute="trailing" secondItem="GVG-83-Wrh" secondAttribute="trailing" id="YdF-hm-wDt"/>
-                        <constraint firstAttribute="trailing" secondItem="dSB-6w-dPi" secondAttribute="trailing" constant="33" id="h6R-4W-kZA"/>
-                        <constraint firstItem="GVG-83-Wrh" firstAttribute="top" secondItem="k19-Aq-PwO" secondAttribute="top" id="hZL-K2-oFO"/>
-                        <constraint firstItem="dSB-6w-dPi" firstAttribute="top" secondItem="fHw-wd-YSL" secondAttribute="bottom" constant="6" id="nye-ym-s2I"/>
-                        <constraint firstItem="GVG-83-Wrh" firstAttribute="centerX" secondItem="fHw-wd-YSL" secondAttribute="centerX" id="wfF-Sh-7UK"/>
+                        <constraint firstAttribute="trailing" secondItem="GVG-83-Wrh" secondAttribute="trailing" id="BmK-LH-hoE"/>
+                        <constraint firstAttribute="trailing" secondItem="dSB-6w-dPi" secondAttribute="trailing" constant="33" id="GP8-br-DTr"/>
+                        <constraint firstItem="dSB-6w-dPi" firstAttribute="leading" secondItem="k19-Aq-PwO" secondAttribute="leading" constant="33" id="LO3-lg-bED"/>
+                        <constraint firstItem="GVG-83-Wrh" firstAttribute="leading" secondItem="k19-Aq-PwO" secondAttribute="leading" id="Qih-G9-acs"/>
+                        <constraint firstItem="dSB-6w-dPi" firstAttribute="top" secondItem="fHw-wd-YSL" secondAttribute="bottom" constant="12" id="Qzt-8p-Gnk"/>
+                        <constraint firstItem="fHw-wd-YSL" firstAttribute="centerX" secondItem="k19-Aq-PwO" secondAttribute="centerX" id="UdN-Jf-6gK"/>
+                        <constraint firstItem="GVG-83-Wrh" firstAttribute="top" secondItem="k19-Aq-PwO" secondAttribute="top" id="kzl-9V-bqd"/>
+                        <constraint firstItem="fHw-wd-YSL" firstAttribute="top" secondItem="GVG-83-Wrh" secondAttribute="bottom" constant="18" id="qZg-lt-hy5"/>
                     </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="k19-Aq-PwO" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" id="3qH-Jw-GdY"/>
-                <constraint firstItem="k19-Aq-PwO" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" id="5T9-Qs-PEN"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="k19-Aq-PwO" secondAttribute="trailing" id="5ad-MQ-F1k"/>
-                <constraint firstItem="k19-Aq-PwO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="SDm-pW-45B"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="k19-Aq-PwO" secondAttribute="bottom" id="eNO-A5-5av"/>
-                <constraint firstItem="k19-Aq-PwO" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="h6Q-ub-Fak"/>
+                <constraint firstItem="k19-Aq-PwO" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" id="3Qs-10-jB2"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="k19-Aq-PwO" secondAttribute="trailing" id="4xO-3U-yXb"/>
+                <constraint firstItem="k19-Aq-PwO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="cEt-bj-9nQ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="k19-Aq-PwO" secondAttribute="bottom" id="kgS-K9-91I"/>
+                <constraint firstItem="k19-Aq-PwO" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="zaG-us-xG1"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="137.68115942028987" y="143.97321428571428"/>
+            <point key="canvasLocation" x="154" y="146"/>
         </view>
     </objects>
     <resources>
