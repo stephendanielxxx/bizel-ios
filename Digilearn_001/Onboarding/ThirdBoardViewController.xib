@@ -22,19 +22,19 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="556"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" image="image_onboarding_3" translatesAutoresizingMaskIntoConstraints="NO" id="dte-C7-pCq">
-                            <rect key="frame" x="0.0" y="0.0" width="480" height="388.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="447" height="300"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="388.5" id="uo7-qk-jfa"/>
+                                <constraint firstAttribute="height" constant="300" id="uo7-qk-jfa"/>
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Learn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="co7-A2-a0M">
-                            <rect key="frame" x="173.5" y="405.5" width="67" height="30"/>
+                            <rect key="frame" x="157" y="317" width="67" height="30"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                             <color key="textColor" name="red_1"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="m7F-MX-AIp">
-                            <rect key="frame" x="33" y="447.5" width="348" height="78"/>
+                            <rect key="frame" x="33" y="359" width="348" height="78"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="78" id="y0T-8f-eaG"/>
@@ -55,7 +55,7 @@
                         <constraint firstItem="dte-C7-pCq" firstAttribute="top" secondItem="aTX-um-GlL" secondAttribute="top" id="Vu6-fU-UWp"/>
                         <constraint firstItem="m7F-MX-AIp" firstAttribute="leading" secondItem="aTX-um-GlL" secondAttribute="leading" constant="33" id="bTh-LT-Pjf"/>
                         <constraint firstAttribute="height" constant="556" id="hN8-Ab-TzJ"/>
-                        <constraint firstAttribute="trailing" secondItem="dte-C7-pCq" secondAttribute="trailing" constant="-66" id="hch-7k-irW"/>
+                        <constraint firstAttribute="trailing" secondItem="dte-C7-pCq" secondAttribute="trailing" constant="-33" id="hch-7k-irW"/>
                         <constraint firstAttribute="trailing" secondItem="m7F-MX-AIp" secondAttribute="trailing" constant="33" id="lcb-V5-Lg0"/>
                     </constraints>
                 </view>
