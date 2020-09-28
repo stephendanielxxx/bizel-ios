@@ -3,49 +3,53 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="achievementIdentifier" rowHeight="57" id="KGk-i7-Jjw" customClass="AchievementTableViewCell" customModule="Digilearn_001" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="334" height="57"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="achievementIdentifier" rowHeight="61" id="KGk-i7-Jjw" customClass="AchievementTableViewCell" customModule="Digilearn_001" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="409" height="61"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM" customClass="MDCCard">
-                <rect key="frame" x="0.0" y="0.0" width="334" height="57"/>
+                <rect key="frame" x="0.0" y="0.0" width="409" height="61"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZAD-vD-iQM">
-                        <rect key="frame" x="0.0" y="0.0" width="334" height="57"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="77"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group 830" translatesAutoresizingMaskIntoConstraints="NO" id="isz-Va-IdI">
-                                <rect key="frame" x="8" y="10" width="50" height="39"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WhatsApp Image 2020-09-24 at 14.47.47" translatesAutoresizingMaskIntoConstraints="NO" id="isz-Va-IdI">
+                                <rect key="frame" x="12" y="15" width="39" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TitleTask" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qma-WT-DNg">
-                                <rect key="frame" x="64" y="9" width="251" height="19.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="59" y="12" width="181" height="20.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" name="color_ D44444"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Created By:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wam-9i-aGc">
-                                <rect key="frame" x="66" y="34" width="57" height="12"/>
+                                <rect key="frame" x="59" y="40" width="57" height="12"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 233" translatesAutoresizingMaskIntoConstraints="NO" id="pLy-hd-zwg">
-                                <rect key="frame" x="268" y="5" width="56" height="24"/>
+                                <rect key="frame" x="336" y="9" width="70" height="24"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Completed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iMz-jf-MKM">
-                                <rect key="frame" x="263" y="34" width="61" height="14"/>
+                                <rect key="frame" x="342" y="42" width="61" height="14"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="61" id="Gkc-KX-aTH"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Perusahaan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="evF-gZ-h2x">
-                                <rect key="frame" x="126" y="34" width="135" height="12"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Perusahaan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="evF-gZ-h2x">
+                                <rect key="frame" x="124" y="40" width="167" height="12"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -53,35 +57,34 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="iMz-jf-MKM" firstAttribute="leading" secondItem="wam-9i-aGc" secondAttribute="trailing" constant="140" id="20a-Gb-urA"/>
-                            <constraint firstItem="isz-Va-IdI" firstAttribute="leading" secondItem="ZAD-vD-iQM" secondAttribute="leading" constant="8" id="3Mj-Hv-OUI"/>
-                            <constraint firstAttribute="trailing" secondItem="pLy-hd-zwg" secondAttribute="trailing" constant="10" id="BJa-j6-d49"/>
-                            <constraint firstItem="Qma-WT-DNg" firstAttribute="leading" secondItem="isz-Va-IdI" secondAttribute="trailing" constant="6" id="D9q-jd-RDB"/>
-                            <constraint firstItem="evF-gZ-h2x" firstAttribute="leading" secondItem="wam-9i-aGc" secondAttribute="trailing" constant="3" id="EyN-Ws-vmw"/>
-                            <constraint firstItem="wam-9i-aGc" firstAttribute="top" secondItem="Qma-WT-DNg" secondAttribute="bottom" constant="5.5" id="H1r-sF-G2e"/>
-                            <constraint firstAttribute="bottom" secondItem="wam-9i-aGc" secondAttribute="bottom" constant="11" id="HBL-nE-zXb"/>
-                            <constraint firstItem="wam-9i-aGc" firstAttribute="leading" secondItem="isz-Va-IdI" secondAttribute="trailing" constant="8" id="IYk-ne-ecJ"/>
-                            <constraint firstItem="Qma-WT-DNg" firstAttribute="centerY" secondItem="ZAD-vD-iQM" secondAttribute="centerY" constant="-10" id="TFl-0B-wFi"/>
-                            <constraint firstAttribute="trailing" secondItem="isz-Va-IdI" secondAttribute="trailing" constant="276" id="Wi5-Ns-Rfe"/>
-                            <constraint firstAttribute="trailing" secondItem="Qma-WT-DNg" secondAttribute="trailing" constant="19" id="Wub-Vu-xkf"/>
-                            <constraint firstItem="pLy-hd-zwg" firstAttribute="top" secondItem="ZAD-vD-iQM" secondAttribute="top" constant="5" id="XNs-cS-2wx"/>
-                            <constraint firstAttribute="trailing" secondItem="wam-9i-aGc" secondAttribute="trailing" constant="211" id="XqH-St-xOe"/>
-                            <constraint firstAttribute="trailing" secondItem="iMz-jf-MKM" secondAttribute="trailing" constant="10" id="Zsx-0U-PM8"/>
-                            <constraint firstItem="isz-Va-IdI" firstAttribute="top" secondItem="ZAD-vD-iQM" secondAttribute="top" constant="10" id="k6P-dj-9DO"/>
-                            <constraint firstAttribute="bottom" secondItem="isz-Va-IdI" secondAttribute="bottom" constant="8" id="luo-6T-hN9"/>
-                            <constraint firstItem="pLy-hd-zwg" firstAttribute="leading" secondItem="Qma-WT-DNg" secondAttribute="trailing" constant="-47" id="t6U-Pf-E3Y"/>
-                            <constraint firstAttribute="bottom" secondItem="iMz-jf-MKM" secondAttribute="bottom" constant="9" id="vDG-o3-dY8"/>
-                            <constraint firstAttribute="trailing" secondItem="evF-gZ-h2x" secondAttribute="trailing" constant="73" id="xwY-ep-FkL"/>
+                            <constraint firstItem="wam-9i-aGc" firstAttribute="leading" secondItem="isz-Va-IdI" secondAttribute="trailing" constant="8" id="1k8-dw-HK8"/>
+                            <constraint firstItem="evF-gZ-h2x" firstAttribute="leading" secondItem="wam-9i-aGc" secondAttribute="trailing" constant="8" id="EmV-70-3Gf"/>
+                            <constraint firstAttribute="trailing" secondItem="Qma-WT-DNg" secondAttribute="trailing" constant="174" id="KYn-Xq-ypn"/>
+                            <constraint firstItem="pLy-hd-zwg" firstAttribute="top" secondItem="ZAD-vD-iQM" secondAttribute="top" constant="9" id="NKg-jw-x1x"/>
+                            <constraint firstItem="iMz-jf-MKM" firstAttribute="leading" secondItem="evF-gZ-h2x" secondAttribute="trailing" constant="51" id="Rtf-Xa-gzj"/>
+                            <constraint firstItem="pLy-hd-zwg" firstAttribute="leading" secondItem="ZAD-vD-iQM" secondAttribute="leading" constant="336" id="ZDp-BS-ZnM"/>
+                            <constraint firstItem="Qma-WT-DNg" firstAttribute="leading" secondItem="isz-Va-IdI" secondAttribute="trailing" constant="8" id="a9c-i6-tyz"/>
+                            <constraint firstAttribute="width" constant="414" id="cLg-Fm-wp9"/>
+                            <constraint firstItem="wam-9i-aGc" firstAttribute="top" secondItem="Qma-WT-DNg" secondAttribute="bottom" constant="7.5" id="gcK-Xb-7MO"/>
+                            <constraint firstAttribute="height" constant="77" id="iag-uR-0gA"/>
+                            <constraint firstItem="evF-gZ-h2x" firstAttribute="top" secondItem="Qma-WT-DNg" secondAttribute="bottom" constant="7.5" id="mXh-4b-nIs"/>
+                            <constraint firstItem="iMz-jf-MKM" firstAttribute="top" secondItem="pLy-hd-zwg" secondAttribute="bottom" constant="9" id="qyR-Wp-Oqo"/>
+                            <constraint firstAttribute="trailing" secondItem="pLy-hd-zwg" secondAttribute="trailing" constant="8" id="v2B-wl-35v"/>
+                            <constraint firstAttribute="trailing" secondItem="iMz-jf-MKM" secondAttribute="trailing" constant="11" id="vGb-1r-qDv"/>
+                            <constraint firstItem="Qma-WT-DNg" firstAttribute="leading" secondItem="ZAD-vD-iQM" secondAttribute="leading" constant="59" id="zHy-if-Qir"/>
                         </constraints>
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="ZAD-vD-iQM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="69v-iU-Mva"/>
-                    <constraint firstAttribute="bottom" secondItem="evF-gZ-h2x" secondAttribute="bottom" constant="11" id="WFe-x1-r4k"/>
-                    <constraint firstItem="ZAD-vD-iQM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="WHC-IM-PEG"/>
-                    <constraint firstAttribute="trailing" secondItem="ZAD-vD-iQM" secondAttribute="trailing" id="fpI-An-0yf"/>
-                    <constraint firstItem="evF-gZ-h2x" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="34" id="m9c-F0-uxI"/>
-                    <constraint firstAttribute="bottom" secondItem="ZAD-vD-iQM" secondAttribute="bottom" id="mkF-5k-D6F"/>
+                    <constraint firstItem="isz-Va-IdI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="1CO-40-7go"/>
+                    <constraint firstItem="Qma-WT-DNg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="Arm-6i-QS7"/>
+                    <constraint firstAttribute="trailing" secondItem="ZAD-vD-iQM" secondAttribute="trailing" id="Bg4-64-ZVI"/>
+                    <constraint firstAttribute="bottom" secondItem="Qma-WT-DNg" secondAttribute="bottom" constant="28.5" id="CFO-4P-Fs1"/>
+                    <constraint firstItem="isz-Va-IdI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="bKQ-vu-FH6"/>
+                    <constraint firstAttribute="bottom" secondItem="ZAD-vD-iQM" secondAttribute="bottom" id="cjM-eg-3YX"/>
+                    <constraint firstItem="ZAD-vD-iQM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="dPR-G3-A2g"/>
+                    <constraint firstAttribute="bottom" secondItem="isz-Va-IdI" secondAttribute="bottom" constant="6" id="kBr-8S-Z5y"/>
+                    <constraint firstItem="ZAD-vD-iQM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="qyC-jP-jZq"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -89,11 +92,14 @@
                 <outlet property="namaInstitut" destination="evF-gZ-h2x" id="EvC-JH-umi"/>
                 <outlet property="titleTask" destination="Qma-WT-DNg" id="EcQ-6J-gNP"/>
             </connections>
-            <point key="canvasLocation" x="130.43478260869566" y="95.424107142857139"/>
+            <point key="canvasLocation" x="192.0289855072464" y="96.09375"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="Group 830" width="22.5" height="22"/>
         <image name="Rectangle 233" width="24" height="24"/>
+        <image name="WhatsApp Image 2020-09-24 at 14.47.47" width="39" height="40"/>
+        <namedColor name="color_ D44444">
+            <color red="0.83099997043609619" green="0.2669999897480011" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

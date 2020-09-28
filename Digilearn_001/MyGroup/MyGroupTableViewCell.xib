@@ -18,6 +18,7 @@
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2zU-9Z-gzf" customClass="MDCCard">
                         <rect key="frame" x="0.0" y="0.0" width="338" height="89"/>
+
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WhatsApp Image 2020-09-10 at 16.09.18" translatesAutoresizingMaskIntoConstraints="NO" id="xQT-qd-3jt">
                                 <rect key="frame" x="22" y="1.5" width="37" height="86"/>
@@ -53,15 +54,18 @@
                             <constraint firstItem="gOd-yH-QaZ" firstAttribute="leading" secondItem="xQT-qd-3jt" secondAttribute="trailing" constant="11" id="hnI-Ag-G2A"/>
                             <constraint firstItem="gOd-yH-QaZ" firstAttribute="centerY" secondItem="2zU-9Z-gzf" secondAttribute="centerY" id="ixK-GM-IHT"/>
                             <constraint firstAttribute="trailing" secondItem="vG3-bx-KiO" secondAttribute="trailing" constant="162.5" id="qC8-vs-hKO"/>
+
                         </constraints>
                     </view>
                 </subviews>
                 <constraints>
+
                     <constraint firstItem="2zU-9Z-gzf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="0oS-2v-zoE"/>
                     <constraint firstItem="2zU-9Z-gzf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="CCG-lJ-aMT"/>
                     <constraint firstAttribute="bottom" secondItem="2zU-9Z-gzf" secondAttribute="bottom" id="HGx-Dc-rKa"/>
                     <constraint firstAttribute="trailing" secondItem="2zU-9Z-gzf" secondAttribute="trailing" id="esr-AD-kyb"/>
                     <constraint firstItem="2zU-9Z-gzf" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" id="vMJ-3V-S0P"/>
+
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

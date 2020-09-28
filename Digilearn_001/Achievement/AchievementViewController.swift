@@ -11,6 +11,7 @@ import Alamofire
 import Reqres
 import PINRemoteImage
 
+
 class AchievementViewController: UIViewController {
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var profileImage: UIImageView!
@@ -19,7 +20,7 @@ class AchievementViewController: UIViewController {
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var achievementView: UITableView!
     
-    var achievementModel: AchievementModel!
+    var achieveModel: AchieveModel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,9 +31,27 @@ class AchievementViewController: UIViewController {
         achievementView.register(nib, forCellReuseIdentifier: "achievementIdentifier")
         
         let user_id = readStringPreference(key: DigilearnsKeys.USER_ID)
+        let firstname = readStringPreference(key: DigilearnsKeys.FIRST_NAME)
+        let lastname = readStringPreference(key: DigilearnsKeys.LAST_NAME)
+        let username = "\(firstname) \(lastname)"
+        let institut = readStringPreference(key: DigilearnsKeys.INSTITUT_NAME)
+        let position = readStringPreference(key: DigilearnsKeys.USER_POSITION)
+        let photo = readStringPreference(key: DigilearnsKeys.USER_PHOTO)
+        
+        usernameLabel.text = username
+        institutLabel.text = institut
+        statusLabel.text = position
+        profileImage.pin_updateWithProgress = true
+        profileImage.contentMode = .scaleToFill
+        profileImage.clipsToBounds = true
+        let url = Foundation.URL(string: "https://digicourse.id/digilearn/member/assets.digilearn/profile/\(photo)")
+        profileImage.pin_setImage(from: url)
+        debugPrint(url)
+        
+        
         let URL = "\(DigilearnParams.ApiUrl)/api/apicourseach"
         let parameters: [String:Any] = [
-            "uid": "\(user_id)"
+            "user_id": "\(user_id)"
         ]
         AF.request(URL,
                    method: .post,
@@ -43,7 +62,8 @@ class AchievementViewController: UIViewController {
                         self.removeSpinner()
                         let decoder = JSONDecoder()
                         do{
-                            self.achievementModel = try decoder.decode(AchievementModel.self, from:data)
+                            self.achieveModel = try decoder.decode(AchieveModel.self, from:data)
+                            debugPrint(self.achieveModel)
                             self.achievementView.reloadData()
                         }catch{
                             print(error.localizedDescription)
@@ -63,7 +83,7 @@ class AchievementViewController: UIViewController {
 extension AchievementViewController: UITableViewDelegate, UITableViewDataSource
 {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return achievementModel?.achievement.count ?? 0
+        return achieveModel?.library.count ?? 0
         
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -72,9 +92,9 @@ extension AchievementViewController: UITableViewDelegate, UITableViewDataSource
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = achievementView.dequeueReusableCell(withIdentifier: "achievementIdentifier") as! AchievementTableViewCell
-        let achievement: Achievement = (achievementModel?.achievement[indexPath.row])!
-        cell.titleTask.text = achievement.courseName
-        
+        let achieve: Library = (achieveModel?.library[indexPath.row])!
+        cell.titleTask.text = achieve.courseName
+        cell.namaInstitut.text = achieve.institutName
         
         return cell
     }
