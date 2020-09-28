@@ -10,6 +10,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AchievementDetailViewController" customModule="Digilearn_001" customModuleProvider="target">
             <connections>
+                <outlet property="detailView" destination="u9W-cp-auA" id="8FM-Lr-S7D"/>
+                <outlet property="detailsButton" destination="EFe-XB-8IZ" id="Isg-mR-itf"/>
+                <outlet property="imageAchieve" destination="mGe-ec-5JD" id="kmj-Fj-Htr"/>
+                <outlet property="institutName" destination="YUx-nK-OuR" id="qX8-kW-tux"/>
+                <outlet property="titleAchieve" destination="M2n-dC-XyR" id="X10-WA-AbQ"/>
+                <outlet property="topicsButton" destination="bS1-3B-aah" id="kjS-BC-jiZ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -33,6 +39,9 @@
                                 <navigationItem title="Bizel" id="fa1-7X-iIa">
                                     <barButtonItem key="leftBarButtonItem" image="arrow.left" catalog="system" id="c4Q-Jq-7ug">
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="backButton:" destination="-1" id="3w7-EF-f7X"/>
+                                        </connections>
                                     </barButtonItem>
                                 </navigationItem>
                             </items>
@@ -47,13 +56,13 @@
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JUDUL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M2n-dC-XyR">
                             <rect key="frame" x="75" y="87" width="287" height="19.5"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nama Institut" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YUx-nK-OuR">
-                            <rect key="frame" x="167.5" y="114" width="102" height="21"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <rect key="frame" x="181" y="114" width="75.5" height="14.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -64,7 +73,7 @@
                                 <constraint firstAttribute="height" constant="40" id="n1M-dE-3EJ"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                            <state key="normal" title="TOPICS">
+                            <state key="normal" title="MODULES">
                                 <color key="titleColor" name="color_ B63532"/>
                             </state>
                         </button>
@@ -78,29 +87,37 @@
                             <state key="normal" title="DETAILS">
                                 <color key="titleColor" name="color_ B63532"/>
                             </state>
+                            <connections>
+                                <action selector="detailButton:" destination="-1" eventType="touchUpInside" id="QUt-9u-8nW"/>
+                            </connections>
                         </button>
-                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gzc-IG-29R">
-                            <rect key="frame" x="0.0" y="275" width="414" height="558"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        </tableView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u9W-cp-auA">
+                            <rect key="frame" x="0.0" y="379" width="414" height="300"/>
+                            <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="300" id="9Ze-kp-292"/>
+                            </constraints>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
-                        <constraint firstAttribute="bottom" secondItem="gzc-IG-29R" secondAttribute="bottom" constant="-15" id="0iE-NX-one"/>
                         <constraint firstAttribute="trailing" secondItem="mGe-ec-5JD" secondAttribute="trailing" id="1ON-nb-uxw"/>
                         <constraint firstItem="bS1-3B-aah" firstAttribute="bottom" secondItem="EFe-XB-8IZ" secondAttribute="bottom" id="2vN-zl-Oew"/>
                         <constraint firstItem="mGe-ec-5JD" firstAttribute="top" secondItem="Fyd-JR-Ozu" secondAttribute="top" constant="44" id="70f-fI-gAB"/>
-                        <constraint firstAttribute="trailing" secondItem="gzc-IG-29R" secondAttribute="trailing" id="H4C-u0-nFU"/>
-                        <constraint firstItem="gzc-IG-29R" firstAttribute="trailing" secondItem="EFe-XB-8IZ" secondAttribute="trailing" id="MGy-Zj-szs"/>
-                        <constraint firstItem="gzc-IG-29R" firstAttribute="leading" secondItem="bS1-3B-aah" secondAttribute="leading" id="Yc9-DG-Ain"/>
+                        <constraint firstItem="u9W-cp-auA" firstAttribute="leading" secondItem="6Ec-Me-697" secondAttribute="leading" id="AfG-5t-59f"/>
+                        <constraint firstAttribute="trailing" secondItem="u9W-cp-auA" secondAttribute="trailing" id="S2d-sQ-h9Y"/>
                         <constraint firstItem="YUx-nK-OuR" firstAttribute="centerX" secondItem="M2n-dC-XyR" secondAttribute="centerX" id="aSm-ny-MQf"/>
+                        <constraint firstItem="bS1-3B-aah" firstAttribute="leading" secondItem="mGe-ec-5JD" secondAttribute="leading" id="cc2-HI-sBl"/>
                         <constraint firstAttribute="trailing" secondItem="M2n-dC-XyR" secondAttribute="trailing" constant="52" id="dx3-QZ-ubT"/>
-                        <constraint firstItem="gzc-IG-29R" firstAttribute="leading" secondItem="6Ec-Me-697" secondAttribute="leading" id="ing-R4-0zL"/>
+                        <constraint firstAttribute="trailing" secondItem="u9W-cp-auA" secondAttribute="trailing" id="dx5-0h-552"/>
+                        <constraint firstAttribute="bottom" secondItem="u9W-cp-auA" secondAttribute="bottom" constant="139" id="laL-ni-CWT"/>
+                        <constraint firstItem="EFe-XB-8IZ" firstAttribute="leading" secondItem="bS1-3B-aah" secondAttribute="trailing" id="lqL-6v-VbO"/>
                         <constraint firstItem="YUx-nK-OuR" firstAttribute="top" secondItem="M2n-dC-XyR" secondAttribute="bottom" constant="7.5" id="ohO-cZ-GPM"/>
                         <constraint firstItem="M2n-dC-XyR" firstAttribute="top" secondItem="6Ec-Me-697" secondAttribute="top" constant="87" id="pZm-tA-kwE"/>
                         <constraint firstItem="M2n-dC-XyR" firstAttribute="leading" secondItem="6Ec-Me-697" secondAttribute="leading" constant="75" id="tEh-TO-mig"/>
-                        <constraint firstItem="gzc-IG-29R" firstAttribute="top" secondItem="mGe-ec-5JD" secondAttribute="bottom" constant="44" id="tKB-fi-VXs"/>
                         <constraint firstItem="mGe-ec-5JD" firstAttribute="leading" secondItem="6Ec-Me-697" secondAttribute="leading" id="uDy-oW-wbU"/>
+                        <constraint firstItem="u9W-cp-auA" firstAttribute="leading" secondItem="6Ec-Me-697" secondAttribute="leading" id="vlW-LJ-07V"/>
+                        <constraint firstAttribute="bottom" secondItem="u9W-cp-auA" secondAttribute="bottom" constant="139" id="weF-39-osI"/>
                         <constraint firstItem="bS1-3B-aah" firstAttribute="top" secondItem="mGe-ec-5JD" secondAttribute="bottom" constant="2" id="ylP-KZ-vKE"/>
                     </constraints>
                 </view>

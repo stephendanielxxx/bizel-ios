@@ -34,6 +34,9 @@
                                 <navigationItem title="FAQ" id="F8h-xI-tH1">
                                     <barButtonItem key="leftBarButtonItem" image="arrow.left" catalog="system" id="ms2-L1-1YI">
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="backButton:" destination="-1" id="agY-ah-Q9e"/>
+                                        </connections>
                                     </barButtonItem>
                                 </navigationItem>
                             </items>

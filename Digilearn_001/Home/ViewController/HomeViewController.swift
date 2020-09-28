@@ -90,6 +90,7 @@ extension HomeViewController: UITableViewDataSource {
              cell.groupIcon.addTarget(self, action: #selector(HomeViewController.openGroup), for: .touchUpInside)
             
             cell.achivementIcon.addTarget(self, action: #selector(HomeViewController.openAchievement), for: .touchUpInside)
+            cell.faqIcon.addTarget(self, action: #selector(HomeViewController.openFaq), for: .touchUpInside)
             
             return cell
         } else {
@@ -127,6 +128,14 @@ extension HomeViewController: UITableViewDataSource {
     
         self.present(group, animated: true, completion: nil)
     }
+    @objc func openFaq(_ sender: UIButton?) {
+        let group = FaqViewController()
+
+        group.modalPresentationStyle = .fullScreen
+    
+        self.present(group, animated: true, completion: nil)
+    }
+
 }
 
 
