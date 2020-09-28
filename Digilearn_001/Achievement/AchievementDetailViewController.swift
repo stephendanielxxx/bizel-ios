@@ -12,7 +12,9 @@ class AchievementDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+  
+        
+        //cobaaaaa
         // Do any additional setup after loading the view.
     }
 
