@@ -10,7 +10,7 @@ import UIKit
 import DropDown
 import Alamofire
 
-class ProfileViewController: BaseSettingViewController {
+class ProfileViewController: BaseSettingViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var discardButton: UIButton!
     @IBOutlet weak var saveButton: UIButton!
@@ -26,6 +26,8 @@ class ProfileViewController: BaseSettingViewController {
     @IBOutlet weak var phoneField: BottomBorderTF!
     @IBOutlet weak var institutionField: BottomBorderTF!
     @IBOutlet weak var positionField: BottomBorderTF!
+    
+    var imagePicker = UIImagePickerController()
     
     var dropDown: DropDown!
     override func viewDidLoad() {
@@ -63,11 +65,11 @@ class ProfileViewController: BaseSettingViewController {
         institutionField.isEnabled = false
         positionField.isEnabled = false
         
-       let url = Foundation.URL(string: "https://digicourse.id/digilearn/member/assets.digilearn/profile/\(image)")
+        let url = Foundation.URL(string: "https://digicourse.id/digilearn/member/assets.digilearn/profile/\(image)")
         
         profileImage.pin_setImage(from: url)
         
-        profileImage.makeRounded()
+        profileImage.makeRoundedWithBorder()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -141,8 +143,25 @@ class ProfileViewController: BaseSettingViewController {
         
     }
     
+    @IBAction func openImagePicker(_ sender: UIButton) {
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary){
+            imagePicker.delegate = self
+            imagePicker.sourceType = .photoLibrary
+            imagePicker.allowsEditing = false
+            
+            present(imagePicker, animated: true, completion: nil)
+        }
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden( true, animated: animated )
     }
-     
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        picker.dismiss(animated: true, completion: nil)
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            profileImage.image = image
+        }
+
+    }
 }

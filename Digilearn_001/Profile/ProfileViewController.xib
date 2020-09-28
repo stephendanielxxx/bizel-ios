@@ -72,7 +72,8 @@
                                     </constraints>
                                 </imageView>
                                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yz2-P9-tiu" userLabel="Change Profile Image">
-                                    <rect key="frame" x="219" y="127" width="48" height="48"/>
+                                    <rect key="frame" x="233" y="127" width="48" height="48"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="48" id="PLo-0l-Uyr"/>
                                         <constraint firstAttribute="height" constant="48" id="elZ-0w-yJ5"/>
@@ -81,6 +82,9 @@
                                     <state key="normal" image="camera.circle.fill" catalog="system">
                                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                                     </state>
+                                    <connections>
+                                        <action selector="openImagePicker:" destination="-1" eventType="touchUpInside" id="7QM-rZ-E7C"/>
+                                    </connections>
                                 </button>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cx1-LI-TnO" customClass="MDCCard">
                                     <rect key="frame" x="37" y="197" width="340" height="324.5"/>
@@ -222,7 +226,7 @@
                                 <constraint firstAttribute="trailing" secondItem="1BF-Ao-iU9" secondAttribute="trailing" constant="37" id="spI-LQ-m7B"/>
                                 <constraint firstItem="yz2-P9-tiu" firstAttribute="top" secondItem="SWz-xg-yGD" secondAttribute="bottom" constant="-48" id="tXh-5f-NcC"/>
                                 <constraint firstAttribute="height" constant="774" id="vd8-uP-ZjE"/>
-                                <constraint firstItem="yz2-P9-tiu" firstAttribute="leading" secondItem="SWz-xg-yGD" secondAttribute="trailing" constant="-48" id="xBz-tZ-iTy"/>
+                                <constraint firstItem="yz2-P9-tiu" firstAttribute="leading" secondItem="SWz-xg-yGD" secondAttribute="trailing" constant="-34" id="xBz-tZ-iTy"/>
                             </constraints>
                         </view>
                     </subviews>
