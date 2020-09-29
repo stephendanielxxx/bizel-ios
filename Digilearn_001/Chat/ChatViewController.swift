@@ -53,7 +53,7 @@ class ChatViewController: UIViewController {
             do {
                 let model = try FirebaseDecoder().decode(ChatModel.self, from: value)
                 self.chatList.append(model)
-
+                
             } catch let error {
                 debugPrint(error)
             }
@@ -67,15 +67,22 @@ class ChatViewController: UIViewController {
     
     @objc func sendMessage(gesture: UIGestureRecognizer) {
         if messageField.text.count > 0 {
+            let today = Date()
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "dd/MM/yyyy"
+            let timeFormatter = DateFormatter()
+            timeFormatter.dateFormat = "HH:mm"
+            let waktuFormatter = DateFormatter()
+            waktuFormatter.dateFormat = "dd.MM.yyyy HH:mm:ss"
             let email = readStringPreference(key: DigilearnsKeys.EMAIL)
             let message = messageField.text!
             let namaYangDibales = ""
             let name = readStringPreference(key: DigilearnsKeys.USER_NICK)
             let pesanYangDibales = ""
             let read = "nope"
-            let waktuDetik = ""
-            let waktuHari = "29/09/2020"
-            let waktuJamMenit = "15:25"
+            let waktuDetik = waktuFormatter.string(from: today)
+            let waktuHari = dateFormatter.string(from: today)
+            let waktuJamMenit = timeFormatter.string(from: today)
             saveToFirebase(email: email, message: message, namayangdibales: namaYangDibales, name: name, pesanyangdibales: pesanYangDibales, read: read, waktudetik: waktuDetik,
                            waktuhari: waktuHari, waktujammenit: waktuJamMenit)
             messageField.text = ""
@@ -86,9 +93,9 @@ class ChatViewController: UIViewController {
                         waktudetik: String, waktuhari: String, waktujammenit: String) {
         let dict = ["email":email, "message": message, "namayangdibales":namayangdibales, "name":name, "pesanyangdibales":pesanyangdibales,
                     "read":read, "waktudetik":waktudetik, "waktuhari":waktuhari, "waktujammenit":waktujammenit]
-
-       let thisUserRef = ref.childByAutoId()
-       thisUserRef.setValue(dict)
+        
+        let thisUserRef = ref.childByAutoId()
+        thisUserRef.setValue(dict)
     }
     
     @IBAction func backAction(_ sender: UIBarButtonItem) {
