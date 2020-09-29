@@ -8,11 +8,14 @@
 
 import UIKit
 import Alamofire
+import FirebaseDatabase
+import CodableFirebase
 
 class GroupChatViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     var groupModel: GroupModel!
+    var ref: DatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +28,11 @@ class GroupChatViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
+        loadGroup()
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         loadGroup()
     }
     
@@ -74,7 +82,27 @@ extension GroupChatViewController: UITableViewDelegate, UITableViewDataSource{
         let group: ListGroup = groupModel.listGroup[indexPath.row]
         
         cell.groupNameLabel.text = group.groupName
-        cell.lastChatLabel.text = "Ini Chat"
+        
+        var model: LastChatModel?
+        ref = Database.database().reference().child(group.groupID)
+        
+        self.ref.queryLimited(toLast: 1).observeSingleEvent(of: .childAdded, with: { (snapshot) in
+//            if let postDict = snapshot.value as? [String : Any] {
+//                let email = postDict["email"] as? String ?? ""
+//                debugPrint(email)
+//            }
+           
+//            debugPrint(snapshot.value)
+            guard let value = snapshot.value else { return }
+            do {
+                model = try FirebaseDecoder().decode(LastChatModel.self, from: value)
+                cell.lastChatLabel.text = model?.message
+            } catch let error {
+                debugPrint(error)
+            }
+        })
+        
+        
         
         return cell
     }
