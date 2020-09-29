@@ -9,16 +9,19 @@
 import UIKit
 
 class FaqTableViewCell: UITableViewCell {
-
+    @IBOutlet weak var questionFaq: UILabel!
+    @IBOutlet weak var answerFaq: UITextView!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+      
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
+        
     }
     
 }

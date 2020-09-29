@@ -10,6 +10,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FaqViewController" customModule="Digilearn_001" customModuleProvider="target">
             <connections>
+                <outlet property="accountButton" destination="Yja-7T-ihU" id="oKR-LA-x18"/>
+                <outlet property="faqView" destination="vLb-cZ-Xcl" id="J6I-g9-CZj"/>
+                <outlet property="loginButton" destination="6Dr-k4-qFb" id="RnP-zK-8uz"/>
+                <outlet property="registerButton" destination="nPe-PG-LEp" id="XhH-v4-hah"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -35,7 +39,7 @@
                                     <barButtonItem key="leftBarButtonItem" image="arrow.left" catalog="system" id="ms2-L1-1YI">
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
-                                            <action selector="backButton:" destination="-1" id="agY-ah-Q9e"/>
+                                            <action selector="backButton:" destination="-1" id="yNM-Yi-ca4"/>
                                         </connections>
                                     </barButtonItem>
                                 </navigationItem>
@@ -48,7 +52,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vLb-cZ-Xcl">
-                            <rect key="frame" x="0.0" y="107" width="419" height="719"/>
+                            <rect key="frame" x="8" y="107" width="392" height="719"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         </tableView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nPe-PG-LEp">
@@ -85,13 +89,14 @@
                         <constraint firstItem="vLb-cZ-Xcl" firstAttribute="top" secondItem="Yja-7T-ihU" secondAttribute="bottom" constant="13" id="9zF-CA-IFx"/>
                         <constraint firstAttribute="trailing" secondItem="Yja-7T-ihU" secondAttribute="trailing" constant="145" id="CBK-OZ-vin"/>
                         <constraint firstItem="6Dr-k4-qFb" firstAttribute="leading" secondItem="nPe-PG-LEp" secondAttribute="trailing" constant="17" id="EYq-6f-vvi"/>
-                        <constraint firstAttribute="trailing" secondItem="vLb-cZ-Xcl" secondAttribute="trailing" constant="-5" id="Oq1-k8-Xse"/>
+                        <constraint firstAttribute="trailing" secondItem="vLb-cZ-Xcl" secondAttribute="trailing" constant="14" id="Oq1-k8-Xse"/>
                         <constraint firstItem="6Dr-k4-qFb" firstAttribute="baseline" secondItem="nPe-PG-LEp" secondAttribute="baseline" id="XAL-sH-Whz"/>
-                        <constraint firstItem="vLb-cZ-Xcl" firstAttribute="leading" secondItem="Naf-os-ODe" secondAttribute="leading" id="Xbh-XF-ft0"/>
                         <constraint firstAttribute="trailing" secondItem="Rpm-yO-PH7" secondAttribute="trailing" constant="317" id="cab-r0-yW2"/>
+                        <constraint firstItem="vLb-cZ-Xcl" firstAttribute="top" secondItem="nPe-PG-LEp" secondAttribute="bottom" constant="12" id="fPz-yF-Cv1"/>
                         <constraint firstAttribute="bottom" secondItem="vLb-cZ-Xcl" secondAttribute="bottom" constant="-8" id="gps-y0-OyS"/>
                         <constraint firstItem="vLb-cZ-Xcl" firstAttribute="top" secondItem="6Dr-k4-qFb" secondAttribute="bottom" constant="12" id="j3s-BW-06k"/>
                         <constraint firstItem="Rpm-yO-PH7" firstAttribute="leading" secondItem="z6y-Cu-Cfe" secondAttribute="leading" constant="19" id="mJo-mN-HNz"/>
+                        <constraint firstItem="vLb-cZ-Xcl" firstAttribute="leading" secondItem="z6y-Cu-Cfe" secondAttribute="leading" constant="8" id="mij-lq-orE"/>
                         <constraint firstItem="6Dr-k4-qFb" firstAttribute="leading" secondItem="z6y-Cu-Cfe" secondAttribute="leading" constant="114" id="ube-7P-qfu"/>
                         <constraint firstItem="nPe-PG-LEp" firstAttribute="leading" secondItem="z6y-Cu-Cfe" secondAttribute="leading" constant="25" id="wh9-yM-oy4"/>
                         <constraint firstItem="nPe-PG-LEp" firstAttribute="top" secondItem="Rpm-yO-PH7" secondAttribute="bottom" constant="4" id="yto-MB-xfK"/>

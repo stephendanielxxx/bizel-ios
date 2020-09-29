@@ -45,5 +45,7 @@ class AchievementDetailViewController: UIViewController {
                  embed(detail,inParent: self,inView: contentView)
         
     }
+    
+    
 }
 

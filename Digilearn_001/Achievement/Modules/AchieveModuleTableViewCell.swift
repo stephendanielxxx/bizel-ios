@@ -11,6 +11,7 @@ import MaterialComponents.MDCCard
 
 class AchieveModuleTableViewCell: UITableViewCell {
     @IBOutlet weak var isiModule: MDCCard!
+    @IBOutlet weak var courseName: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
