@@ -1,19 +1,18 @@
 //
-//  GroupChatTableViewCell.swift
+//  ChatLeftTableViewCell.swift
 //  Digilearn_001
 //
-//  Created by Teke on 28/09/20.
+//  Created by Teke on 29/09/20.
 //  Copyright © 2020 Digimaster. All rights reserved.
 //
 
 import UIKit
-import MaterialComponents.MaterialCards
 
-class GroupChatTableViewCell: UITableViewCell {
-
-    @IBOutlet weak var groupNameLabel: UILabel!
-    @IBOutlet weak var lastChatLabel: UILabel!
-    @IBOutlet weak var cardView: MDCCard!
+class ChatLeftTableViewCell: UITableViewCell {
+    @IBOutlet weak var senderNameField: UILabel!
+    @IBOutlet weak var messageField: UITextView!
+    @IBOutlet weak var dateField: UILabel!
+    @IBOutlet weak var hourField: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

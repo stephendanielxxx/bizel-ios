@@ -87,12 +87,6 @@ extension GroupChatViewController: UITableViewDelegate, UITableViewDataSource{
         ref = Database.database().reference().child(group.groupID)
         
         self.ref.queryLimited(toLast: 1).observeSingleEvent(of: .childAdded, with: { (snapshot) in
-//            if let postDict = snapshot.value as? [String : Any] {
-//                let email = postDict["email"] as? String ?? ""
-//                debugPrint(email)
-//            }
-           
-//            debugPrint(snapshot.value)
             guard let value = snapshot.value else { return }
             do {
                 model = try FirebaseDecoder().decode(LastChatModel.self, from: value)
@@ -102,8 +96,19 @@ extension GroupChatViewController: UITableViewDelegate, UITableViewDataSource{
             }
         })
         
-        
+        cell.cardView.tag = indexPath.row
+        cell.cardView.addTarget(self,action: #selector(GroupChatViewController.openDetail(_:)),for: .touchUpInside)
         
         return cell
+    }
+    
+    @objc func openDetail(_ sender: UIButton?) {
+        let chat = ChatViewController()
+        chat.modalPresentationStyle = .fullScreen
+        let listgroup: ListGroup = groupModel.listGroup[sender!.tag]
+        chat.groupName = listgroup.groupName
+        chat.groupId = listgroup.groupID
+        self.present(chat, animated: true, completion: nil)
+        
     }
 }

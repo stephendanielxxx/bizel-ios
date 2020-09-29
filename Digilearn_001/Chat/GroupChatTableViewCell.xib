@@ -53,6 +53,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="cardView" destination="3DD-ia-LCY" id="45A-vh-uhF"/>
                 <outlet property="groupNameLabel" destination="EmH-Zc-Nwf" id="NF4-Vh-tAg"/>
                 <outlet property="lastChatLabel" destination="xoe-nb-lPM" id="bm7-1p-gcZ"/>
             </connections>
