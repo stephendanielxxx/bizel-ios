@@ -20,6 +20,7 @@ class ChatViewController: UIViewController {
     @IBOutlet weak var messageField: UITextView!
     @IBOutlet weak var messageView: UITableView!
     @IBOutlet weak var backgroundView: UIView!
+    @IBOutlet weak var sendMessageButton: UIImageView!
     
     @IBOutlet weak var navbar: UINavigationItem!
     override func viewDidLoad() {
@@ -43,18 +44,51 @@ class ChatViewController: UIViewController {
         messageView.delegate = self
         messageView.dataSource = self
         
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(ChatViewController.sendMessage(gesture:)))
+        sendMessageButton.addGestureRecognizer(tapGesture)
+        sendMessageButton.isUserInteractionEnabled = true
+        
         self.ref.observe(.childAdded, with: { (snapshot) in
             guard let value = snapshot.value else { return }
             do {
                 let model = try FirebaseDecoder().decode(ChatModel.self, from: value)
                 self.chatList.append(model)
+
             } catch let error {
                 debugPrint(error)
             }
             
             self.messageView.reloadData()
+            let indexPath = NSIndexPath(item: self.chatList.count - 1, section: 0)
+            self.messageView.scrollToRow(at: indexPath as IndexPath, at: UITableView.ScrollPosition.bottom, animated: true)
             
         })
+    }
+    
+    @objc func sendMessage(gesture: UIGestureRecognizer) {
+        if messageField.text.count > 0 {
+            let email = readStringPreference(key: DigilearnsKeys.EMAIL)
+            let message = messageField.text!
+            let namaYangDibales = ""
+            let name = readStringPreference(key: DigilearnsKeys.USER_NICK)
+            let pesanYangDibales = ""
+            let read = "nope"
+            let waktuDetik = ""
+            let waktuHari = "29/09/2020"
+            let waktuJamMenit = "15:25"
+            saveToFirebase(email: email, message: message, namayangdibales: namaYangDibales, name: name, pesanyangdibales: pesanYangDibales, read: read, waktudetik: waktuDetik,
+                           waktuhari: waktuHari, waktujammenit: waktuJamMenit)
+            messageField.text = ""
+        }
+    }
+    
+    func saveToFirebase(email: String, message: String, namayangdibales: String, name: String, pesanyangdibales: String, read: String,
+                        waktudetik: String, waktuhari: String, waktujammenit: String) {
+        let dict = ["email":email, "message": message, "namayangdibales":namayangdibales, "name":name, "pesanyangdibales":pesanyangdibales,
+                    "read":read, "waktudetik":waktudetik, "waktuhari":waktuhari, "waktujammenit":waktujammenit]
+
+       let thisUserRef = ref.childByAutoId()
+       thisUserRef.setValue(dict)
     }
     
     @IBAction func backAction(_ sender: UIBarButtonItem) {

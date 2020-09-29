@@ -14,6 +14,7 @@
                 <outlet property="messageField" destination="cWu-Hc-gYj" id="Jhg-xO-O9m"/>
                 <outlet property="messageView" destination="seq-Pt-job" id="T4V-sW-0R8"/>
                 <outlet property="navbar" destination="ycM-el-IvB" id="sbY-KL-BR9"/>
+                <outlet property="sendMessageButton" destination="Naz-hn-KNz" id="bIe-xa-nH4"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
