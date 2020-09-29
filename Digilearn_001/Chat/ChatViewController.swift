@@ -26,6 +26,9 @@ class ChatViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
+               view.addGestureRecognizer(tap)
+        
         ref = Database.database().reference().child(groupId)
         
         navbar.title = groupName
@@ -74,7 +77,7 @@ class ChatViewController: UIViewController {
             timeFormatter.dateFormat = "HH:mm"
             let waktuFormatter = DateFormatter()
             waktuFormatter.dateFormat = "dd.MM.yyyy HH:mm:ss"
-            let email = readStringPreference(key: DigilearnsKeys.EMAIL)
+            let userId = readStringPreference(key: DigilearnsKeys.USER_ID)
             let message = messageField.text!
             let namaYangDibales = ""
             let name = readStringPreference(key: DigilearnsKeys.USER_NICK)
@@ -83,7 +86,7 @@ class ChatViewController: UIViewController {
             let waktuDetik = waktuFormatter.string(from: today)
             let waktuHari = dateFormatter.string(from: today)
             let waktuJamMenit = timeFormatter.string(from: today)
-            saveToFirebase(email: email, message: message, namayangdibales: namaYangDibales, name: name, pesanyangdibales: pesanYangDibales, read: read, waktudetik: waktuDetik,
+            saveToFirebase(email: userId, message: message, namayangdibales: namaYangDibales, name: name, pesanyangdibales: pesanYangDibales, read: read, waktudetik: waktuDetik,
                            waktuhari: waktuHari, waktujammenit: waktuJamMenit)
             messageField.text = ""
         }
@@ -110,7 +113,7 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let chat:ChatModel = chatList[indexPath.row]
-        let emailuser = readStringPreference(key: DigilearnsKeys.EMAIL)
+        let emailuser = readStringPreference(key: DigilearnsKeys.USER_ID)
         if chat.email.caseInsensitiveCompare(emailuser) == .orderedSame {
             let cell = tableView.dequeueReusableCell(withIdentifier: "chatRightIdentifier") as! ChatRightTableViewCell
             cell.layer.backgroundColor = UIColor.clear.cgColor

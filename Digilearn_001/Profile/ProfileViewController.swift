@@ -187,7 +187,7 @@ class ProfileViewController: BaseSettingViewController, UIImagePickerControllerD
         
         let URL = "\(DigilearnParams.ApiUrl)/user/auth/uploadPic"
         
-        uploadImage(endUrl: URL, imageData: profileImage.image!.jpegData(compressionQuality: 1.0), parameters: parameters)
+        uploadImage(endUrl: URL, imageData: profileImage.image!.jpegData(compressionQuality: 0.6), parameters: parameters)
     }
     
     
