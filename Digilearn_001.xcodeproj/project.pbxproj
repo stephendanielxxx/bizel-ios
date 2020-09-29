@@ -23,18 +23,20 @@
 		6A1334082518A1630032F3A0 /* ExpiredTaskViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A1334062518A1630032F3A0 /* ExpiredTaskViewController.xib */; };
 		6A13340B2518A24C0032F3A0 /* ExpiredTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1334092518A24C0032F3A0 /* ExpiredTableViewCell.swift */; };
 		6A13340C2518A24C0032F3A0 /* ExpiredTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A13340A2518A24C0032F3A0 /* ExpiredTableViewCell.xib */; };
-		6A1334102518A9FA0032F3A0 /* AchievementModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A13340F2518A9FA0032F3A0 /* AchievementModel.swift */; };
 		6A1334132518AAA80032F3A0 /* AchievementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1334112518AAA80032F3A0 /* AchievementViewController.swift */; };
 		6A1334142518AAA80032F3A0 /* AchievementViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A1334122518AAA80032F3A0 /* AchievementViewController.xib */; };
 		6A3C9D38251B296A0044A6FB /* AchieveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3C9D37251B296A0044A6FB /* AchieveModel.swift */; };
 		6A3C9D3B251C56210044A6FB /* AchievementDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3C9D39251C56210044A6FB /* AchievementDetailViewController.swift */; };
 		6A3C9D3C251C56210044A6FB /* AchievementDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A3C9D3A251C56210044A6FB /* AchievementDetailViewController.xib */; };
 		6A8D5E67250E5BF10069967C /* AnnouncementModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8D5E66250E5BF10069967C /* AnnouncementModel.swift */; };
-		6A9450A825222F60003AC9F6 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9450A625222F60003AC9F6 /* DetailTableViewCell.swift */; };
-		6A9450A925222F60003AC9F6 /* DetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A9450A725222F60003AC9F6 /* DetailTableViewCell.xib */; };
+		6A9450B1252254BE003AC9F6 /* ModulesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9450B0252254BE003AC9F6 /* ModulesModel.swift */; };
+		6A9450B82522571B003AC9F6 /* AchieveModulViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9450B62522571B003AC9F6 /* AchieveModulViewController.swift */; };
+		6A9450B92522571B003AC9F6 /* AchieveModulViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A9450B72522571B003AC9F6 /* AchieveModulViewController.xib */; };
+		6A9450BC252257C3003AC9F6 /* AchieveModuleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9450BA252257C3003AC9F6 /* AchieveModuleTableViewCell.swift */; };
+		6A9450BD252257C3003AC9F6 /* AchieveModuleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A9450BB252257C3003AC9F6 /* AchieveModuleTableViewCell.xib */; };
+		6A9450BF2522D230003AC9F6 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A9450BE2522D230003AC9F6 /* DetailViewController.xib */; };
 		6A9A13712521C01F0034DAF5 /* DetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9A136E2521C01F0034DAF5 /* DetailModel.swift */; };
 		6A9A13752521C4FA0034DAF5 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9A13732521C4FA0034DAF5 /* DetailViewController.swift */; };
-		6A9A13762521C4FA0034DAF5 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A9A13742521C4FA0034DAF5 /* DetailViewController.xib */; };
 		6AAEEC2E250F522200A129A6 /* AnnounceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AAEEC2C250F522200A129A6 /* AnnounceDetailViewController.swift */; };
 		6AAEEC2F250F522200A129A6 /* AnnounceDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AAEEC2D250F522200A129A6 /* AnnounceDetailViewController.xib */; };
 		6AD2EE7B2510C8F8002A83FB /* MyGroupDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD2EE792510C8F8002A83FB /* MyGroupDetailViewController.swift */; };
@@ -243,18 +245,20 @@
 		6A1334062518A1630032F3A0 /* ExpiredTaskViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExpiredTaskViewController.xib; sourceTree = "<group>"; };
 		6A1334092518A24C0032F3A0 /* ExpiredTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpiredTableViewCell.swift; sourceTree = "<group>"; };
 		6A13340A2518A24C0032F3A0 /* ExpiredTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExpiredTableViewCell.xib; sourceTree = "<group>"; };
-		6A13340F2518A9FA0032F3A0 /* AchievementModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementModel.swift; sourceTree = "<group>"; };
 		6A1334112518AAA80032F3A0 /* AchievementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementViewController.swift; sourceTree = "<group>"; };
 		6A1334122518AAA80032F3A0 /* AchievementViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AchievementViewController.xib; sourceTree = "<group>"; };
 		6A3C9D37251B296A0044A6FB /* AchieveModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchieveModel.swift; sourceTree = "<group>"; };
 		6A3C9D39251C56210044A6FB /* AchievementDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementDetailViewController.swift; sourceTree = "<group>"; };
 		6A3C9D3A251C56210044A6FB /* AchievementDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AchievementDetailViewController.xib; sourceTree = "<group>"; };
 		6A8D5E66250E5BF10069967C /* AnnouncementModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementModel.swift; sourceTree = "<group>"; };
-		6A9450A625222F60003AC9F6 /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
-		6A9450A725222F60003AC9F6 /* DetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailTableViewCell.xib; sourceTree = "<group>"; };
+		6A9450B0252254BE003AC9F6 /* ModulesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModulesModel.swift; sourceTree = "<group>"; };
+		6A9450B62522571B003AC9F6 /* AchieveModulViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchieveModulViewController.swift; sourceTree = "<group>"; };
+		6A9450B72522571B003AC9F6 /* AchieveModulViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AchieveModulViewController.xib; sourceTree = "<group>"; };
+		6A9450BA252257C3003AC9F6 /* AchieveModuleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchieveModuleTableViewCell.swift; sourceTree = "<group>"; };
+		6A9450BB252257C3003AC9F6 /* AchieveModuleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AchieveModuleTableViewCell.xib; sourceTree = "<group>"; };
+		6A9450BE2522D230003AC9F6 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		6A9A136E2521C01F0034DAF5 /* DetailModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailModel.swift; sourceTree = "<group>"; };
 		6A9A13732521C4FA0034DAF5 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		6A9A13742521C4FA0034DAF5 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		6AAEEC2C250F522200A129A6 /* AnnounceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnounceDetailViewController.swift; sourceTree = "<group>"; };
 		6AAEEC2D250F522200A129A6 /* AnnounceDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnnounceDetailViewController.xib; sourceTree = "<group>"; };
 		6AD2EE792510C8F8002A83FB /* MyGroupDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupDetailViewController.swift; sourceTree = "<group>"; };
@@ -548,6 +552,7 @@
 		6A13340D2518A9A90032F3A0 /* Achievement */ = {
 			isa = PBXGroup;
 			children = (
+				6A9450AE2522549E003AC9F6 /* Modules */,
 				6A9A136B2521C01F0034DAF5 /* Details */,
 				6A13340E2518A9E70032F3A0 /* model */,
 				6A1334112518AAA80032F3A0 /* AchievementViewController.swift */,
@@ -563,8 +568,27 @@
 		6A13340E2518A9E70032F3A0 /* model */ = {
 			isa = PBXGroup;
 			children = (
-				6A13340F2518A9FA0032F3A0 /* AchievementModel.swift */,
 				6A3C9D37251B296A0044A6FB /* AchieveModel.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		6A9450AE2522549E003AC9F6 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				6A9450AF252254A7003AC9F6 /* model */,
+				6A9450B62522571B003AC9F6 /* AchieveModulViewController.swift */,
+				6A9450B72522571B003AC9F6 /* AchieveModulViewController.xib */,
+				6A9450BA252257C3003AC9F6 /* AchieveModuleTableViewCell.swift */,
+				6A9450BB252257C3003AC9F6 /* AchieveModuleTableViewCell.xib */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		6A9450AF252254A7003AC9F6 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				6A9450B0252254BE003AC9F6 /* ModulesModel.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -574,9 +598,7 @@
 			children = (
 				6A9A136D2521C01F0034DAF5 /* model */,
 				6A9A13732521C4FA0034DAF5 /* DetailViewController.swift */,
-				6A9A13742521C4FA0034DAF5 /* DetailViewController.xib */,
-				6A9450A625222F60003AC9F6 /* DetailTableViewCell.swift */,
-				6A9450A725222F60003AC9F6 /* DetailTableViewCell.xib */,
+				6A9450BE2522D230003AC9F6 /* DetailViewController.xib */,
 			);
 			path = Details;
 			sourceTree = "<group>";
@@ -1292,6 +1314,7 @@
 				B9B39AB1251DEA6100AA9CE9 /* Montserrat-LightItalic.ttf in Resources */,
 				B99FA3112505CC7400A59C59 /* SplashViewController.xib in Resources */,
 				B96F5BEE25122028006AB070 /* FirstBoardViewController.xib in Resources */,
+				6A9450BD252257C3003AC9F6 /* AchieveModuleTableViewCell.xib in Resources */,
 				B9673E01250F2B8C005E6BB8 /* MyTaskTableViewCell.xib in Resources */,
 				B9A1160525109B2700852131 /* TopicActionViewController.xib in Resources */,
 				B9673E0D250F7039005E6BB8 /* AboutCourseViewController.xib in Resources */,
@@ -1327,9 +1350,9 @@
 				B9B39ABA251DEA6100AA9CE9 /* Montserrat-ExtraBold.ttf in Resources */,
 				B98C44AC250B7B3100363F8C /* EventCollectionViewCell.xib in Resources */,
 				B9D0535B2502278F00F1AC03 /* RegisterViewController.xib in Resources */,
+				6A9450B92522571B003AC9F6 /* AchieveModulViewController.xib in Resources */,
 				B97C0D1925131779005E36B4 /* QuizViewController.xib in Resources */,
 				B9643A5C251C828A00438DA3 /* ChangeEmailViewController.xib in Resources */,
-				6A9450A925222F60003AC9F6 /* DetailTableViewCell.xib in Resources */,
 				B97C0D112512FEA0005E36B4 /* ThirdBoardViewController.xib in Resources */,
 				B9B39AB5251DEA6100AA9CE9 /* Montserrat-ExtraLightItalic.ttf in Resources */,
 				6ADC3B26250A2EFE00E88D7C /* AnnounceViewController.xib in Resources */,
@@ -1339,7 +1362,6 @@
 				B969665F2514A99100A3561E /* ModuleFinishViewController.xib in Resources */,
 				B94585DC2509C6DA00330DAC /* MenuTableViewCell.xib in Resources */,
 				B9B39AAF251DEA6100AA9CE9 /* Montserrat-Regular.ttf in Resources */,
-				6A9A13762521C4FA0034DAF5 /* DetailViewController.xib in Resources */,
 				6A13340C2518A24C0032F3A0 /* ExpiredTableViewCell.xib in Resources */,
 				B99FA31C2505E65D00A59C59 /* FAQViewController.xib in Resources */,
 				B94585E72509CB1700330DAC /* HomeViewController.xib in Resources */,
@@ -1347,6 +1369,7 @@
 				6A1334142518AAA80032F3A0 /* AchievementViewController.xib in Resources */,
 				B9A115FC2510746800852131 /* TopicViewController.xib in Resources */,
 				6AF6D80C2519ECCB00947520 /* FaqViewController.xib in Resources */,
+				6A9450BF2522D230003AC9F6 /* DetailViewController.xib in Resources */,
 				B96F5BE12511F272006AB070 /* ActionViewController.xib in Resources */,
 				B99FA3152505D2E600A59C59 /* PrivacyViewController.xib in Resources */,
 				6AF6D8102519ED0000947520 /* FaqTableViewCell.xib in Resources */,
@@ -1481,8 +1504,8 @@
 				B9D0535D2502369500F1AC03 /* BottomBorderTF.swift in Sources */,
 				B9B39ABF251DF14000AA9CE9 /* ChangeProfileModel.swift in Sources */,
 				6AAEEC2E250F522200A129A6 /* AnnounceDetailViewController.swift in Sources */,
+				6A9450B82522571B003AC9F6 /* AchieveModulViewController.swift in Sources */,
 				B9608B45251B3CB50082B3A3 /* LibraryModulesViewController.swift in Sources */,
-				6A1334102518A9FA0032F3A0 /* AchievementModel.swift in Sources */,
 				B9A116122510C1FD00852131 /* TopicItemTableViewCell.swift in Sources */,
 				B94585EE2509FDDF00330DAC /* EventDetailViewController.swift in Sources */,
 				6A1333FF2518809F0032F3A0 /* ActiveTaskTableViewCell.swift in Sources */,
@@ -1493,6 +1516,7 @@
 				B9D0535A2502278F00F1AC03 /* RegisterViewController.swift in Sources */,
 				B96F5BED25122028006AB070 /* FirstBoardViewController.swift in Sources */,
 				B99FA3142505D2E600A59C59 /* PrivacyViewController.swift in Sources */,
+				6A9450B1252254BE003AC9F6 /* ModulesModel.swift in Sources */,
 				B97C0D1825131779005E36B4 /* QuizViewController.swift in Sources */,
 				B9673DF7250F23F1005E6BB8 /* ListTaskModel.swift in Sources */,
 				B98C44AB250B7B3100363F8C /* EventCollectionViewCell.swift in Sources */,
@@ -1508,7 +1532,6 @@
 				B9643A4F251C788F00438DA3 /* SettingViewController.swift in Sources */,
 				B99FA32025060A0B00A59C59 /* MyEventViewController.swift in Sources */,
 				B9B908BA2518868600620ADD /* MaterialLinkViewController.swift in Sources */,
-				6A9450A825222F60003AC9F6 /* DetailTableViewCell.swift in Sources */,
 				B94585EA2509D1D800330DAC /* MyEventTableViewCell.swift in Sources */,
 				6AF6D8082519ECAA00947520 /* FaqModel.swift in Sources */,
 				6A8D5E67250E5BF10069967C /* AnnouncementModel.swift in Sources */,
@@ -1522,6 +1545,7 @@
 				B9608B3D251AFEE10082B3A3 /* NewLibraryTableViewCell.swift in Sources */,
 				B9643A45251C720900438DA3 /* LogoutModel.swift in Sources */,
 				B98C449B250B452B00363F8C /* HomeBannerTableViewCell.swift in Sources */,
+				6A9450BC252257C3003AC9F6 /* AchieveModuleTableViewCell.swift in Sources */,
 				B9A116002510864200852131 /* AbousTopicViewController.swift in Sources */,
 				B969665B2514909500A3561E /* SubmitProgressModel.swift in Sources */,
 				B934AF4F24FF4B82000FCEB3 /* Digilearn_001.xcdatamodeld in Sources */,

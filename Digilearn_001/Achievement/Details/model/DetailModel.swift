@@ -15,7 +15,7 @@ struct DetailModel: Decodable {
 }
 
 // MARK: - CourseDetail
-struct CourseDetail: Codable {
+struct CourseDetail: Decodable {
     let courseID, courseDescription: String
 
     enum CodingKeys: String, CodingKey {

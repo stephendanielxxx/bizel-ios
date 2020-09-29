@@ -114,6 +114,7 @@ extension AchievementViewController: UITableViewDelegate, UITableViewDataSource
     achieveDetail.titleachieve = library.courseName
     achieveDetail.image = library.courseImage
     achieveDetail.institutname = library.institutName
+    achieveDetail.courseid = library.courseID
     self.present(achieveDetail, animated: true, completion: nil)
 }
 

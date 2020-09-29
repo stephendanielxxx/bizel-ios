@@ -1,24 +1,25 @@
 //
-//  DetailTableViewCell.swift
+//  AchieveModuleTableViewCell.swift
 //  Digilearn_001
 //
-//  Created by Seraphina Tatiana   on 28/09/20.
+//  Created by Seraphina Tatiana   on 29/09/20.
 //  Copyright © 2020 Digimaster. All rights reserved.
 //
 
 import UIKit
+import MaterialComponents.MDCCard
 
-class DetailTableViewCell: UITableViewCell {
-
+class AchieveModuleTableViewCell: UITableViewCell {
+    @IBOutlet weak var isiModule: MDCCard!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
     
 }

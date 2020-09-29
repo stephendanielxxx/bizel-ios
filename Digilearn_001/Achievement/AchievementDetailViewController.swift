@@ -15,13 +15,12 @@ class AchievementDetailViewController: UIViewController {
     @IBOutlet weak var imageAchieve: UIImageView!
     @IBOutlet weak var topicsButton: UIButton!
     @IBOutlet weak var detailsButton: UIButton!
-    @IBOutlet weak var detailView: UIView!
+    @IBOutlet weak var contentView: UIView!
     
     var image = ""
     var titleachieve = ""
     var institutname = ""
     var courseid = ""
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,10 +39,10 @@ class AchievementDetailViewController: UIViewController {
     
     
     @IBAction func detailButton(_ sender: UIButton) {
+        debugPrint(courseid)
             let detail = DetailViewController()
                  detail.course_id = courseid
-                 embed(detail,inParent: self,inView: detailView)
-
+                 embed(detail,inParent: self,inView: contentView)
         
     }
 }
