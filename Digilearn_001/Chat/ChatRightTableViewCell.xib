@@ -42,6 +42,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1tt-V5-dpI" customClass="DeleteChatButton" customModule="Digilearn_001" customModuleProvider="target">
+                                <rect key="frame" x="-3" y="21.5" width="17" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="Xwn-e0-eoE"/>
+                                    <constraint firstAttribute="width" constant="17" id="ZOX-xw-KJY"/>
+                                </constraints>
+                                <state key="normal" image="ic_setting_delete_account"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -49,6 +57,8 @@
                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="GHN-9d-bEO"/>
                             <constraint firstItem="0QP-rk-H4e" firstAttribute="top" secondItem="M4e-7z-ViU" secondAttribute="bottom" constant="5" id="Ihw-rg-EFO"/>
                             <constraint firstAttribute="bottom" secondItem="0QP-rk-H4e" secondAttribute="bottom" constant="5" id="NJi-iL-Z2L"/>
+                            <constraint firstItem="1tt-V5-dpI" firstAttribute="leading" secondItem="Jq7-3H-Bwo" secondAttribute="leading" constant="-3" id="S2U-jr-Po1"/>
+                            <constraint firstItem="1tt-V5-dpI" firstAttribute="centerY" secondItem="Jq7-3H-Bwo" secondAttribute="centerY" id="S4I-xG-Kb7"/>
                             <constraint firstItem="ZaF-I3-XWi" firstAttribute="top" secondItem="M4e-7z-ViU" secondAttribute="bottom" constant="5" id="Uhe-iF-NVY"/>
                             <constraint firstItem="M4e-7z-ViU" firstAttribute="leading" secondItem="Jq7-3H-Bwo" secondAttribute="leading" constant="22" id="bvt-T3-E03"/>
                             <constraint firstAttribute="trailing" secondItem="M4e-7z-ViU" secondAttribute="trailing" constant="36" id="c6s-lk-8d9"/>
@@ -70,10 +80,14 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="dateField" destination="0QP-rk-H4e" id="VZz-rx-a95"/>
+                <outlet property="deleteChatButton" destination="1tt-V5-dpI" id="bz7-K3-5zg"/>
                 <outlet property="hourField" destination="ZaF-I3-XWi" id="Ghg-g0-gBS"/>
                 <outlet property="messageField" destination="M4e-7z-ViU" id="YAe-bp-aGX"/>
             </connections>
             <point key="canvasLocation" x="240.57971014492756" y="150.66964285714286"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="ic_setting_delete_account" width="21" height="21"/>
+    </resources>
 </document>

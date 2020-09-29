@@ -17,5 +17,6 @@ struct ChatModel: Codable {
     var waktudetik: String = ""
     var waktuhari: String = ""
     var waktujammenit: String = ""
+    var messageId: String?
 }
 

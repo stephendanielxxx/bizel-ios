@@ -27,7 +27,7 @@ class ChatViewController: UIViewController {
         super.viewDidLoad()
         
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
-               view.addGestureRecognizer(tap)
+        view.addGestureRecognizer(tap)
         
         ref = Database.database().reference().child(groupId)
         
@@ -54,7 +54,8 @@ class ChatViewController: UIViewController {
         self.ref.observe(.childAdded, with: { (snapshot) in
             guard let value = snapshot.value else { return }
             do {
-                let model = try FirebaseDecoder().decode(ChatModel.self, from: value)
+                var model = try FirebaseDecoder().decode(ChatModel.self, from: value)
+                model.messageId = snapshot.key
                 self.chatList.append(model)
                 
             } catch let error {
@@ -65,6 +66,12 @@ class ChatViewController: UIViewController {
             let indexPath = NSIndexPath(item: self.chatList.count - 1, section: 0)
             self.messageView.scrollToRow(at: indexPath as IndexPath, at: UITableView.ScrollPosition.bottom, animated: true)
             
+        })
+        
+        self.ref.observe(.childRemoved, with: { (snapshot) in
+            
+            debugPrint(snapshot.value)
+            //            let index = indexOfMessage(snapshot)
         })
     }
     
@@ -121,6 +128,11 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource{
             cell.dateField.text = chat.waktuhari
             cell.hourField.text = chat.waktujammenit
             cell.messageField.text = chat.message
+            
+            cell.deleteChatButton.messageId = chat.messageId
+            
+            cell.deleteChatButton.addTarget(self, action: #selector(ChatViewController.deleteMessage(_:)), for: .touchUpInside)
+            
             return cell
         }else{
             let cell = tableView.dequeueReusableCell(withIdentifier: "chatLeftIdentifier") as! ChatLeftTableViewCell
@@ -132,5 +144,11 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource{
             cell.senderNameField.text = chat.name
             return cell
         }
+    }
+    
+    @objc func deleteMessage(_ sender: DeleteChatButton?) {
+        debugPrint(sender?.messageId)
+        let deleteRef = ref.child((sender?.messageId)!)
+        deleteRef.removeValue()
     }
 }
