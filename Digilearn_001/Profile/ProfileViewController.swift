@@ -237,7 +237,7 @@ class ProfileViewController: BaseSettingViewController, UIImagePickerControllerD
                     do{
                         let uploadImageModel = try decoder.decode(UploadImageModel.self, from:data)
                         debugPrint(uploadImageModel)
-                        self.saveStringPreference(value: uploadImageModel.new_image, key: DigilearnsKeys.USER_PHOTO)
+                        self.saveStringPreference(value: uploadImageModel.new_image!, key: DigilearnsKeys.USER_PHOTO)
                         self.saveStringPreference(value: self.firstNameField.text!, key: DigilearnsKeys.FIRST_NAME)
                         self.saveStringPreference(value: self.lastNameField.text!, key: DigilearnsKeys.LAST_NAME)
                         self.saveStringPreference(value: self.nickNameField.text!, key: DigilearnsKeys.USER_NICK)
