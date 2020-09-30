@@ -171,6 +171,7 @@
 		B98E3EE325230C3700ADEA16 /* ChatLeftTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B98E3EE125230C3700ADEA16 /* ChatLeftTableViewCell.xib */; };
 		B98E3EE525230F1D00ADEA16 /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98E3EE425230F1D00ADEA16 /* ChatModel.swift */; };
 		B98E3EE725233FDE00ADEA16 /* DeleteChatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98E3EE625233FDE00ADEA16 /* DeleteChatButton.swift */; };
+		B99150B12524933400742F58 /* FaqCatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99150B02524933400742F58 /* FaqCatButton.swift */; };
 		B99FA3102505CC7400A59C59 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99FA30E2505CC7400A59C59 /* SplashViewController.swift */; };
 		B99FA3112505CC7400A59C59 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B99FA30F2505CC7400A59C59 /* SplashViewController.xib */; };
 		B99FA3142505D2E600A59C59 /* PrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99FA3122505D2E600A59C59 /* PrivacyViewController.swift */; };
@@ -422,6 +423,7 @@
 		B98E3EE125230C3700ADEA16 /* ChatLeftTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatLeftTableViewCell.xib; sourceTree = "<group>"; };
 		B98E3EE425230F1D00ADEA16 /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
 		B98E3EE625233FDE00ADEA16 /* DeleteChatButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteChatButton.swift; sourceTree = "<group>"; };
+		B99150B02524933400742F58 /* FaqCatButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaqCatButton.swift; sourceTree = "<group>"; };
 		B99FA30E2505CC7400A59C59 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		B99FA30F2505CC7400A59C59 /* SplashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
 		B99FA3122505D2E600A59C59 /* PrivacyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyViewController.swift; sourceTree = "<group>"; };
@@ -712,6 +714,7 @@
 				6AF6D80A2519ECCB00947520 /* FaqViewController.xib */,
 				6AF6D80D2519ED0000947520 /* FaqTableViewCell.swift */,
 				6AF6D80E2519ED0000947520 /* FaqTableViewCell.xib */,
+				B99150B02524933400742F58 /* FaqCatButton.swift */,
 			);
 			path = FAQnew;
 			sourceTree = "<group>";
@@ -1663,6 +1666,7 @@
 				6AF6D80F2519ED0000947520 /* FaqTableViewCell.swift in Sources */,
 				B92A7281250087470010D52D /* LoginModel.swift in Sources */,
 				B99FA32625060C0B00A59C59 /* EventModel.swift in Sources */,
+				B99150B12524933400742F58 /* FaqCatButton.swift in Sources */,
 				B986E8DF2524853B00D2AE86 /* NotifModel.swift in Sources */,
 				B98C44A2250B689600363F8C /* HomeEventTableViewCell.swift in Sources */,
 				B9673E0C250F7039005E6BB8 /* AboutCourseViewController.swift in Sources */,
