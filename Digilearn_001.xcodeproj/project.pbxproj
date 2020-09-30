@@ -136,6 +136,7 @@
 		B97C0D2225134E69005E36B4 /* QuizEssayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97C0D2025134E69005E36B4 /* QuizEssayViewController.swift */; };
 		B97C0D2325134E69005E36B4 /* QuizEssayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B97C0D2125134E69005E36B4 /* QuizEssayViewController.xib */; };
 		B97C0D2825135920005E36B4 /* BaseActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97C0D2725135920005E36B4 /* BaseActionViewController.swift */; };
+		B986E8CE2524371000D2AE86 /* CourseDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B986E8CD2524371000D2AE86 /* CourseDetailModel.swift */; };
 		B98C4490250B1AD900363F8C /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98C448F250B1AD900363F8C /* HomeTabBarController.swift */; };
 		B98C449B250B452B00363F8C /* HomeBannerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98C4499250B452B00363F8C /* HomeBannerTableViewCell.swift */; };
 		B98C449C250B452B00363F8C /* HomeBannerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B98C449A250B452B00363F8C /* HomeBannerTableViewCell.xib */; };
@@ -371,6 +372,7 @@
 		B97C0D2025134E69005E36B4 /* QuizEssayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizEssayViewController.swift; sourceTree = "<group>"; };
 		B97C0D2125134E69005E36B4 /* QuizEssayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuizEssayViewController.xib; sourceTree = "<group>"; };
 		B97C0D2725135920005E36B4 /* BaseActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseActionViewController.swift; sourceTree = "<group>"; };
+		B986E8CD2524371000D2AE86 /* CourseDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailModel.swift; sourceTree = "<group>"; };
 		B98C448F250B1AD900363F8C /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
 		B98C4499250B452B00363F8C /* HomeBannerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBannerTableViewCell.swift; sourceTree = "<group>"; };
 		B98C449A250B452B00363F8C /* HomeBannerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeBannerTableViewCell.xib; sourceTree = "<group>"; };
@@ -884,6 +886,7 @@
 				B97C0D1E251337AA005E36B4 /* AssesmentModel.swift */,
 				B9696658251487A800A3561E /* EssayModel.swift */,
 				B969665A2514909500A3561E /* SubmitProgressModel.swift */,
+				B986E8CD2524371000D2AE86 /* CourseDetailModel.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -1605,6 +1608,7 @@
 				B94585F3250A2FFE00330DAC /* RegisterEventModel.swift in Sources */,
 				B97C0D0C2512FE6D005E36B4 /* SecondBoardViewController.swift in Sources */,
 				B9A1160B2510A3CE00852131 /* TopicActionModel.swift in Sources */,
+				B986E8CE2524371000D2AE86 /* CourseDetailModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
