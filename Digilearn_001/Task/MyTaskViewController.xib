@@ -34,9 +34,6 @@
                                 <navigationItem id="Xyi-lh-qqr">
                                     <barButtonItem key="leftBarButtonItem" title="Task" id="uWv-pg-2YQ">
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <connections>
-                                            <action selector="backAction:" destination="-1" id="PoG-X7-lQM"/>
-                                        </connections>
                                     </barButtonItem>
                                 </navigationItem>
                             </items>

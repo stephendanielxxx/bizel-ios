@@ -46,6 +46,8 @@ class HomeTabBarController: UITabBarController {
         self.navigationController?.navigationBar.backgroundColor = UIColor.red
 
         self.tabBarController?.navigationController?.navigationBar.backgroundColor = UIColor(named: "red_1")
+        
+        // aman
 
     }
 

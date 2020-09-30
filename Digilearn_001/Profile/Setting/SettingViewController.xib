@@ -14,6 +14,7 @@
                 <outlet property="changePassword" destination="aFS-9t-xVe" id="hWE-cH-dQk"/>
                 <outlet property="changePhone" destination="KBW-tA-US7" id="opt-LX-NZf"/>
                 <outlet property="deleteAccount" destination="H4X-Lg-3Nt" id="x78-gx-cao"/>
+                <outlet property="notificationSwitch" destination="rrW-qM-scN" id="O8x-F7-Sg2"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

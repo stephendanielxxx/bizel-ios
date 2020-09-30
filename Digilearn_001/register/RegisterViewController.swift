@@ -105,7 +105,7 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction func openHelp(_ sender: UIButton) {
-          let faq = FAQViewController()
+          let faq = FaqViewController()
 
           faq.modalPresentationStyle = .fullScreen
         

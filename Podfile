@@ -7,7 +7,7 @@ target 'Digilearn_001' do
   use_frameworks!
   pod 'FlagPhoneNumber'
   pod 'RxSwift', '~> 5'
-  pod 'RxCocoa', '~> 5' 
+  pod 'RxCocoa', '~> 5'
   pod 'Reqres'
   pod 'Alamofire', '~> 5.2'
   #pod 'AlamofireNetworkActivityLogger', '~> 3.0'
@@ -25,6 +25,8 @@ target 'Digilearn_001' do
   pod 'PopupDialog', '~> 1.1'
   pod 'Firebase/Analytics'
   pod 'Firebase/Database'
+  pod 'CodableFirebase'
+  #pod 'DKImagePickerController'
   #pod 'Player', '~> 0.13.2'
   #pod 'BMPlayer', '~> 1.3.0'
   #pod 'VersaPlayer'

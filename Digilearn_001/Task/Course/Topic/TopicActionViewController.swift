@@ -76,7 +76,6 @@ class TopicActionViewController: UIViewController {
                             
                             self.sectionCount = self.topicActionModel.topicDetail.count
                             self.topicView.reloadData()
-                            
                         }catch{
                             print(error.localizedDescription)
                         }
@@ -90,6 +89,7 @@ class TopicActionViewController: UIViewController {
     
     @IBAction func refreshAction(_ sender: UIButton) {
         super.viewWillAppear(true)
+         self.topicView.closeAll()
         loadData()
     }
     
@@ -146,9 +146,10 @@ extension TopicActionViewController: ExpandableDelegate, ActionViewDelegate{
         var cells = [UITableViewCell]()
         let expandedCount: Int = self.topicActionModel?.topicDetail[indexPath.row].topicDetailAction?.count ?? 0
         
+        
         //        let count = self.topicActionModel?.topicDetail[indexPath.row].topicDetailAction.count ?? 0
         
-        for n in 0...expandedCount-1{
+        for n in 0...expandedCount-1 {
             
             let topicDetailAction: TopicDetailAction = self.topicActionModel.topicDetail[indexPath.row].topicDetailAction![n]
             

@@ -114,14 +114,13 @@ to us by filling this form.</string>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="hCq-r8-yB1" secondAttribute="bottom" id="Bac-cI-zCs"/>
-                <constraint firstItem="hCq-r8-yB1" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="44" id="Eqz-vu-ZIB"/>
                 <constraint firstItem="hCq-r8-yB1" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" id="Nhf-fc-8Z3"/>
                 <constraint firstItem="n0H-EO-Rff" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="VsQ-t2-SiV"/>
                 <constraint firstItem="hCq-r8-yB1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="gDV-40-xLK"/>
                 <constraint firstItem="n0H-EO-Rff" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="gDb-mh-BkD"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hCq-r8-yB1" secondAttribute="trailing" id="oVo-uF-eRp"/>
+                <constraint firstItem="hCq-r8-yB1" firstAttribute="top" secondItem="n0H-EO-Rff" secondAttribute="bottom" id="qhR-zg-wA0"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="n0H-EO-Rff" secondAttribute="trailing" id="sdH-zl-CSA"/>
-                <constraint firstItem="hCq-r8-yB1" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" multiplier="0.94621" id="wKh-vo-mzU"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

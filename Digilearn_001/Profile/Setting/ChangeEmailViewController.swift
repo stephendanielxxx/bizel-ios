@@ -22,9 +22,9 @@ class ChangeEmailViewController: BaseSettingViewController {
         
         emailField.isEnabled = false
         
-//        let email = readStringPreference(key: DigilearnsKeys.EMAIL)
-//        
-//        emailField.text = email
+        let email = readStringPreference(key: DigilearnsKeys.EMAIL)
+        
+        emailField.text = email
         
     }
     
@@ -50,6 +50,8 @@ class ChangeEmailViewController: BaseSettingViewController {
                             let response = try decoder.decode(ChangeProfileModel.self, from:data)
                             
                             self.showErrorAlert(title: response.info, errorMessage: response.message)
+                            
+                            self.saveStringPreference(value: self.emailField.text!, key: DigilearnsKeys.EMAIL)
                             
                         }catch{
                             print(error.localizedDescription)

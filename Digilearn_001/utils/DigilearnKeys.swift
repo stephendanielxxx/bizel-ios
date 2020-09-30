@@ -20,4 +20,5 @@ struct DigilearnsKeys {
     static let EMAIL = "EMAIL"
     static let PHONE = "PHONE"
     static let USER_NOTIFICATION = "USER_NOTIFICATION"
+    static let USER_PASSWORD = "USER_PASSWORD"
 }

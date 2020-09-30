@@ -19,9 +19,9 @@ class ChangePhoneViewController: BaseSettingViewController {
 
         saveButton.layer.cornerRadius = 18
         
-//        let phone = readStringPreference(key: DigilearnsKeys.PHONE)
-//
-//        phoneView.text = phone
+        let phone = readStringPreference(key: DigilearnsKeys.PHONE)
+
+        phoneView.text = phone
     }
     
     func changePhone(phone: String){
