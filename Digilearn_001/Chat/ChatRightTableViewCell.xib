@@ -43,7 +43,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1tt-V5-dpI" customClass="DeleteChatButton" customModule="Digilearn_001" customModuleProvider="target">
-                                <rect key="frame" x="-3" y="21.5" width="17" height="17"/>
+                                <rect key="frame" x="4" y="21.5" width="17" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="17" id="Xwn-e0-eoE"/>
                                     <constraint firstAttribute="width" constant="17" id="ZOX-xw-KJY"/>
@@ -57,7 +57,7 @@
                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="GHN-9d-bEO"/>
                             <constraint firstItem="0QP-rk-H4e" firstAttribute="top" secondItem="M4e-7z-ViU" secondAttribute="bottom" constant="5" id="Ihw-rg-EFO"/>
                             <constraint firstAttribute="bottom" secondItem="0QP-rk-H4e" secondAttribute="bottom" constant="5" id="NJi-iL-Z2L"/>
-                            <constraint firstItem="1tt-V5-dpI" firstAttribute="leading" secondItem="Jq7-3H-Bwo" secondAttribute="leading" constant="-3" id="S2U-jr-Po1"/>
+                            <constraint firstItem="1tt-V5-dpI" firstAttribute="leading" secondItem="Jq7-3H-Bwo" secondAttribute="leading" constant="4" id="S2U-jr-Po1"/>
                             <constraint firstItem="1tt-V5-dpI" firstAttribute="centerY" secondItem="Jq7-3H-Bwo" secondAttribute="centerY" id="S4I-xG-Kb7"/>
                             <constraint firstItem="ZaF-I3-XWi" firstAttribute="top" secondItem="M4e-7z-ViU" secondAttribute="bottom" constant="5" id="Uhe-iF-NVY"/>
                             <constraint firstItem="M4e-7z-ViU" firstAttribute="leading" secondItem="Jq7-3H-Bwo" secondAttribute="leading" constant="22" id="bvt-T3-E03"/>

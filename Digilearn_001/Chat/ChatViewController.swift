@@ -47,6 +47,9 @@ class ChatViewController: UIViewController {
         let nib = UINib(nibName: "ChatRightTableViewCell", bundle: nil)
         messageView.register(nib, forCellReuseIdentifier: "chatRightIdentifier")
         
+        let nibRightReply = UINib(nibName: "ChatRightReplyTableViewCell", bundle: nil)
+        messageView.register(nibRightReply, forCellReuseIdentifier: "chatRightReplyIdentifier")
+        
         let nibLeft = UINib(nibName: "ChatLeftTableViewCell", bundle: nil)
         messageView.register(nibLeft, forCellReuseIdentifier: "chatLeftIdentifier")
         
@@ -155,19 +158,39 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource{
         let chat:ChatModel = chatList[indexPath.row]
         let emailuser = readStringPreference(key: DigilearnsKeys.USER_ID)
         if chat.email.caseInsensitiveCompare(emailuser) == .orderedSame {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "chatRightIdentifier") as! ChatRightTableViewCell
-            cell.layer.backgroundColor = UIColor.clear.cgColor
+            if chat.namayangdibales.isEmpty {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "chatRightIdentifier") as! ChatRightTableViewCell
+                cell.layer.backgroundColor = UIColor.clear.cgColor
+                
+                cell.dateField.text = chat.waktuhari
+                cell.hourField.text = chat.waktujammenit
+                cell.messageField.text = chat.message
+                
+                cell.deleteChatButton.messageId = chat.messageId
+                cell.deleteChatButton.chatIndex = indexPath.row
+                
+                cell.deleteChatButton.addTarget(self, action: #selector(ChatViewController.deleteMessage(_:)), for: .touchUpInside)
+                
+                return cell
+            }else{
+                let cell = tableView.dequeueReusableCell(withIdentifier: "chatRightReplyIdentifier") as! ChatRightReplyTableViewCell
+                cell.layer.backgroundColor = UIColor.clear.cgColor
+                
+                cell.dateField.text = chat.waktuhari
+                cell.hourField.text = chat.waktujammenit
+                cell.messageField.text = chat.message
+                
+                cell.deleteChatButton.messageId = chat.messageId
+                cell.deleteChatButton.chatIndex = indexPath.row
+                
+                cell.deleteChatButton.addTarget(self, action: #selector(ChatViewController.deleteMessage(_:)), for: .touchUpInside)
+                
+                cell.repliedName.text = chat.namayangdibales
+                cell.repliedMessage.text = chat.pesanyangdibales
+                
+                return cell
+            }
             
-            cell.dateField.text = chat.waktuhari
-            cell.hourField.text = chat.waktujammenit
-            cell.messageField.text = chat.message
-            
-            cell.deleteChatButton.messageId = chat.messageId
-            cell.deleteChatButton.chatIndex = indexPath.row
-            
-            cell.deleteChatButton.addTarget(self, action: #selector(ChatViewController.deleteMessage(_:)), for: .touchUpInside)
-            
-            return cell
         }else{
             if chat.namayangdibales.isEmpty {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "chatLeftIdentifier") as! ChatLeftTableViewCell
