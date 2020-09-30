@@ -11,4 +11,5 @@ import UIKit
 
 class DeleteChatButton: UIButton{
     var messageId: String?
+    var chatIndex: Int = 0
 }

@@ -9,6 +9,7 @@
 import UIKit
 import FirebaseDatabase
 import CodableFirebase
+import PopupDialog
 
 class ChatViewController: UIViewController {
     
@@ -70,8 +71,24 @@ class ChatViewController: UIViewController {
         
         self.ref.observe(.childRemoved, with: { (snapshot) in
             
-            debugPrint(snapshot.value)
-            //            let index = indexOfMessage(snapshot)
+            guard let value = snapshot.value else { return }
+            do {
+                var model = try FirebaseDecoder().decode(ChatModel.self, from: value)
+                
+                var index = 0
+                for chat in self.chatList {
+                    if chat.waktudetik.caseInsensitiveCompare(model.waktudetik) == .orderedSame {
+                        self.chatList.remove(at: index)
+                        break
+                    }
+                    index = index + 1
+                }
+                
+                self.messageView.reloadData()
+                
+            } catch let error {
+                debugPrint(error)
+            }
         })
     }
     
@@ -130,6 +147,7 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource{
             cell.messageField.text = chat.message
             
             cell.deleteChatButton.messageId = chat.messageId
+            cell.deleteChatButton.chatIndex = indexPath.row
             
             cell.deleteChatButton.addTarget(self, action: #selector(ChatViewController.deleteMessage(_:)), for: .touchUpInside)
             
@@ -146,9 +164,33 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource{
         }
     }
     
-    @objc func deleteMessage(_ sender: DeleteChatButton?) {
-        debugPrint(sender?.messageId)
-        let deleteRef = ref.child((sender?.messageId)!)
-        deleteRef.removeValue()
+    @objc func deleteMessage(_ sender: DeleteChatButton) {
+        showDeleteDialog(messageId: sender.messageId!)
+    }
+    
+    func showDeleteDialog(messageId: String){
+        let message = "Delete this message?"
+
+        // Create the dialog
+        let popup = PopupDialog(title: "Delete Chat", message: message, image: nil, buttonAlignment: .horizontal)
+        
+        // Create buttons
+        let buttonOne = CancelButton(title: "Cancel") {}
+
+        let buttonThree = DefaultButton(title: "OK", height: 45) {
+            let deleteRef = self.ref.child(messageId)
+            deleteRef.removeValue()
+        }
+
+        // Add buttons to dialog
+        // Alternatively, you can use popup.addButton(buttonOne)
+        // to add a single button
+        popup.addButtons([buttonOne, buttonThree])
+        
+        var buttonAppearance = DefaultButton.appearance()
+        buttonAppearance.titleColor = UIColor(named: "red_1")
+
+        // Present dialog
+        self.present(popup, animated: true, completion: nil)
     }
 }
