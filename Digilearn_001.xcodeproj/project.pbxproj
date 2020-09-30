@@ -152,6 +152,8 @@
 		B986E8D425245C6200D2AE86 /* ChatLeftReplyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B986E8D225245C6200D2AE86 /* ChatLeftReplyTableViewCell.xib */; };
 		B986E8D725245F1300D2AE86 /* ChatRightReplyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B986E8D525245F1300D2AE86 /* ChatRightReplyTableViewCell.swift */; };
 		B986E8D825245F1300D2AE86 /* ChatRightReplyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B986E8D625245F1300D2AE86 /* ChatRightReplyTableViewCell.xib */; };
+		B986E8DF2524853B00D2AE86 /* NotifModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B986E8DD2524853B00D2AE86 /* NotifModel.swift */; };
+		B986E8E02524853B00D2AE86 /* UploadModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B986E8DE2524853B00D2AE86 /* UploadModel.swift */; };
 		B98C4490250B1AD900363F8C /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98C448F250B1AD900363F8C /* HomeTabBarController.swift */; };
 		B98C449B250B452B00363F8C /* HomeBannerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98C4499250B452B00363F8C /* HomeBannerTableViewCell.swift */; };
 		B98C449C250B452B00363F8C /* HomeBannerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B98C449A250B452B00363F8C /* HomeBannerTableViewCell.xib */; };
@@ -221,8 +223,6 @@
 		B9D0535D2502369500F1AC03 /* BottomBorderTF.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D0535C2502369500F1AC03 /* BottomBorderTF.swift */; };
 		B9D74BDA25185E0B00133208 /* MaterialVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D74BD825185E0B00133208 /* MaterialVideoViewController.swift */; };
 		B9D74BDB25185E0B00133208 /* MaterialVideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9D74BD925185E0B00133208 /* MaterialVideoViewController.xib */; };
-		B9DD45782521CD5F0043B210 /* UploadImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DD45772521CD5F0043B210 /* UploadImageModel.swift */; };
-		B9DD457A2521E14F0043B210 /* NotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DD45792521E14F0043B210 /* NotificationModel.swift */; };
 		B9DD457E2521EC030043B210 /* GroupChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DD457C2521EC030043B210 /* GroupChatViewController.swift */; };
 		B9DD457F2521EC030043B210 /* GroupChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9DD457D2521EC030043B210 /* GroupChatViewController.xib */; };
 		B9DD45822521F0990043B210 /* GroupChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DD45802521F0990043B210 /* GroupChatTableViewCell.swift */; };
@@ -403,6 +403,8 @@
 		B986E8D225245C6200D2AE86 /* ChatLeftReplyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatLeftReplyTableViewCell.xib; sourceTree = "<group>"; };
 		B986E8D525245F1300D2AE86 /* ChatRightReplyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRightReplyTableViewCell.swift; sourceTree = "<group>"; };
 		B986E8D625245F1300D2AE86 /* ChatRightReplyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatRightReplyTableViewCell.xib; sourceTree = "<group>"; };
+		B986E8DD2524853B00D2AE86 /* NotifModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotifModel.swift; sourceTree = "<group>"; };
+		B986E8DE2524853B00D2AE86 /* UploadModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadModel.swift; sourceTree = "<group>"; };
 		B98C448F250B1AD900363F8C /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
 		B98C4499250B452B00363F8C /* HomeBannerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBannerTableViewCell.swift; sourceTree = "<group>"; };
 		B98C449A250B452B00363F8C /* HomeBannerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeBannerTableViewCell.xib; sourceTree = "<group>"; };
@@ -472,8 +474,6 @@
 		B9D0535C2502369500F1AC03 /* BottomBorderTF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBorderTF.swift; sourceTree = "<group>"; };
 		B9D74BD825185E0B00133208 /* MaterialVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialVideoViewController.swift; sourceTree = "<group>"; };
 		B9D74BD925185E0B00133208 /* MaterialVideoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MaterialVideoViewController.xib; sourceTree = "<group>"; };
-		B9DD45772521CD5F0043B210 /* UploadImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImageModel.swift; sourceTree = "<group>"; };
-		B9DD45792521E14F0043B210 /* NotificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationModel.swift; sourceTree = "<group>"; };
 		B9DD457C2521EC030043B210 /* GroupChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupChatViewController.swift; sourceTree = "<group>"; };
 		B9DD457D2521EC030043B210 /* GroupChatViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroupChatViewController.xib; sourceTree = "<group>"; };
 		B9DD45802521F0990043B210 /* GroupChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupChatTableViewCell.swift; sourceTree = "<group>"; };
@@ -910,10 +910,10 @@
 		B9643A47251C736300438DA3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B986E8DD2524853B00D2AE86 /* NotifModel.swift */,
+				B986E8DE2524853B00D2AE86 /* UploadModel.swift */,
 				B9643A44251C720900438DA3 /* LogoutModel.swift */,
 				B9B39ABE251DF14000AA9CE9 /* ChangeProfileModel.swift */,
-				B9DD45772521CD5F0043B210 /* UploadImageModel.swift */,
-				B9DD45792521E14F0043B210 /* NotificationModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1605,6 +1605,7 @@
 				B9673DF7250F23F1005E6BB8 /* ListTaskModel.swift in Sources */,
 				B986E8D725245F1300D2AE86 /* ChatRightReplyTableViewCell.swift in Sources */,
 				B98C44AB250B7B3100363F8C /* EventCollectionViewCell.swift in Sources */,
+				B986E8E02524853B00D2AE86 /* UploadModel.swift in Sources */,
 				6A1334072518A1630032F3A0 /* ExpiredTaskViewController.swift in Sources */,
 				B986E8D025243B1900D2AE86 /* ReplayChatButton.swift in Sources */,
 				6A1333E9251464C40032F3A0 /* MemberModel.swift in Sources */,
@@ -1616,7 +1617,6 @@
 				B9A115FB2510746800852131 /* TopicViewController.swift in Sources */,
 				B98C449F250B4DCA00363F8C /* BannerModel.swift in Sources */,
 				B9643A4F251C788F00438DA3 /* SettingViewController.swift in Sources */,
-				B9DD45782521CD5F0043B210 /* UploadImageModel.swift in Sources */,
 				B99FA32025060A0B00A59C59 /* MyEventViewController.swift in Sources */,
 				6A9450C3252334CD003AC9F6 /* FaqcatModel.swift in Sources */,
 				B9B908BA2518868600620ADD /* MaterialLinkViewController.swift in Sources */,
@@ -1655,16 +1655,13 @@
 				6AF6D80F2519ED0000947520 /* FaqTableViewCell.swift in Sources */,
 				B92A7281250087470010D52D /* LoginModel.swift in Sources */,
 				B99FA32625060C0B00A59C59 /* EventModel.swift in Sources */,
+				B986E8DF2524853B00D2AE86 /* NotifModel.swift in Sources */,
 				B98C44A2250B689600363F8C /* HomeEventTableViewCell.swift in Sources */,
 				B9673E0C250F7039005E6BB8 /* AboutCourseViewController.swift in Sources */,
-
-				B99FA31B2505E65D00A59C59 /* FAQViewController.swift in Sources */,
 				6A9450C625236362003AC9F6 /* AchieveModuleViewController.swift in Sources */,
-
 				6A3C9D38251B296A0044A6FB /* AchieveModel.swift in Sources */,
 				B9608B4A251B3CD80082B3A3 /* LibraryTopicsViewController.swift in Sources */,
 				B9696659251487A800A3561E /* EssayModel.swift in Sources */,
-				B9DD457A2521E14F0043B210 /* NotificationModel.swift in Sources */,
 				B9608B39251AF9B10082B3A3 /* LibraryViewController.swift in Sources */,
 				B9673E06250F561D005E6BB8 /* CourseViewController.swift in Sources */,
 				B934AFE024FFA88D000FCEB3 /* LoginViewController.swift in Sources */,

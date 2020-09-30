@@ -133,7 +133,7 @@ class SettingViewController: BaseSettingViewController {
                         self.removeSpinner()
                         let decoder = JSONDecoder()
                         do{
-                            let response = try decoder.decode(NotificationModel.self, from:data)
+                            let response = try decoder.decode(NotifModel.self, from:data)
                             if response.status.caseInsensitiveCompare("success") == .orderedSame {
                                 if isOn {
                                     self.saveStringPreference(value: "true", key: DigilearnsKeys.USER_NOTIFICATION)
