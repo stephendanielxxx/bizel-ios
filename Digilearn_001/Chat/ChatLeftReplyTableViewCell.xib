@@ -17,8 +17,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="198" height="145"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yac-8I-lry">
-                        <rect key="frame" x="0.0" y="10" width="150" height="125"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yac-8I-lry" customClass="MDCCard">
+                        <rect key="frame" x="12" y="10" width="150" height="125"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LCi-RE-SHg">
                                 <rect key="frame" x="8" y="8" width="108" height="14"/>
@@ -116,7 +116,7 @@
                 <constraints>
                     <constraint firstItem="Yac-8I-lry" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="5ht-Qb-HtB"/>
                     <constraint firstAttribute="bottom" secondItem="Yac-8I-lry" secondAttribute="bottom" constant="10" id="EDK-ga-6LG"/>
-                    <constraint firstItem="Yac-8I-lry" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="SRH-AZ-a0i"/>
+                    <constraint firstItem="Yac-8I-lry" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="SRH-AZ-a0i"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

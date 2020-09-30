@@ -16,8 +16,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="198" height="80"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jq7-3H-Bwo">
-                        <rect key="frame" x="48" y="10" width="150" height="60"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jq7-3H-Bwo" customClass="MDCCard">
+                        <rect key="frame" x="36" y="10" width="150" height="60"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Chat" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M4e-7z-ViU">
                                 <rect key="frame" x="22" y="0.0" width="92" height="40"/>
@@ -72,7 +72,7 @@
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="Jq7-3H-Bwo" secondAttribute="trailing" id="HNd-AG-lZh"/>
+                    <constraint firstAttribute="trailing" secondItem="Jq7-3H-Bwo" secondAttribute="trailing" constant="12" id="HNd-AG-lZh"/>
                     <constraint firstAttribute="bottom" secondItem="Jq7-3H-Bwo" secondAttribute="bottom" constant="10" id="UjU-kq-x3t"/>
                     <constraint firstItem="Jq7-3H-Bwo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="mFF-yg-0c2"/>
                 </constraints>

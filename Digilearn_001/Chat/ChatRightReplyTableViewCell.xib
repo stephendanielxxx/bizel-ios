@@ -17,8 +17,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="198" height="135"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MxX-Mu-hTB">
-                        <rect key="frame" x="48" y="10" width="150" height="115"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MxX-Mu-hTB" customClass="MDCCard">
+                        <rect key="frame" x="36" y="10" width="150" height="115"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Chat" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nmh-Mu-nJr">
                                 <rect key="frame" x="22" y="55" width="92" height="40"/>
@@ -107,7 +107,7 @@
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="MxX-Mu-hTB" secondAttribute="trailing" id="Eqx-r1-rrA"/>
+                    <constraint firstAttribute="trailing" secondItem="MxX-Mu-hTB" secondAttribute="trailing" constant="12" id="Eqx-r1-rrA"/>
                     <constraint firstItem="MxX-Mu-hTB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="KCC-SH-6Zo"/>
                     <constraint firstAttribute="bottom" secondItem="MxX-Mu-hTB" secondAttribute="bottom" constant="10" id="mGk-za-IGA"/>
                 </constraints>

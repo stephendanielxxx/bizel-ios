@@ -17,8 +17,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="198" height="105"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ogm-tI-ED0">
-                        <rect key="frame" x="0.0" y="10" width="150" height="85"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ogm-tI-ED0" customClass="MDCCard">
+                        <rect key="frame" x="12" y="10" width="150" height="85"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4N-Ce-a7R">
                                 <rect key="frame" x="8" y="8" width="108" height="15"/>
@@ -82,7 +82,7 @@
                 <constraints>
                     <constraint firstItem="Ogm-tI-ED0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="XDN-Vo-doS"/>
                     <constraint firstAttribute="bottom" secondItem="Ogm-tI-ED0" secondAttribute="bottom" constant="10" id="Xwu-s5-3Yk"/>
-                    <constraint firstItem="Ogm-tI-ED0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="avu-m5-Y8b"/>
+                    <constraint firstItem="Ogm-tI-ED0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="avu-m5-Y8b"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
