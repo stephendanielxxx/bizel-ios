@@ -64,7 +64,7 @@ extension FaqViewController: UITableViewDelegate, UITableViewDataSource
         return faqModel?.faq.count ?? 0
         
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = faqView.dequeueReusableCell(withIdentifier: "faqIdentifier") as! FaqTableViewCell
         let faq: FAQ = (faqModel?.faq[indexPath.row])!
