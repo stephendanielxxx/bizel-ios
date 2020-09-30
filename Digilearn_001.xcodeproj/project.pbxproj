@@ -758,6 +758,7 @@
 		B934AF4324FF4B82000FCEB3 /* Digilearn_001 */ = {
 			isa = PBXGroup;
 			children = (
+				B99150AF2524874E00742F58 /* MyProfile */,
 				B9DD457B2521EBEF0043B210 /* Chat */,
 				B9B39A99251DEA2700AA9CE9 /* Font */,
 				B9643A3A251C4EE300438DA3 /* Profile */,
@@ -889,11 +890,6 @@
 		B9643A3A251C4EE300438DA3 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				B9643A4C251C788000438DA3 /* Setting */,
-				B9643A47251C736300438DA3 /* Model */,
-				B9643A46251C735700438DA3 /* Contact Us */,
-				B9643A3B251C500600438DA3 /* ProfileViewController.swift */,
-				B9643A3C251C500600438DA3 /* ProfileViewController.xib */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -1083,6 +1079,18 @@
 				B98E3EE425230F1D00ADEA16 /* ChatModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		B99150AF2524874E00742F58 /* MyProfile */ = {
+			isa = PBXGroup;
+			children = (
+				B9643A4C251C788000438DA3 /* Setting */,
+				B9643A47251C736300438DA3 /* Model */,
+				B9643A46251C735700438DA3 /* Contact Us */,
+				B9643A3B251C500600438DA3 /* ProfileViewController.swift */,
+				B9643A3C251C500600438DA3 /* ProfileViewController.xib */,
+			);
+			path = MyProfile;
 			sourceTree = "<group>";
 		};
 		B99FA30D2505CC5A00A59C59 /* splash */ = {
