@@ -9,13 +9,13 @@
 import Foundation
 
 struct CourseDetailModel: Decodable {
-    let course_detail: [CourseDetail]
+    let course_detail: [CourseDetailLibrary]
     enum CodingKeys: String, CodingKey {
           case course_detail = "course_detail:"
       }
 }
 
-struct CourseDetail: Decodable {
+struct CourseDetailLibrary: Decodable {
     let course_id: String
     let course_description: String?
 }

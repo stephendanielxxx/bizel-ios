@@ -30,6 +30,7 @@ class GroupChatViewController: UIViewController {
         
         loadGroup()
         
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
