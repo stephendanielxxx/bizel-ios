@@ -583,12 +583,12 @@
 			isa = PBXGroup;
 			children = (
 				6A9450AF252254A7003AC9F6 /* model */,
-				6A9450C425236362003AC9F6 /* AchieveModuleViewController.swift */,
-				6A9450C525236362003AC9F6 /* AchieveModuleViewController.xib */,
-				6A9450BA252257C3003AC9F6 /* AchieveModuleTableViewCell.swift */,
-				6A9450BB252257C3003AC9F6 /* AchieveModuleTableViewCell.xib */,
 				6A3E5354252433480048A2F9 /* ModuleDetailViewController.swift */,
 				6A3E5355252433480048A2F9 /* ModuleDetailViewController.xib */,
+				6A9450BA252257C3003AC9F6 /* AchieveModuleTableViewCell.swift */,
+				6A9450BB252257C3003AC9F6 /* AchieveModuleTableViewCell.xib */,
+				6A9450C425236362003AC9F6 /* AchieveModuleViewController.swift */,
+				6A9450C525236362003AC9F6 /* AchieveModuleViewController.xib */,
 			);
 			path = Modules;
 			sourceTree = "<group>";

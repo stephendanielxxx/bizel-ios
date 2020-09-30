@@ -15,6 +15,7 @@ class AchieveModuleViewController: UIViewController {
     
     var course_id = ""
     var modulesModel: ModulesModel!
+    var achieveModel: AchieveModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,26 +32,26 @@ class AchieveModuleViewController: UIViewController {
             "user_id": "\(user_id)"
         ]
         AF.request(URL,
-                       method: .post,
-                       parameters: parameters,
-                       encoding: URLEncoding.httpBody).responseData { response in
-                        switch response.result {
-                        case .success(let data):
-                            self.removeSpinner()
-                            let decoder = JSONDecoder()
-                            do{
-                                self.modulesModel = try decoder.decode(ModulesModel.self, from:data)
-                                debugPrint(self.modulesModel)
-                                self.listModule.reloadData()
-                            }catch{
-                                print(error.localizedDescription)
-                            }
-                        case .failure(let error):
-                            self.removeSpinner()
+                   method: .post,
+                   parameters: parameters,
+                   encoding: URLEncoding.httpBody).responseData { response in
+                    switch response.result {
+                    case .success(let data):
+                        self.removeSpinner()
+                        let decoder = JSONDecoder()
+                        do{
+                            self.modulesModel = try decoder.decode(ModulesModel.self, from:data)
+                            debugPrint(self.modulesModel)
+                            self.listModule.reloadData()
+                        }catch{
+                            print(error.localizedDescription)
                         }
-            }
-            
+                    case .failure(let error):
+                        self.removeSpinner()
+                    }
         }
+        
+    }
     @IBAction func backButton(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
         
@@ -69,9 +70,24 @@ extension AchieveModuleViewController: UITableViewDelegate, UITableViewDataSourc
         cell.courseName.text = course.moduleName
         
         
+        cell.isiModule.tag = indexPath.row
+        cell.isiModule.addTarget(self,action: #selector(AchievementViewController.openDetail(_:)),for: .touchUpInside)
         return cell
     }
     
-    
+    @objc func openDetail(_ sender: UIButton?) {
+        debugPrint("test")
+        let isiModule = ModuleDetailViewController()
+    isiModule.modalPresentationStyle = .fullScreen
+   // let library: Library = achieveModel.Library[sender!.tag]
+//    isiModule.module_name = library.courseName
+  //  isiModule.module_image = library.courseImage
+   // isiModule.institute_name = library.institutName
+    //isiModule.course_id = library.courseID
+   // self.present(isiModule, animated: true, completion: nil)
 }
+
+}
+
+
 

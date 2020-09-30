@@ -16,6 +16,8 @@ class AchievementDetailViewController: UIViewController {
     @IBOutlet weak var topicsButton: UIButton!
     @IBOutlet weak var detailsButton: UIButton!
     @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var moduleLine: UIView!
+    @IBOutlet weak var detailLine: UIView!
     
     var image = ""
     var titleachieve = ""
@@ -24,42 +26,47 @@ class AchievementDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-            titleAchieve.text = self.titleachieve
-            institutName.text = self.institutname
-            imageAchieve.pin_updateWithProgress = true
-            imageAchieve.contentMode = .scaleToFill
-            imageAchieve.clipsToBounds = true
-            let url = Foundation.URL(string: "https://digicourse.id/digilearn/admin-master/assets.admin_master/course/image/\(image)")
-            imageAchieve.pin_setImage(from: url)
+        
+        titleAchieve.text = self.titleachieve
+        institutName.text = self.institutname
+        imageAchieve.pin_updateWithProgress = true
+        imageAchieve.contentMode = .scaleToFill
+        imageAchieve.clipsToBounds = true
+        let url = Foundation.URL(string: "https://digicourse.id/digilearn/admin-master/assets.admin_master/course/image/\(image)")
+        imageAchieve.pin_setImage(from: url)
         
         moduleView()
-        }
+    }
     
-        
+    
     @IBAction func backButton(_ sender: Any) { self.dismiss(animated: true, completion: nil)
     }
     
     
     @IBAction func detailButton(_ sender: UIButton) {
-        debugPrint(courseid)
-            let detail = DetailViewController()
-                 detail.course_id = courseid
-                 embed(detail,inParent: self,inView: contentView)
+        
+        detailLine.backgroundColor = UIColor(named: "red_1")
+        moduleLine.backgroundColor = UIColor.lightGray
+        let detail = DetailViewController()
+        detail.course_id = courseid
+        embed(detail,inParent: self,inView: contentView)
         
     }
     
     fileprivate func moduleView() {
+        
+        moduleLine.backgroundColor = UIColor(named: "red_1")
+        detailLine.backgroundColor = UIColor.lightGray
         let module = AchieveModuleViewController()
         module.course_id = courseid
+        
         embed(module,inParent: self,inView: contentView)
+        
     }
     
     @IBAction func modulesButton(_ sender: UIButton) {
         moduleView()
     }
-    
-    
     
 }
 

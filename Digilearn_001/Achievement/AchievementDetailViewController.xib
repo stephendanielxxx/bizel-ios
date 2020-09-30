@@ -11,9 +11,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AchievementDetailViewController" customModule="Digilearn_001" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="u9W-cp-auA" id="8FM-Lr-S7D"/>
+                <outlet property="detailLine" destination="IDk-hW-aKm" id="IZ2-bc-z0G"/>
                 <outlet property="detailsButton" destination="EFe-XB-8IZ" id="Isg-mR-itf"/>
                 <outlet property="imageAchieve" destination="mGe-ec-5JD" id="kmj-Fj-Htr"/>
                 <outlet property="institutName" destination="YUx-nK-OuR" id="qX8-kW-tux"/>
+                <outlet property="moduleLine" destination="gzQ-H2-T40" id="6LP-Sp-sJk"/>
                 <outlet property="titleAchieve" destination="M2n-dC-XyR" id="X10-WA-AbQ"/>
                 <outlet property="topicsButton" destination="bS1-3B-aah" id="kjS-BC-jiZ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -98,20 +100,18 @@
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u9W-cp-auA">
                             <rect key="frame" x="0.0" y="281" width="414" height="517"/>
-                            <subviews>
-                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gzQ-H2-T40" userLabel="line">
-                                    <rect key="frame" x="0.0" y="-8" width="207" height="3"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" name="color_ D44444"/>
-                                    <rect key="contentStretch" x="0.0" y="0.0" width="0.29999999999999999" height="1"/>
-                                </view>
-                            </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
-                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IDk-hW-aKm" userLabel="line">
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IDk-hW-aKm" userLabel="detailLine">
                             <rect key="frame" x="207" y="273" width="207" height="3"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <rect key="contentStretch" x="0.0" y="0.0" width="0.29999999999999999" height="1"/>
+                        </view>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gzQ-H2-T40" userLabel="moduleline">
+                            <rect key="frame" x="0.0" y="273" width="207" height="3"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" name="color_ D44444"/>
                             <rect key="contentStretch" x="0.0" y="0.0" width="0.29999999999999999" height="1"/>
                         </view>
                     </subviews>
