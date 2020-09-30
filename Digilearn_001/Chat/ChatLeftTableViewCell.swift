@@ -13,6 +13,7 @@ class ChatLeftTableViewCell: UITableViewCell {
     @IBOutlet weak var messageField: UITextView!
     @IBOutlet weak var dateField: UILabel!
     @IBOutlet weak var hourField: UILabel!
+    @IBOutlet weak var replyButton: ReplayChatButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

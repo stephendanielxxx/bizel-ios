@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="10" width="150" height="85"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4N-Ce-a7R">
-                                <rect key="frame" x="8" y="8" width="130" height="15"/>
+                                <rect key="frame" x="8" y="8" width="108" height="15"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" name="red_1"/>
                                 <nil key="highlightedColor"/>
@@ -48,12 +48,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MV5-fT-3uR" customClass="ReplayChatButton" customModule="Digilearn_001" customModuleProvider="target">
+                                <rect key="frame" x="120" y="0.0" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="59w-rn-Dfw"/>
+                                    <constraint firstAttribute="height" constant="30" id="USD-P7-C2r"/>
+                                </constraints>
+                                <state key="normal" image="ic_reply_chat"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" name="color_FFF2F2"/>
                         <constraints>
                             <constraint firstItem="d4N-Ce-a7R" firstAttribute="top" secondItem="Ogm-tI-ED0" secondAttribute="top" constant="8" id="5sE-xT-00L"/>
                             <constraint firstItem="ZIn-K9-0SM" firstAttribute="leading" secondItem="Ogm-tI-ED0" secondAttribute="leading" constant="8" id="6ZR-3Q-woI"/>
-                            <constraint firstAttribute="trailing" secondItem="d4N-Ce-a7R" secondAttribute="trailing" constant="12" id="BIY-H4-J7R"/>
                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="E9i-nQ-7ex"/>
                             <constraint firstAttribute="trailing" secondItem="ZIn-K9-0SM" secondAttribute="trailing" constant="12" id="HfQ-QF-gJ3"/>
                             <constraint firstAttribute="bottom" secondItem="3KT-Wr-bkL" secondAttribute="bottom" constant="8" id="KD5-M4-9N8"/>
@@ -62,7 +69,10 @@
                             <constraint firstItem="3KT-Wr-bkL" firstAttribute="leading" secondItem="Ogm-tI-ED0" secondAttribute="leading" constant="8" id="TmX-tI-aCa"/>
                             <constraint firstAttribute="bottom" secondItem="NHo-yc-kLp" secondAttribute="bottom" constant="8" id="a06-ef-Xfe"/>
                             <constraint firstItem="ZIn-K9-0SM" firstAttribute="top" secondItem="d4N-Ce-a7R" secondAttribute="bottom" constant="7" id="a0f-gr-x2a"/>
+                            <constraint firstAttribute="trailing" secondItem="MV5-fT-3uR" secondAttribute="trailing" id="fg1-x3-Qyd"/>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="85" id="fjx-Rp-Eb3"/>
+                            <constraint firstItem="MV5-fT-3uR" firstAttribute="leading" secondItem="d4N-Ce-a7R" secondAttribute="trailing" constant="4" id="hUS-gg-IMC"/>
+                            <constraint firstItem="MV5-fT-3uR" firstAttribute="top" secondItem="Ogm-tI-ED0" secondAttribute="top" id="hgX-Vd-2oX"/>
                             <constraint firstItem="NHo-yc-kLp" firstAttribute="top" secondItem="ZIn-K9-0SM" secondAttribute="bottom" constant="6.5" id="liX-cu-Gas"/>
                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="320" id="rR0-uf-zFX"/>
                             <constraint firstItem="3KT-Wr-bkL" firstAttribute="top" secondItem="ZIn-K9-0SM" secondAttribute="bottom" constant="6.5" id="sIv-4G-h7r"/>
@@ -80,14 +90,16 @@
                 <outlet property="dateField" destination="3KT-Wr-bkL" id="4LW-Mi-rZD"/>
                 <outlet property="hourField" destination="NHo-yc-kLp" id="boq-nU-gtT"/>
                 <outlet property="messageField" destination="ZIn-K9-0SM" id="g8J-YH-Bye"/>
+                <outlet property="replyButton" destination="MV5-fT-3uR" id="aRF-Vj-tLh"/>
                 <outlet property="senderNameField" destination="d4N-Ce-a7R" id="Sfw-tw-IBJ"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="154.35267857142856"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="ic_reply_chat" width="15" height="15"/>
         <namedColor name="color_FFF2F2">
-            <color red="1" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.94900000095367432" blue="0.94900000095367432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="red_1">
             <color red="0.60399997234344482" green="0.27099999785423279" blue="0.23499999940395355" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

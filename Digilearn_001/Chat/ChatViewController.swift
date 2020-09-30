@@ -17,11 +17,16 @@ class ChatViewController: UIViewController {
     var groupId = ""
     var ref: DatabaseReference!
     var chatList: [ChatModel] = []
+    var namaYangDibales = ""
+    var pesanYangDibales = ""
     
     @IBOutlet weak var messageField: UITextView!
     @IBOutlet weak var messageView: UITableView!
     @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var sendMessageButton: UIImageView!
+    @IBOutlet weak var replyView: UIView!
+    @IBOutlet weak var replyNameLabel: UILabel!
+    @IBOutlet weak var replyMessageLabel: UITextView!
     
     @IBOutlet weak var navbar: UINavigationItem!
     override func viewDidLoad() {
@@ -103,16 +108,18 @@ class ChatViewController: UIViewController {
             waktuFormatter.dateFormat = "dd.MM.yyyy HH:mm:ss"
             let userId = readStringPreference(key: DigilearnsKeys.USER_ID)
             let message = messageField.text!
-            let namaYangDibales = ""
             let name = readStringPreference(key: DigilearnsKeys.USER_NICK)
-            let pesanYangDibales = ""
             let read = "nope"
             let waktuDetik = waktuFormatter.string(from: today)
             let waktuHari = dateFormatter.string(from: today)
             let waktuJamMenit = timeFormatter.string(from: today)
             saveToFirebase(email: userId, message: message, namayangdibales: namaYangDibales, name: name, pesanyangdibales: pesanYangDibales, read: read, waktudetik: waktuDetik,
                            waktuhari: waktuHari, waktujammenit: waktuJamMenit)
+            
             messageField.text = ""
+            replyView.isHidden = true
+            namaYangDibales = ""
+            pesanYangDibales = ""
         }
     }
     
@@ -127,6 +134,12 @@ class ChatViewController: UIViewController {
     
     @IBAction func backAction(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func replyAction(_ sender: UIButton) {
+        replyView.isHidden = true
+        namaYangDibales = ""
+        pesanYangDibales = ""
     }
 }
 
@@ -160,8 +173,21 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource{
             cell.hourField.text = chat.waktujammenit
             cell.messageField.text = chat.message
             cell.senderNameField.text = chat.name
+            
+            cell.replyButton.repliedMessage = chat.message
+            cell.replyButton.repliedName = chat.name
+            cell.replyButton.addTarget(self, action: #selector(ChatViewController.replyMessage(_:)), for: .touchUpInside)
+            
             return cell
         }
+    }
+    
+    @objc func replyMessage(_ sender: ReplayChatButton) {
+        replyView.isHidden = false
+        replyNameLabel.text = sender.repliedName!
+        replyMessageLabel.text = sender.repliedMessage!
+        namaYangDibales = sender.repliedName!
+        pesanYangDibales = sender.repliedMessage!
     }
     
     @objc func deleteMessage(_ sender: DeleteChatButton) {
@@ -170,18 +196,18 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource{
     
     func showDeleteDialog(messageId: String){
         let message = "Delete this message?"
-
+        
         // Create the dialog
         let popup = PopupDialog(title: "Delete Chat", message: message, image: nil, buttonAlignment: .horizontal)
         
         // Create buttons
         let buttonOne = CancelButton(title: "Cancel") {}
-
+        
         let buttonThree = DefaultButton(title: "OK", height: 45) {
             let deleteRef = self.ref.child(messageId)
             deleteRef.removeValue()
         }
-
+        
         // Add buttons to dialog
         // Alternatively, you can use popup.addButton(buttonOne)
         // to add a single button
@@ -189,7 +215,7 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource{
         
         var buttonAppearance = DefaultButton.appearance()
         buttonAppearance.titleColor = UIColor(named: "red_1")
-
+        
         // Present dialog
         self.present(popup, animated: true, completion: nil)
     }

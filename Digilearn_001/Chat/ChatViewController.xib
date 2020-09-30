@@ -14,6 +14,9 @@
                 <outlet property="messageField" destination="cWu-Hc-gYj" id="Jhg-xO-O9m"/>
                 <outlet property="messageView" destination="seq-Pt-job" id="T4V-sW-0R8"/>
                 <outlet property="navbar" destination="ycM-el-IvB" id="sbY-KL-BR9"/>
+                <outlet property="replyMessageLabel" destination="eZo-Jl-TGi" id="NSg-FB-fAD"/>
+                <outlet property="replyNameLabel" destination="y23-ID-Zxb" id="fdB-BU-paa"/>
+                <outlet property="replyView" destination="K6M-JY-zaa" id="j03-Jo-wHk"/>
                 <outlet property="sendMessageButton" destination="Naz-hn-KNz" id="bIe-xa-nH4"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -62,6 +65,50 @@
                             <rect key="frame" x="0.0" y="79" width="414" height="673"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </tableView>
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K6M-JY-zaa" userLabel="Reply View">
+                            <rect key="frame" x="0.0" y="681" width="414" height="65"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y23-ID-Zxb">
+                                    <rect key="frame" x="8" y="4" width="38" height="17"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Message" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eZo-Jl-TGi">
+                                    <rect key="frame" x="8" y="25" width="398" height="32"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="L2o-97-0Wz"/>
+                                    </constraints>
+                                    <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                </textView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZRx-n2-wAc">
+                                    <rect key="frame" x="381" y="0.0" width="25" height="25"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="25" id="BaA-JJ-Vbw"/>
+                                        <constraint firstAttribute="width" constant="25" id="RJb-2a-dIP"/>
+                                    </constraints>
+                                    <state key="normal" image="ic_close_red"/>
+                                    <connections>
+                                        <action selector="replyAction:" destination="-1" eventType="touchUpInside" id="Ji3-Z9-2Jw"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="65" id="0AX-aN-k1v"/>
+                                <constraint firstAttribute="trailing" secondItem="ZRx-n2-wAc" secondAttribute="trailing" constant="8" id="7Ww-T2-uF4"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="750" constant="65" id="FOl-eg-DmZ"/>
+                                <constraint firstItem="y23-ID-Zxb" firstAttribute="leading" secondItem="K6M-JY-zaa" secondAttribute="leading" constant="8" id="Lll-hW-uHb"/>
+                                <constraint firstItem="ZRx-n2-wAc" firstAttribute="top" secondItem="K6M-JY-zaa" secondAttribute="top" id="VcY-q9-TRG"/>
+                                <constraint firstItem="eZo-Jl-TGi" firstAttribute="top" secondItem="y23-ID-Zxb" secondAttribute="bottom" constant="4" id="W2o-1l-9rc"/>
+                                <constraint firstAttribute="trailing" secondItem="eZo-Jl-TGi" secondAttribute="trailing" constant="8" id="Z3n-Yi-Dhl"/>
+                                <constraint firstItem="y23-ID-Zxb" firstAttribute="top" secondItem="K6M-JY-zaa" secondAttribute="top" constant="4" id="a7g-6s-u8R"/>
+                                <constraint firstItem="eZo-Jl-TGi" firstAttribute="leading" secondItem="K6M-JY-zaa" secondAttribute="leading" constant="8" id="eLI-af-Fi5"/>
+                            </constraints>
+                        </view>
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cWu-Hc-gYj">
                             <rect key="frame" x="15" y="760" width="332" height="50"/>
                             <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -94,8 +141,11 @@
                         <constraint firstItem="d7v-dZ-sGQ" firstAttribute="leading" secondItem="ENV-VI-sze" secondAttribute="leading" id="cez-Gt-Raq"/>
                         <constraint firstItem="d7v-dZ-sGQ" firstAttribute="top" secondItem="Tyf-hW-7nV" secondAttribute="bottom" id="kIK-Qk-1n6"/>
                         <constraint firstItem="Naz-hn-KNz" firstAttribute="leading" secondItem="cWu-Hc-gYj" secondAttribute="trailing" constant="8" id="oJO-JV-way"/>
+                        <constraint firstItem="cWu-Hc-gYj" firstAttribute="top" secondItem="K6M-JY-zaa" secondAttribute="bottom" constant="14" id="pT0-ay-gJ7"/>
+                        <constraint firstItem="K6M-JY-zaa" firstAttribute="leading" secondItem="ENV-VI-sze" secondAttribute="leading" id="y0D-BD-Rva"/>
                         <constraint firstAttribute="trailing" secondItem="Tyf-hW-7nV" secondAttribute="trailing" id="yIA-mI-Hxv"/>
                         <constraint firstAttribute="trailing" secondItem="d7v-dZ-sGQ" secondAttribute="trailing" id="ybK-5Q-ATQ"/>
+                        <constraint firstAttribute="trailing" secondItem="K6M-JY-zaa" secondAttribute="trailing" id="zu7-RK-XpW"/>
                     </constraints>
                 </view>
             </subviews>
@@ -115,6 +165,7 @@
     </objects>
     <resources>
         <image name="arrow.left" catalog="system" width="128" height="98"/>
+        <image name="ic_close_red" width="15" height="15"/>
         <image name="ic_send_chat" width="35" height="35"/>
         <image name="img_bg_chat" width="360" height="681"/>
         <namedColor name="color_ D44444">
