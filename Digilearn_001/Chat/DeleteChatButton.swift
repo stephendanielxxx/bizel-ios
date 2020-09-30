@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 class DeleteChatButton: UIButton{
+    // custom button for delete chat
     var messageId: String?
     var chatIndex: Int = 0
 }
