@@ -12,6 +12,7 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var greetingLabel: UILabel!
+    @IBOutlet weak var chatIcon: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,6 +53,12 @@ class HomeViewController: UIViewController {
         
         let userNickName = readStringPreference(key: DigilearnsKeys.USER_NICK)
         greetingLabel.text = "\(greeting) \(userNickName)"
+    }
+    
+    @IBAction func chatAction(_ sender: UIBarButtonItem) {
+        let groupChat = GroupChatViewController()
+        groupChat.modalPresentationStyle = .fullScreen
+        self.present(groupChat, animated: true, completion: nil)
     }
 }
 

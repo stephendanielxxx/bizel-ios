@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GroupChatViewController" customModule="Digilearn_001" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="LpH-2W-AOB" id="rz3-AN-ZXE"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Ja-Ao-w5l" userLabel="Base View">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tBa-k6-vQw">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <color key="barTintColor" name="color_ D44444"/>
+                            <textAttributes key="titleTextAttributes">
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </textAttributes>
+                            <items>
+                                <navigationItem title="Group Chat" id="VJH-8u-duq">
+                                    <barButtonItem key="leftBarButtonItem" image="arrow.left" catalog="system" id="Rk4-ws-Igb">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="backAction:" destination="-1" id="oGp-d8-rZX"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </navigationItem>
+                            </items>
+                        </navigationBar>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LpH-2W-AOB">
+                            <rect key="frame" x="0.0" y="44" width="414" height="766"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="tBa-k6-vQw" firstAttribute="leading" secondItem="5Ja-Ao-w5l" secondAttribute="leading" id="BVf-rG-7iA"/>
+                        <constraint firstItem="tBa-k6-vQw" firstAttribute="top" secondItem="5Ja-Ao-w5l" secondAttribute="top" id="TOs-Sk-9cz"/>
+                        <constraint firstItem="LpH-2W-AOB" firstAttribute="top" secondItem="tBa-k6-vQw" secondAttribute="bottom" id="YoD-6G-BW0"/>
+                        <constraint firstAttribute="trailing" secondItem="LpH-2W-AOB" secondAttribute="trailing" id="bBa-JA-265"/>
+                        <constraint firstAttribute="trailing" secondItem="tBa-k6-vQw" secondAttribute="trailing" id="jlu-nw-8Ud"/>
+                        <constraint firstAttribute="bottom" secondItem="LpH-2W-AOB" secondAttribute="bottom" constant="8" id="nYi-Ty-JUb"/>
+                        <constraint firstItem="LpH-2W-AOB" firstAttribute="leading" secondItem="5Ja-Ao-w5l" secondAttribute="leading" id="zmO-KD-voY"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="5Ja-Ao-w5l" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" id="1Qo-FM-s63"/>
+                <constraint firstItem="5Ja-Ao-w5l" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" id="7mw-r9-Vh5"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="5Ja-Ao-w5l" secondAttribute="bottom" id="MCH-K5-kCC"/>
+                <constraint firstItem="5Ja-Ao-w5l" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="SXE-qf-LVe"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="5Ja-Ao-w5l" secondAttribute="trailing" id="Vhg-zb-HpJ"/>
+                <constraint firstItem="5Ja-Ao-w5l" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="dno-P1-of4"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="145.98214285714286"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrow.left" catalog="system" width="128" height="98"/>
+        <namedColor name="color_ D44444">
+            <color red="0.83099997043609619" green="0.2669999897480011" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -92,6 +92,7 @@ class CourseViewController: UIViewController {
         
         let about = AboutCourseViewController()
         about.course_about = course_about
+        about.courseId = course_id
         embed(about, inParent: self, inView: tabContent)
     }
     

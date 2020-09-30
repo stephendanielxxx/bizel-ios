@@ -9,10 +9,12 @@
 import UIKit
 import PopupDialog
 
-class DeleteDialogViewController: UIViewController {
+class DeleteDialogViewController: BaseSettingViewController {
 
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var yesButton: UIButton!
+    var delegate: DeleteDialogDelegate!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,6 +28,11 @@ class DeleteDialogViewController: UIViewController {
     }
 
     @IBAction func deleteAction(_ sender: UIButton) {
-        debugPrint("Run delete account")
+        
+        delegate.onDeleteAccount()
     }
+}
+
+protocol DeleteDialogDelegate {
+    func onDeleteAccount()
 }

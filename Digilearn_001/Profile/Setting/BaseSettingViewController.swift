@@ -49,10 +49,20 @@ class BaseSettingViewController: UIViewController {
                             let logoutModel = try decoder.decode(LogoutModel.self, from:data)
                             
                             self.saveStringPreference(value: "", key: DigilearnsKeys.USER_ID)
+                            self.saveStringPreference(value: "", key: DigilearnsKeys.FIRST_NAME)
+                            self.saveStringPreference(value: "", key: DigilearnsKeys.LAST_NAME)
+                            self.saveStringPreference(value: "", key: DigilearnsKeys.USER_NICK)
+                            self.saveStringPreference(value: "", key: DigilearnsKeys.EMAIL)
+                            self.saveStringPreference(value: "", key: DigilearnsKeys.PHONE)
+                            self.saveStringPreference(value: "", key: DigilearnsKeys.INSTITUT_NAME)
+                            self.saveStringPreference(value: "", key: DigilearnsKeys.USER_POSITION)
+                            self.saveStringPreference(value: "", key: DigilearnsKeys.USER_PHOTO)
                             
 //                            self.resetDefaults()
                             
                             self.dismiss(animated: true, completion: {
+                                let topViewController = UIApplication.shared.keyWindow?.rootViewController
+
                                 let login = LoginViewController()
                                 login.modalPresentationStyle = .fullScreen
                                 self.present(login, animated: true, completion: nil)
