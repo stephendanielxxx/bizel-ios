@@ -138,6 +138,8 @@
 		B97C0D2825135920005E36B4 /* BaseActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97C0D2725135920005E36B4 /* BaseActionViewController.swift */; };
 		B986E8CE2524371000D2AE86 /* CourseDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B986E8CD2524371000D2AE86 /* CourseDetailModel.swift */; };
 		B986E8D025243B1900D2AE86 /* ReplayChatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B986E8CF25243B1900D2AE86 /* ReplayChatButton.swift */; };
+		B986E8D325245C6200D2AE86 /* ChatLeftReplyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B986E8D125245C6200D2AE86 /* ChatLeftReplyTableViewCell.swift */; };
+		B986E8D425245C6200D2AE86 /* ChatLeftReplyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B986E8D225245C6200D2AE86 /* ChatLeftReplyTableViewCell.xib */; };
 		B98C4490250B1AD900363F8C /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98C448F250B1AD900363F8C /* HomeTabBarController.swift */; };
 		B98C449B250B452B00363F8C /* HomeBannerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98C4499250B452B00363F8C /* HomeBannerTableViewCell.swift */; };
 		B98C449C250B452B00363F8C /* HomeBannerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B98C449A250B452B00363F8C /* HomeBannerTableViewCell.xib */; };
@@ -375,6 +377,8 @@
 		B97C0D2725135920005E36B4 /* BaseActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseActionViewController.swift; sourceTree = "<group>"; };
 		B986E8CD2524371000D2AE86 /* CourseDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailModel.swift; sourceTree = "<group>"; };
 		B986E8CF25243B1900D2AE86 /* ReplayChatButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplayChatButton.swift; sourceTree = "<group>"; };
+		B986E8D125245C6200D2AE86 /* ChatLeftReplyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLeftReplyTableViewCell.swift; sourceTree = "<group>"; };
+		B986E8D225245C6200D2AE86 /* ChatLeftReplyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatLeftReplyTableViewCell.xib; sourceTree = "<group>"; };
 		B98C448F250B1AD900363F8C /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
 		B98C4499250B452B00363F8C /* HomeBannerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBannerTableViewCell.swift; sourceTree = "<group>"; };
 		B98C449A250B452B00363F8C /* HomeBannerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeBannerTableViewCell.xib; sourceTree = "<group>"; };
@@ -1166,6 +1170,8 @@
 				B98E3EDD2522FF3700ADEA16 /* ChatRightTableViewCell.xib */,
 				B98E3EE025230C3700ADEA16 /* ChatLeftTableViewCell.swift */,
 				B98E3EE125230C3700ADEA16 /* ChatLeftTableViewCell.xib */,
+				B986E8D125245C6200D2AE86 /* ChatLeftReplyTableViewCell.swift */,
+				B986E8D225245C6200D2AE86 /* ChatLeftReplyTableViewCell.xib */,
 				B98E3EE625233FDE00ADEA16 /* DeleteChatButton.swift */,
 				B986E8CF25243B1900D2AE86 /* ReplayChatButton.swift */,
 			);
@@ -1327,6 +1333,7 @@
 				B9608B46251B3CB50082B3A3 /* LibraryModulesViewController.xib in Resources */,
 				B9B39AB6251DEA6100AA9CE9 /* Montserrat-SemiBoldItalic.ttf in Resources */,
 				B9643A3E251C500600438DA3 /* ProfileViewController.xib in Resources */,
+				B986E8D425245C6200D2AE86 /* ChatLeftReplyTableViewCell.xib in Resources */,
 				6ADC3B112509FA6500E88D7C /* MyGroupViewController.xib in Resources */,
 				6A1333ED251465BD0032F3A0 /* MemberGroupViewController.xib in Resources */,
 				6A3C9D3C251C56210044A6FB /* AchievementDetailViewController.xib in Resources */,
@@ -1512,6 +1519,7 @@
 				6A1333FF2518809F0032F3A0 /* ActiveTaskTableViewCell.swift in Sources */,
 				B98E3EDA2522F2FE00ADEA16 /* ChatViewController.swift in Sources */,
 				B98C4490250B1AD900363F8C /* HomeTabBarController.swift in Sources */,
+				B986E8D325245C6200D2AE86 /* ChatLeftReplyTableViewCell.swift in Sources */,
 				B9DD457E2521EC030043B210 /* GroupChatViewController.swift in Sources */,
 				B969665E2514A99100A3561E /* ModuleFinishViewController.swift in Sources */,
 				B9673DFA250F251C005E6BB8 /* MyTaskViewController.swift in Sources */,

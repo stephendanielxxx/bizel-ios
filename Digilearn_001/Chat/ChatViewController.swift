@@ -50,6 +50,9 @@ class ChatViewController: UIViewController {
         let nibLeft = UINib(nibName: "ChatLeftTableViewCell", bundle: nil)
         messageView.register(nibLeft, forCellReuseIdentifier: "chatLeftIdentifier")
         
+        let nibLeftReply = UINib(nibName: "ChatLeftReplyTableViewCell", bundle: nil)
+        messageView.register(nibLeftReply, forCellReuseIdentifier: "chatLeftReplyIdentifier")
+        
         messageView.delegate = self
         messageView.dataSource = self
         
@@ -166,19 +169,38 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource{
             
             return cell
         }else{
-            let cell = tableView.dequeueReusableCell(withIdentifier: "chatLeftIdentifier") as! ChatLeftTableViewCell
-            cell.layer.backgroundColor = UIColor.clear.cgColor
+            if chat.namayangdibales.isEmpty {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "chatLeftIdentifier") as! ChatLeftTableViewCell
+                cell.layer.backgroundColor = UIColor.clear.cgColor
+                
+                cell.dateField.text = chat.waktuhari
+                cell.hourField.text = chat.waktujammenit
+                cell.messageField.text = chat.message
+                cell.senderNameField.text = chat.name
+                
+                cell.replyButton.repliedMessage = chat.message
+                cell.replyButton.repliedName = chat.name
+                cell.replyButton.addTarget(self, action: #selector(ChatViewController.replyMessage(_:)), for: .touchUpInside)
+                return cell
+            }else{
+                let cell = tableView.dequeueReusableCell(withIdentifier: "chatLeftReplyIdentifier") as! ChatLeftReplyTableViewCell
+                cell.layer.backgroundColor = UIColor.clear.cgColor
+                
+                cell.dateField.text = chat.waktuhari
+                cell.hourField.text = chat.waktujammenit
+                cell.messageField.text = chat.message
+                cell.senderNameField.text = chat.name
+                
+                cell.replyButton.repliedMessage = chat.message
+                cell.replyButton.repliedName = chat.name
+                cell.replyButton.addTarget(self, action: #selector(ChatViewController.replyMessage(_:)), for: .touchUpInside)
+                
+                cell.repliedName.text = chat.namayangdibales
+                cell.repliedMessage.text = chat.pesanyangdibales
+                
+                return cell
+            }
             
-            cell.dateField.text = chat.waktuhari
-            cell.hourField.text = chat.waktujammenit
-            cell.messageField.text = chat.message
-            cell.senderNameField.text = chat.name
-            
-            cell.replyButton.repliedMessage = chat.message
-            cell.replyButton.repliedName = chat.name
-            cell.replyButton.addTarget(self, action: #selector(ChatViewController.replyMessage(_:)), for: .touchUpInside)
-            
-            return cell
         }
     }
     
