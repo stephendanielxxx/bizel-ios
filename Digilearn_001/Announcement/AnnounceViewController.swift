@@ -99,6 +99,7 @@ extension AnnounceViewController: UITableViewDelegate, UITableViewDataSource
         self.present(announceDetail, animated: true, completion: nil)
     }
 
+    
 }
 
 

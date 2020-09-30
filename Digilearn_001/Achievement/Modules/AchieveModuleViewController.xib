@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AchieveModuleViewController" customModule="Digilearn_001" customModuleProvider="target">
+            <connections>
+                <outlet property="listModule" destination="zWK-Xw-C97" id="Hew-SM-0lO"/>
+                <outlet property="refreshButton" destination="Zv6-6v-pok" id="oLL-Ui-xgO"/>
+                <outlet property="view" destination="3os-hw-bCN" id="Hu6-hz-tZI"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="3os-hw-bCN">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RZF-bd-jQ1">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zWK-Xw-C97">
+                            <rect key="frame" x="0.0" y="98" width="414" height="700"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="700" id="PbA-Wy-zf5"/>
+                            </constraints>
+                        </tableView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zv6-6v-pok">
+                            <rect key="frame" x="230" y="25" width="173" height="58"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <state key="normal" title="(click to refresh)">
+                                <color key="titleColor" name="color_ D44444"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="zWK-Xw-C97" secondAttribute="trailing" id="1dp-M9-fNZ"/>
+                        <constraint firstItem="zWK-Xw-C97" firstAttribute="leading" secondItem="RZF-bd-jQ1" secondAttribute="leading" id="II6-PK-Ed8"/>
+                        <constraint firstAttribute="bottom" secondItem="zWK-Xw-C97" secondAttribute="bottom" constant="20" symbolic="YES" id="emh-4r-gOD"/>
+                        <constraint firstItem="zWK-Xw-C97" firstAttribute="top" secondItem="Zv6-6v-pok" secondAttribute="bottom" constant="15" id="wAB-jJ-yNU"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="q3H-j0-lAl" firstAttribute="trailing" secondItem="Zv6-6v-pok" secondAttribute="trailing" constant="11" id="0UW-dv-hrh"/>
+                <constraint firstItem="q3H-j0-lAl" firstAttribute="trailing" secondItem="RZF-bd-jQ1" secondAttribute="trailing" id="965-ay-oLg"/>
+                <constraint firstItem="Zv6-6v-pok" firstAttribute="leading" secondItem="q3H-j0-lAl" secondAttribute="leading" constant="230" id="PFq-V2-cJi"/>
+                <constraint firstItem="RZF-bd-jQ1" firstAttribute="top" secondItem="q3H-j0-lAl" secondAttribute="top" id="Sk5-am-6af"/>
+                <constraint firstItem="q3H-j0-lAl" firstAttribute="bottom" secondItem="RZF-bd-jQ1" secondAttribute="bottom" id="WMy-Gf-ycr"/>
+                <constraint firstItem="RZF-bd-jQ1" firstAttribute="leading" secondItem="q3H-j0-lAl" secondAttribute="leading" id="fDf-cy-ekk"/>
+                <constraint firstItem="Zv6-6v-pok" firstAttribute="top" secondItem="q3H-j0-lAl" secondAttribute="top" constant="25" id="hxA-Fg-Q45"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="q3H-j0-lAl"/>
+            <point key="canvasLocation" x="137.68115942028987" y="91.741071428571431"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="color_ D44444">
+            <color red="0.83099997043609619" green="0.2669999897480011" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

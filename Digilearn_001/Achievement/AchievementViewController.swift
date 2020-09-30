@@ -21,6 +21,7 @@ class AchievementViewController: UIViewController {
     @IBOutlet weak var achievementView: UITableView!
     
     var achieveModel: AchieveModel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -82,6 +83,7 @@ class AchievementViewController: UIViewController {
 
 extension AchievementViewController: UITableViewDelegate, UITableViewDataSource
 {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return achieveModel?.library.count ?? 0
         
@@ -95,11 +97,25 @@ extension AchievementViewController: UITableViewDelegate, UITableViewDataSource
         let achieve: Library = (achieveModel?.library[indexPath.row])!
         cell.titleTask.text = achieve.courseName
         cell.namaInstitut.text = achieve.institutName
-        
-        return cell
-    }
+        //hjfj
+        //khjkgjhfhjfhfhhuuuuuuu
+   
+    
+        cell.achieveDetail.tag = indexPath.row
+        cell.achieveDetail.addTarget(self,action: #selector(AchievementViewController.openDetail(_:)),for: .touchUpInside)
+    return cell
 }
 
+@objc func openDetail(_ sender: UIButton?) {
+    debugPrint("test")
+    let achieveDetail = AchievementDetailViewController()
+    achieveDetail.modalPresentationStyle = .fullScreen
+    let library: Library = achieveModel.library[sender!.tag]
+    achieveDetail.titleachieve = library.courseName
+    achieveDetail.image = library.courseImage
+    achieveDetail.institutname = library.institutName
+    achieveDetail.courseid = library.courseID
+    self.present(achieveDetail, animated: true, completion: nil)
+}
 
-
-
+}
