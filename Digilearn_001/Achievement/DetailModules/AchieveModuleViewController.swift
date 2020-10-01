@@ -9,13 +9,18 @@
 import UIKit
 import Alamofire
 
+
 class AchieveModuleViewController: UIViewController {
     @IBOutlet weak var listModule: UITableView!
     @IBOutlet weak var refreshButton: UIButton!
     
     var course_id = ""
-    var modulesModel: ModulesModel!
+    var course_name = ""
+    var course_image = ""
+    var institut = ""
+    
     var achieveModel: AchieveModel!
+    var modulesModel: ModulesModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +29,7 @@ class AchieveModuleViewController: UIViewController {
         
         let nib = UINib(nibName: "AchieveModuleTableViewCell", bundle: nil)
         listModule.register(nib, forCellReuseIdentifier: "modulesIdentifier")
+        
         
         let user_id = readStringPreference(key: DigilearnsKeys.USER_ID)
         let URL = "\(DigilearnParams.ApiUrl)/api/apicourselistmoduleach"
@@ -70,24 +76,24 @@ extension AchieveModuleViewController: UITableViewDelegate, UITableViewDataSourc
         cell.courseName.text = course.moduleName
         
         
-        cell.isiModule.tag = indexPath.row
-        cell.isiModule.addTarget(self,action: #selector(AchievementViewController.openDetail(_:)),for: .touchUpInside)
+       cell.isiModule.tag = indexPath.row
+       cell.isiModule.addTarget(self,action: #selector(AchieveModuleViewController.openDetail(_:)),for: .touchUpInside)
         return cell
     }
     
     @objc func openDetail(_ sender: UIButton?) {
-        debugPrint("test")
-        let isiModule = ModuleDetailViewController()
-    isiModule.modalPresentationStyle = .fullScreen
-   // let library: Library = achieveModel.Library[sender!.tag]
-//    isiModule.module_name = library.courseName
-  //  isiModule.module_image = library.courseImage
-   // isiModule.institute_name = library.institutName
-    //isiModule.course_id = library.courseID
-   // self.present(isiModule, animated: true, completion: nil)
+    debugPrint("test")
+    let isiModule = ModuleDetailViewController()
+        isiModule.modalPresentationStyle = .fullScreen
+        let courseListModule: CourseListModule = modulesModel.courseListModule[sender!.tag]
+        isiModule.modulename = courseListModule.moduleName
+        isiModule.image = courseListModule.moduleImage
+        isiModule.download = courseListModule.moduleDownload
+        isiModule.institut = institut
+        isiModule.module_id = courseListModule.moduleID
+        isiModule.course_id = courseListModule.courseID
+        self.present(isiModule, animated: true, completion: nil)
+        }
 }
-
-}
-
 
 

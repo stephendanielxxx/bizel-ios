@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Alamofire
 
 class ModuleDetailViewController: UIViewController {
     @IBOutlet weak var titleModule: UILabel!
@@ -15,26 +14,30 @@ class ModuleDetailViewController: UIViewController {
     @IBOutlet weak var imageModul: UIImageView!
     @IBOutlet weak var topicsButton: UIButton!
     @IBOutlet weak var detailsButton: UIButton!
-    
+    @IBOutlet weak var contentView: UIView!
     
     var course_id = ""
     var module_id = ""
-    var module_image = ""
-    var module_download = ""
-    var module_name = ""
-    var institute_name = ""
+    var image = ""
+    var download = ""
+    var modulename = ""
+    var institut = ""
+    
+    var modulesModel: ModulesModel!
+    var achieveModel: AchieveModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        debugPrint(institut)
         
-        titleModule.text = self.module_name
-        institutModule.text = self.institute_name
+        titleModule.text = self.modulename
+        institutModule.text = self.institut
         imageModul.pin_updateWithProgress = true
         imageModul.contentMode = .scaleToFill
         imageModul.clipsToBounds = true
-        let url = Foundation.URL(string: "https://digicourse.id/digilearn/admin-master/assets.admin_master/course/image/\(module_image)")
+        let url = Foundation.URL(string: "https://digicourse.id/digilearn/admin-master/assets.admin_master/module/image/\(image)")
         imageModul.pin_setImage(from: url)
-        
+   
         
     }
 
@@ -42,6 +45,17 @@ class ModuleDetailViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-   
+    
+    @IBAction func topicsButton(_ sender: UIButton) {
+    }
+    
+    @IBAction func detailsButton(_ sender: UIButton) {
+        debugPrint("test")
+        let detail = DetailtopicViewController()
+               detail.module_id = module_id
+               embed(detail,inParent: self,inView: contentView)
+               
+    }
+    
 
 }

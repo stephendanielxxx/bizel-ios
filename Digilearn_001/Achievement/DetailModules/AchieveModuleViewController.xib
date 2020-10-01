@@ -36,6 +36,9 @@
                             <state key="normal" title="(click to refresh)">
                                 <color key="titleColor" name="color_ D44444"/>
                             </state>
+                            <connections>
+                                <action selector="refreshButton:" destination="-1" eventType="touchUpInside" id="mKO-4I-uzo"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
