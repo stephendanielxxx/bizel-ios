@@ -22,6 +22,8 @@ class ForgetPasswordViewController: UIViewController {
               forgetPassword.isUserInteractionEnabled = true
               forgetPassword.addGestureRecognizer(tap)
         // Do any additional setup after loading the view.
+        
+        forgetPassword.layer.cornerRadius = 18
     }
 
     @IBAction func cancelForgetPassword(_ sender: UIButton) {

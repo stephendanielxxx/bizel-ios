@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController" customModule="Digilearn_001" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController" customModule="Bizel" customModuleProvider="target">
             <connections>
                 <outlet property="changeImageButton" destination="yz2-P9-tiu" id="G3D-Cz-s5E"/>
                 <outlet property="changeProfile" destination="Iyx-Li-Hxu" id="DSR-fR-x7W"/>
@@ -101,43 +101,43 @@
                                                 <action selector="changeAction:" destination="-1" eventType="touchUpInside" id="9K3-3I-8fK"/>
                                             </connections>
                                         </button>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FeI-XK-ZNO" customClass="BottomBorderTF" customModule="Digilearn_001" customModuleProvider="target">
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FeI-XK-ZNO" customClass="BottomBorderTF" customModule="Bizel" customModuleProvider="target">
                                             <rect key="frame" x="32" y="48" width="276" height="19.5"/>
                                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <textInputTraits key="textInputTraits" textContentType="name"/>
                                         </textField>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UeK-yI-n0x" customClass="BottomBorderTF" customModule="Digilearn_001" customModuleProvider="target">
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UeK-yI-n0x" customClass="BottomBorderTF" customModule="Bizel" customModuleProvider="target">
                                             <rect key="frame" x="32" y="87.5" width="276" height="19.5"/>
                                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <textInputTraits key="textInputTraits" textContentType="family-name"/>
                                         </textField>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nickname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IIG-rs-SKT" customClass="BottomBorderTF" customModule="Digilearn_001" customModuleProvider="target">
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nickname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IIG-rs-SKT" customClass="BottomBorderTF" customModule="Bizel" customModuleProvider="target">
                                             <rect key="frame" x="32" y="127" width="276" height="19.5"/>
                                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <textInputTraits key="textInputTraits" textContentType="nickname"/>
                                         </textField>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rEF-Es-5Pq" customClass="BottomBorderTF" customModule="Digilearn_001" customModuleProvider="target">
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rEF-Es-5Pq" customClass="BottomBorderTF" customModule="Bizel" customModuleProvider="target">
                                             <rect key="frame" x="32" y="166.5" width="276" height="19.5"/>
                                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <textInputTraits key="textInputTraits" textContentType="email"/>
                                         </textField>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LTD-QD-vyy" customClass="BottomBorderTF" customModule="Digilearn_001" customModuleProvider="target">
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LTD-QD-vyy" customClass="BottomBorderTF" customModule="Bizel" customModuleProvider="target">
                                             <rect key="frame" x="32" y="206" width="276" height="19.5"/>
                                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <textInputTraits key="textInputTraits" textContentType="tel"/>
                                         </textField>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Institution" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AYP-VN-dzg" customClass="BottomBorderTF" customModule="Digilearn_001" customModuleProvider="target">
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Institution" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AYP-VN-dzg" customClass="BottomBorderTF" customModule="Bizel" customModuleProvider="target">
                                             <rect key="frame" x="32" y="245.5" width="276" height="19.5"/>
                                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <textInputTraits key="textInputTraits" textContentType="email"/>
                                         </textField>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Position" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0dn-x0-Vvn" customClass="BottomBorderTF" customModule="Digilearn_001" customModuleProvider="target">
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Position" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0dn-x0-Vvn" customClass="BottomBorderTF" customModule="Bizel" customModuleProvider="target">
                                             <rect key="frame" x="32" y="285" width="276" height="19.5"/>
                                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -173,12 +173,14 @@
                                     </constraints>
                                 </view>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVf-1X-veU">
-                                    <rect key="frame" x="247" y="551" width="130" height="40"/>
+                                    <rect key="frame" x="269" y="551" width="108" height="40"/>
                                     <color key="backgroundColor" name="red_1"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="130" id="Kmj-ZV-uSd"/>
+                                        <constraint firstAttribute="width" constant="108" id="tBQ-qv-C7s"/>
                                         <constraint firstAttribute="height" constant="40" id="yJC-13-fTA"/>
                                     </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <inset key="contentEdgeInsets" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
                                     <state key="normal" title="Save Changes">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
@@ -187,12 +189,14 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1x-lO-NUl">
-                                    <rect key="frame" x="37" y="551" width="130" height="40"/>
+                                    <rect key="frame" x="37" y="551" width="108" height="40"/>
                                     <color key="backgroundColor" name="red_1"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="40" id="9Q4-bR-uoM"/>
-                                        <constraint firstAttribute="width" constant="130" id="lDF-qK-uEK"/>
+                                        <constraint firstAttribute="width" constant="108" id="udl-dr-IUU"/>
                                     </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <inset key="contentEdgeInsets" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
                                     <state key="normal" title="Discard">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
@@ -225,6 +229,7 @@
                                 <constraint firstItem="SWz-xg-yGD" firstAttribute="centerX" secondItem="Qjv-bn-wEY" secondAttribute="centerX" id="r2g-d9-Rss"/>
                                 <constraint firstAttribute="trailing" secondItem="1BF-Ao-iU9" secondAttribute="trailing" constant="37" id="spI-LQ-m7B"/>
                                 <constraint firstItem="yz2-P9-tiu" firstAttribute="top" secondItem="SWz-xg-yGD" secondAttribute="bottom" constant="-48" id="tXh-5f-NcC"/>
+                                <constraint firstItem="lVf-1X-veU" firstAttribute="width" secondItem="T1x-lO-NUl" secondAttribute="width" id="uOQ-5y-ymv"/>
                                 <constraint firstAttribute="height" constant="774" id="vd8-uP-ZjE"/>
                                 <constraint firstItem="yz2-P9-tiu" firstAttribute="leading" secondItem="SWz-xg-yGD" secondAttribute="trailing" constant="-34" id="xBz-tZ-iTy"/>
                             </constraints>
@@ -264,10 +269,10 @@
         <image name="person.crop.circle" catalog="system" width="128" height="121"/>
         <image name="square.and.pencil" catalog="system" width="128" height="118"/>
         <namedColor name="color_ D44444">
-            <color red="0.83099997043609619" green="0.2669999897480011" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.83137254901960778" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="red_1">
-            <color red="0.60399997234344482" green="0.27099999785423279" blue="0.23499999940395355" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.60392156862745094" green="0.27058823529411763" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>
