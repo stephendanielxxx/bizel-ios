@@ -12,13 +12,18 @@ import Reqres
 import PINRemoteImage
 
 
-class FaqViewController: UIViewController {
+class FaqViewController: UIViewController, UISearchBarDelegate, UISearchResultsUpdating {
     
     @IBOutlet weak var faqView: UITableView!
     @IBOutlet weak var filterView: UIView!
+    @IBOutlet weak var searchButton: UIBarButtonItem!
+    
     
     var faqModel: FaqModel!
     var faqcatModel: FaqcatModel!
+    var isSearchVisible = false
+    
+    let searchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +36,21 @@ class FaqViewController: UIViewController {
         
         loadDefaultFAQ()
         loadFilterCategory()
+        
+        
+    }
+    
+    @IBAction func searchButtonAction(_ sender: UIBarButtonItem) {
+        searchController.hidesNavigationBarDuringPresentation = false
+        searchController.searchResultsUpdater = self
+        searchController.searchBar.delegate = self
+        searchController.searchBar.tintColor = UIColor(named: "red_1")
+        present(searchController, animated: true, completion: nil)
+    }
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        let searchBar = searchController.searchBar
+        searchFaq(searchText: searchBar.text!)
     }
     
     func loadFilterCategory(){
@@ -86,6 +106,32 @@ class FaqViewController: UIViewController {
         let URL = "\(DigilearnParams.ApiUrl)/apiari/apifilterfaq"
         let parameters: [String:Any] = [
             "faq_category": "\(categoryId)"
+        ]
+        
+        AF.request(URL,
+                   method: .post,
+                   parameters: parameters,
+                   encoding: URLEncoding.httpBody).responseData { response in
+                    switch response.result {
+                    case .success(let data):
+                        self.removeSpinner()
+                        let decoder = JSONDecoder()
+                        do{
+                            self.faqModel = try decoder.decode(FaqModel.self, from:data)
+                            self.faqView.reloadData()
+                        }catch{
+                            print(error.localizedDescription)
+                        }
+                    case .failure(let error):
+                        self.removeSpinner()
+                    }
+        }
+    }
+    
+    func searchFaq(searchText: String){
+        let URL = "\(DigilearnParams.ApiUrl)/apiari/apisubmitfaq"
+        let parameters: [String:Any] = [
+            "teks": "\(searchText)"
         ]
         
         AF.request(URL,

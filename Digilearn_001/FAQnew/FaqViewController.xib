@@ -12,6 +12,7 @@
             <connections>
                 <outlet property="faqView" destination="vLb-cZ-Xcl" id="J6I-g9-CZj"/>
                 <outlet property="filterView" destination="ajs-Ed-ERW" id="KhK-5K-GKD"/>
+                <outlet property="searchButton" destination="MsB-Gt-LkO" id="CHu-g8-hfj"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -23,21 +24,24 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z6y-Cu-Cfe">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <subviews>
-                        <navigationBar contentMode="scaleToFill" id="Naf-os-ODe">
+                        <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wbc-jh-eXW">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="barTintColor" name="color_ D44444"/>
                             <textAttributes key="titleTextAttributes">
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="textShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <offsetWrapper key="textShadowOffset" horizontal="250" vertical="0.0"/>
                             </textAttributes>
                             <items>
-                                <navigationItem title="FAQ" id="F8h-xI-tH1">
-                                    <barButtonItem key="leftBarButtonItem" image="arrow.left" catalog="system" id="ms2-L1-1YI">
+                                <navigationItem title="FAQ" id="z65-6V-L3n">
+                                    <barButtonItem key="leftBarButtonItem" image="arrow.left" catalog="system" id="Ix8-bj-V8w">
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
-                                            <action selector="backButton:" destination="-1" id="yNM-Yi-ca4"/>
+                                            <action selector="backButton:" destination="-1" id="dWd-qP-xVu"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem key="rightBarButtonItem" image="magnifyingglass" catalog="system" id="MsB-Gt-LkO">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="searchButtonAction:" destination="-1" id="XJH-tu-YeT"/>
                                         </connections>
                                     </barButtonItem>
                                 </navigationItem>
@@ -70,21 +74,24 @@
                             </constraints>
                         </scrollView>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vLb-cZ-Xcl">
-                            <rect key="frame" x="8" y="145" width="392" height="681"/>
+                            <rect key="frame" x="8" y="145" width="392" height="673"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         </tableView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
+                        <constraint firstItem="wbc-jh-eXW" firstAttribute="leading" secondItem="z6y-Cu-Cfe" secondAttribute="leading" id="2MH-Ce-43F"/>
                         <constraint firstItem="vLb-cZ-Xcl" firstAttribute="top" secondItem="2dX-3Y-F25" secondAttribute="bottom" constant="8" id="3SV-dF-UlN"/>
+                        <constraint firstAttribute="trailing" secondItem="wbc-jh-eXW" secondAttribute="trailing" id="4bh-qg-vSb"/>
                         <constraint firstItem="2dX-3Y-F25" firstAttribute="top" secondItem="Rpm-yO-PH7" secondAttribute="bottom" constant="8" id="6TO-wx-6FY"/>
                         <constraint firstItem="vLb-cZ-Xcl" firstAttribute="leading" secondItem="z6y-Cu-Cfe" secondAttribute="leading" constant="8" id="7ia-6Z-GGP"/>
                         <constraint firstItem="2dX-3Y-F25" firstAttribute="leading" secondItem="z6y-Cu-Cfe" secondAttribute="leading" id="SmM-hn-zcd"/>
+                        <constraint firstItem="Rpm-yO-PH7" firstAttribute="top" secondItem="wbc-jh-eXW" secondAttribute="bottom" constant="9" id="Ycb-GH-RQn"/>
                         <constraint firstAttribute="trailing" secondItem="vLb-cZ-Xcl" secondAttribute="trailing" constant="14" id="cWJ-WM-6zL"/>
-                        <constraint firstItem="Rpm-yO-PH7" firstAttribute="top" secondItem="Naf-os-ODe" secondAttribute="bottom" constant="9" id="hzI-qm-pbe"/>
                         <constraint firstItem="Rpm-yO-PH7" firstAttribute="leading" secondItem="z6y-Cu-Cfe" secondAttribute="leading" constant="19" id="jnc-E1-KFo"/>
-                        <constraint firstAttribute="bottom" secondItem="vLb-cZ-Xcl" secondAttribute="bottom" constant="-8" id="kWy-5n-PWC"/>
+                        <constraint firstAttribute="bottom" secondItem="vLb-cZ-Xcl" secondAttribute="bottom" id="kWy-5n-PWC"/>
                         <constraint firstAttribute="trailing" secondItem="2dX-3Y-F25" secondAttribute="trailing" id="pej-Y0-c8H"/>
+                        <constraint firstItem="wbc-jh-eXW" firstAttribute="top" secondItem="z6y-Cu-Cfe" secondAttribute="top" id="tTH-q3-JlC"/>
                     </constraints>
                 </view>
             </subviews>
@@ -103,6 +110,7 @@
     </objects>
     <resources>
         <image name="arrow.left" catalog="system" width="128" height="98"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <namedColor name="color_ D44444">
             <color red="0.83099997043609619" green="0.2669999897480011" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
