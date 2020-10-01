@@ -54,7 +54,7 @@ class TopicActionViewController: UIViewController {
     }
     
     func loadData(){
-        
+        showSpinner(onView: view)
         let user_id = readStringPreference(key: DigilearnsKeys.USER_ID)
         let parameters: [String:Any] = [
             "course_id": "\(self.courseId)",

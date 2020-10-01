@@ -33,6 +33,7 @@ class ModulesViewController: UIViewController {
     }
     
     func loadData(){
+        showSpinner(onView: view)
         let user_id = readStringPreference(key: DigilearnsKeys.USER_ID)
         let URL = "\(DigilearnParams.ApiUrl)/course/get_detail/\(course_id)/\(user_id)"
         
