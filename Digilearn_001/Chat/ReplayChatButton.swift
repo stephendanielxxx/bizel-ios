@@ -12,4 +12,5 @@ import UIKit
 class ReplayChatButton: UIButton{
     var repliedMessage: String!
     var repliedName: String!
+
 }
