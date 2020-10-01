@@ -122,6 +122,6 @@ extension HomeEventTableViewCell: UICollectionViewDelegateFlowLayout {
         cell.setNeedsLayout()
         cell.layoutIfNeeded()
         let size: CGSize = cell.contentView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
-        return CGSize(width: size.width, height: 150)
+        return CGSize(width: size.width, height: size.height)
     }
 }

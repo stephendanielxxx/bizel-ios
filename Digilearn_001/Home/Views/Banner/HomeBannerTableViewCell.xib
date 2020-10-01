@@ -24,8 +24,8 @@
                                 <rect key="frame" x="14" y="12" width="292" height="201"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="KMg-k2-jF9"/>
-                                    <constraint firstAttribute="width" secondItem="QFu-VP-4Tn" secondAttribute="height" multiplier="292:201" id="Qbs-dy-hYp"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="KMg-k2-jF9"/>
+                                    <constraint firstAttribute="width" secondItem="QFu-VP-4Tn" secondAttribute="height" multiplier="292:201" id="Vpg-Fr-P9Z"/>
                                 </constraints>
                             </view>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="vGo-Hf-rZN">
@@ -36,7 +36,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="250" id="FFa-Qg-QAB"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="250" id="FFa-Qg-QAB"/>
                             <constraint firstItem="QFu-VP-4Tn" firstAttribute="top" secondItem="uQy-mX-0WI" secondAttribute="top" constant="12" id="J8G-Yq-Q4x"/>
                             <constraint firstItem="vGo-Hf-rZN" firstAttribute="top" secondItem="QFu-VP-4Tn" secondAttribute="bottom" id="Vlo-MU-5UQ"/>
                             <constraint firstItem="vGo-Hf-rZN" firstAttribute="centerX" secondItem="uQy-mX-0WI" secondAttribute="centerX" id="a4h-r7-eYd"/>
@@ -65,7 +65,7 @@
     </objects>
     <resources>
         <namedColor name="red_1">
-            <color red="0.60392156862745094" green="0.27058823529411763" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.60399997234344482" green="0.27099999785423279" blue="0.23499999940395355" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>
