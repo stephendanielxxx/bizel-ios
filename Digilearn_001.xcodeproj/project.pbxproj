@@ -307,7 +307,7 @@
 		6AF6D80E2519ED0000947520 /* FaqTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FaqTableViewCell.xib; sourceTree = "<group>"; };
 		8C6B55D88B707C87B25641EC /* Pods-Digilearn_001.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Digilearn_001.release.xcconfig"; path = "Target Support Files/Pods-Digilearn_001/Pods-Digilearn_001.release.xcconfig"; sourceTree = "<group>"; };
 		B92A7280250087470010D52D /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
-		B934AF4124FF4B82000FCEB3 /* Digilearn_001.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Digilearn_001.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B934AF4124FF4B82000FCEB3 /* Bizel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bizel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B934AF4424FF4B82000FCEB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B934AF4624FF4B82000FCEB3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B934AF4824FF4B82000FCEB3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -751,7 +751,7 @@
 		B934AF4224FF4B82000FCEB3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B934AF4124FF4B82000FCEB3 /* Digilearn_001.app */,
+				B934AF4124FF4B82000FCEB3 /* Bizel.app */,
 				B934AF5A24FF4B85000FCEB3 /* Digilearn_001Tests.xctest */,
 				B934AF6524FF4B85000FCEB3 /* Digilearn_001UITests.xctest */,
 			);
@@ -1276,7 +1276,7 @@
 			);
 			name = Digilearn_001;
 			productName = Digilearn_001;
-			productReference = B934AF4124FF4B82000FCEB3 /* Digilearn_001.app */;
+			productReference = B934AF4124FF4B82000FCEB3 /* Bizel.app */;
 			productType = "com.apple.product-type.application";
 		};
 		B934AF5924FF4B85000FCEB3 /* Digilearn_001Tests */ = {
@@ -1886,7 +1886,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "digimaster.Digilearn-001";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Bizel;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1905,7 +1905,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "digimaster.Digilearn-001";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Bizel;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
