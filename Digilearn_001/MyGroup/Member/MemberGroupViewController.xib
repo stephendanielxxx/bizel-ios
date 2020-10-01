@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MemberGroupViewController" customModule="Digilearn_001" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MemberGroupViewController" customModule="Bizel" customModuleProvider="target">
             <connections>
                 <outlet property="clickRefreshButton" destination="Ki9-vI-dBO" id="ljA-JS-GOr"/>
                 <outlet property="memberView" destination="wAB-zk-fdt" id="ir4-Nx-7WQ"/>
@@ -31,7 +31,7 @@
                             </constraints>
                         </tableView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ki9-vI-dBO">
-                            <rect key="frame" x="230" y="25" width="173" height="58"/>
+                            <rect key="frame" x="284" y="25" width="119" height="58"/>
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <state key="normal" title="(click to refresh)">
                                 <color key="titleColor" name="color_ D44444"/>
@@ -56,7 +56,6 @@
                 <constraint firstItem="Ki9-vI-dBO" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="25" id="ItU-c1-gQm"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ki9-vI-dBO" secondAttribute="trailing" constant="11" id="Q8a-UJ-bRi"/>
                 <constraint firstItem="JbB-fx-dQu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="R4e-AY-vaQ"/>
-                <constraint firstItem="Ki9-vI-dBO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="230" id="WzS-8G-yyc"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="JbB-fx-dQu" secondAttribute="trailing" id="YXO-q1-EBj"/>
                 <constraint firstItem="JbB-fx-dQu" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="vlv-QA-HIW"/>
             </constraints>
@@ -66,7 +65,7 @@
     </objects>
     <resources>
         <namedColor name="color_ D44444">
-            <color red="0.83099997043609619" green="0.2669999897480011" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.83137254901960778" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
