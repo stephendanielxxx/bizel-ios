@@ -91,6 +91,8 @@
 		B94585EF2509FDDF00330DAC /* EventDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B94585ED2509FDDF00330DAC /* EventDetailViewController.xib */; };
 		B94585F1250A0D7D00330DAC /* EventDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94585F0250A0D7D00330DAC /* EventDetailModel.swift */; };
 		B94585F3250A2FFE00330DAC /* RegisterEventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94585F2250A2FFE00330DAC /* RegisterEventModel.swift */; };
+		B95668692527025A00CF6F6D /* WelcomeNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95668672527025A00CF6F6D /* WelcomeNameTableViewCell.swift */; };
+		B956686A2527025A00CF6F6D /* WelcomeNameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B95668682527025A00CF6F6D /* WelcomeNameTableViewCell.xib */; };
 		B9608B39251AF9B10082B3A3 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9608B37251AF9B10082B3A3 /* LibraryViewController.swift */; };
 		B9608B3A251AF9B10082B3A3 /* LibraryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9608B38251AF9B10082B3A3 /* LibraryViewController.xib */; };
 		B9608B3D251AFEE10082B3A3 /* NewLibraryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9608B3B251AFEE10082B3A3 /* NewLibraryTableViewCell.swift */; };
@@ -352,6 +354,8 @@
 		B94585ED2509FDDF00330DAC /* EventDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventDetailViewController.xib; sourceTree = "<group>"; };
 		B94585F0250A0D7D00330DAC /* EventDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailModel.swift; sourceTree = "<group>"; };
 		B94585F2250A2FFE00330DAC /* RegisterEventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEventModel.swift; sourceTree = "<group>"; };
+		B95668672527025A00CF6F6D /* WelcomeNameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeNameTableViewCell.swift; sourceTree = "<group>"; };
+		B95668682527025A00CF6F6D /* WelcomeNameTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeNameTableViewCell.xib; sourceTree = "<group>"; };
 		B9608B37251AF9B10082B3A3 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 		B9608B38251AF9B10082B3A3 /* LibraryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LibraryViewController.xib; sourceTree = "<group>"; };
 		B9608B3B251AFEE10082B3A3 /* NewLibraryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLibraryTableViewCell.swift; sourceTree = "<group>"; };
@@ -926,11 +930,21 @@
 		B94585D22509C6D900330DAC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B95668662527023A00CF6F6D /* Welcome */,
 				B9673DFD250F2581005E6BB8 /* Menu */,
 				B9673DFC250F2578005E6BB8 /* Banner */,
 				B98C44A4250B730C00363F8C /* Event */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		B95668662527023A00CF6F6D /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				B95668672527025A00CF6F6D /* WelcomeNameTableViewCell.swift */,
+				B95668682527025A00CF6F6D /* WelcomeNameTableViewCell.xib */,
+			);
+			path = Welcome;
 			sourceTree = "<group>";
 		};
 		B9608B36251AF9640082B3A3 /* Library */ = {
@@ -1454,6 +1468,7 @@
 				B9643A64251C91AD00438DA3 /* DeleteDialogViewController.xib in Resources */,
 				B9B39AB9251DEA6100AA9CE9 /* Montserrat-BlackItalic.ttf in Resources */,
 				6ADC3B2A250B28C200E88D7C /* AnnounceTableViewCell.xib in Resources */,
+				B956686A2527025A00CF6F6D /* WelcomeNameTableViewCell.xib in Resources */,
 				B9673E07250F561D005E6BB8 /* CourseViewController.xib in Resources */,
 				B9B39ABD251DEA6100AA9CE9 /* Montserrat-Black.ttf in Resources */,
 				6A69F2C42525927A0094A86F /* TopicsTableViewCell.xib in Resources */,
@@ -1802,6 +1817,7 @@
 				6AD2EE7B2510C8F8002A83FB /* MyGroupDetailViewController.swift in Sources */,
 				B9643A57251C808200438DA3 /* ChangePhoneViewController.swift in Sources */,
 				B94585F3250A2FFE00330DAC /* RegisterEventModel.swift in Sources */,
+				B95668692527025A00CF6F6D /* WelcomeNameTableViewCell.swift in Sources */,
 				B97C0D0C2512FE6D005E36B4 /* SecondBoardViewController.swift in Sources */,
 				B9A1160B2510A3CE00852131 /* TopicActionModel.swift in Sources */,
 				B986E8CE2524371000D2AE86 /* CourseDetailModel.swift in Sources */,
