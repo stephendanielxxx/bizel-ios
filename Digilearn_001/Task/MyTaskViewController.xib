@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyTaskViewController" customModule="Digilearn_001" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyTaskViewController" customModule="Bizel" customModuleProvider="target">
             <connections>
                 <outlet property="activeButton" destination="40D-4q-tD9" id="TXB-du-Vqf"/>
                 <outlet property="expiredButton" destination="avL-1y-O0K" id="HRZ-kQ-UmN"/>
@@ -42,11 +42,8 @@
                             <rect key="frame" x="0.0" y="44" width="414" height="70"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40D-4q-tD9">
-                                    <rect key="frame" x="55" y="18" width="125" height="34"/>
+                                    <rect key="frame" x="40" y="18" width="157" height="34"/>
                                     <color key="backgroundColor" name="color_ B63532"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="125" id="z8G-9A-FEA"/>
-                                    </constraints>
                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <inset key="contentEdgeInsets" minX="6" minY="6" maxX="6" maxY="6"/>
                                     <inset key="titleEdgeInsets" minX="12" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -56,11 +53,8 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="avL-1y-O0K">
-                                    <rect key="frame" x="238" y="18" width="125" height="34"/>
+                                    <rect key="frame" x="217" y="18" width="157" height="34"/>
                                     <color key="backgroundColor" name="color_ D44444"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="125" id="fMM-qG-yeq"/>
-                                    </constraints>
                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <inset key="contentEdgeInsets" minX="6" minY="6" maxX="6" maxY="6"/>
                                     <inset key="titleEdgeInsets" minX="12" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -72,13 +66,13 @@
                             </subviews>
                             <color key="backgroundColor" name="color_ D44444"/>
                             <constraints>
-                                <constraint firstAttribute="trailing" secondItem="avL-1y-O0K" secondAttribute="trailing" constant="51" id="Ahm-ms-d0Y"/>
-                                <constraint firstItem="avL-1y-O0K" firstAttribute="leading" secondItem="40D-4q-tD9" secondAttribute="trailing" constant="58" id="LoT-p6-U5C"/>
+                                <constraint firstAttribute="trailing" secondItem="avL-1y-O0K" secondAttribute="trailing" constant="40" id="Ahm-ms-d0Y"/>
+                                <constraint firstItem="avL-1y-O0K" firstAttribute="leading" secondItem="40D-4q-tD9" secondAttribute="trailing" constant="20" id="LoT-p6-U5C"/>
                                 <constraint firstItem="avL-1y-O0K" firstAttribute="width" secondItem="40D-4q-tD9" secondAttribute="width" id="O5j-el-15t"/>
                                 <constraint firstItem="40D-4q-tD9" firstAttribute="centerY" secondItem="Bqb-W3-Yok" secondAttribute="centerY" id="Orj-5T-JIR"/>
                                 <constraint firstItem="avL-1y-O0K" firstAttribute="centerY" secondItem="Bqb-W3-Yok" secondAttribute="centerY" id="S1j-zZ-tu2"/>
                                 <constraint firstAttribute="height" constant="70" id="hRf-1i-pqo"/>
-                                <constraint firstItem="40D-4q-tD9" firstAttribute="leading" secondItem="Bqb-W3-Yok" secondAttribute="leading" constant="55" id="l1A-7t-zk4"/>
+                                <constraint firstItem="40D-4q-tD9" firstAttribute="leading" secondItem="Bqb-W3-Yok" secondAttribute="leading" constant="40" id="l1A-7t-zk4"/>
                                 <constraint firstItem="avL-1y-O0K" firstAttribute="centerY" secondItem="40D-4q-tD9" secondAttribute="centerY" id="xQn-71-uma"/>
                             </constraints>
                         </view>
@@ -125,7 +119,7 @@
             <color red="0.71399998664855957" green="0.20800000429153442" blue="0.19599999487400055" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="color_ D44444">
-            <color red="0.83099997043609619" green="0.2669999897480011" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.83137254901960778" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

@@ -18,6 +18,7 @@ class MemberGroupViewController: UIViewController {
     
     var group_id = ""
     var memberModel: MemberModel!
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -27,7 +28,15 @@ class MemberGroupViewController: UIViewController {
         let nib = UINib(nibName: "IsiMemberTableViewCell", bundle: nil)
         memberView.register(nib, forCellReuseIdentifier: "IsiIdentifier")
         
+        loadData()
         
+    }
+    @IBAction func refreshAction(_ sender: UIButton) {
+        loadData()
+    }
+    
+    func loadData() {
+        self.showSpinner(onView: view)
         let URL = "\(DigilearnParams.ApiUrl)/api/apimembergroup"
         let parameters: [String:Any] = [
             "group_id": "\(group_id)"
@@ -50,11 +59,10 @@ class MemberGroupViewController: UIViewController {
                         self.removeSpinner()
                     }
         }
-    
     }
     
 }
-    extension MemberGroupViewController: UITableViewDelegate, UITableViewDataSource
+extension MemberGroupViewController: UITableViewDelegate, UITableViewDataSource
 {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return memberModel?.membergroup.count ?? 0
@@ -67,7 +75,7 @@ class MemberGroupViewController: UIViewController {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell =  memberView.dequeueReusableCell(withIdentifier: "IsiIdentifier") as! IsiMemberTableViewCell
         let member: Membergroup = (memberModel?.membergroup[indexPath.row])!
-       var username = ""
+        var username = ""
         if member.userFirstName != nil {
             username = "\(member.userFirstName!)"
         }
@@ -87,6 +95,6 @@ class MemberGroupViewController: UIViewController {
         }
         return cell
         
-}
+    }
 }
 

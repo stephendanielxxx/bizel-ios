@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CourseViewController" customModule="Digilearn_001" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CourseViewController" customModule="Bizel" customModuleProvider="target">
             <connections>
                 <outlet property="aboutButton" destination="DOE-t9-MIv" id="XMh-aR-0jK"/>
                 <outlet property="aboutLine" destination="TDX-1x-ijb" id="hft-al-5Av"/>
@@ -49,7 +49,8 @@
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pNS-Fh-sV5" userLabel="Image Course">
                             <rect key="frame" x="0.0" y="44" width="414" height="184"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="184" id="ehx-J9-SC4"/>
+                                <constraint firstAttribute="width" secondItem="pNS-Fh-sV5" secondAttribute="height" multiplier="9:4" id="FIZ-yk-KOy"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="184" id="ehx-J9-SC4"/>
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4e6-HR-Qb8" userLabel="Title">

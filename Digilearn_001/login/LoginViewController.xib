@@ -13,7 +13,7 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="Digilearn_001" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="Bizel" customModuleProvider="target">
             <connections>
                 <outlet property="forgetPassword" destination="Nvy-GH-vIK" id="Ug2-As-HU2"/>
                 <outlet property="loginImage" destination="ihY-lA-des" id="tuc-cX-lSA"/>
@@ -114,8 +114,8 @@
                                         <action selector="login:" destination="-1" eventType="touchUpInside" id="bTv-gX-fDc"/>
                                     </connections>
                                 </button>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Can't wait to collaborate with my teammate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="13Q-gT-g9H">
-                                    <rect key="frame" x="43.5" y="322" width="331" height="20"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Can't wait to collaborate with my teammate" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="13Q-gT-g9H">
+                                    <rect key="frame" x="18" y="322" width="378" height="20"/>
                                     <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -129,13 +129,14 @@
                                 <constraint firstAttribute="trailing" secondItem="F9b-bY-mxT" secondAttribute="trailing" constant="45" id="57x-v1-qM2"/>
                                 <constraint firstItem="ihY-lA-des" firstAttribute="leading" secondItem="V2v-JZ-gd5" secondAttribute="leading" constant="22" id="9jd-0B-J4C"/>
                                 <constraint firstItem="9eA-1Q-ZOn" firstAttribute="top" secondItem="HHB-TU-F2y" secondAttribute="bottom" constant="19" id="ApI-ax-Yfv"/>
+                                <constraint firstItem="13Q-gT-g9H" firstAttribute="leading" secondItem="V2v-JZ-gd5" secondAttribute="leading" constant="18" id="ExX-7X-iOy"/>
                                 <constraint firstItem="ihY-lA-des" firstAttribute="top" secondItem="V2v-JZ-gd5" secondAttribute="top" id="TH3-Ca-cIW"/>
+                                <constraint firstAttribute="trailing" secondItem="13Q-gT-g9H" secondAttribute="trailing" constant="18" id="Vh9-Q8-4vy"/>
                                 <constraint firstItem="Nvy-GH-vIK" firstAttribute="top" secondItem="9eA-1Q-ZOn" secondAttribute="bottom" constant="14" id="WA2-Wy-f8u"/>
                                 <constraint firstAttribute="trailing" secondItem="Nvy-GH-vIK" secondAttribute="trailing" constant="45" id="XvS-wq-ZA5"/>
                                 <constraint firstItem="MqA-OJ-Vni" firstAttribute="top" secondItem="ihY-lA-des" secondAttribute="bottom" constant="29" id="Xvo-Z7-8Kp"/>
                                 <constraint firstItem="HHB-TU-F2y" firstAttribute="top" secondItem="13Q-gT-g9H" secondAttribute="bottom" constant="47.5" id="Yxw-xl-xJ4"/>
                                 <constraint firstAttribute="height" constant="818" id="alh-el-GUi"/>
-                                <constraint firstItem="13Q-gT-g9H" firstAttribute="centerX" secondItem="MqA-OJ-Vni" secondAttribute="centerX" id="bPd-GV-tkl"/>
                                 <constraint firstItem="13Q-gT-g9H" firstAttribute="top" secondItem="MqA-OJ-Vni" secondAttribute="bottom" constant="28" id="jQL-3E-4kH"/>
                                 <constraint firstItem="pLr-Ds-2Vx" firstAttribute="top" secondItem="Nvy-GH-vIK" secondAttribute="bottom" constant="38" id="kjc-ke-zl0"/>
                                 <constraint firstItem="F9b-bY-mxT" firstAttribute="leading" secondItem="HHB-TU-F2y" secondAttribute="trailing" constant="6" id="ldz-k9-gIi"/>
@@ -197,7 +198,7 @@
         <image name="login_image" width="289" height="222.5"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <namedColor name="red_1">
-            <color red="0.60399997234344482" green="0.27099999785423279" blue="0.23499999940395355" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.60392156862745094" green="0.27058823529411763" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>

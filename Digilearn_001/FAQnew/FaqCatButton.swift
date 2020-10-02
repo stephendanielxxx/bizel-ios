@@ -1,5 +1,5 @@
 //
-//  ReplayChatButton.swift
+//  FaqCatButton.swift
 //  Digilearn_001
 //
 //  Created by Teke on 30/09/20.
@@ -9,8 +9,6 @@
 import Foundation
 import UIKit
 
-class ReplayChatButton: UIButton{
-    var repliedMessage: String!
-    var repliedName: String!
-
+class FaqCatButton: UIButton {
+    var categoryId = ""
 }

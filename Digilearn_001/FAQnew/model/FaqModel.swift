@@ -7,7 +7,7 @@ import Foundation
 
 // MARK: - Welcome
 struct FaqModel: Decodable {
-    let faq: [FAQ]
+    let faq: [FAQ]?
 
     enum CodingKeys: String, CodingKey {
         case faq = "faq:"
@@ -16,8 +16,12 @@ struct FaqModel: Decodable {
 
 // MARK: - FAQ
 struct FAQ: Decodable {
-    let faqID, faqQuestion, faqAnswer, faqCategory: String
-    let faqStatus, createdAt: String
+    let faqID: String?
+    let faqQuestion: String?
+    let faqAnswer: String?
+    let faqCategory: String?
+    let faqStatus: String?
+    let createdAt: String?
     let updatedAt: String?
 
     enum CodingKeys: String, CodingKey {

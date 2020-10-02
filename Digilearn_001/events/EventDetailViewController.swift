@@ -32,7 +32,7 @@ class EventDetailViewController: UIViewController {
         
         userId = readStringPreference(key: DigilearnsKeys.USER_ID)
         
-        registerButton.layer.cornerRadius = 15
+        registerButton.layer.cornerRadius = 18
         // Do any additional setup after loading the view.
     }
     
