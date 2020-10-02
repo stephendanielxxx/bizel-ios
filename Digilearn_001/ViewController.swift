@@ -26,7 +26,6 @@ class ViewController: UIViewController {
         loginView.addSubview(embeddedVC.view)
         embeddedVC.didMove(toParent: self)
         
-        var ref: DatabaseReference
     }
     
     @IBAction func test(_ sender: UIButton, forEvent event: UIEvent) {

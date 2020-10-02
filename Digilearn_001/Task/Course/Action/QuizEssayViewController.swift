@@ -118,9 +118,7 @@ class QuizEssayViewController: BaseActionViewController, ActionDelegate {
                         }catch{
                             print(error.localizedDescription)
                         }
-                    case .failure(let error):
-                        self.removeSpinner()
-                    default:
+                    case .failure(_):
                         self.removeSpinner()
                     }
         }

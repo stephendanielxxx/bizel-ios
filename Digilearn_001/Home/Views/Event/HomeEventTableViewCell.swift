@@ -60,7 +60,7 @@ class HomeEventTableViewCell: UITableViewCell {
                             print(error.localizedDescription)
                         }
                         break
-                    case .failure(let error):
+                    case .failure(_):
                         debugPrint("Error")
                         break
                     }

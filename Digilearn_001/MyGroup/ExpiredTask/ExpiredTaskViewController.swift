@@ -58,7 +58,7 @@ class ExpiredTaskViewController: UIViewController {
                         do{
                             self.listTaskModel = try decoder.decode(ListTaskModel.self, from:data)
                             
-                            var taskModel: [TaskModel] = self.listTaskModel.courseByUid
+                            let taskModel: [TaskModel] = self.listTaskModel.courseByUid
                             
                             var index: Int = 0
                             for task in taskModel{
@@ -79,7 +79,7 @@ class ExpiredTaskViewController: UIViewController {
                         }catch{
                             print(error.localizedDescription)
                         }
-                    case .failure(let error):
+                    case .failure(_):
                         self.removeSpinner()
                     }
         }

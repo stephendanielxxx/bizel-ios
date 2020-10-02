@@ -76,17 +76,13 @@ class BaseActionViewController: UIViewController {
                             self.removeSpinner()
                             let decoder = JSONDecoder()
                             do{
-                                
                                 self.submitProgressModel = try decoder.decode(SubmitProgressModel.self, from:data)
-                                debugPrint(self.submitProgressModel)
                                 self.actionDelegate.onSubmitProgress(message: (self.submitProgressModel?.message)!)
                                 
                             }catch{
                                 print(error.localizedDescription)
                             }
-                        case .failure(let error):
-                            self.removeSpinner()
-                        default:
+                        case .failure(_):
                             self.removeSpinner()
                         }
             }

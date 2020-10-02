@@ -46,7 +46,7 @@ class BaseSettingViewController: UIViewController {
                         self.removeSpinner()
                         let decoder = JSONDecoder()
                         do{
-                            let logoutModel = try decoder.decode(LogoutModel.self, from:data)
+                            _ = try decoder.decode(LogoutModel.self, from:data)
                             
                             self.saveStringPreference(value: "", key: DigilearnsKeys.USER_ID)
                             self.saveStringPreference(value: "", key: DigilearnsKeys.FIRST_NAME)
@@ -61,8 +61,6 @@ class BaseSettingViewController: UIViewController {
 //                            self.resetDefaults()
                             
                             self.dismiss(animated: true, completion: {
-                                let topViewController = UIApplication.shared.keyWindow?.rootViewController
-
                                 let login = LoginViewController()
                                 login.modalPresentationStyle = .fullScreen
                                 self.present(login, animated: true, completion: nil)
@@ -71,7 +69,7 @@ class BaseSettingViewController: UIViewController {
                         }catch{
                             print(error.localizedDescription)
                         }
-                    case .failure(let error):
+                    case .failure(_):
                         self.removeSpinner()
                     }
         }

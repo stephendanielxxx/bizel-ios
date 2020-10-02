@@ -46,7 +46,7 @@ class MaterialVideoViewController: BaseActionViewController, ActionDelegate {
         
         scrollView.bounces = (scrollView.contentOffset.y > 100);
         
-        var videoUrl = "https://digicourse.id/digilearn/admin-master/assets.admin_master/action/material/video/\(quiz!.file!)"
+        let videoUrl = "https://digicourse.id/digilearn/admin-master/assets.admin_master/action/material/video/\(quiz!.file!)"
         let secondNetworkURL = URL(string: videoUrl)
         let secondAsset = AVURLAsset(url: secondNetworkURL!)
         videoPlayer.backgroundColor = UIColor.white

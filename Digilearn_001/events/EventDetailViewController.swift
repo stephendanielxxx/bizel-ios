@@ -28,7 +28,7 @@ class EventDetailViewController: UIViewController {
         super.viewDidLoad()
         
         Reqres.register()
-        loadData(var: eventId)
+        loadData(eventId: eventId)
         
         userId = readStringPreference(key: DigilearnsKeys.USER_ID)
         
@@ -40,7 +40,7 @@ class EventDetailViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-    func loadData(var eventId: String){
+    func loadData(eventId: String){
         let URL = "\(DigilearnParams.ApiUrl)/onsite/get_detail/\(eventId)"
         
         AF.request(URL,
@@ -69,7 +69,7 @@ class EventDetailViewController: UIViewController {
                             print(error.localizedDescription)
                         }
                         break
-                    case .failure(let error):
+                    case .failure(_):
                         debugPrint("Error")
                         break
                     }
@@ -110,7 +110,7 @@ class EventDetailViewController: UIViewController {
                         }catch{
                             print(error.localizedDescription)
                         }
-                    case .failure(let error):
+                    case .failure(_):
                         self.removeSpinner()
                     }
         }

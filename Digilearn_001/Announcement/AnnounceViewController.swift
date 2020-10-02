@@ -40,7 +40,7 @@ class AnnounceViewController: UIViewController {
                         }catch{
                             print(error.localizedDescription)
                         }
-                    case .failure(let error):
+                    case .failure(_):
                         self.removeSpinner()
                     }
         }
@@ -71,7 +71,7 @@ extension AnnounceViewController: UITableViewDelegate, UITableViewDataSource
         cell.imageAnnounce.clipsToBounds = true
         
         
-        if(announcement.announcementImage != nil) {
+        if announcement.announcementImage != nil {
             let url = Foundation.URL(string: "https://digicourse.id/digilearn/admin-master/assets.admin_master/announcement/image/\(announcement.announcementImage)")
             cell.imageAnnounce.pin_setImage(from: url)
             

@@ -79,9 +79,7 @@ class TopicActionViewController: UIViewController {
                         }catch{
                             print(error.localizedDescription)
                         }
-                    case .failure(let error):
-                        self.removeSpinner()
-                    default:
+                    case .failure(_):
                         self.removeSpinner()
                     }
         }
@@ -210,14 +208,14 @@ extension TopicActionViewController: ExpandableDelegate, ActionViewDelegate{
         let action = ActionViewController()
         action.isLibrary = self.isLibrary
         action.actionViewDelegate = self
-        action.moduleTitle = topicAction?.moduleName as! String
+        action.moduleTitle = topicAction!.moduleName!
         action.nextModuleName = nextModuleName
         action.courseId = courseId
-        action.moduleId = topicAction?.moduleID as! String
-        action.topicId = topicAction?.topicID as! String
-        action.actionId = topicAction?.actionID as! String
+        action.moduleId = topicAction!.moduleID!
+        action.topicId = topicAction!.topicID!
+        action.actionId = topicAction!.actionID!
         action.indexPage = indexCell
-        action.nextTopicId = topicAction?.nextTopicID as! String
+        action.nextTopicId = topicAction!.nextTopicID!
         action.modalPresentationStyle = .fullScreen
         
         if isLibrary {

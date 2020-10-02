@@ -84,7 +84,7 @@ class ChatViewController: UIViewController {
             
             guard let value = snapshot.value else { return }
             do {
-                var model = try FirebaseDecoder().decode(ChatModel.self, from: value)
+                let model = try FirebaseDecoder().decode(ChatModel.self, from: value)
                 
                 var index = 0
                 for chat in self.chatList {
@@ -151,7 +151,7 @@ class ChatViewController: UIViewController {
 
 extension ChatViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return chatList.count ?? 0
+        return chatList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -258,7 +258,7 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource{
         // to add a single button
         popup.addButtons([buttonOne, buttonThree])
         
-        var buttonAppearance = DefaultButton.appearance()
+        let buttonAppearance = DefaultButton.appearance()
         buttonAppearance.titleColor = UIColor(named: "red_1")
         
         // Present dialog

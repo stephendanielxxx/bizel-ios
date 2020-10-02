@@ -244,7 +244,7 @@ class ProfileViewController: BaseSettingViewController, UIImagePickerControllerD
                     }catch{
                         print(error.localizedDescription)
                     }
-                case .failure(let error):
+                case .failure(_):
                     self.removeSpinner()
                 }
         }
@@ -277,12 +277,12 @@ extension ProfileViewController: SettingDelegate{
                             self.removeSpinner()
                             let decoder = JSONDecoder()
                             do{
-                                let response = try decoder.decode(ChangeProfileModel.self, from:data)
+                                _ = try decoder.decode(ChangeProfileModel.self, from:data)
                                 self.logout()
                             }catch{
                                 print(error.localizedDescription)
                             }
-                        case .failure(let error):
+                        case .failure(_):
                             self.removeSpinner()
                         }
             }

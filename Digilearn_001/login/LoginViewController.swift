@@ -73,13 +73,13 @@ class LoginViewController: UIViewController {
     
     @IBAction func login(_ sender: UIButton) {
         
-        var pass = password.text
+        let pass = password.text
         var phone = phoneLogin.getFormattedPhoneNumber(format: .E164)
         
         phone = phone?.replacingOccurrences(of: "+", with: "", options: NSString.CompareOptions.literal, range:nil)
         
-        var passCounter = pass?.count ?? 0
-        var phoneCounter = phoneLogin.text?.count ?? 1
+        let passCounter = pass?.count ?? 0
+//        let phoneCounter = phoneLogin.text?.count ?? 1
         
         if(!phoneValid){
             let alert = UIAlertController(title: "Login Failed", message: "Invalid phone number", preferredStyle: .alert)
@@ -133,7 +133,7 @@ class LoginViewController: UIViewController {
                             }catch{
                                 print(error.localizedDescription)
                             }
-                        case .failure(let error):
+                        case .failure(_):
                             self.removeSpinner()
                         }
             }
