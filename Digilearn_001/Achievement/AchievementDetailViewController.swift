@@ -59,6 +59,7 @@ class AchievementDetailViewController: UIViewController {
         detailLine.backgroundColor = UIColor.lightGray
         let module = AchieveModuleViewController()
         module.course_id = courseid
+        module.institut = institutname
         
         embed(module,inParent: self,inView: contentView)
         

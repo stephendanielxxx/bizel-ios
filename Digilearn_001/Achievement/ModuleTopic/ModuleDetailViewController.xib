@@ -10,11 +10,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ModuleDetailViewController" customModule="Digilearn_001" customModuleProvider="target">
             <connections>
+                <outlet property="contentView" destination="mrl-lJ-F8d" id="WEi-MS-uCB"/>
                 <outlet property="detailsButton" destination="bWi-hG-Jb0" id="ObL-aN-czX"/>
+                <outlet property="detailsLine" destination="QNI-Vy-Sk6" id="OHY-LH-vGL"/>
                 <outlet property="imageModul" destination="htD-bd-f0p" id="Phh-vV-axI"/>
                 <outlet property="institutModule" destination="Gpa-6I-ZRF" id="rwe-zE-8LJ"/>
                 <outlet property="titleModule" destination="bTi-5Z-GCp" id="2Yj-HM-cOQ"/>
                 <outlet property="topicsButton" destination="cet-uQ-UWA" id="bu2-Xb-90d"/>
+                <outlet property="topicsLine" destination="tnx-Id-Hpd" id="K5a-OB-WqU"/>
+                <outlet property="view" destination="nZu-gt-ezC" id="fEX-AR-XhP"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -32,14 +36,14 @@
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTi-5Z-GCp" userLabel="Title">
-                            <rect key="frame" x="184.5" y="30" width="45" height="21"/>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <rect key="frame" x="180" y="30" width="54" height="25.5"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gpa-6I-ZRF" userLabel="Institute Name">
-                            <rect key="frame" x="194" y="59" width="26.5" height="12"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                            <rect key="frame" x="189.5" y="63.5" width="35.5" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -52,6 +56,9 @@
                                     <state key="normal" title="TOPICS">
                                         <color key="titleColor" name="red_1"/>
                                     </state>
+                                    <connections>
+                                        <action selector="topicsButton:" destination="-1" eventType="touchUpInside" id="aeu-z3-313"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWi-hG-Jb0">
                                     <rect key="frame" x="207" y="0.0" width="207" height="50"/>
@@ -59,6 +66,9 @@
                                     <state key="normal" title="DETAILS">
                                         <color key="titleColor" name="color_ B63532"/>
                                     </state>
+                                    <connections>
+                                        <action selector="detailsButton:" destination="-1" eventType="touchUpInside" id="NXc-pF-xPg"/>
+                                    </connections>
                                 </button>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tnx-Id-Hpd" userLabel="line">
                                     <rect key="frame" x="0.0" y="47" width="207" height="3"/>
@@ -131,7 +141,7 @@
                             <barButtonItem key="leftBarButtonItem" image="arrow.left" catalog="system" id="SY0-qY-BRp">
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
-                                    <action selector="backButton:" destination="-1" id="bKc-ee-EZW"/>
+                                    <action selector="backButton:" destination="-1" id="87t-N4-B6d"/>
                                 </connections>
                             </barButtonItem>
                         </navigationItem>
