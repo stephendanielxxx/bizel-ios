@@ -15,6 +15,8 @@ class ModuleDetailViewController: UIViewController {
     @IBOutlet weak var topicsButton: UIButton!
     @IBOutlet weak var detailsButton: UIButton!
     @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var topicsLine: UIView!
+    @IBOutlet weak var detailsLine: UIView!
     
     var course_id = ""
     var module_id = ""
@@ -47,10 +49,19 @@ class ModuleDetailViewController: UIViewController {
     
     
     @IBAction func topicsButton(_ sender: UIButton) {
+    topicsLine.backgroundColor = UIColor(named: "red_1")
+    detailsLine.backgroundColor = UIColor.lightGray
+        let topic = TopicsViewController()
+        topic.module_id = module_id
+                      embed(topic,inParent: self,inView: contentView)
     }
+    
     
     @IBAction func detailsButton(_ sender: UIButton) {
         debugPrint("test")
+        
+        detailsLine.backgroundColor = UIColor(named: "red_1")
+        topicsLine.backgroundColor = UIColor.lightGray
         let detail = DetailtopicViewController()
                detail.module_id = module_id
                embed(detail,inParent: self,inView: contentView)

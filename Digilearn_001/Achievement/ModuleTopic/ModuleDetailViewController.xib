@@ -12,10 +12,12 @@
             <connections>
                 <outlet property="contentView" destination="mrl-lJ-F8d" id="WEi-MS-uCB"/>
                 <outlet property="detailsButton" destination="bWi-hG-Jb0" id="ObL-aN-czX"/>
+                <outlet property="detailsLine" destination="QNI-Vy-Sk6" id="OHY-LH-vGL"/>
                 <outlet property="imageModul" destination="htD-bd-f0p" id="Phh-vV-axI"/>
                 <outlet property="institutModule" destination="Gpa-6I-ZRF" id="rwe-zE-8LJ"/>
                 <outlet property="titleModule" destination="bTi-5Z-GCp" id="2Yj-HM-cOQ"/>
                 <outlet property="topicsButton" destination="cet-uQ-UWA" id="bu2-Xb-90d"/>
+                <outlet property="topicsLine" destination="tnx-Id-Hpd" id="K5a-OB-WqU"/>
                 <outlet property="view" destination="nZu-gt-ezC" id="fEX-AR-XhP"/>
             </connections>
         </placeholder>

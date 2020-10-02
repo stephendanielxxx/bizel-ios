@@ -54,6 +54,7 @@
                         </constraints>
                     </view>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="NhX-ah-p2H" firstAttribute="top" secondItem="FZE-zO-9F9" secondAttribute="top" constant="10" id="0de-0v-fgm"/>
                     <constraint firstItem="NhX-ah-p2H" firstAttribute="leading" secondItem="FZE-zO-9F9" secondAttribute="leading" constant="10" id="N61-Rf-Bw1"/>
@@ -64,12 +65,10 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="dHF-5g-YY5"/>
             <connections>
-                <outlet property="achieveDetail" destination="NhX-ah-p2H" id="4w0-ok-kdq"/>
-                <outlet property="titleTask" destination="Ra0-fF-H2N" id="6QA-QC-JOT"/>
                 <outlet property="topicDownload" destination="NhX-ah-p2H" id="Scw-Hg-w4Q"/>
                 <outlet property="topicName" destination="Ra0-fF-H2N" id="x9g-Ln-oRs"/>
             </connections>
-            <point key="canvasLocation" x="181.15942028985509" y="97.767857142857139"/>
+            <point key="canvasLocation" x="-22" y="74"/>
         </tableViewCell>
     </objects>
     <resources>
