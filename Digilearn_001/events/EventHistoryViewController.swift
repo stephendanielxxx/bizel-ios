@@ -13,6 +13,7 @@ import Toast_Swift
 class EventHistoryViewController: UIViewController {
     
     @IBOutlet weak var historyView: UITableView!
+    @IBOutlet weak var emptyView: UIView!
     
     var historyModel: EventHistoryModel?
     let URL = "\(DigilearnParams.ApiUrl)/onsite/get_register_event"
@@ -48,11 +49,22 @@ class EventHistoryViewController: UIViewController {
                         let decoder = JSONDecoder()
                         do{
                             self.historyModel = try decoder.decode(EventHistoryModel.self, from:data)
-                            debugPrint(self.historyModel)
+                            
+                            if self.historyModel?.registeredEvent.count ?? 0
+                                > 0 {
+                                self.emptyView.isHidden = true
+                                self.historyView.isHidden = false
+                            }else{
+                                self.emptyView.isHidden = false
+                                self.historyView.isHidden = true
+                            }
+                            
                             self.historyView.reloadData()
                         }catch{
                             print(error.localizedDescription)
                             self.showToast(message: "No event history")
+                            self.emptyView.isHidden = false
+                            self.historyView.isHidden = true
                         }
                     case .failure(_):
                         self.removeSpinner()
