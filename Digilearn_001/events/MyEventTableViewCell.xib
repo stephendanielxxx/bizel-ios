@@ -25,7 +25,7 @@
                                 <color key="backgroundColor" name="color_ D44444"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="fr0-IN-dLz" secondAttribute="height" multiplier="461:126" id="esV-Op-w2Q"/>
-                                    <constraint firstAttribute="height" constant="126" id="rvu-C8-GGW"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="126" id="rvu-C8-GGW"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQD-mh-YF9" userLabel="New Label">
@@ -42,7 +42,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WaV-2b-Qn0">
-                                <rect key="frame" x="329" y="94" width="120" height="32"/>
+                                <rect key="frame" x="329" y="97" width="120" height="29"/>
                                 <color key="backgroundColor" name="color_ B63532"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="RTn-8H-nLp"/>
@@ -56,7 +56,6 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="WaV-2b-Qn0" firstAttribute="top" secondItem="SQW-s5-S6C" secondAttribute="top" constant="94" id="5de-sd-HDo"/>
                             <constraint firstItem="fr0-IN-dLz" firstAttribute="top" secondItem="SQW-s5-S6C" secondAttribute="top" constant="12" id="8av-Je-2MZ"/>
                             <constraint firstAttribute="trailing" secondItem="WwL-J8-xC4" secondAttribute="trailing" constant="24" id="9MN-nh-HyK"/>
                             <constraint firstAttribute="bottom" secondItem="fr0-IN-dLz" secondAttribute="bottom" constant="12" id="TAV-LC-mzh"/>
@@ -73,10 +72,8 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="SQW-s5-S6C" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="3N8-tR-bBf"/>
-                    <constraint firstItem="SQW-s5-S6C" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" id="43J-wk-SYl"/>
                     <constraint firstAttribute="trailing" secondItem="SQW-s5-S6C" secondAttribute="trailing" id="Cus-Hc-h9O"/>
                     <constraint firstAttribute="bottom" secondItem="SQW-s5-S6C" secondAttribute="bottom" id="Tgi-nf-qBl"/>
-                    <constraint firstItem="SQW-s5-S6C" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" id="Uv3-NB-aLB"/>
                     <constraint firstItem="SQW-s5-S6C" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="VtR-Bb-9uT"/>
                 </constraints>
             </tableViewCellContentView>
