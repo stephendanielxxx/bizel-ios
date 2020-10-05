@@ -244,6 +244,8 @@
 		B9EA19FF252AEE24000922BD /* EventHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EA19FD252AEE24000922BD /* EventHistoryTableViewCell.swift */; };
 		B9EA1A00252AEE24000922BD /* EventHistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9EA19FE252AEE24000922BD /* EventHistoryTableViewCell.xib */; };
 		B9EA1A02252AF0AD000922BD /* EventHistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EA1A01252AF0AD000922BD /* EventHistoryModel.swift */; };
+		B9EA1A05252AF884000922BD /* EventRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EA1A03252AF884000922BD /* EventRegistrationViewController.swift */; };
+		B9EA1A06252AF884000922BD /* EventRegistrationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9EA1A04252AF884000922BD /* EventRegistrationViewController.xib */; };
 		EFC7323794321BEB69C47BCE /* Pods_Digilearn_001_Digilearn_001UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45CD92DF232C349F46A9A8DF /* Pods_Digilearn_001_Digilearn_001UITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -512,6 +514,8 @@
 		B9EA19FD252AEE24000922BD /* EventHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventHistoryTableViewCell.swift; sourceTree = "<group>"; };
 		B9EA19FE252AEE24000922BD /* EventHistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventHistoryTableViewCell.xib; sourceTree = "<group>"; };
 		B9EA1A01252AF0AD000922BD /* EventHistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventHistoryModel.swift; sourceTree = "<group>"; };
+		B9EA1A03252AF884000922BD /* EventRegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRegistrationViewController.swift; sourceTree = "<group>"; };
+		B9EA1A04252AF884000922BD /* EventRegistrationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventRegistrationViewController.xib; sourceTree = "<group>"; };
 		BC42425861CC009612B8FC89 /* Pods-Digilearn_001Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Digilearn_001Tests.release.xcconfig"; path = "Target Support Files/Pods-Digilearn_001Tests/Pods-Digilearn_001Tests.release.xcconfig"; sourceTree = "<group>"; };
 		C13A768FA10A24EE2EC74FE9 /* Pods_Digilearn_001Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Digilearn_001Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE24FEA383FD1DA25B5B206F /* Pods_Digilearn_001.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Digilearn_001.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1226,6 +1230,8 @@
 				B9EA19FA252AEBF6000922BD /* EventHistoryViewController.xib */,
 				B9EA19FD252AEE24000922BD /* EventHistoryTableViewCell.swift */,
 				B9EA19FE252AEE24000922BD /* EventHistoryTableViewCell.xib */,
+				B9EA1A03252AF884000922BD /* EventRegistrationViewController.swift */,
+				B9EA1A04252AF884000922BD /* EventRegistrationViewController.xib */,
 			);
 			path = events;
 			sourceTree = "<group>";
@@ -1548,6 +1554,7 @@
 				B9D74BDB25185E0B00133208 /* MaterialVideoViewController.xib in Resources */,
 				B9608B3E251AFEE10082B3A3 /* NewLibraryTableViewCell.xib in Resources */,
 				B9A116012510864200852131 /* AbousTopicViewController.xib in Resources */,
+				B9EA1A06252AF884000922BD /* EventRegistrationViewController.xib in Resources */,
 				6A1334002518809F0032F3A0 /* ActiveTaskTableViewCell.xib in Resources */,
 				B934AFC924FF8380000FCEB3 /* color.xcassets in Resources */,
 				B9608B3A251AF9B10082B3A3 /* LibraryViewController.xib in Resources */,
@@ -1797,6 +1804,7 @@
 				B9696659251487A800A3561E /* EssayModel.swift in Sources */,
 				B9608B39251AF9B10082B3A3 /* LibraryViewController.swift in Sources */,
 				6A69F2CB2525AB230094A86F /* DetailtopicViewController.swift in Sources */,
+				B9EA1A05252AF884000922BD /* EventRegistrationViewController.swift in Sources */,
 				B9673E06250F561D005E6BB8 /* CourseViewController.swift in Sources */,
 				B934AFE024FFA88D000FCEB3 /* LoginViewController.swift in Sources */,
 				6A9A13752521C4FA0034DAF5 /* DetailViewController.swift in Sources */,

@@ -124,6 +124,7 @@ extension MyEventViewController: UITableViewDelegate, UITableViewDataSource{
         let event: OnsiteList = (eventModel?.onsite[sender!.tag])!
         
         eventDetail.eventId = event.id
+        eventDetail.eventName = event.title
         
         self.present(eventDetail, animated: true, completion: nil)
     }

@@ -19,11 +19,10 @@ class EventDetailViewController: UIViewController {
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var linkLabel: UITextView!
     
-    var eventId:String = ""
-    var userId:String = ""
+    var eventId = ""
+    var eventName = ""
+    var userId = ""
     var eventDetailModel: EventDetailModel!
-    
-    let URL = "\(DigilearnParams.ApiUrl)/onsite/regis_onsite"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,43 +83,11 @@ class EventDetailViewController: UIViewController {
     }
     
     @IBAction func registerAction(_ sender: UIButton) {
-        self.showSpinner(onView: self.view)
-        
-        let eventDetail: OnsiteDetail =  self.eventDetailModel.onsite[0]
-        
-        let parameters: [String:Any] = [
-            "uid": "\(userId)",
-            "event_id" : "\(eventId)",
-            "event_name" : "\(eventDetail.title)"
-        ]
-        
-        AF.request(URL,
-                   method: .post,
-                   parameters: parameters,
-                   encoding: URLEncoding.httpBody).responseData { response in
-                    switch response.result {
-                    case .success(let data):
-                        self.removeSpinner()
-                        let decoder = JSONDecoder()
-                        do{
-                            let registerEventModel = try decoder.decode(RegisterEventModel.self, from:data)
-                            
-                            if(registerEventModel.code == "200"){
-                                let alert = UIAlertController(title: "Event Register Success", message: "\(registerEventModel.message)", preferredStyle: .alert)
-                                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-                                self.present(alert, animated: true)
-                            }else{
-                                let alert = UIAlertController(title: "Event Register Failed", message: "\(registerEventModel.message)", preferredStyle: .alert)
-                                alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
-                                self.present(alert, animated: true)
-                            }
-                        }catch{
-                            print(error.localizedDescription)
-                        }
-                    case .failure(_):
-                        self.removeSpinner()
-                    }
-        }
+        let register = EventRegistrationViewController()
+        register.eventId = eventId
+        register.eventName = eventName
+        register.modalPresentationStyle = .fullScreen
+        present(register, animated: true, completion: nil)
     }
     
 }
