@@ -37,7 +37,7 @@
                                 <color key="titleColor" name="color_ D44444"/>
                             </state>
                             <connections>
-                                <action selector="refreshButton:" destination="-1" eventType="touchUpInside" id="mKO-4I-uzo"/>
+                                <action selector="refreshButton:" destination="-1" eventType="touchUpInside" id="d9a-Ex-cle"/>
                             </connections>
                         </button>
                     </subviews>

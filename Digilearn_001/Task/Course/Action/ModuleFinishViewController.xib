@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ModuleFinishViewController" customModule="Digilearn_001" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ModuleFinishViewController" customModule="Bizel" customModuleProvider="target">
             <connections>
                 <outlet property="backButton" destination="Gwa-Dw-2wa" id="ank-1A-nw5"/>
                 <outlet property="moduleTitle" destination="VjZ-Oq-OlR" id="Bcq-RT-fp9"/>

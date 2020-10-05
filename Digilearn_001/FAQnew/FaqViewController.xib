@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FaqViewController" customModule="Digilearn_001" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FaqViewController" customModule="Bizel" customModuleProvider="target">
             <connections>
                 <outlet property="faqView" destination="vLb-cZ-Xcl" id="J6I-g9-CZj"/>
                 <outlet property="filterView" destination="ajs-Ed-ERW" id="KhK-5K-GKD"/>
@@ -29,6 +29,11 @@
                             <color key="barTintColor" name="color_ D44444"/>
                             <textAttributes key="titleTextAttributes">
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <offsetWrapper key="textShadowOffset" horizontal="300" vertical="0.0"/>
+                            </textAttributes>
+                            <textAttributes key="largeTitleTextAttributes">
+                                <offsetWrapper key="textShadowOffset" horizontal="300" vertical="0.0"/>
                             </textAttributes>
                             <items>
                                 <navigationItem title="FAQ" id="z65-6V-L3n">
