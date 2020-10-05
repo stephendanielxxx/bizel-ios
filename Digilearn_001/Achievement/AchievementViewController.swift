@@ -39,6 +39,7 @@ class AchievementViewController: UIViewController {
         let position = readStringPreference(key: DigilearnsKeys.USER_POSITION)
         let photo = readStringPreference(key: DigilearnsKeys.USER_PHOTO)
         
+        profileImage.makeRoundedWithBorder()
         usernameLabel.text = username
         institutLabel.text = institut
         statusLabel.text = position

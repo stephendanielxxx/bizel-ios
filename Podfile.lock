@@ -3,6 +3,7 @@ PODS:
   - AlamofireImage (4.1.0):
     - Alamofire (~> 5.1)
   - ASPVideoPlayer (6.1.1)
+  - CodableFirebase (0.2.1)
   - DropDown (2.3.13)
   - DynamicBlurView (4.1.0)
   - ExpandableCell (1.3.0)
@@ -175,6 +176,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 5.2)
   - ASPVideoPlayer
+  - CodableFirebase
   - DropDown
   - ExpandableCell
   - Firebase/Analytics
@@ -198,6 +200,7 @@ SPEC REPOS:
     - Alamofire
     - AlamofireImage
     - ASPVideoPlayer
+    - CodableFirebase
     - DropDown
     - DynamicBlurView
     - ExpandableCell
@@ -233,6 +236,7 @@ SPEC CHECKSUMS:
   Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
   AlamofireImage: c4a2ba349885fb3064feb74d2e547bd42ce9be10
   ASPVideoPlayer: 7a92fafe62d7b0615520f2ec33a9fbd05483a999
+  CodableFirebase: 0bf201991eeec35eb9fcd987d271ea463cf34a80
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
   DynamicBlurView: 58e18fae80bb614e34681a4486870e7d257b62e8
   ExpandableCell: 69ca7d71971c171473a7a30964d2127f4c6ceaf6
@@ -264,6 +268,6 @@ SPEC CHECKSUMS:
   SimpleCheckbox: ddcd433ab8c3a8f57300bebda13151a8f302c7f9
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: 3815521da823568c1961627b593af144b5b7b8e1
+PODFILE CHECKSUM: 5d7b0021388a264f32d85170b0b20db29373e632
 
 COCOAPODS: 1.9.3

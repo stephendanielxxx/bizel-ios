@@ -39,7 +39,8 @@ class ModuleDetailViewController: UIViewController {
         imageModul.clipsToBounds = true
         let url = Foundation.URL(string: "https://digicourse.id/digilearn/admin-master/assets.admin_master/module/image/\(image)")
         imageModul.pin_setImage(from: url)
-   
+        
+        topics()
         
     }
 
@@ -48,18 +49,22 @@ class ModuleDetailViewController: UIViewController {
     }
     
     
-    @IBAction func topicsButton(_ sender: UIButton) {
-    topicsLine.backgroundColor = UIColor(named: "red_1")
-    detailsLine.backgroundColor = UIColor.lightGray
+    fileprivate func topics() {
+        topicsLine.backgroundColor = UIColor(named: "red_1")
+        detailsLine.backgroundColor = UIColor.lightGray
         let topic = TopicsViewController()
         topic.module_id = module_id
-                      embed(topic,inParent: self,inView: contentView)
+        topic.download = download
+        embed(topic,inParent: self,inView: contentView)
+        
+    }
+    
+    @IBAction func topicsButton(_ sender: UIButton) {
+        topics()
     }
     
     
     @IBAction func detailsButton(_ sender: UIButton) {
-        debugPrint("test")
-        
         detailsLine.backgroundColor = UIColor(named: "red_1")
         topicsLine.backgroundColor = UIColor.lightGray
         let detail = DetailtopicViewController()

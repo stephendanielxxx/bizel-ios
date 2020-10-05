@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QuizViewController" customModule="Digilearn_001" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QuizViewController" customModule="Bizel" customModuleProvider="target">
             <connections>
                 <outlet property="buttonA" destination="3Es-uQ-Msu" id="D4R-Um-Zt7"/>
                 <outlet property="buttonB" destination="dHQ-qm-jib" id="hNE-F3-9cA"/>
@@ -127,7 +127,7 @@
                                         <action selector="prevAction:" destination="-1" eventType="touchUpInside" id="lXt-Ll-REo"/>
                                     </connections>
                                 </button>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Es-uQ-Msu" userLabel="Pil1" customClass="CustomChoiceCardView" customModule="Digilearn_001" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Es-uQ-Msu" userLabel="Pil1" customClass="CustomChoiceCardView" customModule="Bizel" customModuleProvider="target">
                                     <rect key="frame" x="44" y="560" width="40" height="40"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eGG-6S-z6i">
@@ -156,7 +156,7 @@
                                         <constraint firstAttribute="trailing" secondItem="eGG-6S-z6i" secondAttribute="trailing" id="wv3-rR-Lxj"/>
                                     </constraints>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dHQ-qm-jib" userLabel="Pil2" customClass="CustomChoiceCardView" customModule="Digilearn_001" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dHQ-qm-jib" userLabel="Pil2" customClass="CustomChoiceCardView" customModule="Bizel" customModuleProvider="target">
                                     <rect key="frame" x="44" y="608" width="40" height="40"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SJX-bQ-MtB">
@@ -184,7 +184,7 @@
                                         <constraint firstAttribute="bottom" secondItem="SJX-bQ-MtB" secondAttribute="bottom" id="oxh-eP-Fhu"/>
                                     </constraints>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bD1-7F-Ce2" userLabel="Pil3" customClass="CustomChoiceCardView" customModule="Digilearn_001" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bD1-7F-Ce2" userLabel="Pil3" customClass="CustomChoiceCardView" customModule="Bizel" customModuleProvider="target">
                                     <rect key="frame" x="44" y="656" width="40" height="40"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Ph-Xy-cCU">
@@ -212,7 +212,7 @@
                                         <constraint firstAttribute="width" constant="40" id="sWa-un-Jnr"/>
                                     </constraints>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nJh-kB-wgT" userLabel="Pil4" customClass="CustomChoiceCardView" customModule="Digilearn_001" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nJh-kB-wgT" userLabel="Pil4" customClass="CustomChoiceCardView" customModule="Bizel" customModuleProvider="target">
                                     <rect key="frame" x="44" y="704" width="40" height="40"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G1x-ct-7Y8">

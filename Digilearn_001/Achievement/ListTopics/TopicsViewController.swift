@@ -2,6 +2,7 @@
 
 import UIKit
 import Alamofire
+import Toast_Swift
 
 class TopicsViewController: UIViewController {
     @IBOutlet weak var refreshButton: UIButton!
@@ -10,6 +11,7 @@ class TopicsViewController: UIViewController {
     var module_id = ""
     var uid = ""
     var topic_name = ""
+    var download = ""
     
     var topicModel: TopicModel!
     
@@ -70,7 +72,13 @@ extension TopicsViewController: UITableViewDelegate, UITableViewDataSource
         return cell
     }
     @objc func download(_ sender: UIButton?) {
-        generatepdf(topic_id: String(sender!.tag))
+        if download == "N" { showToast(message: "The material in this module cannot be downloaded")
+            
+        }
+        else {
+            generatepdf(topic_id: String(sender!.tag))
+        }
+        
     }
     
     
@@ -99,9 +107,23 @@ extension TopicsViewController: UITableViewDelegate, UITableViewDataSource
         
     }
     func downloadpdf (filename: String) {
-        let destination = DownloadRequest.suggestedDownloadDestination(for: .documentDirectory)
+        let destination = DownloadRequest.suggestedDownloadDestination(for: .documentDirectory,options: .removePreviousFile)
         let url = "https://digicourse.id/digilearn/member/assets.digilearn/pdf/\(filename)"
-        AF.download(url, to: destination).response {response in debugPrint(response)}
+        AF.download(url, to: destination).response {response in
+            if response.error != nil {
+                self.showToast(message: "Download Failed! Please, Try again later")
+            }
+            else {self.showToast(message: "Yeay! Download Succes")}
+        
+        }
     }
-    
+    func showToast(message: String) {
+        var style = ToastStyle()
+        style.backgroundColor = UIColor.darkGray
+        style.messageColor = UIColor.white
+        ToastManager.shared.style = style
+        
+        self.view.makeToast(message)
+    }
 }
+
