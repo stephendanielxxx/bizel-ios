@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EventHistoryViewController" customModule="Bizel" customModuleProvider="target">
+            <connections>
+                <outlet property="historyView" destination="cxV-rW-clF" id="8O5-B1-fnl"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H75-gc-Ppp">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MHE-zF-PJa">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <color key="barTintColor" name="color_ D44444"/>
+                            <textAttributes key="titleTextAttributes">
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </textAttributes>
+                            <items>
+                                <navigationItem title="Request History" id="AZK-pd-XAa">
+                                    <barButtonItem key="leftBarButtonItem" image="arrow.left" catalog="system" id="Hs4-in-RWu">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="backAction:" destination="-1" id="IfS-kG-KUP"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </navigationItem>
+                            </items>
+                        </navigationBar>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cxV-rW-clF">
+                            <rect key="frame" x="0.0" y="44" width="414" height="774"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="cxV-rW-clF" firstAttribute="top" secondItem="MHE-zF-PJa" secondAttribute="bottom" id="8fc-kz-ZVP"/>
+                        <constraint firstAttribute="bottom" secondItem="cxV-rW-clF" secondAttribute="bottom" id="Gk9-jc-2Ug"/>
+                        <constraint firstItem="cxV-rW-clF" firstAttribute="leading" secondItem="H75-gc-Ppp" secondAttribute="leading" id="PXz-hc-Eok"/>
+                        <constraint firstAttribute="trailing" secondItem="cxV-rW-clF" secondAttribute="trailing" id="Ynd-pk-r0H"/>
+                        <constraint firstAttribute="trailing" secondItem="MHE-zF-PJa" secondAttribute="trailing" id="aqY-H6-5dh"/>
+                        <constraint firstItem="MHE-zF-PJa" firstAttribute="top" secondItem="H75-gc-Ppp" secondAttribute="top" id="oLW-v7-fg1"/>
+                        <constraint firstItem="MHE-zF-PJa" firstAttribute="leading" secondItem="H75-gc-Ppp" secondAttribute="leading" id="tNa-MS-Wns"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="H75-gc-Ppp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="O7Z-19-USg"/>
+                <constraint firstItem="H75-gc-Ppp" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Pdy-6U-qr6"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="H75-gc-Ppp" secondAttribute="bottom" id="SQP-ep-dme"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="H75-gc-Ppp" secondAttribute="trailing" id="c3D-wP-MhD"/>
+                <constraint firstItem="H75-gc-Ppp" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" id="ftb-sU-Umz"/>
+                <constraint firstItem="H75-gc-Ppp" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" id="jkY-Nj-PIf"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="145.98214285714286"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrow.left" catalog="system" width="128" height="98"/>
+        <namedColor name="color_ D44444">
+            <color red="0.83099997043609619" green="0.2669999897480011" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

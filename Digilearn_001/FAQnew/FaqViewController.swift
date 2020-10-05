@@ -91,7 +91,7 @@ class FaqViewController: UIViewController, UISearchBarDelegate, UISearchResultsU
                         }catch{
                             print(error.localizedDescription)
                         }
-                    case .failure(let error):
+                    case .failure(_):
                         self.removeSpinner()
                     }
         }
@@ -122,7 +122,7 @@ class FaqViewController: UIViewController, UISearchBarDelegate, UISearchResultsU
                         }catch{
                             print(error.localizedDescription)
                         }
-                    case .failure(let error):
+                    case .failure(_):
                         self.removeSpinner()
                     }
         }
@@ -148,7 +148,7 @@ class FaqViewController: UIViewController, UISearchBarDelegate, UISearchResultsU
                         }catch{
                             print(error.localizedDescription)
                         }
-                    case .failure(let error):
+                    case .failure(_):
                         self.removeSpinner()
                     }
         }
@@ -170,7 +170,7 @@ class FaqViewController: UIViewController, UISearchBarDelegate, UISearchResultsU
                         }catch{
                             print(error.localizedDescription)
                         }
-                    case .failure(let error):
+                    case .failure(_):
                         self.removeSpinner()
                     }
         }

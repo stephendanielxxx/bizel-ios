@@ -15,6 +15,7 @@ class MyEventViewController: UIViewController {
     let URL = "\(DigilearnParams.ApiUrl)/home/get_onsite_course"
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var eventHistory: UIBarButtonItem!
     var eventModel: EventModel?
     var eventId:String = ""
     
@@ -37,6 +38,11 @@ class MyEventViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
 
+    @IBAction func eventHistoryAction(_ sender: UIBarButtonItem) {
+        let history = EventHistoryViewController()
+        history.modalPresentationStyle = .fullScreen
+        present(history, animated: true, completion: nil)
+    }
     
     func loadData(){
         AF.request(URL,
@@ -62,7 +68,7 @@ class MyEventViewController: UIViewController {
                             print(error.localizedDescription)
                         }
                         break
-                    case .failure(let error):
+                    case .failure(_):
                         debugPrint("Error")
                         break
                     }
@@ -76,9 +82,9 @@ extension MyEventViewController: UITableViewDelegate, UITableViewDataSource{
         return eventModel?.onsite.count ?? 0
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150
-    }
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 150
+//    }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "myEventIdentifier") as! MyEventTableViewCell
@@ -118,6 +124,7 @@ extension MyEventViewController: UITableViewDelegate, UITableViewDataSource{
         let event: OnsiteList = (eventModel?.onsite[sender!.tag])!
         
         eventDetail.eventId = event.id
+        eventDetail.eventName = event.title
         
         self.present(eventDetail, animated: true, completion: nil)
     }

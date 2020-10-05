@@ -26,6 +26,7 @@ target 'Digilearn_001' do
   pod 'Firebase/Analytics'
   pod 'Firebase/Database'
   pod 'CodableFirebase'
+  pod 'SkyFloatingLabelTextField', '~> 3.0'
   #pod 'DKImagePickerController'
   #pod 'Player', '~> 0.13.2'
   #pod 'BMPlayer', '~> 1.3.0'

@@ -60,16 +60,13 @@ class ActionViewController: UIViewController {
                         do{
                             self.assesmentModel = try decoder.decode(AssesmentModel.self, from:data)
                             
-                            self.totalPage = self.assesmentModel.assessmentQuiz?.count as! Int
-                            
+                            self.totalPage = self.assesmentModel.assessmentQuiz!.count
                             self.openAction(index: self.indexPage)
                             
                         }catch{
                             print(error.localizedDescription)
                         }
-                    case .failure(let error):
-                        self.removeSpinner()
-                    default:
+                    case .failure(_):
                         self.removeSpinner()
                     }
         }

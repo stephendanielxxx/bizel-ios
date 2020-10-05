@@ -17,9 +17,10 @@ struct OnsiteDetail: Decodable {
     let event_id, title, desc: String
     let image: String
     let place: String
+    let link: String?
 
     enum CodingKeys: String, CodingKey {
         case event_id
-        case title, image, desc, place
+        case title, image, desc, place, link
     }
 }
