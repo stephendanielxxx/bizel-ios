@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AnnounceDetailViewController" customModule="Digilearn_001" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AnnounceDetailViewController" customModule="Bizel" customModuleProvider="target">
             <connections>
                 <outlet property="dateDetail" destination="LPj-Q2-Ffa" id="QUX-xR-of5"/>
                 <outlet property="imageDetail" destination="j3J-uI-hpF" id="kfa-kM-Clo"/>
@@ -22,7 +22,7 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GGy-Ku-feO">
+                <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GGy-Ku-feO">
                     <rect key="frame" x="0.0" y="60" width="414" height="44"/>
                     <color key="barTintColor" name="color_ D44444"/>
                     <items>
