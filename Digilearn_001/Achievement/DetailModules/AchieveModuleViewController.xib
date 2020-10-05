@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AchieveModuleViewController" customModule="Digilearn_001" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AchieveModuleViewController" customModule="Bizel" customModuleProvider="target">
             <connections>
                 <outlet property="listModule" destination="zWK-Xw-C97" id="Hew-SM-0lO"/>
                 <outlet property="refreshButton" destination="Zv6-6v-pok" id="oLL-Ui-xgO"/>

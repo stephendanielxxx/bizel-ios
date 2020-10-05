@@ -23,6 +23,7 @@ class AchievementDetailViewController: UIViewController {
     var titleachieve = ""
     var institutname = ""
     var courseid = ""
+    var moduledownload = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
