@@ -47,14 +47,15 @@
                             </items>
                         </navigationBar>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_achieve" translatesAutoresizingMaskIntoConstraints="NO" id="fSA-xA-VHF">
-                            <rect key="frame" x="0.0" y="44" width="414" height="180"/>
+                            <rect key="frame" x="0.0" y="44" width="414" height="291"/>
                             <color key="backgroundColor" name="color_ D44444"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="180" id="aGL-ID-stw"/>
+                                <constraint firstAttribute="width" secondItem="fSA-xA-VHF" secondAttribute="height" multiplier="138:97" id="4MY-5G-k8h"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="180" id="aGL-ID-stw"/>
                             </constraints>
                         </imageView>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eqd-Oc-Uc9">
-                            <rect key="frame" x="169.5" y="96.5" width="75" height="75"/>
+                            <rect key="frame" x="169.5" y="152" width="75" height="75"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="75" id="5Uy-Bn-r86"/>
@@ -62,25 +63,25 @@
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FO9-hn-8qS">
-                            <rect key="frame" x="77" y="175.5" width="270" height="17"/>
+                            <rect key="frame" x="77" y="231" width="270" height="17"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nama Institusi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6s-7j-EEk">
-                            <rect key="frame" x="10" y="193.5" width="394" height="14"/>
+                            <rect key="frame" x="10" y="249" width="394" height="14"/>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Posisi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SVD-KU-mAc">
-                            <rect key="frame" x="69" y="209.5" width="268" height="14.5"/>
+                            <rect key="frame" x="69" y="265" width="268" height="14.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="L52-Ly-Ypd">
-                            <rect key="frame" x="0.0" y="244" width="414" height="574"/>
+                            <rect key="frame" x="0.0" y="299.5" width="414" height="518.5"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <color key="sectionIndexColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
