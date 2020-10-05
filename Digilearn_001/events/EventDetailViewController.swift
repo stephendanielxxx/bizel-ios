@@ -17,6 +17,7 @@ class EventDetailViewController: UIViewController {
     @IBOutlet weak var descriptionText: UITextView!
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var registerButton: UIButton!
+    @IBOutlet weak var linkLabel: UITextView!
     
     var eventId:String = ""
     var userId:String = ""
@@ -64,6 +65,12 @@ class EventDetailViewController: UIViewController {
                             self.descriptionText.attributedText = eventDetail.desc.htmlToAttributedString
                             
                             self.addressLabel.text = eventDetail.place
+                            
+                            if eventDetail.link != nil {
+                                self.linkLabel.text = eventDetail.link
+                            }else{
+                                self.linkLabel.text = "No link provided"
+                            }
                             
                         }catch{
                             print(error.localizedDescription)
