@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyGroupViewController" customModule="Bizel" customModuleProvider="target">
             <connections>
+                <outlet property="emptyView" destination="Mlu-Wh-tTH" id="ScJ-zW-hcW"/>
                 <outlet property="groupView" destination="mzk-2o-JxG" id="99R-Np-IiA"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -19,7 +20,7 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mzk-2o-JxG">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mzk-2o-JxG">
                     <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </tableView>
@@ -42,14 +43,46 @@
                         </navigationItem>
                     </items>
                 </navigationBar>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mlu-Wh-tTH" userLabel="Empty View">
+                    <rect key="frame" x="47" y="340.5" width="320" height="225"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_empty_group" translatesAutoresizingMaskIntoConstraints="NO" id="4I8-f1-2OC">
+                            <rect key="frame" x="40" y="24" width="240" height="128"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="240" id="A1h-aC-UdG"/>
+                                <constraint firstAttribute="height" constant="128" id="TRd-yc-cW4"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You currently have no groups. Please contact Bizel administrator to join as a member of your organization group." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xh2-g1-C0U">
+                            <rect key="frame" x="12" y="164" width="296" height="43"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="225" id="6ch-vo-eDo"/>
+                        <constraint firstItem="4I8-f1-2OC" firstAttribute="leading" secondItem="Mlu-Wh-tTH" secondAttribute="leading" constant="40" id="FwQ-tR-D3j"/>
+                        <constraint firstItem="xh2-g1-C0U" firstAttribute="top" secondItem="4I8-f1-2OC" secondAttribute="bottom" constant="12" id="KsO-nW-0WV"/>
+                        <constraint firstAttribute="width" constant="320" id="WSE-Zc-GkZ"/>
+                        <constraint firstItem="4I8-f1-2OC" firstAttribute="top" secondItem="Mlu-Wh-tTH" secondAttribute="top" constant="24" id="fcZ-32-bfV"/>
+                        <constraint firstItem="xh2-g1-C0U" firstAttribute="leading" secondItem="Mlu-Wh-tTH" secondAttribute="leading" constant="12" id="gKz-Hi-DQB"/>
+                        <constraint firstAttribute="trailing" secondItem="4I8-f1-2OC" secondAttribute="trailing" constant="40" id="tro-8S-GrG"/>
+                        <constraint firstAttribute="trailing" secondItem="xh2-g1-C0U" secondAttribute="trailing" constant="12" id="vOg-ah-V5s"/>
+                        <constraint firstItem="xh2-g1-C0U" firstAttribute="centerX" secondItem="Mlu-Wh-tTH" secondAttribute="centerX" id="z3v-ZI-1ww"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="aHH-Rt-9qc" secondAttribute="trailing" id="AcD-cI-9pN"/>
                 <constraint firstItem="mzk-2o-JxG" firstAttribute="top" secondItem="aHH-Rt-9qc" secondAttribute="bottom" id="FR1-Xj-O5e"/>
+                <constraint firstItem="Mlu-Wh-tTH" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="FcN-FC-aYl"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mzk-2o-JxG" secondAttribute="trailing" id="Mpw-cv-Jmx"/>
                 <constraint firstItem="mzk-2o-JxG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="QPY-7h-iBP"/>
                 <constraint firstItem="mzk-2o-JxG" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="Ven-0b-n8x"/>
+                <constraint firstItem="Mlu-Wh-tTH" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="Xbr-pp-Ovs"/>
                 <constraint firstItem="aHH-Rt-9qc" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="s2v-hd-dAI"/>
                 <constraint firstItem="aHH-Rt-9qc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="v8n-EY-E36"/>
             </constraints>
@@ -59,6 +92,7 @@
     </objects>
     <resources>
         <image name="arrow.left" catalog="system" width="128" height="98"/>
+        <image name="ic_empty_group" width="163.5" height="120"/>
         <namedColor name="color_ D44444">
             <color red="0.83099997043609619" green="0.2669999897480011" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

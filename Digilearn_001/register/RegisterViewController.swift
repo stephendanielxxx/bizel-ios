@@ -67,6 +67,8 @@ class RegisterViewController: UIViewController {
         let tap = UITapGestureRecognizer(target: self, action: #selector(RegisterViewController.privacyFunction))
         privacyLbl.isUserInteractionEnabled = true
         privacyLbl.addGestureRecognizer(tap)
+        
+        setTapToHideKeyboard()
        
     }
 

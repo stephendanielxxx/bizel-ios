@@ -82,13 +82,12 @@ extension EventHistoryViewController: UITableViewDataSource, UITableViewDelegate
         cell.eventName.text = history?.name
         cell.eventDate.text = "Registered at : \(history?.date ?? "")"
         
-        cell.eventImage.pin_updateWithProgress = true
+//        cell.eventImage.pin_updateWithProgress = true
         cell.eventImage.contentMode = .scaleToFill
         cell.eventImage.clipsToBounds = true
         
-        let url = Foundation.URL(string: "https://digicourse.id/digilearn/admin-master/assets.admin_master/event/image/\(history!.img!)")
-        debugPrint(url)
-        cell.eventImage.pin_setImage(from: url)
+//        let url = Foundation.URL(string: "https://digicourse.id/digilearn/admin-master/assets.admin_master/event/image/\(history!.img!)")
+//        cell.eventImage.pin_setImage(from: url)
         //        }
         return cell
     }
