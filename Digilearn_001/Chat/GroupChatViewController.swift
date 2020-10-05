@@ -14,13 +14,13 @@ import CodableFirebase
 class GroupChatViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var emptyView: UIView!
+    
     var groupModel: GroupModel!
     var ref: DatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        tableView.backgroundView = UIImageView(image: UIImage(named: "img_bg_chat"))
         
         let nib = UINib(nibName: "GroupChatTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "groupChatIdentifier")
@@ -57,9 +57,25 @@ class GroupChatViewController: UIViewController {
                         let decoder = JSONDecoder()
                         do{
                             self.groupModel = try decoder.decode(GroupModel.self, from:data)
+                            
+                            if self.groupModel.listGroup.count > 0 {
+                                debugPrint("1")
+                                self.emptyView.isHidden = true
+                                self.tableView.isHidden = false
+                                
+                                self.tableView.backgroundView = UIImageView(image: UIImage(named: "img_bg_chat"))
+                            }else{
+                                debugPrint("2")
+                                self.emptyView.isHidden = false
+                                self.tableView.isHidden = true
+                            }
+                            
                             self.tableView.reloadData()
                         }catch{
+                            debugPrint("3")
                             print(error.localizedDescription)
+                            self.emptyView.isHidden = false
+                            self.tableView.isHidden = true
                         }
                     case .failure(_):
                         self.removeSpinner()

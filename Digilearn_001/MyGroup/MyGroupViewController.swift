@@ -13,6 +13,7 @@ import PINRemoteImage
 
 class MyGroupViewController: UIViewController {
     @IBOutlet weak var groupView: UITableView!
+    @IBOutlet weak var emptyView: UIView!
     var groupModel: GroupModel!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,9 +38,20 @@ class MyGroupViewController: UIViewController {
                         let decoder = JSONDecoder()
                         do{
                             self.groupModel = try decoder.decode(GroupModel.self, from:data)
+                            
+                            if self.groupModel.listGroup.count > 0 {
+                                self.emptyView.isHidden = true
+                                self.groupView.isHidden = false
+                            }else{
+                                self.emptyView.isHidden = false
+                                self.groupView.isHidden = true
+                            }
+                            
                             self.groupView.reloadData()
                         }catch{
                             print(error.localizedDescription)
+                            self.emptyView.isHidden = true
+                            self.groupView.isHidden = false
                         }
                     case .failure(_):
                         self.removeSpinner()

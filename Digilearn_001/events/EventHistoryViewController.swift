@@ -13,6 +13,7 @@ import Toast_Swift
 class EventHistoryViewController: UIViewController {
     
     @IBOutlet weak var historyView: UITableView!
+    @IBOutlet weak var emptyView: UIView!
     
     var historyModel: EventHistoryModel?
     let URL = "\(DigilearnParams.ApiUrl)/onsite/get_register_event"
@@ -48,11 +49,22 @@ class EventHistoryViewController: UIViewController {
                         let decoder = JSONDecoder()
                         do{
                             self.historyModel = try decoder.decode(EventHistoryModel.self, from:data)
-                            debugPrint(self.historyModel)
+                            
+                            if self.historyModel?.registeredEvent.count ?? 0
+                                > 0 {
+                                self.emptyView.isHidden = true
+                                self.historyView.isHidden = false
+                            }else{
+                                self.emptyView.isHidden = false
+                                self.historyView.isHidden = true
+                            }
+                            
                             self.historyView.reloadData()
                         }catch{
                             print(error.localizedDescription)
                             self.showToast(message: "No event history")
+                            self.emptyView.isHidden = false
+                            self.historyView.isHidden = true
                         }
                     case .failure(_):
                         self.removeSpinner()
@@ -82,13 +94,12 @@ extension EventHistoryViewController: UITableViewDataSource, UITableViewDelegate
         cell.eventName.text = history?.name
         cell.eventDate.text = "Registered at : \(history?.date ?? "")"
         
-        cell.eventImage.pin_updateWithProgress = true
+//        cell.eventImage.pin_updateWithProgress = true
         cell.eventImage.contentMode = .scaleToFill
         cell.eventImage.clipsToBounds = true
         
-        let url = Foundation.URL(string: "https://digicourse.id/digilearn/admin-master/assets.admin_master/event/image/\(history!.img!)")
-        debugPrint(url)
-        cell.eventImage.pin_setImage(from: url)
+//        let url = Foundation.URL(string: "https://digicourse.id/digilearn/admin-master/assets.admin_master/event/image/\(history!.img!)")
+//        cell.eventImage.pin_setImage(from: url)
         //        }
         return cell
     }

@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyTaskViewController" customModule="Bizel" customModuleProvider="target">
             <connections>
                 <outlet property="activeButton" destination="40D-4q-tD9" id="TXB-du-Vqf"/>
+                <outlet property="emptyView" destination="jgb-Tx-kUY" id="u7Q-zk-1hW"/>
                 <outlet property="expiredButton" destination="avL-1y-O0K" id="HRZ-kQ-UmN"/>
                 <outlet property="taskView" destination="FWg-wQ-E0M" id="MOf-Wf-ULI"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -81,7 +82,7 @@
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         </tableView>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemGray4Color" red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="QZX-u8-0ho" secondAttribute="trailing" id="2mb-0G-XBn"/>
                         <constraint firstItem="Bqb-W3-Yok" firstAttribute="width" secondItem="QZX-u8-0ho" secondAttribute="width" id="CKx-kP-43B"/>
@@ -97,13 +98,46 @@
                         <constraint firstItem="FWg-wQ-E0M" firstAttribute="top" secondItem="Bqb-W3-Yok" secondAttribute="bottom" constant="-2" id="u5B-Sb-Jnj"/>
                     </constraints>
                 </view>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jgb-Tx-kUY" userLabel="Empty View">
+                    <rect key="frame" x="47" y="340.5" width="320" height="225"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_empty_task" translatesAutoresizingMaskIntoConstraints="NO" id="L3b-Pr-CFT">
+                            <rect key="frame" x="40" y="24" width="240" height="128"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="128" id="MPT-6z-DNA"/>
+                                <constraint firstAttribute="width" constant="240" id="Sod-Nz-cDD"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You don't have any task. See Library to start learning." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ef1-e5-acr">
+                            <rect key="frame" x="12" y="164" width="296" height="29"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="L3b-Pr-CFT" secondAttribute="trailing" constant="40" id="1io-88-XVt"/>
+                        <constraint firstAttribute="width" constant="320" id="Dfl-LH-V4H"/>
+                        <constraint firstItem="ef1-e5-acr" firstAttribute="centerX" secondItem="jgb-Tx-kUY" secondAttribute="centerX" id="EWa-S9-baj"/>
+                        <constraint firstAttribute="height" constant="225" id="NHp-hC-Nb6"/>
+                        <constraint firstItem="ef1-e5-acr" firstAttribute="top" secondItem="L3b-Pr-CFT" secondAttribute="bottom" constant="12" id="RSn-DI-zWi"/>
+                        <constraint firstItem="L3b-Pr-CFT" firstAttribute="top" secondItem="jgb-Tx-kUY" secondAttribute="top" constant="24" id="TmU-gQ-6rS"/>
+                        <constraint firstItem="ef1-e5-acr" firstAttribute="leading" secondItem="jgb-Tx-kUY" secondAttribute="leading" constant="12" id="nYa-b4-hfX"/>
+                        <constraint firstAttribute="trailing" secondItem="ef1-e5-acr" secondAttribute="trailing" constant="12" id="ohx-qj-AXl"/>
+                        <constraint firstItem="L3b-Pr-CFT" firstAttribute="leading" secondItem="jgb-Tx-kUY" secondAttribute="leading" constant="40" id="xrc-wl-uur"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="exh-I5-zZI"/>
+                </view>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
+                <constraint firstItem="jgb-Tx-kUY" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="9Dg-iz-s7q"/>
                 <constraint firstItem="40i-Un-Iik" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="9TS-wc-p9v"/>
                 <constraint firstItem="40i-Un-Iik" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" id="FyU-Gm-HQI"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="40i-Un-Iik" secondAttribute="bottom" id="MdC-9Z-ceR"/>
                 <constraint firstItem="40i-Un-Iik" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" id="SZH-3E-Rju"/>
+                <constraint firstItem="jgb-Tx-kUY" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="bbv-cB-9d8"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="40i-Un-Iik" secondAttribute="trailing" id="myx-lP-NgR"/>
                 <constraint firstItem="40i-Un-Iik" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ujK-wo-wPZ"/>
             </constraints>
@@ -114,6 +148,7 @@
     </objects>
     <resources>
         <image name="checkmark.circle" catalog="system" width="128" height="121"/>
+        <image name="ic_empty_task" width="113.5" height="113.5"/>
         <image name="xmark.circle" catalog="system" width="128" height="121"/>
         <namedColor name="color_ B63532">
             <color red="0.71399998664855957" green="0.20800000429153442" blue="0.19599999487400055" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

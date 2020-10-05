@@ -45,7 +45,7 @@
                     <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VAq-bH-YzX" userLabel="Content View">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="775.5"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="REGISTRASI EVENT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MIr-30-hl5">
                                     <rect key="frame" x="124.5" y="28" width="165" height="21"/>
@@ -54,7 +54,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xSD-Dg-bwS" customClass="MDCCard">
-                                    <rect key="frame" x="25" y="68" width="364" height="352"/>
+                                    <rect key="frame" x="25" y="68" width="364" height="353.5"/>
                                     <subviews>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Fullname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Se-7U-SeK" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
                                             <rect key="frame" x="20" y="21" width="324" height="39"/>
@@ -70,7 +70,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </textField>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vBA-qn-5yg" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                            <rect key="frame" x="20" y="75" width="324" height="39"/>
+                                            <rect key="frame" x="20" y="75" width="324" height="39.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                             <userDefinedRuntimeAttributes>
@@ -83,7 +83,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </textField>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Handphone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IVW-5X-8K5" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                            <rect key="frame" x="20" y="129" width="324" height="39"/>
+                                            <rect key="frame" x="20" y="129.5" width="324" height="39"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" textContentType="tel"/>
                                             <userDefinedRuntimeAttributes>
@@ -96,7 +96,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </textField>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Organization" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fed-0s-Xkf" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                            <rect key="frame" x="20" y="185" width="324" height="39"/>
+                                            <rect key="frame" x="20" y="185.5" width="324" height="39.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" textContentType="tel"/>
                                             <userDefinedRuntimeAttributes>
@@ -109,7 +109,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </textField>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Position" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5hL-k6-tA0" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                            <rect key="frame" x="20" y="239" width="324" height="39"/>
+                                            <rect key="frame" x="20" y="240" width="324" height="39"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" textContentType="tel"/>
                                             <userDefinedRuntimeAttributes>
@@ -122,7 +122,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </textField>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ccD-rK-ssG" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                            <rect key="frame" x="20" y="293" width="324" height="39"/>
+                                            <rect key="frame" x="20" y="294" width="324" height="39.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" textContentType="tel"/>
                                             <userDefinedRuntimeAttributes>
@@ -198,12 +198,11 @@
                 <constraint firstItem="xHT-x3-Z8U" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" id="0Tb-8o-wDO"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="nAR-wB-hgz" secondAttribute="trailing" id="4NV-zB-W2j"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="a5S-Ug-dAN" secondAttribute="trailing" id="I5K-Dw-1dy"/>
+                <constraint firstItem="xHT-x3-Z8U" firstAttribute="top" secondItem="nAR-wB-hgz" secondAttribute="bottom" id="IEt-CW-XBj"/>
                 <constraint firstItem="nAR-wB-hgz" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="MkK-qh-9eu"/>
-                <constraint firstItem="xHT-x3-Z8U" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" multiplier="0.94621" id="PRt-en-17j"/>
                 <constraint firstItem="a5S-Ug-dAN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="T3v-0a-VXW"/>
                 <constraint firstItem="xHT-x3-Z8U" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="UkO-jd-vJd"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="xHT-x3-Z8U" secondAttribute="bottom" id="XCC-d4-c6R"/>
-                <constraint firstItem="xHT-x3-Z8U" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="44" id="Zcg-Vv-HRQ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xHT-x3-Z8U" secondAttribute="trailing" id="hNq-u8-ZB0"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="a5S-Ug-dAN" secondAttribute="bottom" id="lbg-WT-EaL"/>
                 <constraint firstItem="nAR-wB-hgz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="pQt-bp-i1W"/>

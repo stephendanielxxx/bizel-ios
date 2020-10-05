@@ -8,8 +8,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GroupChatViewController" customModule="Digilearn_001" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GroupChatViewController" customModule="Bizel" customModuleProvider="target">
             <connections>
+                <outlet property="emptyView" destination="26h-eu-ViL" id="rZI-JR-Wd3"/>
                 <outlet property="tableView" destination="LpH-2W-AOB" id="rz3-AN-ZXE"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -55,15 +56,48 @@
                         <constraint firstItem="LpH-2W-AOB" firstAttribute="leading" secondItem="5Ja-Ao-w5l" secondAttribute="leading" id="zmO-KD-voY"/>
                     </constraints>
                 </view>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="26h-eu-ViL" userLabel="Empty View">
+                    <rect key="frame" x="47" y="340.5" width="320" height="225"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_empty_chat" translatesAutoresizingMaskIntoConstraints="NO" id="tnf-Wc-vIS">
+                            <rect key="frame" x="40" y="24" width="240" height="128"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="240" id="Pf5-yk-SGo"/>
+                                <constraint firstAttribute="height" constant="128" id="UfM-eo-D1H"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You currently don't have any chat groups. Please contact Bizel administrator to join as a member of your organization group." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lNS-2Z-epO">
+                            <rect key="frame" x="12" y="164" width="296" height="43"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="lNS-2Z-epO" secondAttribute="trailing" constant="12" id="2ti-Ht-3C0"/>
+                        <constraint firstAttribute="trailing" secondItem="tnf-Wc-vIS" secondAttribute="trailing" constant="40" id="6z7-vq-Gje"/>
+                        <constraint firstItem="tnf-Wc-vIS" firstAttribute="leading" secondItem="26h-eu-ViL" secondAttribute="leading" constant="40" id="8Zq-Z6-y6u"/>
+                        <constraint firstItem="tnf-Wc-vIS" firstAttribute="top" secondItem="26h-eu-ViL" secondAttribute="top" constant="24" id="9Um-5D-dJ0"/>
+                        <constraint firstAttribute="width" constant="320" id="KZU-cU-xe5"/>
+                        <constraint firstItem="lNS-2Z-epO" firstAttribute="centerX" secondItem="26h-eu-ViL" secondAttribute="centerX" id="cIO-ek-AEe"/>
+                        <constraint firstItem="lNS-2Z-epO" firstAttribute="top" secondItem="tnf-Wc-vIS" secondAttribute="bottom" constant="12" id="kOo-4B-nRZ"/>
+                        <constraint firstItem="lNS-2Z-epO" firstAttribute="leading" secondItem="26h-eu-ViL" secondAttribute="leading" constant="12" id="kQc-5w-yXE"/>
+                        <constraint firstAttribute="height" constant="225" id="o3f-dA-4Kq"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="Ox9-8w-o6B"/>
+                </view>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
                 <constraint firstItem="5Ja-Ao-w5l" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" id="1Qo-FM-s63"/>
                 <constraint firstItem="5Ja-Ao-w5l" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" id="7mw-r9-Vh5"/>
+                <constraint firstItem="26h-eu-ViL" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="9d8-RT-FfU"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="5Ja-Ao-w5l" secondAttribute="bottom" id="MCH-K5-kCC"/>
                 <constraint firstItem="5Ja-Ao-w5l" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="SXE-qf-LVe"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="5Ja-Ao-w5l" secondAttribute="trailing" id="Vhg-zb-HpJ"/>
                 <constraint firstItem="5Ja-Ao-w5l" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="dno-P1-of4"/>
+                <constraint firstItem="26h-eu-ViL" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="sEH-57-SOm"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
@@ -72,6 +106,7 @@
     </objects>
     <resources>
         <image name="arrow.left" catalog="system" width="128" height="98"/>
+        <image name="ic_empty_chat" width="139.5" height="134"/>
         <namedColor name="color_ D44444">
             <color red="0.83099997043609619" green="0.2669999897480011" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EventHistoryViewController" customModule="Bizel" customModuleProvider="target">
             <connections>
+                <outlet property="emptyView" destination="nUg-8w-NJF" id="0lQ-zo-xR2"/>
                 <outlet property="historyView" destination="cxV-rW-clF" id="8O5-B1-fnl"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -55,13 +56,46 @@
                         <constraint firstItem="MHE-zF-PJa" firstAttribute="leading" secondItem="H75-gc-Ppp" secondAttribute="leading" id="tNa-MS-Wns"/>
                     </constraints>
                 </view>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nUg-8w-NJF" userLabel="Empty View">
+                    <rect key="frame" x="47" y="340.5" width="320" height="225"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_empty_event" translatesAutoresizingMaskIntoConstraints="NO" id="hXu-hW-EMv">
+                            <rect key="frame" x="40" y="24" width="240" height="128"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="240" id="4yw-f6-CIM"/>
+                                <constraint firstAttribute="height" constant="128" id="9GU-Fy-xJf"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="There are no events at this time. Please stay tuned for our events." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bxo-Wd-6rX">
+                            <rect key="frame" x="12" y="164" width="296" height="29"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="Bxo-Wd-6rX" firstAttribute="centerX" secondItem="nUg-8w-NJF" secondAttribute="centerX" id="2PA-uw-Shx"/>
+                        <constraint firstItem="hXu-hW-EMv" firstAttribute="leading" secondItem="nUg-8w-NJF" secondAttribute="leading" constant="40" id="6qM-He-paK"/>
+                        <constraint firstItem="Bxo-Wd-6rX" firstAttribute="top" secondItem="hXu-hW-EMv" secondAttribute="bottom" constant="12" id="NFT-cR-22B"/>
+                        <constraint firstAttribute="trailing" secondItem="hXu-hW-EMv" secondAttribute="trailing" constant="40" id="QjK-5b-kHn"/>
+                        <constraint firstAttribute="trailing" secondItem="Bxo-Wd-6rX" secondAttribute="trailing" constant="12" id="Sg7-YN-rTk"/>
+                        <constraint firstItem="Bxo-Wd-6rX" firstAttribute="leading" secondItem="nUg-8w-NJF" secondAttribute="leading" constant="12" id="TA9-os-k4o"/>
+                        <constraint firstAttribute="height" constant="225" id="VWz-NS-33E"/>
+                        <constraint firstAttribute="width" constant="320" id="acY-VA-Wnd"/>
+                        <constraint firstItem="hXu-hW-EMv" firstAttribute="top" secondItem="nUg-8w-NJF" secondAttribute="top" constant="24" id="ttd-Hp-7zW"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="j8q-f7-wP1"/>
+                </view>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
                 <constraint firstItem="H75-gc-Ppp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="O7Z-19-USg"/>
                 <constraint firstItem="H75-gc-Ppp" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Pdy-6U-qr6"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="H75-gc-Ppp" secondAttribute="bottom" id="SQP-ep-dme"/>
+                <constraint firstItem="nUg-8w-NJF" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="Zep-dx-m8c"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="H75-gc-Ppp" secondAttribute="trailing" id="c3D-wP-MhD"/>
+                <constraint firstItem="nUg-8w-NJF" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="fga-Qh-hiD"/>
                 <constraint firstItem="H75-gc-Ppp" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" id="ftb-sU-Umz"/>
                 <constraint firstItem="H75-gc-Ppp" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" id="jkY-Nj-PIf"/>
             </constraints>
@@ -72,6 +106,7 @@
     </objects>
     <resources>
         <image name="arrow.left" catalog="system" width="128" height="98"/>
+        <image name="ic_empty_event" width="128.5" height="128.5"/>
         <namedColor name="color_ D44444">
             <color red="0.83099997043609619" green="0.2669999897480011" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
