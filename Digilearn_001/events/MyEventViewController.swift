@@ -15,6 +15,7 @@ class MyEventViewController: UIViewController {
     let URL = "\(DigilearnParams.ApiUrl)/home/get_onsite_course"
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var eventHistory: UIBarButtonItem!
     var eventModel: EventModel?
     var eventId:String = ""
     
@@ -37,6 +38,11 @@ class MyEventViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
 
+    @IBAction func eventHistoryAction(_ sender: UIBarButtonItem) {
+        let history = EventHistoryViewController()
+        history.modalPresentationStyle = .fullScreen
+        present(history, animated: true, completion: nil)
+    }
     
     func loadData(){
         AF.request(URL,

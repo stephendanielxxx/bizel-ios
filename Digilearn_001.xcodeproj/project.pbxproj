@@ -239,6 +239,11 @@
 		B9DD457F2521EC030043B210 /* GroupChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9DD457D2521EC030043B210 /* GroupChatViewController.xib */; };
 		B9DD45822521F0990043B210 /* GroupChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DD45802521F0990043B210 /* GroupChatTableViewCell.swift */; };
 		B9DD45832521F0990043B210 /* GroupChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9DD45812521F0990043B210 /* GroupChatTableViewCell.xib */; };
+		B9EA19FB252AEBF6000922BD /* EventHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EA19F9252AEBF6000922BD /* EventHistoryViewController.swift */; };
+		B9EA19FC252AEBF6000922BD /* EventHistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9EA19FA252AEBF6000922BD /* EventHistoryViewController.xib */; };
+		B9EA19FF252AEE24000922BD /* EventHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EA19FD252AEE24000922BD /* EventHistoryTableViewCell.swift */; };
+		B9EA1A00252AEE24000922BD /* EventHistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9EA19FE252AEE24000922BD /* EventHistoryTableViewCell.xib */; };
+		B9EA1A02252AF0AD000922BD /* EventHistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EA1A01252AF0AD000922BD /* EventHistoryModel.swift */; };
 		EFC7323794321BEB69C47BCE /* Pods_Digilearn_001_Digilearn_001UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45CD92DF232C349F46A9A8DF /* Pods_Digilearn_001_Digilearn_001UITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -502,6 +507,11 @@
 		B9DD457D2521EC030043B210 /* GroupChatViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroupChatViewController.xib; sourceTree = "<group>"; };
 		B9DD45802521F0990043B210 /* GroupChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupChatTableViewCell.swift; sourceTree = "<group>"; };
 		B9DD45812521F0990043B210 /* GroupChatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroupChatTableViewCell.xib; sourceTree = "<group>"; };
+		B9EA19F9252AEBF6000922BD /* EventHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventHistoryViewController.swift; sourceTree = "<group>"; };
+		B9EA19FA252AEBF6000922BD /* EventHistoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventHistoryViewController.xib; sourceTree = "<group>"; };
+		B9EA19FD252AEE24000922BD /* EventHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventHistoryTableViewCell.swift; sourceTree = "<group>"; };
+		B9EA19FE252AEE24000922BD /* EventHistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventHistoryTableViewCell.xib; sourceTree = "<group>"; };
+		B9EA1A01252AF0AD000922BD /* EventHistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventHistoryModel.swift; sourceTree = "<group>"; };
 		BC42425861CC009612B8FC89 /* Pods-Digilearn_001Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Digilearn_001Tests.release.xcconfig"; path = "Target Support Files/Pods-Digilearn_001Tests/Pods-Digilearn_001Tests.release.xcconfig"; sourceTree = "<group>"; };
 		C13A768FA10A24EE2EC74FE9 /* Pods_Digilearn_001Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Digilearn_001Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE24FEA383FD1DA25B5B206F /* Pods_Digilearn_001.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Digilearn_001.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1212,6 +1222,10 @@
 				B94585E92509D1D800330DAC /* MyEventTableViewCell.xib */,
 				B94585EC2509FDDF00330DAC /* EventDetailViewController.swift */,
 				B94585ED2509FDDF00330DAC /* EventDetailViewController.xib */,
+				B9EA19F9252AEBF6000922BD /* EventHistoryViewController.swift */,
+				B9EA19FA252AEBF6000922BD /* EventHistoryViewController.xib */,
+				B9EA19FD252AEE24000922BD /* EventHistoryTableViewCell.swift */,
+				B9EA19FE252AEE24000922BD /* EventHistoryTableViewCell.xib */,
 			);
 			path = events;
 			sourceTree = "<group>";
@@ -1238,6 +1252,7 @@
 				B99FA32525060C0B00A59C59 /* EventModel.swift */,
 				B94585F0250A0D7D00330DAC /* EventDetailModel.swift */,
 				B94585F2250A2FFE00330DAC /* RegisterEventModel.swift */,
+				B9EA1A01252AF0AD000922BD /* EventHistoryModel.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -1546,7 +1561,9 @@
 				B97C0D1925131779005E36B4 /* QuizViewController.xib in Resources */,
 				B9643A5C251C828A00438DA3 /* ChangeEmailViewController.xib in Resources */,
 				B97C0D112512FEA0005E36B4 /* ThirdBoardViewController.xib in Resources */,
+				B9EA19FC252AEBF6000922BD /* EventHistoryViewController.xib in Resources */,
 				B9B39AB5251DEA6100AA9CE9 /* Montserrat-ExtraLightItalic.ttf in Resources */,
+				B9EA1A00252AEE24000922BD /* EventHistoryTableViewCell.xib in Resources */,
 				6ADC3B26250A2EFE00E88D7C /* AnnounceViewController.xib in Resources */,
 				6AD2EE7C2510C8F8002A83FB /* MyGroupDetailViewController.xib in Resources */,
 				B94585EF2509FDDF00330DAC /* EventDetailViewController.xib in Resources */,
@@ -1737,6 +1754,7 @@
 				6AF6D8082519ECAA00947520 /* FaqModel.swift in Sources */,
 				6A8D5E67250E5BF10069967C /* AnnouncementModel.swift in Sources */,
 				6A1333F1251470DB0032F3A0 /* IsiMemberTableViewCell.swift in Sources */,
+				B9EA1A02252AF0AD000922BD /* EventHistoryModel.swift in Sources */,
 				B98E3EE725233FDE00ADEA16 /* DeleteChatButton.swift in Sources */,
 				6AF6D8022518B22200947520 /* AchievementTableViewCell.swift in Sources */,
 				B96F5BE02511F272006AB070 /* ActionViewController.swift in Sources */,
@@ -1786,6 +1804,7 @@
 				B9673E00250F2B8C005E6BB8 /* MyTaskTableViewCell.swift in Sources */,
 				B9D053512501FF0500F1AC03 /* ForgetPasswordViewController.swift in Sources */,
 				6A3C9D3B251C56210044A6FB /* AchievementDetailViewController.swift in Sources */,
+				B9EA19FB252AEBF6000922BD /* EventHistoryViewController.swift in Sources */,
 				B94585DB2509C6DA00330DAC /* HomeViewController.swift in Sources */,
 				6A3E5356252433480048A2F9 /* ModuleDetailViewController.swift in Sources */,
 				6A13340225189AFB0032F3A0 /* ActiveModel.swift in Sources */,
@@ -1806,6 +1825,7 @@
 				B97C0D102512FEA0005E36B4 /* ThirdBoardViewController.swift in Sources */,
 				B9673E14250F7AE1005E6BB8 /* ModulesTableViewCell.swift in Sources */,
 				6ADC3B1E250A1C4A00E88D7C /* MyGroupTableViewCell.swift in Sources */,
+				B9EA19FF252AEE24000922BD /* EventHistoryTableViewCell.swift in Sources */,
 				6A69F2D12525D2B90094A86F /* TopicsViewController.swift in Sources */,
 				6AF6D80B2519ECCB00947520 /* FaqViewController.swift in Sources */,
 				B94585F1250A0D7D00330DAC /* EventDetailModel.swift in Sources */,

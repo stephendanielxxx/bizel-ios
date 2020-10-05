@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyEventViewController" customModule="Bizel" customModuleProvider="target">
             <connections>
+                <outlet property="eventHistory" destination="2rq-nk-0jT" id="d67-G7-AwT"/>
                 <outlet property="tableView" destination="0eb-LA-qOz" id="iRq-b9-zz1"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -37,6 +38,12 @@
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <action selector="backButton:" destination="-1" id="LW6-Qb-gdL"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem key="rightBarButtonItem" image="arrow.counterclockwise.circle" catalog="system" id="2rq-nk-0jT">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="eventHistoryAction:" destination="-1" id="pdu-jM-ATi"/>
                                         </connections>
                                     </barButtonItem>
                                 </navigationItem>
@@ -67,6 +74,7 @@
         </view>
     </objects>
     <resources>
+        <image name="arrow.counterclockwise.circle" catalog="system" width="128" height="121"/>
         <image name="arrow.left" catalog="system" width="128" height="98"/>
         <namedColor name="color_ D44444">
             <color red="0.83099997043609619" green="0.2669999897480011" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
