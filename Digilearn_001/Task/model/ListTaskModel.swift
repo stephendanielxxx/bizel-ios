@@ -19,7 +19,8 @@ struct ListTaskModel: Decodable {
 struct TaskModel: Decodable {
    var id, title, detail, author: String
    var image, totalModule, totalTopic, totalAction: String
-   var totalFinished, createdAt, groupName, courseStart: String
+   var totalFinished, createdAt, groupName: String
+   var courseStart: String?
    var courseEnd: String?
 
        enum CodingKeys: String, CodingKey {
