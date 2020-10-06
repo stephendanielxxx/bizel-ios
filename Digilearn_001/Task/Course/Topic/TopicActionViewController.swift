@@ -38,7 +38,7 @@ class TopicActionViewController: UIViewController {
         
         let nibChild = UINib(nibName: "TopicItemTableViewCell", bundle: nil)
         topicView.register(nibChild, forCellReuseIdentifier: "topicItemIdentifier")
-        loadData()
+//        refreshData(isRefresh: false)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -51,6 +51,8 @@ class TopicActionViewController: UIViewController {
         
         let nibChild = UINib(nibName: "TopicItemTableViewCell", bundle: nil)
         topicView.register(nibChild, forCellReuseIdentifier: "topicItemIdentifier")
+        
+        refreshData(isRefresh: true)
     }
     
     func loadData(){
@@ -85,10 +87,15 @@ class TopicActionViewController: UIViewController {
         }
     }
     
-    @IBAction func refreshAction(_ sender: UIButton) {
-        super.viewWillAppear(true)
-         self.topicView.closeAll()
+    private func refreshData(isRefresh: Bool) {
+        if isRefresh {
+            self.topicView.closeAll()
+        }
         loadData()
+    }
+    
+    @IBAction func refreshAction(_ sender: UIButton) {
+        refreshData(isRefresh: true)
     }
     
 }
