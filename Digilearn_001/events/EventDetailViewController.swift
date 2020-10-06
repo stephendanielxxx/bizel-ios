@@ -48,8 +48,6 @@ class EventDetailViewController: UIViewController {
                    parameters: nil,
                    encoding: JSONEncoding.default).responseData { response in
                     
-                    debugPrint(response)
-                    
                     switch response.result {
                     case .success(let data):
                         let decoder = JSONDecoder()

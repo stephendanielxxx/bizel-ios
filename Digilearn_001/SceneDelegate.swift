@@ -42,6 +42,22 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         }
         
         UITabBar.appearance().tintColor = UIColor(named: "color_ B63532")
+        
+//        UILabel.appearance().substituteFontName = "Montserrat-Medium"
+//        UILabel.appearance().substituteFontNameRegular = "Montserrat-Regular"
+//        UILabel.appearance().substituteFontNameSemiBold = "Montserrat-SemiBold"
+//        UILabel.appearance().substituteFontNameBold = "Montserrat-Bold"
+//        UILabel.appearance().substituteFontNameHeavy = "Montserrat-ExtraBold"
+
+        /*
+         *Font Family : Montserrat
+         == Montserrat-Regular
+         == Montserrat-ExtraBold
+         == Montserrat-Medium
+         == Montserrat-Bold
+         == Montserrat-Light
+         == Montserrat-SemiBold
+         */
 
     }
 

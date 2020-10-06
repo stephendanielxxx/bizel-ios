@@ -246,6 +246,7 @@
 		B9EA1A02252AF0AD000922BD /* EventHistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EA1A01252AF0AD000922BD /* EventHistoryModel.swift */; };
 		B9EA1A05252AF884000922BD /* EventRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EA1A03252AF884000922BD /* EventRegistrationViewController.swift */; };
 		B9EA1A06252AF884000922BD /* EventRegistrationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9EA1A04252AF884000922BD /* EventRegistrationViewController.xib */; };
+		B9FE7DB9252C12400078C7F8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FE7DB8252C12400078C7F8 /* Extensions.swift */; };
 		EFC7323794321BEB69C47BCE /* Pods_Digilearn_001_Digilearn_001UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45CD92DF232C349F46A9A8DF /* Pods_Digilearn_001_Digilearn_001UITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -516,6 +517,7 @@
 		B9EA1A01252AF0AD000922BD /* EventHistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventHistoryModel.swift; sourceTree = "<group>"; };
 		B9EA1A03252AF884000922BD /* EventRegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRegistrationViewController.swift; sourceTree = "<group>"; };
 		B9EA1A04252AF884000922BD /* EventRegistrationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventRegistrationViewController.xib; sourceTree = "<group>"; };
+		B9FE7DB8252C12400078C7F8 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		BC42425861CC009612B8FC89 /* Pods-Digilearn_001Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Digilearn_001Tests.release.xcconfig"; path = "Target Support Files/Pods-Digilearn_001Tests/Pods-Digilearn_001Tests.release.xcconfig"; sourceTree = "<group>"; };
 		C13A768FA10A24EE2EC74FE9 /* Pods_Digilearn_001Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Digilearn_001Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE24FEA383FD1DA25B5B206F /* Pods_Digilearn_001.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Digilearn_001.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1325,6 +1327,7 @@
 				B9D0534C2501E06B00F1AC03 /* DigilearnParams.swift */,
 				B9D05356250225A600F1AC03 /* DigilearnKeys.swift */,
 				B9D0535C2502369500F1AC03 /* BottomBorderTF.swift */,
+				B9FE7DB8252C12400078C7F8 /* Extensions.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -1749,6 +1752,7 @@
 				B96F5BE925121DFA006AB070 /* IntroductionViewController.swift in Sources */,
 				B9D0534D2501E06B00F1AC03 /* DigilearnParams.swift in Sources */,
 				B969665725145A5F00A3561E /* CustomChoiceCardView.swift in Sources */,
+				B9FE7DB9252C12400078C7F8 /* Extensions.swift in Sources */,
 				B96F5BDB2511EEDD006AB070 /* BizelCardView.swift in Sources */,
 				B9A115FB2510746800852131 /* TopicViewController.swift in Sources */,
 				B98C449F250B4DCA00363F8C /* BannerModel.swift in Sources */,

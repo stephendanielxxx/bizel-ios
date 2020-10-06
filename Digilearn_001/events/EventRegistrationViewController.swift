@@ -25,6 +25,8 @@ class EventRegistrationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setTapToHideKeyboard()
+        
         let fullname = "\(readStringPreference(key: DigilearnsKeys.FIRST_NAME)) \(readStringPreference(key: DigilearnsKeys.LAST_NAME))"
         fullnameField.text = fullname
         emailField.text = readStringPreference(key: DigilearnsKeys.EMAIL)

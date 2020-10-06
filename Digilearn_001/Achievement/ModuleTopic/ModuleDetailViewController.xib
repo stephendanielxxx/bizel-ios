@@ -32,7 +32,8 @@
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="htD-bd-f0p" userLabel="Image Course">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="184"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="184" id="Mcg-Hj-AfI"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="184" id="Mcg-Hj-AfI"/>
+                                <constraint firstAttribute="width" secondItem="htD-bd-f0p" secondAttribute="height" multiplier="9:4" id="OaG-FZ-lhV"/>
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTi-5Z-GCp" userLabel="Title">
