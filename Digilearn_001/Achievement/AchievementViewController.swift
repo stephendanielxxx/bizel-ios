@@ -48,7 +48,6 @@ class AchievementViewController: UIViewController {
         profileImage.clipsToBounds = true
         let url = Foundation.URL(string: "https://digicourse.id/digilearn/member/assets.digilearn/profile/\(photo)")
         profileImage.pin_setImage(from: url)
-        debugPrint(url)
         
         
         let URL = "\(DigilearnParams.ApiUrl)/api/apicourseach"
@@ -65,7 +64,6 @@ class AchievementViewController: UIViewController {
                         let decoder = JSONDecoder()
                         do{
                             self.achieveModel = try decoder.decode(AchieveModel.self, from:data)
-                            debugPrint(self.achieveModel)
                             self.achievementView.reloadData()
                         }catch{
                             print(error.localizedDescription)
@@ -98,25 +96,23 @@ extension AchievementViewController: UITableViewDelegate, UITableViewDataSource
         let achieve: Library = (achieveModel?.library[indexPath.row])!
         cell.titleTask.text = achieve.courseName
         cell.namaInstitut.text = achieve.institutName
-        //hjfj
-        //khjkgjhfhjfhfhhuuuuuuu
-   
-    
+        
+        
         cell.achieveDetail.tag = indexPath.row
         cell.achieveDetail.addTarget(self,action: #selector(AchievementViewController.openDetail(_:)),for: .touchUpInside)
-    return cell
-}
-
-@objc func openDetail(_ sender: UIButton?) {
-    debugPrint("test")
-    let achieveDetail = AchievementDetailViewController()
-    achieveDetail.modalPresentationStyle = .fullScreen
-    let library: Library = achieveModel.library[sender!.tag]
-    achieveDetail.titleachieve = library.courseName
-    achieveDetail.image = library.courseImage
-    achieveDetail.institutname = library.institutName
-    achieveDetail.courseid = library.courseID
-    self.present(achieveDetail, animated: true, completion: nil)
-}
-
+        return cell
+    }
+    
+    @objc func openDetail(_ sender: UIButton?) {
+        
+        let achieveDetail = AchievementDetailViewController()
+        achieveDetail.modalPresentationStyle = .fullScreen
+        let library: Library = achieveModel.library[sender!.tag]
+        achieveDetail.titleachieve = library.courseName
+        achieveDetail.image = library.courseImage
+        achieveDetail.institutname = library.institutName
+        achieveDetail.courseid = library.courseID
+        self.present(achieveDetail, animated: true, completion: nil)
+    }
+    
 }

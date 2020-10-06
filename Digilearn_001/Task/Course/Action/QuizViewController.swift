@@ -93,8 +93,6 @@ class QuizViewController: BaseActionViewController, ActionDelegate {
     }
     
     @objc func checkAnswerA(_ sender: CustomChoiceCardView?) {
-        debugPrint(sender!.answer!)
-        debugPrint(quiz!.answer!)
         lineA.backgroundColor = UIColor(named: "color_EFB8CB")
         lineB.backgroundColor = UIColor.darkGray
         lineC.backgroundColor = UIColor.darkGray
@@ -110,8 +108,6 @@ class QuizViewController: BaseActionViewController, ActionDelegate {
     }
     
     @objc func checkAnswerB(_ sender: CustomChoiceCardView?) {
-        debugPrint(sender!.answer!)
-        debugPrint(quiz!.answer!)
         lineA.backgroundColor = UIColor.darkGray
         lineB.backgroundColor = UIColor(named: "color_EFB8CB")
         lineC.backgroundColor = UIColor.darkGray
@@ -126,8 +122,6 @@ class QuizViewController: BaseActionViewController, ActionDelegate {
     }
     
     @objc func checkAnswerC(_ sender: CustomChoiceCardView?) {
-        debugPrint(sender!.answer!)
-        debugPrint(quiz!.answer!)
         lineA.backgroundColor = UIColor.darkGray
         lineB.backgroundColor = UIColor.darkGray
         lineC.backgroundColor = UIColor(named: "color_EFB8CB")
@@ -142,8 +136,7 @@ class QuizViewController: BaseActionViewController, ActionDelegate {
     }
     
     @objc func checkAnswerD(_ sender: CustomChoiceCardView?) {
-        debugPrint(sender!.answer!)
-        debugPrint(quiz!.answer!)
+    
         lineA.backgroundColor = UIColor.darkGray
         lineB.backgroundColor = UIColor.darkGray
         lineC.backgroundColor = UIColor.darkGray

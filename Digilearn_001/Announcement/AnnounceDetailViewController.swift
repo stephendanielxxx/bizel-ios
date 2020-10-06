@@ -24,7 +24,6 @@ class AnnounceDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        debugPrint(image)
         titleDetail.text = self.newstitle
         dateDetail.text = self.date
         newsDetail.attributedText = self.news.htmlToAttributedString

@@ -17,7 +17,6 @@ class DetailtopicViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        debugPrint(module_id)
         let URL = "\(DigilearnParams.ApiUrl)/api/apimoduledetail"
         let parameters: [String:Any] = [
             "module_id": "\(module_id)"

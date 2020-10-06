@@ -25,8 +25,6 @@ class TopicsViewController: UIViewController {
         listTopics.register(nib, forCellReuseIdentifier: "topicIdentifier")
         
         let user_id = readStringPreference(key: DigilearnsKeys.USER_ID)
-        debugPrint("MODULE \(module_id)")
-        debugPrint(user_id)
         let URL = "\(DigilearnParams.ApiUrl)/score/get_all_achievement"
         let parameters: [String:Any] = [
             "uid": "\(user_id)",

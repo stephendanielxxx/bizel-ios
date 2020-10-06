@@ -47,7 +47,6 @@ class AchieveModuleViewController: UIViewController {
                         let decoder = JSONDecoder()
                         do{
                             self.modulesModel = try decoder.decode(ModulesModel.self, from:data)
-                            debugPrint(self.modulesModel)
                             self.listModule.reloadData()
                         }catch{
                             print(error.localizedDescription)
@@ -83,7 +82,6 @@ extension AchieveModuleViewController: UITableViewDelegate, UITableViewDataSourc
     }
     
     @objc func openDetail(_ sender: UIButton?) {
-    debugPrint("test")
     let isiModule = ModuleDetailViewController()
         isiModule.modalPresentationStyle = .fullScreen
         let courseListModule: CourseListModule = modulesModel.courseListModule[sender!.tag]
