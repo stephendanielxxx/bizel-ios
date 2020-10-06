@@ -34,7 +34,7 @@ class BaseActionViewController: UIViewController {
         style.backgroundColor = UIColor(named: "color_0CA422")!
         style.messageColor = UIColor.white
         ToastManager.shared.style = style
-        
+        self.view.hideAllToasts()
         self.view.makeToast(message)
     }
     
@@ -43,7 +43,7 @@ class BaseActionViewController: UIViewController {
         style.backgroundColor = UIColor.red
         style.messageColor = UIColor.white
         ToastManager.shared.style = style
-        
+        self.view.hideAllToasts()
         self.view.makeToast(message)
     }
     
