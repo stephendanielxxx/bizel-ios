@@ -25,6 +25,7 @@ target 'Digilearn_001' do
   pod 'PopupDialog', '~> 1.1'
   pod 'Firebase/Analytics'
   pod 'Firebase/Database'
+  pod 'Firebase/Crashlytics'
   pod 'CodableFirebase'
   pod 'SkyFloatingLabelTextField', '~> 3.0'
   #pod 'DKImagePickerController'

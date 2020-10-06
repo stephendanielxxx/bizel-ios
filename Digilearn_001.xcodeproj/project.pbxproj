@@ -1382,6 +1382,7 @@
 				B934AF3E24FF4B82000FCEB3 /* Frameworks */,
 				B934AF3F24FF4B82000FCEB3 /* Resources */,
 				C48012515100904DB48AFA58 /* [CP] Embed Pods Frameworks */,
+				B9FE7DBA252C28370078C7F8 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1667,6 +1668,25 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Digilearn_001-Digilearn_001UITests/Pods-Digilearn_001-Digilearn_001UITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		B9FE7DBA252C28370078C7F8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
+		};
 		C48012515100904DB48AFA58 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1924,7 +1944,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
