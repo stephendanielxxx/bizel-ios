@@ -83,12 +83,12 @@ extension MyGroupViewController: UITableViewDelegate, UITableViewDataSource
         cell.imageGroup.clipsToBounds = true
         
        
-        if(group.groupImage != nil) {
+//        if(group.groupImage != nil) {
             let url = Foundation.URL(string: "https://digicourse.id/digilearn/admin-master/assets.admin_master/group/profile/\(group.groupImage)")
             cell.imageGroup.pin_setImage(from: url)
             
             
-        }
+//        }
         cell.groupDetail.tag = indexPath.row
         cell.groupDetail.addTarget(self,action: #selector(MyGroupViewController.openDetail(_:)),for: .touchUpInside)
                 return cell

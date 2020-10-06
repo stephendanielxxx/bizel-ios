@@ -70,7 +70,7 @@ extension AnnounceViewController: UITableViewDelegate, UITableViewDataSource
         cell.imageAnnounce.clipsToBounds = true
         
         
-        if announcement.announcementImage != nil {
+//        if announcement.announcementImage != nil {
             let url = Foundation.URL(string: "https://digicourse.id/digilearn/admin-master/assets.admin_master/announcement/image/\(announcement.announcementImage)")
             cell.imageAnnounce.pin_setImage(from: url)
             
@@ -79,7 +79,7 @@ extension AnnounceViewController: UITableViewDelegate, UITableViewDataSource
             }else{
                 cell.newLabel.isHidden = true
             }
-        }
+//        }
         
         cell.detailAnnounce.tag = indexPath.row
         cell.detailAnnounce.addTarget(self, action: #selector(AnnounceViewController.openDetail(_:)), for: .touchUpInside)
