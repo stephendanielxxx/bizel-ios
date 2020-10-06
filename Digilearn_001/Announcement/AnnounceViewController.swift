@@ -66,7 +66,6 @@ extension AnnounceViewController: UITableViewDelegate, UITableViewDataSource
         cell.titleAnnounce.text = announcement.title
         cell.dateAnnounce.text = announcement.timePosted
         cell.imageAnnounce.pin_updateWithProgress = true
-        // cell.imageGroup.layer.cornerRadius = 1
         cell.imageAnnounce.contentMode = .scaleToFill
         cell.imageAnnounce.clipsToBounds = true
         

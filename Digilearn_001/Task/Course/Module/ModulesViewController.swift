@@ -116,7 +116,6 @@ extension ModulesViewController: UITableViewDelegate, UITableViewDataSource{
         if count == 1 {
             topic.nextModuleName = ""
         }else if index < count - 1 {
-            debugPrint("index \(index) count \(count)")
             topic.nextModuleName = listCourseModel.moduleDetail[index+1].moduleName
         }else{
             topic.nextModuleName = ""

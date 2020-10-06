@@ -85,7 +85,6 @@ extension MyGroupViewController: UITableViewDelegate, UITableViewDataSource
        
         if(group.groupImage != nil) {
             let url = Foundation.URL(string: "https://digicourse.id/digilearn/admin-master/assets.admin_master/group/profile/\(group.groupImage)")
-             debugPrint("https://digicourse.id/digilearn/admin-master/assets.admin_master/group/profile/\(group.groupImage)")
             cell.imageGroup.pin_setImage(from: url)
             
             

@@ -228,15 +228,12 @@ class ProfileViewController: BaseSettingViewController, UIImagePickerControllerD
                   to: endUrl, method: .post , headers: headers)
             .responseData { response in
                 
-                debugPrint(response)
-                
                 switch response.result {
                 case .success(let data):
                     self.removeSpinner()
                     let decoder = JSONDecoder()
                     do{
                         let uploadImageModel = try decoder.decode(UploadModel.self, from:data)
-                        debugPrint(uploadImageModel)
                         self.saveStringPreference(value: uploadImageModel.new_image!, key: DigilearnsKeys.USER_PHOTO)
                         self.saveStringPreference(value: self.firstNameField.text!, key: DigilearnsKeys.FIRST_NAME)
                         self.saveStringPreference(value: self.lastNameField.text!, key: DigilearnsKeys.LAST_NAME)

@@ -171,6 +171,7 @@ PODS:
     - RxSwift (~> 5)
   - RxSwift (5.1.1)
   - SimpleCheckbox (2.1.0)
+  - SkyFloatingLabelTextField (3.8.0)
   - Toast-Swift (5.0.1)
 
 DEPENDENCIES:
@@ -193,6 +194,7 @@ DEPENDENCIES:
   - RxCocoa (~> 5)
   - RxSwift (~> 5)
   - SimpleCheckbox
+  - SkyFloatingLabelTextField (~> 3.0)
   - Toast-Swift (~> 5.0.1)
 
 SPEC REPOS:
@@ -230,6 +232,7 @@ SPEC REPOS:
     - RxRelay
     - RxSwift
     - SimpleCheckbox
+    - SkyFloatingLabelTextField
     - Toast-Swift
 
 SPEC CHECKSUMS:
@@ -266,8 +269,9 @@ SPEC CHECKSUMS:
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   SimpleCheckbox: ddcd433ab8c3a8f57300bebda13151a8f302c7f9
+  SkyFloatingLabelTextField: 5a338412114808e961fe2d14ea2c5452c8b6e4aa
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: 5d7b0021388a264f32d85170b0b20db29373e632
+PODFILE CHECKSUM: c8a09a6cd40be5d390337e316b3c91a17cd6e336
 
 COCOAPODS: 1.9.3

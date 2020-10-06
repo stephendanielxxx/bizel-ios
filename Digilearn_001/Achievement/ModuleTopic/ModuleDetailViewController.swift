@@ -30,8 +30,7 @@ class ModuleDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        debugPrint(institut)
-        
+
         titleModule.text = self.modulename
         institutModule.text = self.institut
         imageModul.pin_updateWithProgress = true

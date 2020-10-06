@@ -59,20 +59,17 @@ class GroupChatViewController: UIViewController {
                             self.groupModel = try decoder.decode(GroupModel.self, from:data)
                             
                             if self.groupModel.listGroup.count > 0 {
-                                debugPrint("1")
                                 self.emptyView.isHidden = true
                                 self.tableView.isHidden = false
                                 
                                 self.tableView.backgroundView = UIImageView(image: UIImage(named: "img_bg_chat"))
                             }else{
-                                debugPrint("2")
                                 self.emptyView.isHidden = false
                                 self.tableView.isHidden = true
                             }
                             
                             self.tableView.reloadData()
                         }catch{
-                            debugPrint("3")
                             print(error.localizedDescription)
                             self.emptyView.isHidden = false
                             self.tableView.isHidden = true

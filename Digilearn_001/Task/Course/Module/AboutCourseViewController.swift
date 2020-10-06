@@ -35,7 +35,6 @@ class AboutCourseViewController: UIViewController {
                    method: .post,
                    parameters: parameters,
                    encoding: URLEncoding.httpBody).responseData { response in
-                    debugPrint(response)
                     switch response.result {
                     case .success(let data):
                         self.removeSpinner()
