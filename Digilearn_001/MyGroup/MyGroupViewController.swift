@@ -74,7 +74,7 @@ extension MyGroupViewController: UITableViewDelegate, UITableViewDataSource
         
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = groupView.dequeueReusableCell(withIdentifier: "MyGroupIdentifier") as! MyGroupTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MyGroupIdentifier") as! MyGroupTableViewCell
         let group: ListGroup = (groupModel?.listGroup[indexPath.row])!
         cell.titleGroup.text = group.groupName
         cell.imageGroup.pin_updateWithProgress = true
@@ -83,12 +83,12 @@ extension MyGroupViewController: UITableViewDelegate, UITableViewDataSource
         cell.imageGroup.clipsToBounds = true
         
        
-//        if(group.groupImage != nil) {
-            let url = Foundation.URL(string: "https://digicourse.id/digilearn/admin-master/assets.admin_master/group/profile/\(group.groupImage)")
+        if(group.groupImage != nil) {
+            let url = Foundation.URL(string: "https://digicourse.id/digilearn/admin-master/assets.admin_master/group/profile/\(group.groupImage!)")
             cell.imageGroup.pin_setImage(from: url)
-            
-            
-//        }
+        }else{
+            cell.imageGroup.image = UIImage(named: "ic_default_group")
+        }
         cell.groupDetail.tag = indexPath.row
         cell.groupDetail.addTarget(self,action: #selector(MyGroupViewController.openDetail(_:)),for: .touchUpInside)
                 return cell
@@ -98,7 +98,7 @@ extension MyGroupViewController: UITableViewDelegate, UITableViewDataSource
         groupDetail.modalPresentationStyle = .fullScreen
         let listgroup: ListGroup = groupModel.listGroup[sender!.tag]
         groupDetail.titlegroup = listgroup.groupName
-        groupDetail.image = listgroup.groupImage
+        groupDetail.image = listgroup.groupImage ?? ""
         groupDetail.titlegroupisi = listgroup.groupAbout
         groupDetail.groupid = listgroup.groupID 
         self.present(groupDetail, animated: true, completion: nil)
