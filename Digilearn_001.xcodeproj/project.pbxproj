@@ -867,7 +867,6 @@
 				B99150AF2524874E00742F58 /* MyProfile */,
 				B9DD457B2521EBEF0043B210 /* Chat */,
 				B9B39A99251DEA2700AA9CE9 /* Font */,
-				B9643A3A251C4EE300438DA3 /* Profile */,
 				6AF6D8052519EC7E00947520 /* FAQnew */,
 				6A13340D2518A9A90032F3A0 /* Achievement */,
 				B9608B36251AF9640082B3A3 /* Library */,
@@ -1001,13 +1000,6 @@
 				B9608B49251B3CD80082B3A3 /* LibraryTopicsViewController.xib */,
 			);
 			path = Topic;
-			sourceTree = "<group>";
-		};
-		B9643A3A251C4EE300438DA3 /* Profile */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Profile;
 			sourceTree = "<group>";
 		};
 		B9643A46251C735700438DA3 /* Contact Us */ = {
