@@ -20,8 +20,8 @@ class MyGroupViewController: UIViewController {
         
         groupView.delegate = self
         groupView.dataSource = self
-        let nib = UINib(nibName: "MyGroupTableViewCell", bundle: nil)
-        groupView.register(nib, forCellReuseIdentifier: "MyGroupIdentifier")
+        let nib = UINib(nibName: "MyGrouppTableViewCell", bundle: nil)
+        groupView.register(nib, forCellReuseIdentifier: "GroupIdentifier")
         
         let user_id = readStringPreference(key: DigilearnsKeys.USER_ID)
         let URL = "\(DigilearnParams.ApiUrl)/user/auth/get_all_group"
@@ -74,9 +74,9 @@ extension MyGroupViewController: UITableViewDelegate, UITableViewDataSource
         
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MyGroupIdentifier") as! MyGroupTableViewCell
+        let cell = groupView.dequeueReusableCell(withIdentifier: "GroupIdentifier") as! MyGroupTableViewCell
         let group: ListGroup = (groupModel?.listGroup[indexPath.row])!
-        cell.titleGroup.text = group.groupName
+        cell.titleLabel.text = group.groupName
         cell.imageGroup.pin_updateWithProgress = true
        // cell.imageGroup.layer.cornerRadius = 1
         cell.imageGroup.contentMode = .scaleToFill

@@ -20,14 +20,14 @@ class MyGroupDetailViewController: UIViewController {
     @IBOutlet weak var contentView: UIView!
     
     var image = ""
-    var titlegroup = ""
+    var titlegroupp = ""
     var titlegroupisi = ""
     var groupid = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        detailTitle.title = self.titlegroup
+        detailTitle.title = self.titlegroupp
         detailTitleIsi.text = self.titlegroupisi
         detailImageGroup.pin_updateWithProgress = true
         // cell.imageGroup.layer.cornerRadius = 1

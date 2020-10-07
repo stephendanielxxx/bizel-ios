@@ -31,6 +31,7 @@ class ChatViewController: UIViewController {
     @IBOutlet weak var navbar: UINavigationItem!
     override func viewDidLoad() {
         super.viewDidLoad()
+        setTapToHideKeyboard()
         
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
         view.addGestureRecognizer(tap)
