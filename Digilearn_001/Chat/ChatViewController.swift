@@ -19,7 +19,7 @@ class ChatViewController: UIViewController {
     var chatList: [ChatModel] = []
     var namaYangDibales = ""
     var pesanYangDibales = ""
-    
+
     @IBOutlet weak var messageField: UITextView!
     @IBOutlet weak var messageView: UITableView!
     @IBOutlet weak var backgroundView: UIView!
@@ -148,6 +148,7 @@ class ChatViewController: UIViewController {
         namaYangDibales = ""
         pesanYangDibales = ""
     }
+    
 }
 
 extension ChatViewController: UITableViewDelegate, UITableViewDataSource{

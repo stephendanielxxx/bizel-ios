@@ -106,7 +106,7 @@ extension LibraryViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 124
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -119,11 +119,13 @@ extension LibraryViewController: UITableViewDelegate, UITableViewDataSource{
             let url = Foundation.URL(string: "https://digicourse.id/digilearn/admin-master/assets.admin_master/course/image/\(libraryModel!.courseImage)")!
             cell.imageCourse.pin_setImage(from: url)
             
-            cell.modulesCourse.text = "\(libraryModel!.totalModule) Modules | \(libraryModel!.totalTopic) Topics | \(libraryModel!.totalAction) Actions"
+            cell.modulesCourse.text = "\(libraryModel!.totalModule) Modules | \(libraryModel!.totalTopic) Topics | \(libraryModel!.totalAction) Activities"
             
             cell.startCourse.tag = indexPath.row
             
             cell.startCourse.addTarget(self, action: #selector(LibraryViewController.openNewDetail), for: .touchUpInside)
+            
+            cell.imageWidth.constant = 0
             
             return cell
         }else{
@@ -134,11 +136,13 @@ extension LibraryViewController: UITableViewDelegate, UITableViewDataSource{
             let url = Foundation.URL(string: "https://digicourse.id/digilearn/admin-master/assets.admin_master/course/image/\(libraryModel!.courseImage)")!
             cell.imageCourse.pin_setImage(from: url)
             
-            cell.modulesCourse.text = "\(libraryModel!.totalModule) Modules | \(libraryModel!.totalTopic) Topics | \(libraryModel!.totalAction) Actions"
+            cell.modulesCourse.text = "\(libraryModel!.totalModule) Modules | \(libraryModel!.totalTopic) Topics | \(libraryModel!.totalAction) Activities"
             
             cell.startCourse.tag = indexPath.row
             
             cell.startCourse.addTarget(self, action: #selector(LibraryViewController.openAllDetail), for: .touchUpInside)
+            
+            cell.imageWidth.constant = 0
             
             return cell
         }

@@ -83,12 +83,12 @@ extension MyGroupViewController: UITableViewDelegate, UITableViewDataSource
         cell.imageGroup.clipsToBounds = true
         
        
-//        if(group.groupImage != nil) {
-            let url = Foundation.URL(string: "https://digicourse.id/digilearn/admin-master/assets.admin_master/group/profile/\(group.groupImage)")
+        if(group.groupImage != nil) {
+            let url = Foundation.URL(string: "https://digicourse.id/digilearn/admin-master/assets.admin_master/group/profile/\(group.groupImage!)")
             cell.imageGroup.pin_setImage(from: url)
-            
-            
-//        }
+        }else{
+            cell.imageGroup.image = UIImage(named: "ic_default_group")
+        }
         cell.groupDetail.tag = indexPath.row
         cell.groupDetail.addTarget(self,action: #selector(MyGroupViewController.openDetail(_:)),for: .touchUpInside)
                 return cell
@@ -97,8 +97,8 @@ extension MyGroupViewController: UITableViewDelegate, UITableViewDataSource
         let groupDetail = MyGroupDetailViewController()
         groupDetail.modalPresentationStyle = .fullScreen
         let listgroup: ListGroup = groupModel.listGroup[sender!.tag]
-        groupDetail.titlegroupp = listgroup.groupName
-        groupDetail.image = listgroup.groupImage
+        groupDetail.titlegroup = listgroup.groupName
+        groupDetail.image = listgroup.groupImage ?? ""
         groupDetail.titlegroupisi = listgroup.groupAbout
         groupDetail.groupid = listgroup.groupID 
         self.present(groupDetail, animated: true, completion: nil)
