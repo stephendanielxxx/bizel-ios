@@ -28,6 +28,7 @@ target 'Digilearn_001' do
   pod 'Firebase/Crashlytics'
   pod 'CodableFirebase'
   pod 'SkyFloatingLabelTextField', '~> 3.0'
+  pod 'IQKeyboardManagerSwift'
   #pod 'DKImagePickerController'
   #pod 'Player', '~> 0.13.2'
   #pod 'BMPlayer', '~> 1.3.0'

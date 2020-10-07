@@ -35,6 +35,8 @@ class ProfileViewController: BaseSettingViewController, UIImagePickerControllerD
         
         discardButton.layer.cornerRadius = 18
         saveButton.layer.cornerRadius = 18
+     
+        setTapToHideKeyboard()
         
         showData()
     }

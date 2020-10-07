@@ -13,7 +13,7 @@ struct GroupModel: Decodable {
 // MARK: - ListGroup
 struct ListGroup: Decodable {
     let userID, groupID, groupName, groupAbout: String
-    let groupImage: String
+    let groupImage: String?
 
     enum CodingKeys: String, CodingKey {
         case userID = "user_id"

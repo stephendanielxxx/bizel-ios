@@ -15,6 +15,7 @@ class NewLibraryTableViewCell: UITableViewCell {
     @IBOutlet weak var authorCourse: UILabel!
     @IBOutlet weak var modulesCourse: UILabel!
     @IBOutlet weak var startCourse: UIButton!
+    @IBOutlet weak var imageWidth: NSLayoutConstraint!
     
     override func awakeFromNib() {
         super.awakeFromNib()
