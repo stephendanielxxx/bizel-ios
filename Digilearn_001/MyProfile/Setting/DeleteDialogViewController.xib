@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DeleteDialogViewController" customModule="Digilearn_001" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DeleteDialogViewController" customModule="Bizel" customModuleProvider="target">
             <connections>
                 <outlet property="cancelButton" destination="J1V-Ik-x84" id="LCj-iq-fs6"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -30,14 +30,14 @@
                                 <constraint firstAttribute="height" constant="128" id="WfJ-yO-1zY"/>
                             </constraints>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you sure to delete this account? " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bii-uv-Ymh">
-                            <rect key="frame" x="21.5" y="152" width="307" height="21"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you sure to delete this account? " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bii-uv-Ymh">
+                            <rect key="frame" x="22" y="152" width="306" height="20.5"/>
                             <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="If you click 'YES', all saved data and learning progress will be deleted and you will no longer be able to access the data" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kx6-Nt-6mv">
-                            <rect key="frame" x="22" y="181" width="306" height="75"/>
+                            <rect key="frame" x="22" y="180.5" width="306" height="75"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="75" id="Gv4-ZS-pCx"/>
@@ -47,7 +47,7 @@
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                         </textView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lvr-Vd-ZFe">
-                            <rect key="frame" x="55" y="264" width="75" height="30"/>
+                            <rect key="frame" x="55" y="263.5" width="75" height="30"/>
                             <color key="backgroundColor" name="red_1"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="75" id="Htt-Ve-bTD"/>
@@ -63,7 +63,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J1V-Ik-x84">
-                            <rect key="frame" x="220" y="264" width="75" height="30"/>
+                            <rect key="frame" x="220" y="263.5" width="75" height="30"/>
                             <color key="backgroundColor" name="red_1"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="SDa-qD-rec"/>
@@ -84,12 +84,14 @@
                         <constraint firstItem="d1n-pZ-Abe" firstAttribute="top" secondItem="07m-JZ-nbU" secondAttribute="top" constant="12" id="F6I-Eo-r1D"/>
                         <constraint firstItem="Lvr-Vd-ZFe" firstAttribute="top" secondItem="kx6-Nt-6mv" secondAttribute="bottom" constant="8" id="G1M-r9-9re"/>
                         <constraint firstItem="bii-uv-Ymh" firstAttribute="top" secondItem="d1n-pZ-Abe" secondAttribute="bottom" constant="12" id="JJB-od-T6p"/>
+                        <constraint firstItem="bii-uv-Ymh" firstAttribute="leading" secondItem="07m-JZ-nbU" secondAttribute="leading" constant="22" id="LBF-PD-4Zn"/>
                         <constraint firstAttribute="height" constant="326" id="LeV-Ky-zOT"/>
                         <constraint firstItem="kx6-Nt-6mv" firstAttribute="centerX" secondItem="bii-uv-Ymh" secondAttribute="centerX" id="VOv-8i-oas"/>
                         <constraint firstAttribute="trailing" secondItem="J1V-Ik-x84" secondAttribute="trailing" constant="55" id="WZc-ov-Lm2"/>
                         <constraint firstAttribute="width" constant="350" id="bjP-Ns-YUf"/>
                         <constraint firstAttribute="trailing" secondItem="kx6-Nt-6mv" secondAttribute="trailing" constant="22" id="n4b-dn-W8P"/>
                         <constraint firstItem="kx6-Nt-6mv" firstAttribute="leading" secondItem="07m-JZ-nbU" secondAttribute="leading" constant="22" id="nab-LI-PVu"/>
+                        <constraint firstAttribute="trailing" secondItem="bii-uv-Ymh" secondAttribute="trailing" constant="22" id="tSP-A1-ijk"/>
                         <constraint firstItem="Lvr-Vd-ZFe" firstAttribute="leading" secondItem="07m-JZ-nbU" secondAttribute="leading" constant="55" id="vsi-rb-fIz"/>
                         <constraint firstItem="d1n-pZ-Abe" firstAttribute="centerX" secondItem="07m-JZ-nbU" secondAttribute="centerX" id="wJl-4R-l0t"/>
                         <constraint firstItem="kx6-Nt-6mv" firstAttribute="top" secondItem="bii-uv-Ymh" secondAttribute="bottom" constant="8" id="xzX-Ua-HoV"/>

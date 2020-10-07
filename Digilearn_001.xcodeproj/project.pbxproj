@@ -31,6 +31,7 @@
 		6A3E5356252433480048A2F9 /* ModuleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3E5354252433480048A2F9 /* ModuleDetailViewController.swift */; };
 		6A3E5357252433480048A2F9 /* ModuleDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A3E5355252433480048A2F9 /* ModuleDetailViewController.xib */; };
 		6A46A9C22526D0F80093FF43 /* DownloadModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A46A9C12526D0F80093FF43 /* DownloadModel.swift */; };
+		6A46A9C6252D5C210093FF43 /* MyGrouppTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A46A9C4252D5C210093FF43 /* MyGrouppTableViewCell.xib */; };
 		6A69F2C32525927A0094A86F /* TopicsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A69F2C12525927A0094A86F /* TopicsTableViewCell.swift */; };
 		6A69F2C42525927A0094A86F /* TopicsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A69F2C22525927A0094A86F /* TopicsTableViewCell.xib */; };
 		6A69F2C82525AA970094A86F /* DetailtopicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A69F2C72525AA970094A86F /* DetailtopicModel.swift */; };
@@ -52,7 +53,6 @@
 		6AAEEC2E250F522200A129A6 /* AnnounceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AAEEC2C250F522200A129A6 /* AnnounceDetailViewController.swift */; };
 		6AAEEC2F250F522200A129A6 /* AnnounceDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AAEEC2D250F522200A129A6 /* AnnounceDetailViewController.xib */; };
 		6AD2EE7B2510C8F8002A83FB /* MyGroupDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD2EE792510C8F8002A83FB /* MyGroupDetailViewController.swift */; };
-		6AD2EE7C2510C8F8002A83FB /* MyGroupDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AD2EE7A2510C8F8002A83FB /* MyGroupDetailViewController.xib */; };
 		6ADC3B102509FA6500E88D7C /* MyGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADC3B0E2509FA6500E88D7C /* MyGroupViewController.swift */; };
 		6ADC3B112509FA6500E88D7C /* MyGroupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6ADC3B0F2509FA6500E88D7C /* MyGroupViewController.xib */; };
 		6ADC3B142509FB1800E88D7C /* GroupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADC3B132509FB1800E88D7C /* GroupModel.swift */; };
@@ -62,6 +62,7 @@
 		6ADC3B26250A2EFE00E88D7C /* AnnounceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6ADC3B24250A2EFE00E88D7C /* AnnounceViewController.xib */; };
 		6ADC3B29250B28C200E88D7C /* AnnounceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADC3B27250B28C200E88D7C /* AnnounceTableViewCell.swift */; };
 		6ADC3B2A250B28C200E88D7C /* AnnounceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6ADC3B28250B28C200E88D7C /* AnnounceTableViewCell.xib */; };
+		6AE534EC252D734C00648A62 /* MyGroupDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AE534EB252D734C00648A62 /* MyGroupDetailViewController.xib */; };
 		6AF6D8022518B22200947520 /* AchievementTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF6D8002518B22200947520 /* AchievementTableViewCell.swift */; };
 		6AF6D8032518B22300947520 /* AchievementTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AF6D8012518B22200947520 /* AchievementTableViewCell.xib */; };
 		6AF6D8082519ECAA00947520 /* FaqModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF6D8072519ECAA00947520 /* FaqModel.swift */; };
@@ -295,6 +296,7 @@
 		6A3E5354252433480048A2F9 /* ModuleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleDetailViewController.swift; sourceTree = "<group>"; };
 		6A3E5355252433480048A2F9 /* ModuleDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModuleDetailViewController.xib; sourceTree = "<group>"; };
 		6A46A9C12526D0F80093FF43 /* DownloadModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadModel.swift; sourceTree = "<group>"; };
+		6A46A9C4252D5C210093FF43 /* MyGrouppTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyGrouppTableViewCell.xib; sourceTree = "<group>"; };
 		6A69F2C12525927A0094A86F /* TopicsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicsTableViewCell.swift; sourceTree = "<group>"; };
 		6A69F2C22525927A0094A86F /* TopicsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopicsTableViewCell.xib; sourceTree = "<group>"; };
 		6A69F2C72525AA970094A86F /* DetailtopicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailtopicModel.swift; sourceTree = "<group>"; };
@@ -316,7 +318,6 @@
 		6AAEEC2C250F522200A129A6 /* AnnounceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnounceDetailViewController.swift; sourceTree = "<group>"; };
 		6AAEEC2D250F522200A129A6 /* AnnounceDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnnounceDetailViewController.xib; sourceTree = "<group>"; };
 		6AD2EE792510C8F8002A83FB /* MyGroupDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupDetailViewController.swift; sourceTree = "<group>"; };
-		6AD2EE7A2510C8F8002A83FB /* MyGroupDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyGroupDetailViewController.xib; sourceTree = "<group>"; };
 		6ADC3B0E2509FA6500E88D7C /* MyGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupViewController.swift; sourceTree = "<group>"; };
 		6ADC3B0F2509FA6500E88D7C /* MyGroupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyGroupViewController.xib; sourceTree = "<group>"; };
 		6ADC3B132509FB1800E88D7C /* GroupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupModel.swift; sourceTree = "<group>"; };
@@ -326,6 +327,7 @@
 		6ADC3B24250A2EFE00E88D7C /* AnnounceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnnounceViewController.xib; sourceTree = "<group>"; };
 		6ADC3B27250B28C200E88D7C /* AnnounceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnounceTableViewCell.swift; sourceTree = "<group>"; };
 		6ADC3B28250B28C200E88D7C /* AnnounceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnnounceTableViewCell.xib; sourceTree = "<group>"; };
+		6AE534EB252D734C00648A62 /* MyGroupDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyGroupDetailViewController.xib; sourceTree = "<group>"; };
 		6AF6D8002518B22200947520 /* AchievementTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementTableViewCell.swift; sourceTree = "<group>"; };
 		6AF6D8012518B22200947520 /* AchievementTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AchievementTableViewCell.xib; sourceTree = "<group>"; };
 		6AF6D8072519ECAA00947520 /* FaqModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaqModel.swift; sourceTree = "<group>"; };
@@ -772,9 +774,10 @@
 				6ADC3B0E2509FA6500E88D7C /* MyGroupViewController.swift */,
 				6ADC3B0F2509FA6500E88D7C /* MyGroupViewController.xib */,
 				6ADC3B1D250A1C4A00E88D7C /* MyGroupTableViewCell.swift */,
+				6A46A9C4252D5C210093FF43 /* MyGrouppTableViewCell.xib */,
 				6ADC3B1A250A142E00E88D7C /* MyGroupTableViewCell.xib */,
 				6AD2EE792510C8F8002A83FB /* MyGroupDetailViewController.swift */,
-				6AD2EE7A2510C8F8002A83FB /* MyGroupDetailViewController.xib */,
+				6AE534EB252D734C00648A62 /* MyGroupDetailViewController.xib */,
 			);
 			path = MyGroup;
 			sourceTree = "<group>";
@@ -1489,6 +1492,7 @@
 				B9673E07250F561D005E6BB8 /* CourseViewController.xib in Resources */,
 				B9B39ABD251DEA6100AA9CE9 /* Montserrat-Black.ttf in Resources */,
 				6A69F2C42525927A0094A86F /* TopicsTableViewCell.xib in Resources */,
+				6AE534EC252D734C00648A62 /* MyGroupDetailViewController.xib in Resources */,
 				B9643A4B251C737200438DA3 /* ContactUsViewController.xib in Resources */,
 				B9B39ABB251DEA6100AA9CE9 /* Montserrat-MediumItalic.ttf in Resources */,
 				B934AFE124FFA88D000FCEB3 /* LoginViewController.xib in Resources */,
@@ -1548,6 +1552,7 @@
 				B96F5BE625121AE7006AB070 /* OnboardingViewController.xib in Resources */,
 				B96F5BEA25121DFA006AB070 /* IntroductionViewController.xib in Resources */,
 				B9D74BDB25185E0B00133208 /* MaterialVideoViewController.xib in Resources */,
+				6A46A9C6252D5C210093FF43 /* MyGrouppTableViewCell.xib in Resources */,
 				B9608B3E251AFEE10082B3A3 /* NewLibraryTableViewCell.xib in Resources */,
 				B9A116012510864200852131 /* AbousTopicViewController.xib in Resources */,
 				B9EA1A06252AF884000922BD /* EventRegistrationViewController.xib in Resources */,
@@ -1568,7 +1573,6 @@
 				B9B39AB5251DEA6100AA9CE9 /* Montserrat-ExtraLightItalic.ttf in Resources */,
 				B9EA1A00252AEE24000922BD /* EventHistoryTableViewCell.xib in Resources */,
 				6ADC3B26250A2EFE00E88D7C /* AnnounceViewController.xib in Resources */,
-				6AD2EE7C2510C8F8002A83FB /* MyGroupDetailViewController.xib in Resources */,
 				B94585EF2509FDDF00330DAC /* EventDetailViewController.xib in Resources */,
 				6A1334082518A1630032F3A0 /* ExpiredTaskViewController.xib in Resources */,
 				B969665F2514A99100A3561E /* ModuleFinishViewController.xib in Resources */,

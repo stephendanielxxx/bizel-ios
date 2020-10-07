@@ -24,6 +24,7 @@ class BaseActionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setTapToHideKeyboard()
         
         userId = readStringPreference(key: DigilearnsKeys.USER_ID)
         nickName = readStringPreference(key: DigilearnsKeys.USER_NICK)
