@@ -62,7 +62,7 @@ class ChangePhoneViewController: BaseSettingViewController {
     
     @IBAction func saveAction(_ sender: UIButton) {
         if phoneView.text?.count ?? 0 < 5{
-            showErrorAlert(title: "Change Phone Failed", errorMessage: "Phone not valid")
+            showErrorAlert(title: "Change Phone Number Failed", errorMessage: "Phone number not valid")
         }else {
             changePhone(phone: phoneView.text!)
         }

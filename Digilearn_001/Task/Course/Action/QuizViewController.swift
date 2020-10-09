@@ -155,7 +155,7 @@ class QuizViewController: BaseActionViewController, ActionDelegate {
             submitProgress(courseId: courseId, moduleId: moduleId, topicId: (quiz?.topicID)!, actionId: (quiz?.actionID)!, answer: (quiz?.answer)!)
             delegate?.nextAction(index: index!)
         }else{
-            showFalseToast(message: "Incorrect Answer. Please try again!")
+            showFalseToast(message: "Please select the answer!")
         }
     }
     
