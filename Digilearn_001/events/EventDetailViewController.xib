@@ -221,14 +221,14 @@
                     </constraints>
                 </scrollView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YQu-gv-IbZ">
-                    <rect key="frame" x="105" y="802" width="204" height="40"/>
+                    <rect key="frame" x="124" y="802" width="166" height="40"/>
                     <color key="backgroundColor" name="color_ B63532"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="eJ3-ge-scN"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                     <inset key="contentEdgeInsets" minX="50" minY="4" maxX="50" maxY="4"/>
-                    <state key="normal" title="Register Now">
+                    <state key="normal" title="Register">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>
