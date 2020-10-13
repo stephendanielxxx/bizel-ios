@@ -19,6 +19,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.rootViewController = LoginViewController()
         window?.makeKeyAndVisible()
         
+        UITabBar.appearance().tintColor = UIColor(named: "color_ B63532")
+        
         let preferences = UserDefaults.standard
         let userId = preferences.string(forKey: DigilearnsKeys.USER_ID)
         let firstInstall = preferences.string(forKey: DigilearnsKeys.FIRST_INSTALL)
@@ -32,8 +34,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             window?.makeKeyAndVisible()
             
         }else if userId != nil && !userId!.isEmpty{
-            let homeScreen: UINavigationController = UINavigationController(rootViewController: HomeTabBarController())
-            homeScreen.view.frame = UIScreen.main.bounds
+//            let homeScreen: UINavigationController = UINavigationController(rootViewController: HomeTabBarController())
+//            homeScreen.view.frame = UIScreen.main.bounds
+            let homeScreen = HomeTabBarController()
             window?.rootViewController = homeScreen
             window?.makeKeyAndVisible()
         }else{
@@ -41,7 +44,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             window?.makeKeyAndVisible()
         }
         
-        UITabBar.appearance().tintColor = UIColor(named: "color_ B63532")
+        
         
 //        UILabel.appearance().substituteFontName = "Montserrat-Medium"
 //        UILabel.appearance().substituteFontNameRegular = "Montserrat-Regular"
