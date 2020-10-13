@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LibraryViewController" customModule="Bizel" customModuleProvider="target">
             <connections>
                 <outlet property="allLibrary" destination="se2-kk-S5R" id="R5A-Tz-bd7"/>
+                <outlet property="allLibraryHeight" destination="xAs-ww-sfq" id="Xs0-Aj-JgK"/>
                 <outlet property="newLibrary" destination="zPw-Yd-iwZ" id="cHB-CY-QMC"/>
+                <outlet property="newLibraryHeight" destination="4oC-ZM-etP" id="EuB-DT-dU7"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -58,12 +62,11 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zPw-Yd-iwZ" userLabel="New Library">
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zPw-Yd-iwZ" userLabel="New Library">
                                     <rect key="frame" x="16" y="253" width="378" height="100"/>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" priority="750" constant="100" id="4oC-ZM-etP"/>
-                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="BHg-go-i7O"/>
                                     </constraints>
                                 </tableView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qfr-rv-nze">
@@ -75,21 +78,20 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="se2-kk-S5R" userLabel="All Library">
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="se2-kk-S5R" userLabel="All Library">
                                     <rect key="frame" x="16" y="398" width="378" height="375"/>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="375" id="sbN-eM-CT9"/>
+                                        <constraint firstAttribute="height" constant="375" id="xAs-ww-sfq"/>
                                     </constraints>
                                 </tableView>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="gWw-LK-gNb" secondAttribute="trailing" constant="16" id="2AQ-fd-auo"/>
                                 <constraint firstItem="gWw-LK-gNb" firstAttribute="top" secondItem="WWl-kD-VsU" secondAttribute="bottom" constant="12" id="6Dw-z0-Q3O"/>
                                 <constraint firstItem="gWw-LK-gNb" firstAttribute="leading" secondItem="Bam-SE-9ra" secondAttribute="leading" constant="16" id="6N7-2p-rJZ"/>
                                 <constraint firstAttribute="trailing" secondItem="zPw-Yd-iwZ" secondAttribute="trailing" constant="20" id="EUR-Pc-54C"/>
-                                <constraint firstAttribute="bottom" secondItem="se2-kk-S5R" secondAttribute="bottom" constant="20" id="NTQ-pw-t0V"/>
                                 <constraint firstItem="se2-kk-S5R" firstAttribute="top" secondItem="Qfr-rv-nze" secondAttribute="bottom" constant="12" id="PDN-Bg-5PA"/>
                                 <constraint firstItem="se2-kk-S5R" firstAttribute="leading" secondItem="Bam-SE-9ra" secondAttribute="leading" constant="16" id="QLF-BZ-fhZ"/>
                                 <constraint firstItem="Qfr-rv-nze" firstAttribute="top" secondItem="zPw-Yd-iwZ" secondAttribute="bottom" constant="12" id="TOE-gA-qp6"/>
@@ -99,9 +101,9 @@
                                 <constraint firstAttribute="trailing" secondItem="se2-kk-S5R" secondAttribute="trailing" constant="20" id="ZZ5-Uz-80d"/>
                                 <constraint firstAttribute="trailing" secondItem="WWl-kD-VsU" secondAttribute="trailing" constant="8" id="bIa-RZ-OkK"/>
                                 <constraint firstItem="WWl-kD-VsU" firstAttribute="leading" secondItem="Bam-SE-9ra" secondAttribute="leading" constant="8" id="eNm-Iw-01u"/>
+                                <constraint firstAttribute="bottom" secondItem="se2-kk-S5R" secondAttribute="bottom" constant="20" symbolic="YES" id="grk-4a-yla"/>
                                 <constraint firstItem="zPw-Yd-iwZ" firstAttribute="top" secondItem="gWw-LK-gNb" secondAttribute="bottom" constant="12" id="hVF-Ea-FiY"/>
                                 <constraint firstItem="WWl-kD-VsU" firstAttribute="top" secondItem="Bam-SE-9ra" secondAttribute="top" constant="8" id="jCu-Fy-6EB"/>
-                                <constraint firstAttribute="height" constant="793" id="u3C-66-vWz"/>
                             </constraints>
                         </view>
                     </subviews>
@@ -114,7 +116,8 @@
                     </constraints>
                 </scrollView>
             </subviews>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="Iaa-cM-Oqm" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" id="0pF-3k-HDp"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Iaa-cM-Oqm" secondAttribute="trailing" id="AaA-3Q-BU2"/>
@@ -126,7 +129,6 @@
                 <constraint firstItem="Iaa-cM-Oqm" firstAttribute="top" secondItem="plN-Zu-Urf" secondAttribute="bottom" id="xze-Ao-7CY"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="145.98214285714286"/>
         </view>
     </objects>
@@ -135,5 +137,8 @@
         <namedColor name="color_ D44444">
             <color red="0.83099997043609619" green="0.2669999897480011" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

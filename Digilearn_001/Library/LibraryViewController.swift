@@ -13,6 +13,8 @@ class LibraryViewController: UIViewController {
     
     @IBOutlet weak var newLibrary: UITableView!
     @IBOutlet weak var allLibrary: UITableView!
+    @IBOutlet weak var newLibraryHeight: NSLayoutConstraint!
+    @IBOutlet weak var allLibraryHeight: NSLayoutConstraint!
     
     let newURL = "\(DigilearnParams.ApiUrl)/api/apicoursenow"
     let allURL = "\(DigilearnParams.ApiUrl)/api/apicourse"
@@ -59,15 +61,17 @@ class LibraryViewController: UIViewController {
                         let decoder = JSONDecoder()
                         do{
                             self.newLibraryModel = try decoder.decode(GetLibraryModel.self, from:data)
+                            
                             self.newLibrary.reloadData()
                             
+                            self.newLibraryHeight.constant = 125
                         }catch{
                             print(error.localizedDescription)
                         }
                     case .failure(_):
                         self.removeSpinner()
                     }
-        }
+                   }
     }
     
     func loadAllData(){
@@ -82,7 +86,13 @@ class LibraryViewController: UIViewController {
                         let decoder = JSONDecoder()
                         do{
                             self.allLibraryModel = try decoder.decode(GetLibraryModel.self, from:data)
+                            
                             self.allLibrary.reloadData()
+                            
+                            if self.allLibraryModel.library.count > 0 {
+                                let height = CGFloat(Float(self.allLibraryModel.library.count) * Float(125))
+                                self.allLibraryHeight.constant = height
+                            }
                             
                         }catch{
                             print(error.localizedDescription)
@@ -90,7 +100,7 @@ class LibraryViewController: UIViewController {
                     case .failure(_):
                         self.removeSpinner()
                     }
-        }
+                   }
     }
     
 }
