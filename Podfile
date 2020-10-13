@@ -12,6 +12,7 @@ target 'Digilearn_001' do
   pod 'Alamofire', '~> 5.2'
   #pod 'AlamofireNetworkActivityLogger', '~> 3.0'
   pod 'SimpleCheckbox'
+  pod 'PINCache'
   pod 'PINRemoteImage'
   pod 'MaterialComponents/Cards'
   pod 'MaterialComponents/BottomNavigation'
