@@ -24,10 +24,10 @@ class HomeEventTableViewCell: UITableViewCell {
         collectionView.delegate = self
         loadData()
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     
@@ -44,19 +44,19 @@ class HomeEventTableViewCell: UITableViewCell {
                     
                     switch response.result {
                     case .success(let data):
-                       let decoder = JSONDecoder()
-                       do{
-
-                        self.eventModel = try decoder.decode(EventModel.self, from:data)
-
-                        if(self.eventModel?.onsite.count ?? 0 > 0){
+                        let decoder = JSONDecoder()
+                        do{
                             
-                            self.collectionView.reloadData()
+                            self.eventModel = try decoder.decode(EventModel.self, from:data)
                             
-                        }else{
-
-                        }
-                       }catch{
+                            if(self.eventModel?.onsite.count ?? 0 > 0){
+                                
+                                self.collectionView.reloadData()
+                                
+                            }else{
+                                
+                            }
+                        }catch{
                             print(error.localizedDescription)
                         }
                         break
@@ -64,7 +64,7 @@ class HomeEventTableViewCell: UITableViewCell {
                         debugPrint("Error")
                         break
                     }
-        }
+                   }
     }
     
 }
@@ -75,39 +75,52 @@ extension HomeEventTableViewCell: UICollectionViewDataSource{
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-           let cell = collectionView.dequeueReusableCell(withReuseIdentifier: EventCollectionViewCell.reuseIdentifier,
-             for: indexPath) as! EventCollectionViewCell
-
-            let event: OnsiteList = eventModel.onsite[indexPath.row]
-       
-            cell.configureCell(name: event.title)
-            cell.imageEvent.pin_updateWithProgress = true
-            cell.imageEvent.layer.cornerRadius = 15
-            cell.imageEvent.contentMode = .scaleToFill
-            cell.imageEvent.clipsToBounds = true
-                        
-            let url = Foundation.URL(string: "https://digicourse.id/digilearn/admin-master/assets.admin_master/event/image/\(event.image)")!
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: EventCollectionViewCell.reuseIdentifier,
+                                                      for: indexPath) as! EventCollectionViewCell
+        
+        let event: OnsiteList = eventModel.onsite[indexPath.row]
     
-            cell.imageEvent.pin_setImage(from: url)
+        cell.configureCell(name: event.title)
+        cell.imageEvent.pin_updateWithProgress = true
+        cell.imageEvent.layer.cornerRadius = 15
+        cell.imageEvent.contentMode = .scaleToFill
+        cell.imageEvent.clipsToBounds = true
         
-            cell.registerEvent.tag = indexPath.row
+        let url = Foundation.URL(string: "https://digicourse.id/digilearn/admin-master/assets.admin_master/event/image/\(event.image)")!
         
-            cell.registerEvent.addTarget(self, action: #selector(HomeEventTableViewCell.openDetail(_:)), for: .touchUpInside)
-           return cell
+        cell.imageEvent.pin_setImage(from: url)
+        
+        cell.registerEvent.tag = indexPath.row
+        
+//        cell.registerEvent.addTarget(self, action: #selector(HomeEventTableViewCell.openDetail(_:)), for: .touchUpInside)
+        
+        let tap = HomeEventGesture(target: self, action: #selector(openDetail(_:)))
+        tap.event = event
+        cell.registerEvent.addGestureRecognizer(tap)
+        
+        if indexPath.row == 0 {
+            cell.newView.isHidden = false
+        }else {
+            cell.newView.isHidden = true
+        }
+        
+        cell.pageNumber.text = "\(indexPath.row+1)/\(eventModel?.onsite.count ?? 0)"
+        
+        return cell
     }
     
-    @objc func openDetail(_ sender: UIButton?) {
-          let eventDetail = EventDetailViewController()
-
-          eventDetail.modalPresentationStyle = .fullScreen
-          
-          let event: OnsiteList = (eventModel?.onsite[sender!.tag])!
-          
-          eventDetail.eventId = event.id
-          
+    @objc func openDetail(_ sender: HomeEventGesture?) {
+        let eventDetail = EventDetailViewController()
+        
+        eventDetail.modalPresentationStyle = .fullScreen
+        
+//        let event: OnsiteList = (eventModel?.onsite[sender!.tag])!
+        
+        eventDetail.eventId = sender!.event.id
+        
         self.window?.rootViewController?.present(eventDetail, animated: true, completion: nil)
-          
-      }
+        
+    }
 }
 
 extension HomeEventTableViewCell: UICollectionViewDelegateFlowLayout {
@@ -115,10 +128,10 @@ extension HomeEventTableViewCell: UICollectionViewDelegateFlowLayout {
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         guard let cell: EventCollectionViewCell = Bundle.main.loadNibNamed(EventCollectionViewCell.nibName,
-            owner: self, options: nil)?.first as? EventCollectionViewCell else {
+                                                                           owner: self, options: nil)?.first as? EventCollectionViewCell else {
             return CGSize.zero
         }
-       
+        
         cell.setNeedsLayout()
         cell.layoutIfNeeded()
         let size: CGSize = cell.contentView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)

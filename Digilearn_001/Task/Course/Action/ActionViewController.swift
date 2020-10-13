@@ -37,6 +37,8 @@ class ActionViewController: UIViewController {
         
         loadData()
         
+        debugPrint(isLibrary)
+        
     }
     
     @IBAction func backAction(_ sender: UIBarButtonItem) {
