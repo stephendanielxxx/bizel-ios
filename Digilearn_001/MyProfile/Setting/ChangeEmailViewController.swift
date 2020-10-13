@@ -65,10 +65,12 @@ class ChangeEmailViewController: BaseSettingViewController {
     @IBAction func changeAction(_ sender: UIButton) {
         emailField.textColor = UIColor.black
         emailField.isEnabled = true
+        
     }
     
     @IBAction func saveAction(_ sender: UIButton) {
-        
+        emailField.isEnabled = false
+        emailField.textColor = UIColor.lightGray
         if emailField.text?.count ?? 0 < 2 {
             showErrorAlert(title: "Change Email Failed", errorMessage: "Email too short")
         }else if !validate(emailAddress: emailField.text!){

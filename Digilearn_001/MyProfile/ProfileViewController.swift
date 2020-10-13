@@ -9,6 +9,7 @@
 import UIKit
 import DropDown
 import Alamofire
+import Toast_Swift
 
 class ProfileViewController: BaseSettingViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -144,7 +145,25 @@ class ProfileViewController: BaseSettingViewController, UIImagePickerControllerD
     
     @IBAction func saveAction(_ sender: UIButton) {
         imagupload()
+        showToast(message: "Update data success!")
+        
+        firstNameField.isEnabled = false
+        lastNameField.isEnabled = false
+        nickNameField.isEnabled = false
+        
+        firstNameField.textColor = UIColor.lightGray
+        lastNameField.textColor = UIColor.lightGray
+        nickNameField.textColor = UIColor.lightGray
+        
     }
+    func showToast(message: String) {
+           var style = ToastStyle()
+           style.backgroundColor = UIColor.darkGray
+           style.messageColor = UIColor.white
+           ToastManager.shared.style = style
+           
+           self.view.makeToast(message)
+       }
     
     @IBAction func openImagePicker(_ sender: UIButton) {
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary){
