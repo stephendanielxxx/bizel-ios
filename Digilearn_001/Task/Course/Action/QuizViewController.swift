@@ -87,15 +87,15 @@ class QuizViewController: BaseActionViewController, ActionDelegate {
         
         let tapB = QuizAnswerTapGesture(target: self, action: #selector(checkAnswerB(_:)))
         tapB.answer = quiz?.pil2
-        buttonA.addGestureRecognizer(tapB)
+        buttonB.addGestureRecognizer(tapB)
         
         let tapC = QuizAnswerTapGesture(target: self, action: #selector(checkAnswerC(_:)))
         tapC.answer = quiz?.pil3
-        buttonA.addGestureRecognizer(tapC)
+        buttonC.addGestureRecognizer(tapC)
         
         let tapD = QuizAnswerTapGesture(target: self, action: #selector(checkAnswerD(_:)))
         tapD.answer = quiz?.pil4
-        buttonA.addGestureRecognizer(tapD)
+        buttonD.addGestureRecognizer(tapD)
         
         
         scrollview.bounces = (scrollview.contentOffset.y > 100);
@@ -111,6 +111,7 @@ class QuizViewController: BaseActionViewController, ActionDelegate {
             showCorrectToast(message: "CORRECT. Great!")
             isCorrect = true
         }else{
+            isCorrect = false
             showFalseToast(message: "Incorrect Answer. Please try again!")
         }
         
@@ -126,6 +127,7 @@ class QuizViewController: BaseActionViewController, ActionDelegate {
             showCorrectToast(message: "CORRECT. Great!")
             isCorrect = true
         }else{
+            isCorrect = false
             showFalseToast(message: "Incorrect Answer. Please try again!")
         }
     }
@@ -140,6 +142,7 @@ class QuizViewController: BaseActionViewController, ActionDelegate {
             showCorrectToast(message: "CORRECT. Great!")
             isCorrect = true
         }else{
+            isCorrect = false
             showFalseToast(message: "Incorrect Answer. Please try again!")
         }
     }
@@ -154,6 +157,7 @@ class QuizViewController: BaseActionViewController, ActionDelegate {
             showCorrectToast(message: "CORRECT. Great!")
             isCorrect = true
         }else{
+            isCorrect = false
             showFalseToast(message: "Incorrect Answer. Please try again!")
         }
     }
