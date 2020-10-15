@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -41,8 +43,8 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SZj-37-cMm">
                     <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Change your email adress" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7y-6O-vCu">
-                            <rect key="frame" x="41" y="44" width="332" height="17"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change your email adress" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7y-6O-vCu">
+                            <rect key="frame" x="123.5" y="44" width="167" height="17"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -75,7 +77,7 @@
                                 <action selector="changeAction:" destination="-1" eventType="touchUpInside" id="WZl-vj-u2a"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uub-b0-XI0">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uub-b0-XI0">
                             <rect key="frame" x="122" y="176" width="170" height="40"/>
                             <color key="backgroundColor" name="red_1"/>
                             <constraints>
@@ -90,15 +92,15 @@
                             </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstItem="dhg-U2-Iqo" firstAttribute="top" secondItem="h7y-6O-vCu" secondAttribute="bottom" constant="15" id="7SO-NE-PN5"/>
                         <constraint firstItem="dhg-U2-Iqo" firstAttribute="leading" secondItem="SZj-37-cMm" secondAttribute="leading" constant="41" id="91z-dn-APP"/>
                         <constraint firstAttribute="trailing" secondItem="Fwq-0i-8ff" secondAttribute="trailing" constant="41" id="Bhf-gF-RpI"/>
                         <constraint firstItem="Uub-b0-XI0" firstAttribute="top" secondItem="zHx-oP-pfb" secondAttribute="bottom" constant="37" id="FE1-0d-a03"/>
+                        <constraint firstItem="h7y-6O-vCu" firstAttribute="centerX" secondItem="SZj-37-cMm" secondAttribute="centerX" id="Fzb-0d-jOd"/>
                         <constraint firstItem="Fwq-0i-8ff" firstAttribute="centerY" secondItem="zHx-oP-pfb" secondAttribute="centerY" id="J5r-SM-ET5"/>
                         <constraint firstItem="zHx-oP-pfb" firstAttribute="top" secondItem="dhg-U2-Iqo" secondAttribute="bottom" constant="8" id="JI0-86-uKk"/>
-                        <constraint firstItem="h7y-6O-vCu" firstAttribute="leading" secondItem="SZj-37-cMm" secondAttribute="leading" constant="41" id="SxI-cL-dMM"/>
                         <constraint firstItem="zHx-oP-pfb" firstAttribute="leading" secondItem="SZj-37-cMm" secondAttribute="leading" constant="41" id="bzp-11-NgX"/>
                         <constraint firstItem="Fwq-0i-8ff" firstAttribute="leading" secondItem="zHx-oP-pfb" secondAttribute="trailing" id="iwW-YJ-9y9"/>
                         <constraint firstItem="Uub-b0-XI0" firstAttribute="centerX" secondItem="SZj-37-cMm" secondAttribute="centerX" id="pDF-CX-aIM"/>
@@ -106,7 +108,8 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="WdE-4d-wk4" secondAttribute="trailing" id="5t5-8a-H1K"/>
                 <constraint firstItem="WdE-4d-wk4" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="AFe-kx-YPB"/>
@@ -117,7 +120,6 @@
                 <constraint firstItem="SZj-37-cMm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="syI-M7-B3C"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="145.98214285714286"/>
         </view>
     </objects>
@@ -130,5 +132,8 @@
         <namedColor name="red_1">
             <color red="0.60399997234344482" green="0.27099999785423279" blue="0.23499999940395355" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
