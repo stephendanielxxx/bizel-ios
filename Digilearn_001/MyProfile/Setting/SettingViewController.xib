@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -25,7 +27,7 @@
             <subviews>
                 <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAU-gs-3iC">
                     <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                    <color key="barTintColor" name="color_ D44444"/>
+                    <color key="barTintColor" name="color_2E64EE"/>
                     <textAttributes key="titleTextAttributes">
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </textAttributes>
@@ -67,7 +69,7 @@
                                 </label>
                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rrW-qM-scN">
                                     <rect key="frame" x="325" y="37.5" width="51" height="31"/>
-                                    <color key="onTintColor" name="red_1"/>
+                                    <color key="onTintColor" name="color_2E64EE"/>
                                 </switch>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_setting_change_pass" translatesAutoresizingMaskIntoConstraints="NO" id="8UH-WR-heX">
                                     <rect key="frame" x="27" y="123" width="32" height="32"/>
@@ -118,11 +120,11 @@
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delete Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H4X-Lg-3Nt">
                                     <rect key="frame" x="77" y="282" width="119" height="20"/>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                    <color key="textColor" name="red_1"/>
+                                    <color key="textColor" name="color_ B63532"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstItem="8UH-WR-heX" firstAttribute="leading" secondItem="Nki-Pl-9pB" secondAttribute="leading" constant="27" id="2OX-56-SjO"/>
                                 <constraint firstAttribute="height" constant="766" id="AsD-LA-QlM"/>
@@ -162,7 +164,8 @@
                     </constraints>
                 </scrollView>
             </subviews>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="aAU-gs-3iC" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="6AY-ju-uxh"/>
                 <constraint firstItem="nsB-UD-BX5" firstAttribute="top" secondItem="aAU-gs-3iC" secondAttribute="bottom" id="E8T-8q-B1b"/>
@@ -175,7 +178,6 @@
                 <constraint firstItem="nsB-UD-BX5" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" id="woI-r3-0kk"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="145.98214285714286"/>
         </view>
     </objects>
@@ -186,11 +188,14 @@
         <image name="ic_setting_change_phone" width="21" height="21"/>
         <image name="ic_setting_delete_account" width="21" height="21"/>
         <image name="ic_setting_notif" width="25" height="24"/>
-        <namedColor name="color_ D44444">
-            <color red="0.83099997043609619" green="0.2669999897480011" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="color_ B63532">
+            <color red="0.71399998664855957" green="0.20800000429153442" blue="0.19599999487400055" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="red_1">
-            <color red="0.60399997234344482" green="0.27099999785423279" blue="0.23499999940395355" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        <namedColor name="color_2E64EE">
+            <color red="0.1803921568627451" green="0.39215686274509803" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

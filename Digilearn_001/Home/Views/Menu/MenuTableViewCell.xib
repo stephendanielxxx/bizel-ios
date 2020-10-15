@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -25,7 +27,7 @@
                                     <constraint firstAttribute="height" constant="55" id="A7b-L0-IFl"/>
                                     <constraint firstAttribute="width" constant="55" id="jYo-tI-Tsp"/>
                                 </constraints>
-                                <state key="normal" image="Group 844"/>
+                                <state key="normal" image="group_ic"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Group" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wEu-ec-aVF">
                                 <rect key="frame" x="46.5" y="81" width="59.5" height="16"/>
@@ -39,7 +41,7 @@
                                     <constraint firstAttribute="width" constant="55" id="RKc-MV-jQT"/>
                                     <constraint firstAttribute="height" constant="55" id="iKe-KJ-mE3"/>
                                 </constraints>
-                                <state key="normal" image="events"/>
+                                <state key="normal" image="events_ic"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Events" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="meb-8M-Sgq">
                                 <rect key="frame" x="296" y="81" width="40.5" height="16"/>
@@ -53,7 +55,7 @@
                                     <constraint firstAttribute="height" constant="55" id="Rvl-lP-Mic"/>
                                     <constraint firstAttribute="width" constant="55" id="gXU-2s-aGY"/>
                                 </constraints>
-                                <state key="normal" image="announce"/>
+                                <state key="normal" image="announce_ic"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Announcement" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xOS-pq-uAA">
                                 <rect key="frame" x="149" y="81" width="92" height="16"/>
@@ -67,7 +69,7 @@
                                     <constraint firstAttribute="width" constant="55" id="IuJ-hY-Q1E"/>
                                     <constraint firstAttribute="height" constant="55" id="SHq-Qe-MoE"/>
                                 </constraints>
-                                <state key="normal" image="achievement"/>
+                                <state key="normal" image="achievement_ic"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yP7-SK-tYg">
                                 <rect key="frame" x="223" y="105" width="55" height="55"/>
@@ -75,7 +77,7 @@
                                     <constraint firstAttribute="height" constant="55" id="0HB-3C-IyY"/>
                                     <constraint firstAttribute="width" constant="55" id="bED-tW-GjD"/>
                                 </constraints>
-                                <state key="normal" image="faq"/>
+                                <state key="normal" image="faq_ic"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Achievement" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ISa-cw-T2R">
                                 <rect key="frame" x="96" y="168" width="79" height="16"/>
@@ -90,7 +92,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="ZsM-Tj-BYs" secondAttribute="bottom" constant="16" id="2xp-X4-D7D"/>
                             <constraint firstItem="GLA-U2-WPu" firstAttribute="leading" secondItem="zDw-Ku-BNZ" secondAttribute="trailing" constant="4.5" id="43f-Lb-1qw"/>
@@ -140,10 +142,13 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="Group 844" width="40" height="39"/>
-        <image name="achievement" width="40" height="40"/>
-        <image name="announce" width="39" height="39"/>
-        <image name="events" width="40" height="39"/>
-        <image name="faq" width="40" height="43"/>
+        <image name="achievement_ic" width="40" height="40"/>
+        <image name="announce_ic" width="39" height="39"/>
+        <image name="events_ic" width="40" height="39"/>
+        <image name="faq_ic" width="40" height="43"/>
+        <image name="group_ic" width="40" height="39"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

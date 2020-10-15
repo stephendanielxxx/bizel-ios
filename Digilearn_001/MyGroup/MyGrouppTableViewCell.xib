@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -19,7 +21,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7pi-XF-x05" userLabel="Group" customClass="MDCCard">
                         <rect key="frame" x="6" y="-11" width="353" height="83"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_group" translatesAutoresizingMaskIntoConstraints="NO" id="n2l-Wa-OXQ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="group" translatesAutoresizingMaskIntoConstraints="NO" id="n2l-Wa-OXQ">
                                 <rect key="frame" x="8" y="15" width="39" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="pjB-hR-P6U"/>
@@ -44,7 +46,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="73" id="1ti-dm-B3V"/>
                             <constraint firstItem="npz-KB-uP8" firstAttribute="top" secondItem="7pi-XF-x05" secondAttribute="top" constant="25" id="9g7-Hh-5KU"/>
@@ -64,10 +66,10 @@
                     <constraint firstAttribute="bottomMargin" secondItem="7pi-XF-x05" secondAttribute="bottom" constant="-5" id="z45-hE-Zox"/>
                 </constraints>
             </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <constraints>
                 <constraint firstItem="njF-e1-oar" firstAttribute="top" secondItem="7pi-XF-x05" secondAttribute="top" constant="11" id="rdQ-uz-fz5"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="groupDetail" destination="7pi-XF-x05" id="BbX-2h-qfC"/>
                 <outlet property="imageDefault" destination="n2l-Wa-OXQ" id="IlR-On-QCu"/>
@@ -78,6 +80,9 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="img_group" width="55.5" height="129"/>
+        <image name="group" width="37" height="86"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

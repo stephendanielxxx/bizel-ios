@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -29,7 +31,7 @@
                         </tableView>
                         <navigationBar contentMode="scaleToFill" translucent="NO" backIndicatorImage="arrow.left" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="xZb-tT-MAQ">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                            <color key="barTintColor" name="color_ D44444"/>
+                            <color key="barTintColor" name="color_2E64EE"/>
                             <textAttributes key="titleTextAttributes">
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -53,7 +55,7 @@
                             </items>
                         </navigationBar>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="xZb-tT-MAQ" secondAttribute="trailing" id="E8P-xI-f3f"/>
                         <constraint firstItem="xZb-tT-MAQ" firstAttribute="top" secondItem="uAc-cd-0MM" secondAttribute="top" id="S7p-aZ-hxC"/>
@@ -67,7 +69,7 @@
                 <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cNf-tf-AHN" userLabel="Empty View">
                     <rect key="frame" x="47" y="340.5" width="320" height="225"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_empty_event" translatesAutoresizingMaskIntoConstraints="NO" id="WxN-12-kdZ">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="event_img" translatesAutoresizingMaskIntoConstraints="NO" id="WxN-12-kdZ">
                             <rect key="frame" x="40" y="24" width="240" height="128"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="240" id="8qe-Pn-Glz"/>
@@ -81,6 +83,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
+                    <viewLayoutGuide key="safeArea" id="vHT-dB-oJP"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="WxN-12-kdZ" secondAttribute="trailing" constant="40" id="1rg-yF-QxQ"/>
@@ -93,9 +96,9 @@
                         <constraint firstItem="dfQ-K1-d5b" firstAttribute="top" secondItem="WxN-12-kdZ" secondAttribute="bottom" constant="12" id="ola-mK-yGR"/>
                         <constraint firstItem="WxN-12-kdZ" firstAttribute="leading" secondItem="cNf-tf-AHN" secondAttribute="leading" constant="40" id="q2O-OI-l1n"/>
                     </constraints>
-                    <viewLayoutGuide key="safeArea" id="vHT-dB-oJP"/>
                 </view>
             </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="uAc-cd-0MM" secondAttribute="trailing" id="Jy0-HE-pxe"/>
@@ -105,16 +108,18 @@
                 <constraint firstItem="uAc-cd-0MM" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="gZ4-Gt-H92"/>
                 <constraint firstItem="uAc-cd-0MM" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="wXZ-08-CCx"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="152.67857142857142"/>
         </view>
     </objects>
     <resources>
         <image name="arrow.counterclockwise.circle" catalog="system" width="128" height="121"/>
         <image name="arrow.left" catalog="system" width="128" height="98"/>
-        <image name="ic_empty_event" width="128.5" height="128.5"/>
-        <namedColor name="color_ D44444">
-            <color red="0.83099997043609619" green="0.2669999897480011" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <image name="event_img" width="128.5" height="128.5"/>
+        <namedColor name="color_2E64EE">
+            <color red="0.18000000715255737" green="0.3919999897480011" blue="0.93300002813339233" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

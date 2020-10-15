@@ -46,7 +46,7 @@ class AchievementDetailViewController: UIViewController {
     
     @IBAction func detailButton(_ sender: UIButton) {
         
-        detailLine.backgroundColor = UIColor(named: "red_1")
+        detailLine.backgroundColor = UIColor(named: "digitalent")
         moduleLine.backgroundColor = UIColor.lightGray
         let detail = DetailViewController()
         detail.course_id = courseid
@@ -56,7 +56,7 @@ class AchievementDetailViewController: UIViewController {
     
     fileprivate func moduleView() {
         
-        moduleLine.backgroundColor = UIColor(named: "red_1")
+        moduleLine.backgroundColor = UIColor(named: "digitalent")
         detailLine.backgroundColor = UIColor.lightGray
         let module = AchieveModuleViewController()
         module.course_id = courseid

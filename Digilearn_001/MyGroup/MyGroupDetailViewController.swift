@@ -44,7 +44,7 @@ class MyGroupDetailViewController: UIViewController {
     }
     
     fileprivate func setMemberView() {
-        isiMember.backgroundColor = UIColor(named: "red_1")
+        isiMember.backgroundColor = UIColor(named: "digitalent")
         isiActive.backgroundColor = UIColor.lightGray
         isiExpired.backgroundColor = UIColor.lightGray
         
@@ -54,7 +54,7 @@ class MyGroupDetailViewController: UIViewController {
     }
     
     fileprivate func setActiveView() {
-        isiActive.backgroundColor = UIColor(named: "red_1")
+        isiActive.backgroundColor = UIColor(named: "digitalent")
         isiMember.backgroundColor = UIColor.lightGray
         isiExpired.backgroundColor = UIColor.lightGray
         
@@ -64,7 +64,7 @@ class MyGroupDetailViewController: UIViewController {
     }
     
     fileprivate func setExpiredView() {
-           isiExpired.backgroundColor = UIColor(named: "red_1")
+           isiExpired.backgroundColor = UIColor(named: "digitalent")
            isiActive.backgroundColor = UIColor.lightGray
            isiMember.backgroundColor = UIColor.lightGray
            

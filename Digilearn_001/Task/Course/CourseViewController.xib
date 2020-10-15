@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -31,14 +33,14 @@
                     <subviews>
                         <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Mt-o1-weL">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                            <color key="barTintColor" name="color_ D44444"/>
+                            <color key="barTintColor" name="digitalent"/>
                             <textAttributes key="titleTextAttributes">
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <offsetWrapper key="textShadowOffset" horizontal="900" vertical="0.0"/>
                             </textAttributes>
                             <items>
-                                <navigationItem title="Bizel" id="CMu-z7-chc">
+                                <navigationItem title="DIGITALENT" id="CMu-z7-chc">
                                     <barButtonItem key="leftBarButtonItem" image="arrow.left" catalog="system" id="bug-ak-8eS">
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
@@ -70,19 +72,19 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4cS-c8-UIO" userLabel="Tab View">
                             <rect key="frame" x="0.0" y="228" width="414" height="50"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sj3-64-oBT">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sj3-64-oBT">
                                     <rect key="frame" x="0.0" y="10" width="207" height="30"/>
                                     <state key="normal" title="Modules">
-                                        <color key="titleColor" name="red_1"/>
+                                        <color key="titleColor" name="digitalent"/>
                                     </state>
                                     <connections>
                                         <action selector="moduleAction:" destination="-1" eventType="touchUpInside" id="Kp5-eb-Gf1"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DOE-t9-MIv">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DOE-t9-MIv">
                                     <rect key="frame" x="207" y="10" width="207" height="30"/>
                                     <state key="normal" title="About The Course">
-                                        <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="titleColor" name="digitalent"/>
                                     </state>
                                     <connections>
                                         <action selector="aboutAction:" destination="-1" eventType="touchUpInside" id="YPQ-yK-K9t"/>
@@ -90,7 +92,7 @@
                                 </button>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4dt-SO-LV7" userLabel="Module Line">
                                     <rect key="frame" x="0.0" y="45" width="207" height="5"/>
-                                    <color key="backgroundColor" name="red_1"/>
+                                    <color key="backgroundColor" name="digitalent"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="5" id="5JZ-Ji-2KG"/>
                                     </constraints>
@@ -103,7 +105,7 @@
                                     </constraints>
                                 </view>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstItem="Sj3-64-oBT" firstAttribute="leading" secondItem="4cS-c8-UIO" secondAttribute="leading" id="4d9-wl-CIp"/>
                                 <constraint firstItem="TDX-1x-ijb" firstAttribute="width" secondItem="4dt-SO-LV7" secondAttribute="width" id="51H-vE-Z9z"/>
@@ -123,10 +125,10 @@
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DKc-kt-dEt" userLabel="Tab Content">
                             <rect key="frame" x="0.0" y="276" width="414" height="542"/>
-                            <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" systemColor="systemGray6Color"/>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" systemColor="systemGray5Color"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="DKc-kt-dEt" secondAttribute="trailing" id="Exp-S4-gaD"/>
                         <constraint firstItem="62o-8F-crI" firstAttribute="top" secondItem="4e6-HR-Qb8" secondAttribute="bottom" constant="8" id="MSh-ds-q4c"/>
@@ -148,7 +150,8 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="AKo-Kw-Aja" secondAttribute="bottom" id="NDu-94-fDX"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="AKo-Kw-Aja" secondAttribute="trailing" id="Qzd-8J-IOG"/>
@@ -158,17 +161,22 @@
                 <constraint firstItem="AKo-Kw-Aja" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" id="tIn-7d-NDF"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="145.98214285714286"/>
         </view>
     </objects>
     <resources>
         <image name="arrow.left" catalog="system" width="128" height="98"/>
-        <namedColor name="color_ D44444">
-            <color red="0.83099997043609619" green="0.2669999897480011" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="digitalent">
+            <color red="0.18000000715255737" green="0.3919999897480011" blue="0.93300002813339233" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="red_1">
-            <color red="0.60399997234344482" green="0.27099999785423279" blue="0.23499999940395355" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

@@ -9,7 +9,7 @@ target 'Digilearn_001' do
   pod 'RxSwift', '~> 5'
   pod 'RxCocoa', '~> 5'
   pod 'Reqres'
-  pod 'Alamofire', '~> 5.2'
+  pod 'Alamofire', '~>5.2'
   #pod 'AlamofireNetworkActivityLogger', '~> 3.0'
   pod 'SimpleCheckbox'
   pod 'PINCache'

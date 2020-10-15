@@ -56,7 +56,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <color key="backgroundColor" name="color_ D44444"/>
+                                    <color key="backgroundColor" name="color_2E64EE"/>
                                     <constraints>
                                         <constraint firstItem="LV4-1Z-xg1" firstAttribute="centerX" secondItem="huc-cX-kzb" secondAttribute="centerX" id="QNq-dY-1fb"/>
                                         <constraint firstAttribute="height" constant="200" id="e5I-9M-5Nn"/>
@@ -102,7 +102,7 @@
                                 </view>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4v2-8e-qH0">
                                     <rect key="frame" x="319" y="761" width="80" height="30"/>
-                                    <color key="backgroundColor" name="red_1"/>
+                                    <color key="backgroundColor" name="color_2E64EE"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="30" id="F5n-si-m0y"/>
                                         <constraint firstAttribute="width" constant="80" id="gq8-to-Wao"/>
@@ -116,7 +116,7 @@
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aex-3s-nXY">
                                     <rect key="frame" x="16" y="761" width="80" height="30"/>
-                                    <color key="backgroundColor" name="red_1"/>
+                                    <color key="backgroundColor" name="color_2E64EE"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="30" id="HnQ-RV-n9y"/>
                                         <constraint firstAttribute="width" constant="80" id="Lue-aT-HXG"/>
@@ -330,11 +330,8 @@
     </objects>
     <resources>
         <image name="banner3" width="333" height="134"/>
-        <namedColor name="color_ D44444">
-            <color red="0.83099997043609619" green="0.2669999897480011" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="red_1">
-            <color red="0.60399997234344482" green="0.27099999785423279" blue="0.23499999940395355" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        <namedColor name="color_2E64EE">
+            <color red="0.1803921568627451" green="0.39215686274509803" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -48,8 +48,8 @@ class MyTaskViewController: UIViewController {
     
     func loadActiveData(){
         tabShowed = 0
-        activeButton.backgroundColor = UIColor(named: "color_ B63532")
-        expiredButton.backgroundColor = UIColor(named: "color_ D44444")
+        activeButton.backgroundColor = UIColor(named: "color_task_expired")
+        expiredButton.backgroundColor = UIColor(named: "color_task_active")
         
         listTaskModel = nil
         
@@ -109,8 +109,8 @@ class MyTaskViewController: UIViewController {
     
     func loadExpiredData(){
         tabShowed = 1
-        expiredButton.backgroundColor = UIColor(named: "color_ B63532")
-        activeButton.backgroundColor = UIColor(named: "color_ D44444")
+        expiredButton.backgroundColor = UIColor(named: "color_task_expired")
+        activeButton.backgroundColor = UIColor(named: "color_task_active")
         
         listTaskModel = nil
         

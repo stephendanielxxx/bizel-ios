@@ -49,7 +49,7 @@ class ModuleDetailViewController: UIViewController {
     
     
     fileprivate func topics() {
-        topicsLine.backgroundColor = UIColor(named: "red_1")
+        topicsLine.backgroundColor = UIColor(named: "digitalent")
         detailsLine.backgroundColor = UIColor.lightGray
         let topic = TopicsViewController()
         topic.module_id = module_id
@@ -64,7 +64,7 @@ class ModuleDetailViewController: UIViewController {
     
     
     @IBAction func detailsButton(_ sender: UIButton) {
-        detailsLine.backgroundColor = UIColor(named: "red_1")
+        detailsLine.backgroundColor = UIColor(named: "digitalent")
         topicsLine.backgroundColor = UIColor.lightGray
         let detail = DetailtopicViewController()
                detail.module_id = module_id

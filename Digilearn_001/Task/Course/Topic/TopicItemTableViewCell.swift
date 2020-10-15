@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import MaterialComponents.MaterialCards
 
 class TopicItemTableViewCell: UITableViewCell {
 

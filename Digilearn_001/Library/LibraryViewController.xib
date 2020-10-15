@@ -27,7 +27,7 @@
                 <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="plN-Zu-Urf">
                     <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <color key="barTintColor" name="color_ D44444"/>
+                    <color key="barTintColor" name="color_2E64EE"/>
                     <textAttributes key="titleTextAttributes">
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </textAttributes>
@@ -45,7 +45,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bam-SE-9ra" userLabel="Content View">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="793"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_library" translatesAutoresizingMaskIntoConstraints="NO" id="WWl-kD-VsU">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="library_img" translatesAutoresizingMaskIntoConstraints="NO" id="WWl-kD-VsU">
                                     <rect key="frame" x="8" y="8" width="398" height="200"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="WWl-kD-VsU" secondAttribute="height" multiplier="199:100" id="Mmu-XA-pi6"/>
@@ -133,9 +133,9 @@
         </view>
     </objects>
     <resources>
-        <image name="img_library" width="344.5" height="152"/>
-        <namedColor name="color_ D44444">
-            <color red="0.83099997043609619" green="0.2669999897480011" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <image name="library_img" width="344.5" height="152"/>
+        <namedColor name="color_2E64EE">
+            <color red="0.1803921568627451" green="0.39215686274509803" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

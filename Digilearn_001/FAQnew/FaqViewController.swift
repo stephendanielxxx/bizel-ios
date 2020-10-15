@@ -73,7 +73,7 @@ class FaqViewController: UIViewController, UISearchBarDelegate, UISearchResultsU
                                 
                                 button.setTitle(faq.faqCatName, for: .normal)
                                 button.setTitleColor(UIColor.white, for: .normal)
-                                button.backgroundColor = UIColor(named: "red_1")
+                                button.backgroundColor = UIColor(named: "digitalent")
                                 
                                 button.contentEdgeInsets = UIEdgeInsets(top: 5, left: 15, bottom: 5, right: 15)
                                 button.layer.cornerRadius = 15

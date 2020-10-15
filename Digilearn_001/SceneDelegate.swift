@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.rootViewController = LoginViewController()
         window?.makeKeyAndVisible()
         
-        UITabBar.appearance().tintColor = UIColor(named: "color_ B63532")
+        UITabBar.appearance().tintColor = UIColor(named: "digitalent")
         
         let preferences = UserDefaults.standard
         let userId = preferences.string(forKey: DigilearnsKeys.USER_ID)

@@ -84,11 +84,11 @@ class CourseViewController: UIViewController {
     
     @IBAction func aboutAction(_ sender: UIButton) {
         
-        aboutLine.backgroundColor = UIColor(named: "red_1")
+        aboutLine.backgroundColor = UIColor(named: "digitalent")
         modulesLine.backgroundColor = UIColor.white
         
-        aboutButton.setTitleColor(UIColor(named: "red_1"), for: .normal)
-        modulesButton.setTitleColor(UIColor.lightGray, for: .normal)
+        aboutButton.setTitleColor(UIColor(named: "digitalent"), for: .normal)
+        modulesButton.setTitleColor(UIColor(named: "digitalent"), for: .normal)
         
         let about = AboutCourseViewController()
         about.course_about = course_about
@@ -105,11 +105,11 @@ class CourseViewController: UIViewController {
     
     @IBAction func moduleAction(_ sender: UIButton) {
         
-        modulesLine.backgroundColor = UIColor(named: "red_1")
+        modulesLine.backgroundColor = UIColor(named: "digitalent")
         aboutLine.backgroundColor = UIColor.white
         
-        modulesButton.setTitleColor(UIColor(named: "red_1"), for: .normal)
-        aboutButton.setTitleColor(UIColor.lightGray, for: .normal)
+        modulesButton.setTitleColor(UIColor(named: "digitalent"), for: .normal)
+        aboutButton.setTitleColor(UIColor(named: "digitalent"), for: .normal)
         
         showModules()
     }

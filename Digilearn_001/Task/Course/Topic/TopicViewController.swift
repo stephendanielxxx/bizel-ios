@@ -65,20 +65,20 @@ class TopicViewController: UIViewController, TopicActionDelegate {
     }
     
     @IBAction func topicAction(_ sender: UIButton) {
-        topicBUtton.setTitleColor(UIColor(named: "red_1"), for: .normal)
+        topicBUtton.setTitleColor(UIColor(named: "digitalent"), for: .normal)
         aboutButton.setTitleColor(UIColor.lightGray, for: .normal)
         
-        topicLine.backgroundColor = UIColor(named: "red_1")
+        topicLine.backgroundColor = UIColor(named: "digitalent")
         aboutLine.backgroundColor = UIColor.white
         
         showTopicAction()
     }
     
     @IBAction func aboutAction(_ sender: UIButton) {
-        aboutButton.setTitleColor(UIColor(named: "red_1"), for: .normal)
+        aboutButton.setTitleColor(UIColor(named: "digitalent"), for: .normal)
         topicBUtton.setTitleColor(UIColor.lightGray, for: .normal)
         
-        aboutLine.backgroundColor = UIColor(named: "red_1")
+        aboutLine.backgroundColor = UIColor(named: "digitalent")
         topicLine.backgroundColor = UIColor.white
         
         let about = AbousTopicViewController()
@@ -90,6 +90,5 @@ class TopicViewController: UIViewController, TopicActionDelegate {
     func onDismissScreen() {
        
         self.dismiss(animated: true, completion: nil)
-         debugPrint("TestTTTTTT")
     }
 }

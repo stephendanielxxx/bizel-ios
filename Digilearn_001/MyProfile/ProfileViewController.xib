@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -33,7 +35,7 @@
             <subviews>
                 <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rrJ-g5-x4s">
                     <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                    <color key="barTintColor" name="color_ D44444"/>
+                    <color key="barTintColor" name="color_2E64EE"/>
                     <textAttributes key="titleTextAttributes">
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="textShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -59,7 +61,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qjv-bn-wEY">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_bg_profile" translatesAutoresizingMaskIntoConstraints="NO" id="Ae4-QR-Jx6" userLabel="Background">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_img" translatesAutoresizingMaskIntoConstraints="NO" id="Ae4-QR-Jx6" userLabel="Background">
                                     <rect key="frame" x="0.0" y="-7" width="424" height="332"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="332" id="49N-5R-jo0"/>
@@ -174,25 +176,9 @@
                                         <constraint firstItem="IIG-rs-SKT" firstAttribute="top" secondItem="UeK-yI-n0x" secondAttribute="bottom" constant="20" id="zJ0-2D-9LP"/>
                                     </constraints>
                                 </view>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVf-1X-veU">
-                                    <rect key="frame" x="269" y="551" width="108" height="40"/>
-                                    <color key="backgroundColor" name="red_1"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="108" id="tBQ-qv-C7s"/>
-                                        <constraint firstAttribute="height" constant="40" id="yJC-13-fTA"/>
-                                    </constraints>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <inset key="contentEdgeInsets" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
-                                    <state key="normal" title="Save Changes">
-                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="saveAction:" destination="-1" eventType="touchUpInside" id="o0Y-8N-Hpy"/>
-                                    </connections>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1x-lO-NUl">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1x-lO-NUl">
                                     <rect key="frame" x="37" y="551" width="108" height="40"/>
-                                    <color key="backgroundColor" name="red_1"/>
+                                    <color key="backgroundColor" name="color_2E64EE"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="40" id="9Q4-bR-uoM"/>
                                         <constraint firstAttribute="width" constant="108" id="udl-dr-IUU"/>
@@ -209,11 +195,27 @@
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone number and password can be changed in Settings. Click the icon in the upper right corner" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1BF-Ao-iU9">
                                     <rect key="frame" x="37" y="614" width="340" height="24"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                    <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="textColor" name="color_2E64EE"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVf-1X-veU">
+                                    <rect key="frame" x="269" y="551" width="108" height="40"/>
+                                    <color key="backgroundColor" name="color_2E64EE"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="108" id="tBQ-qv-C7s"/>
+                                        <constraint firstAttribute="height" constant="40" id="yJC-13-fTA"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <inset key="contentEdgeInsets" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
+                                    <state key="normal" title="Save Changes">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="saveAction:" destination="-1" eventType="touchUpInside" id="o0Y-8N-Hpy"/>
+                                    </connections>
+                                </button>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstItem="T1x-lO-NUl" firstAttribute="top" secondItem="cx1-LI-TnO" secondAttribute="bottom" constant="29.5" id="0O7-Vz-xYR"/>
                                 <constraint firstAttribute="trailing" secondItem="Ae4-QR-Jx6" secondAttribute="trailing" constant="-10" id="0Sw-yF-40V"/>
@@ -246,7 +248,8 @@
                     </constraints>
                 </scrollView>
             </subviews>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="cU7-Q2-nlb" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" id="0n6-Is-uAm"/>
                 <constraint firstItem="cU7-Q2-nlb" firstAttribute="top" secondItem="rrJ-g5-x4s" secondAttribute="bottom" id="4Ex-3L-kLi"/>
@@ -260,21 +263,20 @@
                 <constraint firstItem="rrJ-g5-x4s" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="uvG-MX-hZe"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="152.67857142857142"/>
         </view>
     </objects>
     <resources>
         <image name="camera.circle.fill" catalog="system" width="128" height="121"/>
         <image name="ic_more_option" width="4" height="16"/>
-        <image name="img_bg_profile" width="364" height="347"/>
         <image name="person.crop.circle" catalog="system" width="128" height="121"/>
-        <image name="square.and.pencil" catalog="system" width="128" height="118"/>
-        <namedColor name="color_ D44444">
-            <color red="0.83099997043609619" green="0.2669999897480011" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <image name="profile_img" width="364" height="347"/>
+        <image name="square.and.pencil" catalog="system" width="128" height="115"/>
+        <namedColor name="color_2E64EE">
+            <color red="0.1803921568627451" green="0.39215686274509803" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="red_1">
-            <color red="0.60399997234344482" green="0.27099999785423279" blue="0.23499999940395355" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
