@@ -118,8 +118,10 @@ extension HomeEventTableViewCell: UICollectionViewDataSource{
         
         eventDetail.eventId = sender!.event.id
         
-        self.window?.rootViewController?.present(eventDetail, animated: true, completion: nil)
+//        self.window?.rootViewController?.present(eventDetail, animated: true, completion: nil)
         
+        UIApplication.topViewController()?.present(eventDetail, animated: true, completion: nil)
+
     }
 }
 
@@ -136,5 +138,22 @@ extension HomeEventTableViewCell: UICollectionViewDelegateFlowLayout {
         cell.layoutIfNeeded()
         let size: CGSize = cell.contentView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
         return CGSize(width: size.width, height: size.height)
+    }
+}
+
+extension UIApplication {
+    class func topViewController(viewController: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController? {
+        if let nav = viewController as? UINavigationController {
+            return topViewController(viewController: nav.visibleViewController)
+        }
+        if let tab = viewController as? UITabBarController {
+            if let selected = tab.selectedViewController {
+                return topViewController(viewController: selected)
+            }
+        }
+        if let presented = viewController?.presentedViewController {
+            return topViewController(viewController: presented)
+        }
+        return viewController
     }
 }
