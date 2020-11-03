@@ -26,6 +26,7 @@ class TopicViewController: UIViewController, TopicActionDelegate {
     var moduleDesc = ""
     var courseId = ""
     var moduleId = ""
+    var assign_id = ""
     var nextModuleName = ""
     var isLibrary = false
     
@@ -59,6 +60,7 @@ class TopicViewController: UIViewController, TopicActionDelegate {
         topics.topicActionDelegate = self
         topics.courseId = courseId
         topics.moduleId = moduleId
+        topics.assign_id = assign_id
         topics.nextModuleName = nextModuleName
         topics.isLibrary = self.isLibrary
         embed(topics, inParent: self, inView: tabContent)

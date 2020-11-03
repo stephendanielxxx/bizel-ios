@@ -20,6 +20,7 @@ class ActionViewController: UIViewController {
     var actionId = ""
     var nextTopicId = ""
     var nextModuleName = ""
+    var assign_id = ""
     let URL = "\(DigilearnParams.ApiUrl)/quiz/get_quiz_course"
     var assesmentModel: AssesmentModel!
     var indexPage = 0
@@ -83,6 +84,7 @@ extension ActionViewController: QuizDelegate, ModuleFinishDelegate{
         if assesmentQuiz.category?.caseInsensitiveCompare("quiz") == .orderedSame {
             if assesmentQuiz.quizType?.caseInsensitiveCompare("single") == .orderedSame {
                 let quiz = QuizViewController()
+                quiz.assign_id = assign_id
                 quiz.delegate = self
                 quiz.courseId = self.courseId
                 quiz.moduleId = self.moduleId
@@ -96,6 +98,7 @@ extension ActionViewController: QuizDelegate, ModuleFinishDelegate{
                 self.embed(quiz, inParent: self, inView: self.embedView)
             }else if assesmentQuiz.quizType?.caseInsensitiveCompare("essay") == .orderedSame {
                 let quiz = QuizEssayViewController()
+                quiz.assign_id = assign_id
                 quiz.delegate = self
                 quiz.courseId = self.courseId
                 quiz.moduleId = self.moduleId
@@ -111,6 +114,7 @@ extension ActionViewController: QuizDelegate, ModuleFinishDelegate{
         }else if assesmentQuiz.category?.caseInsensitiveCompare("material") == .orderedSame{
             if assesmentQuiz.materialType?.caseInsensitiveCompare("Read") == .orderedSame{
                 let material = MaterialViewController()
+                material.assign_id = assign_id
                 material.delegate = self
                 material.courseId = self.courseId
                 material.moduleId = self.moduleId
@@ -124,6 +128,7 @@ extension ActionViewController: QuizDelegate, ModuleFinishDelegate{
                 self.embed(material, inParent: self, inView: self.embedView)
             }else if assesmentQuiz.materialType?.caseInsensitiveCompare("Watch Link") == .orderedSame{
                 let material = MaterialLinkViewController()
+                material.assign_id = assign_id
                 material.delegate = self
                 material.courseId = self.courseId
                 material.moduleId = self.moduleId
@@ -137,6 +142,7 @@ extension ActionViewController: QuizDelegate, ModuleFinishDelegate{
                 self.embed(material, inParent: self, inView: self.embedView)
             }else if assesmentQuiz.materialType?.caseInsensitiveCompare("Watch") == .orderedSame{
                 let material = MaterialVideoViewController()
+                material.assign_id = assign_id
                 material.delegate = self
                 material.courseId = self.courseId
                 material.moduleId = self.moduleId

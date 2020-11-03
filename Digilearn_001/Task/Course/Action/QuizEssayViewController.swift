@@ -78,7 +78,7 @@ class QuizEssayViewController: BaseActionViewController, ActionDelegate {
             if answerField.text!.isEmpty {
                 showFalseToast(message: "Please input your answer")
             }else{
-                submitProgress(courseId: courseId, moduleId: moduleId, topicId: (quiz?.topicID)!, actionId: (quiz?.actionID)!, answer: answerField.text ?? "")
+                submitProgress(courseId: courseId, moduleId: moduleId, topicId: (quiz?.topicID)!, actionId: (quiz?.actionID)!, answer: answerField.text ?? "", assign_id: assign_id)
                 delegate?.nextAction(index: index!)
             }
         }else{

@@ -236,6 +236,7 @@ extension MyTaskViewController: UITableViewDelegate, UITableViewDataSource{
         course.course_name = task.title
         course.created_by = task.author
         course.course_about = task.detail
+        course.assign_id = task.assignId
         
         self.present(course, animated: true, completion: nil)
     }
