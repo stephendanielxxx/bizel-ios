@@ -156,7 +156,6 @@ extension SettingViewController: DeleteDialogDelegate{
         delegate.onLogout()
     }
 }
-
 protocol SettingDelegate {
     func onLogout()
 }

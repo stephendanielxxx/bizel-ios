@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -25,14 +27,18 @@
             <subviews>
                 <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAU-gs-3iC">
                     <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                    <color key="barTintColor" name="color_ D44444"/>
+                    <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <textAttributes key="titleTextAttributes">
-                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <offsetWrapper key="textShadowOffset" horizontal="900" vertical="0.0"/>
+                    </textAttributes>
+                    <textAttributes key="largeTitleTextAttributes">
+                        <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
                     </textAttributes>
                     <items>
-                        <navigationItem title="Setting" id="qt6-Dq-2f3">
+                        <navigationItem title="Settings" id="qt6-Dq-2f3">
                             <barButtonItem key="leftBarButtonItem" image="arrow.left" catalog="system" id="ZUQ-Qc-gmm">
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <action selector="backAction:" destination="-1" id="miH-yb-rLT"/>
                                 </connections>
@@ -47,82 +53,83 @@
                             <rect key="frame" x="0.0" y="0.0" width="414" height="766"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_setting_notif" translatesAutoresizingMaskIntoConstraints="NO" id="cRm-Vg-fpW">
-                                    <rect key="frame" x="27" y="37" width="32" height="32"/>
+                                    <rect key="frame" x="27" y="37" width="32" height="25"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="32" id="PuD-0r-6Y3"/>
-                                        <constraint firstAttribute="height" constant="32" id="yzt-3X-19s"/>
+                                        <constraint firstAttribute="height" constant="25" id="yzt-3X-19s"/>
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notification Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H3d-HN-j6F">
-                                    <rect key="frame" x="77" y="43" width="137" height="20"/>
-                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                    <rect key="frame" x="77" y="41" width="122" height="17"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
+                                    <size key="shadowOffset" width="0.0" height="0.0"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You will receive this notification if there is new announcement, event, or task. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j63-iG-moL">
-                                    <rect key="frame" x="77" y="71" width="259" height="29"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                    <rect key="frame" x="77" y="66" width="259" height="26.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rrW-qM-scN">
-                                    <rect key="frame" x="325" y="37.5" width="51" height="31"/>
+                                    <rect key="frame" x="325" y="34" width="51" height="31"/>
                                     <color key="onTintColor" name="red_1"/>
                                 </switch>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_setting_change_pass" translatesAutoresizingMaskIntoConstraints="NO" id="8UH-WR-heX">
-                                    <rect key="frame" x="27" y="123" width="32" height="32"/>
+                                    <rect key="frame" x="27" y="115.5" width="32" height="25"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="32" id="2kA-uS-9sG"/>
-                                        <constraint firstAttribute="height" constant="32" id="kZd-B0-hpf"/>
+                                        <constraint firstAttribute="height" constant="25" id="kZd-B0-hpf"/>
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aFS-9t-xVe">
-                                    <rect key="frame" x="77" y="129" width="139" height="20"/>
-                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                    <rect key="frame" x="77" y="121.5" width="123.5" height="17"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_setting_change_phone" translatesAutoresizingMaskIntoConstraints="NO" id="zTr-tM-6LE">
-                                    <rect key="frame" x="29" y="176" width="28" height="28"/>
+                                    <rect key="frame" x="29" y="161.5" width="28" height="25"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="28" id="g9d-kZ-khz"/>
-                                        <constraint firstAttribute="height" constant="28" id="jVZ-0I-RhS"/>
+                                        <constraint firstAttribute="height" constant="25" id="jVZ-0I-RhS"/>
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change Phone Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KBW-tA-US7">
-                                    <rect key="frame" x="77" y="180" width="179" height="20"/>
-                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                    <rect key="frame" x="77" y="165.5" width="158.5" height="17"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_setting_change_email" translatesAutoresizingMaskIntoConstraints="NO" id="iV7-WN-ErY">
-                                    <rect key="frame" x="29" y="228" width="28" height="28"/>
+                                    <rect key="frame" x="29" y="210.5" width="28" height="25"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="28" id="NaX-UE-SLO"/>
+                                        <constraint firstAttribute="height" constant="25" id="NaX-UE-SLO"/>
                                         <constraint firstAttribute="width" constant="28" id="Y1z-8S-QTp"/>
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xxH-Dx-oQS">
-                                    <rect key="frame" x="77" y="232" width="106" height="20"/>
-                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                    <rect key="frame" x="77" y="214.5" width="94" height="17"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_setting_delete_account" translatesAutoresizingMaskIntoConstraints="NO" id="ewx-1C-KBr">
-                                    <rect key="frame" x="29" y="278" width="28" height="28"/>
+                                    <rect key="frame" x="29" y="257.5" width="28" height="25"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="28" id="1fR-Za-V4g"/>
-                                        <constraint firstAttribute="height" constant="28" id="x1n-b2-YM4"/>
+                                        <constraint firstAttribute="height" constant="25" id="x1n-b2-YM4"/>
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delete Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H4X-Lg-3Nt">
-                                    <rect key="frame" x="77" y="282" width="119" height="20"/>
-                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                    <rect key="frame" x="77" y="261.5" width="105.5" height="17"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                     <color key="textColor" name="red_1"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstItem="8UH-WR-heX" firstAttribute="leading" secondItem="Nki-Pl-9pB" secondAttribute="leading" constant="27" id="2OX-56-SjO"/>
                                 <constraint firstAttribute="height" constant="766" id="AsD-LA-QlM"/>
@@ -162,7 +169,8 @@
                     </constraints>
                 </scrollView>
             </subviews>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="aAU-gs-3iC" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="6AY-ju-uxh"/>
                 <constraint firstItem="nsB-UD-BX5" firstAttribute="top" secondItem="aAU-gs-3iC" secondAttribute="bottom" id="E8T-8q-B1b"/>
@@ -175,7 +183,6 @@
                 <constraint firstItem="nsB-UD-BX5" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" id="woI-r3-0kk"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="145.98214285714286"/>
         </view>
     </objects>
@@ -186,11 +193,11 @@
         <image name="ic_setting_change_phone" width="21" height="21"/>
         <image name="ic_setting_delete_account" width="21" height="21"/>
         <image name="ic_setting_notif" width="25" height="24"/>
-        <namedColor name="color_ D44444">
-            <color red="0.83099997043609619" green="0.2669999897480011" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="red_1">
             <color red="0.60399997234344482" green="0.27099999785423279" blue="0.23499999940395355" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

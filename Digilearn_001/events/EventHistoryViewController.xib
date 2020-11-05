@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -44,10 +46,10 @@
                         </navigationBar>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cxV-rW-clF">
                             <rect key="frame" x="0.0" y="44" width="414" height="774"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </tableView>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstItem="cxV-rW-clF" firstAttribute="top" secondItem="MHE-zF-PJa" secondAttribute="bottom" id="8fc-kz-ZVP"/>
                         <constraint firstAttribute="bottom" secondItem="cxV-rW-clF" secondAttribute="bottom" id="Gk9-jc-2Ug"/>
@@ -75,6 +77,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
+                    <viewLayoutGuide key="safeArea" id="j8q-f7-wP1"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="Bxo-Wd-6rX" firstAttribute="centerX" secondItem="nUg-8w-NJF" secondAttribute="centerX" id="2PA-uw-Shx"/>
@@ -87,10 +90,10 @@
                         <constraint firstAttribute="width" constant="320" id="acY-VA-Wnd"/>
                         <constraint firstItem="hXu-hW-EMv" firstAttribute="top" secondItem="nUg-8w-NJF" secondAttribute="top" constant="24" id="ttd-Hp-7zW"/>
                     </constraints>
-                    <viewLayoutGuide key="safeArea" id="j8q-f7-wP1"/>
                 </view>
             </subviews>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="H75-gc-Ppp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="O7Z-19-USg"/>
                 <constraint firstItem="H75-gc-Ppp" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Pdy-6U-qr6"/>
@@ -102,7 +105,6 @@
                 <constraint firstItem="H75-gc-Ppp" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" id="jkY-Nj-PIf"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="145.98214285714286"/>
         </view>
     </objects>
@@ -112,5 +114,8 @@
         <namedColor name="color_ D44444">
             <color red="0.83099997043609619" green="0.2669999897480011" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
