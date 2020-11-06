@@ -15,6 +15,7 @@ class TopicActionViewController: UIViewController {
     var isLibrary = false
     var courseId = ""
     var moduleId = ""
+    var assign_id = ""
     var nextModuleName = ""
     
     var topicActionModel: TopicActionModel!
@@ -218,6 +219,7 @@ extension TopicActionViewController: ExpandableDelegate, ActionViewDelegate{
         action.moduleTitle = topicAction!.moduleName!
         action.nextModuleName = nextModuleName
         action.courseId = courseId
+        action.assign_id = assign_id
         action.moduleId = topicAction!.moduleID!
         action.topicId = topicAction!.topicID!
         action.actionId = topicAction!.actionID!

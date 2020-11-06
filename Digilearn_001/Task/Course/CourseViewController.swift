@@ -16,6 +16,7 @@ class CourseViewController: UIViewController {
     var course_name = ""
     var created_by = ""
     var course_about = ""
+    var assign_id = ""
     var isLibrary = false
     
     var listCourseModel: ListCourseModel!
@@ -99,6 +100,7 @@ class CourseViewController: UIViewController {
     fileprivate func showModules() {
         let modules = ModulesViewController()
         modules.isLibrary = self.isLibrary
+        modules.assign_id = assign_id
         modules.course_id = course_id
         embed(modules, inParent: self, inView: tabContent)
     }

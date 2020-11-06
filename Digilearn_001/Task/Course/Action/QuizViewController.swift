@@ -164,7 +164,7 @@ class QuizViewController: BaseActionViewController, ActionDelegate {
     
     @IBAction func nextAction(_ sender: UIButton) {
         if isCorrect {
-            submitProgress(courseId: courseId, moduleId: moduleId, topicId: (quiz?.topicID)!, actionId: (quiz?.actionID)!, answer: (quiz?.answer)!)
+            submitProgress(courseId: courseId, moduleId: moduleId, topicId: (quiz?.topicID)!, actionId: (quiz?.actionID)!, answer: (quiz?.answer)!, assign_id: assign_id)
             delegate?.nextAction(index: index!)
         }else{
             showFalseToast(message: "Please select the answer!")

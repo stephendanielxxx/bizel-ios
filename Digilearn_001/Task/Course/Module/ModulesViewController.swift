@@ -15,6 +15,7 @@ class ModulesViewController: UIViewController {
     @IBOutlet weak var moduleView: UITableView!
     @IBOutlet weak var refresh: UILabel!
     var course_id = ""
+    var assign_id = ""
     var isLibrary = false
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -111,6 +112,7 @@ extension ModulesViewController: UITableViewDelegate, UITableViewDataSource{
         topic.moduleDesc = task.moduleDesc
         topic.moduleId = task.moduleID
         topic.courseId = course_id
+        topic.assign_id = assign_id
         topic.isLibrary = self.isLibrary
         
         if count == 1 {

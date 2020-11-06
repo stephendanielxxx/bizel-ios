@@ -17,6 +17,7 @@ class BaseActionViewController: UIViewController {
     var moduleId = ""
     var topicId = ""
     var actionId = ""
+    var assign_id = ""
     var userId: String?
     var nickName: String?
     var submitProgressModel: SubmitProgressModel!
@@ -55,7 +56,7 @@ class BaseActionViewController: UIViewController {
         return result
     }
     
-    func submitProgress(courseId: String, moduleId: String, topicId: String, actionId: String, answer: String){
+    func submitProgress(courseId: String, moduleId: String, topicId: String, actionId: String, answer: String, assign_id: String){
         
         if !isLibrary {
             let user_id = readStringPreference(key: DigilearnsKeys.USER_ID)
@@ -65,7 +66,8 @@ class BaseActionViewController: UIViewController {
                 "module_id": "\(moduleId)",
                 "topic_id": "\(topicId)",
                 "action_id" : "\(actionId)",
-                "answer" : "\(answer)"
+                "answer" : "\(answer)",
+                "assign_id" : "\(assign_id)"
             ]
             
             AF.request(submitURL,
