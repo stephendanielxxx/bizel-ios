@@ -131,8 +131,8 @@ class RegisterViewController: UIViewController {
         phone = phone?.replacingOccurrences(of: "+", with: "", options: NSString.CompareOptions.literal, range:nil)
         
         let passCounter = pass?.count ?? 0
-//        let phoneCounter = phoneTF.text?.count ?? 1
-        
+        //        let phoneCounter = phoneTF.text?.count ?? 1
+
         if(firstName?.isEmpty ?? true){
             let alert = UIAlertController(title: "Register Failed", message: "Please fill in your data first", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
@@ -228,7 +228,6 @@ class PhoneBottomBorderTF: FPNTextField {
     var bottomBorder = UIView()
     override func awakeFromNib() {
 
-        //MARK: Setup Bottom-Border
         self.translatesAutoresizingMaskIntoConstraints = false
         bottomBorder = UIView.init(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
         bottomBorder.backgroundColor = UIColor.lightGray

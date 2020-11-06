@@ -3,7 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -19,12 +19,12 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R9G-Fv-7vD">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                        <rect key="frame" x="0.0" y="14" width="414" height="186"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="banner3" translatesAutoresizingMaskIntoConstraints="NO" id="s6L-iJ-iYN">
-                                <rect key="frame" x="12" y="44" width="390" height="156"/>
+                                <rect key="frame" x="12" y="30" width="390" height="156"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="156" id="UPz-6Y-Ppy"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="UPz-6Y-Ppy"/>
                                     <constraint firstAttribute="width" secondItem="s6L-iJ-iYN" secondAttribute="height" multiplier="5:2" id="zXU-9L-vQD"/>
                                 </constraints>
                             </imageView>
@@ -33,12 +33,12 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="33z-P5-JsU"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H50-w8-RHl">
-                                <rect key="frame" x="274" y="153" width="120" height="30"/>
+                                <rect key="frame" x="274" y="139" width="120" height="30"/>
                                 <color key="backgroundColor" name="color_ D44444"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="7U0-Zu-YXE"/>
@@ -72,8 +72,8 @@
                                 <rect key="frame" x="20" y="52" width="40" height="20"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NEW" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqe-3z-6Q8">
-                                        <rect key="frame" x="6" y="3" width="28" height="14.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <rect key="frame" x="8.5" y="4" width="23.5" height="12"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -100,7 +100,7 @@
                             <constraint firstItem="s6L-iJ-iYN" firstAttribute="leading" secondItem="R9G-Fv-7vD" secondAttribute="leading" constant="12" id="ao4-j2-1h5"/>
                             <constraint firstAttribute="bottom" secondItem="H50-w8-RHl" secondAttribute="bottom" constant="17" id="lKU-OJ-0sm"/>
                             <constraint firstAttribute="trailing" secondItem="hm4-gg-Lkx" secondAttribute="trailing" constant="20" id="wLR-nb-Eeh"/>
-                            <constraint firstItem="s6L-iJ-iYN" firstAttribute="top" secondItem="R9G-Fv-7vD" secondAttribute="top" constant="44" id="yWx-Ij-V6U"/>
+                            <constraint firstItem="s6L-iJ-iYN" firstAttribute="top" secondItem="R9G-Fv-7vD" secondAttribute="top" constant="30" id="yWx-Ij-V6U"/>
                             <constraint firstAttribute="bottom" secondItem="s6L-iJ-iYN" secondAttribute="bottom" id="zxI-gc-wzf"/>
                         </constraints>
                     </view>
@@ -111,7 +111,7 @@
                 <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="R9G-Fv-7vD" secondAttribute="trailing" id="3Vw-tQ-Yxc"/>
                 <constraint firstItem="R9G-Fv-7vD" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" id="9kR-it-fl1"/>
                 <constraint firstItem="R9G-Fv-7vD" firstAttribute="width" secondItem="ZTg-uK-7eu" secondAttribute="width" id="ILD-pC-HCW"/>
-                <constraint firstItem="ZTg-uK-7eu" firstAttribute="top" secondItem="R9G-Fv-7vD" secondAttribute="top" constant="44" id="NW2-ob-9L0"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="top" secondItem="R9G-Fv-7vD" secondAttribute="top" constant="30" id="NW2-ob-9L0"/>
                 <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="R9G-Fv-7vD" secondAttribute="bottom" id="XRo-xb-yyr"/>
             </constraints>
             <size key="customSize" width="330" height="150"/>

@@ -68,13 +68,13 @@ class EventRegistrationViewController: UIViewController {
                             let registerEventModel = try decoder.decode(RegisterEventModel.self, from:data)
                             
                             if(registerEventModel.code == "200"){
-                                let alert = UIAlertController(title: "Event Register Success", message: "\(registerEventModel.message)", preferredStyle: .alert)
+                                let alert = UIAlertController(title: "Registration Success", message: "We look forward to seeing you at this event", preferredStyle: .alert)
                                 alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {(alert: UIAlertAction!) in
                                     self.dismiss(animated: true, completion: nil)
                                 }))
                                 self.present(alert, animated: true)
                             }else{
-                                let alert = UIAlertController(title: "Event Register Failed", message: "\(registerEventModel.message)", preferredStyle: .alert)
+                                let alert = UIAlertController(title: "Registration Failed", message: "You are already registered. Please check in event history.", preferredStyle: .alert)
                                 alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
                                 self.present(alert, animated: true)
                             }

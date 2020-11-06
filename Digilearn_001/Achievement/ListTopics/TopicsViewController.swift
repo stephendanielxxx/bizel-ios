@@ -109,9 +109,9 @@ extension TopicsViewController: UITableViewDelegate, UITableViewDataSource
         let url = "https://digicourse.id/digilearn/member/assets.digilearn/pdf/\(filename)"
         AF.download(url, to: destination).response {response in
             if response.error != nil {
-                self.showToast(message: "Download Failed! Please, Try again later")
+                self.showToast(message: "Something went wrong, check your connection and try downloading again")
             }
-            else {self.showToast(message: "Yeay! Download Succes")}
+            else {self.showToast(message: "File Downloaded Successfully")}
         
         }
     }
