@@ -26,8 +26,7 @@
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HYA-Ha-Hbw">
                             <rect key="frame" x="8" y="52" width="398" height="926"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            <mutableString key="text">Privacy Policy
-Last updated (version) October 28, 2020
+                            <string key="text">Last updated (version) October 28, 2020
  
  
 PT Edcore Indonesia (hereinafter referred to as “we” or “our” or “Bizel” or “Edcore”) committed to respect and/or protect the privacy rights of our users (hereinafter referred to as “user” or “you”) when you access and/or use our website, mobile applications, products or services (hereinafter referred to as “services”) or interact with us for whatsoever objectives and/or reasons through whatsoever channels, devices or means. This privacy policy (hereinafter referred to as “policy”) describes how we collect and/or use the information provided by you. The policy will affect all services unless it is explicitly differently governed for a particular service.
@@ -146,7 +145,7 @@ If you have any questions, comments, suggestions, feedbacks, complaints or alike
  
 You may use the similar e-mail as well to provide us testimonials, improvement feedback and/or any other matters.
  
-</mutableString>
+</string>
                             <color key="textColor" systemColor="labelColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
