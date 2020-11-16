@@ -61,6 +61,12 @@ class QuizEssayViewController: BaseActionViewController, ActionDelegate {
         }
         scrollView.bounces = (scrollView.contentOffset.y > 100);
         updateUndoButtons()
+        
+        if isLibrary {
+            answerField.isHidden = true
+            undoButton.isHidden = true
+            redoButton.isHidden = true
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -68,10 +74,14 @@ class QuizEssayViewController: BaseActionViewController, ActionDelegate {
     }
     
     @IBAction func nextAction(_ sender: UIButton) {
-        if answerField.text!.isEmpty {
-            showFalseToast(message: "Please input your answer")
+        if !isLibrary {
+            if answerField.text!.isEmpty {
+                showFalseToast(message: "Please input your answer")
+            }else{
+                submitProgress(courseId: courseId, moduleId: moduleId, topicId: (quiz?.topicID)!, actionId: (quiz?.actionID)!, answer: answerField.text ?? "", assign_id: assign_id)
+                delegate?.nextAction(index: index!)
+            }
         }else{
-            submitProgress(courseId: courseId, moduleId: moduleId, topicId: (quiz?.topicID)!, actionId: (quiz?.actionID)!, answer: answerField.text ?? "")
             delegate?.nextAction(index: index!)
         }
     }
@@ -108,9 +118,7 @@ class QuizEssayViewController: BaseActionViewController, ActionDelegate {
                         }catch{
                             print(error.localizedDescription)
                         }
-                    case .failure(let error):
-                        self.removeSpinner()
-                    default:
+                    case .failure(_):
                         self.removeSpinner()
                     }
         }

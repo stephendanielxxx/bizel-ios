@@ -22,6 +22,8 @@ class ForgetPasswordViewController: UIViewController {
               forgetPassword.isUserInteractionEnabled = true
               forgetPassword.addGestureRecognizer(tap)
         // Do any additional setup after loading the view.
+        
+        forgetPassword.layer.cornerRadius = 18
     }
 
     @IBAction func cancelForgetPassword(_ sender: UIButton) {
@@ -29,7 +31,7 @@ class ForgetPasswordViewController: UIViewController {
     }
     
     @objc func tapFunction(sender:UITapGestureRecognizer) {
-        var emailValue = email.text
+        let emailValue = email.text
                 
         if(emailValue?.isEmpty ?? true){
             let alert = UIAlertController(title: nil, message: "Please input your email", preferredStyle: .alert)
@@ -73,7 +75,7 @@ class ForgetPasswordViewController: UIViewController {
                            }catch{
                                 print(error.localizedDescription)
                             }
-                        case .failure(let error):
+                        case .failure(_):
                             self.removeSpinner()
                         }
             }

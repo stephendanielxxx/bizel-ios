@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyTaskViewController" customModule="Digilearn_001" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyTaskViewController" customModule="Bizel" customModuleProvider="target">
             <connections>
                 <outlet property="activeButton" destination="40D-4q-tD9" id="TXB-du-Vqf"/>
+                <outlet property="emptyView" destination="jgb-Tx-kUY" id="u7Q-zk-1hW"/>
                 <outlet property="expiredButton" destination="avL-1y-O0K" id="HRZ-kQ-UmN"/>
                 <outlet property="taskView" destination="FWg-wQ-E0M" id="MOf-Wf-ULI"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -34,9 +37,6 @@
                                 <navigationItem id="Xyi-lh-qqr">
                                     <barButtonItem key="leftBarButtonItem" title="Task" id="uWv-pg-2YQ">
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <connections>
-                                            <action selector="backAction:" destination="-1" id="PoG-X7-lQM"/>
-                                        </connections>
                                     </barButtonItem>
                                 </navigationItem>
                             </items>
@@ -45,11 +45,9 @@
                             <rect key="frame" x="0.0" y="44" width="414" height="70"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40D-4q-tD9">
-                                    <rect key="frame" x="55" y="18" width="125" height="34"/>
+                                    <rect key="frame" x="40" y="19.5" width="157" height="31"/>
                                     <color key="backgroundColor" name="color_ B63532"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="125" id="z8G-9A-FEA"/>
-                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <inset key="contentEdgeInsets" minX="6" minY="6" maxX="6" maxY="6"/>
                                     <inset key="titleEdgeInsets" minX="12" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -59,11 +57,9 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="avL-1y-O0K">
-                                    <rect key="frame" x="238" y="18" width="125" height="34"/>
+                                    <rect key="frame" x="217" y="19.5" width="157" height="31"/>
                                     <color key="backgroundColor" name="color_ D44444"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="125" id="fMM-qG-yeq"/>
-                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <inset key="contentEdgeInsets" minX="6" minY="6" maxX="6" maxY="6"/>
                                     <inset key="titleEdgeInsets" minX="12" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -75,22 +71,22 @@
                             </subviews>
                             <color key="backgroundColor" name="color_ D44444"/>
                             <constraints>
-                                <constraint firstAttribute="trailing" secondItem="avL-1y-O0K" secondAttribute="trailing" constant="51" id="Ahm-ms-d0Y"/>
-                                <constraint firstItem="avL-1y-O0K" firstAttribute="leading" secondItem="40D-4q-tD9" secondAttribute="trailing" constant="58" id="LoT-p6-U5C"/>
+                                <constraint firstAttribute="trailing" secondItem="avL-1y-O0K" secondAttribute="trailing" constant="40" id="Ahm-ms-d0Y"/>
+                                <constraint firstItem="avL-1y-O0K" firstAttribute="leading" secondItem="40D-4q-tD9" secondAttribute="trailing" constant="20" id="LoT-p6-U5C"/>
                                 <constraint firstItem="avL-1y-O0K" firstAttribute="width" secondItem="40D-4q-tD9" secondAttribute="width" id="O5j-el-15t"/>
                                 <constraint firstItem="40D-4q-tD9" firstAttribute="centerY" secondItem="Bqb-W3-Yok" secondAttribute="centerY" id="Orj-5T-JIR"/>
                                 <constraint firstItem="avL-1y-O0K" firstAttribute="centerY" secondItem="Bqb-W3-Yok" secondAttribute="centerY" id="S1j-zZ-tu2"/>
                                 <constraint firstAttribute="height" constant="70" id="hRf-1i-pqo"/>
-                                <constraint firstItem="40D-4q-tD9" firstAttribute="leading" secondItem="Bqb-W3-Yok" secondAttribute="leading" constant="55" id="l1A-7t-zk4"/>
+                                <constraint firstItem="40D-4q-tD9" firstAttribute="leading" secondItem="Bqb-W3-Yok" secondAttribute="leading" constant="40" id="l1A-7t-zk4"/>
                                 <constraint firstItem="avL-1y-O0K" firstAttribute="centerY" secondItem="40D-4q-tD9" secondAttribute="centerY" id="xQn-71-uma"/>
                             </constraints>
                         </view>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FWg-wQ-E0M" userLabel="List Task">
                             <rect key="frame" x="0.0" y="112" width="414" height="706"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </tableView>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemGray4Color" red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="QZX-u8-0ho" secondAttribute="trailing" id="2mb-0G-XBn"/>
                         <constraint firstItem="Bqb-W3-Yok" firstAttribute="width" secondItem="QZX-u8-0ho" secondAttribute="width" id="CKx-kP-43B"/>
@@ -106,23 +102,57 @@
                         <constraint firstItem="FWg-wQ-E0M" firstAttribute="top" secondItem="Bqb-W3-Yok" secondAttribute="bottom" constant="-2" id="u5B-Sb-Jnj"/>
                     </constraints>
                 </view>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jgb-Tx-kUY" userLabel="Empty View">
+                    <rect key="frame" x="47" y="340.5" width="320" height="225"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_empty_task" translatesAutoresizingMaskIntoConstraints="NO" id="L3b-Pr-CFT">
+                            <rect key="frame" x="40" y="24" width="240" height="128"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="128" id="MPT-6z-DNA"/>
+                                <constraint firstAttribute="width" constant="240" id="Sod-Nz-cDD"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You don't have any task. See Library to start learning." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ef1-e5-acr">
+                            <rect key="frame" x="12" y="164" width="296" height="29"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <viewLayoutGuide key="safeArea" id="exh-I5-zZI"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="L3b-Pr-CFT" secondAttribute="trailing" constant="40" id="1io-88-XVt"/>
+                        <constraint firstAttribute="width" constant="320" id="Dfl-LH-V4H"/>
+                        <constraint firstItem="ef1-e5-acr" firstAttribute="centerX" secondItem="jgb-Tx-kUY" secondAttribute="centerX" id="EWa-S9-baj"/>
+                        <constraint firstAttribute="height" constant="225" id="NHp-hC-Nb6"/>
+                        <constraint firstItem="ef1-e5-acr" firstAttribute="top" secondItem="L3b-Pr-CFT" secondAttribute="bottom" constant="12" id="RSn-DI-zWi"/>
+                        <constraint firstItem="L3b-Pr-CFT" firstAttribute="top" secondItem="jgb-Tx-kUY" secondAttribute="top" constant="24" id="TmU-gQ-6rS"/>
+                        <constraint firstItem="ef1-e5-acr" firstAttribute="leading" secondItem="jgb-Tx-kUY" secondAttribute="leading" constant="12" id="nYa-b4-hfX"/>
+                        <constraint firstAttribute="trailing" secondItem="ef1-e5-acr" secondAttribute="trailing" constant="12" id="ohx-qj-AXl"/>
+                        <constraint firstItem="L3b-Pr-CFT" firstAttribute="leading" secondItem="jgb-Tx-kUY" secondAttribute="leading" constant="40" id="xrc-wl-uur"/>
+                    </constraints>
+                </view>
             </subviews>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="jgb-Tx-kUY" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="9Dg-iz-s7q"/>
                 <constraint firstItem="40i-Un-Iik" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="9TS-wc-p9v"/>
                 <constraint firstItem="40i-Un-Iik" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" id="FyU-Gm-HQI"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="40i-Un-Iik" secondAttribute="bottom" id="MdC-9Z-ceR"/>
                 <constraint firstItem="40i-Un-Iik" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" id="SZH-3E-Rju"/>
+                <constraint firstItem="jgb-Tx-kUY" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="bbv-cB-9d8"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="40i-Un-Iik" secondAttribute="trailing" id="myx-lP-NgR"/>
                 <constraint firstItem="40i-Un-Iik" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ujK-wo-wPZ"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="145.98214285714286"/>
         </view>
     </objects>
     <resources>
         <image name="checkmark.circle" catalog="system" width="128" height="121"/>
+        <image name="ic_empty_task" width="113.5" height="113.5"/>
         <image name="xmark.circle" catalog="system" width="128" height="121"/>
         <namedColor name="color_ B63532">
             <color red="0.71399998664855957" green="0.20800000429153442" blue="0.19599999487400055" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -130,5 +160,8 @@
         <namedColor name="color_ D44444">
             <color red="0.83099997043609619" green="0.2669999897480011" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

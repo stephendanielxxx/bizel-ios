@@ -10,10 +10,11 @@ import UIKit
 import Alamofire
 
 class MyTaskViewController: UIViewController {
-
+    
     @IBOutlet weak var activeButton: UIButton!
     @IBOutlet weak var expiredButton: UIButton!
     @IBOutlet weak var taskView: UITableView!
+    @IBOutlet weak var emptyView: UIView!
     var listTaskModel: ListTaskModel!
     let date = Date()
     var tabShowed: Int = 0; // 0 for active, 1 for expired
@@ -26,12 +27,10 @@ class MyTaskViewController: UIViewController {
         
         taskView.delegate = self
         taskView.dataSource = self
-
+        
         activeButton.layer.cornerRadius = 15
         expiredButton.layer.cornerRadius = 15
         
-        
-
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -55,7 +54,7 @@ class MyTaskViewController: UIViewController {
         listTaskModel = nil
         
         let user_id = readStringPreference(key: DigilearnsKeys.USER_ID)
-                
+        
         let URL = "\(DigilearnParams.ApiUrl)/course/get_assigned_course_byId"
         
         let parameters: [String:Any] = [
@@ -74,7 +73,7 @@ class MyTaskViewController: UIViewController {
                             self.listTaskModel = try decoder.decode(ListTaskModel.self, from:data)
                             
                             let taskModel: [TaskModel] = self.listTaskModel.courseByUid
-                        
+                            
                             var index: Int = 0
                             for task in taskModel{
                                 if task.courseEnd != nil{
@@ -87,12 +86,22 @@ class MyTaskViewController: UIViewController {
                                 index = index + 1
                             }
                             
+                            if self.listTaskModel.courseByUid.count > 0{
+                                self.emptyView.isHidden = true
+                                self.taskView.isHidden = false
+                            }else{
+                                self.emptyView.isHidden = false
+                                self.taskView.isHidden = true
+                            }
+                            
                             self.taskView.reloadData()
                             
                         }catch{
                             print(error.localizedDescription)
+                            self.emptyView.isHidden = false
+                            self.taskView.isHidden = true
                         }
-                    case .failure(let error):
+                    case .failure(_):
                         self.removeSpinner()
                     }
         }
@@ -106,7 +115,7 @@ class MyTaskViewController: UIViewController {
         listTaskModel = nil
         
         let user_id = readStringPreference(key: DigilearnsKeys.USER_ID)
-                
+        
         let URL = "\(DigilearnParams.ApiUrl)/course/get_assigned_course_byId"
         
         let parameters: [String:Any] = [
@@ -124,8 +133,8 @@ class MyTaskViewController: UIViewController {
                         do{
                             self.listTaskModel = try decoder.decode(ListTaskModel.self, from:data)
                             
-                            var taskModel: [TaskModel] = self.listTaskModel.courseByUid
-                        
+                            let taskModel: [TaskModel] = self.listTaskModel.courseByUid
+                            
                             var index: Int = 0
                             for task in taskModel{
                                 
@@ -137,6 +146,14 @@ class MyTaskViewController: UIViewController {
                                     index = index - 1
                                 }
                                 
+                                if self.listTaskModel.courseByUid.count > 0{
+                                    self.emptyView.isHidden = true
+                                    self.taskView.isHidden = false
+                                }else{
+                                    self.emptyView.isHidden = false
+                                    self.taskView.isHidden = true
+                                }
+                                
                                 index = index + 1
                             }
                             
@@ -144,8 +161,10 @@ class MyTaskViewController: UIViewController {
                             
                         }catch{
                             print(error.localizedDescription)
+                            self.emptyView.isHidden = true
+                            self.taskView.isHidden = false
                         }
-                    case .failure(let error):
+                    case .failure(_):
                         self.removeSpinner()
                     }
         }
@@ -165,7 +184,7 @@ extension MyTaskViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = taskView.dequeueReusableCell(withIdentifier: "taskIdentifier") as! MyTaskTableViewCell
         
-        let taskModel: TaskModel = listTaskModel.courseByUid[indexPath.row]
+        let taskModel: TaskModel = (listTaskModel?.courseByUid[indexPath.row])!
         
         cell.titleLabel.text = taskModel.title
         cell.createdLabel.text = "Created By: \(taskModel.author)"
@@ -176,11 +195,11 @@ extension MyTaskViewController: UITableViewDelegate, UITableViewDataSource{
         cell.totalLabel.text = "\(taskModel.totalFinished)/\(taskModel.totalAction)"
         
         if(Int(taskModel.totalFinished) ?? 0 > 0){
-             cell.startTaskButton.setTitle("Continue", for: .normal)
+            cell.startTaskButton.setTitle("Continue", for: .normal)
         }else{
-             cell.startTaskButton.setTitle("Start", for: .normal)
+            cell.startTaskButton.setTitle("Start", for: .normal)
         }
-       
+        
         let finished = (taskModel.totalFinished as NSString).floatValue
         let total = (taskModel.totalAction as NSString).floatValue
         let progress = finished/total
@@ -208,15 +227,16 @@ extension MyTaskViewController: UITableViewDelegate, UITableViewDataSource{
     
     @objc func openDetail(_ sender: UIButton?) {
         let course = CourseViewController()
-
+        
         course.modalPresentationStyle = .fullScreen
         
         let task = listTaskModel.courseByUid[sender!.tag]
-    
+        
         course.course_id = task.id
         course.course_name = task.title
         course.created_by = task.author
         course.course_about = task.detail
+        course.assign_id = task.assignId
         
         self.present(course, animated: true, completion: nil)
     }

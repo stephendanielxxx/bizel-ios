@@ -16,6 +16,7 @@ class ExpiredTableViewCell: UITableViewCell {
     @IBOutlet weak var topicExpired: UILabel!
     @IBOutlet weak var activitiesExpired: UILabel!
     @IBOutlet weak var totalTask: UILabel!
+    @IBOutlet weak var progressExpired: UIProgressView!
     
     
     

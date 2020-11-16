@@ -10,20 +10,21 @@ import UIKit
 import Alamofire
 
 class ModulesViewController: UIViewController {
-
+    
     var listCourseModel: ListCourseModel!
     @IBOutlet weak var moduleView: UITableView!
     @IBOutlet weak var refresh: UILabel!
     var course_id = ""
+    var assign_id = ""
+    var isLibrary = false
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         let nib = UINib(nibName: "ModulesTableViewCell", bundle: nil)
         moduleView.register(nib, forCellReuseIdentifier: "moduleIdentifier")
-               
+        
         moduleView.delegate = self
         moduleView.dataSource = self
-        
         
         // Do any additional setup after loading the view.
     }
@@ -33,32 +34,33 @@ class ModulesViewController: UIViewController {
     }
     
     func loadData(){
-            let user_id = readStringPreference(key: DigilearnsKeys.USER_ID)
-            let URL = "\(DigilearnParams.ApiUrl)/course/get_detail/\(course_id)/\(user_id)"
-            
-            AF.request(URL,
-                       method: .get,
-                       parameters: nil,
-                       encoding: JSONEncoding.default).responseData { response in
-                        switch response.result {
-                        case .success(let data):
-                            self.removeSpinner()
-                            let decoder = JSONDecoder()
-                            do{
-                               
-                                self.listCourseModel = try decoder.decode(ListCourseModel.self, from:data)
-                                
-                                self.moduleView.reloadData()
-                                
-                            }catch{
-                                print(error.localizedDescription)
-                            }
-                        case .failure(let error):
-                            self.removeSpinner()
+        showSpinner(onView: view)
+        let user_id = readStringPreference(key: DigilearnsKeys.USER_ID)
+        let URL = "\(DigilearnParams.ApiUrl)/course/get_detail/\(course_id)/\(user_id)"
+        
+        AF.request(URL,
+                   method: .get,
+                   parameters: nil,
+                   encoding: JSONEncoding.default).responseData { response in
+                    switch response.result {
+                    case .success(let data):
+                        self.removeSpinner()
+                        let decoder = JSONDecoder()
+                        do{
+                            
+                            self.listCourseModel = try decoder.decode(ListCourseModel.self, from:data)
+                            
+                            self.moduleView.reloadData()
+                            
+                        }catch{
+                            print(error.localizedDescription)
                         }
-            }
+                    case .failure(_):
+                        self.removeSpinner()
+                    }
         }
-
+    }
+    
     @IBAction func refresh(_ sender: UIButton) {
         loadData()
     }
@@ -78,10 +80,14 @@ extension ModulesViewController: UITableViewDelegate, UITableViewDataSource{
         
         let moduleDetail: ModuleDetail = listCourseModel.moduleDetail[indexPath.row]
         
-        if moduleDetail.moduleFinish == "finish"{
+        if isLibrary {
             cell.moduleLabel.textColor = UIColor.black
         }else{
-            cell.moduleLabel.textColor = UIColor.lightGray
+            if moduleDetail.moduleFinish == "finish"{
+                cell.moduleLabel.textColor = UIColor.black
+            }else{
+                cell.moduleLabel.textColor = UIColor.lightGray
+            }
         }
         
         cell.moduleLabel.text = moduleDetail.moduleName
@@ -106,12 +112,12 @@ extension ModulesViewController: UITableViewDelegate, UITableViewDataSource{
         topic.moduleDesc = task.moduleDesc
         topic.moduleId = task.moduleID
         topic.courseId = course_id
+        topic.assign_id = assign_id
+        topic.isLibrary = self.isLibrary
         
         if count == 1 {
             topic.nextModuleName = ""
-        }else if index < count {
-            debugPrint(index)
-            debugPrint(count)
+        }else if index < count - 1 {
             topic.nextModuleName = listCourseModel.moduleDetail[index+1].moduleName
         }else{
             topic.nextModuleName = ""
@@ -119,22 +125,26 @@ extension ModulesViewController: UITableViewDelegate, UITableViewDataSource{
         
         topic.modalPresentationStyle = .fullScreen
         
-        if task.courseAccess.caseInsensitiveCompare("Random") == .orderedSame{
+        if isLibrary {
             self.present(topic, animated: true, completion: nil)
         }else{
-            if index > 0 {
-                let taskBefore =
-                    listCourseModel.moduleDetail[sender!.tag - 1]
-                
-                if(taskBefore.moduleFinish.caseInsensitiveCompare("Finish") == .orderedSame){
-                    self.present(topic, animated: true, completion: nil)
-                }else{
-                    let alert = UIAlertController(title: "", message: "You can't open this module. Please finish the previous module in order.", preferredStyle: .alert)
-                    alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
-                    self.present(alert, animated: true)
-                }
-            }else{
+            if task.courseAccess.caseInsensitiveCompare("Random") == .orderedSame{
                 self.present(topic, animated: true, completion: nil)
+            }else{
+                if index > 0 {
+                    let taskBefore =
+                        listCourseModel.moduleDetail[sender!.tag - 1]
+                    
+                    if(taskBefore.moduleFinish.caseInsensitiveCompare("Finish") == .orderedSame){
+                        self.present(topic, animated: true, completion: nil)
+                    }else{
+                        let alert = UIAlertController(title: "", message: "You can't open this module. Please finish the previous module in order.", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
+                        self.present(alert, animated: true)
+                    }
+                }else{
+                    self.present(topic, animated: true, completion: nil)
+                }
             }
         }
     }

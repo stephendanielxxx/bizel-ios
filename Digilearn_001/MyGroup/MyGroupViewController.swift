@@ -13,14 +13,15 @@ import PINRemoteImage
 
 class MyGroupViewController: UIViewController {
     @IBOutlet weak var groupView: UITableView!
+    @IBOutlet weak var emptyView: UIView!
     var groupModel: GroupModel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         groupView.delegate = self
         groupView.dataSource = self
-        let nib = UINib(nibName: "MyGroupTableViewCell", bundle: nil)
-        groupView.register(nib, forCellReuseIdentifier: "MyGroupIdentifier")
+        let nib = UINib(nibName: "MyGrouppTableViewCell", bundle: nil)
+        groupView.register(nib, forCellReuseIdentifier: "GroupIdentifier")
         
         let user_id = readStringPreference(key: DigilearnsKeys.USER_ID)
         let URL = "\(DigilearnParams.ApiUrl)/user/auth/get_all_group"
@@ -37,11 +38,22 @@ class MyGroupViewController: UIViewController {
                         let decoder = JSONDecoder()
                         do{
                             self.groupModel = try decoder.decode(GroupModel.self, from:data)
+                            
+                            if self.groupModel.listGroup.count > 0 {
+                                self.emptyView.isHidden = true
+                                self.groupView.isHidden = false
+                            }else{
+                                self.emptyView.isHidden = false
+                                self.groupView.isHidden = true
+                            }
+                            
                             self.groupView.reloadData()
                         }catch{
                             print(error.localizedDescription)
+                            self.emptyView.isHidden = true
+                            self.groupView.isHidden = false
                         }
-                    case .failure(let error):
+                    case .failure(_):
                         self.removeSpinner()
                     }
         }
@@ -62,9 +74,9 @@ extension MyGroupViewController: UITableViewDelegate, UITableViewDataSource
         
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = groupView.dequeueReusableCell(withIdentifier: "MyGroupIdentifier") as! MyGroupTableViewCell
+        let cell = groupView.dequeueReusableCell(withIdentifier: "GroupIdentifier") as! MyGroupTableViewCell
         let group: ListGroup = (groupModel?.listGroup[indexPath.row])!
-        cell.titleGroup.text = group.groupName
+        cell.titleLabel.text = group.groupName
         cell.imageGroup.pin_updateWithProgress = true
        // cell.imageGroup.layer.cornerRadius = 1
         cell.imageGroup.contentMode = .scaleToFill
@@ -72,11 +84,10 @@ extension MyGroupViewController: UITableViewDelegate, UITableViewDataSource
         
        
         if(group.groupImage != nil) {
-            let url = Foundation.URL(string: "https://digicourse.id/digilearn/admin-master/assets.admin_master/group/profile/\(group.groupImage)")
-             debugPrint("https://digicourse.id/digilearn/admin-master/assets.admin_master/group/profile/\(group.groupImage)")
+            let url = Foundation.URL(string: "https://digicourse.id/digilearn/admin-master/assets.admin_master/group/profile/\(group.groupImage!)")
             cell.imageGroup.pin_setImage(from: url)
-            
-            
+        }else{
+            cell.imageGroup.image = UIImage(named: "ic_default_group")
         }
         cell.groupDetail.tag = indexPath.row
         cell.groupDetail.addTarget(self,action: #selector(MyGroupViewController.openDetail(_:)),for: .touchUpInside)
@@ -87,7 +98,7 @@ extension MyGroupViewController: UITableViewDelegate, UITableViewDataSource
         groupDetail.modalPresentationStyle = .fullScreen
         let listgroup: ListGroup = groupModel.listGroup[sender!.tag]
         groupDetail.titlegroup = listgroup.groupName
-        groupDetail.image = listgroup.groupImage
+        groupDetail.image = listgroup.groupImage ?? ""
         groupDetail.titlegroupisi = listgroup.groupAbout
         groupDetail.groupid = listgroup.groupID 
         self.present(groupDetail, animated: true, completion: nil)

@@ -18,11 +18,13 @@ struct User: Decodable {
     let id, firstName, lastName, nickname: String
     let phone, email, photo, institution: String
     let position: String
+    let notification: String
 
     enum CodingKeys: String, CodingKey {
         case id
         case firstName = "first_name"
         case lastName = "last_name"
         case nickname, phone, email, photo, institution, position
+        case notification = "notifikasi"
     }
 }

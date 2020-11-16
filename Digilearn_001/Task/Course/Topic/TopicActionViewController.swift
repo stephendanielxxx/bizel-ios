@@ -12,8 +12,10 @@ import ExpandableCell
 
 class TopicActionViewController: UIViewController {
     
+    var isLibrary = false
     var courseId = ""
     var moduleId = ""
+    var assign_id = ""
     var nextModuleName = ""
     
     var topicActionModel: TopicActionModel!
@@ -37,12 +39,12 @@ class TopicActionViewController: UIViewController {
         
         let nibChild = UINib(nibName: "TopicItemTableViewCell", bundle: nil)
         topicView.register(nibChild, forCellReuseIdentifier: "topicItemIdentifier")
-        loadData()
+//        refreshData(isRefresh: false)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
+        
         topicView.expandableDelegate = self
         
         let nib = UINib(nibName: "TopicActionTableViewCell", bundle: nil)
@@ -50,10 +52,12 @@ class TopicActionViewController: UIViewController {
         
         let nibChild = UINib(nibName: "TopicItemTableViewCell", bundle: nil)
         topicView.register(nibChild, forCellReuseIdentifier: "topicItemIdentifier")
+        
+        refreshData(isRefresh: true)
     }
     
     func loadData(){
-        
+        showSpinner(onView: view)
         let user_id = readStringPreference(key: DigilearnsKeys.USER_ID)
         let parameters: [String:Any] = [
             "course_id": "\(self.courseId)",
@@ -75,21 +79,24 @@ class TopicActionViewController: UIViewController {
                             
                             self.sectionCount = self.topicActionModel.topicDetail.count
                             self.topicView.reloadData()
-                            
                         }catch{
                             print(error.localizedDescription)
                         }
-                    case .failure(let error):
-                        self.removeSpinner()
-                    default:
+                    case .failure(_):
                         self.removeSpinner()
                     }
         }
     }
     
-    @IBAction func refreshAction(_ sender: UIButton) {
-        super.viewWillAppear(true)
+    private func refreshData(isRefresh: Bool) {
+        if isRefresh {
+            self.topicView.closeAll()
+        }
         loadData()
+    }
+    
+    @IBAction func refreshAction(_ sender: UIButton) {
+        refreshData(isRefresh: true)
     }
     
 }
@@ -126,11 +133,16 @@ extension TopicActionViewController: ExpandableDelegate, ActionViewDelegate{
         
         let topicAction: TopicDetail = self.topicActionModel.topicDetail[indexPath.row]
         
-        if topicAction.topicFinish?.caseInsensitiveCompare("finish") == .orderedSame{
+        if isLibrary {
             cell.topicName.textColor = UIColor(named: "color_2F5597")
         }else{
-            cell.topicName.textColor = UIColor(named: "color_7698D4")
+            if topicAction.topicFinish?.caseInsensitiveCompare("finish") == .orderedSame{
+                cell.topicName.textColor = UIColor(named: "color_2F5597")
+            }else{
+                cell.topicName.textColor = UIColor(named: "color_7698D4")
+            }
         }
+        
         
         cell.topicName.text = topicAction.topicName
         return cell
@@ -140,18 +152,23 @@ extension TopicActionViewController: ExpandableDelegate, ActionViewDelegate{
         var cells = [UITableViewCell]()
         let expandedCount: Int = self.topicActionModel?.topicDetail[indexPath.row].topicDetailAction?.count ?? 0
         
+        
         //        let count = self.topicActionModel?.topicDetail[indexPath.row].topicDetailAction.count ?? 0
         
-        for n in 0...expandedCount-1{
+        for n in 0...expandedCount-1 {
             
             let topicDetailAction: TopicDetailAction = self.topicActionModel.topicDetail[indexPath.row].topicDetailAction![n]
             
             let cell = topicView.dequeueReusableCell(withIdentifier: "topicItemIdentifier") as! TopicItemTableViewCell
             
-            if topicDetailAction.finished?.caseInsensitiveCompare("finish") == .orderedSame {
-                cell.quizArrow.image = UIImage(named: "ic_quiz_done")
-            }else{
+            if isLibrary {
                 cell.quizArrow.image = UIImage(named: "ic_quiz_arrow")
+            }else{
+                if topicDetailAction.finished?.caseInsensitiveCompare("finish") == .orderedSame {
+                    cell.quizArrow.image = UIImage(named: "ic_quiz_done")
+                }else{
+                    cell.quizArrow.image = UIImage(named: "ic_quiz_arrow")
+                }
             }
             
             cell.quizTitle.text = topicDetailAction.actionName
@@ -197,47 +214,54 @@ extension TopicActionViewController: ExpandableDelegate, ActionViewDelegate{
         let topicAction = topicDetail.topicDetailAction?[indexCell]
         
         let action = ActionViewController()
+        action.isLibrary = self.isLibrary
         action.actionViewDelegate = self
-        action.moduleTitle = topicAction?.moduleName as! String
+        action.moduleTitle = topicAction!.moduleName!
         action.nextModuleName = nextModuleName
         action.courseId = courseId
-        action.moduleId = topicAction?.moduleID as! String
-        action.topicId = topicAction?.topicID as! String
-        action.actionId = topicAction?.actionID as! String
+        action.assign_id = assign_id
+        action.moduleId = topicAction!.moduleID!
+        action.topicId = topicAction!.topicID!
+        action.actionId = topicAction!.actionID!
         action.indexPage = indexCell
-        action.nextTopicId = topicAction?.nextTopicID as! String
+        action.nextTopicId = topicAction!.nextTopicID!
         action.modalPresentationStyle = .fullScreen
         
-        if topicAction?.topicAccess?.caseInsensitiveCompare("random") == .orderedSame{
+        if isLibrary {
             self.present(action, animated: true, completion: nil)
         }else{
-            if indexRow == 0 && indexCell == 0 {
+            if topicAction?.topicAccess?.caseInsensitiveCompare("random") == .orderedSame{
                 self.present(action, animated: true, completion: nil)
             }else{
-                if indexCell > 0{
-                    let topicActionBefore = topicDetail.topicDetailAction?[indexCell-1]
-                    if topicActionBefore?.finished?.caseInsensitiveCompare("finish") == .orderedSame {
-                        self.present(action, animated: true, completion: nil)
-                    }else{
-                        let alert = UIAlertController(title: "", message: "Please go through the activity in order sequentially", preferredStyle: .alert)
-                        alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
-                        self.present(alert, animated: true)
-                    }
+                if indexRow == 0 && indexCell == 0 {
+                    self.present(action, animated: true, completion: nil)
                 }else{
-                    let topicDetailBefore = topicActionModel.topicDetail[indexRow-1]
-                    let topicCount = topicDetailBefore.topicDetailAction
-                    let topicActionBefore = topicDetailBefore.topicDetailAction?[topicCount!.count-1]
-                    
-                    if topicActionBefore?.finished?.caseInsensitiveCompare("finish") == .orderedSame {
-                        self.present(action, animated: true, completion: nil)
+                    if indexCell > 0{
+                        let topicActionBefore = topicDetail.topicDetailAction?[indexCell-1]
+                        if topicActionBefore?.finished?.caseInsensitiveCompare("finish") == .orderedSame {
+                            self.present(action, animated: true, completion: nil)
+                        }else{
+                            let alert = UIAlertController(title: "", message: "Please go through the activity in order sequentially", preferredStyle: .alert)
+                            alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
+                            self.present(alert, animated: true)
+                        }
                     }else{
-                        let alert = UIAlertController(title: "", message: "Please go through the activity in order sequentially", preferredStyle: .alert)
-                        alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
-                        self.present(alert, animated: true)
+                        let topicDetailBefore = topicActionModel.topicDetail[indexRow-1]
+                        let topicCount = topicDetailBefore.topicDetailAction
+                        let topicActionBefore = topicDetailBefore.topicDetailAction?[topicCount!.count-1]
+                        
+                        if topicActionBefore?.finished?.caseInsensitiveCompare("finish") == .orderedSame {
+                            self.present(action, animated: true, completion: nil)
+                        }else{
+                            let alert = UIAlertController(title: "", message: "Please go through the activity in order sequentially", preferredStyle: .alert)
+                            alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
+                            self.present(alert, animated: true)
+                        }
                     }
                 }
             }
         }
+        
     }
     
     func expandableTableView(_ expandableTableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {

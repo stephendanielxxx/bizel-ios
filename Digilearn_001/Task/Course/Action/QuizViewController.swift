@@ -80,21 +80,28 @@ class QuizViewController: BaseActionViewController, ActionDelegate {
         buttonB.answer = quiz?.pil2
         buttonC.answer = quiz?.pil3
         buttonD.answer = quiz?.pil4
+
+        let tap = QuizAnswerTapGesture(target: self, action: #selector(checkAnswerA(_:)))
+        tap.answer = quiz?.pil1
+        buttonA.addGestureRecognizer(tap)
         
-        buttonA.addTarget(self, action: #selector(QuizViewController.checkAnswerA(_:)), for: .touchUpInside)
+        let tapB = QuizAnswerTapGesture(target: self, action: #selector(checkAnswerB(_:)))
+        tapB.answer = quiz?.pil2
+        buttonB.addGestureRecognizer(tapB)
         
-        buttonB.addTarget(self, action: #selector(QuizViewController.checkAnswerB(_:)), for: .touchUpInside)
+        let tapC = QuizAnswerTapGesture(target: self, action: #selector(checkAnswerC(_:)))
+        tapC.answer = quiz?.pil3
+        buttonC.addGestureRecognizer(tapC)
         
-        buttonC.addTarget(self, action: #selector(QuizViewController.checkAnswerC(_:)), for: .touchUpInside)
+        let tapD = QuizAnswerTapGesture(target: self, action: #selector(checkAnswerD(_:)))
+        tapD.answer = quiz?.pil4
+        buttonD.addGestureRecognizer(tapD)
         
-        buttonD.addTarget(self, action: #selector(QuizViewController.checkAnswerD(_:)), for: .touchUpInside)
         
         scrollview.bounces = (scrollview.contentOffset.y > 100);
     }
     
-    @objc func checkAnswerA(_ sender: CustomChoiceCardView?) {
-        debugPrint(sender!.answer!)
-        debugPrint(quiz!.answer!)
+    @objc func checkAnswerA(_ sender: QuizAnswerTapGesture?) {
         lineA.backgroundColor = UIColor(named: "color_EFB8CB")
         lineB.backgroundColor = UIColor.darkGray
         lineC.backgroundColor = UIColor.darkGray
@@ -104,14 +111,13 @@ class QuizViewController: BaseActionViewController, ActionDelegate {
             showCorrectToast(message: "CORRECT. Great!")
             isCorrect = true
         }else{
+            isCorrect = false
             showFalseToast(message: "Incorrect Answer. Please try again!")
         }
         
     }
     
-    @objc func checkAnswerB(_ sender: CustomChoiceCardView?) {
-        debugPrint(sender!.answer!)
-        debugPrint(quiz!.answer!)
+    @objc func checkAnswerB(_ sender: QuizAnswerTapGesture?) {
         lineA.backgroundColor = UIColor.darkGray
         lineB.backgroundColor = UIColor(named: "color_EFB8CB")
         lineC.backgroundColor = UIColor.darkGray
@@ -121,13 +127,12 @@ class QuizViewController: BaseActionViewController, ActionDelegate {
             showCorrectToast(message: "CORRECT. Great!")
             isCorrect = true
         }else{
+            isCorrect = false
             showFalseToast(message: "Incorrect Answer. Please try again!")
         }
     }
     
-    @objc func checkAnswerC(_ sender: CustomChoiceCardView?) {
-        debugPrint(sender!.answer!)
-        debugPrint(quiz!.answer!)
+    @objc func checkAnswerC(_ sender: QuizAnswerTapGesture?) {
         lineA.backgroundColor = UIColor.darkGray
         lineB.backgroundColor = UIColor.darkGray
         lineC.backgroundColor = UIColor(named: "color_EFB8CB")
@@ -137,13 +142,12 @@ class QuizViewController: BaseActionViewController, ActionDelegate {
             showCorrectToast(message: "CORRECT. Great!")
             isCorrect = true
         }else{
+            isCorrect = false
             showFalseToast(message: "Incorrect Answer. Please try again!")
         }
     }
     
-    @objc func checkAnswerD(_ sender: CustomChoiceCardView?) {
-        debugPrint(sender!.answer!)
-        debugPrint(quiz!.answer!)
+    @objc func checkAnswerD(_ sender: QuizAnswerTapGesture?) {
         lineA.backgroundColor = UIColor.darkGray
         lineB.backgroundColor = UIColor.darkGray
         lineC.backgroundColor = UIColor.darkGray
@@ -153,16 +157,17 @@ class QuizViewController: BaseActionViewController, ActionDelegate {
             showCorrectToast(message: "CORRECT. Great!")
             isCorrect = true
         }else{
+            isCorrect = false
             showFalseToast(message: "Incorrect Answer. Please try again!")
         }
     }
     
     @IBAction func nextAction(_ sender: UIButton) {
         if isCorrect {
-            submitProgress(courseId: courseId, moduleId: moduleId, topicId: (quiz?.topicID)!, actionId: (quiz?.actionID)!, answer: (quiz?.answer)!)
+            submitProgress(courseId: courseId, moduleId: moduleId, topicId: (quiz?.topicID)!, actionId: (quiz?.actionID)!, answer: (quiz?.answer)!, assign_id: assign_id)
             delegate?.nextAction(index: index!)
         }else{
-            showFalseToast(message: "Incorrect Answer. Please try again!")
+            showFalseToast(message: "Please select the answer!")
         }
     }
     

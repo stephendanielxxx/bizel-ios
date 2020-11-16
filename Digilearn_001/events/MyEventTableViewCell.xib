@@ -1,32 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyEventTableViewCell" customModule="Digilearn_001" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyEventTableViewCell" customModule="Bizel" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="myEventIdentifier" rowHeight="150" id="KGk-i7-Jjw" customClass="MyEventTableViewCell" customModule="Digilearn_001" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="485" height="150"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="myEventIdentifier" rowHeight="150" id="KGk-i7-Jjw" customClass="MyEventTableViewCell" customModule="Bizel" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="485" height="200"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="485" height="150"/>
+                <rect key="frame" x="0.0" y="0.0" width="485" height="200"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SQW-s5-S6C">
-                        <rect key="frame" x="0.0" y="0.0" width="485" height="150"/>
+                        <rect key="frame" x="0.0" y="0.0" width="485" height="200"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fr0-IN-dLz" userLabel="Event Image">
-                                <rect key="frame" x="12" y="12" width="461" height="126"/>
+                                <rect key="frame" x="12" y="12" width="461" height="176"/>
                                 <color key="backgroundColor" name="color_ D44444"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="fr0-IN-dLz" secondAttribute="height" multiplier="461:176" id="KrG-Eu-4Gl"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="176" id="Upd-Zf-ZYU"/>
+                                </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQD-mh-YF9" userLabel="New Label">
                                 <rect key="frame" x="24" y="22" width="26" height="14.5"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -37,22 +43,21 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WaV-2b-Qn0">
-                                <rect key="frame" x="329" y="94" width="120" height="32"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WaV-2b-Qn0">
+                                <rect key="frame" x="329" y="149" width="120" height="27"/>
                                 <color key="backgroundColor" name="color_ B63532"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="RTn-8H-nLp"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                 <inset key="titleEdgeInsets" minX="8" minY="4" maxX="8" maxY="4"/>
-                                <state key="normal" title="Register Now">
+                                <state key="normal" title="Register">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="WaV-2b-Qn0" firstAttribute="top" secondItem="SQW-s5-S6C" secondAttribute="top" constant="94" id="5de-sd-HDo"/>
                             <constraint firstItem="fr0-IN-dLz" firstAttribute="top" secondItem="SQW-s5-S6C" secondAttribute="top" constant="12" id="8av-Je-2MZ"/>
                             <constraint firstAttribute="trailing" secondItem="WwL-J8-xC4" secondAttribute="trailing" constant="24" id="9MN-nh-HyK"/>
                             <constraint firstAttribute="bottom" secondItem="fr0-IN-dLz" secondAttribute="bottom" constant="12" id="TAV-LC-mzh"/>
@@ -69,10 +74,8 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="SQW-s5-S6C" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="3N8-tR-bBf"/>
-                    <constraint firstItem="SQW-s5-S6C" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" id="43J-wk-SYl"/>
                     <constraint firstAttribute="trailing" secondItem="SQW-s5-S6C" secondAttribute="trailing" id="Cus-Hc-h9O"/>
                     <constraint firstAttribute="bottom" secondItem="SQW-s5-S6C" secondAttribute="bottom" id="Tgi-nf-qBl"/>
-                    <constraint firstItem="SQW-s5-S6C" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" id="Uv3-NB-aLB"/>
                     <constraint firstItem="SQW-s5-S6C" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="VtR-Bb-9uT"/>
                 </constraints>
             </tableViewCellContentView>
@@ -93,5 +96,11 @@
         <namedColor name="color_ D44444">
             <color red="0.83099997043609619" green="0.2669999897480011" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

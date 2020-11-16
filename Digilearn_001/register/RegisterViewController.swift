@@ -67,6 +67,8 @@ class RegisterViewController: UIViewController {
         let tap = UITapGestureRecognizer(target: self, action: #selector(RegisterViewController.privacyFunction))
         privacyLbl.isUserInteractionEnabled = true
         privacyLbl.addGestureRecognizer(tap)
+        
+        setTapToHideKeyboard()
        
     }
 
@@ -105,7 +107,7 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction func openHelp(_ sender: UIButton) {
-          let faq = FAQViewController()
+          let faq = FaqViewController()
 
           faq.modalPresentationStyle = .fullScreen
         
@@ -117,20 +119,20 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction func register(_ sender: UIButton) {
-        var pass = passwordTF.text
-        var confirmPass = confirmPasswordTF.text
-        var firstName = firstNameTF.text
-        var lastName = lastNameTF.text
-        var nickName = nickNameTF.text
-        var email = emailTF.text
+        let pass = passwordTF.text
+        let confirmPass = confirmPasswordTF.text
+        let firstName = firstNameTF.text
+        let lastName = lastNameTF.text
+        let nickName = nickNameTF.text
+        let email = emailTF.text
         
         var phone = phoneTF.getFormattedPhoneNumber(format: .E164)
         
         phone = phone?.replacingOccurrences(of: "+", with: "", options: NSString.CompareOptions.literal, range:nil)
         
-        var passCounter = pass?.count ?? 0
-        var phoneCounter = phoneTF.text?.count ?? 1
-        
+        let passCounter = pass?.count ?? 0
+        //        let phoneCounter = phoneTF.text?.count ?? 1
+
         if(firstName?.isEmpty ?? true){
             let alert = UIAlertController(title: "Register Failed", message: "Please fill in your data first", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
@@ -195,7 +197,7 @@ class RegisterViewController: UIViewController {
                 }catch{
                      print(error.localizedDescription)
                  }
-             case .failure(let error):
+             case .failure(_):
                  self.removeSpinner()
              }
             }
@@ -226,7 +228,6 @@ class PhoneBottomBorderTF: FPNTextField {
     var bottomBorder = UIView()
     override func awakeFromNib() {
 
-        //MARK: Setup Bottom-Border
         self.translatesAutoresizingMaskIntoConstraints = false
         bottomBorder = UIView.init(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
         bottomBorder.backgroundColor = UIColor.lightGray

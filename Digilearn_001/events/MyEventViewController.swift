@@ -15,6 +15,8 @@ class MyEventViewController: UIViewController {
     let URL = "\(DigilearnParams.ApiUrl)/home/get_onsite_course"
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var eventHistory: UIBarButtonItem!
+    @IBOutlet weak var emptyView: UIView!
     var eventModel: EventModel?
     var eventId:String = ""
     
@@ -24,19 +26,24 @@ class MyEventViewController: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
-       
+        
         let nib = UINib(nibName: "MyEventTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "myEventIdentifier")
-
+        
         // Do any additional setup after loading the view.
         loadData()
         
     }
-
+    
     @IBAction func backButton(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
     }
-
+    
+    @IBAction func eventHistoryAction(_ sender: UIBarButtonItem) {
+        let history = EventHistoryViewController()
+        history.modalPresentationStyle = .fullScreen
+        present(history, animated: true, completion: nil)
+    }
     
     func loadData(){
         AF.request(URL,
@@ -46,29 +53,33 @@ class MyEventViewController: UIViewController {
                     
                     switch response.result {
                     case .success(let data):
-                       let decoder = JSONDecoder()
-                       do{
-
-                        self.eventModel = try decoder.decode(EventModel.self, from:data)
-
-                        if(self.eventModel?.onsite.count ?? 0 > 0){
+                        let decoder = JSONDecoder()
+                        do{
                             
-                            self.tableView.reloadData()
+                            self.eventModel = try decoder.decode(EventModel.self, from:data)
                             
-                        }else{
-
-                        }
-                       }catch{
+                            if(self.eventModel?.onsite.count ?? 0 > 0){
+                                self.emptyView.isHidden = true
+                                self.tableView.isHidden = false
+                                self.tableView.reloadData()
+                                
+                            }else{
+                                self.emptyView.isHidden = false
+                                self.tableView.isHidden = true
+                            }
+                        }catch{
                             print(error.localizedDescription)
+                            self.emptyView.isHidden = false
+                            self.tableView.isHidden = true
                         }
                         break
-                    case .failure(let error):
+                    case .failure(_):
                         debugPrint("Error")
                         break
                     }
         }
     }
-
+    
 }
 
 extension MyEventViewController: UITableViewDelegate, UITableViewDataSource{
@@ -76,10 +87,10 @@ extension MyEventViewController: UITableViewDelegate, UITableViewDataSource{
         return eventModel?.onsite.count ?? 0
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150
-    }
-
+    //    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    //        return 150
+    //    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "myEventIdentifier") as! MyEventTableViewCell
         
@@ -94,7 +105,7 @@ extension MyEventViewController: UITableViewDelegate, UITableViewDataSource{
         cell.registerButton.layer.cornerRadius = 15
         
         let url = Foundation.URL(string: "https://digicourse.id/digilearn/admin-master/assets.admin_master/event/image/\(event.image)")!
-//
+        //
         cell.eventImage.pin_setImage(from: url)
         
         cell.registerButton.tag = indexPath.row
@@ -109,17 +120,18 @@ extension MyEventViewController: UITableViewDelegate, UITableViewDataSource{
         
         return cell
     }
-
+    
     @objc func openDetail(_ sender: UIButton?) {
         let eventDetail = EventDetailViewController()
-
+        
         eventDetail.modalPresentationStyle = .fullScreen
         
         let event: OnsiteList = (eventModel?.onsite[sender!.tag])!
         
         eventDetail.eventId = event.id
+        eventDetail.eventName = event.title
         
         self.present(eventDetail, animated: true, completion: nil)
     }
-
+    
 }

@@ -63,7 +63,7 @@ class MaterialViewController: BaseActionViewController, ActionDelegate {
     }
     
     @IBAction func nextAction(_ sender: UIButton) {
-        submitProgress(courseId: courseId, moduleId: moduleId, topicId: (quiz?.topicID)!, actionId: (quiz?.actionID)!, answer: "")
+        submitProgress(courseId: courseId, moduleId: moduleId, topicId: (quiz?.topicID)!, actionId: (quiz?.actionID)!, answer: "", assign_id: assign_id)
         delegate?.nextAction(index: index!)
     }
     

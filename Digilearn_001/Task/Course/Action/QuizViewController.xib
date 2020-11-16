@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QuizViewController" customModule="Digilearn_001" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QuizViewController" customModule="Bizel" customModuleProvider="target">
             <connections>
                 <outlet property="buttonA" destination="3Es-uQ-Msu" id="D4R-Um-Zt7"/>
                 <outlet property="buttonB" destination="dHQ-qm-jib" id="hNE-F3-9cA"/>
@@ -42,14 +44,14 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KEx-ml-yNT" userLabel="Content View">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="828.5"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="huc-cX-kzb" userLabel="Header View">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quiz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LV4-1Z-xg1">
-                                            <rect key="frame" x="188" y="16" width="38" height="21"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <rect key="frame" x="189.5" y="16" width="35.5" height="19.5"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -61,26 +63,26 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dam-A9-NX9" userLabel="Card View" customClass="MDCCard">
-                                    <rect key="frame" x="16" y="50" width="382" height="466"/>
+                                    <rect key="frame" x="16" y="48.5" width="382" height="478"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j7V-7t-12h">
-                                            <rect key="frame" x="21" y="21" width="345" height="20"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                            <rect key="frame" x="21" y="21" width="345" height="17"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="XUc-v7-AJI" userLabel="Quiz Text">
-                                            <rect key="frame" x="21" y="250" width="345" height="200"/>
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <rect key="frame" x="21" y="262" width="345" height="200"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                            <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" systemColor="labelColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="banner3" translatesAutoresizingMaskIntoConstraints="NO" id="UO4-nD-5V8" userLabel="Quiz Image">
-                                            <rect key="frame" x="21" y="57" width="345" height="185"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="banner3" translatesAutoresizingMaskIntoConstraints="NO" id="UO4-nD-5V8" userLabel="Quiz Image">
+                                            <rect key="frame" x="21" y="54" width="345" height="200"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="185" id="dkG-eQ-gfA"/>
+                                                <constraint firstAttribute="height" constant="200" id="dkG-eQ-gfA"/>
                                             </constraints>
                                         </imageView>
                                     </subviews>
@@ -98,8 +100,8 @@
                                         <constraint firstAttribute="trailing" secondItem="j7V-7t-12h" secondAttribute="trailing" constant="16" id="z2j-AB-x08"/>
                                     </constraints>
                                 </view>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4v2-8e-qH0">
-                                    <rect key="frame" x="319" y="746" width="80" height="30"/>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4v2-8e-qH0">
+                                    <rect key="frame" x="319" y="756.5" width="80" height="30"/>
                                     <color key="backgroundColor" name="red_1"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="30" id="F5n-si-m0y"/>
@@ -112,8 +114,8 @@
                                         <action selector="nextAction:" destination="-1" eventType="touchUpInside" id="mXL-ME-R1I"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aex-3s-nXY">
-                                    <rect key="frame" x="16" y="746" width="80" height="30"/>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aex-3s-nXY">
+                                    <rect key="frame" x="16" y="756.5" width="80" height="30"/>
                                     <color key="backgroundColor" name="red_1"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="30" id="HnQ-RV-n9y"/>
@@ -127,8 +129,8 @@
                                         <action selector="prevAction:" destination="-1" eventType="touchUpInside" id="lXt-Ll-REo"/>
                                     </connections>
                                 </button>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Es-uQ-Msu" userLabel="Pil1" customClass="CustomChoiceCardView" customModule="Digilearn_001" customModuleProvider="target">
-                                    <rect key="frame" x="44" y="545" width="40" height="40"/>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Es-uQ-Msu" userLabel="Pil1" customClass="CustomChoiceCardView" customModule="Bizel" customModuleProvider="target">
+                                    <rect key="frame" x="44" y="555.5" width="40" height="40"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eGG-6S-z6i">
                                             <rect key="frame" x="0.0" y="38" width="40" height="2"/>
@@ -156,8 +158,8 @@
                                         <constraint firstAttribute="trailing" secondItem="eGG-6S-z6i" secondAttribute="trailing" id="wv3-rR-Lxj"/>
                                     </constraints>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dHQ-qm-jib" userLabel="Pil2" customClass="CustomChoiceCardView" customModule="Digilearn_001" customModuleProvider="target">
-                                    <rect key="frame" x="44" y="593" width="40" height="40"/>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dHQ-qm-jib" userLabel="Pil2" customClass="CustomChoiceCardView" customModule="Bizel" customModuleProvider="target">
+                                    <rect key="frame" x="44" y="603.5" width="40" height="40"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SJX-bQ-MtB">
                                             <rect key="frame" x="0.0" y="38" width="40" height="2"/>
@@ -184,8 +186,8 @@
                                         <constraint firstAttribute="bottom" secondItem="SJX-bQ-MtB" secondAttribute="bottom" id="oxh-eP-Fhu"/>
                                     </constraints>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bD1-7F-Ce2" userLabel="Pil3" customClass="CustomChoiceCardView" customModule="Digilearn_001" customModuleProvider="target">
-                                    <rect key="frame" x="44" y="641" width="40" height="40"/>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bD1-7F-Ce2" userLabel="Pil3" customClass="CustomChoiceCardView" customModule="Bizel" customModuleProvider="target">
+                                    <rect key="frame" x="44" y="651.5" width="40" height="40"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Ph-Xy-cCU">
                                             <rect key="frame" x="0.0" y="38" width="40" height="2"/>
@@ -212,8 +214,8 @@
                                         <constraint firstAttribute="width" constant="40" id="sWa-un-Jnr"/>
                                     </constraints>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nJh-kB-wgT" userLabel="Pil4" customClass="CustomChoiceCardView" customModule="Digilearn_001" customModuleProvider="target">
-                                    <rect key="frame" x="44" y="689" width="40" height="40"/>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nJh-kB-wgT" userLabel="Pil4" customClass="CustomChoiceCardView" customModule="Bizel" customModuleProvider="target">
+                                    <rect key="frame" x="44" y="699.5" width="40" height="40"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G1x-ct-7Y8">
                                             <rect key="frame" x="0.0" y="38" width="40" height="2"/>
@@ -241,26 +243,26 @@
                                     </constraints>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Option A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GDj-oM-Vhd">
-                                    <rect key="frame" x="107" y="554.5" width="291" height="21"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <rect key="frame" x="107" y="567" width="291" height="17"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Option B" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8dG-oM-Jhk">
-                                    <rect key="frame" x="107" y="602.5" width="291" height="21"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <rect key="frame" x="107" y="615" width="291" height="17"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Option C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rgC-9q-9dE">
-                                    <rect key="frame" x="107" y="650.5" width="291" height="21"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <rect key="frame" x="107" y="663" width="291" height="17"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Option D" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uX4-fT-JpH">
-                                    <rect key="frame" x="107" y="698.5" width="291" height="21"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <rect key="frame" x="107" y="711" width="291" height="17"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
@@ -312,7 +314,8 @@
                     </constraints>
                 </scrollView>
             </subviews>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="hOS-9i-DVs" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" id="FMr-3w-AAx"/>
                 <constraint firstItem="hOS-9i-DVs" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="FRw-aE-eWo"/>
@@ -322,7 +325,6 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="hOS-9i-DVs" secondAttribute="bottom" id="aUP-vb-cL4"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="143.97321428571428"/>
         </view>
     </objects>
@@ -334,5 +336,11 @@
         <namedColor name="red_1">
             <color red="0.60399997234344482" green="0.27099999785423279" blue="0.23499999940395355" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

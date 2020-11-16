@@ -8,7 +8,7 @@
 
 import UIKit
 import Reqres
-
+import Firebase
 class ViewController: UIViewController {
         
     
@@ -25,6 +25,7 @@ class ViewController: UIViewController {
         embeddedVC.willMove(toParent: self)
         loginView.addSubview(embeddedVC.view)
         embeddedVC.didMove(toParent: self)
+        
     }
     
     @IBAction func test(_ sender: UIButton, forEvent event: UIEvent) {

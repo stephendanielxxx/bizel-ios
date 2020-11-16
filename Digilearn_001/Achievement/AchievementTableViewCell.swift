@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import MaterialComponents.MaterialCards
 
 class AchievementTableViewCell: UITableViewCell {
     @IBOutlet weak var titleTask: UILabel!
     @IBOutlet weak var namaInstitut: UILabel!
+    @IBOutlet weak var achieveDetail: MDCCard!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

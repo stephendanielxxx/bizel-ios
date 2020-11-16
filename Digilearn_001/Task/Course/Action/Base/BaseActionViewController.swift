@@ -11,11 +11,13 @@ import Alamofire
 import Toast_Swift
 
 class BaseActionViewController: UIViewController {
+    var isLibrary = false
     var actionDelegate: ActionDelegate!
     var courseId = ""
     var moduleId = ""
     var topicId = ""
     var actionId = ""
+    var assign_id = ""
     var userId: String?
     var nickName: String?
     var submitProgressModel: SubmitProgressModel!
@@ -23,6 +25,7 @@ class BaseActionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setTapToHideKeyboard()
         
         userId = readStringPreference(key: DigilearnsKeys.USER_ID)
         nickName = readStringPreference(key: DigilearnsKeys.USER_NICK)
@@ -33,7 +36,7 @@ class BaseActionViewController: UIViewController {
         style.backgroundColor = UIColor(named: "color_0CA422")!
         style.messageColor = UIColor.white
         ToastManager.shared.style = style
-        
+        self.view.hideAllToasts()
         self.view.makeToast(message)
     }
     
@@ -42,7 +45,7 @@ class BaseActionViewController: UIViewController {
         style.backgroundColor = UIColor.red
         style.messageColor = UIColor.white
         ToastManager.shared.style = style
-        
+        self.view.hideAllToasts()
         self.view.makeToast(message)
     }
     
@@ -53,39 +56,39 @@ class BaseActionViewController: UIViewController {
         return result
     }
     
-    func submitProgress(courseId: String, moduleId: String, topicId: String, actionId: String, answer: String){
-        let user_id = readStringPreference(key: DigilearnsKeys.USER_ID)
-        let parameters: [String:Any] = [
-            "uid": "\(user_id)",
-            "course_id": "\(courseId)",
-            "module_id": "\(moduleId)",
-            "topic_id": "\(topicId)",
-            "action_id" : "\(actionId)",
-            "answer" : "\(answer)"
-        ]
+    func submitProgress(courseId: String, moduleId: String, topicId: String, actionId: String, answer: String, assign_id: String){
         
-        AF.request(submitURL,
-                   method: .post,
-                   parameters: parameters,
-                   encoding: URLEncoding.httpBody).responseData { response in
-                    switch response.result {
-                    case .success(let data):
-                        self.removeSpinner()
-                        let decoder = JSONDecoder()
-                        do{
-                            
-                            self.submitProgressModel = try decoder.decode(SubmitProgressModel.self, from:data)
-                            debugPrint(self.submitProgressModel)
-                            self.actionDelegate.onSubmitProgress(message: (self.submitProgressModel?.message)!)
-                            
-                        }catch{
-                            print(error.localizedDescription)
+        if !isLibrary {
+            let user_id = readStringPreference(key: DigilearnsKeys.USER_ID)
+            let parameters: [String:Any] = [
+                "uid": "\(user_id)",
+                "course_id": "\(courseId)",
+                "module_id": "\(moduleId)",
+                "topic_id": "\(topicId)",
+                "action_id" : "\(actionId)",
+                "answer" : "\(answer)",
+                "assign_id" : "\(assign_id)"
+            ]
+            
+            AF.request(submitURL,
+                       method: .post,
+                       parameters: parameters,
+                       encoding: URLEncoding.httpBody).responseData { response in
+                        switch response.result {
+                        case .success(let data):
+                            self.removeSpinner()
+                            let decoder = JSONDecoder()
+                            do{
+                                self.submitProgressModel = try decoder.decode(SubmitProgressModel.self, from:data)
+                                self.actionDelegate.onSubmitProgress(message: (self.submitProgressModel?.message)!)
+                                
+                            }catch{
+                                print(error.localizedDescription)
+                            }
+                        case .failure(_):
+                            self.removeSpinner()
                         }
-                    case .failure(let error):
-                        self.removeSpinner()
-                    default:
-                        self.removeSpinner()
-                    }
+            }
         }
     }
     

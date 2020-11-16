@@ -13,7 +13,8 @@ class MyGroupTableViewCell: UITableViewCell {
     
     @IBOutlet weak var imageDefault: UIImageView!
     @IBOutlet weak var imageGroup: UIImageView!
-    @IBOutlet weak var titleGroup: UITextView!
+   
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var groupDetail: MDCCard!
     
     override func awakeFromNib() {

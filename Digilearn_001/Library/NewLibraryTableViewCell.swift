@@ -15,6 +15,7 @@ class NewLibraryTableViewCell: UITableViewCell {
     @IBOutlet weak var authorCourse: UILabel!
     @IBOutlet weak var modulesCourse: UILabel!
     @IBOutlet weak var startCourse: UIButton!
+    @IBOutlet weak var imageWidth: NSLayoutConstraint!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,6 +28,15 @@ class NewLibraryTableViewCell: UITableViewCell {
 extension UIImageView {
 
     func makeRounded() {
+        self.layer.masksToBounds = false
+        self.layer.cornerRadius = self.frame.height / 2
+        self.clipsToBounds = true
+        self.contentMode = .scaleToFill
+    }
+    
+    func makeRoundedWithBorder() {
+        self.layer.borderWidth = 1
+        self.layer.borderColor = UIColor.white.cgColor
         self.layer.masksToBounds = false
         self.layer.cornerRadius = self.frame.height / 2
         self.clipsToBounds = true

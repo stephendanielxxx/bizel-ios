@@ -11,7 +11,7 @@ import MaterialComponents.MaterialCards
 
 class AnnounceTableViewCell: UITableViewCell {
     @IBOutlet weak var imageAnnounce: UIImageView!
-    @IBOutlet weak var titleAnnounce: UITextView!
+    @IBOutlet weak var titleAnnounce: UILabel!
     @IBOutlet weak var dateAnnounce: UILabel!
     @IBOutlet weak var newLabel: UILabel!
     

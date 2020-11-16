@@ -16,6 +16,8 @@ class CourseViewController: UIViewController {
     var course_name = ""
     var created_by = ""
     var course_about = ""
+    var assign_id = ""
+    var isLibrary = false
     
     var listCourseModel: ListCourseModel!
     
@@ -35,9 +37,7 @@ class CourseViewController: UIViewController {
     }
     
     func setInitial(){
-        let modules = ModulesViewController()
-        modules.course_id = course_id
-        embed(modules, inParent: self, inView: tabContent)
+        showModules()
     }
     
     @IBAction func backAction(_ sender: UIBarButtonItem) {
@@ -77,7 +77,7 @@ class CourseViewController: UIViewController {
                         }catch{
                             print(error.localizedDescription)
                         }
-                    case .failure(let error):
+                    case .failure(_):
                         self.removeSpinner()
                     }
         }
@@ -93,7 +93,16 @@ class CourseViewController: UIViewController {
         
         let about = AboutCourseViewController()
         about.course_about = course_about
+        about.courseId = course_id
         embed(about, inParent: self, inView: tabContent)
+    }
+    
+    fileprivate func showModules() {
+        let modules = ModulesViewController()
+        modules.isLibrary = self.isLibrary
+        modules.assign_id = assign_id
+        modules.course_id = course_id
+        embed(modules, inParent: self, inView: tabContent)
     }
     
     @IBAction func moduleAction(_ sender: UIButton) {
@@ -104,9 +113,7 @@ class CourseViewController: UIViewController {
         modulesButton.setTitleColor(UIColor(named: "red_1"), for: .normal)
         aboutButton.setTitleColor(UIColor.lightGray, for: .normal)
         
-        let modules = ModulesViewController()
-        modules.course_id = course_id
-        embed(modules, inParent: self, inView: tabContent)
+        showModules()
     }
 
 }

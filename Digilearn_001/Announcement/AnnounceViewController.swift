@@ -40,7 +40,7 @@ class AnnounceViewController: UIViewController {
                         }catch{
                             print(error.localizedDescription)
                         }
-                    case .failure(let error):
+                    case .failure(_):
                         self.removeSpinner()
                     }
         }
@@ -56,22 +56,21 @@ extension AnnounceViewController: UITableViewDelegate, UITableViewDataSource
         return announcementModel?.news.count ?? 0
         
     }
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+   //     return 100
         
-    }
+//    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = announcementView.dequeueReusableCell(withIdentifier: "AnnounceIdentifier") as! AnnounceTableViewCell
         let announcement: News = (announcementModel?.news[indexPath.row])!
         cell.titleAnnounce.text = announcement.title
         cell.dateAnnounce.text = announcement.timePosted
         cell.imageAnnounce.pin_updateWithProgress = true
-        // cell.imageGroup.layer.cornerRadius = 1
         cell.imageAnnounce.contentMode = .scaleToFill
         cell.imageAnnounce.clipsToBounds = true
         
         
-        if(announcement.announcementImage != nil) {
+//        if announcement.announcementImage != nil {
             let url = Foundation.URL(string: "https://digicourse.id/digilearn/admin-master/assets.admin_master/announcement/image/\(announcement.announcementImage)")
             cell.imageAnnounce.pin_setImage(from: url)
             
@@ -80,7 +79,7 @@ extension AnnounceViewController: UITableViewDelegate, UITableViewDataSource
             }else{
                 cell.newLabel.isHidden = true
             }
-        }
+//        }
         
         cell.detailAnnounce.tag = indexPath.row
         cell.detailAnnounce.addTarget(self, action: #selector(AnnounceViewController.openDetail(_:)), for: .touchUpInside)
@@ -99,6 +98,7 @@ extension AnnounceViewController: UITableViewDelegate, UITableViewDataSource
         self.present(announceDetail, animated: true, completion: nil)
     }
 
+    
 }
 
 

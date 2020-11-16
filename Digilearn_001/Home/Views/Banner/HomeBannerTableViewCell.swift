@@ -12,7 +12,7 @@ import Alamofire
 import AlamofireImage
 
 class HomeBannerTableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var slideShow: ImageSlideshow!
     @IBOutlet weak var pageControl: UIPageControl!
     
@@ -28,11 +28,12 @@ class HomeBannerTableViewCell: UITableViewCell {
         slideShow.clipsToBounds = true
         
         slideShow.scrollView.layer.cornerRadius = 15
+        slideShow.zoomEnabled = true
         
         slideShow.pageIndicatorPosition = PageIndicatorPosition(horizontal: .center, vertical: .under)
-
+        
         loadData()
-    
+        
     }
     
     func loadData(){
@@ -43,41 +44,39 @@ class HomeBannerTableViewCell: UITableViewCell {
                     
                     switch response.result {
                     case .success(let data):
-                       let decoder = JSONDecoder()
-                       do{
-
-                        self.bannerModel = try decoder.decode(BannerModel.self, from:data)
-
-                        if(self.bannerModel?.banner.count ?? 0 > 0){
+                        let decoder = JSONDecoder()
+                        do{
                             
-                            self.pageControl.numberOfPages = self.bannerModel?.banner.count as! Int
+                            self.bannerModel = try decoder.decode(BannerModel.self, from:data)
                             
-                            var jsonArray = [InputSource]()
-                            var index = 0
-                            for banner in self.bannerModel.banner{
-                                let urlImage: String = self.bannerModel.banner[index].image
-                                var image = AlamofireSource(urlString: "https://digicourse.id/digilearn/admin-master/assets.admin_master/banner/image/\(urlImage)")
-                                jsonArray.append(image as! InputSource)
-                                index+=1
+                            if(self.bannerModel?.banner.count ?? 0 > 0){
+                                
+                                self.pageControl.numberOfPages = self.bannerModel!.banner.count
+                                
+                                var jsonArray = [InputSource]()
+                                var index = 0
+                                for _ in self.bannerModel.banner{
+                                    let urlImage: String = self.bannerModel.banner[index].image
+                                    let image = AlamofireSource(urlString: "https://digicourse.id/digilearn/admin-master/assets.admin_master/banner/image/\(urlImage)")
+                                    jsonArray.append(image!)
+                                    index+=1
+                                }
+                                
+                                self.slideShow.setImageInputs(jsonArray)
+                                
                             }
-                            
-                            self.slideShow.setImageInputs(jsonArray)
-                            
-                        }else{
-
-                        }
-                       }catch{
+                        }catch{
                             print(error.localizedDescription)
                         }
                         break
-                    case .failure(let error):
+                    case .failure(_):
                         debugPrint("Error")
                         break
                     }
         }
     }
     
-
+    
 }
 
 extension UITableViewCell {

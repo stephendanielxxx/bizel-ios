@@ -14,7 +14,7 @@ import Alamofire
 import Reqres
 
 class LoginViewController: UIViewController {
-
+    
     @IBOutlet weak var loginImage: UIImageView!
     @IBOutlet weak var phoneLogin: FPNTextField!
     @IBOutlet weak var password: UITextField!
@@ -62,24 +62,24 @@ class LoginViewController: UIViewController {
         if(iconClick == true) {
             password.isSecureTextEntry = false
             passwordIcon.setImage(UIImage(systemName: "eye.slash.fill"), for: .normal)
-
+            
         } else {
             password.isSecureTextEntry = true
             passwordIcon.setImage(UIImage(systemName: "eye.fill"), for: .normal)
         }
-
+        
         iconClick = !iconClick
     }
     
     @IBAction func login(_ sender: UIButton) {
         
-        var pass = password.text
+        let pass = password.text
         var phone = phoneLogin.getFormattedPhoneNumber(format: .E164)
         
         phone = phone?.replacingOccurrences(of: "+", with: "", options: NSString.CompareOptions.literal, range:nil)
         
-        var passCounter = pass?.count ?? 0
-        var phoneCounter = phoneLogin.text?.count ?? 1
+        let passCounter = pass?.count ?? 0
+//        let phoneCounter = phoneLogin.text?.count ?? 1
         
         if(!phoneValid){
             let alert = UIAlertController(title: "Login Failed", message: "Invalid phone number", preferredStyle: .alert)
@@ -90,7 +90,7 @@ class LoginViewController: UIViewController {
             alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
             self.present(alert, animated: true)
         }else{
-
+            
             self.showSpinner(onView: self.view)
             
             let parameters: [String:Any] = [
@@ -105,15 +105,23 @@ class LoginViewController: UIViewController {
                         switch response.result {
                         case .success(let data):
                             self.removeSpinner()
-                           let decoder = JSONDecoder()
-                           do{
+                            let decoder = JSONDecoder()
+                            do{
                                 let loginModel = try decoder.decode(LoginModel.self, from:data)
                                 if(loginModel.code == "200"){
                                     self.saveStringPreference(value: (loginModel.user?[0].id)!, key: DigilearnsKeys.USER_ID)
                                     self.saveStringPreference(value: (loginModel.user?[0].nickname)!, key: DigilearnsKeys.USER_NICK)
-                                    
+                                    self.saveStringPreference(value: (loginModel.user?[0].institution)!, key: DigilearnsKeys.INSTITUT_NAME)
+                                    self.saveStringPreference(value: (loginModel.user?[0].position)!, key: DigilearnsKeys.USER_POSITION)
+                                    self.saveStringPreference(value: (loginModel.user?[0].firstName)!, key: DigilearnsKeys.FIRST_NAME)
+                                    self.saveStringPreference(value: (loginModel.user?[0].lastName)!, key: DigilearnsKeys.LAST_NAME)
+                                    self.saveStringPreference(value: (loginModel.user?[0].photo)!, key: DigilearnsKeys.USER_PHOTO)
+                                    self.saveStringPreference(value: (loginModel.user?[0].email)!, key: DigilearnsKeys.EMAIL)
+                                    self.saveStringPreference(value: (loginModel.user?[0].phone)!, key: DigilearnsKeys.PHONE)
+                                    self.saveStringPreference(value: (loginModel.user?[0].notification)!, key: DigilearnsKeys.USER_NOTIFICATION)
+                                    self.saveStringPreference(value: pass!, key: DigilearnsKeys.USER_PASSWORD)
+                                
                                     let home = HomeTabBarController()
-
                                     home.modalPresentationStyle = .fullScreen
                                     
                                     self.present(home, animated: true, completion: nil)
@@ -122,10 +130,10 @@ class LoginViewController: UIViewController {
                                     alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
                                     self.present(alert, animated: true)
                                 }
-                           }catch{
+                            }catch{
                                 print(error.localizedDescription)
                             }
-                        case .failure(let error):
+                        case .failure(_):
                             self.removeSpinner()
                         }
             }
@@ -135,9 +143,9 @@ class LoginViewController: UIViewController {
     }
     
     @objc func tapFunction(sender:UITapGestureRecognizer) {
-
+        
         let forgetPassword = ForgetPasswordViewController()
-
+        
         forgetPassword.modalPresentationStyle = .fullScreen
         
         self.present(forgetPassword, animated: true, completion: nil)
@@ -145,12 +153,12 @@ class LoginViewController: UIViewController {
     
     @objc func registerFunction(sender:UITapGestureRecognizer) {
         let register = RegisterViewController()
-
+        
         register.modalPresentationStyle = .fullScreen
-         
+        
         self.present(register, animated: true, completion: nil)
     }
- 
+    
 }
 
 extension LoginViewController: FPNTextFieldDelegate{
@@ -185,10 +193,16 @@ extension LoginViewController: FPNTextFieldDelegate{
 var vSpinner : UIView?
 
 extension UIViewController {
+    
+    func setTapToHideKeyboard(){
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
+        view.addGestureRecognizer(tap)
+    }
+    
     func showSpinner(onView : UIView) {
         let spinnerView = UIView.init(frame: onView.bounds)
         spinnerView.backgroundColor = UIColor.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.5)
-        let ai = UIActivityIndicatorView.init(style: .whiteLarge)
+        let ai = UIActivityIndicatorView.init(style: UIActivityIndicatorView.Style.large)
         ai.startAnimating()
         ai.center = spinnerView.center
         
@@ -205,6 +219,12 @@ extension UIViewController {
             vSpinner?.removeFromSuperview()
             vSpinner = nil
         }
+    }
+    
+    func validate(emailAddress: String) -> Bool {
+        let REGEX: String
+        REGEX = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}"
+        return NSPredicate(format: "SELF MATCHES %@", REGEX).evaluate(with: emailAddress)
     }
 }
 

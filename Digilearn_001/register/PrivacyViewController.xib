@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PrivacyViewController" customModule="Digilearn_001" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PrivacyViewController" customModule="Bizel" customModuleProvider="target">
             <connections>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -21,50 +23,135 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HXc-Sj-YIA">
                     <rect key="frame" x="0.0" y="54" width="414" height="986"/>
                     <subviews>
-                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HYA-Ha-Hbw">
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HYA-Ha-Hbw">
                             <rect key="frame" x="8" y="52" width="398" height="926"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            <string key="text">This privacy policy (“Privacy Policy”) explains how information is collected, used, and disclosed by BIZEL  ("Bizel,” “we,” or “our”) and applies to information we collect when you use or access our online or mobile websites (www.gnowbe.com) and use our products, service or applications (collectively, the “Service”), or when you otherwise interact with us. We respect the privacy rights of users and recognize the importance of protecting information collected about you.
-
-Changes to This Policy
-
-We may change this Privacy Policy from time to time. If we make any changes, we will notify you by revising the “Last Updated” date at the top of this Privacy Policy and, in some cases, we may provide you with additional notice (such as adding a statement to our homepage or sending you an email notification). We encourage you to review our Privacy Policy whenever you access the Service to stay informed about our information practices and the ways you can help protect your privacy. Your use of the Service after the posting of such changes will constitute your consent to such changes.
-
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <mutableString key="text">Privacy Policy
+Last updated (version) October 28, 2020
+ 
+ 
+PT Edcore Indonesia (hereinafter referred to as “we” or “our” or “Bizel” or “Edcore”) committed to respect and/or protect the privacy rights of our users (hereinafter referred to as “user” or “you”) when you access and/or use our website, mobile applications, products or services (hereinafter referred to as “services”) or interact with us for whatsoever objectives and/or reasons through whatsoever channels, devices or means. This privacy policy (hereinafter referred to as “policy”) describes how we collect and/or use the information provided by you. The policy will affect all services unless it is explicitly differently governed for a particular service.
+ 
+It is strongly suggested for you to read the policy thoroughly in detail prior to sign up our services.
+ 
+The policy may change or amended (hereinafter referred to as “changes”) from time to time. If it happened, we would announce the revision. For examples -but not limited to- post it on the applications, website or -although it is not mandatory- send you e-mail, etc. We encourage you to read in detail all policy’s changes to stay updated. The use of services post announcement of the changes is constituted your agreement to the changes.
+ 
+By using our services, starting from the beginning -for examples but not limited to visiting our website, sign-in to our application, etc- you and/or parent, guardian or caretake for those who are under the age of 18 (eighteen) years old, is constituted your acceptance and consent of the policy.
+ 
 Information Collected
-
-Information You Provide To Us
-
-We collect information you provide directly to us.  For example, we collect information when you register with Bizel for an account, create or modify your profile and online account, access and use the Service (including but not limited to when you upload, download, collaborate on or share files or other information), participate in any interactive features of the Service, participate in a survey, contest, promotion, sweepstakes, activity or event, make a purchase, apply for a job, request customer support, or otherwise communicate with us. 
-
-The types of information we may collect directly from you include your name, username, email address, your picture, postal address, phone number, employer’s name, job title, transactional information (including Service purchased or subscribed to and billing address) as well as any contact or other information you choose to provide. Please be aware that the information you choose to provide in your profile may reveal or identify information that is not expressly stated. We also store the files, materials, or other information that you upload or provide in connection with the Service (“User Content”) in order to be able to provide you with the features and functionality of the Service.
-
-You agree not to provide to us with any information requiring us to treat in any special manner or in a manner inconsistent with the terms of this Privacy Policy.  For example, certain personal medical information may require special confidentiality treatment inconsistent with the terms of this Privacy Policy, and you should not provide any such information to us. BIzel disclaims all liability for such information that you provide to us, and you agree to indemnify and defend Bizel for any cost and action resulting from any such information that you provide to us. Also do not provide to us information about racial or ethnic origin, political opinions, religious or philosophical beliefs, trade union membership or information specifying about your sex life.
-
-Information We Collect Automatically
-
-When You Use the Service. When you access or use the Service, we may automatically collect information about you, including: 
-
-Usage Information. We may monitor user activity in connection with the Service and may collect information about the applications and features you use, the Gnowbe websites you visit, the User Content you upload, download, share or access while using the Service, and any actions taken in connection with the access and use of your User Content in the Service. 
-
-Log Information. We may log information about you when you access and use the Service including your Internet Protocol (“IP”) address, access times, browser type and language, Internet Service Provider (“ISP”), the Gnowbe websites that you visit, the User Content you use and the URL of the Web page you visited before navigating to the Service.
-
-Device Information. If you access the Service from a mobile device, we may collect information about the device, including the hardware model, operating system and version, unique device identifiers, mobile network information (as allowed by the mobile network) or platform information (as allowed by the specific platform type)
-
-Information Collected by Cookies and Other Tracking Technologies
-
-We may use various technologies to collect information, which may include saving cookies to your computer or mobile device. Cookies are small data files stored on your hard drive or in device memory that help us to improve the Service and your experience, customize your experience and preferences, allow you to access and use the Service without re-­entering your user identification and/or password, understand which areas and features of the Service are most popular and count visits. We may also collect information using web beacons (also known as “tracking pixels”). Web beacons are electronic images (also called “gifs”) that may be used in the Service or in emails that help us to deliver cookies, count visits, understand usage and campaign effectiveness and determine whether an email has been opened and acted upon.   
-
-Information We Collect From Other Sources
-
-We may also obtain information from third parties and combine that with information we collect through the Service. For example, we may have access to certain information from third party services like Facebook or Linkedin if you create or log into your online account through that service or otherwise provide us with access to information from the service. Any access that we may have to such information from a third party service is in accordance with the authorization procedures determined by that third party service. ...
-.  
-
-</string>
-                            <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+ 
+Information provided by you for us
+ 
+We collect information given by you when interacting with us. For examples, -but not limited to- during the registration process to use our services, modification of your profile, join an event, participate in a survey, request for support, etc. The interaction might occur in multiple ways and channels. For examples -but not limited to- mobile application, website, e-mail, phone call, social media, texting/chatting, etc.
+ 
+Information provided by you directly include your name, username, mobile phone number, e-mail address, picture, your organization name, your job title, transaction information and other information needed to enjoy the services and any information you independently decide to provide to us. Information you share during using our services also included in this category. For examples -but not limited to- your answers to quizzes, feedback or comments sent, pictures, etc.
+ 
+Subject to our judgement, we are authorized to take necessary verification and/or validation steps or activities to ensure the information accuracy without prior consent from you. For examples -but not limited to- send direct e-mail(s) to you, contact by phone or text or chat or social media, include other parties such as -but not limited to- your organization, peer, etc.
+ 
+Hereby, you certify and agree not to provide or share any information to us about your political opinions, philosophical values and/or beliefs, confidential personal medical record or sex life. We are discharges/disclaims all liabilities for such information provided to us and you agree to defend and indemnify us for any cost and action resulting from it.
+ 
+Information collected by us
+ 
+When you use the services, we will collect information about you, including but not limited to:
+Technical information. For examples -but not limited to- Internet Protocol (IP) address, internet service provider (ISP), browser related information (such as -but not limited to- type, language, version, plug-in extension), operating system, time zone, access date and/or time, phone number used to contact/communicate with us, etc.
+Hardware and/or device (hereinafter referred to as “hardware”) information. For examples -but not limited to- the type and/or model of the hardware used, unique device identification code, etc.
+Usage information. For examples -but not limited to- all Uniform Resource Locators (URL) visited, through and/or to and/or from our services, activities related to the services (such as -but not limited to- features and/or web page visited, search, time spent, interaction,  content download/upload, length of visit, etc).
+Learning information. For examples -but not limited to- your answers to quizzes, test result and/or score, time spent for each content, etc.
+ 
+Information from other sources we collected
+ 
+As we may cooperate and/or align with third parties, for examples -but not limited to- sub-contractor, coding company, payment services company, delivery company, marketing company, information search company, research company, search engine, vendor, reseller, etc (all these third parties hereinafter referred to as “business partner”), we will receive information from them. For examples -but not limited to- beneficiary name, delivery address, type and/or amount of payment, payment institution identity, etc.
+ 
+Hereinafter -all those information- will be referred to as “information”
+ 
+Cookies and other tracking technologies
+ 
+With the regard of collecting information, we may save cookies to your hardware. Cookies are small digital files consist of alphabetical and numerical data stored on your hard drive, hardware memory and/or browser to assist us understand your experience with the services and -therefore- able to improve and provide better services, including -but not limited to- customizing various preferences, most visited features and/or pages, etc. 
+ 
+Kindly be noticed that our business partner might also use these cookies by which are beyond our control. You may delete cookies by clearing the data in mobile application or your web browser. You may also control the setting of accepting cookies through browser even though it might impact the functionality smoothness of the services. 
+ 
+We may use web beacons (“tracking pixels”) as well. Web beacons are digital images that may be used in the services or e-mail to assist us deliver cookies, gain knowledge on event effectiveness, etc.
+ 
+Use of Information
+ 
+We may the collected information for various courses, including, but not limited to:
+ 
+Information provided by you for us
+To deliver our services properly and/or in the most effective ways and/or to provide information on the services.
+To provide you information through electronic and/or other channels, media or method on our new services and/or our business partners services that might suit your interest. For examples -but not limited to- security alert, policy update, administrative messages, technical information, notification, etc.
+To response to your feedback, comments, questions and/or requests and/or other supports.
+ 
+Information collected by us
+To assure the security of services.
+To manage the operation and/or the improvement of services. For examples -but not limited to- data analysis, research, testing, trouble shooting, survey, array of customization to your preferences, etc.
+To manage the interaction between you and/or other users and/or services. For examples -but not limited to- group chat, answering questions, survey, customizing new services offering according to your preferences, etc.
+To measure and/or analyze service usage, behavior, activities, trend regarding the services and/or for event, marketing, survey, etc purposes, either organized by us and/or business partner.
+To prevent and/or investigate frauds, unauthorized access and/or other illegal activities.
+ 
+Information from other sources we collected
+Combine, link and/or connected with business partner, the information will be used to help us understand your dynamics (such as -but not limited to- behaviors, activities, preferences etc) to offer and/or improve services.
+ 
+Information Sharing and Disclosure
+ 
+We may share and disclose the information to below parties and/or purposes:
+ 
+Require by law and/or regulation for whatsoever purposes and/or reasons.
+Information exchange with other institutions, companies, organizations and/or alike in order to prevent and/or resolving fraudulent acts and/or any other activities that might be harmful for us, users, partners and/or other parties.
+Our group of companies and/or businesses, including parent and/or its group.
+Business partners who are working and/or collaborating with us to provide and/or offer new and/or improve services to you. 
+Any initiative and/or process regarding and/or relating with business acquisition, merger, sale of company assets, asset transfer, financing and/or acquisition of our business by other company or organization, either all or partial.
+Your organization as the result of using the services.
+Advertiser and/or marketing company (include but not limited to advertising company, marketing research company, production house, sales agent, etc) who need the information to choose and/or place and/or offer relevance advertising and/or promotion and/or alike activities to you. 
+It might happen that we offer you opportunities to use third party applications and/or services. If you choose to use such offerings, we may share the information that may enabling you to use the third party application and/or services, therefore the third party may contact you directly if needed. However, it has to be noted that this Privacy Policy does not applicable to the third party’s application and/or services. We are not responsible for the way they collect, use and disclose your information. It is strongly advised to review their privacy policies prior to using their applications and/or services.
+ 
+Information provided will be subjected to reasonably defined requirement. We will prevent ourselves from sharing and disclosing information to individual level, unless it is mandatory by law and/or regulation and/or after going through a detail discussion and/or analysis by us on the basis of good faith.
+ 
+Information Storing &amp; Security
+ 
+All information collected and/or provided will be stored in a secured server, either own by us and/or third party. Hereby, you are giving us your consent to store, transfer and/or move the information to another server if needed. 
+ 
+We will take reasonable measures to protect the information for loss, misuse, theft, unauthorized access and/or destruction. However, it has to be declared that no service is completely secure. Therefore, we can not guarantee that -regardless the measures taken- the system will not be penetrated.
+ 
+In most cases, you may need an username and password to accesss and use our services. The username and/or password is created and/or given by/to you. In any case, it is your duty and responsibility to keep the confidentiality of the username and -especially- password. It should not be shared to others in any circumstances. If you believe your password has been misused, inform us immediately. Be noted as well that we will never request your password in an unsolicited phone call or e-mail.
+ 
+The information will be retained:
+As long as the account is active or as needed to provide the services.
+To comply with regulation.
+To exercise our right and/or resolve disputes.
+ 
+ 
+Your Right
+ 
+Account information
+You may amend, update and/or delete your personal information and/or account through the application or send a request to us by e-mail stated below. However, we will continue to retain your information if it is required by laws/regulations and/or legitimate business objectives. If -because of certain reasons- we are not able to remove or delete your information, we will notify you the occurrence with proper explanation.
+ 
+Marketing &amp; Newsletter Information 
+We and/or partners might send you marketing, promotional and/or newsletter information. You may opt-out from receiving such information by unsubscribing it or send us e-mail to unsubscribe it for you. However, we may continue to send you non-promotional information such as -but not limited to- privacy policy changes, security alerts, information regarding the services you are using, etc.
+ 
+Testimonials
+We may post and/or display your testimonials on our application, websites and/or other form of marketing and/or promotional materials. With your consent, we may post your name and/or title and/or organization name as well. Otherwise, it will be displayed as an anonymous testimonial and/or endorsement.
+ 
+Acknowledgement and Consent
+ 
+By providing your consent to this policy, you acknowledge and approve all content without exception. You also acknowledge that your meet the legal age to conduct this legal act. We will delete the account if there’s evidence of any violation of laws/regulations.
+ 
+If you are acting on behalf of other individual, you -hereby- declare that you’d been given the consent from the respective party and the party you represented is/are meet the minimum legal age to provide the consent.
+ 
+Policy changes
+Any changes or amendments to this policy will be displayed on this page and/or notify you through e-mail.
+ 
+Contact point
+ 
+If you have any questions, comments, suggestions, feedbacks, complaints or alike, kindly contact us through e-mail xxxxxxxxx
+ 
+You may use the similar e-mail as well to provide us testimonials, improvement feedback and/or any other matters.
+ 
+</mutableString>
+                            <color key="textColor" systemColor="labelColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                         </textView>
-                        <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="37c-hK-rgt">
+                        <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="37c-hK-rgt">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="44" id="jJU-Mt-R5f"/>
@@ -92,7 +179,7 @@ We may also obtain information from third parties and combine that with informat
                             </constraints>
                         </imageView>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="HYA-Ha-Hbw" secondAttribute="bottom" constant="8" id="JI3-xT-pnm"/>
                         <constraint firstItem="37c-hK-rgt" firstAttribute="leading" secondItem="HXc-Sj-YIA" secondAttribute="leading" id="VOT-og-gq6"/>
@@ -107,6 +194,7 @@ We may also obtain information from third parties and combine that with informat
                     </constraints>
                 </view>
             </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="HXc-Sj-YIA" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="15" id="FAA-N5-eUs"/>
@@ -115,7 +203,6 @@ We may also obtain information from third parties and combine that with informat
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="HXc-Sj-YIA" secondAttribute="bottom" constant="-10" id="US5-A1-bg7"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="208.92857142857142"/>
         </view>
     </objects>
@@ -125,5 +212,11 @@ We may also obtain information from third parties and combine that with informat
         <namedColor name="color_ D44444">
             <color red="0.83099997043609619" green="0.2669999897480011" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

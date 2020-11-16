@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LibraryViewController" customModule="Digilearn_001" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LibraryViewController" customModule="Bizel" customModuleProvider="target">
             <connections>
                 <outlet property="allLibrary" destination="se2-kk-S5R" id="R5A-Tz-bd7"/>
+                <outlet property="allLibraryHeight" destination="xAs-ww-sfq" id="Xs0-Aj-JgK"/>
                 <outlet property="newLibrary" destination="zPw-Yd-iwZ" id="cHB-CY-QMC"/>
+                <outlet property="newLibraryHeight" destination="4oC-ZM-etP" id="EuB-DT-dU7"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,97 +24,111 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bMY-uF-uYT" userLabel="Parent View">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="plN-Zu-Urf">
+                    <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="barTintColor" name="color_ D44444"/>
+                    <textAttributes key="titleTextAttributes">
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </textAttributes>
+                    <items>
+                        <navigationItem id="C71-Y4-uZq">
+                            <barButtonItem key="leftBarButtonItem" title="Library" id="90m-F4-wca">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iaa-cM-Oqm">
+                    <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                     <subviews>
-                        <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="plN-Zu-Urf">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <color key="barTintColor" name="color_ D44444"/>
-                            <textAttributes key="titleTextAttributes">
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </textAttributes>
-                            <items>
-                                <navigationItem id="C71-Y4-uZq">
-                                    <barButtonItem key="leftBarButtonItem" title="Library" id="90m-F4-wca">
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </barButtonItem>
-                                </navigationItem>
-                            </items>
-                        </navigationBar>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bam-SE-9ra" userLabel="Content View">
-                            <rect key="frame" x="0.0" y="44" width="414" height="774"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="793"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_library" translatesAutoresizingMaskIntoConstraints="NO" id="WWl-kD-VsU">
                                     <rect key="frame" x="8" y="8" width="398" height="200"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="200" id="ugV-Od-Lc1"/>
+                                        <constraint firstAttribute="width" secondItem="WWl-kD-VsU" secondAttribute="height" multiplier="199:100" id="Mmu-XA-pi6"/>
+                                        <constraint firstAttribute="width" constant="398" id="bcI-fq-En2"/>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="bmJ-7V-iJ5"/>
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gWw-LK-gNb">
-                                    <rect key="frame" x="16" y="216" width="37" height="21"/>
+                                    <rect key="frame" x="16" y="220" width="382" height="21"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="21" id="XRv-m0-Q2d"/>
+                                    </constraints>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zPw-Yd-iwZ" userLabel="New Library">
-                                    <rect key="frame" x="16" y="245" width="378" height="160"/>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zPw-Yd-iwZ" userLabel="New Library">
+                                    <rect key="frame" x="16" y="253" width="378" height="100"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="160" id="a8G-zd-WVu"/>
+                                        <constraint firstAttribute="height" priority="750" constant="100" id="4oC-ZM-etP"/>
                                     </constraints>
                                 </tableView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qfr-rv-nze">
-                                    <rect key="frame" x="16" y="410" width="22" height="21"/>
+                                    <rect key="frame" x="16" y="365" width="382" height="21"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="21" id="lEl-0x-2qh"/>
+                                    </constraints>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="se2-kk-S5R" userLabel="All Library">
-                                    <rect key="frame" x="16" y="439" width="378" height="315"/>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="se2-kk-S5R" userLabel="All Library">
+                                    <rect key="frame" x="16" y="398" width="378" height="375"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="375" id="xAs-ww-sfq"/>
+                                    </constraints>
                                 </tableView>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
-                                <constraint firstAttribute="bottom" secondItem="se2-kk-S5R" secondAttribute="bottom" constant="20" id="299-pd-H9T"/>
-                                <constraint firstItem="WWl-kD-VsU" firstAttribute="top" secondItem="Bam-SE-9ra" secondAttribute="top" constant="8" id="3mm-Uc-bBB"/>
-                                <constraint firstItem="se2-kk-S5R" firstAttribute="leading" secondItem="Bam-SE-9ra" secondAttribute="leading" constant="16" id="3zN-dE-e9c"/>
-                                <constraint firstItem="WWl-kD-VsU" firstAttribute="leading" secondItem="Bam-SE-9ra" secondAttribute="leading" constant="8" id="8gi-En-sxq"/>
-                                <constraint firstItem="zPw-Yd-iwZ" firstAttribute="leading" secondItem="Bam-SE-9ra" secondAttribute="leading" constant="16" id="CuB-SS-iEj"/>
-                                <constraint firstItem="zPw-Yd-iwZ" firstAttribute="top" secondItem="gWw-LK-gNb" secondAttribute="bottom" constant="8" id="FdG-II-5AA"/>
-                                <constraint firstAttribute="trailing" secondItem="zPw-Yd-iwZ" secondAttribute="trailing" constant="20" id="KNT-BL-8vX"/>
-                                <constraint firstAttribute="trailing" secondItem="WWl-kD-VsU" secondAttribute="trailing" constant="8" id="LbV-j6-yLO"/>
-                                <constraint firstItem="gWw-LK-gNb" firstAttribute="top" secondItem="WWl-kD-VsU" secondAttribute="bottom" constant="8" id="NUy-uK-wTt"/>
-                                <constraint firstAttribute="trailing" secondItem="se2-kk-S5R" secondAttribute="trailing" constant="20" id="Q7z-ad-VcC"/>
-                                <constraint firstItem="Qfr-rv-nze" firstAttribute="top" secondItem="zPw-Yd-iwZ" secondAttribute="bottom" constant="5" id="XBf-Kt-Kmc"/>
-                                <constraint firstItem="Qfr-rv-nze" firstAttribute="leading" secondItem="Bam-SE-9ra" secondAttribute="leading" constant="16" id="YSU-bY-7n1"/>
-                                <constraint firstItem="gWw-LK-gNb" firstAttribute="leading" secondItem="Bam-SE-9ra" secondAttribute="leading" constant="16" id="mEh-yh-OMw"/>
-                                <constraint firstItem="se2-kk-S5R" firstAttribute="top" secondItem="Qfr-rv-nze" secondAttribute="bottom" constant="8" id="yzo-7X-iNF"/>
+                                <constraint firstAttribute="trailing" secondItem="gWw-LK-gNb" secondAttribute="trailing" constant="16" id="2AQ-fd-auo"/>
+                                <constraint firstItem="gWw-LK-gNb" firstAttribute="top" secondItem="WWl-kD-VsU" secondAttribute="bottom" constant="12" id="6Dw-z0-Q3O"/>
+                                <constraint firstItem="gWw-LK-gNb" firstAttribute="leading" secondItem="Bam-SE-9ra" secondAttribute="leading" constant="16" id="6N7-2p-rJZ"/>
+                                <constraint firstAttribute="trailing" secondItem="zPw-Yd-iwZ" secondAttribute="trailing" constant="20" id="EUR-Pc-54C"/>
+                                <constraint firstItem="se2-kk-S5R" firstAttribute="top" secondItem="Qfr-rv-nze" secondAttribute="bottom" constant="12" id="PDN-Bg-5PA"/>
+                                <constraint firstItem="se2-kk-S5R" firstAttribute="leading" secondItem="Bam-SE-9ra" secondAttribute="leading" constant="16" id="QLF-BZ-fhZ"/>
+                                <constraint firstItem="Qfr-rv-nze" firstAttribute="top" secondItem="zPw-Yd-iwZ" secondAttribute="bottom" constant="12" id="TOE-gA-qp6"/>
+                                <constraint firstAttribute="trailing" secondItem="Qfr-rv-nze" secondAttribute="trailing" constant="16" id="W15-Er-m83"/>
+                                <constraint firstItem="zPw-Yd-iwZ" firstAttribute="leading" secondItem="Bam-SE-9ra" secondAttribute="leading" constant="16" id="XEw-cm-Fwn"/>
+                                <constraint firstItem="Qfr-rv-nze" firstAttribute="leading" secondItem="Bam-SE-9ra" secondAttribute="leading" constant="16" id="Yfh-Bw-A65"/>
+                                <constraint firstAttribute="trailing" secondItem="se2-kk-S5R" secondAttribute="trailing" constant="20" id="ZZ5-Uz-80d"/>
+                                <constraint firstAttribute="trailing" secondItem="WWl-kD-VsU" secondAttribute="trailing" constant="8" id="bIa-RZ-OkK"/>
+                                <constraint firstItem="WWl-kD-VsU" firstAttribute="leading" secondItem="Bam-SE-9ra" secondAttribute="leading" constant="8" id="eNm-Iw-01u"/>
+                                <constraint firstAttribute="bottom" secondItem="se2-kk-S5R" secondAttribute="bottom" constant="20" symbolic="YES" id="grk-4a-yla"/>
+                                <constraint firstItem="zPw-Yd-iwZ" firstAttribute="top" secondItem="gWw-LK-gNb" secondAttribute="bottom" constant="12" id="hVF-Ea-FiY"/>
+                                <constraint firstItem="WWl-kD-VsU" firstAttribute="top" secondItem="Bam-SE-9ra" secondAttribute="top" constant="8" id="jCu-Fy-6EB"/>
                             </constraints>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
-                        <constraint firstItem="plN-Zu-Urf" firstAttribute="leading" secondItem="bMY-uF-uYT" secondAttribute="leading" id="H8d-YZ-bpO"/>
-                        <constraint firstAttribute="trailing" secondItem="Bam-SE-9ra" secondAttribute="trailing" id="Mwj-2f-cbP"/>
-                        <constraint firstAttribute="trailing" secondItem="plN-Zu-Urf" secondAttribute="trailing" id="W8K-sK-cZx"/>
-                        <constraint firstItem="plN-Zu-Urf" firstAttribute="top" secondItem="bMY-uF-uYT" secondAttribute="top" id="eO1-hN-lEe"/>
-                        <constraint firstAttribute="bottom" secondItem="Bam-SE-9ra" secondAttribute="bottom" id="iBy-vP-uH4"/>
-                        <constraint firstItem="Bam-SE-9ra" firstAttribute="top" secondItem="plN-Zu-Urf" secondAttribute="bottom" id="tWc-93-f6n"/>
-                        <constraint firstItem="Bam-SE-9ra" firstAttribute="leading" secondItem="bMY-uF-uYT" secondAttribute="leading" id="yKk-hJ-qW4"/>
+                        <constraint firstAttribute="trailing" secondItem="Bam-SE-9ra" secondAttribute="trailing" id="LC2-yr-fVw"/>
+                        <constraint firstAttribute="bottom" secondItem="Bam-SE-9ra" secondAttribute="bottom" id="WOD-nr-2Z1"/>
+                        <constraint firstItem="Bam-SE-9ra" firstAttribute="leading" secondItem="Iaa-cM-Oqm" secondAttribute="leading" id="cPQ-Sg-AYd"/>
+                        <constraint firstItem="Bam-SE-9ra" firstAttribute="top" secondItem="Iaa-cM-Oqm" secondAttribute="top" id="cV2-vP-eeM"/>
+                        <constraint firstItem="Bam-SE-9ra" firstAttribute="width" secondItem="Iaa-cM-Oqm" secondAttribute="width" id="cWx-cP-xL3"/>
                     </constraints>
-                </view>
+                </scrollView>
             </subviews>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="bMY-uF-uYT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="GOq-aF-KFw"/>
-                <constraint firstItem="bMY-uF-uYT" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" id="aKn-sn-xnP"/>
-                <constraint firstItem="bMY-uF-uYT" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="gec-cu-vJi"/>
-                <constraint firstItem="bMY-uF-uYT" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" id="o0o-54-VjU"/>
+                <constraint firstItem="Iaa-cM-Oqm" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" id="0pF-3k-HDp"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Iaa-cM-Oqm" secondAttribute="trailing" id="AaA-3Q-BU2"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="plN-Zu-Urf" secondAttribute="trailing" id="Ath-PJ-iXS"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Iaa-cM-Oqm" secondAttribute="bottom" id="Dx0-ws-BI9"/>
+                <constraint firstItem="plN-Zu-Urf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Xle-wC-xfL"/>
+                <constraint firstItem="plN-Zu-Urf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="ZRu-GL-Mf4"/>
+                <constraint firstItem="Iaa-cM-Oqm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="osm-ug-1UW"/>
+                <constraint firstItem="Iaa-cM-Oqm" firstAttribute="top" secondItem="plN-Zu-Urf" secondAttribute="bottom" id="xze-Ao-7CY"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="145.98214285714286"/>
         </view>
     </objects>
@@ -119,5 +137,8 @@
         <namedColor name="color_ D44444">
             <color red="0.83099997043609619" green="0.2669999897480011" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
