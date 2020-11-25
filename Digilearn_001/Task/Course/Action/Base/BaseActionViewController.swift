@@ -22,6 +22,8 @@ class BaseActionViewController: UIViewController {
     var nickName: String?
     var submitProgressModel: SubmitProgressModel!
     let submitURL = "\(DigilearnParams.ApiUrl)/score/finish_progress"
+    var downloadProgress: DownloadProgressViewController!
+    var downloadSuccess: DownloadSuccessViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,6 +56,48 @@ class BaseActionViewController: UIViewController {
         result = result.replacingOccurrences(of: "{{Nickname}}", with: nickName!)
         result = result.replacingOccurrences(of: "{{NICKNAME}}", with: nickName!)
         return result
+    }
+    
+    func downloadImage (filename: String) {
+        let destination = DownloadRequest.suggestedDownloadDestination(for: .documentDirectory,options: .removePreviousFile)
+        let url = "https://digicourse.id/digilearn/admin-master/assets.admin_master/action/quiz/image/\(filename)"
+        AF.download(url, to: destination).downloadProgress{
+            progress in
+            self.showDownloadProgress()
+        }.response {response in
+            
+            if response.error != nil {
+                // error
+                debugPrint("Error download image")
+            }
+            else {
+                // success
+                self.dismiss(animated: true, completion: {() -> Void in
+                    self.showDownloadSuccess()
+                })
+                debugPrint("Success download image")
+
+            }
+        
+        }
+    }
+    
+    func showDownloadProgress(){
+        downloadProgress = DownloadProgressViewController()
+        downloadProgress.providesPresentationContextTransitionStyle = true
+        downloadProgress.definesPresentationContext = true
+        downloadProgress.modalPresentationStyle = .overCurrentContext
+        downloadProgress.modalTransitionStyle = .crossDissolve
+        present(downloadProgress, animated: true, completion: nil)
+    }
+    
+    func showDownloadSuccess(){
+        downloadSuccess = DownloadSuccessViewController()
+        downloadSuccess.providesPresentationContextTransitionStyle = true
+        downloadSuccess.definesPresentationContext = true
+        downloadSuccess.modalPresentationStyle = .overCurrentContext
+        downloadSuccess.modalTransitionStyle = .crossDissolve
+        present(downloadSuccess, animated: true, completion: nil)
     }
     
     func submitProgress(courseId: String, moduleId: String, topicId: String, actionId: String, answer: String, assign_id: String){
