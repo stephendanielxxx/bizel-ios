@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MaterialViewController" customModule="Bizel" customModuleProvider="target">
             <connections>
                 <outlet property="cardView" destination="0Ov-eu-LKw" id="EsS-sa-TTc"/>
+                <outlet property="downloadButton" destination="vQ3-yB-wEw" id="Wl5-SE-d2E"/>
                 <outlet property="imageHeight" destination="dAF-lx-t4o" id="hS9-aF-LLq"/>
                 <outlet property="materialContent" destination="unt-hD-SNB" id="ylA-Ru-xC6"/>
                 <outlet property="materialImage" destination="aqs-nc-lXJ" id="chT-NR-8U1"/>
@@ -32,7 +33,7 @@
                     <rect key="frame" x="0.0" y="39" width="414" height="818"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pzB-3Y-NJg" userLabel="Content View">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="830.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="872.5"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HLi-j0-XdS" userLabel="Header View">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
@@ -52,7 +53,7 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Ov-eu-LKw" userLabel="Card View" customClass="MDCCard">
-                                    <rect key="frame" x="16" y="50" width="382" height="478"/>
+                                    <rect key="frame" x="16" y="50" width="382" height="520"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5oc-Gf-MQ0">
                                             <rect key="frame" x="21" y="21" width="345" height="17"/>
@@ -67,13 +68,24 @@
                                             </constraints>
                                         </imageView>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="unt-hD-SNB" userLabel="Quiz Text">
-                                            <rect key="frame" x="21" y="262" width="345" height="200"/>
+                                            <rect key="frame" x="21" y="304" width="345" height="200"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                             <color key="textColor" systemColor="labelColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vQ3-yB-wEw">
+                                            <rect key="frame" x="172.5" y="262" width="42" height="42"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="42" id="e9f-Dq-Pb9"/>
+                                                <constraint firstAttribute="width" constant="42" id="z21-aB-apD"/>
+                                            </constraints>
+                                            <state key="normal" image="ic_download"/>
+                                            <connections>
+                                                <action selector="downloadAction:" destination="-1" eventType="touchUpInside" id="XO4-eM-BBm"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
@@ -81,16 +93,18 @@
                                         <constraint firstItem="unt-hD-SNB" firstAttribute="leading" secondItem="0Ov-eu-LKw" secondAttribute="leading" constant="21" id="1q7-lS-9uV"/>
                                         <constraint firstAttribute="bottom" secondItem="unt-hD-SNB" secondAttribute="bottom" constant="16" id="3nP-z4-mLs"/>
                                         <constraint firstItem="aqs-nc-lXJ" firstAttribute="leading" secondItem="0Ov-eu-LKw" secondAttribute="leading" constant="21" id="CKh-BX-jms"/>
-                                        <constraint firstItem="unt-hD-SNB" firstAttribute="top" secondItem="aqs-nc-lXJ" secondAttribute="bottom" constant="8" id="I5Q-tj-GL0"/>
+                                        <constraint firstItem="vQ3-yB-wEw" firstAttribute="centerX" secondItem="aqs-nc-lXJ" secondAttribute="centerX" id="E9d-SS-QoF"/>
                                         <constraint firstItem="5oc-Gf-MQ0" firstAttribute="leading" secondItem="0Ov-eu-LKw" secondAttribute="leading" constant="21" id="Ndd-GC-sv8"/>
                                         <constraint firstAttribute="trailing" secondItem="unt-hD-SNB" secondAttribute="trailing" constant="16" id="Rhx-7C-WbL"/>
                                         <constraint firstItem="5oc-Gf-MQ0" firstAttribute="top" secondItem="0Ov-eu-LKw" secondAttribute="top" constant="21" id="f00-iV-0ZZ"/>
+                                        <constraint firstItem="unt-hD-SNB" firstAttribute="top" secondItem="vQ3-yB-wEw" secondAttribute="bottom" id="k2E-YQ-ha9"/>
                                         <constraint firstAttribute="trailing" secondItem="aqs-nc-lXJ" secondAttribute="trailing" constant="16" id="rQR-01-LU4"/>
+                                        <constraint firstItem="vQ3-yB-wEw" firstAttribute="top" secondItem="aqs-nc-lXJ" secondAttribute="bottom" constant="8" symbolic="YES" id="w3m-xL-9QF"/>
                                         <constraint firstAttribute="trailing" secondItem="5oc-Gf-MQ0" secondAttribute="trailing" constant="16" id="x0l-qV-buu"/>
                                     </constraints>
                                 </view>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yPu-zJ-iKZ">
-                                    <rect key="frame" x="16" y="558" width="80" height="30"/>
+                                    <rect key="frame" x="16" y="600" width="80" height="30"/>
                                     <color key="backgroundColor" name="red_1"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="80" id="Qmd-yS-KCZ"/>
@@ -105,7 +119,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5fm-jU-2sB">
-                                    <rect key="frame" x="319" y="558" width="80" height="30"/>
+                                    <rect key="frame" x="319" y="600" width="80" height="30"/>
                                     <color key="backgroundColor" name="red_1"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="80" id="74W-PZ-a2I"/>
@@ -163,6 +177,7 @@
     </objects>
     <resources>
         <image name="banner3" width="333" height="134"/>
+        <image name="ic_download" width="37" height="37"/>
         <namedColor name="color_ D44444">
             <color red="0.83099997043609619" green="0.2669999897480011" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

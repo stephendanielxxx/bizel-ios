@@ -37,6 +37,7 @@ class QuizViewController: BaseActionViewController, ActionDelegate {
     @IBOutlet weak var optionD: UILabel!
     @IBOutlet weak var imageHeight: NSLayoutConstraint!
     @IBOutlet weak var scrollview: UIScrollView!
+    @IBOutlet weak var downloadButton: UIButton!
     // single, essay
     // read,watch, link, audio
     override func viewDidLoad() {
@@ -63,6 +64,7 @@ class QuizViewController: BaseActionViewController, ActionDelegate {
         }else{
             quizImage.isHidden = true
             imageHeight.constant = 0
+            downloadButton.isHidden = true
         }
         
         optionA.attributedText = quiz?.pil1!.htmlStringAnswerQuiz
@@ -173,6 +175,10 @@ class QuizViewController: BaseActionViewController, ActionDelegate {
     
     @IBAction func prevAction(_ sender: UIButton) {
         delegate?.prevAction(index: index!)
+    }
+    
+    @IBAction func downloadAction(_ sender: UIButton) {
+        downloadImage(filename: quiz!.quizImage!)
     }
     
     func onSubmitProgress(message: String) {

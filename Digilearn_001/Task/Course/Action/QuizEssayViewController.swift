@@ -28,6 +28,8 @@ class QuizEssayViewController: BaseActionViewController, ActionDelegate {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var undoButton: UIButton!
     @IBOutlet weak var redoButton: UIButton!
+    @IBOutlet weak var downloadButton: UIButton!
+    @IBOutlet weak var imageHeight: NSLayoutConstraint!
     let URL = "\(DigilearnParams.ApiUrl)/score/get_essayById"
     
     override func viewDidLoad() {
@@ -52,6 +54,10 @@ class QuizEssayViewController: BaseActionViewController, ActionDelegate {
             let url = Foundation.URL(string: "https://digicourse.id/digilearn/admin-master/assets.admin_master/action/quiz/image/\(quiz!.quizImage!)")!
             
             quizImage.pin_setImage(from: url)
+        }else{
+            quizImage.isHidden = true
+            imageHeight.constant = 0
+            downloadButton.isHidden = true
         }
         
         if index == 0 {
@@ -141,6 +147,10 @@ class QuizEssayViewController: BaseActionViewController, ActionDelegate {
     
     func onSubmitProgress(message: String) {
         
+    }
+    
+    @IBAction func downloadAction(_ sender: UIButton) {
+        downloadImage(filename: quiz!.quizImage!)
     }
 }
 

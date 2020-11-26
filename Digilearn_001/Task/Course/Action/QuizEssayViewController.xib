@@ -14,6 +14,8 @@
             <connections>
                 <outlet property="answerField" destination="UwH-GB-RbY" id="35s-gU-qlt"/>
                 <outlet property="cardView" destination="SWz-6J-u1z" id="mEQ-iM-8t9"/>
+                <outlet property="downloadButton" destination="dbm-L8-fdi" id="HLZ-eE-Yin"/>
+                <outlet property="imageHeight" destination="tGg-58-chr" id="t8G-Gc-1vT"/>
                 <outlet property="nextButton" destination="FEz-VY-BSH" id="RX4-1o-Xid"/>
                 <outlet property="prevButton" destination="2U9-d0-8FH" id="503-yg-fUq"/>
                 <outlet property="quizImage" destination="KU6-KM-Z2j" id="ZWM-Fc-7VA"/>
@@ -34,7 +36,7 @@
                     <rect key="frame" x="0.0" y="39" width="414" height="818"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ceO-CV-fdm" userLabel="Content View">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="875.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="917.5"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NA9-aR-G1i" userLabel="Header View">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
@@ -54,7 +56,7 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SWz-6J-u1z" userLabel="Card View" customClass="MDCCard">
-                                    <rect key="frame" x="16" y="48.5" width="382" height="478"/>
+                                    <rect key="frame" x="16" y="48.5" width="382" height="520"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fFz-0i-11N">
                                             <rect key="frame" x="21" y="21" width="345" height="17"/>
@@ -69,13 +71,24 @@
                                             </constraints>
                                         </imageView>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="aT6-QU-VTn" userLabel="Quiz Text">
-                                            <rect key="frame" x="21" y="262" width="345" height="200"/>
+                                            <rect key="frame" x="21" y="304" width="345" height="200"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                             <color key="textColor" systemColor="labelColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbm-L8-fdi">
+                                            <rect key="frame" x="172.5" y="262" width="42" height="42"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="42" id="AHb-oN-qEW"/>
+                                                <constraint firstAttribute="width" constant="42" id="Jax-dc-OQM"/>
+                                            </constraints>
+                                            <state key="normal" image="ic_download"/>
+                                            <connections>
+                                                <action selector="downloadAction:" destination="-1" eventType="touchUpInside" id="WQ0-dh-KZ3"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
@@ -85,14 +98,16 @@
                                         <constraint firstItem="KU6-KM-Z2j" firstAttribute="top" secondItem="fFz-0i-11N" secondAttribute="bottom" constant="16" id="KeZ-9T-1c2"/>
                                         <constraint firstItem="fFz-0i-11N" firstAttribute="leading" secondItem="SWz-6J-u1z" secondAttribute="leading" constant="21" id="OFT-al-wqt"/>
                                         <constraint firstAttribute="trailing" secondItem="KU6-KM-Z2j" secondAttribute="trailing" constant="16" id="kTS-iz-gMC"/>
-                                        <constraint firstItem="aT6-QU-VTn" firstAttribute="top" secondItem="KU6-KM-Z2j" secondAttribute="bottom" constant="8" id="lhD-FD-nbl"/>
+                                        <constraint firstItem="aT6-QU-VTn" firstAttribute="top" secondItem="dbm-L8-fdi" secondAttribute="bottom" id="m0x-zc-maL"/>
+                                        <constraint firstItem="dbm-L8-fdi" firstAttribute="centerX" secondItem="KU6-KM-Z2j" secondAttribute="centerX" id="m4x-cG-Z3q"/>
+                                        <constraint firstItem="dbm-L8-fdi" firstAttribute="top" secondItem="KU6-KM-Z2j" secondAttribute="bottom" constant="8" symbolic="YES" id="nsv-x1-XPp"/>
                                         <constraint firstItem="KU6-KM-Z2j" firstAttribute="leading" secondItem="SWz-6J-u1z" secondAttribute="leading" constant="21" id="oEU-3V-N5r"/>
                                         <constraint firstAttribute="trailing" secondItem="fFz-0i-11N" secondAttribute="trailing" constant="16" id="rXf-bq-Eq0"/>
                                         <constraint firstAttribute="bottom" secondItem="aT6-QU-VTn" secondAttribute="bottom" constant="16" id="xjL-uT-hIU"/>
                                     </constraints>
                                 </view>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2U9-d0-8FH">
-                                    <rect key="frame" x="16" y="669.5" width="80" height="30"/>
+                                    <rect key="frame" x="16" y="711.5" width="80" height="30"/>
                                     <color key="backgroundColor" name="red_1"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="30" id="PAR-ia-3Vs"/>
@@ -106,7 +121,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FEz-VY-BSH">
-                                    <rect key="frame" x="318" y="669.5" width="80" height="30"/>
+                                    <rect key="frame" x="318" y="711.5" width="80" height="30"/>
                                     <color key="backgroundColor" name="red_1"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="80" id="UHH-aF-Zkw"/>
@@ -120,12 +135,12 @@
                                     </connections>
                                 </button>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Answer here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UwH-GB-RbY">
-                                    <rect key="frame" x="16" y="546.5" width="382" height="34"/>
+                                    <rect key="frame" x="16" y="588.5" width="382" height="34"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7vd-Gp-0ra">
-                                    <rect key="frame" x="16" y="604.5" width="42" height="30"/>
+                                    <rect key="frame" x="16" y="646.5" width="42" height="30"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="30" id="Iq1-hO-neh"/>
                                     </constraints>
@@ -138,7 +153,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S5p-pr-G4Z">
-                                    <rect key="frame" x="360" y="604.5" width="38" height="30"/>
+                                    <rect key="frame" x="360" y="646.5" width="38" height="30"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="30" id="U7R-Bp-MKA"/>
                                     </constraints>
@@ -201,6 +216,7 @@
     </objects>
     <resources>
         <image name="banner3" width="333" height="134"/>
+        <image name="ic_download" width="37" height="37"/>
         <namedColor name="color_ D44444">
             <color red="0.83099997043609619" green="0.2669999897480011" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
