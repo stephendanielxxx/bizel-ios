@@ -36,7 +36,6 @@ class RegisterViewController: UIViewController {
 
         phoneTF.delegate = self
         
-        // Do any additional setup after loading the view.
         firstNameTF.placeholder = "first name"
         lastNameTF.placeholder = "last name"
         nickNameTF.placeholder = "nick name"
