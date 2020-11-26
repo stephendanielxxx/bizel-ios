@@ -24,6 +24,7 @@ class MaterialViewController: BaseActionViewController, ActionDelegate {
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var imageHeight: NSLayoutConstraint!
     @IBOutlet weak var scrollview: UIScrollView!
+    @IBOutlet weak var downloadButton: UIButton!
     // single, essay
     // read,watch, link, audio
     override func viewDidLoad() {
@@ -51,6 +52,7 @@ class MaterialViewController: BaseActionViewController, ActionDelegate {
         }else{
             materialImage.isHidden = true
             imageHeight.constant = 0
+            downloadButton.isHidden = true
         }
         
         if index == 0 {
@@ -75,4 +77,7 @@ class MaterialViewController: BaseActionViewController, ActionDelegate {
         
     }
     
+    @IBAction func downloadAction(_ sender: UIButton) {
+        downloadImage(filename: quiz!.quizImage!)
+    }
 }
