@@ -54,7 +54,7 @@ class FaqViewController: UIViewController, UISearchBarDelegate, UISearchResultsU
     }
     
     func loadFilterCategory(){
-        let URL = "\(DigilearnParams.ApiUrl)/apiari/apikategorifaqari"
+        let URL = "\(DigilearnParams.ApiUrl)/apiari/apikategorifaqarii"
         AF.request(URL,
                    method: .get,
                    parameters: nil,
