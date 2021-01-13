@@ -18,6 +18,7 @@ class AchievementViewController: UIViewController {
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var institutLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
+    @IBOutlet weak var emptyView: UIView!
     @IBOutlet weak var achievementView: UITableView!
     
     var achieveModel: AchieveModel!
@@ -64,9 +65,20 @@ class AchievementViewController: UIViewController {
                         let decoder = JSONDecoder()
                         do{
                             self.achieveModel = try decoder.decode(AchieveModel.self, from:data)
+                            
+                            if self.achieveModel.library.count > 0 {
+                                self.emptyView.isHidden = true
+                                self.achievementView.isHidden = false
+                            }else{
+                                self.emptyView.isHidden = false
+                                self.achievementView.isHidden = true
+                            }
+                            
                             self.achievementView.reloadData()
                         }catch{
                             print(error.localizedDescription)
+                            self.emptyView.isHidden = true
+                            self.achievementView.isHidden = false
                         }
                     case .failure(_):
                         self.removeSpinner()

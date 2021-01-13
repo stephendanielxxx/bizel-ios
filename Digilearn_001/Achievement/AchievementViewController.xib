@@ -14,6 +14,7 @@
             <connections>
                 <outlet property="achievementView" destination="L52-Ly-Ypd" id="aV2-Eq-TnF"/>
                 <outlet property="backgroundImage" destination="fSA-xA-VHF" id="DbX-TX-fFo"/>
+                <outlet property="emptyView" destination="F3E-iA-af3" id="d1r-Wt-MiQ"/>
                 <outlet property="institutLabel" destination="f6s-7j-EEk" id="0hl-Rp-Joi"/>
                 <outlet property="profileImage" destination="eqd-Oc-Uc9" id="Psi-s6-rCt"/>
                 <outlet property="statusLabel" destination="SVD-KU-mAc" id="KJD-su-ehd"/>
@@ -113,6 +114,36 @@
                         <constraint firstItem="f6s-7j-EEk" firstAttribute="leading" secondItem="gMc-aC-c9n" secondAttribute="leading" constant="10" id="xT0-Hz-vma"/>
                     </constraints>
                 </view>
+                <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F3E-iA-af3" userLabel="Empty View">
+                    <rect key="frame" x="5" y="411" width="404" height="234"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_empty_achievement" translatesAutoresizingMaskIntoConstraints="NO" id="mQN-Nt-fTh">
+                            <rect key="frame" x="94" y="10" width="240" height="128"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="240" id="NZi-vV-BHB"/>
+                                <constraint firstAttribute="height" constant="128" id="ut5-Cq-HOJ"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You haven't got any achievements. Please complete your tasks." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zyb-D2-wYV">
+                            <rect key="frame" x="66" y="148" width="296" height="49"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <viewLayoutGuide key="safeArea" id="efB-op-0MM"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="Zyb-D2-wYV" firstAttribute="top" secondItem="mQN-Nt-fTh" secondAttribute="bottom" constant="10" id="DiX-AZ-skW"/>
+                        <constraint firstItem="mQN-Nt-fTh" firstAttribute="top" secondItem="efB-op-0MM" secondAttribute="top" constant="10" id="FnX-hX-Svm"/>
+                        <constraint firstItem="Zyb-D2-wYV" firstAttribute="leading" secondItem="efB-op-0MM" secondAttribute="leading" constant="66" id="NZP-bv-fAu"/>
+                        <constraint firstItem="mQN-Nt-fTh" firstAttribute="leading" secondItem="efB-op-0MM" secondAttribute="leading" constant="94" id="d8Y-hX-EWf"/>
+                        <constraint firstItem="efB-op-0MM" firstAttribute="trailing" secondItem="Zyb-D2-wYV" secondAttribute="trailing" constant="42" id="kU4-kf-aBH"/>
+                        <constraint firstItem="efB-op-0MM" firstAttribute="trailing" secondItem="mQN-Nt-fTh" secondAttribute="trailing" constant="70" id="s7J-am-OVU"/>
+                        <constraint firstItem="efB-op-0MM" firstAttribute="bottom" secondItem="Zyb-D2-wYV" secondAttribute="bottom" constant="37" id="wb8-Rp-tWo"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -130,6 +161,7 @@
     </objects>
     <resources>
         <image name="arrow.left" catalog="system" width="128" height="98"/>
+        <image name="ic_empty_achievement" width="106.5" height="132"/>
         <image name="img_achieve" width="540" height="291"/>
         <namedColor name="color_ D44444">
             <color red="0.83099997043609619" green="0.2669999897480011" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
