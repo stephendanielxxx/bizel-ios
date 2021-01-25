@@ -148,7 +148,7 @@ class FaqViewController: UIViewController, UISearchBarDelegate, UISearchResultsU
                             self.faqView.reloadData()
                             let dataString = String(data:data, encoding: .utf8) ?? ""
                             if dataString == "{\"faq:\":[]}" {
-                                self.showToast(message: "Search not Found")}
+                                self.showToast(message: "Search Not Found")}
                         }catch{
                             print(error.localizedDescription)
                         }
