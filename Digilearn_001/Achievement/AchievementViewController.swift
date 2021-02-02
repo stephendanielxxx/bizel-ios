@@ -59,7 +59,8 @@ class AchievementViewController: UIViewController {
                    method: .post,
                    parameters: parameters,
                    encoding: URLEncoding.httpBody).responseData { response in
-                    switch response.result {
+                    debugPrint(response)
+                    switch response.result{
                     case .success(let data):
                         self.removeSpinner()
                         let decoder = JSONDecoder()
@@ -73,12 +74,11 @@ class AchievementViewController: UIViewController {
                                 self.emptyView.isHidden = false
                                 self.achievementView.isHidden = true
                             }
-                            
                             self.achievementView.reloadData()
                         }catch{
                             print(error.localizedDescription)
-                            self.emptyView.isHidden = true
-                            self.achievementView.isHidden = false
+                            self.emptyView.isHidden = false
+                            self.achievementView.isHidden = true
                         }
                     case .failure(_):
                         self.removeSpinner()
@@ -120,8 +120,8 @@ extension AchievementViewController: UITableViewDelegate, UITableViewDataSource
         let achieveDetail = AchievementDetailViewController()
         achieveDetail.modalPresentationStyle = .fullScreen
         let library: Library = achieveModel.library[sender!.tag]
-        achieveDetail.titleachieve = library.courseName
-        achieveDetail.image = library.courseImage
+        achieveDetail.titleachieve = library.courseName ?? ""
+        achieveDetail.image = library.courseImage ?? ""
         achieveDetail.institutname = library.institutName
         achieveDetail.courseid = library.courseID
         self.present(achieveDetail, animated: true, completion: nil)

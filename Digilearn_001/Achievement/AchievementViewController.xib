@@ -50,11 +50,11 @@
                             </items>
                         </navigationBar>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_achieve" translatesAutoresizingMaskIntoConstraints="NO" id="fSA-xA-VHF">
-                            <rect key="frame" x="0.0" y="44" width="414" height="291"/>
+                            <rect key="frame" x="0.0" y="44" width="414" height="262"/>
                             <color key="backgroundColor" name="color_ D44444"/>
                             <constraints>
-                                <constraint firstAttribute="width" secondItem="fSA-xA-VHF" secondAttribute="height" multiplier="138:97" id="4MY-5G-k8h"/>
-                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="180" id="aGL-ID-stw"/>
+                                <constraint firstAttribute="width" secondItem="fSA-xA-VHF" secondAttribute="height" multiplier="138:97" constant="41.257731958762861" id="4MY-5G-k8h"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="aGL-ID-stw"/>
                             </constraints>
                         </imageView>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eqd-Oc-Uc9">
@@ -84,7 +84,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="L52-Ly-Ypd">
-                            <rect key="frame" x="0.0" y="299.5" width="414" height="518.5"/>
+                            <rect key="frame" x="0.0" y="279.5" width="414" height="538.5"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <color key="sectionIndexColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -94,8 +94,8 @@
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstItem="eqd-Oc-Uc9" firstAttribute="centerY" secondItem="fSA-xA-VHF" secondAttribute="centerY" id="5ZH-QN-Xaa"/>
-                        <constraint firstItem="L52-Ly-Ypd" firstAttribute="top" secondItem="SVD-KU-mAc" secondAttribute="bottom" constant="20" id="FPi-0g-PHZ"/>
+                        <constraint firstItem="eqd-Oc-Uc9" firstAttribute="centerY" secondItem="fSA-xA-VHF" secondAttribute="centerY" constant="14.5" id="5ZH-QN-Xaa"/>
+                        <constraint firstItem="L52-Ly-Ypd" firstAttribute="top" secondItem="SVD-KU-mAc" secondAttribute="bottom" id="FPi-0g-PHZ"/>
                         <constraint firstAttribute="trailing" secondItem="fSA-xA-VHF" secondAttribute="trailing" id="Mct-u3-3th"/>
                         <constraint firstItem="FO9-hn-8qS" firstAttribute="top" secondItem="eqd-Oc-Uc9" secondAttribute="bottom" constant="4" id="NFy-51-Eqa"/>
                         <constraint firstItem="FO9-hn-8qS" firstAttribute="leading" secondItem="gMc-aC-c9n" secondAttribute="leading" constant="77" id="NGD-3l-zrq"/>
@@ -114,19 +114,17 @@
                         <constraint firstItem="f6s-7j-EEk" firstAttribute="leading" secondItem="gMc-aC-c9n" secondAttribute="leading" constant="10" id="xT0-Hz-vma"/>
                     </constraints>
                 </view>
-                <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F3E-iA-af3" userLabel="Empty View">
-                    <rect key="frame" x="5" y="411" width="404" height="234"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F3E-iA-af3" userLabel="Empty View">
+                    <rect key="frame" x="0.0" y="384" width="414" height="214"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_empty_achievement" translatesAutoresizingMaskIntoConstraints="NO" id="mQN-Nt-fTh">
-                            <rect key="frame" x="94" y="10" width="240" height="128"/>
+                            <rect key="frame" x="70" y="10" width="274" height="128"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="240" id="NZi-vV-BHB"/>
                                 <constraint firstAttribute="height" constant="128" id="ut5-Cq-HOJ"/>
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You haven't got any achievements. Please complete your tasks." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zyb-D2-wYV">
-                            <rect key="frame" x="66" y="148" width="296" height="49"/>
+                            <rect key="frame" x="42" y="148" width="330" height="29"/>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -137,10 +135,10 @@
                     <constraints>
                         <constraint firstItem="Zyb-D2-wYV" firstAttribute="top" secondItem="mQN-Nt-fTh" secondAttribute="bottom" constant="10" id="DiX-AZ-skW"/>
                         <constraint firstItem="mQN-Nt-fTh" firstAttribute="top" secondItem="efB-op-0MM" secondAttribute="top" constant="10" id="FnX-hX-Svm"/>
-                        <constraint firstItem="Zyb-D2-wYV" firstAttribute="leading" secondItem="efB-op-0MM" secondAttribute="leading" constant="66" id="NZP-bv-fAu"/>
-                        <constraint firstItem="mQN-Nt-fTh" firstAttribute="leading" secondItem="efB-op-0MM" secondAttribute="leading" constant="94" id="d8Y-hX-EWf"/>
+                        <constraint firstItem="Zyb-D2-wYV" firstAttribute="leading" secondItem="efB-op-0MM" secondAttribute="leading" constant="42" id="NZP-bv-fAu"/>
+                        <constraint firstItem="mQN-Nt-fTh" firstAttribute="leading" secondItem="efB-op-0MM" secondAttribute="leading" constant="70" id="d8Y-hX-EWf"/>
                         <constraint firstItem="efB-op-0MM" firstAttribute="trailing" secondItem="Zyb-D2-wYV" secondAttribute="trailing" constant="42" id="kU4-kf-aBH"/>
-                        <constraint firstItem="efB-op-0MM" firstAttribute="trailing" secondItem="mQN-Nt-fTh" secondAttribute="trailing" constant="70" id="s7J-am-OVU"/>
+                        <constraint firstItem="efB-op-0MM" firstAttribute="trailing" secondItem="mQN-Nt-fTh" secondAttribute="trailing" constant="70" id="qEN-dq-9Yc"/>
                         <constraint firstItem="efB-op-0MM" firstAttribute="bottom" secondItem="Zyb-D2-wYV" secondAttribute="bottom" constant="37" id="wb8-Rp-tWo"/>
                     </constraints>
                 </view>
@@ -148,12 +146,15 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="F3E-iA-af3" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="340" id="3OZ-mB-Rl8"/>
+                <constraint firstItem="F3E-iA-af3" firstAttribute="leading" secondItem="gMc-aC-c9n" secondAttribute="leading" id="9MW-hB-IaT"/>
                 <constraint firstItem="gMc-aC-c9n" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="9vS-kN-khN"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="QMh-gz-jZv" secondAttribute="trailing" id="GQ4-1T-OBe"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="top" secondItem="QMh-gz-jZv" secondAttribute="top" id="TbY-gw-irB"/>
                 <constraint firstItem="QMh-gz-jZv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="YAA-fT-hwi"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gMc-aC-c9n" secondAttribute="trailing" id="dS0-VG-ueW"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="gMc-aC-c9n" secondAttribute="bottom" id="jum-Fa-yOo"/>
+                <constraint firstItem="F3E-iA-af3" firstAttribute="trailing" secondItem="gMc-aC-c9n" secondAttribute="trailing" id="kPg-wP-dJx"/>
                 <constraint firstItem="gMc-aC-c9n" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="pcD-Qp-NDZ"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="95.758928571428569"/>

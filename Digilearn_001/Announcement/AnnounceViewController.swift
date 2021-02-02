@@ -41,22 +41,22 @@ class AnnounceViewController: UIViewController {
                             if self.announcementModel.news.count > 0 {
                                 self.emptyView.isHidden = true
                                 self.announcementView.isHidden = false
+
                             }else{
                                 self.emptyView.isHidden = false
                                 self.announcementView.isHidden = true
                             }
-                            
                             self.announcementView.reloadData()
+
                         }catch {
                             print(error.localizedDescription)
-                            self.emptyView.isHidden = true
-                            self.announcementView.isHidden = false
+                            self.emptyView.isHidden = false
+                            self.announcementView.isHidden = true
                         }
                     case .failure(_):
                         self.removeSpinner()
                     }
         }
-        
     }
     @IBAction func backButton(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)

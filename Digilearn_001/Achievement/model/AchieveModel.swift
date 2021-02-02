@@ -16,7 +16,9 @@ struct AchieveModel: Decodable {
 
 // MARK: - Library
 struct Library: Decodable {
-    let courseID, courseImage, moduleDownload, courseName: String
+    let courseID, moduleDownload: String
+    let courseName: String?
+    let courseImage: String?
     let institutName: String
 
     enum CodingKeys: String, CodingKey {
