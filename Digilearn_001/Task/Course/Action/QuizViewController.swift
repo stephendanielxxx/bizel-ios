@@ -31,10 +31,12 @@ class QuizViewController: BaseActionViewController, ActionDelegate {
     @IBOutlet weak var lineC: UIView!
     @IBOutlet weak var buttonD: CustomChoiceCardView!
     @IBOutlet weak var lineD: UIView!
-    @IBOutlet weak var optionA: UILabel!
-    @IBOutlet weak var optionB: UILabel!
-    @IBOutlet weak var optionC: UILabel!
-    @IBOutlet weak var optionD: UILabel!
+    @IBOutlet weak var optionA: UITextView!
+    @IBOutlet weak var optionB: UITextView!
+    @IBOutlet weak var optionC: UITextView!
+    
+    @IBOutlet weak var optionD: UITextView!
+    
     @IBOutlet weak var imageHeight: NSLayoutConstraint!
     @IBOutlet weak var scrollview: UIScrollView!
     @IBOutlet weak var downloadButton: UIButton!

@@ -43,7 +43,7 @@ extension UILabel {
         set {
             debugPrint(self.font.fontName)
             if self.font.fontName.range(of:"Semibold") != nil {
-                debugPrint("INI SEMI BOLD WOI \(self.font.fontName)")
+                debugPrint("SEMI BOLD \(self.font.fontName)")
                 self.font = UIFont(name: newValue, size: self.font.pointSize)
             }
         }

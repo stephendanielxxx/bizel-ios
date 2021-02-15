@@ -28,25 +28,25 @@
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="TitleTask" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qma-WT-DNg">
                                 <rect key="frame" x="47" y="8" width="301" height="25"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <color key="textColor" name="color_ D44444"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Created By:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wam-9i-aGc">
-                                <rect key="frame" x="47" y="33" width="52" height="12"/>
+                                <rect key="frame" x="47" y="33" width="61.5" height="12"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="12" id="zta-Tx-QcS"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Perusahaan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="evF-gZ-h2x">
-                                <rect key="frame" x="106" y="33" width="233.5" height="12"/>
+                                <rect key="frame" x="115.5" y="33" width="224" height="12"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="12" id="HXa-ca-gGR"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -70,6 +70,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="iMz-jf-MKM" secondAttribute="trailing" constant="9.5" id="3rV-gm-py1"/>
                             <constraint firstItem="pLy-hd-zwg" firstAttribute="leading" secondItem="Qma-WT-DNg" secondAttribute="trailing" constant="5" id="6pK-jJ-ypk"/>
                             <constraint firstAttribute="bottom" secondItem="wam-9i-aGc" secondAttribute="bottom" constant="6" id="7rW-27-pUv"/>
                             <constraint firstItem="iMz-jf-MKM" firstAttribute="centerX" secondItem="pLy-hd-zwg" secondAttribute="centerX" id="F0V-lo-RyF"/>

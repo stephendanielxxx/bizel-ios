@@ -44,7 +44,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             window?.makeKeyAndVisible()
         }
         
-        
+    
         
 //        UILabel.appearance().substituteFontName = "Montserrat-Medium"
 //        UILabel.appearance().substituteFontNameRegular = "Montserrat-Regular"
