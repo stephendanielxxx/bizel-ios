@@ -115,7 +115,7 @@
                     </constraints>
                 </view>
                 <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F3E-iA-af3" userLabel="Empty View">
-                    <rect key="frame" x="0.0" y="384" width="414" height="214"/>
+                    <rect key="frame" x="0.0" y="424" width="414" height="221"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_empty_achievement" translatesAutoresizingMaskIntoConstraints="NO" id="mQN-Nt-fTh">
                             <rect key="frame" x="70" y="10" width="274" height="128"/>
@@ -124,8 +124,8 @@
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You haven't got any achievements. Please complete your tasks." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zyb-D2-wYV">
-                            <rect key="frame" x="42" y="148" width="330" height="29"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <rect key="frame" x="42" y="148" width="330" height="36"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -146,7 +146,7 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="F3E-iA-af3" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="340" id="3OZ-mB-Rl8"/>
+                <constraint firstItem="F3E-iA-af3" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="380" id="3OZ-mB-Rl8"/>
                 <constraint firstItem="F3E-iA-af3" firstAttribute="leading" secondItem="gMc-aC-c9n" secondAttribute="leading" id="9MW-hB-IaT"/>
                 <constraint firstItem="gMc-aC-c9n" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="9vS-kN-khN"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="QMh-gz-jZv" secondAttribute="trailing" id="GQ4-1T-OBe"/>
