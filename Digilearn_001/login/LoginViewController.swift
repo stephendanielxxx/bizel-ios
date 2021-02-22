@@ -26,7 +26,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var registerButton: UIView!
     
     var iconClick = true
-    var phoneValid = false;
+    var phoneValid = false
+    var temphone = ""
     
     let URL = "\(DigilearnParams.ApiUrl)/user/auth/login_sementara_kaya_cinta_ku_padanya"
     
@@ -74,13 +75,9 @@ class LoginViewController: UIViewController {
     @IBAction func login(_ sender: UIButton) {
         
         let pass = password.text
-        var phone = phoneLogin.getFormattedPhoneNumber(format: .E164)
-        
-        phone = phone?.replacingOccurrences(of: "+", with: "", options: NSString.CompareOptions.literal, range:nil)
         
         let passCounter = pass?.count ?? 0
 //        let phoneCounter = phoneLogin.text?.count ?? 1
-        
         if(!phoneValid){
             let alert = UIAlertController(title: "Login Failed", message: "Invalid phone number", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
@@ -90,11 +87,23 @@ class LoginViewController: UIViewController {
             alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
             self.present(alert, animated: true)
         }else{
+            var phone = ""
+            if temphone.count > 5 {
+                phone = "62\(temphone)"
+            } else {
+                phone = phoneLogin!.getFormattedPhoneNumber(format: .E164)!
+
+            }
             
+            phone = phone.replacingOccurrences(of: "+", with: "", options: NSString.CompareOptions.literal, range:nil)
+            
+            phone = phone.replacingOccurrences(of: "-", with: "", options: NSString.CompareOptions.literal, range:nil)
+            debugPrint(phone)
+
             self.showSpinner(onView: self.view)
             
             let parameters: [String:Any] = [
-                "id_number": "\(phone!)",
+                "id_number": "\(phone)",
                 "password" : "\(pass!)"
             ]
             
@@ -167,13 +176,20 @@ extension LoginViewController: FPNTextFieldDelegate{
     }
     
     func fpnDidValidatePhoneNumber(textField: FPNTextField, isValid: Bool) {
-        debugPrint(textField.text)
-        if(!isValid){
-            phoneValid = false
-        }else{
-            phoneValid = true
+            if(!isValid){
+                if textField.text!.count > 4{
+                phoneValid = true
+                    temphone = textField.text!
+               } else {
+                 phoneValid = false
+               
+               }
+            }else{
+                phoneValid = true
+                temphone = ""
+            }
+        
         }
-    }
     
     func fpnDisplayCountryList() {
         
