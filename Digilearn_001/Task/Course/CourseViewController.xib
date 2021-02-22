@@ -57,14 +57,16 @@
                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="184" id="ehx-J9-SC4"/>
                             </constraints>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4e6-HR-Qb8" userLabel="Title">
-                            <rect key="frame" x="168.5" y="74" width="77" height="36"/>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4e6-HR-Qb8" userLabel="Title">
+                            <rect key="frame" x="10" y="54" width="394" height="86"/>
+                            <string key="text">Comprehensive Credit
+Analysis</string>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62o-8F-crI" userLabel="Created By">
-                            <rect key="frame" x="191.5" y="118" width="31" height="14.5"/>
+                            <rect key="frame" x="191.5" y="148" width="31" height="14.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
@@ -73,7 +75,8 @@
                             <rect key="frame" x="0.0" y="228" width="414" height="50"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sj3-64-oBT">
-                                    <rect key="frame" x="0.0" y="10" width="207" height="30"/>
+                                    <rect key="frame" x="0.0" y="9" width="207" height="32"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                     <state key="normal" title="Modules">
                                         <color key="titleColor" name="red_1"/>
                                     </state>
@@ -82,7 +85,8 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DOE-t9-MIv">
-                                    <rect key="frame" x="207" y="10" width="207" height="30"/>
+                                    <rect key="frame" x="207" y="9" width="207" height="32"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                     <state key="normal" title="About The Course">
                                         <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
@@ -130,8 +134,10 @@
                     </subviews>
                     <color key="backgroundColor" systemColor="systemGray5Color"/>
                     <constraints>
+                        <constraint firstItem="4e6-HR-Qb8" firstAttribute="leading" secondItem="AKo-Kw-Aja" secondAttribute="leading" constant="10" id="CEW-Hm-b5e"/>
                         <constraint firstAttribute="trailing" secondItem="DKc-kt-dEt" secondAttribute="trailing" id="Exp-S4-gaD"/>
                         <constraint firstItem="62o-8F-crI" firstAttribute="top" secondItem="4e6-HR-Qb8" secondAttribute="bottom" constant="8" id="MSh-ds-q4c"/>
+                        <constraint firstAttribute="trailing" secondItem="4e6-HR-Qb8" secondAttribute="trailing" constant="10" id="RJ1-w2-UgO"/>
                         <constraint firstItem="8Mt-o1-weL" firstAttribute="leading" secondItem="AKo-Kw-Aja" secondAttribute="leading" id="Td4-dI-tE5"/>
                         <constraint firstItem="4cS-c8-UIO" firstAttribute="top" secondItem="pNS-Fh-sV5" secondAttribute="bottom" id="ULY-FL-c7J"/>
                         <constraint firstItem="8Mt-o1-weL" firstAttribute="top" secondItem="AKo-Kw-Aja" secondAttribute="top" id="Zr9-K5-re8"/>
@@ -143,7 +149,7 @@
                         <constraint firstItem="4cS-c8-UIO" firstAttribute="leading" secondItem="AKo-Kw-Aja" secondAttribute="leading" id="lE2-dK-m61"/>
                         <constraint firstAttribute="trailing" secondItem="pNS-Fh-sV5" secondAttribute="trailing" id="nVB-ka-01R"/>
                         <constraint firstAttribute="trailing" secondItem="4cS-c8-UIO" secondAttribute="trailing" id="oID-vn-mUr"/>
-                        <constraint firstItem="4e6-HR-Qb8" firstAttribute="top" secondItem="8Mt-o1-weL" secondAttribute="bottom" constant="30" id="vUl-G3-S0l"/>
+                        <constraint firstItem="4e6-HR-Qb8" firstAttribute="top" secondItem="8Mt-o1-weL" secondAttribute="bottom" constant="10" id="vUl-G3-S0l"/>
                         <constraint firstItem="4e6-HR-Qb8" firstAttribute="centerX" secondItem="AKo-Kw-Aja" secondAttribute="centerX" id="wFN-GQ-GUE"/>
                         <constraint firstItem="DKc-kt-dEt" firstAttribute="leading" secondItem="AKo-Kw-Aja" secondAttribute="leading" id="y4O-pX-TlU"/>
                         <constraint firstItem="DKc-kt-dEt" firstAttribute="top" secondItem="4cS-c8-UIO" secondAttribute="bottom" constant="-2" id="ydg-TJ-8tL"/>

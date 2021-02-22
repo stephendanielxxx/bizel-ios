@@ -167,6 +167,7 @@ extension LoginViewController: FPNTextFieldDelegate{
     }
     
     func fpnDidValidatePhoneNumber(textField: FPNTextField, isValid: Bool) {
+        debugPrint(textField.text)
         if(!isValid){
             phoneValid = false
         }else{

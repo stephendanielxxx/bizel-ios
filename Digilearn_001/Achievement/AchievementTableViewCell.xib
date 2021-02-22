@@ -42,7 +42,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Perusahaan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="evF-gZ-h2x">
-                                <rect key="frame" x="115.5" y="33" width="224" height="12"/>
+                                <rect key="frame" x="115.5" y="33" width="221" height="12"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="12" id="HXa-ca-gGR"/>
                                 </constraints>
@@ -74,7 +74,7 @@
                             <constraint firstItem="pLy-hd-zwg" firstAttribute="leading" secondItem="Qma-WT-DNg" secondAttribute="trailing" constant="5" id="6pK-jJ-ypk"/>
                             <constraint firstAttribute="bottom" secondItem="wam-9i-aGc" secondAttribute="bottom" constant="6" id="7rW-27-pUv"/>
                             <constraint firstItem="iMz-jf-MKM" firstAttribute="centerX" secondItem="pLy-hd-zwg" secondAttribute="centerX" id="F0V-lo-RyF"/>
-                            <constraint firstItem="iMz-jf-MKM" firstAttribute="leading" secondItem="evF-gZ-h2x" secondAttribute="trailing" constant="2" id="FEe-E6-t9w"/>
+                            <constraint firstItem="iMz-jf-MKM" firstAttribute="leading" secondItem="evF-gZ-h2x" secondAttribute="trailing" constant="5" id="FEe-E6-t9w"/>
                             <constraint firstItem="evF-gZ-h2x" firstAttribute="top" secondItem="Qma-WT-DNg" secondAttribute="bottom" id="O7I-eY-2i4"/>
                             <constraint firstItem="evF-gZ-h2x" firstAttribute="leading" secondItem="wam-9i-aGc" secondAttribute="trailing" constant="7" id="RKl-wR-zUA"/>
                             <constraint firstItem="Qma-WT-DNg" firstAttribute="leading" secondItem="isz-Va-IdI" secondAttribute="trailing" constant="3" id="eR0-ZH-OzB"/>

@@ -55,13 +55,13 @@
                                     <rect key="frame" x="8" y="48.5" width="398" height="367"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kVy-V7-UWu">
-                                            <rect key="frame" x="21" y="21" width="361" height="17"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                            <rect key="frame" x="21" y="21" width="361" height="21.5"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cfv-ji-hUN" userLabel="Container View">
-                                            <rect key="frame" x="20" y="58" width="358" height="230"/>
+                                            <rect key="frame" x="20" y="62.5" width="358" height="230"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hCE-m4-O5A" userLabel="Video Player Background View">
                                                     <rect key="frame" x="0.0" y="0.0" width="358" height="230"/>

@@ -49,8 +49,7 @@ class QuizEssayViewController: BaseActionViewController, ActionDelegate {
         let content = replaceNickname(text: (quiz?.question)!)
         quizText.attributedText = content.htmlToAttributedString
         
-        if quiz?.quizImage != nil{
-            
+        if quiz?.quizImage != nil && quiz?.quizImage?.caseInsensitiveCompare("none") != .orderedSame {
             let url = Foundation.URL(string: "https://digicourse.id/digilearn/admin-master/assets.admin_master/action/quiz/image/\(quiz!.quizImage!)")!
             
             quizImage.pin_setImage(from: url)
@@ -59,7 +58,7 @@ class QuizEssayViewController: BaseActionViewController, ActionDelegate {
             imageHeight.constant = 0
             downloadButton.isHidden = true
         }
-        
+       
         if index == 0 {
             prevButton.isHidden = true
         }else{

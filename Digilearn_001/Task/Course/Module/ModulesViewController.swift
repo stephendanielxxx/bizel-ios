@@ -70,11 +70,8 @@ extension ModulesViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return listCourseModel?.moduleDetail.count ?? 0
     }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
-    }
-    
+
+     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = moduleView.dequeueReusableCell(withIdentifier: "moduleIdentifier") as! ModulesTableViewCell
         

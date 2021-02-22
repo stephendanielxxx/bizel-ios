@@ -58,33 +58,33 @@
                             </constraints>
                         </imageView>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eqd-Oc-Uc9">
-                            <rect key="frame" x="169.5" y="152" width="75" height="75"/>
+                            <rect key="frame" x="164.5" y="149.5" width="85" height="80"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="75" id="5Uy-Bn-r86"/>
-                                <constraint firstAttribute="height" constant="75" id="Rg5-Gy-zqc"/>
+                                <constraint firstAttribute="width" constant="85" id="5Uy-Bn-r86"/>
+                                <constraint firstAttribute="height" constant="80" id="Rg5-Gy-zqc"/>
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FO9-hn-8qS">
-                            <rect key="frame" x="77" y="231" width="270" height="19.5"/>
+                            <rect key="frame" x="77" y="233.5" width="270" height="19.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nama Institusi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6s-7j-EEk">
-                            <rect key="frame" x="10" y="251.5" width="394" height="17"/>
+                            <rect key="frame" x="10" y="254" width="394" height="17"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Posisi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SVD-KU-mAc">
-                            <rect key="frame" x="69" y="270.5" width="268" height="16"/>
+                            <rect key="frame" x="69" y="273" width="268" height="16"/>
                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="L52-Ly-Ypd">
-                            <rect key="frame" x="0.0" y="286.5" width="414" height="531.5"/>
+                            <rect key="frame" x="0.0" y="294" width="414" height="524"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <color key="sectionIndexColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -95,7 +95,7 @@
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstItem="eqd-Oc-Uc9" firstAttribute="centerY" secondItem="fSA-xA-VHF" secondAttribute="centerY" constant="14.5" id="5ZH-QN-Xaa"/>
-                        <constraint firstItem="L52-Ly-Ypd" firstAttribute="top" secondItem="SVD-KU-mAc" secondAttribute="bottom" id="FPi-0g-PHZ"/>
+                        <constraint firstItem="L52-Ly-Ypd" firstAttribute="top" secondItem="SVD-KU-mAc" secondAttribute="bottom" constant="5" id="FPi-0g-PHZ"/>
                         <constraint firstAttribute="trailing" secondItem="fSA-xA-VHF" secondAttribute="trailing" id="Mct-u3-3th"/>
                         <constraint firstItem="FO9-hn-8qS" firstAttribute="top" secondItem="eqd-Oc-Uc9" secondAttribute="bottom" constant="4" id="NFy-51-Eqa"/>
                         <constraint firstItem="FO9-hn-8qS" firstAttribute="leading" secondItem="gMc-aC-c9n" secondAttribute="leading" constant="77" id="NGD-3l-zrq"/>

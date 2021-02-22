@@ -34,7 +34,7 @@
                                     <constraints>
                                         <constraint firstAttribute="height" constant="50" id="b6i-uN-HFL"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
@@ -46,8 +46,8 @@
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Next Module :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G2G-Q5-RfV">
-                                    <rect key="frame" x="154" y="392" width="106.5" height="19.5"/>
-                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                    <rect key="frame" x="148" y="392" width="118" height="21.5"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
@@ -56,7 +56,7 @@
                                     <constraints>
                                         <constraint firstAttribute="height" constant="60" id="3Ct-Vx-oiV"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
