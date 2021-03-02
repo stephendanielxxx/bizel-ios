@@ -42,13 +42,26 @@ class MaterialViewController: BaseActionViewController, ActionDelegate {
         materialTitle.text = quiz?.title
         
         let content = replaceNickname(text: (quiz?.content)!)
-        materialContent.attributedText = content.htmlToAttributedString
+        materialContent.attributedText = content.activityString
         
         if quiz?.contentImage != nil && quiz?.contentImage?.caseInsensitiveCompare("none") != .orderedSame{
             let url = Foundation.URL(string: "https://digicourse.id/digilearn/admin-master/assets.admin_master/action/material/image/\(quiz!.contentImage!)")!
             
+            let imageSize: CGSize? = sizeOfImageAt(url: url)
+            let ratio = imageSize!.width/imageSize!.height
+            let frameHeight = materialImage.frame.width/ratio
+            //materialImage.frame.size.height = frameHeight
+            imageHeight.constant = frameHeight
+            debugPrint(imageSize?.width)
+            debugPrint(imageSize?.height)
+            debugPrint(frameHeight)
+
+            debugPrint(materialImage.frame.width)
+            debugPrint(imageHeight)
+
             materialImage.pin_setImage(from: url)
-            
+
+
         }else{
             materialImage.isHidden = true
             imageHeight.constant = 0
@@ -80,4 +93,4 @@ class MaterialViewController: BaseActionViewController, ActionDelegate {
     @IBAction func downloadAction(_ sender: UIButton) {
         downloadImage(filename: quiz!.quizImage!)
     }
-}
+     }

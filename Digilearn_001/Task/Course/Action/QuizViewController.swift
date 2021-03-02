@@ -57,11 +57,22 @@ class QuizViewController: BaseActionViewController, ActionDelegate {
         quizTitle.text = quiz?.title
         
         let content = replaceNickname(text: (quiz?.question)!)
-        quizText.attributedText = content.htmlToAttributedString
+        quizText.attributedText = content.activityString
         
         if quiz?.quizImage != nil && quiz?.quizImage?.caseInsensitiveCompare("none") != .orderedSame {
             let url = Foundation.URL(string: "https://digicourse.id/digilearn/admin-master/assets.admin_master/action/quiz/image/\(quiz!.quizImage!)")!
+            let imageSize: CGSize? = sizeOfImageAt(url: url)
+            let ratio = imageSize!.width/imageSize!.height
+            let frameHeight = quizImage.frame.width/ratio
+            //materialImage.frame.size.height = frameHeight
+            imageHeight.constant = frameHeight
+                        debugPrint(imageSize?.width)
+                        debugPrint(imageSize?.height)
+                        debugPrint(frameHeight)
             
+                        debugPrint(quizImage.frame.width)
+                        debugPrint(imageHeight)
+
             quizImage.pin_setImage(from: url)
         }else{
             quizImage.isHidden = true

@@ -77,7 +77,7 @@ Analysis</string>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sj3-64-oBT">
                                     <rect key="frame" x="0.0" y="9" width="207" height="32"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                    <state key="normal" title="Modules">
+                                    <state key="normal" title="MODULES">
                                         <color key="titleColor" name="red_1"/>
                                     </state>
                                     <connections>
@@ -87,7 +87,7 @@ Analysis</string>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DOE-t9-MIv">
                                     <rect key="frame" x="207" y="9" width="207" height="32"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                    <state key="normal" title="About The Course">
+                                    <state key="normal" title="ABOUT THE COURSE">
                                         <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
                                     <connections>
