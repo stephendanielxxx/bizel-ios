@@ -92,6 +92,5 @@ class TopicViewController: UIViewController, TopicActionDelegate {
     func onDismissScreen() {
        
         self.dismiss(animated: true, completion: nil)
-         debugPrint("TestTTTTTT")
     }
 }

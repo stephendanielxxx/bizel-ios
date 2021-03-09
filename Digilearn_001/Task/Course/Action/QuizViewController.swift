@@ -80,10 +80,10 @@ class QuizViewController: BaseActionViewController, ActionDelegate {
             downloadButton.isHidden = true
         }
         
-        optionA.attributedText = quiz?.pil1!.htmlStringAnswerQuiz
-        optionB.attributedText = quiz?.pil2!.htmlStringAnswerQuiz
-        optionC.attributedText = quiz?.pil3!.htmlStringAnswerQuiz
-        optionD.attributedText = quiz?.pil4!.htmlStringAnswerQuiz
+        optionA.attributedText = quiz?.pil1!.optionString
+        optionB.attributedText = quiz?.pil2!.optionString
+        optionC.attributedText = quiz?.pil3!.optionString
+        optionD.attributedText = quiz?.pil4!.optionString
         
         if index == 0 {
             prevButton.isHidden = true

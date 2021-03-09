@@ -21,7 +21,7 @@ class AboutCourseViewController: UIViewController {
         if course_about.isEmpty {
             loadData()
         }else{
-            courseDetail.attributedText = course_about.htmlToAttributedString
+            courseDetail.attributedText = course_about.aboutString
         }
     }
     
