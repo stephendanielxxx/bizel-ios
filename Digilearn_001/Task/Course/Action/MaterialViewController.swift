@@ -23,6 +23,7 @@ class MaterialViewController: BaseActionViewController, ActionDelegate {
     @IBOutlet weak var prevButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var imageHeight: NSLayoutConstraint!
+    @IBOutlet weak var imageWidth: NSLayoutConstraint!
     @IBOutlet weak var scrollview: UIScrollView!
     @IBOutlet weak var downloadButton: UIButton!
     // single, essay
@@ -46,22 +47,22 @@ class MaterialViewController: BaseActionViewController, ActionDelegate {
         
         if quiz?.contentImage != nil && quiz?.contentImage?.caseInsensitiveCompare("none") != .orderedSame{
             let url = Foundation.URL(string: "https://digicourse.id/digilearn/admin-master/assets.admin_master/action/material/image/\(quiz!.contentImage!)")!
-            
-            let imageSize: CGSize? = sizeOfImageAt(url: url)
-            let ratio = imageSize!.width/imageSize!.height
-            let frameHeight = materialImage.frame.width/ratio
-            //materialImage.frame.size.height = frameHeight
-            imageHeight.constant = frameHeight
-            debugPrint(imageSize?.width)
-            debugPrint(imageSize?.height)
-            debugPrint(frameHeight)
-
-            debugPrint(materialImage.frame.width)
-            debugPrint(imageHeight)
-
-            materialImage.pin_setImage(from: url)
-
-
+        
+//            materialImage.pin_setImage(from: url)
+            materialImage.pin_setImage(from: url, placeholderImage: UIImage(named: "ic_logo_bizel_white"), completion: { (result) in
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
+                    
+                    let imageSize: CGSize? = self.sizeOfImageAt(url: url)
+                    let ratio = imageSize!.width/imageSize!.height
+                                        
+                    let frameHeight = self.materialImage.frame.size.width/ratio
+                    self.materialImage.frame.size.height = frameHeight
+                    self.imageHeight.constant = frameHeight
+                    
+                }
+            })
+        
         }else{
             materialImage.isHidden = true
             imageHeight.constant = 0
@@ -92,5 +93,6 @@ class MaterialViewController: BaseActionViewController, ActionDelegate {
     
     @IBAction func downloadAction(_ sender: UIButton) {
         downloadImage(filename: quiz!.quizImage!)
+        
     }
-     }
+}

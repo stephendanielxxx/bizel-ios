@@ -51,13 +51,19 @@ class QuizEssayViewController: BaseActionViewController, ActionDelegate {
         
         if quiz?.quizImage != nil && quiz?.quizImage?.caseInsensitiveCompare("none") != .orderedSame {
             let url = Foundation.URL(string: "https://digicourse.id/digilearn/admin-master/assets.admin_master/action/quiz/image/\(quiz!.quizImage!)")!
-            let imageSize: CGSize? = sizeOfImageAt(url: url)
-            let ratio = imageSize!.width/imageSize!.height
-            let frameHeight = quizImage.frame.width/ratio
-            //materialImage.frame.size.height = frameHeight
-            imageHeight.constant = frameHeight
-//
-            quizImage.pin_setImage(from: url)
+          //  let imageSize: CGSize? = sizeOfImageAt(url: url)
+            quizImage.pin_setImage(from: url, placeholderImage: UIImage(named: "ic_logo_bizel_white"), completion: { (result) in
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
+                    
+                    let imageSize: CGSize? = self.sizeOfImageAt(url: url)
+                    let ratio = imageSize!.width/imageSize!.height
+                                        
+                    let frameHeight = self.quizImage.frame.size.width/ratio
+                    self.quizImage.frame.size.height = frameHeight
+                    self.imageHeight.constant = frameHeight
+                }
+            })
         }else{
             quizImage.isHidden = true
             imageHeight.constant = 0
@@ -150,7 +156,6 @@ class QuizEssayViewController: BaseActionViewController, ActionDelegate {
     }
     
     func onSubmitProgress(message: String) {
-        
     }
     
     @IBAction func downloadAction(_ sender: UIButton) {
