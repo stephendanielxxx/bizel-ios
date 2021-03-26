@@ -99,7 +99,7 @@ extension String {
                <style>
                  body {
                    font-family: -apple-system;
-                   font-size: 14px;
+                   font-size: 16px;
                  }
                </style>
              </head>
@@ -120,4 +120,96 @@ extension String {
     var htmlToString: String {
         return htmlToAttributedString?.string ?? ""
     }
+    var activityString: NSAttributedString? {
+        let htmlTemplate = """
+           <!doctype html>
+           <html>
+             <head>
+               <style>
+                 body {
+                   font-family: -apple-system;
+                   font-size: 20px;
+                 }
+               </style>
+             </head>
+             <body>
+               \(self)
+             </body>
+           </html>
+           """
+        guard let data = htmlTemplate.data(using: .utf8) else { return nil }
+        do {
+            let font = UIFont.systemFont(ofSize: 100)
+            let attributes = [NSAttributedString.Key.font: font]
+            return try NSAttributedString(data: data, options: [.documentType: NSAttributedString.DocumentType.html, .characterEncoding:String.Encoding.utf8.rawValue, .defaultAttributes: attributes], documentAttributes: nil)
+        } catch {
+            return nil
+        }
+        
+    }
+    var activityHtmlToString: String {
+        return activityString?.string ?? ""
+    }
+    
+    var aboutString: NSAttributedString? {
+        let htmlTemplate = """
+           <!doctype html>
+           <html>
+             <head>
+               <style>
+                 body {
+                   font-family: -apple-system;
+                   font-size: 18px;
+                 }
+               </style>
+             </head>
+             <body>
+               \(self)
+             </body>
+           </html>
+           """
+        guard let data = htmlTemplate.data(using: .utf8) else { return nil }
+        do {
+            let font = UIFont.systemFont(ofSize: 100)
+            let attributes = [NSAttributedString.Key.font: font]
+            return try NSAttributedString(data: data, options: [.documentType: NSAttributedString.DocumentType.html, .characterEncoding:String.Encoding.utf8.rawValue, .defaultAttributes: attributes], documentAttributes: nil)
+        } catch {
+            return nil
+        }
+        
+    }
+    var aboutHtmlToString: String {
+        return aboutString?.string ?? ""
+    }
+    var optionString: NSAttributedString? {
+        let htmlTemplate = """
+           <!doctype html>
+           <html>
+             <head>
+               <style>
+                 body {
+                   font-family: -apple-system;
+                   font-size: 20px;
+                 }
+               </style>
+             </head>
+             <body>
+               \(self)
+             </body>
+           </html>
+           """
+        guard let data = htmlTemplate.data(using: .utf8) else { return nil }
+        do {
+            let font = UIFont.systemFont(ofSize: 100)
+            let attributes = [NSAttributedString.Key.font: font]
+            return try NSAttributedString(data: data, options: [.documentType: NSAttributedString.DocumentType.html, .characterEncoding:String.Encoding.utf8.rawValue, .defaultAttributes: attributes], documentAttributes: nil)
+        } catch {
+            return nil
+        }
+        
+    }
+    var optionHtmlToString: String {
+        return optionString?.string ?? ""
+    }
+    
 }

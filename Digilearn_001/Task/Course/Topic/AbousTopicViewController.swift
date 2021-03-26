@@ -16,7 +16,7 @@ class AbousTopicViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        aboutText.attributedText = topicDesc.htmlToAttributedString
+        aboutText.attributedText = topicDesc.aboutString
         // Do any additional setup after loading the view.
     }
 

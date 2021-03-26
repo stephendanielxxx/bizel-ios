@@ -31,10 +31,12 @@ class QuizViewController: BaseActionViewController, ActionDelegate {
     @IBOutlet weak var lineC: UIView!
     @IBOutlet weak var buttonD: CustomChoiceCardView!
     @IBOutlet weak var lineD: UIView!
-    @IBOutlet weak var optionA: UILabel!
-    @IBOutlet weak var optionB: UILabel!
-    @IBOutlet weak var optionC: UILabel!
-    @IBOutlet weak var optionD: UILabel!
+    @IBOutlet weak var optionA: UITextView!
+    @IBOutlet weak var optionB: UITextView!
+    @IBOutlet weak var optionC: UITextView!
+    
+    @IBOutlet weak var optionD: UITextView!
+    
     @IBOutlet weak var imageHeight: NSLayoutConstraint!
     @IBOutlet weak var scrollview: UIScrollView!
     @IBOutlet weak var downloadButton: UIButton!
@@ -55,22 +57,35 @@ class QuizViewController: BaseActionViewController, ActionDelegate {
         quizTitle.text = quiz?.title
         
         let content = replaceNickname(text: (quiz?.question)!)
-        quizText.attributedText = content.htmlToAttributedString
+        quizText.attributedText = content.activityString
         
         if quiz?.quizImage != nil && quiz?.quizImage?.caseInsensitiveCompare("none") != .orderedSame {
             let url = Foundation.URL(string: "https://digicourse.id/digilearn/admin-master/assets.admin_master/action/quiz/image/\(quiz!.quizImage!)")!
+          //  let imageSize: CGSize? = sizeOfImageAt(url: url)
             
-            quizImage.pin_setImage(from: url)
+            quizImage.pin_setImage(from: url, placeholderImage: UIImage(named: "ic_logo_bizel_white"), completion: { (result) in
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
+                    
+                    let imageSize: CGSize? = self.sizeOfImageAt(url: url)
+                    let ratio = imageSize!.width/imageSize!.height
+                                        
+                    let frameHeight = self.quizImage.frame.size.width/ratio
+                    self.quizImage.frame.size.height = frameHeight
+                    self.imageHeight.constant = frameHeight
+                    
+                }
+            })
         }else{
             quizImage.isHidden = true
             imageHeight.constant = 0
             downloadButton.isHidden = true
         }
         
-        optionA.attributedText = quiz?.pil1!.htmlStringAnswerQuiz
-        optionB.attributedText = quiz?.pil2!.htmlStringAnswerQuiz
-        optionC.attributedText = quiz?.pil3!.htmlStringAnswerQuiz
-        optionD.attributedText = quiz?.pil4!.htmlStringAnswerQuiz
+        optionA.attributedText = quiz?.pil1!.optionString
+        optionB.attributedText = quiz?.pil2!.optionString
+        optionC.attributedText = quiz?.pil3!.optionString
+        optionD.attributedText = quiz?.pil4!.optionString
         
         if index == 0 {
             prevButton.isHidden = true

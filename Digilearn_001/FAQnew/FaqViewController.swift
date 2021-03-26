@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import Reqres
 import PINRemoteImage
-
+import Toast_Swift
 
 class FaqViewController: UIViewController, UISearchBarDelegate, UISearchResultsUpdating {
     
@@ -51,10 +51,11 @@ class FaqViewController: UIViewController, UISearchBarDelegate, UISearchResultsU
     func updateSearchResults(for searchController: UISearchController) {
         let searchBar = searchController.searchBar
         searchFaq(searchText: searchBar.text!)
+        
     }
     
     func loadFilterCategory(){
-        let URL = "\(DigilearnParams.ApiUrl)/apiari/apikategorifaqari"
+        let URL = "\(DigilearnParams.ApiUrl)/apiari/apikategorifaqarii"
         AF.request(URL,
                    method: .get,
                    parameters: nil,
@@ -145,6 +146,9 @@ class FaqViewController: UIViewController, UISearchBarDelegate, UISearchResultsU
                         do{
                             self.faqModel = try decoder.decode(FaqModel.self, from:data)
                             self.faqView.reloadData()
+                            let dataString = String(data:data, encoding: .utf8) ?? ""
+                            if dataString == "{\"faq:\":[]}" {
+                                self.showToast(message: "Search Not Found")}
                         }catch{
                             print(error.localizedDescription)
                         }
@@ -196,5 +200,14 @@ extension FaqViewController: UITableViewDelegate, UITableViewDataSource
         
         return cell
     }
-    
+    func showToast(message: String) {
+        var style = ToastStyle()
+        style.backgroundColor = UIColor.darkGray
+        style.messageColor = UIColor.white
+        ToastManager.shared.style = style
+        
+        self.view.makeToast(message)
+    }
 }
+    
+
