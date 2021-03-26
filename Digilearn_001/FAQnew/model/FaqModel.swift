@@ -34,4 +34,3 @@ struct FAQ: Decodable {
         case updatedAt = "updated_at"
     }
 }
-

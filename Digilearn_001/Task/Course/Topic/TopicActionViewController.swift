@@ -118,7 +118,7 @@ extension TopicActionViewController: ExpandableDelegate, ActionViewDelegate{
         var count = [CGFloat]()
         let expandedCount: Int = self.topicActionModel?.topicDetail[indexPath.row].topicDetailAction?.count ?? 0
         for _ in 1...expandedCount {
-            let height: CGFloat = 75
+            let height: CGFloat = 80
             count.append(height)
         }
         return count

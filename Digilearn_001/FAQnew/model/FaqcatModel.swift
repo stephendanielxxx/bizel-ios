@@ -19,7 +19,7 @@ struct FAQCat: Decodable {
     let faqCategory, faqCatName: String
 
     enum CodingKeys: String, CodingKey {
-        case faqCategory = "faq_category"
+        case faqCategory = "faq_cat_id"
         case faqCatName = "faq_cat_name"
     }
 }

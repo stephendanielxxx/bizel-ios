@@ -73,7 +73,7 @@ class BaseActionViewController: UIViewController {
             else {
                 // success
                 self.dismiss(animated: true, completion: {() -> Void in
-                    self.showDownloadSuccess()
+                    self.showDownloadSuccess(destination: self.getDirectoryPath())
                 })
                 debugPrint("Success download image")
 
@@ -91,13 +91,20 @@ class BaseActionViewController: UIViewController {
         present(downloadProgress, animated: true, completion: nil)
     }
     
-    func showDownloadSuccess(){
+    func showDownloadSuccess(destination: String){
+    
         downloadSuccess = DownloadSuccessViewController()
         downloadSuccess.providesPresentationContextTransitionStyle = true
+        downloadSuccess.destination = destination
         downloadSuccess.definesPresentationContext = true
         downloadSuccess.modalPresentationStyle = .overCurrentContext
         downloadSuccess.modalTransitionStyle = .crossDissolve
         present(downloadSuccess, animated: true, completion: nil)
+    }
+    func getDirectoryPath() -> String {
+        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+    let documentsDirectory = paths[0]
+        return documentsDirectory
     }
     
     func submitProgress(courseId: String, moduleId: String, topicId: String, actionId: String, answer: String, assign_id: String){
@@ -135,7 +142,25 @@ class BaseActionViewController: UIViewController {
             }
         }
     }
-    
+    func sizeOfImageAt(url: URL) -> CGSize? {
+          // with CGImageSource we avoid loading the whole image into memory
+          guard let source = CGImageSourceCreateWithURL(url as CFURL, nil) else {
+              return nil
+          }
+
+          let propertiesOptions = [kCGImageSourceShouldCache: false] as CFDictionary
+          guard let properties = CGImageSourceCopyPropertiesAtIndex(source, 0, propertiesOptions) as? [CFString: Any] else {
+              return nil
+          }
+
+          if let width = properties[kCGImagePropertyPixelWidth] as? CGFloat,
+              let height = properties[kCGImagePropertyPixelHeight] as? CGFloat {
+              return CGSize(width: width, height: height)
+          } else {
+              return nil
+          }
+      }
+
 }
 
 protocol ActionDelegate{

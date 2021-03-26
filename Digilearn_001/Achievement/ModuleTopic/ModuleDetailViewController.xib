@@ -55,7 +55,7 @@
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cet-uQ-UWA">
                                     <rect key="frame" x="0.0" y="0.0" width="207" height="50"/>
-                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                     <state key="normal" title="TOPICS">
                                         <color key="titleColor" name="red_1"/>
                                     </state>

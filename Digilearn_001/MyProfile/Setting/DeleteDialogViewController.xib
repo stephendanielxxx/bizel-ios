@@ -39,23 +39,23 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="If you click 'YES', all saved data and learning progress will be deleted and you will no longer be able to access the data" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kx6-Nt-6mv">
-                            <rect key="frame" x="22" y="180.5" width="306" height="75"/>
+                            <rect key="frame" x="22" y="180.5" width="306" height="85"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="75" id="Gv4-ZS-pCx"/>
+                                <constraint firstAttribute="height" constant="85" id="Gv4-ZS-pCx"/>
                             </constraints>
                             <color key="textColor" systemColor="labelColor"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                         </textView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lvr-Vd-ZFe">
-                            <rect key="frame" x="55" y="263.5" width="75" height="30"/>
+                            <rect key="frame" x="55" y="273.5" width="75" height="30"/>
                             <color key="backgroundColor" name="red_1"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="75" id="Htt-Ve-bTD"/>
                                 <constraint firstAttribute="height" constant="30" id="LJU-ev-Eu6"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="16"/>
                             <state key="normal" title="Yes">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
@@ -65,12 +65,13 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J1V-Ik-x84">
-                            <rect key="frame" x="220" y="263.5" width="75" height="30"/>
+                            <rect key="frame" x="220" y="273.5" width="75" height="30"/>
                             <color key="backgroundColor" name="red_1"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="SDa-qD-rec"/>
                                 <constraint firstAttribute="width" constant="75" id="yZt-UI-4Jr"/>
                             </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <state key="normal" title="No">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>

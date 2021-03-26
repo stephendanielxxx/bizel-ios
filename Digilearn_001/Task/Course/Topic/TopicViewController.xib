@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -36,33 +38,33 @@
                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="184" id="ksy-CM-Z6f"/>
                             </constraints>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fL0-gl-rGg" userLabel="Title">
-                            <rect key="frame" x="184.5" y="30" width="45" height="21"/>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fL0-gl-rGg" userLabel="Title">
+                            <rect key="frame" x="10" y="30" width="394" height="38.5"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aty-Kw-yh5" userLabel="Created By">
-                            <rect key="frame" x="194" y="59" width="26.5" height="12"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aty-Kw-yh5" userLabel="Created By">
+                            <rect key="frame" x="191" y="76.5" width="32.5" height="14.5"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XxP-Zh-PVD" userLabel="Tab View">
                             <rect key="frame" x="0.0" y="184" width="414" height="50"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ThC-Ya-bII">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ThC-Ya-bII">
                                     <rect key="frame" x="0.0" y="0.0" width="207" height="50"/>
-                                    <state key="normal" title="Topics">
+                                    <state key="normal" title="TOPICS">
                                         <color key="titleColor" name="red_1"/>
                                     </state>
                                     <connections>
                                         <action selector="topicAction:" destination="-1" eventType="touchUpInside" id="hjK-hQ-tgy"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZEL-i9-mxq">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZEL-i9-mxq">
                                     <rect key="frame" x="207" y="0.0" width="207" height="50"/>
-                                    <state key="normal" title="About The Module">
+                                    <state key="normal" title="ABOUT THE MODULE">
                                         <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
                                     <connections>
@@ -109,7 +111,7 @@
                             <rect key="frame" x="0.0" y="242" width="414" height="532"/>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstItem="XxP-Zh-PVD" firstAttribute="leading" secondItem="YN7-Fg-3vI" secondAttribute="leading" id="0d6-dN-cwa"/>
                         <constraint firstItem="aty-Kw-yh5" firstAttribute="top" secondItem="fL0-gl-rGg" secondAttribute="bottom" constant="8" id="1Nu-gv-Qmt"/>
@@ -119,9 +121,11 @@
                         <constraint firstItem="DkY-1i-v1S" firstAttribute="top" secondItem="YN7-Fg-3vI" secondAttribute="top" id="Fnc-JN-bLo"/>
                         <constraint firstAttribute="trailing" secondItem="XxP-Zh-PVD" secondAttribute="trailing" id="L27-wX-zCg"/>
                         <constraint firstItem="DkY-1i-v1S" firstAttribute="leading" secondItem="YN7-Fg-3vI" secondAttribute="leading" id="Rmf-rw-E4p"/>
+                        <constraint firstItem="fL0-gl-rGg" firstAttribute="leading" secondItem="YN7-Fg-3vI" secondAttribute="leading" constant="10" id="VvY-GG-Pws"/>
                         <constraint firstAttribute="bottom" secondItem="Gdl-Bb-CP0" secondAttribute="bottom" id="WzD-Sj-9Yc"/>
                         <constraint firstItem="Gdl-Bb-CP0" firstAttribute="leading" secondItem="YN7-Fg-3vI" secondAttribute="leading" id="XQD-wa-Ujv"/>
                         <constraint firstItem="aty-Kw-yh5" firstAttribute="centerX" secondItem="fL0-gl-rGg" secondAttribute="centerX" id="cDD-Hk-RYB"/>
+                        <constraint firstAttribute="trailing" secondItem="fL0-gl-rGg" secondAttribute="trailing" constant="10" id="kNI-IH-omC"/>
                         <constraint firstItem="Gdl-Bb-CP0" firstAttribute="top" secondItem="XxP-Zh-PVD" secondAttribute="bottom" constant="8" id="kzl-H9-qIQ"/>
                         <constraint firstItem="XxP-Zh-PVD" firstAttribute="top" secondItem="DkY-1i-v1S" secondAttribute="bottom" id="rQC-hA-x5x"/>
                         <constraint firstItem="fL0-gl-rGg" firstAttribute="centerX" secondItem="DkY-1i-v1S" secondAttribute="centerX" id="rjA-sH-XFR"/>
@@ -132,6 +136,11 @@
                     <color key="barTintColor" name="color_ D44444"/>
                     <textAttributes key="titleTextAttributes">
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="textShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <offsetWrapper key="textShadowOffset" horizontal="900" vertical="0.0"/>
+                    </textAttributes>
+                    <textAttributes key="largeTitleTextAttributes">
+                        <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
                     </textAttributes>
                     <items>
                         <navigationItem title="Bizel" id="JDq-Q7-DvB">
@@ -145,7 +154,8 @@
                     </items>
                 </navigationBar>
             </subviews>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="YN7-Fg-3vI" firstAttribute="top" secondItem="BqF-j3-CK2" secondAttribute="bottom" id="79B-x7-tkg"/>
                 <constraint firstItem="YN7-Fg-3vI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="F3B-Ue-Tit"/>
@@ -157,7 +167,6 @@
                 <constraint firstItem="YN7-Fg-3vI" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" id="wbK-LC-Y6s"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="145.98214285714286"/>
         </view>
     </objects>
@@ -169,5 +178,8 @@
         <namedColor name="red_1">
             <color red="0.60399997234344482" green="0.27099999785423279" blue="0.23499999940395355" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

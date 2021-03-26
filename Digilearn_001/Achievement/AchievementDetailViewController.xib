@@ -77,7 +77,7 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="n1M-dE-3EJ"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                             <state key="normal" title="MODULES">
                                 <color key="titleColor" name="color_ B63532"/>
                             </state>
@@ -91,7 +91,7 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="FdO-TV-NIE"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                             <state key="normal" title="DETAILS">
                                 <color key="titleColor" name="color_ B63532"/>
                             </state>

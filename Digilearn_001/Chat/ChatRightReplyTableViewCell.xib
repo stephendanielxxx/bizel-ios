@@ -69,7 +69,7 @@
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="23" id="WnR-AV-4hN"/>
                                         </constraints>
                                         <color key="textColor" systemColor="labelColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="7"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="8"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>

@@ -55,6 +55,7 @@
                                 <constraint firstAttribute="width" constant="170" id="7Xu-pb-42i"/>
                                 <constraint firstAttribute="height" constant="40" id="wZC-ed-ooB"/>
                             </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <state key="normal" title="Save Changes">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
